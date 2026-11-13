@@ -38,7 +38,7 @@ Any film in `films.json` accepts these optional fields:
 | `font`  | Google Font for the spine title (add it to `index.html`'s font link if it's new) |
 | `color` | Any CSS colour for the spine body (default: derived from the poster) |
 | `note`  | A line shown under the genres in the cover view         |
-| `tmdbOverride` | Fixes a wrong match: the number from the film's TMDB URL (`themoviedb.org/movie/`**`603`**`-the-matrix`). Re-run `fetch-posters.js` and that film's poster, IMDb link and details are re-fetched from the right movie. |
+| `tmdbOverride` | (Or use `overrides.json`, keyed `"Title|Year"`, with `"type": "tv"` for TV titles.) Fixes a wrong match: the number from the film's TMDB URL (`themoviedb.org/movie/`**`603`**`-the-matrix`). Re-run `fetch-posters.js` and that film's poster, IMDb link and details are re-fetched from the right movie. |
 
 Spine thickness follows runtime. Spine fonts are picked by genre unless you set `font`.
 

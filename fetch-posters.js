@@ -88,6 +88,13 @@ async function tmdb(endpoint, params = {}) {
     } catch {}
   }
 
+  let overrides = {};
+  const ovPath = path.join(__dirname, 'overrides.json');
+  if (fs.existsSync(ovPath)) {
+    try { overrides = JSON.parse(fs.readFileSync(ovPath, 'utf8')); }
+    catch (e) { console.error('overrides.json is not valid JSON: ' + e.message); process.exit(1); }
+  }
+
   const review = [];
   const films = [];
   let n = 0;
@@ -97,8 +104,11 @@ async function tmdb(endpoint, params = {}) {
     const old = existing.get(k);
     // "tmdbOverride" in films.json forces a specific TMDB movie. It is re-fetched
     // whenever it differs from the "tmdb" id the script recorded last time.
-    const override = old && Number(old.tmdbOverride) || 0;
-    const upToDate = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster)) && (!override || old.tmdb === override);
+    // overrides.json ({"Title|Year": {"tmdb": 123, "type": "tv"}}) does the same without touching films.json.
+    const ov = overrides[k] || {};
+    const override = Number(ov.tmdb || (old && old.tmdbOverride)) || 0;
+    const type = ov.type || (old && old.tmdbType) || 'movie'; // "movie" or "tv"
+    const upToDate = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster)) && (!override || (old.tmdb === override && (old.tmdbKind || 'movie') === type));
     if (upToDate) {
       films.push({ ...old, rating: base.rating, watched: base.watched, rewatch: base.rewatch });
       continue;
@@ -114,10 +124,12 @@ async function tmdb(endpoint, params = {}) {
       }
       if (!hit) { review.push(`${base.title} (${base.year}): NOT FOUND`); films.push({ ...(old || {}), ...base, genres: [], imdb: '', poster: '' }); console.log('not found'); continue; }
 
-      const d = await tmdb(`/movie/${hit.id}`, { append_to_response: 'credits,external_ids' });
-      const relYear = Number((d.release_date || '').slice(0, 4));
-      if (!override && (Math.abs(relYear - base.year) > 1 || d.title.toLowerCase() !== base.title.toLowerCase()))
-        review.push(`${base.title} (${base.year}): matched "${d.title}" (${relYear}) - check this one`);
+      const isTv = override && type === 'tv';
+      const d = await tmdb(`/${isTv ? 'tv' : 'movie'}/${hit.id}`, { append_to_response: 'credits,external_ids' });
+      const dTitle = d.title || d.name || '';
+      const relYear = Number((d.release_date || d.first_air_date || '').slice(0, 4));
+      if (!override && (Math.abs(relYear - base.year) > 1 || dTitle.toLowerCase() !== base.title.toLowerCase()))
+        review.push(`${base.title} (${base.year}): matched "${dTitle}" (${relYear}) - check this one`);
 
       let poster = '';
       if (d.poster_path) {
@@ -126,12 +138,13 @@ async function tmdb(endpoint, params = {}) {
         if (img.ok) { fs.writeFileSync(path.join(__dirname, file), Buffer.from(await img.arrayBuffer())); poster = file; }
       } else review.push(`${base.title} (${base.year}): no poster on TMDB`);
 
-      const director = (d.credits?.crew || []).find((c) => c.job === 'Director');
+      const director = isTv ? (d.created_by || [])[0] : (d.credits?.crew || []).find((c) => c.job === 'Director');
       films.push({
         ...(old || {}), // keep manual edits (font, color, note, tmdbOverride)
         ...base,
         tmdb: d.id,
-        runtime: d.runtime || undefined,
+        tmdbKind: isTv ? 'tv' : 'movie',
+        runtime: (isTv ? (d.episode_run_time || [])[0] : d.runtime) || undefined,
         director: director ? director.name : undefined,
         genres: (d.genres || []).map((g) => g.name),
         imdb: d.external_ids?.imdb_id || '',
