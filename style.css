@@ -411,3 +411,37 @@ h1 span { color: var(--gold); }
   box-shadow: 0 10px 24px rgba(0,0,0,.6);
 }
 .vcr-save[hidden], .vcr-respine[hidden] { display: none; }
+
+/* spine editor: tabs, top-of-spine choices, logo crop and studio picker */
+.vcr-spine .vcr-box { width: min(620px, 100%); }
+.vcr-tabs { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 1px solid #2a2a2c; }
+.vcr-tab {
+  appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px;
+  color: var(--paper); opacity: .55; font: inherit; padding: 6px 10px; cursor: pointer;
+}
+.vcr-tab.on { opacity: 1; border-bottom-color: var(--gold); color: var(--gold); }
+.vcr-pane { flex: 1; min-width: 0; display: grid; justify-items: center; }
+.vcr-pane .vcr-hint { margin: 0 0 10px; justify-self: stretch; }
+.vcr-row { display: flex; gap: 14px; margin-top: 8px; font-size: .78rem; justify-self: stretch; }
+.vcr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; justify-self: stretch; }
+.vcr-chip {
+  appearance: none; font: inherit; font-size: .76rem; color: var(--paper); cursor: pointer;
+  background: #0a0a0b; border: 1px solid #3a3a3d; border-radius: 999px; padding: 4px 10px;
+}
+.vcr-chip:hover:not(:disabled) { border-color: var(--gold); }
+.vcr-chip.on { background: var(--gold); border-color: var(--gold); color: #1a1208; }
+.vcr-chip:disabled { opacity: .35; cursor: default; }
+.vcr-boxes i.sq { border-radius: 1px; box-shadow: 0 0 0 9999px rgba(0,0,0,.35); }
+.vcr-edit-logo { width: min(260px, 62vw); }
+.vcr-edit-logo .vcr-poster {
+  padding: 0; background: repeating-conic-gradient(#d9d9d9 0 25%, #f2f2f2 0 50%) 0 0 / 14px 14px; border-radius: 3px;
+}
+.vcr-logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; margin-top: 10px; justify-self: stretch; font-size: .72rem; }
+.vcr-logo-pick {
+  appearance: none; cursor: pointer; display: grid; gap: 4px; justify-items: center; padding: 8px 6px 6px;
+  background: #f2f2f2; border: 2px solid transparent; border-radius: 4px; color: #222; font: inherit;
+}
+.vcr-logo-pick:hover:not(:disabled) { border-color: var(--gold); }
+.vcr-logo-pick img { max-width: 100%; height: 34px; object-fit: contain; }
+.vcr-logo-pick span { line-height: 1.2; text-align: center; }
+.vcr-poster { overflow: hidden; }

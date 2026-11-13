@@ -32,7 +32,7 @@ Films on the shelf that aren't in the CSV are kept unless you tick them for remo
 
 ### Fixing a janky spine
 
-In a browser where the VCR's GitHub token is saved, pull out any tape and click **✎ Re-mark spine** under "Put it back". Redraw the boxes around the title lettering (or clear them to use a typeface) and watch the preview. **Keep** applies it to the shelf; a **Save N spines** button then commits all your edits in one go. Visitors never see the button, and saving needs the token.
+In a browser where the VCR's GitHub token is saved, pull out any tape and click **✎ Re-mark spine** under "Put it back". On **Title lettering**, redraw the boxes around the title (or clear them to use a typeface). On **Top of spine**, choose what sits above the title: Auto, Studio logo, Picture, Director credit, Sticker or Nothing. For Picture, drag a square over the face you want; for Studio logo, drag to crop the logo or pick a different studio from TMDB. Watch the preview as you go. **Keep** applies it to the shelf; a **Save N spines** button then commits all your edits in one go. Visitors never see the button, and saving needs the token.
 
 ### From the command line
 

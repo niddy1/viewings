@@ -345,51 +345,58 @@
     }
   }
 
-  // Drag boxes over the poster to mark the title lettering (stored as fractions, like titleBox in films.json).
-  function boxEditor(film, url, onChange = () => {}) {
-    if (!Array.isArray(film.titleBox)) film.titleBox = [];
-    const wrap = h('div', 'vcr-edit');
+  // Drag boxes over an image. Boxes are [x0,y0,x1,y1] fractions of the image, kept in target[key].
+  // Default: several boxes (title lines, top first). single: one box (a new drag replaces it).
+  // square: the box is square in image pixels (the framed picture on the spine).
+  function boxEditor(target, url, onChange = () => {}, { key = 'titleBox', single = false, square = false, noun = 'line', empty = 'no title marked', cls = '' } = {}) {
+    const get = () => (single ? (Array.isArray(target[key]) ? [target[key]] : []) : (Array.isArray(target[key]) ? target[key] : (target[key] = [])));
+    const set = (list) => { if (single) { if (list.length) target[key] = list[0]; else delete target[key]; } else target[key] = list; };
+    get();
+    const wrap = h('div', 'vcr-edit ' + cls);
     const pic = h('div', 'vcr-poster');
     const img = new Image(); img.src = url; img.alt = ''; img.draggable = false;
     const layer = h('div', 'vcr-boxes');
     pic.append(img, layer);
     const tools = h('div', 'vcr-tools');
-    const undo = h('button', 'vcr-link', 'undo box'); undo.type = 'button';
+    const undo = h('button', 'vcr-link', single ? 'clear' : 'undo box'); undo.type = 'button';
     const count = h('span', 'vcr-dim');
     tools.append(count, undo);
     wrap.append(pic, tools);
 
+    const pct = (b, [x0, y0, x1, y1]) => Object.assign(b.style, { left: x0 * 100 + '%', top: y0 * 100 + '%', width: (x1 - x0) * 100 + '%', height: (y1 - y0) * 100 + '%' });
     const draw = () => {
       layer.textContent = '';
-      film.titleBox.forEach(([x0, y0, x1, y1], i) => {
-        const b = h('i', null, String(i + 1));
-        Object.assign(b.style, { left: x0 * 100 + '%', top: y0 * 100 + '%', width: (x1 - x0) * 100 + '%', height: (y1 - y0) * 100 + '%' });
-        layer.append(b);
-      });
-      count.textContent = film.titleBox.length ? `${film.titleBox.length} line${film.titleBox.length > 1 ? 's' : ''} marked` : 'no title marked';
-      undo.hidden = !film.titleBox.length;
+      const list = get();
+      list.forEach((bx, i) => { const n = h('i', square ? 'sq' : null, single ? '' : String(i + 1)); pct(n, bx); layer.append(n); });
+      count.textContent = list.length ? (single ? `${noun} picked` : `${list.length} ${noun}${list.length > 1 ? 's' : ''} marked`) : empty;
+      undo.hidden = !list.length;
     };
     wrap.redraw = draw;
-    undo.addEventListener('click', () => { film.titleBox.pop(); draw(); onChange(); });
+    undo.addEventListener('click', () => { const l = get().slice(0, -1); set(single ? [] : l); draw(); onChange(); });
 
     let start = null, live = null;
     const at = (e) => { const r = pic.getBoundingClientRect(); return [Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)), Math.min(1, Math.max(0, (e.clientY - r.top) / r.height))]; };
-    const rect = (a, b) => [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[0], b[0]), Math.max(a[1], b[1])];
+    const rect = (a, b) => {
+      if (square) { // same size in pixels both ways, kept inside the image
+        const r = pic.getBoundingClientRect(), W = r.width, H = r.height;
+        const sx = b[0] >= a[0] ? 1 : -1, sy = b[1] >= a[1] ? 1 : -1;
+        let side = Math.max(Math.abs(b[0] - a[0]) * W, Math.abs(b[1] - a[1]) * H);
+        side = Math.min(side, (sx > 0 ? 1 - a[0] : a[0]) * W, (sy > 0 ? 1 - a[1] : a[1]) * H);
+        b = [a[0] + sx * side / W, a[1] + sy * side / H];
+      }
+      return [Math.min(a[0], b[0]), Math.min(a[1], b[1]), Math.max(a[0], b[0]), Math.max(a[1], b[1])];
+    };
     pic.addEventListener('pointerdown', (e) => {
       e.preventDefault(); pic.setPointerCapture(e.pointerId);
-      start = at(e); live = h('i', 'live'); layer.append(live);
+      start = at(e); live = h('i', 'live' + (square ? ' sq' : '')); layer.append(live);
     });
-    pic.addEventListener('pointermove', (e) => {
-      if (!start) return;
-      const [x0, y0, x1, y1] = rect(start, at(e));
-      Object.assign(live.style, { left: x0 * 100 + '%', top: y0 * 100 + '%', width: (x1 - x0) * 100 + '%', height: (y1 - y0) * 100 + '%' });
-    });
+    pic.addEventListener('pointermove', (e) => { if (start) pct(live, rect(start, at(e))); });
     const end = (e) => {
       if (!start) return;
       const b = rect(start, at(e)); start = null;
       if (b[2] - b[0] > 0.03 && b[3] - b[1] > 0.01) {
-        film.titleBox.push(b.map((v) => Math.round(v * 10000) / 10000));
-        film.titleBox.sort((p, q) => p[1] - q[1]); // top line first
+        const bx = b.map((v) => Math.round(v * 10000) / 10000);
+        set(single ? [bx] : [...get(), bx].sort((p, q) => p[1] - q[1])); // title lines: top first
         onChange();
       }
       draw();
@@ -452,7 +459,10 @@
   }
 
   /* ---------- re-mark a spine (only where the GitHub token is saved) ---------- */
-  const pending = new Map(); // filmKey -> { title, titleBox }
+  // Everything the editor can change on a film. Missing/empty means "let app.js decide".
+  const SPINE_FIELDS = ['titleBox', 'top', 'photoBox', 'logoBox', 'logo', 'studio'];
+  const TOPS = [['', 'Auto'], ['logo', 'Studio logo'], ['photo', 'Picture'], ['tag', 'Director credit'], ['sticker', 'Sticker'], ['none', 'Nothing']];
+  const pending = new Map(); // filmKey -> { title, patch: { field: value | undefined }, blobs: [{ path, blob }] }
   let spineBtn, saveBtn, ed;
 
   function syncSpineButton() {
@@ -467,10 +477,16 @@
   }
   syncSpineButton();
 
+  const copy = (v) => (v === undefined ? undefined : JSON.parse(JSON.stringify(v)));
+  const same = (a, b) => JSON.stringify(a === undefined || (Array.isArray(a) && !a.length) ? null : a) === JSON.stringify(b === undefined || (Array.isArray(b) && !b.length) ? null : b);
+
   async function openSpineEditor(film) {
     if (!film.poster) { alert('This tape has no poster to take the title from.'); return; }
-    const draft = { ...film, titleBox: (film.titleBox || []).map((b) => b.slice()) };
-    const before = JSON.stringify(film.titleBox || []);
+    const draft = { ...film };
+    SPINE_FIELDS.forEach((k) => { draft[k] = copy(film[k]); });
+    if (!Array.isArray(draft.titleBox)) draft.titleBox = [];
+    const blobs = []; // a newly picked studio logo
+    let newLogoPath = null;
 
     ed = h('div', 'vcr open vcr-spine'); ed.setAttribute('aria-hidden', 'false');
     const backdrop = h('div', 'vcr-backdrop');
@@ -479,48 +495,142 @@
     top.append(h('span', 'vcr-led'), h('h2', null, 'Spine'), h('span', 'vcr-mode', film.title.toUpperCase().slice(0, 24)));
     const x = h('button', 'vcr-x', '×'); x.type = 'button'; x.setAttribute('aria-label', 'Close'); top.append(x);
 
+    const tabs = h('div', 'vcr-tabs');
+    const tabBtns = [['title', 'Title lettering'], ['top', 'Top of spine']].map(([id, label]) => {
+      const b = h('button', 'vcr-tab', label); b.type = 'button'; b.dataset.tab = id;
+      b.addEventListener('click', () => show(id)); tabs.append(b); return b;
+    });
+
     const body = h('div', 'vcr-spine-body');
+    const pane = h('div', 'vcr-pane');
     const preview = h('div', 'vcr-preview');
     const shelfBit = h('div', 'vcr-preview-shelf');
-    const label = h('span', 'vcr-dim', 'preview');
-    preview.append(shelfBit, label);
+    preview.append(shelfBit, h('span', 'vcr-dim', 'preview'));
+    body.append(pane, preview);
 
     let seq = 0;
     const update = async () => {
       const n = ++seq;
-      const g = { ...draft, titleBox: draft.titleBox.length ? draft.titleBox.map((b) => b.slice()) : undefined };
+      const g = { ...draft };
+      SPINE_FIELDS.forEach((k) => { g[k] = copy(draft[k]); });
+      if (!g.titleBox || !g.titleBox.length) delete g.titleBox;
+      if (!g.top) delete g.top;
       const el = await window.viewings.preview(g);
       if (n === seq) { shelfBit.textContent = ''; shelfBit.append(el); }
     };
-    const editor = boxEditor(draft, film.poster, update);
-    editor.classList.add('vcr-edit-big');
-    body.append(editor, preview);
 
-    const hint = h('p', 'vcr-hint', 'Drag a box around each line of the title, top line first. Tight boxes look best: include the whole lettering and as little background as you can.');
-    const foot = h('div', 'vcr-foot');
+    // --- title tab
+    const titlePane = h('div');
+    const titleEd = boxEditor(draft, film.poster, update, { cls: 'vcr-edit-big' });
+    const tTools = h('div', 'vcr-row');
     const clear = h('button', 'vcr-link', 'clear: use a typeface instead'); clear.type = 'button';
-    clear.addEventListener('click', () => { draft.titleBox.length = 0; editor.redraw(); update(); });
-    const reset = h('button', 'vcr-link', 'reset'); reset.type = 'button';
-    reset.addEventListener('click', () => { draft.titleBox = JSON.parse(before); editor.redraw(); update(); });
+    clear.addEventListener('click', () => { draft.titleBox = []; titleEd.redraw(); update(); });
+    tTools.append(clear);
+    titlePane.append(h('p', 'vcr-hint', 'Drag a box around each line of the title, top line first. Tight boxes look best.'), titleEd, tTools);
+
+    // --- top-of-spine tab
+    const topPane = h('div');
+    const chips = h('div', 'vcr-chips');
+    const topBody = h('div');
+    topPane.append(h('p', 'vcr-hint', 'What sits above the title. Auto lets the shelf choose, so it stays varied.'), chips, topBody);
+    const renderChips = () => {
+      chips.textContent = '';
+      TOPS.forEach(([val, label]) => {
+        const c = h('button', 'vcr-chip' + ((draft.top || '') === val ? ' on' : ''), label); c.type = 'button';
+        if ((val === 'tag' && !draft.director)) { c.disabled = true; c.title = 'No director on file'; }
+        c.addEventListener('click', () => { draft.top = val || undefined; renderChips(); renderTop(); update(); });
+        chips.append(c);
+      });
+    };
+    const renderTop = () => {
+      topBody.textContent = '';
+      if (draft.top === 'photo') {
+        const pe = boxEditor(draft, film.poster, update, { key: 'photoBox', single: true, square: true, noun: 'picture', empty: 'auto crop (drag a square to pick one)', cls: 'vcr-edit-big' });
+        topBody.append(h('p', 'vcr-hint', 'Drag a square over the face or detail you want in the little frame.'), pe);
+      } else if (draft.top === 'logo') {
+        const wrap = h('div');
+        if (draft.logo) {
+          const le = boxEditor(draft, draft.logo, update, { key: 'logoBox', single: true, noun: 'crop', empty: 'whole logo (drag to crop it)', cls: 'vcr-edit-logo' });
+          wrap.append(h('p', 'vcr-hint', draft.studio ? `${draft.studio}. Drag a box to use just part of the logo.` : 'Drag a box to use just part of the logo.'), le);
+        } else wrap.append(h('p', 'vcr-hint', 'This film has no studio logo yet. Pick one below.'));
+        const change = h('button', 'vcr-link', draft.logo ? 'pick a different studio…' : 'pick a studio…'); change.type = 'button';
+        const choices = h('div', 'vcr-logos');
+        change.addEventListener('click', () => loadLogos(choices));
+        wrap.append(h('div', 'vcr-row', null), choices);
+        wrap.querySelector('.vcr-row').append(change);
+        topBody.append(wrap);
+      }
+    };
+    async function loadLogos(into) {
+      into.textContent = 'Asking TMDB…';
+      try {
+        if (!film.tmdb) throw new Error('No TMDB id for this film.');
+        const kind = film.tmdbKind === 'tv' ? 'tv' : 'movie';
+        const d = await tmdb(`/${kind}/${film.tmdb}`);
+        const seen = new Set();
+        const cos = [...(d.production_companies || []), ...(d.networks || [])].filter((c) => c.logo_path && !seen.has(c.id) && seen.add(c.id));
+        into.textContent = '';
+        if (!cos.length) { into.textContent = 'TMDB has no studio logos for this one.'; return; }
+        cos.forEach((c) => {
+          const b = h('button', 'vcr-logo-pick'); b.type = 'button'; b.title = c.name;
+          const im = new Image(); im.src = `https://image.tmdb.org/t/p/w185${c.logo_path}`; im.alt = c.name;
+          b.append(im, h('span', null, c.name));
+          b.addEventListener('click', async () => {
+            b.disabled = true;
+            try {
+              const res = await fetch(`https://image.tmdb.org/t/p/w185${c.logo_path}`);
+              if (!res.ok) throw new Error(`couldn't download it (${res.status})`);
+              const blob = await res.blob();
+              newLogoPath = `logos/${c.id}${(c.logo_path.match(/\.\w+$/) || ['.png'])[0]}`;
+              blobs.length = 0; blobs.push({ path: newLogoPath, blob });
+              draft.logo = URL.createObjectURL(blob); draft.studio = c.name; delete draft.logoBox; draft.top = 'logo';
+              renderChips(); renderTop(); update();
+            } catch (e) { b.disabled = false; alert(e.message); }
+          });
+          into.append(b);
+        });
+      } catch (e) { into.textContent = e.message; }
+    }
+
+    const show = (id) => {
+      tabBtns.forEach((b) => b.classList.toggle('on', b.dataset.tab === id));
+      pane.textContent = ''; pane.append(id === 'title' ? titlePane : topPane);
+    };
+
+    const foot = h('div', 'vcr-foot');
+    const reset = h('button', 'vcr-link', 'reset all'); reset.type = 'button';
     const keep = h('button', 'vcr-go', 'Keep'); keep.type = 'button';
-    foot.append(clear, reset, keep);
-    box.append(top, hint, body, foot);
+    foot.append(reset, keep);
+    box.append(top, tabs, body, foot);
     ed.append(backdrop, box);
     document.body.append(ed);
 
     const closeEd = () => { if (ed) { ed.remove(); ed = null; } };
+    reset.addEventListener('click', () => { closeEd(); openSpineEditor(film); });
     backdrop.addEventListener('click', closeEd);
     x.addEventListener('click', closeEd);
     keep.addEventListener('click', async () => {
-      const boxes = draft.titleBox.map((b) => b.slice());
       closeEd();
-      if (JSON.stringify(boxes) === before) return;
-      if (boxes.length) film.titleBox = boxes; else delete film.titleBox;
-      pending.set(filmKey(film), { title: film.title, titleBox: boxes });
+      const patch = {};
+      for (const k of SPINE_FIELDS) {
+        let v = copy(draft[k]);
+        if ((Array.isArray(v) && !v.length) || v === '' || v === null) v = undefined;
+        if (k === 'logo' && newLogoPath) { patch.logo = newLogoPath; film.logo = draft.logo; continue; } // blob URL on screen, real path saved
+        if (same(v, film[k])) continue;
+        patch[k] = v;
+        if (v === undefined) delete film[k]; else film[k] = v;
+      }
+      if (!Object.keys(patch).length) return;
+      const prev = pending.get(filmKey(film));
+      pending.set(filmKey(film), {
+        title: film.title,
+        patch: { ...(prev ? prev.patch : {}), ...patch },
+        blobs: [...(prev ? prev.blobs.filter((b) => !blobs.some((n) => n.path === b.path)) : []), ...blobs],
+      });
       await window.viewings.refresh(film);
       syncSave();
     });
-    update();
+    renderChips(); renderTop(); show('title'); update();
   }
 
   // While the editor is open, keys belong to it (Esc closes it, arrows don't flip tapes underneath).
@@ -546,16 +656,17 @@
     try {
       const data = await loadShelf(); // latest from GitHub, so nothing else gets undone
       const byKey = new Map((data.films || []).map((f) => [filmKey(f), f]));
-      const names = [];
+      const names = [], files = [];
       for (const [k, p] of pending) {
         const f = byKey.get(k);
         if (!f) continue;
-        if (p.titleBox.length) f.titleBox = p.titleBox; else delete f.titleBox;
+        for (const [field, v] of Object.entries(p.patch)) { if (v === undefined) delete f[field]; else f[field] = v; }
+        p.blobs.forEach((b) => files.push(b));
         names.push(p.title);
       }
       if (!names.length) throw new Error('Couldn’t find those tapes in films.json on GitHub.');
-      await commitFiles(`Spines: re-marked ${names.slice(0, 3).join(', ')}${names.length > 3 ? ` +${names.length - 3}` : ''}`,
-        [{ path: 'films.json', content: JSON.stringify(data, null, 2) + '\n' }]);
+      files.unshift({ path: 'films.json', content: JSON.stringify(data, null, 2) + '\n' });
+      await commitFiles(`Spines: re-marked ${names.slice(0, 3).join(', ')}${names.length > 3 ? ` +${names.length - 3}` : ''}`, files);
       pending.clear();
       saveBtn.hidden = false; saveBtn.textContent = '✓ Saved. Live in about a minute';
       setTimeout(syncSave, 4000);
