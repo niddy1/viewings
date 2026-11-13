@@ -12,7 +12,15 @@
         "Drama"
       ],
       "imdb": "tt3076658",
-      "poster": "posters/creed-2015.jpg"
+      "poster": "posters/creed-2015.jpg",
+      "titleBox": [
+        [
+          0.1733,
+          0.0889,
+          0.8267,
+          0.2444
+        ]
+      ]
     },
     {
       "title": "No Other Choice",
@@ -27,7 +35,15 @@
         "Thriller"
       ],
       "imdb": "tt1527793",
-      "poster": "posters/no-other-choice-2025.jpg"
+      "poster": "posters/no-other-choice-2025.jpg",
+      "titleBox": [
+        [
+          0.0533,
+          0.4889,
+          0.94,
+          0.5556
+        ]
+      ]
     },
     {
       "title": "Sinners",
@@ -42,7 +58,15 @@
         "Thriller"
       ],
       "imdb": "tt31193180",
-      "poster": "posters/sinners-2025.jpg"
+      "poster": "posters/sinners-2025.jpg",
+      "titleBox": [
+        [
+          0.1733,
+          0.3,
+          0.8267,
+          0.3956
+        ]
+      ]
     },
     {
       "title": "Devil in Disguise: John Wayne Gacy",
@@ -58,7 +82,27 @@
         "Drama"
       ],
       "imdb": "tt31314754",
-      "poster": "posters/devil-in-disguise-john-wayne-gacy-2025.jpg"
+      "poster": "posters/devil-in-disguise-john-wayne-gacy-2025.jpg",
+      "titleBox": [
+        [
+          0.4067,
+          0.3778,
+          0.54,
+          0.4444
+        ],
+        [
+          0.4667,
+          0.4578,
+          0.5333,
+          0.5
+        ],
+        [
+          0.3167,
+          0.5111,
+          0.6833,
+          0.5911
+        ]
+      ]
     },
     {
       "title": "The Rip",
@@ -73,7 +117,21 @@
         "Crime"
       ],
       "imdb": "tt32642706",
-      "poster": "posters/the-rip-2026.jpg"
+      "poster": "posters/the-rip-2026.jpg",
+      "titleBox": [
+        [
+          0.4167,
+          0.7844,
+          0.5833,
+          0.8178
+        ],
+        [
+          0.3167,
+          0.8267,
+          0.6933,
+          0.9222
+        ]
+      ]
     },
     {
       "title": "F1",
@@ -87,7 +145,15 @@
         "Drama"
       ],
       "imdb": "tt16311594",
-      "poster": "posters/f1-2025.jpg"
+      "poster": "posters/f1-2025.jpg",
+      "titleBox": [
+        [
+          0.02,
+          0.1156,
+          0.9867,
+          0.2622
+        ]
+      ]
     },
     {
       "title": "Zootopia 2",
@@ -118,7 +184,21 @@
         "Thriller"
       ],
       "imdb": "tt32916440",
-      "poster": "posters/marty-supreme-2025.jpg"
+      "poster": "posters/marty-supreme-2025.jpg",
+      "titleBox": [
+        [
+          0.2933,
+          0.5333,
+          0.7067,
+          0.7067
+        ],
+        [
+          0.2933,
+          0.7222,
+          0.7067,
+          0.84
+        ]
+      ]
     },
     {
       "title": "The Housemaid",
@@ -132,7 +212,21 @@
         "Thriller"
       ],
       "imdb": "tt27543632",
-      "poster": "posters/the-housemaid-2025.jpg"
+      "poster": "posters/the-housemaid-2025.jpg",
+      "titleBox": [
+        [
+          0.45,
+          0.7067,
+          0.5433,
+          0.74
+        ],
+        [
+          0.21,
+          0.7511,
+          0.79,
+          0.8356
+        ]
+      ]
     },
     {
       "title": "Bugonia",
@@ -147,7 +241,15 @@
         "Comedy"
       ],
       "imdb": "tt12300742",
-      "poster": "posters/bugonia-2025.jpg"
+      "poster": "posters/bugonia-2025.jpg",
+      "titleBox": [
+        [
+          0.0933,
+          0.0489,
+          0.9067,
+          0.1511
+        ]
+      ]
     },
     {
       "title": "The Perfect Neighbor",
@@ -161,7 +263,27 @@
         "Documentary"
       ],
       "imdb": "tt34962891",
-      "poster": "posters/the-perfect-neighbor-2025.jpg"
+      "poster": "posters/the-perfect-neighbor-2025.jpg",
+      "titleBox": [
+        [
+          0.2167,
+          0.5467,
+          0.3933,
+          0.5933
+        ],
+        [
+          0.2167,
+          0.6,
+          0.64,
+          0.6489
+        ],
+        [
+          0.2167,
+          0.6533,
+          0.7,
+          0.7022
+        ]
+      ]
     },
     {
       "title": "Dead Man's Wire",
@@ -176,7 +298,15 @@
         "Thriller"
       ],
       "imdb": "tt15181326",
-      "poster": "posters/dead-man-s-wire-2025.jpg"
+      "poster": "posters/dead-man-s-wire-2025.jpg",
+      "titleBox": [
+        [
+          0.11,
+          0.7156,
+          0.8933,
+          0.8089
+        ]
+      ]
     },
     {
       "title": "Girl in the Box",
@@ -190,7 +320,27 @@
         "TV Movie"
       ],
       "imdb": "tt5957584",
-      "poster": "posters/girl-in-the-box-2016.jpg"
+      "poster": "posters/girl-in-the-box-2016.jpg",
+      "titleBox": [
+        [
+          0.25,
+          0.6489,
+          0.8,
+          0.76
+        ],
+        [
+          0.3333,
+          0.7778,
+          0.7833,
+          0.8489
+        ],
+        [
+          0.25,
+          0.8533,
+          0.8167,
+          0.9689
+        ]
+      ]
     },
     {
       "title": "Heel",
@@ -220,7 +370,21 @@
         "Documentary"
       ],
       "imdb": "tt0064429",
-      "poster": "posters/high-school-1968.jpg"
+      "poster": "posters/high-school-1968.jpg",
+      "titleBox": [
+        [
+          0.2667,
+          0.3111,
+          0.7333,
+          0.4933
+        ],
+        [
+          0.1,
+          0.5156,
+          0.8933,
+          0.6889
+        ]
+      ]
     },
     {
       "title": "The Secret Agent",
@@ -235,7 +399,21 @@
         "Crime"
       ],
       "imdb": "tt27847051",
-      "poster": "posters/the-secret-agent-2025.jpg"
+      "poster": "posters/the-secret-agent-2025.jpg",
+      "titleBox": [
+        [
+          0.1667,
+          0.7556,
+          0.84,
+          0.84
+        ],
+        [
+          0.1933,
+          0.84,
+          0.8067,
+          0.9111
+        ]
+      ]
     },
     {
       "title": "Zodiac Killer Project",
@@ -249,7 +427,15 @@
         "Crime"
       ],
       "imdb": "tt34965959",
-      "poster": "posters/zodiac-killer-project-2025.jpg"
+      "poster": "posters/zodiac-killer-project-2025.jpg",
+      "titleBox": [
+        [
+          0.1267,
+          0.3911,
+          0.88,
+          0.4533
+        ]
+      ]
     },
     {
       "title": "The Sweet East",
@@ -262,7 +448,15 @@
         "Comedy"
       ],
       "imdb": "tt27546190",
-      "poster": "posters/the-sweet-east-2023.jpg"
+      "poster": "posters/the-sweet-east-2023.jpg",
+      "titleBox": [
+        [
+          0.1,
+          0.4511,
+          0.9,
+          0.5867
+        ]
+      ]
     },
     {
       "title": "Crime 101",
@@ -276,7 +470,21 @@
         "Thriller"
       ],
       "imdb": "tt32430579",
-      "poster": "posters/crime-101-2026.jpg"
+      "poster": "posters/crime-101-2026.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.3889,
+          0.46,
+          0.4778
+        ],
+        [
+          0.1267,
+          0.4778,
+          0.46,
+          0.5378
+        ]
+      ]
     },
     {
       "title": "How to Make a Killing",
@@ -291,7 +499,21 @@
         "Crime"
       ],
       "imdb": "tt4357198",
-      "poster": "posters/how-to-make-a-killing-2026.jpg"
+      "poster": "posters/how-to-make-a-killing-2026.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.1022,
+          0.94,
+          0.1822
+        ],
+        [
+          0.3167,
+          0.1778,
+          0.8067,
+          0.2533
+        ]
+      ]
     },
     {
       "title": "The Drama",
@@ -306,7 +528,21 @@
         "Drama"
       ],
       "imdb": "tt33071426",
-      "poster": "posters/the-drama-2026.jpg"
+      "poster": "posters/the-drama-2026.jpg",
+      "titleBox": [
+        [
+          0.3933,
+          0.7778,
+          0.5733,
+          0.8089
+        ],
+        [
+          0.1267,
+          0.8222,
+          0.8733,
+          0.9378
+        ]
+      ]
     },
     {
       "title": "Over Your Dead Body",
@@ -321,7 +557,21 @@
         "Thriller"
       ],
       "imdb": "tt34685692",
-      "poster": "posters/over-your-dead-body-2026.jpg"
+      "poster": "posters/over-your-dead-body-2026.jpg",
+      "titleBox": [
+        [
+          0.15,
+          0.6978,
+          0.85,
+          0.8089
+        ],
+        [
+          0.15,
+          0.8178,
+          0.85,
+          0.9467
+        ]
+      ]
     },
     {
       "title": "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
@@ -335,7 +585,21 @@
         "Comedy"
       ],
       "imdb": "tt17492148",
-      "poster": "posters/psycho-therapy-the-shallow-tale-of-a-writer-who-decided-to-write-about-a-serial-killer-2024.jpg"
+      "poster": "posters/psycho-therapy-the-shallow-tale-of-a-writer-who-decided-to-write-about-a-serial-killer-2024.jpg",
+      "titleBox": [
+        [
+          0.04,
+          0.2044,
+          0.4067,
+          0.3022
+        ],
+        [
+          0.04,
+          0.3111,
+          0.4533,
+          0.4178
+        ]
+      ]
     },
     {
       "title": "Maternal Instinct",
@@ -349,7 +613,15 @@
         "Crime"
       ],
       "imdb": "tt42863533",
-      "poster": "posters/maternal-instinct-2026.jpg"
+      "poster": "posters/maternal-instinct-2026.jpg",
+      "titleBox": [
+        [
+          0.1667,
+          0.6044,
+          0.8333,
+          0.8044
+        ]
+      ]
     },
     {
       "title": "The Threesome",
@@ -364,7 +636,15 @@
         "Drama"
       ],
       "imdb": "tt21187592",
-      "poster": "posters/the-threesome-2025.jpg"
+      "poster": "posters/the-threesome-2025.jpg",
+      "titleBox": [
+        [
+          0.0933,
+          0.7956,
+          0.9067,
+          0.9422
+        ]
+      ]
     },
     {
       "title": "In the Grey",
@@ -378,7 +658,27 @@
         "Crime"
       ],
       "imdb": "tt27681354",
-      "poster": "posters/in-the-grey-2026.jpg"
+      "poster": "posters/in-the-grey-2026.jpg",
+      "titleBox": [
+        [
+          0.15,
+          0.0667,
+          0.3267,
+          0.1422
+        ],
+        [
+          0.15,
+          0.1467,
+          0.5333,
+          0.2089
+        ],
+        [
+          0.3067,
+          0.2178,
+          0.8,
+          0.3022
+        ]
+      ]
     },
     {
       "title": "I Love Boosters",
@@ -393,7 +693,21 @@
         "Crime"
       ],
       "imdb": "tt30827810",
-      "poster": "posters/i-love-boosters-2026.jpg"
+      "poster": "posters/i-love-boosters-2026.jpg",
+      "titleBox": [
+        [
+          0.3,
+          0.4067,
+          0.7067,
+          0.5111
+        ],
+        [
+          0.1733,
+          0.5156,
+          0.8333,
+          0.6267
+        ]
+      ]
     },
     {
       "title": "Project Hail Mary",
@@ -407,7 +721,27 @@
         "Adventure"
       ],
       "imdb": "tt12042730",
-      "poster": "posters/project-hail-mary-2026.jpg"
+      "poster": "posters/project-hail-mary-2026.jpg",
+      "titleBox": [
+        [
+          0.3333,
+          0.1067,
+          0.6667,
+          0.1378
+        ],
+        [
+          0.1667,
+          0.1511,
+          0.8333,
+          0.2222
+        ],
+        [
+          0.1833,
+          0.2356,
+          0.8333,
+          0.3022
+        ]
+      ]
     },
     {
       "title": "Sentimental Value",
@@ -420,7 +754,21 @@
         "Drama"
       ],
       "imdb": "tt27714581",
-      "poster": "posters/sentimental-value-2025.jpg"
+      "poster": "posters/sentimental-value-2025.jpg",
+      "titleBox": [
+        [
+          0.1167,
+          0.2578,
+          0.8867,
+          0.3378
+        ],
+        [
+          0.1233,
+          0.3378,
+          0.4667,
+          0.4089
+        ]
+      ]
     },
     {
       "title": "The Negotiator",
@@ -436,7 +784,21 @@
         "Thriller"
       ],
       "imdb": "tt0120768",
-      "poster": "posters/the-negotiator-1998.jpg"
+      "poster": "posters/the-negotiator-1998.jpg",
+      "titleBox": [
+        [
+          0.1667,
+          0.54,
+          0.3333,
+          0.5756
+        ],
+        [
+          0.0433,
+          0.5778,
+          0.74,
+          0.6378
+        ]
+      ]
     },
     {
       "title": "Hoppers",
@@ -453,7 +815,15 @@
         "Science Fiction"
       ],
       "imdb": "tt26443616",
-      "poster": "posters/hoppers-2026.jpg"
+      "poster": "posters/hoppers-2026.jpg",
+      "titleBox": [
+        [
+          0.1667,
+          0.7956,
+          0.8467,
+          0.8822
+        ]
+      ]
     },
     {
       "title": "Louis C.K.: Ridiculous",
@@ -466,7 +836,21 @@
         "Comedy"
       ],
       "imdb": "tt41376508",
-      "poster": "posters/louis-c-k-ridiculous-2026.jpg"
+      "poster": "posters/louis-c-k-ridiculous-2026.jpg",
+      "titleBox": [
+        [
+          0.1167,
+          0.0778,
+          0.4167,
+          0.1333
+        ],
+        [
+          0.1167,
+          0.1378,
+          0.8833,
+          0.1911
+        ]
+      ]
     },
     {
       "title": "The Devil Wears Prada 2",
@@ -492,7 +876,21 @@
         "Comedy"
       ],
       "imdb": "tt43616650",
-      "poster": "posters/jeff-arcuri-nice-to-meet-you-2026.jpg"
+      "poster": "posters/jeff-arcuri-nice-to-meet-you-2026.jpg",
+      "titleBox": [
+        [
+          0.01,
+          0.64,
+          0.99,
+          0.72
+        ],
+        [
+          0.0733,
+          0.7222,
+          0.9333,
+          0.7778
+        ]
+      ]
     },
     {
       "title": "Pretty Maids All in a Row",
@@ -508,7 +906,15 @@
         "Thriller"
       ],
       "imdb": "tt0067610",
-      "poster": "posters/pretty-maids-all-in-a-row-1971.jpg"
+      "poster": "posters/pretty-maids-all-in-a-row-1971.jpg",
+      "titleBox": [
+        [
+          0.1333,
+          0.7956,
+          0.8467,
+          0.8667
+        ]
+      ]
     },
     {
       "title": "Con Air",
@@ -523,7 +929,15 @@
         "Crime"
       ],
       "imdb": "tt0118880",
-      "poster": "posters/con-air-1997.jpg"
+      "poster": "posters/con-air-1997.jpg",
+      "titleBox": [
+        [
+          0.1933,
+          0.7733,
+          0.8267,
+          0.8844
+        ]
+      ]
     },
     {
       "title": "The Crash",
@@ -537,7 +951,15 @@
         "Crime"
       ],
       "imdb": "tt40792117",
-      "poster": "posters/the-crash-2026.jpg"
+      "poster": "posters/the-crash-2026.jpg",
+      "titleBox": [
+        [
+          0.0333,
+          0.6733,
+          0.9467,
+          0.82
+        ]
+      ]
     },
     {
       "title": "Face/Off",
@@ -552,7 +974,15 @@
         "Science Fiction"
       ],
       "imdb": "tt0119094",
-      "poster": "posters/face-off-1997.jpg"
+      "poster": "posters/face-off-1997.jpg",
+      "titleBox": [
+        [
+          0.1,
+          0.8044,
+          0.84,
+          0.9067
+        ]
+      ]
     },
     {
       "title": "Do Revenge",
@@ -567,7 +997,15 @@
         "Romance"
       ],
       "imdb": "tt13327038",
-      "poster": "posters/do-revenge-2022.jpg"
+      "poster": "posters/do-revenge-2022.jpg",
+      "titleBox": [
+        [
+          0.0733,
+          0.7511,
+          0.9733,
+          0.9156
+        ]
+      ]
     },
     {
       "title": "Obsession",
@@ -581,7 +1019,15 @@
         "Thriller"
       ],
       "imdb": "tt37287335",
-      "poster": "posters/obsession-2025.jpg"
+      "poster": "posters/obsession-2025.jpg",
+      "titleBox": [
+        [
+          0.12,
+          0.1022,
+          0.88,
+          0.2089
+        ]
+      ]
     },
     {
       "title": "LifeHack",
@@ -595,7 +1041,15 @@
         "Thriller"
       ],
       "imdb": "tt32135632",
-      "poster": "posters/lifehack-2025.jpg"
+      "poster": "posters/lifehack-2025.jpg",
+      "titleBox": [
+        [
+          0.11,
+          0.8044,
+          0.9133,
+          0.8933
+        ]
+      ]
     },
     {
       "title": "Tuner",
@@ -609,7 +1063,15 @@
         "Thriller"
       ],
       "imdb": "tt33296751",
-      "poster": "posters/tuner-2025.jpg"
+      "poster": "posters/tuner-2025.jpg",
+      "titleBox": [
+        [
+          0.1267,
+          0.7378,
+          0.8733,
+          0.8622
+        ]
+      ]
     },
     {
       "title": "Talladega Nights: The Ballad of Ricky Bobby",
@@ -622,7 +1084,21 @@
         "Comedy"
       ],
       "imdb": "tt0415306",
-      "poster": "posters/talladega-nights-the-ballad-of-ricky-bobby-2006.jpg"
+      "poster": "posters/talladega-nights-the-ballad-of-ricky-bobby-2006.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.7511,
+          0.72,
+          0.8133
+        ],
+        [
+          0.1733,
+          0.8111,
+          0.7133,
+          0.8489
+        ]
+      ]
     },
     {
       "title": "My Man Godfrey",
@@ -635,7 +1111,21 @@
         "Comedy"
       ],
       "imdb": "tt0028010",
-      "poster": "posters/my-man-godfrey-1936.jpg"
+      "poster": "posters/my-man-godfrey-1936.jpg",
+      "titleBox": [
+        [
+          0.15,
+          0.0933,
+          0.7067,
+          0.1911
+        ],
+        [
+          0.1167,
+          0.1956,
+          0.84,
+          0.2978
+        ]
+      ]
     },
     {
       "title": "Body of Lies",
@@ -650,7 +1140,15 @@
         "Thriller"
       ],
       "imdb": "tt0758774",
-      "poster": "posters/body-of-lies-2008.jpg"
+      "poster": "posters/body-of-lies-2008.jpg",
+      "titleBox": [
+        [
+          0.0267,
+          0.9022,
+          0.9733,
+          0.9733
+        ]
+      ]
     },
     {
       "title": "Monster",
@@ -665,7 +1163,15 @@
         "Drama"
       ],
       "imdb": "tt23736044",
-      "poster": "posters/monster-2023.jpg"
+      "poster": "posters/monster-2023.jpg",
+      "titleBox": [
+        [
+          0.1,
+          0.7333,
+          0.9,
+          0.8867
+        ]
+      ]
     },
     {
       "title": "The Invite",
@@ -680,7 +1186,15 @@
         "Romance"
       ],
       "imdb": "tt14173636",
-      "poster": "posters/the-invite-2026.jpg"
+      "poster": "posters/the-invite-2026.jpg",
+      "titleBox": [
+        [
+          0.2,
+          0.8222,
+          0.8,
+          0.9156
+        ]
+      ]
     },
     {
       "title": "Toy Story 5",
@@ -696,7 +1210,21 @@
         "Adventure"
       ],
       "imdb": "tt29355505",
-      "poster": "posters/toy-story-5-2026.jpg"
+      "poster": "posters/toy-story-5-2026.jpg",
+      "titleBox": [
+        [
+          0.3767,
+          0.0667,
+          0.6233,
+          0.1422
+        ],
+        [
+          0.4433,
+          0.1422,
+          0.55,
+          0.2489
+        ]
+      ]
     },
     {
       "title": "Motor City",
@@ -712,7 +1240,15 @@
         "Drama"
       ],
       "imdb": "tt2012616",
-      "poster": "posters/motor-city-2025.jpg"
+      "poster": "posters/motor-city-2025.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.84,
+          0.94,
+          0.9711
+        ]
+      ]
     },
     {
       "title": "A Deadly American Marriage",
@@ -726,7 +1262,27 @@
         "Documentary"
       ],
       "imdb": "tt36592065",
-      "poster": "posters/a-deadly-american-marriage-2025.jpg"
+      "poster": "posters/a-deadly-american-marriage-2025.jpg",
+      "titleBox": [
+        [
+          0.46,
+          0.7556,
+          0.54,
+          0.8
+        ],
+        [
+          0.0667,
+          0.8089,
+          0.9333,
+          0.8711
+        ],
+        [
+          0.24,
+          0.8711,
+          0.76,
+          0.9244
+        ]
+      ]
     },
     {
       "title": "Stavros Halkias: Uncle Stav",
@@ -739,7 +1295,21 @@
         "Comedy"
       ],
       "imdb": "tt41975820",
-      "poster": "posters/stavros-halkias-uncle-stav-2026.jpg"
+      "poster": "posters/stavros-halkias-uncle-stav-2026.jpg",
+      "titleBox": [
+        [
+          0.1533,
+          0.4889,
+          0.7733,
+          0.6
+        ],
+        [
+          0.1533,
+          0.6044,
+          0.7733,
+          0.7267
+        ]
+      ]
     },
     {
       "title": "Pacific Heights",
@@ -754,7 +1324,15 @@
         "Mystery"
       ],
       "imdb": "tt0100318",
-      "poster": "posters/pacific-heights-1990.jpg"
+      "poster": "posters/pacific-heights-1990.jpg",
+      "titleBox": [
+        [
+          0.1733,
+          0.8,
+          0.82,
+          0.9422
+        ]
+      ]
     },
     {
       "title": "The Rivals of Amziah King",
@@ -769,7 +1347,15 @@
         "Thriller"
       ],
       "imdb": "tt27706593",
-      "poster": "posters/the-rivals-of-amziah-king-2025.jpg"
+      "poster": "posters/the-rivals-of-amziah-king-2025.jpg",
+      "titleBox": [
+        [
+          0.1533,
+          0.7956,
+          0.8067,
+          0.8667
+        ]
+      ]
     },
     {
       "title": "Molly's Game",
@@ -783,7 +1369,15 @@
         "Crime"
       ],
       "imdb": "tt4209788",
-      "poster": "posters/molly-s-game-2017.jpg"
+      "poster": "posters/molly-s-game-2017.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.7467,
+          0.9467,
+          0.84
+        ]
+      ]
     },
     {
       "title": "Beverly Hills Cop II",
@@ -798,7 +1392,21 @@
         "Crime"
       ],
       "imdb": "tt0092644",
-      "poster": "posters/beverly-hills-cop-ii-1987.jpg"
+      "poster": "posters/beverly-hills-cop-ii-1987.jpg",
+      "titleBox": [
+        [
+          0.1033,
+          0.0444,
+          0.89,
+          0.1044
+        ],
+        [
+          0.2733,
+          0.1022,
+          0.7267,
+          0.2
+        ]
+      ]
     },
     {
       "title": "Lethal Weapon",
@@ -813,7 +1421,15 @@
         "Crime"
       ],
       "imdb": "tt0093409",
-      "poster": "posters/lethal-weapon-1987.jpg"
+      "poster": "posters/lethal-weapon-1987.jpg",
+      "titleBox": [
+        [
+          0.1267,
+          0.8178,
+          0.8667,
+          0.8756
+        ]
+      ]
     },
     {
       "title": "Our Hero, Balthazar",
@@ -827,7 +1443,27 @@
         "Comedy"
       ],
       "imdb": "tt36589928",
-      "poster": "posters/our-hero-balthazar-2025.jpg"
+      "poster": "posters/our-hero-balthazar-2025.jpg",
+      "titleBox": [
+        [
+          0.0533,
+          0.1956,
+          0.3733,
+          0.3067
+        ],
+        [
+          0.0533,
+          0.3289,
+          0.54,
+          0.4311
+        ],
+        [
+          0.0533,
+          0.7378,
+          0.9467,
+          0.84
+        ]
+      ]
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -842,7 +1478,15 @@
         "Adventure"
       ],
       "imdb": "tt22084616",
-      "poster": "posters/spider-man-brand-new-day-2026.jpg"
+      "poster": "posters/spider-man-brand-new-day-2026.jpg",
+      "titleBox": [
+        [
+          0.1,
+          0.8,
+          0.8933,
+          0.92
+        ]
+      ]
     },
     {
       "title": "Bad Apples",
@@ -856,7 +1500,15 @@
         "Thriller"
       ],
       "imdb": "tt29714073",
-      "poster": "posters/bad-apples-2025.jpg"
+      "poster": "posters/bad-apples-2025.jpg",
+      "titleBox": [
+        [
+          0.0867,
+          0.8733,
+          0.9133,
+          0.9556
+        ]
+      ]
     },
     {
       "title": "Coyote vs. Acme",
@@ -887,7 +1539,27 @@
         "Crime"
       ],
       "imdb": "tt34379051",
-      "poster": "posters/by-any-means-2026.jpg"
+      "poster": "posters/by-any-means-2026.jpg",
+      "titleBox": [
+        [
+          0.1333,
+          0.6044,
+          0.38,
+          0.6978
+        ],
+        [
+          0.1333,
+          0.6978,
+          0.5267,
+          0.8
+        ],
+        [
+          0.1333,
+          0.8,
+          0.8067,
+          0.9067
+        ]
+      ]
     },
     {
       "title": "Deep Water",
@@ -917,7 +1589,15 @@
         "Crime"
       ],
       "imdb": "tt34206385",
-      "poster": "posters/primetime-2026.jpg"
+      "poster": "posters/primetime-2026.jpg",
+      "titleBox": [
+        [
+          0.0533,
+          0.8333,
+          0.5333,
+          0.9556
+        ]
+      ]
     },
     {
       "title": "Your Mother Your Mother Your Mother",
@@ -933,7 +1613,15 @@
         "Thriller"
       ],
       "imdb": "tt35856037",
-      "poster": "posters/your-mother-your-mother-your-mother-2026.jpg"
+      "poster": "posters/your-mother-your-mother-your-mother-2026.jpg",
+      "titleBox": [
+        [
+          0.06,
+          0.1289,
+          0.94,
+          0.3556
+        ]
+      ]
     },
     {
       "title": "The Odyssey",
@@ -948,7 +1636,15 @@
         "Fantasy"
       ],
       "imdb": "tt33764258",
-      "poster": "posters/the-odyssey-2026.jpg"
+      "poster": "posters/the-odyssey-2026.jpg",
+      "titleBox": [
+        [
+          0.16,
+          0.8578,
+          0.84,
+          0.9067
+        ]
+      ]
     },
     {
       "title": "Barcelona",
@@ -963,7 +1659,15 @@
         "Romance"
       ],
       "imdb": "tt0109219",
-      "poster": "posters/barcelona-1994.jpg"
+      "poster": "posters/barcelona-1994.jpg",
+      "titleBox": [
+        [
+          0.24,
+          0.0511,
+          0.7667,
+          0.1267
+        ]
+      ]
     },
     {
       "title": "Heart of the Beast",

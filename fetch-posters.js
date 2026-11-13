@@ -8,6 +8,8 @@
  * - TMDB_KEY can be either the v3 API key or the v4 "Read Access Token".
  * - Safe to re-run: films already in films.json keep their poster, any manual
  *   edits (font, color, note) and are not re-fetched.
+ * - Also saves the studio logo for the top of each spine into logos/ (films with no
+ *   logo on TMDB get a blank top). Films from before this existed are backfilled on the next run.
  * - Matches TMDB couldn't make confidently are listed in needs_review.txt.
  */
 const fs = require('fs');
@@ -18,10 +20,12 @@ const CSV = process.argv[2] || 'diary.csv';
 const YEAR = String(process.argv[3] || process.env.YEAR || new Date().getFullYear());
 const OUT = path.join(__dirname, 'films.json');
 const POSTERS = path.join(__dirname, 'posters');
+const LOGOS = path.join(__dirname, 'logos');
 
 if (!KEY) { console.error('Set TMDB_KEY first, e.g.  TMDB_KEY=abc123 node fetch-posters.js diary.csv'); process.exit(1); }
 if (!fs.existsSync(CSV)) { console.error(`Can't find ${CSV}. Pass the path to Letterboxd's diary.csv.`); process.exit(1); }
 fs.mkdirSync(POSTERS, { recursive: true });
+fs.mkdirSync(LOGOS, { recursive: true });
 
 function parseCSV(text) {
   const rows = []; let row = [], cur = '', q = false;
@@ -108,7 +112,8 @@ async function tmdb(endpoint, params = {}) {
     const ov = overrides[k] || {};
     const override = Number(ov.tmdb || (old && old.tmdbOverride)) || 0;
     const type = ov.type || (old && old.tmdbType) || 'movie'; // "movie" or "tv"
-    const upToDate = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster)) && (!override || (old.tmdb === override && (old.tmdbKind || 'movie') === type));
+    const havePoster = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster));
+    const upToDate = havePoster && 'logo' in old && (!override || (old.tmdb === override && (old.tmdbKind || 'movie') === type));
     if (upToDate) {
       films.push({ ...old, rating: base.rating, watched: base.watched, rewatch: base.rewatch });
       continue;
@@ -132,11 +137,25 @@ async function tmdb(endpoint, params = {}) {
         review.push(`${base.title} (${base.year}): matched "${dTitle}" (${relYear}) - check this one`);
 
       let poster = '';
-      if (d.poster_path) {
+      const sameMovie = old && old.tmdb === d.id && (old.tmdbKind || 'movie') === (isTv ? 'tv' : 'movie');
+      if (havePoster && (sameMovie || (!old.tmdb && !override))) poster = old.poster; // backfill pass: keep the poster we already have
+      else if (d.poster_path) {
         const file = `posters/${slug(base.title)}-${base.year}.jpg`;
         const img = await fetch(`https://image.tmdb.org/t/p/w780${d.poster_path}`);
         if (img.ok) { fs.writeFileSync(path.join(__dirname, file), Buffer.from(await img.arrayBuffer())); poster = file; }
       } else review.push(`${base.title} (${base.year}): no poster on TMDB`);
+
+      // Studio logo for the top of the spine: the first production company TMDB has a logo for.
+      const co = (d.production_companies || []).find((c) => c.logo_path);
+      let logo = '';
+      if (co) {
+        const file = `logos/${co.id}${path.extname(co.logo_path) || '.png'}`;
+        if (fs.existsSync(path.join(__dirname, file))) logo = file;
+        else {
+          const li = await fetch(`https://image.tmdb.org/t/p/w185${co.logo_path}`);
+          if (li.ok) { fs.writeFileSync(path.join(__dirname, file), Buffer.from(await li.arrayBuffer())); logo = file; }
+        }
+      }
 
       const director = isTv ? (d.created_by || [])[0] : (d.credits?.crew || []).find((c) => c.job === 'Director');
       films.push({
@@ -149,6 +168,8 @@ async function tmdb(endpoint, params = {}) {
         genres: (d.genres || []).map((g) => g.name),
         imdb: d.external_ids?.imdb_id || '',
         poster,
+        studio: co ? co.name : '',
+        logo,
       });
       console.log('ok');
     } catch (e) {

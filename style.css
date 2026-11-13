@@ -65,25 +65,32 @@ h1 span { color: var(--gold); }
   width: var(--w);
   height: var(--h);
   background:
-    linear-gradient(90deg, rgba(255,255,255,.16), transparent 14%, transparent 80%, rgba(0,0,0,.5)),
-    linear-gradient(180deg, rgba(255,255,255,.06), transparent 30%, rgba(0,0,0,.25)),
+    linear-gradient(180deg, rgba(255,255,255,.08), transparent 22%, transparent 80%, rgba(0,0,0,.22)),
     var(--c);
-  border-radius: 2px 2px 0 0;
+  border-radius: 1px 1px 0 0;
   cursor: pointer;
   color: var(--t);
   transition: transform .22s ease, filter .22s ease;
-  box-shadow: 1px 0 0 rgba(0,0,0,.6), -1px 0 0 rgba(0,0,0,.5);
+  box-shadow: 1px 0 0 rgba(0,0,0,.65), -1px 0 0 rgba(0,0,0,.55);
+}
+/* plastic-sleeve shading: lit on the left, falling off to the right */
+.spine::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 5;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.2), transparent 12%, transparent 78%, rgba(0,0,0,.45)),
+    linear-gradient(180deg, rgba(255,255,255,.1) 0, transparent 5px);
 }
 .spine:hover, .spine:focus-visible { transform: translateY(-9px); filter: brightness(1.15); outline: none; }
 .spine:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
 
-.spine .stripe {
-  position: absolute; left: 0; right: 0; top: 9px; height: 4px;
-  background: var(--t); opacity: .85;
-  box-shadow: 0 8px 0 var(--t);
+.spine .logo {
+  position: absolute; left: 50%; top: 8px; transform: translateX(-50%);
+  max-width: calc(100% - 10px); max-height: 26px; object-fit: contain;
+  filter: brightness(0) invert(1); opacity: .88;
 }
+.spine .art { position: absolute; left: 2px; top: var(--top); z-index: 1; display: block; }
 .spine .title {
-  position: absolute; left: 0; right: 0; top: 34px; bottom: 42px;
+  position: absolute; left: 0; right: 0; top: var(--top); bottom: calc(var(--bot) + 6px); z-index: 1;
   display: flex; align-items: center; justify-content: center;
   writing-mode: vertical-rl;
   font-family: var(--f);
@@ -95,11 +102,56 @@ h1 span { color: var(--gold); }
   color: var(--t);
   text-shadow: 1px 1px 0 rgba(0,0,0,.45);
 }
-.spine .meta {
-  position: absolute; left: 0; right: 0; bottom: 9px;
-  writing-mode: vertical-rl;
-  font-size: 9px; letter-spacing: .12em; text-align: center; opacity: .8;
+.spine .vhs {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 1;
+  padding: 1px 3px; border: 1px solid currentColor; border-radius: 1px;
+  font: 700 8px/1 Arial, Helvetica, sans-serif; letter-spacing: .04em; opacity: .85;
 }
+/* the thumb-notch cut into the bottom of every sleeve */
+.spine .notch {
+  position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); z-index: 6;
+  width: 13px; height: 6px; border-radius: 7px 7px 0 0;
+  background: #170e08; box-shadow: inset 0 2px 2px rgba(0,0,0,.7);
+}
+
+/* ---- wear and tear ---- */
+.spine .wear { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
+.spine.dmg-worn .wear {
+  background:
+    radial-gradient(circle at 92% 3%, rgba(240,232,215,.75) 0 2px, transparent 3px),
+    radial-gradient(ellipse 5px 2px at 6% 96%, rgba(240,232,215,.6), transparent),
+    linear-gradient(90deg, rgba(240,232,215,.3) 0 1px, transparent 1px calc(100% - 1px), rgba(240,232,215,.22) calc(100% - 1px)),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.07) 0 1px, transparent 1px 3px);
+}
+/* a hard crease across the spine */
+.spine.dmg-crease .wear::before {
+  content: ""; position: absolute; left: 0; right: 0; top: var(--cy); height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.7) 30%, rgba(255,255,255,.35) 70%, rgba(255,255,255,.05));
+  transform: skewY(calc(var(--flip) * 3deg));
+  box-shadow: 0 1px 0 rgba(0,0,0,.45);
+}
+/* sun fade */
+.spine.dmg-fade .wear::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(235,220,180,.32), rgba(235,220,180,.08) 60%, transparent);
+}
+/* chipped top corner */
+.spine.dmg-chip { clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% calc(var(--cut) * .8), 100% 100%, 0 100%); }
+.spine.dmg-chip:nth-child(even) { clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%, 0 calc(var(--cut) * .8)); }
+/* torn, ragged top edge */
+.spine.dmg-tear { clip-path: polygon(0 3px, 12% 0, 24% 4px, 37% 1px, 51% 5px, 63% 0, 77% 3px, 88% 0, 100% 4px, 100% 100%, 0 100%); }
+.spine.dmg-tear.dmg-chip { clip-path: polygon(0 3px, 12% 0, 24% 4px, 37% 1px, 51% 5px, 63% 0, 100% 9px, 100% 100%, 0 100%); }
+/* rental sticker, slightly peeling */
+.spine .sticker {
+  position: absolute; z-index: 3; left: 50%; top: 6px;
+  transform: translateX(-50%) rotate(calc(var(--flip) * 2deg));
+  writing-mode: vertical-rl;
+  padding: 4px 2px; background: #f08a2c; color: #2a1608;
+  font: 700 5.5px/1 Arial, Helvetica, sans-serif; letter-spacing: .08em;
+  box-shadow: 0 1px 1px rgba(0,0,0,.5);
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 70% 100%, 0 100%);
+}
+
 .spine.pulling { transform: translateY(-14px) scale(1.07); transition-duration: .18s; z-index: 3; }
 .spine.out { visibility: hidden; }
 .spine.back { animation: slideBack .5s cubic-bezier(.2,.8,.2,1); }
@@ -207,7 +259,7 @@ h1 span { color: var(--gold); }
 .close:hover { background: rgba(239,230,210,.12); }
 
 @media (max-width: 640px) {
-  .shelf { height: 262px; padding: 0 8px; border-left-width: 6px; border-right-width: 6px; }
+  .shelf { height: 270px; padding: 0 8px; border-left-width: 6px; border-right-width: 6px; }
   .nav { font-size: 2.4rem; padding: 6px; }
 }
 @media (prefers-reduced-motion: reduce) {
