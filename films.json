@@ -906,7 +906,20 @@
       "tmdb": 1124566,
       "tmdbKind": "movie",
       "studio": "Mer Film",
-      "logo": "logos/21979.png"
+      "logo": "logos/21979.png",
+      "top": "photo",
+      "photoBox": [
+        0.6494,
+        0.5382,
+        0.98,
+        0.7586
+      ],
+      "logoBox": [
+        0.4159,
+        0.531,
+        0.5214,
+        0.6114
+      ]
     },
     {
       "title": "The Negotiator",
