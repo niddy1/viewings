@@ -114,33 +114,13 @@ h1 span { color: var(--gold); }
   background: #170e08; box-shadow: inset 0 2px 2px rgba(0,0,0,.7);
 }
 
-/* ---- wear and tear ---- */
-.spine .wear { position: absolute; inset: 0; pointer-events: none; z-index: 4; }
-.spine.dmg-worn .wear {
-  background:
-    radial-gradient(circle at 92% 3%, rgba(240,232,215,.75) 0 2px, transparent 3px),
-    radial-gradient(ellipse 5px 2px at 6% 96%, rgba(240,232,215,.6), transparent),
-    linear-gradient(90deg, rgba(240,232,215,.3) 0 1px, transparent 1px calc(100% - 1px), rgba(240,232,215,.22) calc(100% - 1px)),
-    repeating-linear-gradient(0deg, rgba(0,0,0,.07) 0 1px, transparent 1px 3px);
-}
-/* a hard crease across the spine */
-.spine.dmg-crease .wear::before {
-  content: ""; position: absolute; left: 0; right: 0; top: var(--cy); height: 2px;
-  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.7) 30%, rgba(255,255,255,.35) 70%, rgba(255,255,255,.05));
-  transform: skewY(calc(var(--flip) * 3deg));
-  box-shadow: 0 1px 0 rgba(0,0,0,.45);
-}
+/* ---- wear and tear (the white-cardboard fray, scuffs and creases are painted by app.js) ---- */
+.spine .wear { position: absolute; left: 0; pointer-events: none; z-index: 4; }
 /* sun fade */
-.spine.dmg-fade .wear::after {
-  content: ""; position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(235,220,180,.32), rgba(235,220,180,.08) 60%, transparent);
+.spine.dmg-fade::before {
+  content: ""; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  background: linear-gradient(180deg, rgba(235,220,180,.3), rgba(235,220,180,.08) 60%, transparent);
 }
-/* chipped top corner */
-.spine.dmg-chip { clip-path: polygon(0 0, calc(100% - var(--cut)) 0, 100% calc(var(--cut) * .8), 100% 100%, 0 100%); }
-.spine.dmg-chip:nth-child(even) { clip-path: polygon(var(--cut) 0, 100% 0, 100% 100%, 0 100%, 0 calc(var(--cut) * .8)); }
-/* torn, ragged top edge */
-.spine.dmg-tear { clip-path: polygon(0 3px, 12% 0, 24% 4px, 37% 1px, 51% 5px, 63% 0, 77% 3px, 88% 0, 100% 4px, 100% 100%, 0 100%); }
-.spine.dmg-tear.dmg-chip { clip-path: polygon(0 3px, 12% 0, 24% 4px, 37% 1px, 51% 5px, 63% 0, 100% 9px, 100% 100%, 0 100%); }
 /* rental sticker, slightly peeling */
 .spine .sticker {
   position: absolute; z-index: 3; left: 50%; top: 6px;

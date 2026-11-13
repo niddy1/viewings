@@ -144,12 +144,9 @@
     // Wear and tear: a stable, per-film roll so the same tapes are always the battered ones.
     const r = hash(f.title + 'wear');
     f._dmg = [];
-    if (r % 3 === 0) f._dmg.push('worn');
-    if ((r >> 3) % 4 === 0) f._dmg.push('crease');
-    if ((r >> 5) % 5 === 0) f._dmg.push('chip');
-    if ((r >> 8) % 7 === 0) f._dmg.push('tear');
     if ((r >> 11) % 6 === 0) f._dmg.push('sticker');
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
+    f._level = r % 100 < 28 ? 2 : r % 100 < 62 ? 1 : 0; // 2 = heavily worn, 0 = lightly worn
     f._r = r;
     if (f.logo) f._dmg = f._dmg.filter((d) => d !== 'sticker');
     f._art = null;
@@ -162,6 +159,90 @@
         if (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2] > 150) f._t = '#2a2118'; // pale spine: dark ink
       }
     }
+  }
+
+  // Procedural wear, drawn per tape from a seeded RNG: white cardboard showing through at the
+  // frayed top, abraded edges, scuffs and hard creases. Nothing is cut away from the spine.
+  function rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+
+  function wearCanvas(f) {
+    const dpr = Math.min(window.devicePixelRatio || 1, 3);
+    const W = f._w, H = f._h, PAD = 5, lv = f._level, R = rng(f._r);
+    const rr = (a, b) => a + R() * (b - a);
+    const cv = document.createElement('canvas');
+    cv.width = Math.round(W * dpr); cv.height = Math.round((H + PAD) * dpr);
+    cv.className = 'wear';
+    cv.style.cssText = `width:${W}px;height:${H + PAD}px;top:${-PAD}px`;
+    const x = cv.getContext('2d'); x.scale(dpr, dpr);
+    const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
+    const y0 = PAD; // the spine's real top edge
+
+    // 1. frayed top: a strip of white cardboard, ragged on both sides, poking above the edge
+    const depth = [1.6, 3.2, 5.5][lv];
+    x.beginPath(); x.moveTo(-1, y0 + 1);
+    for (let px = 0; px <= W + 1; px += rr(1.5, 3.5)) x.lineTo(px, y0 - rr(0, [1.5, 3, 4.5][lv]));
+    x.lineTo(W + 1, y0 + 1);
+    const ph0 = R() * 6;
+    for (let px = W + 1; px >= -1; px -= rr(1.5, 3.5)) x.lineTo(px, y0 + rr(0.4, depth) * (0.45 + 0.8 * Math.abs(Math.sin(px / 7 + ph0))));
+    x.closePath(); x.fillStyle = cream(0.95); x.fill();
+    x.fillStyle = 'rgba(0,0,0,.22)'; // shadow where the strip ends
+    for (let px = 0; px < W; px += rr(2, 4)) x.fillRect(px, y0 + depth + 0.5, rr(1, 3), 1);
+
+    // 2. peeled patches: the printed layer lifted away, white underneath
+    const peels = [0, rr(0, 2) | 0, 1 + (rr(0, 2) | 0)][lv];
+    for (let i = 0; i < peels; i++) {
+      const pw = rr(W * .25, W * .6), px = rr(0, W - pw), ph = rr(5, 13);
+      x.beginPath(); x.moveTo(px, y0);
+      for (let t = 0; t <= 1.001; t += .2) x.lineTo(px + pw * t, y0 + ph * rr(.3, 1) * Math.sin(Math.PI * t) + 1);
+      x.closePath(); x.fillStyle = cream(.92); x.fill();
+      x.strokeStyle = 'rgba(0,0,0,.28)'; x.lineWidth = .8; x.stroke();
+    }
+    // a worn corner: both layers rubbed through
+    if (lv && R() < .6) {
+      const left = R() < .5, cs = rr(4, lv === 2 ? 10 : 7);
+      x.beginPath();
+      if (left) { x.moveTo(-1, y0 - 2); x.lineTo(cs, y0 - 2); x.lineTo(cs * .6, y0 + cs * .4); x.lineTo(cs * .2, y0 + cs * .9); x.lineTo(-1, y0 + cs); }
+      else { x.moveTo(W + 1, y0 - 2); x.lineTo(W - cs, y0 - 2); x.lineTo(W - cs * .6, y0 + cs * .4); x.lineTo(W - cs * .2, y0 + cs * .9); x.lineTo(W + 1, y0 + cs); }
+      x.closePath(); x.fillStyle = cream(.95); x.fill();
+    }
+
+    // 3. rubbed edges: short white strokes down both sides, heaviest near the ends
+    const edgeN = [5, 14, 28][lv];
+    for (let i = 0; i < edgeN; i++) {
+      const side = R() < .5, e = R();
+      const py = y0 + (e < .45 ? rr(0, H * .3) : e < .7 ? rr(H * .7, H) : rr(0, H));
+      const len = rr(3, [8, 18, 34][lv]), wd = rr(.7, [1.2, 1.8, 2.4][lv]);
+      x.fillStyle = cream(rr(.45, .9));
+      x.fillRect(side ? 0 : W - wd, py, wd, len);
+    }
+    // 4. scuffs and abrasion specks
+    const specks = [24, 70, 160][lv];
+    for (let i = 0; i < specks; i++) {
+      const edge = R() < .6;
+      const px = edge ? (R() < .5 ? rr(0, W * .22) : rr(W * .78, W)) : rr(0, W);
+      const py = y0 + (R() < .5 ? rr(0, H * .3) : rr(0, H));
+      x.fillStyle = cream(rr(.2, .7)); x.fillRect(px, py, rr(.5, 1.5), rr(.5, 1.5));
+    }
+    // 5. creases and scratches
+    const creases = [R() < .25 ? 1 : 0, 1, 2 + (R() < .5 ? 1 : 0)][lv];
+    for (let i = 0; i < creases; i++) {
+      let cy = y0 + rr(H * .12, H * .85); const slope = rr(-.18, .18);
+      for (let px = 0; px < W; px += rr(0, 1)) {
+        const seg = rr(4, 11), ny = cy + slope * seg + rr(-.9, .9);
+        if (R() > .06) {
+          x.strokeStyle = 'rgba(0,0,0,.45)'; x.lineWidth = 1; x.beginPath(); x.moveTo(px, cy + 1); x.lineTo(px + seg, ny + 1); x.stroke();
+          x.strokeStyle = cream(rr(.55, .95)); x.lineWidth = rr(.7, 1.5); x.beginPath(); x.moveTo(px, cy); x.lineTo(px + seg, ny); x.stroke();
+        }
+        px += seg; cy = ny;
+      }
+    }
+    for (let i = 0; i < [0, 2, 5][lv]; i++) {
+      const sx = rr(0, W), sy = y0 + rr(0, H), l = rr(8, 26), ang = rr(-.5, .5) + Math.PI / 2;
+      x.strokeStyle = cream(rr(.15, .4)); x.lineWidth = .6; x.beginPath(); x.moveTo(sx, sy); x.lineTo(sx + Math.cos(ang) * l, sy + Math.sin(ang) * l); x.stroke();
+    }
+    // 6. bottom edge wear around the notch
+    for (let i = 0; i < [4, 10, 20][lv]; i++) { x.fillStyle = cream(rr(.3, .8)); x.fillRect(rr(0, W), y0 + H - rr(0, 4), rr(.6, 2.2), rr(.6, 2)); }
+    return cv;
   }
 
   const STICKER_WORDS = { Horror: 'HORROR', 'Science Fiction': 'SCI-FI', Comedy: 'COMEDY', Action: 'ACTION', Thriller: 'THRILLER', Drama: 'DRAMA', Crime: 'CRIME', Romance: 'ROMANCE', Animation: 'FAMILY', Documentary: 'DOC' };
@@ -193,8 +274,7 @@
     }
     const badge = document.createElement('span'); badge.className = 'vhs'; badge.textContent = 'VHS';
     const notch = document.createElement('span'); notch.className = 'notch';
-    const wear = document.createElement('span'); wear.className = 'wear';
-    b.append(badge, notch, wear);
+    b.append(badge, notch, wearCanvas(f));
     if (f._dmg.includes('sticker')) {
       const st = document.createElement('span'); st.className = 'sticker';
       const g = (f.genres || []).find((x) => STICKER_WORDS[x]);
