@@ -269,7 +269,14 @@
       "tmdb": 1368166,
       "tmdbKind": "movie",
       "studio": "Lionsgate",
-      "logo": "logos/1632.png"
+      "logo": "logos/1632.png",
+      "top": "photo",
+      "photoBox": [
+        0.0654,
+        0.0656,
+        0.4651,
+        0.332
+      ]
     },
     {
       "title": "Bugonia",
