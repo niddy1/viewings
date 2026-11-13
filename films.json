@@ -81,7 +81,14 @@
       "tmdb": 1233413,
       "tmdbKind": "movie",
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "top": "tag",
+      "logoBox": [
+        0.0032,
+        0.0114,
+        1,
+        1
+      ]
     },
     {
       "title": "Devil in Disguise: John Wayne Gacy",
@@ -236,7 +243,14 @@
       "tmdb": 1317288,
       "tmdbKind": "movie",
       "studio": "A24",
-      "logo": "logos/41077.png"
+      "logo": "logos/41077.png",
+      "top": "photo",
+      "photoBox": [
+        0.1358,
+        0.0211,
+        0.8539,
+        0.4999
+      ]
     },
     {
       "title": "The Housemaid",
