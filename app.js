@@ -146,7 +146,8 @@
     f._dmg = [];
     if ((r >> 11) % 6 === 0) f._dmg.push('sticker');
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
-    f._level = r % 100 < 28 ? 2 : r % 100 < 62 ? 1 : 0; // 2 = heavily worn, 0 = lightly worn
+    // ~1 in 5 tapes is damaged at all; severity runs from a light scuff (0.3) to badly beaten up (1)
+    f._sev = r % 100 < 20 ? 0.3 + 0.7 * ((r >> 9) % 100) / 100 : 0;
     f._r = r;
     if (f.logo) f._dmg = f._dmg.filter((d) => d !== 'sticker');
     f._art = null;
@@ -167,81 +168,112 @@
 
   function wearCanvas(f) {
     const dpr = Math.min(window.devicePixelRatio || 1, 3);
-    const W = f._w, H = f._h, PAD = 5, lv = f._level, R = rng(f._r);
+    const W = f._w, H = f._h, PAD = 5, sev = f._sev, R = rng(f._r);
     const rr = (a, b) => a + R() * (b - a);
+    const L = (lo, hi) => lo + (hi - lo) * sev;   // scale a quantity with severity
+    const chance = (p) => R() < p;
     const cv = document.createElement('canvas');
     cv.width = Math.round(W * dpr); cv.height = Math.round((H + PAD) * dpr);
     cv.className = 'wear';
     cv.style.cssText = `width:${W}px;height:${H + PAD}px;top:${-PAD}px`;
     const x = cv.getContext('2d'); x.scale(dpr, dpr);
     const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
-    const y0 = PAD; // the spine's real top edge
+    const y0 = PAD, yb = PAD + H; // the spine's real top and bottom edges
 
-    // 1. frayed top: a strip of white cardboard, ragged on both sides, poking above the edge
-    const depth = [1.6, 3.2, 5.5][lv];
-    x.beginPath(); x.moveTo(-1, y0 + 1);
-    for (let px = 0; px <= W + 1; px += rr(1.5, 3.5)) x.lineTo(px, y0 - rr(0, [1.5, 3, 4.5][lv]));
-    x.lineTo(W + 1, y0 + 1);
-    const ph0 = R() * 6;
-    for (let px = W + 1; px >= -1; px -= rr(1.5, 3.5)) x.lineTo(px, y0 + rr(0.4, depth) * (0.45 + 0.8 * Math.abs(Math.sin(px / 7 + ph0))));
-    x.closePath(); x.fillStyle = cream(0.95); x.fill();
-    x.fillStyle = 'rgba(0,0,0,.22)'; // shadow where the strip ends
-    for (let px = 0; px < W; px += rr(2, 4)) x.fillRect(px, y0 + depth + 0.5, rr(1, 3), 1);
+    // Each damaged tape gets a different mix of problems, not all of them.
+    const has = {
+      top: chance(.5 + sev * .45), peel: sev > .45 && chance(.6), corner: sev > .3 && chance(.5),
+      edges: chance(.55 + sev * .4), specks: chance(.6 + sev * .3), crease: chance(.25 + sev * .65),
+      scratch: sev > .5 && chance(.6), bottom: chance(.55 + sev * .4),
+    };
+    if (!Object.values(has).some(Boolean)) has.specks = true;
 
-    // 2. peeled patches: the printed layer lifted away, white underneath
-    const peels = [0, rr(0, 2) | 0, 1 + (rr(0, 2) | 0)][lv];
-    for (let i = 0; i < peels; i++) {
-      const pw = rr(W * .25, W * .6), px = rr(0, W - pw), ph = rr(5, 13);
+    if (has.top) { // frayed top: white cardboard, ragged both sides, poking above the edge
+      const depth = L(1.2, 5.5), rise = L(1, 4.5), ph0 = R() * 6;
+      x.beginPath(); x.moveTo(-1, y0 + 1);
+      for (let px = 0; px <= W + 1; px += rr(1.5, 3.5)) x.lineTo(px, y0 - rr(0, rise));
+      x.lineTo(W + 1, y0 + 1);
+      for (let px = W + 1; px >= -1; px -= rr(1.5, 3.5)) x.lineTo(px, y0 + rr(0.4, depth) * (0.45 + 0.8 * Math.abs(Math.sin(px / 7 + ph0))));
+      x.closePath(); x.fillStyle = cream(0.95); x.fill();
+      x.fillStyle = 'rgba(0,0,0,.22)';
+      for (let px = 0; px < W; px += rr(2, 4)) x.fillRect(px, y0 + depth + 0.5, rr(1, 3), 1);
+    }
+    if (has.peel) for (let i = 0, n = sev > .75 ? 2 : 1; i < n; i++) { // printed layer lifted away
+      const pw = rr(W * .25, W * .6), px = rr(0, W - pw), ph = rr(5, L(7, 14));
       x.beginPath(); x.moveTo(px, y0);
       for (let t = 0; t <= 1.001; t += .2) x.lineTo(px + pw * t, y0 + ph * rr(.3, 1) * Math.sin(Math.PI * t) + 1);
       x.closePath(); x.fillStyle = cream(.92); x.fill();
       x.strokeStyle = 'rgba(0,0,0,.28)'; x.lineWidth = .8; x.stroke();
     }
-    // a worn corner: both layers rubbed through
-    if (lv && R() < .6) {
-      const left = R() < .5, cs = rr(4, lv === 2 ? 10 : 7);
+    if (has.corner) { // a top corner rubbed through
+      const left = chance(.5), cs = rr(4, L(5, 10));
       x.beginPath();
       if (left) { x.moveTo(-1, y0 - 2); x.lineTo(cs, y0 - 2); x.lineTo(cs * .6, y0 + cs * .4); x.lineTo(cs * .2, y0 + cs * .9); x.lineTo(-1, y0 + cs); }
       else { x.moveTo(W + 1, y0 - 2); x.lineTo(W - cs, y0 - 2); x.lineTo(W - cs * .6, y0 + cs * .4); x.lineTo(W - cs * .2, y0 + cs * .9); x.lineTo(W + 1, y0 + cs); }
       x.closePath(); x.fillStyle = cream(.95); x.fill();
     }
-
-    // 3. rubbed edges: short white strokes down both sides, heaviest near the ends
-    const edgeN = [5, 14, 28][lv];
-    for (let i = 0; i < edgeN; i++) {
-      const side = R() < .5, e = R();
+    if (has.edges) for (let i = 0, n = L(4, 28) | 0; i < n; i++) { // rubbed sides, heaviest near the ends
+      const side = chance(.5), e = R();
       const py = y0 + (e < .45 ? rr(0, H * .3) : e < .7 ? rr(H * .7, H) : rr(0, H));
-      const len = rr(3, [8, 18, 34][lv]), wd = rr(.7, [1.2, 1.8, 2.4][lv]);
-      x.fillStyle = cream(rr(.45, .9));
-      x.fillRect(side ? 0 : W - wd, py, wd, len);
+      const wd = rr(.7, L(1.1, 2.4));
+      x.fillStyle = cream(rr(.45, .9)); x.fillRect(side ? 0 : W - wd, py, wd, rr(3, L(8, 34)));
     }
-    // 4. scuffs and abrasion specks
-    const specks = [24, 70, 160][lv];
-    for (let i = 0; i < specks; i++) {
-      const edge = R() < .6;
-      const px = edge ? (R() < .5 ? rr(0, W * .22) : rr(W * .78, W)) : rr(0, W);
-      const py = y0 + (R() < .5 ? rr(0, H * .3) : rr(0, H));
-      x.fillStyle = cream(rr(.2, .7)); x.fillRect(px, py, rr(.5, 1.5), rr(.5, 1.5));
+    if (has.specks) for (let i = 0, n = L(20, 160) | 0; i < n; i++) { // scuffs
+      const px = chance(.6) ? (chance(.5) ? rr(0, W * .22) : rr(W * .78, W)) : rr(0, W);
+      x.fillStyle = cream(rr(.2, .7)); x.fillRect(px, y0 + (chance(.5) ? rr(0, H * .3) : rr(0, H)), rr(.5, 1.5), rr(.5, 1.5));
     }
-    // 5. creases and scratches
-    const creases = [R() < .25 ? 1 : 0, 1, 2 + (R() < .5 ? 1 : 0)][lv];
-    for (let i = 0; i < creases; i++) {
+    if (has.crease) for (let i = 0, n = sev > .7 ? 2 + (chance(.5) ? 1 : 0) : 1; i < n; i++) { // hard creases
       let cy = y0 + rr(H * .12, H * .85); const slope = rr(-.18, .18);
       for (let px = 0; px < W; px += rr(0, 1)) {
         const seg = rr(4, 11), ny = cy + slope * seg + rr(-.9, .9);
-        if (R() > .06) {
+        if (!chance(.06)) {
           x.strokeStyle = 'rgba(0,0,0,.45)'; x.lineWidth = 1; x.beginPath(); x.moveTo(px, cy + 1); x.lineTo(px + seg, ny + 1); x.stroke();
           x.strokeStyle = cream(rr(.55, .95)); x.lineWidth = rr(.7, 1.5); x.beginPath(); x.moveTo(px, cy); x.lineTo(px + seg, ny); x.stroke();
         }
         px += seg; cy = ny;
       }
     }
-    for (let i = 0; i < [0, 2, 5][lv]; i++) {
+    if (has.scratch) for (let i = 0, n = L(1, 5) | 0; i < n; i++) {
       const sx = rr(0, W), sy = y0 + rr(0, H), l = rr(8, 26), ang = rr(-.5, .5) + Math.PI / 2;
       x.strokeStyle = cream(rr(.15, .4)); x.lineWidth = .6; x.beginPath(); x.moveTo(sx, sy); x.lineTo(sx + Math.cos(ang) * l, sy + Math.sin(ang) * l); x.stroke();
     }
-    // 6. bottom edge wear around the notch
-    for (let i = 0; i < [4, 10, 20][lv]; i++) { x.fillStyle = cream(rr(.3, .8)); x.fillRect(rr(0, W), y0 + H - rr(0, 4), rr(.6, 2.2), rr(.6, 2)); }
+
+    // Bottom: the arch cut-out takes the most punishment. Fray around its rim, white stress
+    // cracks climbing out of it, crushed lower corners and scuffing along the bottom edge.
+    if (has.bottom) {
+      const cx = W / 2, rim = 7;
+      // whitened rim around the arch, in broken pieces
+      x.lineCap = 'round';
+      for (let a0 = Math.PI; a0 < 2 * Math.PI; a0 += rr(.25, .6)) {
+        if (!chance(.45 + sev * .5)) continue;
+        x.strokeStyle = cream(rr(.5, .95)); x.lineWidth = rr(.8, L(1.2, 2.6));
+        x.beginPath(); x.arc(cx, yb, rim + rr(0, 1.5), a0, a0 + rr(.2, .5)); x.stroke();
+      }
+      x.lineCap = 'butt';
+      // cracks climbing up from the arch
+      for (let i = 0, n = L(0, 3.4) | 0; i < n; i++) {
+        let px = cx + rr(-5, 5), py = yb - rim;
+        x.strokeStyle = cream(rr(.5, .9)); x.lineWidth = rr(.6, 1.1); x.beginPath(); x.moveTo(px, py);
+        for (let k = 0, m = rr(3, L(5, 16)); k < m; k += 2) { px += rr(-1.2, 1.2); py -= 2; x.lineTo(px, py); }
+        x.stroke();
+      }
+      // ragged white fray along the bottom edge, thickest each side of the arch
+      x.fillStyle = cream(.9);
+      for (let px = 0; px < W; px += rr(1.5, 3.5)) {
+        if (Math.abs(px - cx) < rim - 1) continue;
+        const near = Math.abs(px - cx) < rim + 8 ? 1 : .45;
+        if (chance(.35 + .5 * sev * near)) x.fillRect(px, yb - rr(.5, L(1.5, 5)) * near, rr(1, 2.6), 6);
+      }
+      // crushed lower corner
+      if (sev > .35 && chance(.6)) {
+        const left = chance(.5), cs = rr(3, L(4, 9));
+        x.beginPath();
+        if (left) { x.moveTo(-1, yb - cs); x.lineTo(cs * .5, yb - cs * .5); x.lineTo(cs, yb + 1); x.lineTo(-1, yb + 1); }
+        else { x.moveTo(W + 1, yb - cs); x.lineTo(W - cs * .5, yb - cs * .5); x.lineTo(W - cs, yb + 1); x.lineTo(W + 1, yb + 1); }
+        x.closePath(); x.fillStyle = cream(.92); x.fill();
+      }
+      for (let i = 0, n = L(4, 22) | 0; i < n; i++) { x.fillStyle = cream(rr(.3, .8)); x.fillRect(rr(0, W), yb - rr(0, 9), rr(.6, 2.2), rr(.6, 2)); }
+    }
     return cv;
   }
 
@@ -274,7 +306,8 @@
     }
     const badge = document.createElement('span'); badge.className = 'vhs'; badge.textContent = 'VHS';
     const notch = document.createElement('span'); notch.className = 'notch';
-    b.append(badge, notch, wearCanvas(f));
+    b.append(badge, notch);
+    if (f._sev > 0) b.append(wearCanvas(f));
     if (f._dmg.includes('sticker')) {
       const st = document.createElement('span'); st.className = 'sticker';
       const g = (f.genres || []).find((x) => STICKER_WORDS[x]);
