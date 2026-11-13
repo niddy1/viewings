@@ -281,29 +281,16 @@
     const [sr, sg, sb] = f._rgb;
     const ph1 = R() * 6.28, ph2 = R() * 6.28, f1 = rr(.12, .3), f2 = rr(.35, .7);
     const tilt = rr(-.9, .9) + (sev > .5 ? rr(-1.8, 1.8) * sev : 0);   // right end lower (+) or higher (-)
-    const lt = rr(1.7, 2.8), off = rr(-.2, .3) + lt, baseTh = rr(1.3, 2.4); // lt: the lid itself, above the white board line
+    const off = rr(-.7, .1), baseTh = rr(1.3, 2.4);
     const yT = (px) => y0 + off + tilt * (px / W) + Math.sin(px * f1 + ph1) * .35 + Math.sin(px * f2 + ph2) * .15;
-    const yL = (px) => yT(px) - lt * (1 + .25 * Math.sin(px * .27 + ph1));
     const th = (px) => baseTh * (1 + .35 * Math.sin(px * .21 + ph2) + .2 * Math.sin(px * .6 + ph1));
     if (sev > .62) { // a lid that has been bent up, like a tape that's been pulled off the shelf too often
       const lift = rr(1.5, 3.2) * sev, left = chance(.5);
       x.fillStyle = `rgb(${[sr, sg, sb].map((v) => Math.round(v * .75)).join(',')})`;
-      x.beginPath(); x.moveTo(left ? 0 : W, yL(left ? 0 : W));
-      x.lineTo(left ? W * .8 : W * .2, yL(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yL(left ? W * .8 : W * .2) + 1); x.lineTo(left ? 0 : W, yL(left ? 0 : W) + 1); x.closePath();
-      x.moveTo(left ? 0 : W, yL(left ? 0 : W)); x.lineTo(left ? 0 : W, yL(left ? 0 : W) - lift); x.lineTo(left ? W * .8 : W * .2, yL(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yL(left ? W * .8 : W * .2)); x.closePath();
+      x.beginPath(); x.moveTo(left ? 0 : W, yT(left ? 0 : W));
+      x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) + 1); x.lineTo(left ? 0 : W, yT(left ? 0 : W) + 1); x.closePath();
+      x.moveTo(left ? 0 : W, yT(left ? 0 : W)); x.lineTo(left ? 0 : W, yT(left ? 0 : W) - lift); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2)); x.closePath();
       x.fill();
-    }
-    { // the lid: a thin strip of the box's own colour along the very top, sitting above the white board line
-      const lidCol = `rgb(${[sr, sg, sb].map((v) => Math.round(v + (255 - v) * .07)).join(',')})`;
-      const xl = chance(.4) ? rr(.4, 1.4) : 0, xr = W - (chance(.4) ? rr(.4, 1.4) : 0);
-      x.fillStyle = lidCol; x.beginPath(); x.moveTo(xl, yL(xl));
-      for (let px = Math.ceil(xl); px <= xr; px++) x.lineTo(px, yL(px));
-      x.lineTo(xr, yT(xr) + .6);
-      for (let px = Math.floor(xr); px >= xl; px--) x.lineTo(px, yT(px) + .6);
-      x.closePath(); x.fill();
-      x.beginPath(); x.moveTo(xl, yL(xl) + .5);
-      for (let px = Math.ceil(xl); px <= xr; px++) x.lineTo(px, yL(px) + .5);
-      x.strokeStyle = 'rgba(255,255,255,.13)'; x.lineWidth = 1; x.stroke();
     }
     x.beginPath(); x.moveTo(0, yT(0));
     for (let px = 1; px <= W; px++) x.lineTo(px, yT(px));
