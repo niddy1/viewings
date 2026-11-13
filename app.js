@@ -511,10 +511,13 @@
     return f.imdb ? `https://www.imdb.com/title/${f.imdb}/` : `https://www.imdb.com/find/?q=${encodeURIComponent(f.title + ' ' + f.year)}`;
   }
 
-  function stars(r) {
+  // Ratings are out of 10 (PassThePopcorn). Stars round to the nearest half: 8.5 -> 4.5 stars, 7.5 -> 4.
+  // Films from the old Letterboxd import only have "rating" (out of 5).
+  function stars(f) {
+    const r10 = f.rating10 != null ? f.rating10 : (f.rating || 0) * 2, r = Math.round(r10) / 2;
     let h = '';
     for (let i = 1; i <= 5; i++) h += `<span class="star ${r >= i ? 'full' : r >= i - .5 ? 'half' : ''}">&#9733;</span>`;
-    return h + `<small>${r ? r.toFixed(1) : '—'} / 5</small>`;
+    return h + `<small>${r10 ? +r10.toFixed(1) : '—'} / 10</small>`;
   }
 
   function fmtDate(iso) {
@@ -541,7 +544,7 @@
     t.textContent = f.title; t.style.setProperty('--f', `'${f._font}'`);
     const facts = [f.year, f.runtime ? `${f.runtime} min` : null, f.director ? `dir. ${f.director}` : null].filter(Boolean);
     $('v-facts').textContent = facts.join(' · ');
-    $('v-rating').innerHTML = stars(f.rating || 0);
+    $('v-rating').innerHTML = stars(f);
     $('v-watched').textContent = `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
     $('v-note').textContent = f.note || '';

@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 diary.csv
 needs_review.txt
+ratings*.csv

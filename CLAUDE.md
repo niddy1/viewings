@@ -9,13 +9,15 @@ Plain HTML/CSS/JS. No build step, no dependencies, no framework. Keep it that wa
 - `index.html`, `style.css`, `app.js`: the whole site. `app.js` loads `films.json`, draws spines (all the same height; thickness by runtime; the title lettering is lifted off the poster using each film's `titleBox` (colour-keyed from flat backgrounds, light/dark-keyed from busy ones, so it sits straight on the spine colour); spine colours come from the poster palette with browns/tans/olives deliberately avoided (black, charcoal and vivid colours instead; `color` in films.json overrides); tapes sit flush with no gaps; and painted per-tape wear (white cardboard fraying at the top, rubbed edges, scuffs, creases; seeded per film so it is stable), rental stickers and fading), and handles the pull-out viewer.
 - `films.json`: generated data (title, year, rating, watched date, genres, imdb id, poster path). Optional hand-edited fields per film: `font`, `color`, `note`. `titleBox` is a list of `[x0,y0,x1,y1]` boxes (fractions 0-1 of the poster, one per line of lettering, top line first) that mark where the title is on the poster; films without one fall back to the title in a genre font (currently Zootopia 2, Heel, Coyote vs. Acme, Deep Water, Heart of the Beast, whose lettering is tilted, cropped or absent). `studio`/`logo` come from the fetch script.
 - `posters/`: poster images, committed to the repo so the site doesn't depend on TMDB at runtime.
-- `fetch-posters.js`: Node 18+ script that builds `films.json` + `posters/` from Letterboxd's `diary.csv` using the TMDB API. Safe to re-run; only fetches films that are new.
+- `vcr.js`: hidden in-browser updater. Typing `vcr` (or `#vcr` in the URL) opens a panel that takes the PassThePopcorn ratings CSV, filters to the shelf's `year`, matches by IMDb id, looks up new films on TMDB from the browser, lets Ian drag `titleBox`es on new posters, and commits `films.json` + posters via the GitHub Git Data API in one commit. GitHub token and TMDB key live in his browser's localStorage only. Logos are not fetched here (the shelf doesn't have any yet; adding them for only new films would look inconsistent).
+- `fetch-posters.js`: Node 18+ script that builds `films.json` + `posters/` from the PTP ratings CSV (or a Letterboxd `diary.csv`) using the TMDB API. Safe to re-run; only fetches films that are new.
 - `logos/`: studio logos from TMDB, shown as white silhouettes at the top of the spine. Only present after Ian re-runs the fetch script (see below).
 - `overrides.json`: fixes wrong TMDB matches, keyed `"Title|Year"` with `{ "tmdb": <id>, "type": "tv" (optional) }`.
 
 ## Workflow notes
 - The fetch step must run on Ian's own Mac (`TMDB_KEY=... node fetch-posters.js diary.csv`). Claude's workspace cannot reach TMDB or download images.
-- `diary.csv` is gitignored. Only 2026 watches are used (by Watched Date).
+- Source of ratings is now PassThePopcorn (`Title, Rating10, WatchedDate, ImdbID`), out of 10. Stored as `rating10`; `rating` = `Math.round(rating10)/2` for the stars. The viewer shows `x / 10`. Only rows whose WatchedDate is in the shelf's year are used.
+- `diary.csv` is gitignored. Don't commit ratings CSVs either.
 - Never commit or write the TMDB key or token anywhere. They were pasted in chat once; Ian should regenerate them.
 - Preview locally with `npx serve .` (films.json is loaded with fetch, so file:// won't work).
 - Pushing the posters over HTTPS hit an HTTP 400; fixed locally with `git config http.postBuffer 524288000` and `git config http.version HTTP/1.1`.
