@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viewings</title>
+  <meta name="description" content="Everything I've watched this year, shelved as VHS tapes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Viewings <span id="year">2026</span></h1>
+    <p class="sub"><span id="count">0</span> tapes on the shelf &middot; click one to pull it out</p>
+  </header>
+
+  <main id="shelves" aria-label="Shelf of watched films"></main>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="backdrop" id="backdrop"></div>
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="v-title">
+      <button class="nav prev" id="prev" aria-label="Previous tape">&#8249;</button>
+      <div class="stage">
+        <a class="cover" id="cover" target="_blank" rel="noopener">
+          <span class="hint">Open on IMDb &#8599;</span>
+        </a>
+      </div>
+      <button class="nav next" id="next" aria-label="Next tape">&#8250;</button>
+
+      <section class="info">
+        <h2 id="v-title"></h2>
+        <p class="facts" id="v-facts"></p>
+        <div class="rating" id="v-rating"></div>
+        <p class="watched" id="v-watched"></p>
+        <div class="genres" id="v-genres"></div>
+        <p class="note" id="v-note"></p>
+        <button class="close" id="close">Put it back</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

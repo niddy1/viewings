@@ -1,0 +1,20 @@
+{
+  "year": 2026,
+  "_note": "SAMPLE DATA with made-up titles. Running fetch-posters.js against your Letterboxd diary.csv replaces this file.",
+  "films": [
+    { "title": "Midnight Harbor", "year": 1987, "rating": 4.5, "watched": "2026-01-04", "rewatch": false, "runtime": 112, "director": "A. Sample", "genres": ["Thriller", "Crime"], "imdb": "", "poster": "", "note": "Sample entry." },
+    { "title": "The Long Orbit", "year": 2019, "rating": 3.5, "watched": "2026-01-19", "rewatch": false, "runtime": 138, "director": "B. Example", "genres": ["Science Fiction", "Drama"], "imdb": "", "poster": "" },
+    { "title": "Crimson Hollow", "year": 1994, "rating": 4, "watched": "2026-02-02", "rewatch": true, "runtime": 96, "director": "C. Placeholder", "genres": ["Horror"], "imdb": "", "poster": "" },
+    { "title": "Laugh Track", "year": 2011, "rating": 3, "watched": "2026-02-14", "rewatch": false, "runtime": 101, "director": "D. Demo", "genres": ["Comedy"], "imdb": "", "poster": "" },
+    { "title": "Iron Canyon", "year": 1976, "rating": 5, "watched": "2026-03-01", "rewatch": false, "runtime": 128, "director": "E. Mock", "genres": ["Western"], "imdb": "", "poster": "" },
+    { "title": "Paper Hearts", "year": 2003, "rating": 2.5, "watched": "2026-03-22", "rewatch": false, "runtime": 104, "director": "F. Test", "genres": ["Romance", "Drama"], "imdb": "", "poster": "" },
+    { "title": "Overdrive", "year": 1999, "rating": 3.5, "watched": "2026-04-09", "rewatch": false, "runtime": 117, "director": "G. Sample", "genres": ["Action"], "imdb": "", "poster": "" },
+    { "title": "Starfall Kingdom", "year": 2008, "rating": 4, "watched": "2026-04-30", "rewatch": false, "runtime": 142, "director": "H. Example", "genres": ["Fantasy"], "imdb": "", "poster": "" },
+    { "title": "Neon Rain", "year": 2016, "rating": 4.5, "watched": "2026-05-17", "rewatch": false, "runtime": 122, "director": "I. Placeholder", "genres": ["Science Fiction", "Thriller"], "imdb": "", "poster": "" },
+    { "title": "Dust", "year": 1971, "rating": 3, "watched": "2026-06-05", "rewatch": false, "runtime": 88, "director": "J. Demo", "genres": ["Drama"], "imdb": "", "poster": "" },
+    { "title": "The Last Reel", "year": 2022, "rating": 5, "watched": "2026-07-21", "rewatch": false, "runtime": 131, "director": "K. Mock", "genres": ["Drama"], "imdb": "", "poster": "" },
+    { "title": "Cartoon Heist", "year": 2014, "rating": 3.5, "watched": "2026-08-08", "rewatch": false, "runtime": 92, "director": "L. Test", "genres": ["Animation", "Comedy"], "imdb": "", "poster": "" },
+    { "title": "Trench", "year": 1989, "rating": 4, "watched": "2026-09-13", "rewatch": false, "runtime": 150, "director": "M. Sample", "genres": ["War"], "imdb": "", "poster": "" },
+    { "title": "Sleepwalkers' Ball", "year": 2005, "rating": 2, "watched": "2026-10-31", "rewatch": false, "runtime": 99, "director": "N. Example", "genres": ["Horror", "Comedy"], "imdb": "", "poster": "" }
+  ]
+}
