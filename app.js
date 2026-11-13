@@ -62,37 +62,73 @@
     img.src = src;
   });
 
-  // Average poster colour -> a deep, saturated spine colour.
-  function posterColor(img) {
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const smooth = (a, b, v) => { const t = clamp((v - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+  const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b;
+  const rgbCss = (c) => `rgb(${c.map((v) => Math.round(v)).join(',')})`;
+  function hslToRgb(h, s, l) {
+    h = ((h % 360) + 360) % 360 / 360;
+    const q = l < .5 ? l * (1 + s) : l + s - l * s, p = 2 * l - q;
+    const f = (t) => { t = (t + 1) % 1; return t < 1 / 6 ? p + (q - p) * 6 * t : t < .5 ? q : t < 2 / 3 ? p + (q - p) * (2 / 3 - t) * 6 : p; };
+    return [f(h + 1 / 3) * 255, f(h) * 255, f(h - 1 / 3) * 255];
+  }
+  // Browns, tans and olives: the muddy tones we never want on a spine.
+  const isMuddy = (h, s, l) => h >= 10 && h <= 75 && (s < 0.7 || l < 0.5);
+
+  // Which colours does the poster actually use? Hue buckets weighted by how vivid they are.
+  function posterPalette(img) {
     if (!img) return null;
     try {
-      const c = document.createElement('canvas'); c.width = c.height = 8;
-      const x = c.getContext('2d'); x.drawImage(img, 0, 0, 8, 8);
-      const d = x.getImageData(0, 0, 8, 8).data;
-      let r = 0, g = 0, b = 0, n = 0;
-      for (let i = 0; i < d.length; i += 4) { r += d[i]; g += d[i + 1]; b += d[i + 2]; n++; }
-      return rgbToHsl(r / n, g / n, b / n);
+      const gw = 24, gh = 36;
+      const c = document.createElement('canvas'); c.width = gw; c.height = gh;
+      const x = c.getContext('2d'); x.drawImage(img, 0, 0, gw, gh);
+      const d = x.getImageData(0, 0, gw, gh).data;
+      const buckets = Array.from({ length: 12 }, () => ({ w: 0, s: 0, l: 0 }));
+      let L = 0, N = 0;
+      for (let i = 0; i < d.length; i += 4) {
+        const [h, s, l] = rgbToHsl(d[i], d[i + 1], d[i + 2]); L += l; N++;
+        if (s > .25 && l > .12 && l < .88) {
+          const b = buckets[Math.floor(h / 30) % 12], w = s * Math.sqrt(1 - Math.abs(2 * l - 1));
+          b.w += w; b.s += s * w; b.l += l * w;
+        }
+      }
+      return { buckets, avgL: L / N, N };
     } catch { return null; }
   }
 
-  // Mean + spread of the pixels around the edge of a crop. A flat edge means the
-  // lettering sits on a plain background we can match with the spine colour.
-  function edgeColor(img, sx, sy, sw, sh) {
-    try {
-      const c = document.createElement('canvas'); c.width = 24; c.height = 24;
-      const x = c.getContext('2d'); x.drawImage(img, sx, sy, sw, sh, 0, 0, 24, 24);
-      const d = x.getImageData(0, 0, 24, 24).data;
-      const px = [];
-      for (let i = 0; i < 24; i++) for (const [cx, cy] of [[i, 0], [i, 23], [0, i], [23, i]]) { const k = (cy * 24 + cx) * 4; px.push([d[k], d[k + 1], d[k + 2]]); }
-      const m = [0, 1, 2].map((ch) => px.reduce((a, p) => a + p[ch], 0) / px.length);
-      const sd = Math.max(...[0, 1, 2].map((ch) => Math.sqrt(px.reduce((a, p) => a + (p[ch] - m[ch]) ** 2, 0) / px.length)));
-      return { m, sd };
-    } catch { return null; }
+  // Pick a spine colour. `need` is 'dark' when the lettering is light (most tapes) or 'light'
+  // when the lettering is dark. Black and charcoal are common on real shelves, so they come up often.
+  function chooseSpine(pal, f, need) {
+    const hh = hash(f.title);
+    let best = null;
+    if (pal) pal.buckets.forEach((b, i) => {
+      if (!b.w) return;
+      const h = i * 30 + 15, s = b.s / b.w, l = b.l / b.w;
+      if (isMuddy(h, s, l)) return;
+      if (!best || b.w > best.w) best = { w: b.w, h, s, l };
+    });
+    const colorful = best && best.w / pal.N > 0.035;
+    if (need === 'light') return colorful ? hslToRgb(best.h, .35, .86) : hslToRgb(42, .18, .92);
+    if (!colorful || hh % 4 === 0) return hslToRgb(best ? best.h : 220, .14, (5 + hh % 6) / 100);
+    if (best.h >= 10 && best.h <= 75) return hslToRgb(best.h, .1, (5 + hh % 6) / 100); // dark orange/gold just reads as brown
+    return hslToRgb(best.h, clamp(best.s, .5, .88), clamp(best.l * .55, .16, .3));
   }
 
-  // Cut the title lettering out of the poster, turn it 90 degrees so it reads down the
-  // spine, and scale it to fill the space. Lines sit side by side, first line on the right.
-  function titleArt(f, img, W, H) {
+  const borderStats = (px, w, h) => {
+    const t = Math.max(1, Math.round(Math.min(w, h) * .08)), pts = [];
+    for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) if (x < t || y < t || x >= w - t || y >= h - t) { const k = (y * w + x) * 4; pts.push([px[k], px[k + 1], px[k + 2]]); }
+    const med = [0, 1, 2].map((ch) => pts.map((p) => p[ch]).sort((a, b) => a - b)[pts.length >> 1]);
+    const near = pts.filter((p) => Math.hypot(p[0] - med[0], p[1] - med[1], p[2] - med[2]) < 45);
+    const bg = [0, 1, 2].map((ch) => near.reduce((a, p) => a + p[ch], 0) / (near.length || 1));
+    const flat = pts.filter((p) => Math.hypot(p[0] - bg[0], p[1] - bg[1], p[2] - bg[2]) < 28).length / pts.length;
+    const mean = [0, 1, 2].map((ch) => pts.reduce((a, p) => a + p[ch], 0) / pts.length);
+    return { bg, flat, mean, lb: lum(...med) };
+  };
+
+  // Lift the title lettering off the poster, turn it so it reads down the spine, and fit it to the
+  // space. The lettering is separated from its background (colour-keyed on flat backgrounds, by
+  // light/dark on busy ones) so it sits straight on the spine colour with no pasted rectangle.
+  function titleArt(f, img, W, H, pal) {
     const dpr = Math.min(window.devicePixelRatio || 1, 3);
     const iw = img.naturalWidth, ih = img.naturalHeight;
     const crops = f.titleBox.map(([x0, y0, x1, y1]) => {
@@ -106,60 +142,115 @@
     const s = Math.min(H / maxL, (W - GAP * (crops.length - 1)) / sumH);
     const totalW = sumH * s + GAP * (crops.length - 1);
 
+    // 1. each crop, upright, at its final pixel size
+    const parts = crops.map((c) => {
+      const w = Math.max(4, Math.round(c.sw * s * dpr)), h = Math.max(4, Math.round(c.sh * s * dpr));
+      const cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+      const x = cv.getContext('2d'); x.imageSmoothingQuality = 'high';
+      x.drawImage(img, c.sx, c.sy, c.sw, c.sh, 0, 0, w, h);
+      const id = x.getImageData(0, 0, w, h), st = borderStats(id.data, w, h);
+      return { cv, x, id, w, h, ...st, c };
+    });
+
+    // 2. decide how to separate lettering from background, per crop
+    let ok = true;
+    parts.forEach((p) => {
+      const d = p.id.data, n = p.w * p.h, a = new Float32Array(n);
+      let cov = 0, up = 0, down = 0;
+      if (p.flat >= .72) {
+        p.mode = 'flat';
+        for (let i = 0; i < n; i++) {
+          const dist = Math.hypot(d[i * 4] - p.bg[0], d[i * 4 + 1] - p.bg[1], d[i * 4 + 2] - p.bg[2]);
+          a[i] = smooth(22, 64, dist); cov += a[i];
+          if (a[i] > .6) lum(d[i * 4], d[i * 4 + 1], d[i * 4 + 2]) > lum(...p.bg) ? up++ : down++;
+        }
+      } else {
+        p.mode = 'busy';
+        for (let i = 0; i < n; i++) { const dl = lum(d[i * 4], d[i * 4 + 1], d[i * 4 + 2]) - p.lb; if (dl > 0) up += dl > 40 ? 1 : 0; else down += dl < -40 ? 1 : 0; }
+        p.pol = up >= down ? 1 : -1;
+        // raise the bar until only the strongest contrast (the lettering) is left
+        for (const t of [26, 45, 65, 85, 105, 125]) {
+          cov = 0;
+          for (let i = 0; i < n; i++) { a[i] = smooth(t, t + 44, p.pol * (lum(d[i * 4], d[i * 4 + 1], d[i * 4 + 2]) - p.lb)); cov += a[i]; }
+          if (cov / n <= .45) break;
+        }
+      }
+      p.a = a; p.cov = cov / n; p.lighter = p.mode === 'flat' ? up >= down : p.pol > 0;
+      if (p.cov < .02 || p.cov > .62) ok = false;
+    });
+
+    // 3. spine colour
+    const lighter = parts.reduce((a, p) => a + (p.lighter ? p.cov : -p.cov), 0) >= 0;
+    let rgb, mode;
+    if (ok) {
+      mode = 'key';
+      const flatAll = parts.every((p) => p.mode === 'flat');
+      const bgm = [0, 1, 2].map((ch) => parts.reduce((a, p) => a + p.bg[ch], 0) / parts.length);
+      const [bh, bs, bl] = rgbToHsl(...bgm);
+      rgb = f.color ? null : flatAll && !isMuddy(bh * 1, bs, bl) ? bgm : chooseSpine(pal, f, lighter ? 'dark' : 'light');
+    } else { // can't separate it cleanly: feather the crop into a spine colour matching its surroundings
+      mode = 'blend';
+      rgb = [0, 1, 2].map((ch) => parts.reduce((a, p) => a + p.mean[ch], 0) / parts.length);
+      const [mh, ms, ml] = rgbToHsl(...rgb);
+      if (isMuddy(mh, ms, ml)) rgb = chooseSpine(pal, f, ml > .6 ? 'light' : 'dark');
+    }
+
+    // 4. composite, rotated 90 degrees clockwise, first line on the right
     const cv = document.createElement('canvas');
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr);
-    ctx.imageSmoothingQuality = 'high';
     let right = (W + totalW) / 2;
-    const edges = [];
-    crops.forEach((c) => {
+    parts.forEach((p) => {
+      const d = p.id.data, n = p.w * p.h;
+      if (mode === 'key') {
+        for (let i = 0; i < n; i++) {
+          const a = p.a[i];
+          if (p.mode === 'flat' && a > .02 && a < 1) for (let ch = 0; ch < 3; ch++) d[i * 4 + ch] = clamp(p.bg[ch] + (d[i * 4 + ch] - p.bg[ch]) / a, 0, 255);
+          d[i * 4 + 3] = Math.round(a * 255);
+        }
+      } else {
+        const ramp = Math.max(3, Math.round(p.h * .22));
+        for (let y = 0; y < p.h; y++) for (let x = 0; x < p.w; x++) {
+          const e = Math.min(x, y, p.w - 1 - x, p.h - 1 - y);
+          d[(y * p.w + x) * 4 + 3] = Math.round(smooth(0, ramp, e) * 255);
+        }
+      }
+      p.x.putImageData(p.id, 0, 0);
       ctx.save();
-      ctx.translate(right, (H - c.sw * s) / 2);
+      ctx.translate(right, (H - p.c.sw * s) / 2);
       ctx.rotate(Math.PI / 2);
-      ctx.drawImage(img, c.sx, c.sy, c.sw, c.sh, 0, 0, c.sw * s, c.sh * s);
+      ctx.drawImage(p.cv, 0, 0, p.c.sw * s, p.c.sh * s);
       ctx.restore();
-      right -= c.sh * s + GAP;
-      const e = edgeColor(img, c.sx, c.sy, c.sw, c.sh); if (e) edges.push(e);
+      right -= p.c.sh * s + GAP;
     });
-    let bg = null;
-    if (edges.length && Math.max(...edges.map((e) => e.sd)) < 30) {
-      const m = [0, 1, 2].map((ch) => edges.reduce((a, e) => a + e.m[ch], 0) / edges.length);
-      bg = `rgb(${m.map((v) => Math.round(v)).join(',')})`;
-    }
-    return { cv, bg };
+    return { cv, rgb, lighter };
   }
 
   async function prepare(f) {
     const img = await loadImg(f.poster);
-    const hsl = posterColor(img);
-    const h = hsl ? hsl[0] : hash(f.title) % 360;
-    const s = Math.max(hsl ? hsl[1] : .5, .38);
-    const l = Math.min(Math.max(hsl ? hsl[2] : .28, .2), .36);
-    f._c = f.color || `hsl(${h.toFixed(0)} ${(s * 100).toFixed(0)}% ${(l * 100).toFixed(0)}%)`;
-    f._t = `hsl(${h.toFixed(0)} 70% 90%)`;
+    const pal = posterPalette(img);
     f._font = pickFont(f);
     const rt = f.runtime || (90 + hash(f.title) % 60);
     f._w = Math.round(Math.min(52, Math.max(42, 40 + (rt - 90) * 0.12)));
     f._h = SPINE_H;
-    // Wear and tear: a stable, per-film roll so the same tapes are always the battered ones.
+    // Wear: nearly every tape has some (about 1 in 25 is pristine), from a light scuff to badly battered.
     const r = hash(f.title + 'wear');
+    f._r = r;
     f._dmg = [];
     if ((r >> 11) % 6 === 0) f._dmg.push('sticker');
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
-    // ~1 in 5 tapes is damaged at all; severity runs from a light scuff (0.3) to badly beaten up (1)
-    f._sev = r % 100 < 20 ? 0.3 + 0.7 * ((r >> 9) % 100) / 100 : 0;
-    f._r = r;
+    f._sev = r % 25 === 0 ? 0 : 0.12 + 0.88 * Math.pow(((r >> 9) % 1000) / 1000, 1.6);
     if (f.logo) f._dmg = f._dmg.filter((d) => d !== 'sticker');
     f._art = null;
+    let rgb = null;
     if (img && Array.isArray(f.titleBox) && f.titleBox.length) {
       const W = f._w - 4, H = f._h - logoZone(f) - BOTTOM_ZONE - 6;
-      f._art = titleArt(f, img, W, H);
-      if (f._art.bg && !f.color) {
-        f._c = f._art.bg;
-        const m = f._c.match(/\d+/g).map(Number);
-        if (0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2] > 150) f._t = '#2a2118'; // pale spine: dark ink
-      }
+      f._art = titleArt(f, img, W, H, pal);
+      rgb = f._art.rgb;
     }
+    if (!rgb) rgb = chooseSpine(pal, f, 'dark');
+    if (f.color) f._c = f.color; else f._c = rgbCss(rgb);
+    f._t = lum(...rgb) > 150 ? '#2a2118' : '#efe6d2'; // ink for the badge and any plain-text title
   }
 
   // Procedural wear, drawn per tape from a seeded RNG: white cardboard showing through at the
@@ -324,7 +415,7 @@
     const avail = shelves.clientWidth - 2 * (10 + 16);
     let row = [], used = 0, rows = [];
     films.forEach((f, i) => {
-      const w = f._w + 2;
+      const w = f._w;
       if (used + w > avail && row.length) { rows.push(row); row = []; used = 0; }
       row.push(i); used += w;
     });
