@@ -302,171 +302,141 @@
     cv.className = 'wear';
     cv.style.cssText = `width:${W}px;height:${H + PAD}px;top:${-PAD}px`;
     const x = cv.getContext('2d'); x.scale(dpr, dpr);
-    const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
     const y0 = PAD, yb = PAD + H; // the spine's real top and bottom edges
+    const SHELF = '#0b0805', [sr, sg, sb] = f._rgb, pale = lum(sr, sg, sb) > 165;
 
-    // The top fold. The spine panel folds over into the top panel along a slightly rounded edge, so the very
-    // top catches the light; over the years the printed colour cracks along that fold and the pale board
-    // shows through as fibres, most of all at the two corners. No line across the spine, no top face.
-    const SHELF = '#0b0805', wear = .3 + sev * .7;
-    const buff = (a) => `rgba(${196 + R() * 28 | 0},${186 + R() * 26 | 0},${160 + R() * 28 | 0},${a})`;
+    // Real wear is mostly dry-brush scuffing: the print rubbed to a pale, fibrous dust along the edges that
+    // fades inward, then hairline scratches and creases, and only at the worst a chip of grey board showing.
+    // It is never a clean cream shape. Excellent copies (about 1 in 25) get nothing but the soft top highlight.
+    const dust = (a) => (pale ? `rgba(${140 + R() * 24 | 0},${136 + R() * 22 | 0},${126 + R() * 22 | 0},${a})` : `rgba(${222 + R() * 28 | 0},${218 + R() * 26 | 0},${206 + R() * 28 | 0},${a})`);
+    const board = (a) => `rgba(${186 + R() * 26 | 0},${180 + R() * 24 | 0},${164 + R() * 26 | 0},${a})`;
+    const dark = (a) => `rgba(8,6,4,${a})`;
+
     const gr = x.createLinearGradient(0, y0, 0, y0 + 4.5);
-    gr.addColorStop(0, 'rgba(255,255,255,.24)'); gr.addColorStop(.5, 'rgba(255,255,255,.08)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
+    gr.addColorStop(0, 'rgba(255,255,255,.22)'); gr.addColorStop(.5, 'rgba(255,255,255,.07)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
     x.fillStyle = gr; x.fillRect(0, y0, W, 4.5);
-    // Each tape gets its own kind of top: bare, a thin wavy white lid line, a broken lid line, or a thicker
-    // bent-up lid. Fibres and cracked corners are on only some of them, so no two read the same.
-    const kind = R(), [sr, sg, sb] = f._rgb;
-    const lidKind = kind < .3 ? 0 : kind < .62 ? 1 : kind < .82 ? 2 : 3;
-    const useFib = chance(.55), useCorner = chance(.5);
-    if (lidKind) {
-      const ph1 = R() * 6.28, ph2 = R() * 6.28, f1 = rr(.12, .3), f2 = rr(.35, .7);
-      const tilt = rr(-.9, .9) + (sev > .5 ? rr(-1.8, 1.8) * sev : 0);
-      const off = rr(-.7, .3), baseTh = lidKind === 3 ? rr(2.2, 3.4) : rr(.9, 2.1);
-      const yT = (px) => y0 + off + tilt * (px / W) + Math.sin(px * f1 + ph1) * .35 + Math.sin(px * f2 + ph2) * .15;
-      const th = (px) => baseTh * (1 + .35 * Math.sin(px * .21 + ph2) + .2 * Math.sin(px * .6 + ph1));
-      const alpha = rr(.65, 1);
-      const lg = x.createLinearGradient(0, y0 - 1, 0, y0 + 3.5);
-      lg.addColorStop(0, `rgba(246,242,230,${alpha})`); lg.addColorStop(1, `rgba(214,205,184,${alpha})`);
-      const gaps = lidKind === 2 ? [] : null;
-      if (gaps) for (let px = rr(0, 6); px < W; px += rr(5, 16)) gaps.push([px, px + rr(2, 8)]);
-      const seg = (p0, p1) => {
-        x.beginPath(); x.moveTo(p0, yT(p0));
-        for (let px = p0 + 1; px <= p1; px++) x.lineTo(px, yT(px));
-        for (let px = p1; px >= p0; px--) x.lineTo(px, yT(px) + th(px));
-        x.closePath(); x.fillStyle = lg; x.fill();
-      };
-      if (gaps) { let p = 0; gaps.forEach(([g0, g1]) => { if (g0 > p) seg(p, Math.min(g0, W)); p = Math.min(g1, W); }); if (p < W) seg(p, W); }
-      else seg(0, W);
-      if (lidKind === 3) { // lid bent up at one end, showing its dark underside
-        const lift = rr(1.2, 2.6), left = chance(.5), e = left ? 0 : W, m = left ? W * .75 : W * .25;
-        x.fillStyle = `rgb(${[sr, sg, sb].map((v) => Math.round(v * .7)).join(',')})`;
-        x.beginPath(); x.moveTo(e, yT(e)); x.lineTo(e, yT(e) - lift); x.lineTo(m, yT(m) - lift * .3); x.lineTo(m, yT(m)); x.closePath(); x.fill();
-      }
-      x.strokeStyle = 'rgba(0,0,0,.28)'; x.lineWidth = 1; x.beginPath(); x.moveTo(0, yT(0) + th(0) + .9);
-      for (let px = 1; px <= W; px++) x.lineTo(px, yT(px) + th(px) + .9);
-      x.stroke();
-      if (chance(.4)) { const left = chance(.5), px = left ? 0 : W - 1; x.fillStyle = cream(.85); x.fillRect(px, yT(px), 1, rr(3, 7)); }
-    }
     [0, 1].forEach((side) => { // slightly rounded top corners
       const r = rr(.9, 1.9), cx = side ? W : 0, dir = side ? -1 : 1;
       x.fillStyle = SHELF; x.beginPath(); x.moveTo(cx, y0); x.lineTo(cx + dir * r, y0); x.quadraticCurveTo(cx, y0, cx, y0 + r); x.closePath(); x.fill();
     });
-    if (useFib) for (let px = 0; px < W; px += rr(.8, 1.8)) { // fibres where the print has cracked along the fold, thickest at the corners
-      const corner = Math.exp(-Math.min(px, W - px) / 5);
-      if (!chance((.1 + .5 * corner) * wear * 1.4)) continue;
-      x.fillStyle = buff(rr(.45, .95)); x.fillRect(px, y0 + rr(-.1, .6), rr(.6, 1.3), rr(.8, 1.4 + 2.4 * corner * wear));
-    }
-    if (useFib) for (let px = 0; px < W;) { // the pale board along the very edge of the fold, in broken lengths
-      const seg = rr(2, 8);
-      if (chance(.35 * wear + .1)) { x.fillStyle = buff(rr(.4, .8)); x.fillRect(px, y0 + rr(-.1, .3), seg, rr(.5, .9)); }
-      px += seg;
-    }
-    [0, 1].forEach((side) => { // corners where the colour has cracked right away
-      if (!useCorner || !chance(.45 + .5 * wear)) return;
-      const w = rr(2, 3 + 5 * wear), h = rr(2, 3 + 4 * wear), m = (u) => (side ? W - u : u);
-      x.fillStyle = buff(rr(.7, .95)); x.beginPath();
-      [[0, 0], [w, 0], [w * rr(.6, .9), h * rr(.3, .5)], [w * rr(.3, .6), h * rr(.6, .8)], [w * rr(.1, .4), h], [0, h * rr(.5, .9)]].forEach(([u, v], i) => (i ? x.lineTo(m(u), y0 + v) : x.moveTo(m(u), y0 + v)));
-      x.closePath(); x.fill();
-    });
     if (!sev) return cv;
 
-    // Each damaged tape gets a different mix of problems, not all of them.
-    const has = {
-      top: false, peel: false, corner: sev > .3 && chance(.5),
-      edges: chance(.55 + sev * .4), specks: chance(.6 + sev * .3), crease: chance(.25 + sev * .65),
-      scratch: sev > .5 && chance(.6), bottom: chance(.55 + sev * .4),
+    const tier = sev < .3 ? 0 : sev < .62 ? 1 : 2; // light, medium, heavy
+
+    // --- primitives -------------------------------------------------------------------------------
+    // Dry-brush streaks along one edge, densest at the edge and fading inward. `k` scales the amount.
+    const brush = (edge, depth, n, k) => {
+      for (let i = 0, m = n * k | 0; i < m; i++) {
+        const d = depth * Math.pow(R(), 2.1), fade = 1 - d / depth * .55, a = rr(.2, .75) * fade;
+        const along = (edge === 't' || edge === 'b') ? (chance(.5) ? rr(0, W) : chance(.5) ? rr(0, W * .22) : rr(W * .78, W)) : (chance(.55) ? rr(0, H * .25) : chance(.5) ? rr(H * .75, H) : rr(0, H));
+        const len = rr(1.5, 9), th = rr(.5, 1.1);
+        x.fillStyle = dust(a);
+        if (edge === 't') x.fillRect(along, y0 + d, len, th);
+        else if (edge === 'b') x.fillRect(along, yb - d - th, len, th);
+        else if (edge === 'l') { if (chance(.6)) x.fillRect(d, y0 + along, th, len); else x.fillRect(d, y0 + along, rr(1, 3.5), .6); }
+        else { if (chance(.6)) x.fillRect(W - d - th, y0 + along, th, len); else x.fillRect(W - d - rr(1, 3.5), y0 + along, rr(1, 3.5), .6); }
+      }
     };
-    if (!Object.values(has).some(Boolean)) has.specks = true;
-
-    if (has.top) { // white board showing where the printed top has worn through, in broken patches along the edge
-      const depth = L(.6, 2), rise = L(.2, 1);
-      for (let px = -1; px < W;) {
-        const seg = rr(3, 12);
-        if (chance(.3 + sev * .5)) {
-          const d = rr(.5, depth);
-          x.beginPath(); x.moveTo(px, y0 + .5);
-          for (let t = 0; t <= 1.001; t += .25) x.lineTo(px + seg * t, y0 - rr(0, rise));
-          for (let t = 1; t >= -.001; t -= .25) x.lineTo(px + seg * t, y0 + d * rr(.35, 1));
-          x.closePath(); x.fillStyle = cream(.92); x.fill();
-        }
-        px += seg;
-      }
-    }
-    if (has.peel) for (let i = 0, n = sev > .75 ? 2 : 1; i < n; i++) { // printed layer lifted away
-      const pw = rr(W * .25, W * .6), px = rr(0, W - pw), ph = rr(5, L(7, 14));
-      x.beginPath(); x.moveTo(px, y0);
-      for (let t = 0; t <= 1.001; t += .2) x.lineTo(px + pw * t, y0 + ph * rr(.3, 1) * Math.sin(Math.PI * t) + 1);
-      x.closePath(); x.fillStyle = cream(.92); x.fill();
-      x.strokeStyle = 'rgba(0,0,0,.28)'; x.lineWidth = .8; x.stroke();
-    }
-    if (has.corner) { // a top corner rubbed through
-      const left = chance(.5), cs = rr(2.5, L(3.5, 6.5));
+    // A hairline scratch or crease: a thin pale line (with a faint shadow beside it for creases).
+    const hair = (px, py, ang, len, a, bend, shadow) => {
+      const ex = px + Math.sin(ang) * len, ey = py + Math.cos(ang) * len;
+      const cx = (px + ex) / 2 + Math.cos(ang) * bend, cy = (py + ey) / 2 - Math.sin(ang) * bend;
+      if (shadow) { x.strokeStyle = dark(shadow); x.lineWidth = .7; x.beginPath(); x.moveTo(px + .8, py); x.quadraticCurveTo(cx + .8, cy, ex + .8, ey); x.stroke(); }
+      x.strokeStyle = dust(a); x.lineWidth = rr(.4, .8); x.beginPath(); x.moveTo(px, py); x.quadraticCurveTo(cx, cy, ex, ey); x.stroke();
+    };
+    // A ragged chip of grey board where a corner has been knocked through, with dust thrown off round it.
+    const chip = (cx, cy, size, sx, sy) => {
       x.beginPath();
-      if (left) { x.moveTo(-1, y0 - 2); x.lineTo(cs, y0 - 2); x.lineTo(cs * .6, y0 + cs * .4); x.lineTo(cs * .2, y0 + cs * .9); x.lineTo(-1, y0 + cs); }
-      else { x.moveTo(W + 1, y0 - 2); x.lineTo(W - cs, y0 - 2); x.lineTo(W - cs * .6, y0 + cs * .4); x.lineTo(W - cs * .2, y0 + cs * .9); x.lineTo(W + 1, y0 + cs); }
-      x.closePath(); x.fillStyle = cream(.95); x.fill();
+      const n = 7;
+      for (let i = 0; i <= n; i++) {
+        const t = i / n * Math.PI / 2, rad = size * rr(.55, 1.15);
+        const px = cx + sx * Math.cos(t) * rad, py = cy + sy * Math.sin(t) * rad;
+        i ? x.lineTo(px, py) : x.moveTo(px, py);
+      }
+      x.lineTo(cx, cy); x.closePath();
+      x.fillStyle = board(rr(.75, .95)); x.fill();
+      for (let i = 0, m = size * 3 | 0; i < m; i++) { // fibres and flecks around the break
+        const t = R() * Math.PI / 2, rad = size * rr(.6, 1.9);
+        x.fillStyle = chance(.5) ? board(rr(.4, .8)) : dust(rr(.3, .7));
+        x.fillRect(cx + sx * Math.cos(t) * rad, cy + sy * Math.sin(t) * rad, rr(.5, 1.5), rr(.5, 1.3));
+      }
+    };
+    // The flap's edge along the very top: a thin strip of pale board with a ragged lower edge.
+    const strip = () => {
+      const th0 = rr(1.1, 1.9) + sev * 1.1, tilt = rr(-.5, .5);
+      let h = th0, gap = 0;
+      for (let px = 0; px < W; px += 1) {
+        if (gap > 0) { gap--; continue; }
+        if (chance(.04 + .06 * (1 - sev))) { gap = rr(2, 8) | 0; continue; }
+        h = clamp(h + rr(-.4, .4), .5, th0 * 1.9);
+        x.fillStyle = board(rr(.7, .98)); x.fillRect(px, y0 - .3 + tilt * (px / W), 1.1, h);
+        if (chance(.12)) { x.fillStyle = board(rr(.4, .7)); x.fillRect(px, y0 + h - .3, rr(.6, 1.2), rr(.8, 2.2)); } // a frayed hair hanging below
+      }
+      x.fillStyle = dark(L(.18, .4)); for (let px = 0; px < W; px += 1) if (chance(.7)) x.fillRect(px, y0 + th0 + 1.1, 1.1, .8); // the shadow under it
+    };
+
+    // --- each tape rolls its own mix, so no two read alike -------------------------------------------
+    const amt = { t: chance(.82) ? rr(.6, 1.3) : rr(0, .3), b: chance(.7) ? rr(.5, 1.2) : rr(0, .3), l: chance(.65) ? rr(.4, 1.2) : rr(0, .3), r: chance(.65) ? rr(.4, 1.2) : rr(0, .3) };
+    if (tier === 0) { amt.t *= .8; amt.l *= .5; amt.r *= .5; }
+    const density = L(26, 210);
+    brush('t', L(2.5, 7), density * 1.2, amt.t);
+    brush('b', L(2.5, 8), density * .9, amt.b);
+    brush('l', L(1.8, 6), density * .8, amt.l);
+    brush('r', L(1.8, 6), density * .8, amt.r);
+    // frosted rim: the print worn a shade paler along the sides
+    [0, 1].forEach((side) => {
+      if (!chance(.35 + sev * .5)) return;
+      const g = x.createLinearGradient(side ? W : 0, 0, side ? W - 3 : 3, 0);
+      g.addColorStop(0, dust(L(.1, .3))); g.addColorStop(1, 'rgba(255,255,255,0)');
+      x.fillStyle = g; x.fillRect(side ? W - 3 : 0, y0 + rr(0, H * .2), 3, rr(H * .4, H * .8));
+    });
+
+    if (chance([.12, .58, .92][tier])) strip();                       // the flap's pale edge
+    [[0, 1, 1], [1, -1, 1]].forEach(([side, sx]) => {                 // top corners
+      const p = [0, .35, .85][tier];
+      if (chance(p)) chip(side ? W : 0, y0, rr(2, L(3, 8)), sx, 1);
+    });
+    [[0, 1], [1, -1]].forEach(([side, sx]) => {                       // bottom corners
+      if (tier && chance([0, .2, .6][tier])) chip(side ? W : 0, yb, rr(2.5, L(3, 8)), sx, -1);
+    });
+
+    // scratches: a few short ones on most tapes, many on worn ones, plus long curved creases on the worst
+    for (let i = 0, n = L(0, 12) * rr(.5, 1.3) | 0; i < n; i++) {
+      hair(rr(1, W - 1), y0 + rr(4, H - 14), rr(-.4, .4) + (chance(.2) ? rr(-1, 1) : 0), rr(6, L(14, 42)), rr(.15, .5), rr(-2, 2), 0);
     }
-    if (has.edges) for (let i = 0, n = L(4, 28) | 0; i < n; i++) { // rubbed sides, heaviest near the ends
-      const side = chance(.5), e = R();
-      const py = y0 + (e < .45 ? rr(0, H * .3) : e < .7 ? rr(H * .7, H) : rr(0, H));
-      const wd = rr(.7, L(1.1, 2.4));
-      x.fillStyle = cream(rr(.45, .9)); x.fillRect(side ? 0 : W - wd, py, wd, rr(3, L(8, 34)));
-    }
-    if (has.specks) for (let i = 0, n = L(20, 160) | 0; i < n; i++) { // scuffs
-      const px = chance(.6) ? (chance(.5) ? rr(0, W * .22) : rr(W * .78, W)) : rr(0, W);
-      x.fillStyle = cream(rr(.2, .7)); x.fillRect(px, y0 + (chance(.5) ? rr(0, H * .3) : rr(0, H)), rr(.5, 1.5), rr(.5, 1.5));
-    }
-    if (has.crease) for (let i = 0, n = sev > .7 ? 2 + (chance(.5) ? 1 : 0) : 1; i < n; i++) { // hard creases
-      let cy = y0 + rr(H * .12, H * .85); const slope = rr(-.18, .18);
-      for (let px = 0; px < W; px += rr(0, 1)) {
-        const seg = rr(4, 11), ny = cy + slope * seg + rr(-.9, .9);
-        if (!chance(.06)) {
-          x.strokeStyle = 'rgba(0,0,0,.45)'; x.lineWidth = 1; x.beginPath(); x.moveTo(px, cy + 1); x.lineTo(px + seg, ny + 1); x.stroke();
-          x.strokeStyle = cream(rr(.55, .95)); x.lineWidth = rr(.7, 1.5); x.beginPath(); x.moveTo(px, cy); x.lineTo(px + seg, ny); x.stroke();
-        }
-        px += seg; cy = ny;
+    if (tier === 2 || (tier === 1 && chance(.3))) {
+      for (let i = 0, n = tier === 2 ? 1 + (chance(.6) ? 1 : 0) + (chance(.3) ? 1 : 0) : 1; i < n; i++) {
+        hair(rr(-2, W * .6), y0 + rr(H * .1, H * .7), rr(-.9, .9) * (chance(.5) ? 1 : .35), rr(40, 120) * (tier === 2 ? 1 : .5), rr(.3, .55), rr(-7, 7), rr(.18, .32));
       }
     }
-    if (has.scratch) for (let i = 0, n = L(1, 5) | 0; i < n; i++) {
-      const sx = rr(0, W), sy = y0 + rr(0, H), l = rr(8, 26), ang = rr(-.5, .5) + Math.PI / 2;
-      x.strokeStyle = cream(rr(.15, .4)); x.lineWidth = .6; x.beginPath(); x.moveTo(sx, sy); x.lineTo(sx + Math.cos(ang) * l, sy + Math.sin(ang) * l); x.stroke();
+    // scuffed flecks scattered over the face, thicker toward the sides
+    for (let i = 0, n = L(8, 90) * rr(.5, 1.3) | 0; i < n; i++) {
+      const px = chance(.55) ? (chance(.5) ? rr(0, W * .2) : rr(W * .8, W)) : rr(0, W);
+      x.fillStyle = dust(rr(.25, .65)); x.fillRect(px, y0 + (chance(.5) ? rr(0, H * .35) : rr(0, H)), rr(.5, 1.3), rr(.5, 1.3));
     }
 
-    // Bottom: the arch cut-out takes the most punishment. Fray around its rim, white stress
-    // cracks climbing out of it, crushed lower corners and scuffing along the bottom edge.
-    if (has.bottom) {
+    // Bottom: the arch cut-out takes the most punishment. Dust fanned out round its rim, hairline cracks
+    // climbing from it, and the bottom edge fraying into board on the worst copies.
+    if (chance(.5 + sev * .45)) {
       const cx = W / 2, rim = 7;
-      // whitened rim around the arch, in broken pieces
+      for (let i = 0, n = L(8, 44) | 0; i < n; i++) {
+        const a = Math.PI + R() * Math.PI, rad = rim + Math.pow(R(), 1.8) * 9;
+        x.fillStyle = dust(rr(.3, .75)); x.fillRect(cx + Math.cos(a) * rad, yb + Math.sin(a) * rad, rr(.6, 1.8), rr(.6, 1.5));
+      }
       x.lineCap = 'round';
-      for (let a0 = Math.PI; a0 < 2 * Math.PI; a0 += rr(.25, .6)) {
-        if (!chance(.45 + sev * .5)) continue;
-        x.strokeStyle = cream(rr(.5, .95)); x.lineWidth = rr(.8, L(1.2, 2.6));
-        x.beginPath(); x.arc(cx, yb, rim + rr(0, 1.5), a0, a0 + rr(.2, .5)); x.stroke();
+      for (let a0 = Math.PI; a0 < 2 * Math.PI; a0 += rr(.3, .7)) {
+        if (!chance(.3 + sev * .5)) continue;
+        x.strokeStyle = dust(rr(.35, .75)); x.lineWidth = rr(.6, L(.8, 1.6));
+        x.beginPath(); x.arc(cx, yb, rim + rr(0, 1.2), a0, a0 + rr(.2, .5)); x.stroke();
       }
       x.lineCap = 'butt';
-      // cracks climbing up from the arch
-      for (let i = 0, n = L(0, 3.4) | 0; i < n; i++) {
-        let px = cx + rr(-5, 5), py = yb - rim;
-        x.strokeStyle = cream(rr(.5, .9)); x.lineWidth = rr(.6, 1.1); x.beginPath(); x.moveTo(px, py);
-        for (let k = 0, m = rr(3, L(5, 16)); k < m; k += 2) { px += rr(-1.2, 1.2); py -= 2; x.lineTo(px, py); }
-        x.stroke();
+      for (let i = 0, n = L(0, 3.2) | 0; i < n; i++) hair(cx + rr(-6, 6), yb - rim, Math.PI + rr(-.25, .25), rr(6, L(8, 20)), rr(.35, .7), rr(-1.2, 1.2), 0);
+      if (tier === 2 && chance(.55)) {
+        for (let px = 0; px < W; px += rr(1.2, 2.6)) {
+          if (Math.abs(px - cx) < rim - 1) continue;
+          if (chance(.55)) { x.fillStyle = board(rr(.5, .9)); x.fillRect(px, yb - rr(.4, 2.6), rr(.8, 2), 4); }
+        }
       }
-      // ragged white fray along the bottom edge, thickest each side of the arch
-      x.fillStyle = cream(.9);
-      for (let px = 0; px < W; px += rr(1.5, 3.5)) {
-        if (Math.abs(px - cx) < rim - 1) continue;
-        const near = Math.abs(px - cx) < rim + 8 ? 1 : .45;
-        if (chance(.35 + .5 * sev * near)) x.fillRect(px, yb - rr(.5, L(1.5, 5)) * near, rr(1, 2.6), 6);
-      }
-      // crushed lower corner
-      if (sev > .35 && chance(.6)) {
-        const left = chance(.5), cs = rr(3, L(4, 9));
-        x.beginPath();
-        if (left) { x.moveTo(-1, yb - cs); x.lineTo(cs * .5, yb - cs * .5); x.lineTo(cs, yb + 1); x.lineTo(-1, yb + 1); }
-        else { x.moveTo(W + 1, yb - cs); x.lineTo(W - cs * .5, yb - cs * .5); x.lineTo(W - cs, yb + 1); x.lineTo(W + 1, yb + 1); }
-        x.closePath(); x.fillStyle = cream(.92); x.fill();
-      }
-      for (let i = 0, n = L(4, 22) | 0; i < n; i++) { x.fillStyle = cream(rr(.3, .8)); x.fillRect(rr(0, W), yb - rr(0, 9), rr(.6, 2.2), rr(.6, 2)); }
     }
     return cv;
   }

@@ -78,7 +78,8 @@ h1 span { color: var(--gold); }
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 5;
   background:
     linear-gradient(90deg, rgba(255,255,255,.2), transparent 12%, transparent 78%, rgba(0,0,0,.45)),
-    linear-gradient(180deg, rgba(255,255,255,.1) 0, transparent 5px);
+    linear-gradient(180deg, rgba(255,255,255,.1) 0, transparent 5px),
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.045) .45px, transparent .9px) 0 0 / 3.1px 3.1px; /* printed-paper dot grain */
 }
 .spine:hover, .spine:focus-visible { transform: translateY(-9px); filter: brightness(1.15); outline: none; }
 .spine:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
