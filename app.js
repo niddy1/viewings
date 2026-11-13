@@ -275,6 +275,27 @@
     const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
     const y0 = PAD, yb = PAD + H; // the spine's real top and bottom edges
 
+    // The sleeve's top flap, seen from the front. It folds over into the sleeve, so it never sits
+    // quite square: a narrow band along the top, a touch off-level, with the white board showing
+    // along its cut edge and in the seam where it tucks in, and its ends a hair out of line with the spine.
+    const SHELF = '#0b0805', [sr, sg, sb] = f._rgb, pale = lum(sr, sg, sb) > 165;
+    const tone = (t) => `rgb(${[sr, sg, sb].map((v) => Math.round(v + ((t > 0 ? 255 : 0) - v) * Math.abs(t))).join(',')})`;
+    const tb = rr(3, 4.6);                                           // flap depth
+    const tilt = rr(-.8, .8) + (sev > .5 ? rr(-2.6, 2.6) * sev : 0); // right end lower (+) or higher (-)
+    const off = rr(-.9, .3);
+    const yTop = (px) => y0 + off + tilt * (px / W), yBot = (px) => yTop(px) + tb + Math.sin(px / 5 + off * 9) * .25;
+    // if the flap sits low at one end, the shelf shows above it there
+    x.fillStyle = SHELF; x.beginPath(); x.moveTo(0, y0 - 2); x.lineTo(W, y0 - 2); x.lineTo(W, Math.max(y0 - 2, yTop(W))); x.lineTo(0, Math.max(y0 - 2, yTop(0))); x.closePath(); x.fill();
+    const g2 = x.createLinearGradient(0, y0 - 1, 0, y0 + tb + 2);
+    g2.addColorStop(0, tone(pale ? -.1 : .12)); g2.addColorStop(1, tone(pale ? -.05 : .05));
+    x.fillStyle = g2; x.beginPath(); x.moveTo(0, yTop(0)); x.lineTo(W, yTop(W)); x.lineTo(W, yBot(W)); x.lineTo(0, yBot(0)); x.closePath(); x.fill();
+    const run = (fn, th, p, a0, a1) => { for (let px = 0; px < W;) { const seg = rr(2.5, 9); if (chance(p)) { x.fillStyle = cream(rr(a0, a1)); x.fillRect(px, fn(px) - th / 2, Math.min(seg, W - px), th * rr(.7, 1.2)); } px += seg; } };
+    x.fillStyle = 'rgba(0,0,0,.5)'; for (let px = 0; px < W; px += 2) x.fillRect(px, yBot(px), 2.2, 1);  // the seam, in shadow
+    run((px) => yBot(px) + .2, rr(.9, 1.6), rr(.25, .6), .7, .95);                                    // white board showing in the seam
+    run((px) => yTop(px) + .5, rr(1, 1.5), .86, .7, .95);                                            // cut edge along the top
+    [0, W - 1].forEach((sx) => { if (chance(.7)) { x.fillStyle = cream(rr(.5, .85)); x.fillRect(sx, yTop(sx), 1, tb + 1); } });
+    if (chance(.35)) { const left = chance(.5); x.fillStyle = SHELF; x.fillRect(left ? 0 : W - 1, yTop(left ? 0 : W) - .5, 1, tb + 1.5); } // flap a hair narrower than the box
+    if (chance(.4)) { const left = chance(.5); x.fillStyle = cream(.9); x.fillRect(left ? 0 : W - 2.2, yTop(left ? 0 : W) - .8, 2.2, 1.8); } // folded corner showing white
     if (!sev) return cv;
 
     // Each damaged tape gets a different mix of problems, not all of them.
@@ -286,7 +307,7 @@
     if (!Object.values(has).some(Boolean)) has.specks = true;
 
     if (has.top) { // white board showing where the printed top has worn through, in broken patches along the edge
-      const depth = L(1.2, 4.5), rise = L(.3, 1.6);
+      const depth = L(.6, 2), rise = L(.2, 1);
       for (let px = -1; px < W;) {
         const seg = rr(3, 12);
         if (chance(.3 + sev * .5)) {
@@ -378,54 +399,6 @@
     return cv;
   }
 
-  // The top flap that closes the box. Seen from a little above, the top face of the sleeve is a
-  // shallow trapezoid sitting on the spine: a touch lighter (it catches the shelf light), with the
-  // board's thickness showing as a pale edge down both sides and along the back.
-  const FLAP = 10;
-  function flapCanvas(f) {
-    const dpr = Math.min(window.devicePixelRatio || 1, 3);
-    const W = f._w, T = FLAP, R = rng((f._r ^ 0x9e3779b9) >>> 0), sev = f._sev;
-    const rr = (a, b) => a + R() * (b - a), chance = (p) => R() < p;
-    const cv = document.createElement('canvas');
-    cv.width = Math.round(W * dpr); cv.height = Math.round((T + 1) * dpr);
-    cv.className = 'flap';
-    cv.style.cssText = `width:${W}px;height:${T + 1}px;top:${-T}px`;
-    const x = cv.getContext('2d'); x.scale(dpr, dpr);
-    const [r, g, b] = f._rgb, light = lum(r, g, b) > 165;
-    const mix = (k, t) => `rgb(${[r, g, b].map((v) => Math.round(v + ((k ? 255 : 0) - v) * t)).join(',')})`;
-    const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
-    const inset = rr(1.2, 2.8), skew = chance(.3) ? rr(-1.6, 1.6) : 0; // a few flaps sit a little crooked
-    const bl = inset + skew, br = W - inset + skew, yb = .8;
-    const path = () => { x.beginPath(); x.moveTo(0, T + 1); x.lineTo(0, T); x.lineTo(bl, yb); x.lineTo(br, yb); x.lineTo(W, T); x.lineTo(W, T + 1); x.closePath(); };
-    // face
-    path();
-    const gr = x.createLinearGradient(0, yb, 0, T);
-    gr.addColorStop(0, light ? mix(0, .12) : mix(1, .07)); gr.addColorStop(1, light ? mix(0, .04) : mix(1, .17));
-    x.fillStyle = gr; x.fill();
-    // faint print/grain on the board
-    for (let i = 0; i < 14; i++) { x.fillStyle = chance(.5) ? 'rgba(255,255,255,.12)' : 'rgba(0,0,0,.14)'; x.fillRect(rr(inset, W - inset), rr(1, T - 1), rr(.6, 1.6), rr(.5, 1)); }
-    // board thickness: pale edge down each side and along the back, broken here and there
-    x.lineCap = 'round';
-    const edge = (x0, y0, x1, y1, w) => { const n = Math.max(2, Math.round(Math.hypot(x1 - x0, y1 - y0) / 4)); for (let i = 0; i < n; i++) { if (chance(.12)) continue; const a = i / n, c = (i + 1) / n; x.strokeStyle = cream(rr(.55, .95)); x.lineWidth = w * rr(.7, 1.3); x.beginPath(); x.moveTo(x0 + (x1 - x0) * a, y0 + (y1 - y0) * a); x.lineTo(x0 + (x1 - x0) * c, y0 + (y1 - y0) * c); x.stroke(); } };
-    edge(bl, yb + .3, br, yb + .3, 1.2);
-    edge(0.4, T, bl + .4, yb + .3, 1);
-    edge(W - .4, T, br - .4, yb + .3, 1);
-    // where the flap meets the spine: a soft highlight on the folded edge
-    x.fillStyle = 'rgba(255,255,255,.16)'; x.fillRect(0, T - .6, W, 1);
-    // light falls off to the right, same as the spine
-    const sh = x.createLinearGradient(0, 0, W, 0);
-    sh.addColorStop(0, 'rgba(255,255,255,.2)'); sh.addColorStop(.12, 'rgba(255,255,255,0)'); sh.addColorStop(.78, 'rgba(0,0,0,0)'); sh.addColorStop(1, 'rgba(0,0,0,.45)');
-    path(); x.fillStyle = sh; x.fill();
-    // wear: chewed back corners and a ragged back edge on the tapes that have taken a beating
-    if (sev > .3) {
-      x.globalCompositeOperation = 'destination-out';
-      [[bl, 1], [br, -1]].forEach(([cx, dir]) => { if (!chance(.35 + sev * .5)) return; const c = rr(1.2, 1.5 + sev * 2.6); x.beginPath(); x.moveTo(cx, yb - 1); x.lineTo(cx + dir * -c * 1.6, yb - 1); x.lineTo(cx, yb + c); x.closePath(); x.fill(); });
-      x.globalCompositeOperation = 'source-over';
-      for (let i = 0, n = Math.round(sev * 7); i < n; i++) { x.fillStyle = cream(rr(.5, .9)); x.fillRect(rr(bl, br), yb + rr(0, 2.5), rr(.8, 3), rr(.6, 1.4)); }
-    }
-    return cv;
-  }
-
   const STICKER_WORDS = { Horror: 'HORROR', 'Science Fiction': 'SCI-FI', Comedy: 'COMEDY', Action: 'ACTION', Thriller: 'THRILLER', Drama: 'DRAMA', Crime: 'CRIME', Romance: 'ROMANCE', Animation: 'FAMILY', Documentary: 'DOC' };
 
   function spineEl(f, i) {
@@ -455,7 +428,7 @@
     }
     const badge = document.createElement('span'); badge.className = 'vhs'; badge.textContent = 'VHS';
     const notch = document.createElement('span'); notch.className = 'notch';
-    b.append(flapCanvas(f), badge, notch);
+    b.append(badge, notch);
     b.append(wearCanvas(f));
     if (f._dmg.includes('sticker')) {
       const st = document.createElement('span'); st.className = 'sticker';
