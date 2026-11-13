@@ -275,27 +275,34 @@
     const cream = (a) => `rgba(${236 + R() * 14 | 0},${228 + R() * 14 | 0},${208 + R() * 14 | 0},${a})`;
     const y0 = PAD, yb = PAD + H; // the spine's real top and bottom edges
 
-    // The sleeve's top flap, seen from the front. It folds over into the sleeve, so it never sits
-    // quite square: a narrow band along the top, a touch off-level, with the white board showing
-    // along its cut edge and in the seam where it tucks in, and its ends a hair out of line with the spine.
-    const SHELF = '#0b0805', [sr, sg, sb] = f._rgb, pale = lum(sr, sg, sb) > 165;
-    const tone = (t) => `rgb(${[sr, sg, sb].map((v) => Math.round(v + ((t > 0 ? 255 : 0) - v) * Math.abs(t))).join(',')})`;
-    const tb = rr(3, 4.6);                                           // flap depth
-    const tilt = rr(-.8, .8) + (sev > .5 ? rr(-2.6, 2.6) * sev : 0); // right end lower (+) or higher (-)
-    const off = rr(-.9, .3);
-    const yTop = (px) => y0 + off + tilt * (px / W), yBot = (px) => yTop(px) + tb + Math.sin(px / 5 + off * 9) * .25;
-    // if the flap sits low at one end, the shelf shows above it there
-    x.fillStyle = SHELF; x.beginPath(); x.moveTo(0, y0 - 2); x.lineTo(W, y0 - 2); x.lineTo(W, Math.max(y0 - 2, yTop(W))); x.lineTo(0, Math.max(y0 - 2, yTop(0))); x.closePath(); x.fill();
-    const g2 = x.createLinearGradient(0, y0 - 1, 0, y0 + tb + 2);
-    g2.addColorStop(0, tone(pale ? -.1 : .12)); g2.addColorStop(1, tone(pale ? -.05 : .05));
-    x.fillStyle = g2; x.beginPath(); x.moveTo(0, yTop(0)); x.lineTo(W, yTop(W)); x.lineTo(W, yBot(W)); x.lineTo(0, yBot(0)); x.closePath(); x.fill();
-    const run = (fn, th, p, a0, a1) => { for (let px = 0; px < W;) { const seg = rr(2.5, 9); if (chance(p)) { x.fillStyle = cream(rr(a0, a1)); x.fillRect(px, fn(px) - th / 2, Math.min(seg, W - px), th * rr(.7, 1.2)); } px += seg; } };
-    x.fillStyle = 'rgba(0,0,0,.5)'; for (let px = 0; px < W; px += 2) x.fillRect(px, yBot(px), 2.2, 1);  // the seam, in shadow
-    run((px) => yBot(px) + .2, rr(.9, 1.6), rr(.25, .6), .7, .95);                                    // white board showing in the seam
-    run((px) => yTop(px) + .5, rr(1, 1.5), .86, .7, .95);                                            // cut edge along the top
-    [0, W - 1].forEach((sx) => { if (chance(.7)) { x.fillStyle = cream(rr(.5, .85)); x.fillRect(sx, yTop(sx), 1, tb + 1); } });
-    if (chance(.35)) { const left = chance(.5); x.fillStyle = SHELF; x.fillRect(left ? 0 : W - 1, yTop(left ? 0 : W) - .5, 1, tb + 1.5); } // flap a hair narrower than the box
-    if (chance(.4)) { const left = chance(.5); x.fillStyle = cream(.9); x.fillRect(left ? 0 : W - 2.2, yTop(left ? 0 : W) - .8, 2.2, 1.8); } // folded corner showing white
+    // The sleeve's top flap, seen from the front. The flap folds over into the sleeve, so along the very
+    // top there is a thin line of white board between the lid and the printed spine, never quite level
+    // and never uniform. That is all there is: no crease across the spine.
+    const [sr, sg, sb] = f._rgb;
+    const ph1 = R() * 6.28, ph2 = R() * 6.28, f1 = rr(.12, .3), f2 = rr(.35, .7);
+    const tilt = rr(-.9, .9) + (sev > .5 ? rr(-1.8, 1.8) * sev : 0);   // right end lower (+) or higher (-)
+    const off = rr(-.7, .1), baseTh = rr(1.3, 2.4);
+    const yT = (px) => y0 + off + tilt * (px / W) + Math.sin(px * f1 + ph1) * .35 + Math.sin(px * f2 + ph2) * .15;
+    const th = (px) => baseTh * (1 + .35 * Math.sin(px * .21 + ph2) + .2 * Math.sin(px * .6 + ph1));
+    if (sev > .62) { // a lid that has been bent up, like a tape that's been pulled off the shelf too often
+      const lift = rr(1.5, 3.2) * sev, left = chance(.5);
+      x.fillStyle = `rgb(${[sr, sg, sb].map((v) => Math.round(v * .75)).join(',')})`;
+      x.beginPath(); x.moveTo(left ? 0 : W, yT(left ? 0 : W));
+      x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) + 1); x.lineTo(left ? 0 : W, yT(left ? 0 : W) + 1); x.closePath();
+      x.moveTo(left ? 0 : W, yT(left ? 0 : W)); x.lineTo(left ? 0 : W, yT(left ? 0 : W) - lift); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2) - lift * .35); x.lineTo(left ? W * .8 : W * .2, yT(left ? W * .8 : W * .2)); x.closePath();
+      x.fill();
+    }
+    x.beginPath(); x.moveTo(0, yT(0));
+    for (let px = 1; px <= W; px++) x.lineTo(px, yT(px));
+    for (let px = W; px >= 0; px--) x.lineTo(px, yT(px) + th(px));
+    x.closePath();
+    const lg = x.createLinearGradient(0, y0 - 1, 0, y0 + 3);
+    lg.addColorStop(0, 'rgb(246,242,230)'); lg.addColorStop(1, 'rgb(214,205,184)');
+    x.fillStyle = lg; x.fill();
+    x.beginPath(); x.moveTo(0, yT(0) + th(0));
+    for (let px = 1; px <= W; px++) x.lineTo(px, yT(px) + th(px));
+    x.strokeStyle = 'rgba(0,0,0,.32)'; x.lineWidth = 1; x.translate(0, .9); x.stroke(); x.translate(0, -.9);   // shadow where the lid meets the print
+    if (chance(.5)) { const left = chance(.5), px = left ? 0 : W - 1; x.fillStyle = cream(.85); x.fillRect(px, yT(px), 1, rr(3, 7)); } // paper edge turning the corner
     if (!sev) return cv;
 
     // Each damaged tape gets a different mix of problems, not all of them.
