@@ -253,7 +253,16 @@
       f._top = want;
       if (want === 'sticker' && !f._dmg.includes('sticker')) f._dmg.push('sticker');
     }
-    f._logoCrop = f._top === 'logo' && Array.isArray(f.logoBox) ? logoCrop(await loadImg(f.logo), f.logoBox) : null;
+    f._logoCrop = null; f._logoColor = false;
+    if (f._top === 'logo') {
+      const li = await loadImg(f.logo);
+      if (li && Array.isArray(f.logoBox)) f._logoCrop = logoCrop(li, f.logoBox);
+      // Plain wordmarks print as a white silhouette; logos with real colour (MGM's lion, the WB shield) keep it,
+      // with any black ink reprinted white so it shows on a dark spine.
+      // "logoStyle": "color" | "white" in films.json overrides the guess.
+      f._logoColor = f.logoStyle ? f.logoStyle === 'color' : logoIsGraphic(f._logoCrop || li);
+      if (li) f._logoCrop = f._logoCrop || logoCrop(li, [0, 0, 1, 1]);
+    }
     if (f._top !== 'sticker') f._dmg = f._dmg.filter((d) => d !== 'sticker');
     f._lab = (r >>> 17) % 13 === 0 ? 'lib' : (r >>> 20) % 17 === 0 ? 'rewind' : '';
     f._photo = f._top === 'panel' ? photoCrop(f, img) : null;
@@ -271,6 +280,62 @@
     } else f._c = rgbCss(rgb);
     f._rgb = rgb;
     f._t = lum(...rgb) > 150 ? '#2a2118' : '#efe6d2'; // ink for the badge and any plain-text title
+    f._light = lum(...rgb) > 150; // pale spine: logos print dark instead of white
+    if (f._logoCrop) f._logoCrop = f._logoColor ? (f._light ? f._logoCrop : inkToWhite(f._logoCrop)) : monoPrint(f._logoCrop, f._light ? [29, 26, 22] : [240, 232, 210]);
+  }
+
+  // A one-colour print of a logo: solid shapes become ink, and lettering inside a box stays knocked out
+  // (so boxed logos don't turn into a blank bar). Which tone counts as ink is read from the logo itself.
+  function monoPrint(cv, ink) {
+    try {
+      const x = cv.getContext('2d'), id = x.getImageData(0, 0, cv.width, cv.height), d = id.data;
+      let lo = 1, hi = 0, sum = 0, n = 0;
+      for (let i = 0; i < d.length; i += 4) {
+        if (d[i + 3] < 128) continue;
+        const l = lum(d[i], d[i + 1], d[i + 2]) / 255; lo = Math.min(lo, l); hi = Math.max(hi, l); sum += l; n++;
+      }
+      const range = hi - lo, darkInk = n && sum / n < (lo + hi) / 2 + .15; // mostly dark marks: dark is the ink
+      for (let i = 0; i < d.length; i += 4) {
+        if (!d[i + 3]) continue;
+        let w = 1;
+        if (range > .25) { const l = lum(d[i], d[i + 1], d[i + 2]) / 255; w = clamp(darkInk ? (hi - l) / range : (l - lo) / range, 0, 1); w = smooth(.25, .75, w); }
+        d[i] = ink[0]; d[i + 1] = ink[1]; d[i + 2] = ink[2]; d[i + 3] = Math.round(d[i + 3] * w);
+      }
+      x.putImageData(id, 0, 0);
+    } catch {}
+    return cv;
+  }
+
+  // Black and dark-grey ink in a colour logo, lifted to the off-white the spine lettering uses.
+  function inkToWhite(cv) {
+    try {
+      const x = cv.getContext('2d'), id = x.getImageData(0, 0, cv.width, cv.height), d = id.data;
+      for (let i = 0; i < d.length; i += 4) {
+        if (!d[i + 3]) continue;
+        const [, s, l] = rgbToHsl(d[i], d[i + 1], d[i + 2]);
+        if (l < .3 && s < .35) { const k = 1 - l / .3; d[i] += (239 - d[i]) * k; d[i + 1] += (230 - d[i + 1]) * k; d[i + 2] += (210 - d[i + 2]) * k; }
+      }
+      x.putImageData(id, 0, 0);
+    } catch {}
+    return cv;
+  }
+
+  // Does a logo carry real colour (MGM gold, WB blue) rather than being a one-colour or black-and-white mark?
+  function logoIsGraphic(src) {
+    if (!src) return false;
+    try {
+      const w = 48, hgt = Math.max(1, Math.round(48 * (src.height || src.naturalHeight) / (src.width || src.naturalWidth)));
+      const c = document.createElement('canvas'); c.width = w; c.height = hgt;
+      const x = c.getContext('2d'); x.drawImage(src, 0, 0, w, hgt);
+      const d = x.getImageData(0, 0, w, hgt).data;
+      let n = 0, sat = 0;
+      for (let i = 0; i < d.length; i += 4) {
+        if (d[i + 3] < 200) continue;
+        const [, s, l] = rgbToHsl(d[i], d[i + 1], d[i + 2]);
+        n++; if (s > .3 && l > .15 && l < .9) sat++;
+      }
+      return n >= 20 && sat / n > .15;
+    } catch { return false; }
   }
 
   // Part of the studio logo ("logoBox" = [x0,y0,x1,y1] fractions of the logo image).
@@ -512,7 +577,7 @@
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
     if (f._top === 'logo' && f._logoCrop) {
       const c = f._logoCrop, k = Math.min((f._w - 10) / c.width, 26 / c.height);
-      const lg = document.createElement('canvas'); lg.className = 'logo'; lg.width = c.width; lg.height = c.height;
+      const lg = document.createElement('canvas'); lg.className = 'logo ' + (f._logoColor ? 'color' : 'mono'); lg.width = c.width; lg.height = c.height;
       lg.style.width = (c.width * k).toFixed(1) + 'px'; lg.style.height = (c.height * k).toFixed(1) + 'px';
       lg.getContext('2d').drawImage(c, 0, 0);
       b.append(lg);

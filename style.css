@@ -88,6 +88,9 @@ h1 span { color: var(--gold); }
   max-width: calc(100% - 10px); max-height: 26px; object-fit: contain;
   filter: brightness(0) invert(1); opacity: .88;
 }
+.spine .logo.mono { filter: none; opacity: .9; }
+/* illustrated logos keep their artwork, a touch aged like the rest of the print */
+.spine .logo.color { filter: saturate(.85) contrast(1.05) sepia(.08) drop-shadow(0 .5px .5px rgba(0,0,0,.6)); opacity: .95; max-height: 30px; }
 .spine .art { position: absolute; left: 2px; top: var(--top); z-index: 1; display: block; }
 .spine .title {
   position: absolute; left: 0; right: 0; top: var(--top); bottom: calc(var(--bot) + 6px); z-index: 1;
@@ -445,3 +448,5 @@ h1 span { color: var(--gold); }
 .vcr-logo-pick img { max-width: 100%; height: 34px; object-fit: contain; }
 .vcr-logo-pick span { line-height: 1.2; text-align: center; }
 .vcr-poster { overflow: hidden; }
+.vcr-chips-sm { align-items: center; margin: 10px 0 0; }
+.vcr-chips-sm .vcr-dim { margin-right: 4px; }

@@ -460,7 +460,7 @@
 
   /* ---------- re-mark a spine (only where the GitHub token is saved) ---------- */
   // Everything the editor can change on a film. Missing/empty means "let app.js decide".
-  const SPINE_FIELDS = ['titleBox', 'top', 'photoBox', 'logoBox', 'logo', 'studio'];
+  const SPINE_FIELDS = ['titleBox', 'top', 'photoBox', 'logoBox', 'logoStyle', 'logo', 'studio'];
   const TOPS = [['', 'Auto'], ['logo', 'Studio logo'], ['photo', 'Picture'], ['tag', 'Director credit'], ['sticker', 'Sticker'], ['none', 'Nothing']];
   const pending = new Map(); // filmKey -> { title, patch: { field: value | undefined }, blobs: [{ path, blob }] }
   let spineBtn, saveBtn, ed;
@@ -552,6 +552,14 @@
         if (draft.logo) {
           const le = boxEditor(draft, draft.logo, update, { key: 'logoBox', single: true, noun: 'crop', empty: 'whole logo (drag to crop it)', cls: 'vcr-edit-logo' });
           wrap.append(h('p', 'vcr-hint', draft.studio ? `${draft.studio}. Drag a box to use just part of the logo.` : 'Drag a box to use just part of the logo.'), le);
+          const styles = h('div', 'vcr-chips vcr-chips-sm');
+          styles.append(h('span', 'vcr-dim', 'Print it'));
+          [['', 'Auto'], ['color', 'In colour'], ['white', 'White']].forEach(([val, label]) => {
+            const c = h('button', 'vcr-chip' + ((draft.logoStyle || '') === val ? ' on' : ''), label); c.type = 'button';
+            c.addEventListener('click', () => { draft.logoStyle = val || undefined; styles.querySelectorAll('.vcr-chip').forEach((n) => n.classList.toggle('on', n === c)); update(); });
+            styles.append(c);
+          });
+          wrap.append(styles);
         } else wrap.append(h('p', 'vcr-hint', 'This film has no studio logo yet. Pick one below.'));
         const change = h('button', 'vcr-link', draft.logo ? 'pick a different studio…' : 'pick a studio…'); change.type = 'button';
         const choices = h('div', 'vcr-logos');
