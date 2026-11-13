@@ -243,7 +243,7 @@
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
     f._sev = r % 25 === 0 ? 0 : 0.12 + 0.88 * Math.pow(((r >> 9) % 1000) / 1000, 1.6);
     const tbs = Array.isArray(f.titleBox) ? f.titleBox : [];
-    f._top = f.logo ? 'logo'
+    f._top = f.logo && (r >>> 10) % 2 === 0 ? 'logo' // about half the tapes show their studio, as on a real shelf
       : img && tbs.length && f.title.length <= 14 && (r >>> 3) % 3 === 0 ? 'panel'
       : f._dmg.includes('sticker') ? 'sticker'
       : f.director && (r >>> 6) % 2 === 0 ? 'tag' : '';
@@ -485,7 +485,7 @@
     const r = f._r;
     b.style.cssText = `--w:${f._w}px;--h:${f._h}px;--c:${f._c};--t:${f._t};--f:'${f._font}';--fs:${fs.toFixed(1)}px;--top:${top}px;--bot:${BOTTOM_ZONE}px;`
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
-    if (f.logo) {
+    if (f._top === 'logo') {
       const lg = document.createElement('img');
       lg.className = 'logo'; lg.src = f.logo; lg.alt = f.studio || ''; lg.loading = 'lazy';
       lg.onerror = () => lg.remove();
