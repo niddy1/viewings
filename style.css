@@ -274,3 +274,82 @@ h1 span { color: var(--gold); }
 @media (prefers-reduced-motion: reduce) {
   .cover, .spine, .backdrop { animation: none !important; transition: none !important; }
 }
+
+/* ---------- VCR (type "vcr" to open; see vcr.js) ---------- */
+.vcr { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; padding: 16px; }
+.vcr.open { display: grid; }
+.vcr-backdrop { position: absolute; inset: 0; background: rgba(5,3,2,.78); backdrop-filter: blur(3px); }
+.vcr-box {
+  position: relative; width: min(640px, 100%); max-height: calc(100dvh - 32px); overflow: auto;
+  background: linear-gradient(180deg, #1d1d1f, #111113); color: var(--paper);
+  border: 1px solid #333; border-radius: 6px; padding: 0 20px 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.06);
+  font-size: .86rem; line-height: 1.45;
+}
+.vcr-top {
+  position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 10px;
+  margin: 0 -20px 14px; padding: 12px 20px; background: #0d0d0e; border-bottom: 1px solid #2a2a2c;
+}
+.vcr-top h2 { margin: 0; font: 400 1.5rem/1 'Bebas Neue', sans-serif; letter-spacing: .3em; }
+.vcr-led { width: 8px; height: 8px; border-radius: 50%; background: #e33; box-shadow: 0 0 8px #f44; animation: vcr-blink 1.4s steps(2) infinite; }
+.vcr-mode { font: 400 .95rem 'Orbitron', monospace; color: #6fe3ff; text-shadow: 0 0 6px rgba(111,227,255,.6); letter-spacing: .15em; }
+@keyframes vcr-blink { 50% { opacity: .15; } }
+.vcr-x { margin-left: auto; appearance: none; background: none; border: 0; color: var(--paper); font-size: 1.6rem; line-height: 1; cursor: pointer; opacity: .6; }
+.vcr-x:hover { opacity: 1; }
+
+.vcr-keys details { margin-bottom: 12px; }
+.vcr-keys summary { cursor: pointer; opacity: .65; }
+.vcr-field { display: grid; gap: 3px; margin: 10px 0; }
+.vcr-field span { opacity: .7; font-size: .78rem; }
+.vcr-field input {
+  font: inherit; color: var(--paper); background: #0a0a0b; border: 1px solid #333; border-radius: 3px; padding: 7px 9px;
+}
+.vcr-field input:focus { outline: 1px solid var(--gold); border-color: var(--gold); }
+
+.vcr-drop {
+  display: grid; gap: 4px; place-items: center; text-align: center; cursor: pointer;
+  padding: 18px 14px; border: 1px dashed #555; border-radius: 4px; background: #0a0a0b;
+}
+.vcr-drop:hover, .vcr-drop.over { border-color: var(--gold); background: #15120c; }
+.vcr-drop strong { font: 400 1.15rem 'Bebas Neue', sans-serif; letter-spacing: .14em; color: var(--gold); }
+.vcr-drop span { opacity: .55; font-size: .78rem; }
+.vcr-drop input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+
+.vcr-out { margin-top: 12px; }
+.vcr-status { margin: 10px 0; }
+.vcr-status.ok { color: #9fe39a; }
+.vcr-status.err { color: #ff8b7a; }
+.vcr-status a { color: var(--gold); }
+.vcr-list { margin: 8px 0; }
+.vcr-list summary { cursor: pointer; }
+.vcr-list ul { margin: 6px 0 0; padding-left: 18px; max-height: 180px; overflow: auto; opacity: .75; font-size: .8rem; }
+.vcr-hint { margin: 16px 0 10px; opacity: .7; font-size: .8rem; }
+.vcr-cards { display: grid; gap: 14px; }
+.vcr-card { display: flex; gap: 14px; align-items: flex-start; padding: 10px; background: #0a0a0b; border: 1px solid #262628; border-radius: 4px; }
+.vcr-info { display: grid; gap: 2px; min-width: 0; }
+.vcr-info strong { font: 400 1.25rem/1.1 'Bebas Neue', sans-serif; letter-spacing: .06em; }
+.vcr-dim { opacity: .5; font-size: .76rem; }
+.vcr-warn { color: #ffb36b; font-size: .78rem; }
+.vcr-edit { flex: 0 0 auto; width: 170px; }
+.vcr-poster { position: relative; cursor: crosshair; touch-action: none; user-select: none; -webkit-user-select: none; }
+.vcr-poster img { display: block; width: 100%; border-radius: 2px; pointer-events: none; }
+.vcr-boxes { position: absolute; inset: 0; }
+.vcr-boxes i {
+  position: absolute; border: 1.5px solid var(--gold); background: rgba(232,182,74,.18);
+  font: normal 9px/1 ui-monospace, monospace; color: #111; text-align: left; padding: 1px 2px; pointer-events: none;
+}
+.vcr-boxes i:not(.live)::before { content: ''; }
+.vcr-boxes i.live { border-style: dashed; }
+.vcr-tools { display: flex; justify-content: space-between; align-items: center; margin-top: 5px; font-size: .74rem; }
+.vcr-link { appearance: none; background: none; border: 0; padding: 0; color: var(--gold); font: inherit; cursor: pointer; text-decoration: underline; }
+.vcr-foot { display: flex; justify-content: flex-end; margin-top: 16px; }
+.vcr-go {
+  appearance: none; cursor: pointer; font: 400 1.05rem 'Bebas Neue', sans-serif; letter-spacing: .16em;
+  color: #fff; background: #b8271f; border: 0; border-radius: 3px; padding: 9px 18px;
+}
+.vcr-go:hover:not(:disabled) { background: #d4342a; }
+.vcr-go:disabled { background: #333; color: #777; cursor: default; }
+@media (max-width: 520px) {
+  .vcr-card { flex-direction: column; }
+  .vcr-edit { width: 100%; max-width: 260px; }
+}

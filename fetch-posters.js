@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 /*
- * Builds films.json + posters/ from your Letterboxd diary export.
+ * Builds films.json + posters/ from your PassThePopcorn ratings export
+ * (Title, Rating10, WatchedDate, ImdbID) or a Letterboxd diary.csv.
  *
- *   TMDB_KEY=your_key node fetch-posters.js [path/to/diary.csv] [year]
+ *   TMDB_KEY=your_key node fetch-posters.js path/to/ratings.csv [year]
+ *
+ * (The VCR panel on the site does the same thing from the browser: type "vcr" on the page.)
  *
  * - Needs Node 18+ (built-in fetch). No npm install.
  * - TMDB_KEY can be either the v3 API key or the v4 "Read Access Token".
@@ -16,14 +19,14 @@ const fs = require('fs');
 const path = require('path');
 
 const KEY = process.env.TMDB_KEY;
-const CSV = process.argv[2] || 'diary.csv';
+const CSV = process.argv[2] || 'ratings.csv';
 const YEAR = String(process.argv[3] || process.env.YEAR || new Date().getFullYear());
 const OUT = path.join(__dirname, 'films.json');
 const POSTERS = path.join(__dirname, 'posters');
 const LOGOS = path.join(__dirname, 'logos');
 
 if (!KEY) { console.error('Set TMDB_KEY first, e.g.  TMDB_KEY=abc123 node fetch-posters.js diary.csv'); process.exit(1); }
-if (!fs.existsSync(CSV)) { console.error(`Can't find ${CSV}. Pass the path to Letterboxd's diary.csv.`); process.exit(1); }
+if (!fs.existsSync(CSV)) { console.error(`Can't find ${CSV}. Pass the path to your PTP ratings CSV (or Letterboxd's diary.csv).`); process.exit(1); }
 fs.mkdirSync(POSTERS, { recursive: true });
 fs.mkdirSync(LOGOS, { recursive: true });
 
@@ -48,6 +51,7 @@ function parseCSV(text) {
 
 const slug = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const key = (t, y) => `${t}|${y}`;
+const englishTitle = (t) => { const p = t.split(/\s+AKA\s+/); return (p[1] || p[0]).trim(); }; // "Gisaengchung AKA Parasite" -> "Parasite"
 
 async function tmdb(endpoint, params = {}) {
   const url = new URL('https://api.themoviedb.org/3' + endpoint);
@@ -64,10 +68,20 @@ async function tmdb(endpoint, params = {}) {
   const rows = parseCSV(fs.readFileSync(CSV, 'utf8'));
   const head = rows.shift().map((h) => h.trim());
   const col = (n) => head.indexOf(n);
-  const iName = col('Name'), iYear = col('Year'), iRating = col('Rating'), iRewatch = col('Rewatch'), iWatched = col('Watched Date');
-  if ([iName, iYear, iWatched].includes(-1)) { console.error('That CSV is missing Name / Year / Watched Date columns. Is it diary.csv?'); process.exit(1); }
-
+  const ptp = ['Title', 'Rating10', 'WatchedDate', 'ImdbID'].every((n) => head.includes(n));
   const byFilm = new Map();
+  if (ptp) { // PassThePopcorn: rated out of 10, matched on IMDb id. Stars round to the nearest half (8.5 -> 4.5).
+    const iT = col('Title'), iR = col('Rating10'), iW = col('WatchedDate'), iI = col('ImdbID');
+    for (const r of rows) {
+      const watched = (r[iW] || '').trim().slice(0, 10), imdb = (r[iI] || '').trim();
+      if (!watched.startsWith(YEAR) || !/^tt\d+$/.test(imdb)) continue;
+      const r10 = Number(r[iR]) || 0, prev = byFilm.get(imdb);
+      if (!prev || watched > prev.watched) byFilm.set(imdb, { title: englishTitle(r[iT]), imdb, rating: Math.round(r10) / 2, rating10: r10, watched });
+    }
+  } else {
+  const iName = col('Name'), iYear = col('Year'), iRating = col('Rating'), iRewatch = col('Rewatch'), iWatched = col('Watched Date');
+  if ([iName, iYear, iWatched].includes(-1)) { console.error('That CSV has neither PTP columns (Title, Rating10, WatchedDate, ImdbID) nor Letterboxd ones (Name, Year, Watched Date).'); process.exit(1); }
+
   for (const r of rows) {
     const watched = r[iWatched];
     if (!watched || !watched.startsWith(YEAR)) continue;
@@ -81,6 +95,7 @@ async function tmdb(endpoint, params = {}) {
     if (!prev || watched > prev.watched) byFilm.set(k, { ...entry, rewatch: entry.rewatch || (prev && prev.rewatch) });
     else prev.rewatch = true;
   }
+  }
   console.log(`${byFilm.size} films watched in ${YEAR}.`);
 
   // ---- merge with existing
@@ -88,7 +103,7 @@ async function tmdb(endpoint, params = {}) {
   if (fs.existsSync(OUT)) {
     try {
       const old = JSON.parse(fs.readFileSync(OUT, 'utf8'));
-      for (const f of old.films || []) if (f.imdb || f.poster || f.tmdbOverride) existing.set(key(f.title, f.year), f);
+      for (const f of old.films || []) if (f.imdb || f.poster || f.tmdbOverride) { existing.set(key(f.title, f.year), f); if (f.imdb) existing.set(f.imdb, f); }
     } catch {}
   }
 
@@ -104,8 +119,9 @@ async function tmdb(endpoint, params = {}) {
   let n = 0;
   for (const base of byFilm.values()) {
     n++;
+    let old = base.imdb ? existing.get(base.imdb) : existing.get(key(base.title, base.year));
+    if (ptp && old) { base.title = old.title; base.year = old.year; } // PTP has no year and its own spellings; keep the shelf's
     const k = key(base.title, base.year);
-    const old = existing.get(k);
     // "tmdbOverride" in films.json forces a specific TMDB movie. It is re-fetched
     // whenever it differs from the "tmdb" id the script recorded last time.
     // overrides.json ({"Title|Year": {"tmdb": 123, "type": "tv"}}) does the same without touching films.json.
@@ -115,25 +131,31 @@ async function tmdb(endpoint, params = {}) {
     const havePoster = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster));
     const upToDate = havePoster && 'logo' in old && (!override || (old.tmdb === override && (old.tmdbKind || 'movie') === type));
     if (upToDate) {
-      films.push({ ...old, rating: base.rating, watched: base.watched, rewatch: base.rewatch });
+      films.push({ ...old, rating: base.rating, watched: base.watched, ...(ptp ? { rating10: base.rating10 } : { rewatch: base.rewatch }) });
       continue;
     }
     process.stdout.write(`[${n}/${byFilm.size}] ${base.title} (${base.year}) ... `);
     try {
       let hit;
+      let ptpKind = 'movie';
       if (override) hit = { id: override };
-      else {
+      else if (base.imdb) { // exact match on IMDb id, no title guessing
+        const found = await tmdb(`/find/${base.imdb}`, { external_source: 'imdb_id' });
+        hit = (found.movie_results || [])[0];
+        if (!hit && (hit = (found.tv_results || [])[0])) ptpKind = 'tv';
+      } else {
         let search = await tmdb('/search/movie', { query: base.title, year: base.year });
         hit = search.results[0];
         if (!hit) { search = await tmdb('/search/movie', { query: base.title }); hit = search.results[0]; if (hit) review.push(`${base.title} (${base.year}): no match for that year, used "${hit.title}" (${(hit.release_date || '').slice(0, 4)})`); }
       }
-      if (!hit) { review.push(`${base.title} (${base.year}): NOT FOUND`); films.push({ ...(old || {}), ...base, genres: [], imdb: '', poster: '' }); console.log('not found'); continue; }
+      if (!hit) { review.push(`${base.title} (${base.year || base.imdb}): NOT FOUND`); films.push({ ...(old || {}), ...base, genres: [], imdb: base.imdb || '', poster: '' }); console.log('not found'); continue; }
 
-      const isTv = override && type === 'tv';
+      const isTv = override ? type === 'tv' : ptpKind === 'tv';
       const d = await tmdb(`/${isTv ? 'tv' : 'movie'}/${hit.id}`, { append_to_response: 'credits,external_ids' });
       const dTitle = d.title || d.name || '';
       const relYear = Number((d.release_date || d.first_air_date || '').slice(0, 4));
-      if (!override && (Math.abs(relYear - base.year) > 1 || dTitle.toLowerCase() !== base.title.toLowerCase()))
+      if (ptp && !old) { base.title = dTitle || base.title; base.year = relYear || undefined; } // new film: TMDB's title and year
+      if (!override && !base.imdb && (Math.abs(relYear - base.year) > 1 || dTitle.toLowerCase() !== base.title.toLowerCase()))
         review.push(`${base.title} (${base.year}): matched "${dTitle}" (${relYear}) - check this one`);
 
       let poster = '';
@@ -166,7 +188,7 @@ async function tmdb(endpoint, params = {}) {
         runtime: (isTv ? (d.episode_run_time || [])[0] : d.runtime) || undefined,
         director: director ? director.name : undefined,
         genres: (d.genres || []).map((g) => g.name),
-        imdb: d.external_ids?.imdb_id || '',
+        imdb: d.external_ids?.imdb_id || base.imdb || '',
         poster,
         studio: co ? co.name : '',
         logo,
@@ -175,7 +197,7 @@ async function tmdb(endpoint, params = {}) {
     } catch (e) {
       console.log('error: ' + e.message);
       review.push(`${base.title} (${base.year}): ${e.message}`);
-      films.push({ ...base, genres: [], imdb: '', poster: '' });
+      films.push({ ...(old || {}), ...base, genres: (old && old.genres) || [], imdb: base.imdb || (old && old.imdb) || '', poster: (old && old.poster) || '' });
     }
     await new Promise((r) => setTimeout(r, 120)); // be polite to the API
   }
