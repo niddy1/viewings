@@ -232,10 +232,10 @@
     f._font = pickFont(f);
     const rt = f.runtime || (90 + hash(f.title) % 60);
     f._w = Math.round(Math.min(52, Math.max(42, 40 + (rt - 90) * 0.12)));
-    f._h = SPINE_H;
     // Wear: nearly every tape has some (about 1 in 25 is pristine), from a light scuff to badly battered.
     const r = hash(f.title + 'wear');
     f._r = r;
+    f._h = SPINE_H - ((r >>> 5) % 5 === 0 ? 0 : (r >>> 8) % 5); // most sit a few px short of the tallest
     f._dmg = [];
     if ((r >> 11) % 6 === 0) f._dmg.push('sticker');
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
@@ -283,22 +283,56 @@
     const gr = x.createLinearGradient(0, y0, 0, y0 + 4.5);
     gr.addColorStop(0, 'rgba(255,255,255,.24)'); gr.addColorStop(.5, 'rgba(255,255,255,.08)'); gr.addColorStop(1, 'rgba(255,255,255,0)');
     x.fillStyle = gr; x.fillRect(0, y0, W, 4.5);
+    // Each tape gets its own kind of top: bare, a thin wavy white lid line, a broken lid line, or a thicker
+    // bent-up lid. Fibres and cracked corners are on only some of them, so no two read the same.
+    const kind = R(), [sr, sg, sb] = f._rgb;
+    const lidKind = kind < .3 ? 0 : kind < .62 ? 1 : kind < .82 ? 2 : 3;
+    const useFib = chance(.55), useCorner = chance(.5);
+    if (lidKind) {
+      const ph1 = R() * 6.28, ph2 = R() * 6.28, f1 = rr(.12, .3), f2 = rr(.35, .7);
+      const tilt = rr(-.9, .9) + (sev > .5 ? rr(-1.8, 1.8) * sev : 0);
+      const off = rr(-.7, .3), baseTh = lidKind === 3 ? rr(2.2, 3.4) : rr(.9, 2.1);
+      const yT = (px) => y0 + off + tilt * (px / W) + Math.sin(px * f1 + ph1) * .35 + Math.sin(px * f2 + ph2) * .15;
+      const th = (px) => baseTh * (1 + .35 * Math.sin(px * .21 + ph2) + .2 * Math.sin(px * .6 + ph1));
+      const alpha = rr(.65, 1);
+      const lg = x.createLinearGradient(0, y0 - 1, 0, y0 + 3.5);
+      lg.addColorStop(0, `rgba(246,242,230,${alpha})`); lg.addColorStop(1, `rgba(214,205,184,${alpha})`);
+      const gaps = lidKind === 2 ? [] : null;
+      if (gaps) for (let px = rr(0, 6); px < W; px += rr(5, 16)) gaps.push([px, px + rr(2, 8)]);
+      const seg = (p0, p1) => {
+        x.beginPath(); x.moveTo(p0, yT(p0));
+        for (let px = p0 + 1; px <= p1; px++) x.lineTo(px, yT(px));
+        for (let px = p1; px >= p0; px--) x.lineTo(px, yT(px) + th(px));
+        x.closePath(); x.fillStyle = lg; x.fill();
+      };
+      if (gaps) { let p = 0; gaps.forEach(([g0, g1]) => { if (g0 > p) seg(p, Math.min(g0, W)); p = Math.min(g1, W); }); if (p < W) seg(p, W); }
+      else seg(0, W);
+      if (lidKind === 3) { // lid bent up at one end, showing its dark underside
+        const lift = rr(1.2, 2.6), left = chance(.5), e = left ? 0 : W, m = left ? W * .75 : W * .25;
+        x.fillStyle = `rgb(${[sr, sg, sb].map((v) => Math.round(v * .7)).join(',')})`;
+        x.beginPath(); x.moveTo(e, yT(e)); x.lineTo(e, yT(e) - lift); x.lineTo(m, yT(m) - lift * .3); x.lineTo(m, yT(m)); x.closePath(); x.fill();
+      }
+      x.strokeStyle = 'rgba(0,0,0,.28)'; x.lineWidth = 1; x.beginPath(); x.moveTo(0, yT(0) + th(0) + .9);
+      for (let px = 1; px <= W; px++) x.lineTo(px, yT(px) + th(px) + .9);
+      x.stroke();
+      if (chance(.4)) { const left = chance(.5), px = left ? 0 : W - 1; x.fillStyle = cream(.85); x.fillRect(px, yT(px), 1, rr(3, 7)); }
+    }
     [0, 1].forEach((side) => { // slightly rounded top corners
       const r = rr(.9, 1.9), cx = side ? W : 0, dir = side ? -1 : 1;
       x.fillStyle = SHELF; x.beginPath(); x.moveTo(cx, y0); x.lineTo(cx + dir * r, y0); x.quadraticCurveTo(cx, y0, cx, y0 + r); x.closePath(); x.fill();
     });
-    for (let px = 0; px < W; px += rr(.8, 1.8)) { // fibres where the print has cracked along the fold, thickest at the corners
+    if (useFib) for (let px = 0; px < W; px += rr(.8, 1.8)) { // fibres where the print has cracked along the fold, thickest at the corners
       const corner = Math.exp(-Math.min(px, W - px) / 5);
       if (!chance((.1 + .5 * corner) * wear * 1.4)) continue;
       x.fillStyle = buff(rr(.45, .95)); x.fillRect(px, y0 + rr(-.1, .6), rr(.6, 1.3), rr(.8, 1.4 + 2.4 * corner * wear));
     }
-    for (let px = 0; px < W;) { // the pale board along the very edge of the fold, in broken lengths
+    if (useFib) for (let px = 0; px < W;) { // the pale board along the very edge of the fold, in broken lengths
       const seg = rr(2, 8);
       if (chance(.35 * wear + .1)) { x.fillStyle = buff(rr(.4, .8)); x.fillRect(px, y0 + rr(-.1, .3), seg, rr(.5, .9)); }
       px += seg;
     }
     [0, 1].forEach((side) => { // corners where the colour has cracked right away
-      if (!chance(.45 + .5 * wear)) return;
+      if (!useCorner || !chance(.45 + .5 * wear)) return;
       const w = rr(2, 3 + 5 * wear), h = rr(2, 3 + 4 * wear), m = (u) => (side ? W - u : u);
       x.fillStyle = buff(rr(.7, .95)); x.beginPath();
       [[0, 0], [w, 0], [w * rr(.6, .9), h * rr(.3, .5)], [w * rr(.3, .6), h * rr(.6, .8)], [w * rr(.1, .4), h], [0, h * rr(.5, .9)]].forEach(([u, v], i) => (i ? x.lineTo(m(u), y0 + v) : x.moveTo(m(u), y0 + v)));
