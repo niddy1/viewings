@@ -1,20 +1,675 @@
 {
   "year": 2026,
-  "_note": "SAMPLE DATA with made-up titles. Running fetch-posters.js against your Letterboxd diary.csv replaces this file.",
   "films": [
-    { "title": "Midnight Harbor", "year": 1987, "rating": 4.5, "watched": "2026-01-04", "rewatch": false, "runtime": 112, "director": "A. Sample", "genres": ["Thriller", "Crime"], "imdb": "", "poster": "", "note": "Sample entry." },
-    { "title": "The Long Orbit", "year": 2019, "rating": 3.5, "watched": "2026-01-19", "rewatch": false, "runtime": 138, "director": "B. Example", "genres": ["Science Fiction", "Drama"], "imdb": "", "poster": "" },
-    { "title": "Crimson Hollow", "year": 1994, "rating": 4, "watched": "2026-02-02", "rewatch": true, "runtime": 96, "director": "C. Placeholder", "genres": ["Horror"], "imdb": "", "poster": "" },
-    { "title": "Laugh Track", "year": 2011, "rating": 3, "watched": "2026-02-14", "rewatch": false, "runtime": 101, "director": "D. Demo", "genres": ["Comedy"], "imdb": "", "poster": "" },
-    { "title": "Iron Canyon", "year": 1976, "rating": 5, "watched": "2026-03-01", "rewatch": false, "runtime": 128, "director": "E. Mock", "genres": ["Western"], "imdb": "", "poster": "" },
-    { "title": "Paper Hearts", "year": 2003, "rating": 2.5, "watched": "2026-03-22", "rewatch": false, "runtime": 104, "director": "F. Test", "genres": ["Romance", "Drama"], "imdb": "", "poster": "" },
-    { "title": "Overdrive", "year": 1999, "rating": 3.5, "watched": "2026-04-09", "rewatch": false, "runtime": 117, "director": "G. Sample", "genres": ["Action"], "imdb": "", "poster": "" },
-    { "title": "Starfall Kingdom", "year": 2008, "rating": 4, "watched": "2026-04-30", "rewatch": false, "runtime": 142, "director": "H. Example", "genres": ["Fantasy"], "imdb": "", "poster": "" },
-    { "title": "Neon Rain", "year": 2016, "rating": 4.5, "watched": "2026-05-17", "rewatch": false, "runtime": 122, "director": "I. Placeholder", "genres": ["Science Fiction", "Thriller"], "imdb": "", "poster": "" },
-    { "title": "Dust", "year": 1971, "rating": 3, "watched": "2026-06-05", "rewatch": false, "runtime": 88, "director": "J. Demo", "genres": ["Drama"], "imdb": "", "poster": "" },
-    { "title": "The Last Reel", "year": 2022, "rating": 5, "watched": "2026-07-21", "rewatch": false, "runtime": 131, "director": "K. Mock", "genres": ["Drama"], "imdb": "", "poster": "" },
-    { "title": "Cartoon Heist", "year": 2014, "rating": 3.5, "watched": "2026-08-08", "rewatch": false, "runtime": 92, "director": "L. Test", "genres": ["Animation", "Comedy"], "imdb": "", "poster": "" },
-    { "title": "Trench", "year": 1989, "rating": 4, "watched": "2026-09-13", "rewatch": false, "runtime": 150, "director": "M. Sample", "genres": ["War"], "imdb": "", "poster": "" },
-    { "title": "Sleepwalkers' Ball", "year": 2005, "rating": 2, "watched": "2026-10-31", "rewatch": false, "runtime": 99, "director": "N. Example", "genres": ["Horror", "Comedy"], "imdb": "", "poster": "" }
+    {
+      "title": "Creed",
+      "year": 2015,
+      "rating": 3.5,
+      "watched": "2026-01-03",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "No Other Choice",
+      "year": 2025,
+      "rating": 4.5,
+      "watched": "2026-01-07",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Sinners",
+      "year": 2025,
+      "rating": 4,
+      "watched": "2026-01-11",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Devil in Disguise: John Wayne Gacy",
+      "year": 2025,
+      "rating": 4,
+      "watched": "2026-01-11",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Rip",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-01-18",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "F1",
+      "year": 2025,
+      "rating": 4,
+      "watched": "2026-01-29",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Zootopia 2",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-01-29",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Marty Supreme",
+      "year": 2025,
+      "rating": 4.5,
+      "watched": "2026-02-12",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Housemaid",
+      "year": 2025,
+      "rating": 3,
+      "watched": "2026-02-13",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Bugonia",
+      "year": 2025,
+      "rating": 4,
+      "watched": "2026-02-16",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Perfect Neighbor",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-02-17",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Dead Man's Wire",
+      "year": 2025,
+      "rating": 3,
+      "watched": "2026-02-26",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Girl in the Box",
+      "year": 2016,
+      "rating": 3.5,
+      "watched": "2026-03-03",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Heel",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-03-08",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "High School",
+      "year": 1968,
+      "rating": 4,
+      "watched": "2026-03-12",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Secret Agent",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-03-15",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Zodiac Killer Project",
+      "year": 2025,
+      "rating": 1.5,
+      "watched": "2026-03-26",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Sweet East",
+      "year": 2023,
+      "rating": 4,
+      "watched": "2026-03-27",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Crime 101",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-04-08",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "How to Make a Killing",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-04-18",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Drama",
+      "year": 2026,
+      "rating": 4,
+      "watched": "2026-05-14",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Over Your Dead Body",
+      "year": 2026,
+      "rating": 2,
+      "watched": "2026-05-28",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
+      "year": 2024,
+      "rating": 3,
+      "watched": "2026-06-05",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Maternal Instinct",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-06-17",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Threesome",
+      "year": 2025,
+      "rating": 3,
+      "watched": "2026-06-17",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "In the Grey",
+      "year": 2026,
+      "rating": 2.5,
+      "watched": "2026-06-17",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "I Love Boosters",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-06-26",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Project Hail Mary",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-06-28",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Sentimental Value",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-06-28",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Negotiator",
+      "year": 1998,
+      "rating": 3,
+      "watched": "2026-06-28",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Hoppers",
+      "year": 2026,
+      "rating": 3,
+      "watched": "2026-06-28",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Louis C.K.: Ridiculous",
+      "year": 2026,
+      "rating": 4,
+      "watched": "2026-06-30",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Devil Wears Prada 2",
+      "year": 2026,
+      "rating": 3,
+      "watched": "2026-07-02",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Jeff Arcuri: Nice to Meet You",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-07-09",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Pretty Maids All in a Row",
+      "year": 1971,
+      "rating": 4,
+      "watched": "2026-07-10",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Con Air",
+      "year": 1997,
+      "rating": 3.5,
+      "watched": "2026-07-14",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Crash",
+      "year": 2026,
+      "rating": 3,
+      "watched": "2026-07-14",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Face/Off",
+      "year": 1997,
+      "rating": 3,
+      "watched": "2026-07-14",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Do Revenge",
+      "year": 2022,
+      "rating": 3,
+      "watched": "2026-07-14",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Obsession",
+      "year": 2025,
+      "rating": 3,
+      "watched": "2026-07-15",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "LifeHack",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-07-16",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Tuner",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-08-03",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Talladega Nights: The Ballad of Ricky Bobby",
+      "year": 2006,
+      "rating": 3,
+      "watched": "2026-08-05",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "My Man Godfrey",
+      "year": 1936,
+      "rating": 3.5,
+      "watched": "2026-08-06",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Body of Lies",
+      "year": 2008,
+      "rating": 3,
+      "watched": "2026-08-06",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Monster",
+      "year": 2023,
+      "rating": 4,
+      "watched": "2026-08-08",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Invite",
+      "year": 2026,
+      "rating": 4,
+      "watched": "2026-08-13",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Toy Story 5",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-08-19",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Motor City",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-08-26",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "A Deadly American Marriage",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-09-05",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Stavros Halkias: Uncle Stav",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-09-11",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Pacific Heights",
+      "year": 1990,
+      "rating": 3,
+      "watched": "2026-09-16",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Rivals of Amziah King",
+      "year": 2025,
+      "rating": 4,
+      "watched": "2026-09-26",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Molly's Game",
+      "year": 2017,
+      "rating": 3.5,
+      "watched": "2026-09-27",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Beverly Hills Cop II",
+      "year": 1987,
+      "rating": 3.5,
+      "watched": "2026-10-03",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Lethal Weapon",
+      "year": 1987,
+      "rating": 3.5,
+      "watched": "2026-10-03",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Our Hero, Balthazar",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-10-06",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Spider-Man: Brand New Day",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-10-10",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Bad Apples",
+      "year": 2025,
+      "rating": 3.5,
+      "watched": "2026-10-20",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Coyote vs. Acme",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-10-21",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "By Any Means",
+      "year": 2026,
+      "rating": 3,
+      "watched": "2026-10-21",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Deep Water",
+      "year": 2022,
+      "rating": 3.5,
+      "watched": "2026-11-04",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Primetime",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-11-04",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Your Mother Your Mother Your Mother",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-11-04",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "The Odyssey",
+      "year": 2026,
+      "rating": 3.5,
+      "watched": "2026-11-07",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Barcelona",
+      "year": 1994,
+      "rating": 4,
+      "watched": "2026-11-09",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    },
+    {
+      "title": "Heart of the Beast",
+      "year": 2026,
+      "rating": 2.5,
+      "watched": "2026-11-11",
+      "rewatch": false,
+      "genres": [],
+      "imdb": "",
+      "poster": ""
+    }
   ]
 }
