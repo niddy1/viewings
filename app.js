@@ -247,6 +247,13 @@
       : img && tbs.length && f.title.length <= 14 && (r >>> 3) % 3 === 0 ? 'panel'
       : f._dmg.includes('sticker') ? 'sticker'
       : f.director && (r >>> 6) % 2 === 0 ? 'tag' : '';
+    // "top" in films.json picks it by hand (set from the Re-mark spine editor): logo, photo, tag, sticker or none.
+    const want = { logo: f.logo ? 'logo' : '', photo: img ? 'panel' : '', tag: f.director ? 'tag' : '', sticker: 'sticker', none: '' }[f.top];
+    if (want !== undefined) {
+      f._top = want;
+      if (want === 'sticker' && !f._dmg.includes('sticker')) f._dmg.push('sticker');
+    }
+    f._logoCrop = f._top === 'logo' && Array.isArray(f.logoBox) ? logoCrop(await loadImg(f.logo), f.logoBox) : null;
     if (f._top !== 'sticker') f._dmg = f._dmg.filter((d) => d !== 'sticker');
     f._lab = (r >>> 17) % 13 === 0 ? 'lib' : (r >>> 20) % 17 === 0 ? 'rewind' : '';
     f._photo = f._top === 'panel' ? photoCrop(f, img) : null;
@@ -266,21 +273,39 @@
     f._t = lum(...rgb) > 150 ? '#2a2118' : '#efe6d2'; // ink for the badge and any plain-text title
   }
 
+  // Part of the studio logo ("logoBox" = [x0,y0,x1,y1] fractions of the logo image).
+  function logoCrop(img, [x0, y0, x1, y1]) {
+    if (!img) return null;
+    const iw = img.naturalWidth, ih = img.naturalHeight, sw = Math.max(1, (x1 - x0) * iw), sh = Math.max(1, (y1 - y0) * ih);
+    const cv = document.createElement('canvas'); cv.width = Math.round(sw); cv.height = Math.round(sh);
+    cv.getContext('2d').drawImage(img, x0 * iw, y0 * ih, sw, sh, 0, 0, cv.width, cv.height);
+    return cv;
+  }
+
   // A square crop of the poster (away from its lettering) for the framed picture some spines carry up top.
+  // "photoBox" ([x0,y0,x1,y1] fractions of the poster) picks the crop by hand.
   function photoCrop(f, img) {
-    const iw = img.naturalWidth, ih = img.naturalHeight, side = iw * .66, pw = f._w - 10;
-    const boxes = (f.titleBox || []).map((b) => [b[1] * ih, b[3] * ih]);
-    let best = null;
-    for (let c = .24; c <= .64; c += .02) {
-      const y0 = clamp(c * ih - side / 2, 0, ih - side), y1 = y0 + side;
-      const over = boxes.reduce((a, [t, u]) => a + Math.max(0, Math.min(y1, u) - Math.max(y0, t)), 0);
-      const score = over + Math.abs(c - .38) * ih * .3;
-      if (!best || score < best.score) best = { score, y0 };
+    const iw = img.naturalWidth, ih = img.naturalHeight, pw = f._w - 10;
+    let src;
+    if (Array.isArray(f.photoBox)) {
+      const [x0, y0, x1, y1] = f.photoBox;
+      src = [x0 * iw, y0 * ih, Math.max(1, (x1 - x0) * iw), Math.max(1, (y1 - y0) * ih)];
+    } else {
+      const side = iw * .66;
+      const boxes = (f.titleBox || []).map((b) => [b[1] * ih, b[3] * ih]);
+      let best = null;
+      for (let c = .24; c <= .64; c += .02) {
+        const y0 = clamp(c * ih - side / 2, 0, ih - side), y1 = y0 + side;
+        const over = boxes.reduce((a, [t, u]) => a + Math.max(0, Math.min(y1, u) - Math.max(y0, t)), 0);
+        const score = over + Math.abs(c - .38) * ih * .3;
+        if (!best || score < best.score) best = { score, y0 };
+      }
+      src = [(iw - side) / 2, best.y0, side, side];
     }
     const dpr = Math.min(window.devicePixelRatio || 1, 3), cv = document.createElement('canvas');
     cv.width = cv.height = Math.round(pw * dpr);
     const x = cv.getContext('2d');
-    x.drawImage(img, (iw - side) / 2, best.y0, side, side, 0, 0, cv.width, cv.height);
+    x.drawImage(img, ...src, 0, 0, cv.width, cv.height);
     const g = x.createRadialGradient(cv.width / 2, cv.height / 2, cv.width * .25, cv.width / 2, cv.height / 2, cv.width * .75);
     g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(20,10,0,.45)');
     x.fillStyle = g; x.fillRect(0, 0, cv.width, cv.height);
@@ -485,7 +510,13 @@
     const r = f._r;
     b.style.cssText = `--w:${f._w}px;--h:${f._h}px;--c:${f._c};--t:${f._t};--f:'${f._font}';--fs:${fs.toFixed(1)}px;--top:${top}px;--bot:${BOTTOM_ZONE}px;`
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
-    if (f._top === 'logo') {
+    if (f._top === 'logo' && f._logoCrop) {
+      const c = f._logoCrop, k = Math.min((f._w - 10) / c.width, 26 / c.height);
+      const lg = document.createElement('canvas'); lg.className = 'logo'; lg.width = c.width; lg.height = c.height;
+      lg.style.width = (c.width * k).toFixed(1) + 'px'; lg.style.height = (c.height * k).toFixed(1) + 'px';
+      lg.getContext('2d').drawImage(c, 0, 0);
+      b.append(lg);
+    } else if (f._top === 'logo') {
       const lg = document.createElement('img');
       lg.className = 'logo'; lg.src = f.logo; lg.alt = f.studio || ''; lg.loading = 'lazy';
       lg.onerror = () => lg.remove();
