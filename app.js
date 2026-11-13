@@ -52,7 +52,9 @@
 
   const SPINE_H = 250;      // every tape is the same height
   const BOTTOM_ZONE = 40;   // VHS badge + sleeve notch
-  const logoZone = (f) => (f.logo ? 40 : f._dmg && f._dmg.includes('sticker') ? 50 : 12);
+  // What sits above the title: the studio logo, a framed crop of the poster, a rental sticker, a
+  // "A FILM BY" credit, or nothing (chosen per film in prepare()).
+  const logoZone = (f) => ({ logo: 40, panel: 12 + (f._w - 10) + 9, sticker: 50, tag: 32 }[f._top] || 12);
 
   const loadImg = (src) => new Promise((resolve) => {
     if (!src) return resolve(null);
@@ -240,7 +242,14 @@
     if ((r >> 11) % 6 === 0) f._dmg.push('sticker');
     if ((r >> 14) % 5 === 0) f._dmg.push('fade');
     f._sev = r % 25 === 0 ? 0 : 0.12 + 0.88 * Math.pow(((r >> 9) % 1000) / 1000, 1.6);
-    if (f.logo) f._dmg = f._dmg.filter((d) => d !== 'sticker');
+    const tbs = Array.isArray(f.titleBox) ? f.titleBox : [];
+    f._top = f.logo ? 'logo'
+      : img && tbs.length && f.title.length <= 14 && (r >>> 3) % 3 === 0 ? 'panel'
+      : f._dmg.includes('sticker') ? 'sticker'
+      : f.director && (r >>> 6) % 2 === 0 ? 'tag' : '';
+    if (f._top !== 'sticker') f._dmg = f._dmg.filter((d) => d !== 'sticker');
+    f._lab = (r >>> 17) % 13 === 0 ? 'lib' : (r >>> 20) % 17 === 0 ? 'rewind' : '';
+    f._photo = f._top === 'panel' ? photoCrop(f, img) : null;
     f._art = null;
     let rgb = null;
     if (img && Array.isArray(f.titleBox) && f.titleBox.length) {
@@ -255,6 +264,27 @@
     } else f._c = rgbCss(rgb);
     f._rgb = rgb;
     f._t = lum(...rgb) > 150 ? '#2a2118' : '#efe6d2'; // ink for the badge and any plain-text title
+  }
+
+  // A square crop of the poster (away from its lettering) for the framed picture some spines carry up top.
+  function photoCrop(f, img) {
+    const iw = img.naturalWidth, ih = img.naturalHeight, side = iw * .66, pw = f._w - 10;
+    const boxes = (f.titleBox || []).map((b) => [b[1] * ih, b[3] * ih]);
+    let best = null;
+    for (let c = .24; c <= .64; c += .02) {
+      const y0 = clamp(c * ih - side / 2, 0, ih - side), y1 = y0 + side;
+      const over = boxes.reduce((a, [t, u]) => a + Math.max(0, Math.min(y1, u) - Math.max(y0, t)), 0);
+      const score = over + Math.abs(c - .38) * ih * .3;
+      if (!best || score < best.score) best = { score, y0 };
+    }
+    const dpr = Math.min(window.devicePixelRatio || 1, 3), cv = document.createElement('canvas');
+    cv.width = cv.height = Math.round(pw * dpr);
+    const x = cv.getContext('2d');
+    x.drawImage(img, (iw - side) / 2, best.y0, side, side, 0, 0, cv.width, cv.height);
+    const g = x.createRadialGradient(cv.width / 2, cv.height / 2, cv.width * .25, cv.width / 2, cv.height / 2, cv.width * .75);
+    g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(1, 'rgba(20,10,0,.45)');
+    x.fillStyle = g; x.fillRect(0, 0, cv.width, cv.height);
+    return cv;
   }
 
   // Procedural wear, drawn per tape from a seeded RNG: white cardboard showing through at the
@@ -468,9 +498,48 @@
       const title = document.createElement('span'); title.className = 'title'; title.textContent = f.title;
       b.append(title);
     }
-    const badge = document.createElement('span'); badge.className = 'vhs'; badge.textContent = 'VHS';
+    if (f._photo) {
+      const ph = document.createElement('canvas'); ph.className = 'photo' + ((r >>> 5) % 4 === 0 ? ' round' : '');
+      ph.width = f._photo.width; ph.height = f._photo.height; ph.style.width = ph.style.height = (f._w - 10) + 'px';
+      ph.getContext('2d').drawImage(f._photo, 0, 0);
+      b.append(ph);
+    }
+    if (f._top === 'tag') {
+      const words = String(f.director).split(',')[0].trim().toUpperCase().split(/\s+/);
+      const last = words.pop(), first = words.join(' ');
+      const tag = document.createElement('span'); tag.className = 'tag';
+      const px = Math.min(5.2, (f._w - 8) / (Math.max(last.length, first.length, 9) * .8));
+      tag.style.fontSize = px.toFixed(1) + 'px';
+      tag.textContent = ['A FILM BY', first, last].filter(Boolean).join('\n');
+      b.append(tag);
+    }
+    // the base of the spine: format logo, hi-fi line and catalogue number, like a real release
+    const base = document.createElement('span'); base.className = 'base';
+    const vstyle = (r >>> 2) % 3;
+    if ((r >>> 13) % 3) { const hf = document.createElement('span'); hf.className = 'hifi'; hf.textContent = (r >>> 15) % 2 ? 'hi-fi' : 'Hi-Fi Stereo'; base.append(hf); }
+    const badge = document.createElement('span'); badge.className = 'vhs v' + vstyle; badge.textContent = 'VHS'; base.append(badge);
+    if ((r >>> 16) % 4) {
+      const cat = document.createElement('span'); cat.className = 'cat';
+      cat.textContent = [`M${200000 + r % 700000}`, `VHS ${10000 + r % 89999}`, `NO. ${1000 + r % 9000}`][(r >>> 18) % 3];
+      base.append(cat);
+    }
     const notch = document.createElement('span'); notch.className = 'notch';
-    b.append(badge, notch);
+    b.append(base, notch);
+    if (f._lab === 'lib') {
+      const lb = document.createElement('span'); lb.className = 'lib';
+      lb.style.cssText = `bottom:${56 + r % 28}px;--rot:${(((r >>> 3) % 7) - 3) * .6}deg`;
+      lb.textContent = `(R)\n${10 + r % 40}\n${15000 + r % 9000}`;
+      const bc = document.createElement('i'); bc.className = 'bc';
+      let y = 0, st = [];
+      const rb = rng(r ^ 0x9e3779b9);
+      while (y < 30) { const th = 1 + Math.floor(rb() * 3), gap = 1 + Math.floor(rb() * 2); st.push(`#1d1a16 ${y}px ${y + th}px`, `transparent ${y + th}px ${y + th + gap}px`); y += th + gap; }
+      bc.style.background = `linear-gradient(180deg, ${st.join(',')})`;
+      lb.append(bc); b.append(lb);
+    } else if (f._lab === 'rewind') {
+      const rw = document.createElement('span'); rw.className = 'rew';
+      rw.style.cssText = `bottom:${52 + r % 30}px;--rot:${(((r >>> 3) % 9) - 4) * .9}deg`;
+      rw.textContent = 'BE\nKIND\nPLEASE\nREWIND'; b.append(rw);
+    }
     b.append(wearCanvas(f));
     if (f._dmg.includes('sticker')) {
       const st = document.createElement('span'); st.className = 'sticker';
