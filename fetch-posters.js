@@ -84,7 +84,7 @@ async function tmdb(endpoint, params = {}) {
   if (fs.existsSync(OUT)) {
     try {
       const old = JSON.parse(fs.readFileSync(OUT, 'utf8'));
-      for (const f of old.films || []) if (f.imdb || f.poster) existing.set(key(f.title, f.year), f);
+      for (const f of old.films || []) if (f.imdb || f.poster || f.tmdbOverride) existing.set(key(f.title, f.year), f);
     } catch {}
   }
 
@@ -95,20 +95,28 @@ async function tmdb(endpoint, params = {}) {
     n++;
     const k = key(base.title, base.year);
     const old = existing.get(k);
-    if (old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster))) {
+    // "tmdbOverride" in films.json forces a specific TMDB movie. It is re-fetched
+    // whenever it differs from the "tmdb" id the script recorded last time.
+    const override = old && Number(old.tmdbOverride) || 0;
+    const upToDate = old && old.imdb && old.poster && fs.existsSync(path.join(__dirname, old.poster)) && (!override || old.tmdb === override);
+    if (upToDate) {
       films.push({ ...old, rating: base.rating, watched: base.watched, rewatch: base.rewatch });
       continue;
     }
     process.stdout.write(`[${n}/${byFilm.size}] ${base.title} (${base.year}) ... `);
     try {
-      let search = await tmdb('/search/movie', { query: base.title, year: base.year });
-      let hit = search.results[0];
-      if (!hit) { search = await tmdb('/search/movie', { query: base.title }); hit = search.results[0]; if (hit) review.push(`${base.title} (${base.year}): no match for that year, used "${hit.title}" (${(hit.release_date || '').slice(0, 4)})`); }
-      if (!hit) { review.push(`${base.title} (${base.year}): NOT FOUND`); films.push({ ...base, genres: [], imdb: '', poster: '' }); console.log('not found'); continue; }
+      let hit;
+      if (override) hit = { id: override };
+      else {
+        let search = await tmdb('/search/movie', { query: base.title, year: base.year });
+        hit = search.results[0];
+        if (!hit) { search = await tmdb('/search/movie', { query: base.title }); hit = search.results[0]; if (hit) review.push(`${base.title} (${base.year}): no match for that year, used "${hit.title}" (${(hit.release_date || '').slice(0, 4)})`); }
+      }
+      if (!hit) { review.push(`${base.title} (${base.year}): NOT FOUND`); films.push({ ...(old || {}), ...base, genres: [], imdb: '', poster: '' }); console.log('not found'); continue; }
 
       const d = await tmdb(`/movie/${hit.id}`, { append_to_response: 'credits,external_ids' });
       const relYear = Number((d.release_date || '').slice(0, 4));
-      if (Math.abs(relYear - base.year) > 1 || d.title.toLowerCase() !== base.title.toLowerCase())
+      if (!override && (Math.abs(relYear - base.year) > 1 || d.title.toLowerCase() !== base.title.toLowerCase()))
         review.push(`${base.title} (${base.year}): matched "${d.title}" (${relYear}) - check this one`);
 
       let poster = '';
@@ -120,7 +128,9 @@ async function tmdb(endpoint, params = {}) {
 
       const director = (d.credits?.crew || []).find((c) => c.job === 'Director');
       films.push({
+        ...(old || {}), // keep manual edits (font, color, note, tmdbOverride)
         ...base,
+        tmdb: d.id,
         runtime: d.runtime || undefined,
         director: director ? director.name : undefined,
         genres: (d.genres || []).map((g) => g.name),
