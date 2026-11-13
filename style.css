@@ -115,6 +115,7 @@ h1 span { color: var(--gold); }
 }
 
 /* ---- wear and tear (the white-cardboard fray, scuffs and creases are painted by app.js) ---- */
+.spine .flap { position: absolute; left: 0; pointer-events: none; z-index: 3; }
 .spine .wear { position: absolute; left: 0; pointer-events: none; z-index: 4; }
 /* sun fade */
 .spine.dmg-fade::before {
