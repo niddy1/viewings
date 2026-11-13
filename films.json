@@ -6,670 +6,978 @@
       "year": 2015,
       "rating": 3.5,
       "watched": "2026-01-03",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 133,
+      "director": "Ryan Coogler",
+      "genres": [
+        "Drama"
+      ],
+      "imdb": "tt3076658",
+      "poster": "posters/creed-2015.jpg"
     },
     {
       "title": "No Other Choice",
       "year": 2025,
       "rating": 4.5,
       "watched": "2026-01-07",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 139,
+      "director": "Park Chan-wook",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Thriller"
+      ],
+      "imdb": "tt1527793",
+      "poster": "posters/no-other-choice-2025.jpg"
     },
     {
       "title": "Sinners",
       "year": 2025,
       "rating": 4,
       "watched": "2026-01-11",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 138,
+      "director": "Ryan Coogler",
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "imdb": "tt31193180",
+      "poster": "posters/sinners-2025.jpg"
     },
     {
       "title": "Devil in Disguise: John Wayne Gacy",
       "year": 2025,
       "rating": 4,
       "watched": "2026-01-11",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "tmdb": 257534,
+      "tmdbKind": "tv",
+      "runtime": 57,
+      "director": "Patrick Macmanus",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "imdb": "tt31314754",
+      "poster": "posters/devil-in-disguise-john-wayne-gacy-2025.jpg"
     },
     {
       "title": "The Rip",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-01-18",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 113,
+      "director": "Joe Carnahan",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "imdb": "tt32642706",
+      "poster": "posters/the-rip-2026.jpg"
     },
     {
       "title": "F1",
       "year": 2025,
       "rating": 4,
       "watched": "2026-01-29",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 156,
+      "director": "Joseph Kosinski",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "imdb": "tt16311594",
+      "poster": "posters/f1-2025.jpg"
     },
     {
       "title": "Zootopia 2",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-01-29",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 108,
+      "director": "Jared Bush",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Mystery",
+        "Family"
+      ],
+      "imdb": "tt26443597",
+      "poster": "posters/zootopia-2-2025.jpg"
     },
     {
       "title": "Marty Supreme",
       "year": 2025,
       "rating": 4.5,
       "watched": "2026-02-12",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 150,
+      "director": "Josh Safdie",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "imdb": "tt32916440",
+      "poster": "posters/marty-supreme-2025.jpg"
     },
     {
       "title": "The Housemaid",
       "year": 2025,
       "rating": 3,
       "watched": "2026-02-13",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 131,
+      "director": "Paul Feig",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb": "tt27543632",
+      "poster": "posters/the-housemaid-2025.jpg"
     },
     {
       "title": "Bugonia",
       "year": 2025,
       "rating": 4,
       "watched": "2026-02-16",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 119,
+      "director": "Yorgos Lanthimos",
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Comedy"
+      ],
+      "imdb": "tt12300742",
+      "poster": "posters/bugonia-2025.jpg"
     },
     {
       "title": "The Perfect Neighbor",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-02-17",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 97,
+      "director": "Geeta Gandbhir",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "imdb": "tt34962891",
+      "poster": "posters/the-perfect-neighbor-2025.jpg"
     },
     {
       "title": "Dead Man's Wire",
       "year": 2025,
       "rating": 3,
       "watched": "2026-02-26",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 106,
+      "director": "Gus Van Sant",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb": "tt15181326",
+      "poster": "posters/dead-man-s-wire-2025.jpg"
     },
     {
       "title": "Girl in the Box",
       "year": 2016,
       "rating": 3.5,
       "watched": "2026-03-03",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 87,
+      "director": "Stephen Kemp",
+      "genres": [
+        "Drama",
+        "TV Movie"
+      ],
+      "imdb": "tt5957584",
+      "poster": "posters/girl-in-the-box-2016.jpg"
     },
     {
       "title": "Heel",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-03-08",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 110,
+      "director": "Jan Komasa",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Horror"
+      ],
+      "imdb": "tt34381258",
+      "poster": "posters/heel-2025.jpg",
+      "tmdb": 1381027,
+      "tmdbKind": "movie"
     },
     {
       "title": "High School",
       "year": 1968,
       "rating": 4,
       "watched": "2026-03-12",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 75,
+      "director": "Frederick Wiseman",
+      "genres": [
+        "Documentary"
+      ],
+      "imdb": "tt0064429",
+      "poster": "posters/high-school-1968.jpg"
     },
     {
       "title": "The Secret Agent",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-03-15",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 161,
+      "director": "Kleber Mendonça Filho",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
+      ],
+      "imdb": "tt27847051",
+      "poster": "posters/the-secret-agent-2025.jpg"
     },
     {
       "title": "Zodiac Killer Project",
       "year": 2025,
       "rating": 1.5,
       "watched": "2026-03-26",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 92,
+      "director": "Charlie Shackleton",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "imdb": "tt34965959",
+      "poster": "posters/zodiac-killer-project-2025.jpg"
     },
     {
       "title": "The Sweet East",
       "year": 2023,
       "rating": 4,
       "watched": "2026-03-27",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 104,
+      "director": "Sean Price Williams",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt27546190",
+      "poster": "posters/the-sweet-east-2023.jpg"
     },
     {
       "title": "Crime 101",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-04-08",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 141,
+      "director": "Bart Layton",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "imdb": "tt32430579",
+      "poster": "posters/crime-101-2026.jpg"
     },
     {
       "title": "How to Make a Killing",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-04-18",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 105,
+      "director": "John Patton Ford",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Crime"
+      ],
+      "imdb": "tt4357198",
+      "poster": "posters/how-to-make-a-killing-2026.jpg"
     },
     {
       "title": "The Drama",
       "year": 2026,
       "rating": 4,
       "watched": "2026-05-14",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 105,
+      "director": "Kristoffer Borgli",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Drama"
+      ],
+      "imdb": "tt33071426",
+      "poster": "posters/the-drama-2026.jpg"
     },
     {
       "title": "Over Your Dead Body",
       "year": 2026,
       "rating": 2,
       "watched": "2026-05-28",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 105,
+      "director": "Jorma Taccone",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
+      "imdb": "tt34685692",
+      "poster": "posters/over-your-dead-body-2026.jpg"
     },
     {
       "title": "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
       "year": 2024,
       "rating": 3,
       "watched": "2026-06-05",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 103,
+      "director": "Tolga Karaçelik",
+      "genres": [
+        "Crime",
+        "Comedy"
+      ],
+      "imdb": "tt17492148",
+      "poster": "posters/psycho-therapy-the-shallow-tale-of-a-writer-who-decided-to-write-about-a-serial-killer-2024.jpg"
     },
     {
       "title": "Maternal Instinct",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-06-17",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 97,
+      "director": "Jessica Dimmock",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "imdb": "tt42863533",
+      "poster": "posters/maternal-instinct-2026.jpg"
     },
     {
       "title": "The Threesome",
       "year": 2025,
       "rating": 3,
       "watched": "2026-06-17",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 112,
+      "director": "Chad Hartigan",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "imdb": "tt21187592",
+      "poster": "posters/the-threesome-2025.jpg"
     },
     {
       "title": "In the Grey",
       "year": 2026,
       "rating": 2.5,
       "watched": "2026-06-17",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 97,
+      "director": "Guy Ritchie",
+      "genres": [
+        "Action",
+        "Crime"
+      ],
+      "imdb": "tt27681354",
+      "poster": "posters/in-the-grey-2026.jpg"
     },
     {
       "title": "I Love Boosters",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-06-26",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 113,
+      "director": "Boots Riley",
+      "genres": [
+        "Comedy",
+        "Science Fiction",
+        "Crime"
+      ],
+      "imdb": "tt30827810",
+      "poster": "posters/i-love-boosters-2026.jpg"
     },
     {
       "title": "Project Hail Mary",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-06-28",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 157,
+      "director": "Phil Lord",
+      "genres": [
+        "Science Fiction",
+        "Adventure"
+      ],
+      "imdb": "tt12042730",
+      "poster": "posters/project-hail-mary-2026.jpg"
     },
     {
       "title": "Sentimental Value",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-06-28",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 133,
+      "director": "Joachim Trier",
+      "genres": [
+        "Drama"
+      ],
+      "imdb": "tt27714581",
+      "poster": "posters/sentimental-value-2025.jpg"
     },
     {
       "title": "The Negotiator",
       "year": 1998,
       "rating": 3,
       "watched": "2026-06-28",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 140,
+      "director": "F. Gary Gray",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb": "tt0120768",
+      "poster": "posters/the-negotiator-1998.jpg"
     },
     {
       "title": "Hoppers",
       "year": 2026,
       "rating": 3,
       "watched": "2026-06-28",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 104,
+      "director": "Daniel Chong",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family",
+        "Science Fiction"
+      ],
+      "imdb": "tt26443616",
+      "poster": "posters/hoppers-2026.jpg"
     },
     {
       "title": "Louis C.K.: Ridiculous",
       "year": 2026,
       "rating": 4,
       "watched": "2026-06-30",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 61,
+      "director": "Louis C.K.",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt41376508",
+      "poster": "posters/louis-c-k-ridiculous-2026.jpg"
     },
     {
       "title": "The Devil Wears Prada 2",
       "year": 2026,
       "rating": 3,
       "watched": "2026-07-02",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 119,
+      "director": "David Frankel",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "imdb": "tt33612209",
+      "poster": "posters/the-devil-wears-prada-2-2026.jpg"
     },
     {
       "title": "Jeff Arcuri: Nice to Meet You",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-07-09",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 63,
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt43616650",
+      "poster": "posters/jeff-arcuri-nice-to-meet-you-2026.jpg"
     },
     {
       "title": "Pretty Maids All in a Row",
       "year": 1971,
       "rating": 4,
       "watched": "2026-07-10",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 91,
+      "director": "Roger Vadim",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb": "tt0067610",
+      "poster": "posters/pretty-maids-all-in-a-row-1971.jpg"
     },
     {
       "title": "Con Air",
       "year": 1997,
       "rating": 3.5,
       "watched": "2026-07-14",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 116,
+      "director": "Simon West",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "imdb": "tt0118880",
+      "poster": "posters/con-air-1997.jpg"
     },
     {
       "title": "The Crash",
       "year": 2026,
       "rating": 3,
       "watched": "2026-07-14",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 95,
+      "director": "Gareth Johnson",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "imdb": "tt40792117",
+      "poster": "posters/the-crash-2026.jpg"
     },
     {
       "title": "Face/Off",
       "year": 1997,
       "rating": 3,
       "watched": "2026-07-14",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 139,
+      "director": "John Woo",
+      "genres": [
+        "Action",
+        "Crime",
+        "Science Fiction"
+      ],
+      "imdb": "tt0119094",
+      "poster": "posters/face-off-1997.jpg"
     },
     {
       "title": "Do Revenge",
       "year": 2022,
       "rating": 3,
       "watched": "2026-07-14",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 118,
+      "director": "Jennifer Kaytin Robinson",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Romance"
+      ],
+      "imdb": "tt13327038",
+      "poster": "posters/do-revenge-2022.jpg"
     },
     {
       "title": "Obsession",
       "year": 2025,
       "rating": 3,
       "watched": "2026-07-15",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 109,
+      "director": "Curry Barker",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "imdb": "tt37287335",
+      "poster": "posters/obsession-2025.jpg"
     },
     {
       "title": "LifeHack",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-07-16",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 97,
+      "director": "Ronan Corrigan",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "imdb": "tt32135632",
+      "poster": "posters/lifehack-2025.jpg"
     },
     {
       "title": "Tuner",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-08-03",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 108,
+      "director": "Daniel Roher",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "imdb": "tt33296751",
+      "poster": "posters/tuner-2025.jpg"
     },
     {
       "title": "Talladega Nights: The Ballad of Ricky Bobby",
       "year": 2006,
       "rating": 3,
       "watched": "2026-08-05",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 108,
+      "director": "Adam McKay",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt0415306",
+      "poster": "posters/talladega-nights-the-ballad-of-ricky-bobby-2006.jpg"
     },
     {
       "title": "My Man Godfrey",
       "year": 1936,
       "rating": 3.5,
       "watched": "2026-08-06",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 95,
+      "director": "Gregory La Cava",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt0028010",
+      "poster": "posters/my-man-godfrey-1936.jpg"
     },
     {
       "title": "Body of Lies",
       "year": 2008,
       "rating": 3,
       "watched": "2026-08-06",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 128,
+      "director": "Ridley Scott",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb": "tt0758774",
+      "poster": "posters/body-of-lies-2008.jpg"
     },
     {
       "title": "Monster",
       "year": 2023,
       "rating": 4,
       "watched": "2026-08-08",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 125,
+      "director": "Hirokazu Kore-eda",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "imdb": "tt23736044",
+      "poster": "posters/monster-2023.jpg"
     },
     {
       "title": "The Invite",
       "year": 2026,
       "rating": 4,
       "watched": "2026-08-13",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 107,
+      "director": "Olivia Wilde",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "imdb": "tt14173636",
+      "poster": "posters/the-invite-2026.jpg"
     },
     {
       "title": "Toy Story 5",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-08-19",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 102,
+      "director": "Andrew Stanton",
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Adventure"
+      ],
+      "imdb": "tt29355505",
+      "poster": "posters/toy-story-5-2026.jpg"
     },
     {
       "title": "Motor City",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-08-26",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 104,
+      "director": "Potsy Ponciroli",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "imdb": "tt2012616",
+      "poster": "posters/motor-city-2025.jpg"
     },
     {
       "title": "A Deadly American Marriage",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-09-05",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 103,
+      "director": "Jessica Burgess",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "imdb": "tt36592065",
+      "poster": "posters/a-deadly-american-marriage-2025.jpg"
     },
     {
       "title": "Stavros Halkias: Uncle Stav",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-09-11",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 64,
+      "director": "Matt Johnson",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt41975820",
+      "poster": "posters/stavros-halkias-uncle-stav-2026.jpg"
     },
     {
       "title": "Pacific Heights",
       "year": 1990,
       "rating": 3,
       "watched": "2026-09-16",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 102,
+      "director": "John Schlesinger",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Mystery"
+      ],
+      "imdb": "tt0100318",
+      "poster": "posters/pacific-heights-1990.jpg"
     },
     {
       "title": "The Rivals of Amziah King",
       "year": 2025,
       "rating": 4,
       "watched": "2026-09-26",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 131,
+      "director": "Andrew Patterson",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "imdb": "tt27706593",
+      "poster": "posters/the-rivals-of-amziah-king-2025.jpg"
     },
     {
       "title": "Molly's Game",
       "year": 2017,
       "rating": 3.5,
       "watched": "2026-09-27",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 141,
+      "director": "Aaron Sorkin",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "imdb": "tt4209788",
+      "poster": "posters/molly-s-game-2017.jpg"
     },
     {
       "title": "Beverly Hills Cop II",
       "year": 1987,
       "rating": 3.5,
       "watched": "2026-10-03",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 103,
+      "director": "Tony Scott",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "imdb": "tt0092644",
+      "poster": "posters/beverly-hills-cop-ii-1987.jpg"
     },
     {
       "title": "Lethal Weapon",
       "year": 1987,
       "rating": 3.5,
       "watched": "2026-10-03",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 110,
+      "director": "Richard Donner",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "imdb": "tt0093409",
+      "poster": "posters/lethal-weapon-1987.jpg"
     },
     {
       "title": "Our Hero, Balthazar",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-10-06",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 96,
+      "director": "Oscar Boyson",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "imdb": "tt36589928",
+      "poster": "posters/our-hero-balthazar-2025.jpg"
     },
     {
       "title": "Spider-Man: Brand New Day",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-10-10",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 145,
+      "director": "Destin Daniel Cretton",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "imdb": "tt22084616",
+      "poster": "posters/spider-man-brand-new-day-2026.jpg"
     },
     {
       "title": "Bad Apples",
       "year": 2025,
       "rating": 3.5,
       "watched": "2026-10-20",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 100,
+      "director": "Jonatan Etzler",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ],
+      "imdb": "tt29714073",
+      "poster": "posters/bad-apples-2025.jpg"
     },
     {
       "title": "Coyote vs. Acme",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-10-21",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 103,
+      "director": "Dave Green",
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Family",
+        "Animation"
+      ],
+      "imdb": "tt1756855",
+      "poster": "posters/coyote-vs-acme-2026.jpg"
     },
     {
       "title": "By Any Means",
       "year": 2026,
       "rating": 3,
       "watched": "2026-10-21",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 107,
+      "director": "Elegance Bratton",
+      "genres": [
+        "Thriller",
+        "History",
+        "Crime"
+      ],
+      "imdb": "tt34379051",
+      "poster": "posters/by-any-means-2026.jpg"
     },
     {
       "title": "Deep Water",
       "year": 2022,
       "rating": 3.5,
       "watched": "2026-11-04",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 116,
+      "director": "Adrian Lyne",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "imdb": "tt2180339",
+      "poster": "posters/deep-water-2022.jpg"
     },
     {
       "title": "Primetime",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-11-04",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 110,
+      "director": "Lance Oppenheim",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
+      ],
+      "imdb": "tt34206385",
+      "poster": "posters/primetime-2026.jpg"
     },
     {
       "title": "Your Mother Your Mother Your Mother",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-11-04",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 112,
+      "director": "Bassam Tariq",
+      "genres": [
+        "Action",
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "imdb": "tt35856037",
+      "poster": "posters/your-mother-your-mother-your-mother-2026.jpg"
     },
     {
       "title": "The Odyssey",
       "year": 2026,
       "rating": 3.5,
       "watched": "2026-11-07",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 173,
+      "director": "Christopher Nolan",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy"
+      ],
+      "imdb": "tt33764258",
+      "poster": "posters/the-odyssey-2026.jpg"
     },
     {
       "title": "Barcelona",
       "year": 1994,
       "rating": 4,
       "watched": "2026-11-09",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 100,
+      "director": "Whit Stillman",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "imdb": "tt0109219",
+      "poster": "posters/barcelona-1994.jpg"
     },
     {
       "title": "Heart of the Beast",
       "year": 2026,
       "rating": 2.5,
       "watched": "2026-11-11",
-      "rewatch": false,
-      "genres": [],
-      "imdb": "",
-      "poster": ""
+      "runtime": 101,
+      "director": "David Ayer",
+      "genres": [
+        "Adventure",
+        "Thriller"
+      ],
+      "imdb": "tt7526136",
+      "poster": "posters/heart-of-the-beast-2026.jpg"
     }
   ]
 }
