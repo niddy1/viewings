@@ -20,7 +20,8 @@
           0.8267,
           0.2444
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "No Other Choice",
@@ -43,7 +44,8 @@
           0.94,
           0.5556
         ]
-      ]
+      ],
+      "rating10": 9
     },
     {
       "title": "Sinners",
@@ -66,7 +68,8 @@
           0.8267,
           0.3956
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "Devil in Disguise: John Wayne Gacy",
@@ -102,7 +105,8 @@
           0.6833,
           0.5911
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "The Rip",
@@ -131,7 +135,8 @@
           0.6933,
           0.9222
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "F1",
@@ -153,7 +158,8 @@
           0.9867,
           0.2622
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Zootopia 2",
@@ -170,7 +176,8 @@
         "Family"
       ],
       "imdb": "tt26443597",
-      "poster": "posters/zootopia-2-2025.jpg"
+      "poster": "posters/zootopia-2-2025.jpg",
+      "rating10": 7
     },
     {
       "title": "Marty Supreme",
@@ -198,7 +205,8 @@
           0.7067,
           0.84
         ]
-      ]
+      ],
+      "rating10": 8.5
     },
     {
       "title": "The Housemaid",
@@ -226,7 +234,8 @@
           0.79,
           0.8356
         ]
-      ]
+      ],
+      "rating10": 5.5
     },
     {
       "title": "Bugonia",
@@ -249,7 +258,8 @@
           0.9067,
           0.1511
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "The Perfect Neighbor",
@@ -283,7 +293,8 @@
           0.7,
           0.7022
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Dead Man's Wire",
@@ -306,7 +317,8 @@
           0.8933,
           0.8089
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Girl in the Box",
@@ -340,7 +352,8 @@
           0.8167,
           0.9689
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Heel",
@@ -357,7 +370,8 @@
       "imdb": "tt34381258",
       "poster": "posters/heel-2025.jpg",
       "tmdb": 1381027,
-      "tmdbKind": "movie"
+      "tmdbKind": "movie",
+      "rating10": 7
     },
     {
       "title": "High School",
@@ -384,7 +398,8 @@
           0.8933,
           0.6889
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "The Secret Agent",
@@ -413,7 +428,8 @@
           0.8067,
           0.9111
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Zodiac Killer Project",
@@ -435,7 +451,8 @@
           0.88,
           0.4533
         ]
-      ]
+      ],
+      "rating10": 3
     },
     {
       "title": "The Sweet East",
@@ -456,7 +473,8 @@
           0.9,
           0.5867
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Crime 101",
@@ -484,7 +502,8 @@
           0.46,
           0.5378
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "How to Make a Killing",
@@ -513,7 +532,8 @@
           0.8067,
           0.2533
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "The Drama",
@@ -542,7 +562,8 @@
           0.8733,
           0.9378
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Over Your Dead Body",
@@ -571,7 +592,8 @@
           0.85,
           0.9467
         ]
-      ]
+      ],
+      "rating10": 4
     },
     {
       "title": "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
@@ -599,7 +621,8 @@
           0.4533,
           0.4178
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Maternal Instinct",
@@ -621,7 +644,8 @@
           0.8333,
           0.8044
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "The Threesome",
@@ -644,7 +668,8 @@
           0.9067,
           0.9422
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "In the Grey",
@@ -678,7 +703,8 @@
           0.8,
           0.3022
         ]
-      ]
+      ],
+      "rating10": 5
     },
     {
       "title": "I Love Boosters",
@@ -707,7 +733,8 @@
           0.8333,
           0.6267
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Project Hail Mary",
@@ -741,7 +768,8 @@
           0.8333,
           0.3022
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Sentimental Value",
@@ -768,7 +796,8 @@
           0.4667,
           0.4089
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "The Negotiator",
@@ -798,7 +827,8 @@
           0.74,
           0.6378
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Hoppers",
@@ -823,7 +853,8 @@
           0.8467,
           0.8822
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Louis C.K.: Ridiculous",
@@ -850,7 +881,8 @@
           0.8833,
           0.1911
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "The Devil Wears Prada 2",
@@ -864,7 +896,8 @@
         "Drama"
       ],
       "imdb": "tt33612209",
-      "poster": "posters/the-devil-wears-prada-2-2026.jpg"
+      "poster": "posters/the-devil-wears-prada-2-2026.jpg",
+      "rating10": 6
     },
     {
       "title": "Jeff Arcuri: Nice to Meet You",
@@ -890,7 +923,8 @@
           0.9333,
           0.7778
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Pretty Maids All in a Row",
@@ -914,7 +948,8 @@
           0.8467,
           0.8667
         ]
-      ]
+      ],
+      "rating10": 8
     },
     {
       "title": "Con Air",
@@ -937,7 +972,8 @@
           0.8267,
           0.8844
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "The Crash",
@@ -959,7 +995,8 @@
           0.9467,
           0.82
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Face/Off",
@@ -982,7 +1019,8 @@
           0.84,
           0.9067
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Do Revenge",
@@ -1005,7 +1043,8 @@
           0.9733,
           0.9156
         ]
-      ]
+      ],
+      "rating10": 5.5
     },
     {
       "title": "Obsession",
@@ -1027,7 +1066,8 @@
           0.88,
           0.2089
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "LifeHack",
@@ -1049,7 +1089,8 @@
           0.9133,
           0.8933
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Tuner",
@@ -1071,7 +1112,8 @@
           0.8733,
           0.8622
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Talladega Nights: The Ballad of Ricky Bobby",
@@ -1099,7 +1141,8 @@
           0.8489
         ]
       ],
-      "color": "#14213d"
+      "color": "#14213d",
+      "rating10": 6
     },
     {
       "title": "My Man Godfrey",
@@ -1126,7 +1169,8 @@
           0.84,
           0.2978
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Body of Lies",
@@ -1149,7 +1193,8 @@
           0.9733,
           0.9733
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Monster",
@@ -1172,7 +1217,8 @@
           0.9,
           0.8867
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "The Invite",
@@ -1195,7 +1241,8 @@
           0.8,
           0.9156
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Toy Story 5",
@@ -1226,7 +1273,8 @@
           0.2489
         ]
       ],
-      "color": "#1d2a63"
+      "color": "#1d2a63",
+      "rating10": 6.5
     },
     {
       "title": "Motor City",
@@ -1250,7 +1298,8 @@
           0.94,
           0.9711
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "A Deadly American Marriage",
@@ -1284,7 +1333,8 @@
           0.76,
           0.9244
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Stavros Halkias: Uncle Stav",
@@ -1311,7 +1361,8 @@
           0.7733,
           0.7267
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Pacific Heights",
@@ -1334,7 +1385,8 @@
           0.82,
           0.9422
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "The Rivals of Amziah King",
@@ -1357,7 +1409,8 @@
           0.8067,
           0.8667
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Molly's Game",
@@ -1379,7 +1432,8 @@
           0.9467,
           0.84
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Beverly Hills Cop II",
@@ -1408,7 +1462,8 @@
           0.7267,
           0.2
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Lethal Weapon",
@@ -1431,7 +1486,8 @@
           0.8667,
           0.8756
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Our Hero, Balthazar",
@@ -1465,7 +1521,8 @@
           0.9467,
           0.84
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -1488,7 +1545,8 @@
           0.8933,
           0.92
         ]
-      ]
+      ],
+      "rating10": 6.5
     },
     {
       "title": "Bad Apples",
@@ -1510,7 +1568,8 @@
           0.9133,
           0.9556
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Coyote vs. Acme",
@@ -1526,7 +1585,8 @@
         "Animation"
       ],
       "imdb": "tt1756855",
-      "poster": "posters/coyote-vs-acme-2026.jpg"
+      "poster": "posters/coyote-vs-acme-2026.jpg",
+      "rating10": 7
     },
     {
       "title": "By Any Means",
@@ -1561,7 +1621,8 @@
           0.8067,
           0.9067
         ]
-      ]
+      ],
+      "rating10": 6
     },
     {
       "title": "Deep Water",
@@ -1576,7 +1637,8 @@
         "Thriller"
       ],
       "imdb": "tt2180339",
-      "poster": "posters/deep-water-2022.jpg"
+      "poster": "posters/deep-water-2022.jpg",
+      "rating10": 7
     },
     {
       "title": "Primetime",
@@ -1599,7 +1661,8 @@
           0.5333,
           0.9556
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Your Mother Your Mother Your Mother",
@@ -1622,6 +1685,31 @@
           0.1289,
           0.94,
           0.3556
+        ]
+      ],
+      "rating10": 6.5
+    },
+    {
+      "title": "Christine",
+      "year": 2016,
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2026-11-04",
+      "tmdb": 339405,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Antonio Campos",
+      "genres": [
+        "Drama"
+      ],
+      "imdb": "tt4666726",
+      "poster": "posters/christine-2016.jpg",
+      "titleBox": [
+        [
+          0.1239,
+          0.8662,
+          0.8984,
+          0.9941
         ]
       ]
     },
@@ -1646,7 +1734,8 @@
           0.84,
           0.9067
         ]
-      ]
+      ],
+      "rating10": 7
     },
     {
       "title": "Barcelona",
@@ -1669,7 +1758,8 @@
           0.7667,
           0.1267
         ]
-      ]
+      ],
+      "rating10": 7.5
     },
     {
       "title": "Heart of the Beast",
@@ -1683,7 +1773,80 @@
         "Thriller"
       ],
       "imdb": "tt7526136",
-      "poster": "posters/heart-of-the-beast-2026.jpg"
+      "poster": "posters/heart-of-the-beast-2026.jpg",
+      "rating10": 5
+    },
+    {
+      "title": "Malice",
+      "year": 1993,
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2026-11-13",
+      "tmdb": 2246,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Harold Becker",
+      "genres": [
+        "Thriller"
+      ],
+      "imdb": "tt0107497",
+      "poster": "posters/malice-1993.jpg",
+      "titleBox": [
+        [
+          0.0789,
+          0.788,
+          0.9353,
+          0.9346
+        ]
+      ]
+    },
+    {
+      "title": "The Widower: 'Til Death Do Us Part",
+      "year": 2026,
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2026-11-13",
+      "tmdb": 1758536,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Chris Smith",
+      "genres": [
+        "Documentary"
+      ],
+      "imdb": "tt44568097",
+      "poster": "posters/the-widower-til-death-do-us-part-2026.jpg",
+      "titleBox": [
+        [
+          0.0063,
+          0.6638,
+          1,
+          0.7631
+        ]
+      ]
+    },
+    {
+      "title": "Deep Web",
+      "year": 2015,
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2026-11-13",
+      "tmdb": 321769,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Alex Winter",
+      "genres": [
+        "Documentary"
+      ],
+      "imdb": "tt3312868",
+      "poster": "posters/deep-web-2015.jpg",
+      "titleBox": [
+        [
+          0.0362,
+          0.201,
+          0.9818,
+          0.3141
+        ]
+      ]
     }
   ]
 }
