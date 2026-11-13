@@ -9,6 +9,10 @@
  *   - lets you drag a box around the title lettering on each new poster,
  *   - commits films.json + the new posters to GitHub in one commit. Pages redeploys in about a minute.
  *
+ * In a browser with the GitHub token saved, a pulled-out tape also gets a "Re-mark spine" button:
+ * redraw the title boxes on its poster, watch the spine update, and save. Edits queue up and
+ * are saved together in one commit.
+ *
  * Needs a GitHub fine-grained token (this repo only, Contents: read and write) and a TMDB key.
  * Both are kept in this browser's localStorage only; nothing is written to the repo.
  */
@@ -97,6 +101,27 @@
     return (await fetch('films.json', { cache: 'no-cache' })).json();
   }
 
+  // One commit on BRANCH. files: [{ path, content }] for text, [{ path, blob }] for binary.
+  async function commitFiles(message, files, progress = () => {}) {
+    const ref = await (await gh(`/git/ref/heads/${BRANCH}`)).json();
+    const head = await (await gh(`/git/commits/${ref.object.sha}`)).json();
+    const tree = [];
+    for (let i = 0; i < files.length; i++) {
+      const f = files[i];
+      if (f.blob) {
+        progress(i, files.length);
+        const b = await ghJSON('/git/blobs', { content: await toBase64(f.blob), encoding: 'base64' });
+        tree.push({ path: f.path, mode: '100644', type: 'blob', sha: b.sha });
+      } else tree.push({ path: f.path, mode: '100644', type: 'blob', content: f.content });
+    }
+    const newTree = await ghJSON('/git/trees', { base_tree: head.tree.sha, tree });
+    const commit = await ghJSON('/git/commits', { message, tree: newTree.sha, parents: [ref.object.sha] });
+    try { await ghJSON(`/git/refs/heads/${BRANCH}`, { sha: commit.sha }, 'PATCH'); }
+    catch (e) { throw new Error(/fast forward/i.test(e.message) ? 'The shelf changed on GitHub while this was open. Try again.' : e.message); }
+    return commit;
+  }
+  const filmKey = (f) => f.imdb || `${f.title}|${f.year}`;
+
   const toBase64 = (blob) => new Promise((resolve, reject) => {
     const r = new FileReader();
     r.onload = () => resolve(String(r.result).split(',')[1]);
@@ -160,7 +185,7 @@
     const field = (label, k, help) => {
       const l = h('label', 'vcr-field');
       const i = h('input'); i.type = 'password'; i.autocomplete = 'off'; i.spellcheck = false; i.value = store.get(k); i.placeholder = help;
-      i.addEventListener('change', () => store.set(k, i.value.trim()));
+      i.addEventListener('change', () => { store.set(k, i.value.trim()); syncSpineButton(); });
       l.append(h('span', null, label), i);
       return l;
     };
@@ -169,7 +194,7 @@
       field('TMDB key', KEYS.tmdb, 'v3 API key or v4 read token'),
     );
     const forget = h('button', 'vcr-link', 'Forget both'); forget.type = 'button';
-    forget.addEventListener('click', () => { store.set(KEYS.gh, ''); store.set(KEYS.tmdb, ''); renderKeys(); });
+    forget.addEventListener('click', () => { store.set(KEYS.gh, ''); store.set(KEYS.tmdb, ''); renderKeys(); syncSpineButton(); });
     det.append(forget);
     keys.append(det);
   }
@@ -310,7 +335,7 @@
         );
         if (title.toLowerCase() !== englishTitle(e.csvTitle).toLowerCase()) info.append(h('span', 'vcr-dim', `CSV calls it “${e.csvTitle}”`));
         if (e.note) info.append(h('span', 'vcr-warn', e.note));
-        if (e.posterBlob) card.prepend(boxEditor(e.film, URL.createObjectURL(e.posterBlob)));
+        if (e.posterBlob) { e.film.titleBox = []; card.prepend(boxEditor(e.film, URL.createObjectURL(e.posterBlob))); }
       } catch (err) {
         // still shelve it, with a plain typeface spine
         e.film = { title: englishTitle(e.csvTitle), rating: starsOf(e.r10), rating10: e.r10, watched: e.watched, genres: [], imdb: e.imdb, poster: '' };
@@ -321,8 +346,8 @@
   }
 
   // Drag boxes over the poster to mark the title lettering (stored as fractions, like titleBox in films.json).
-  function boxEditor(film, url) {
-    film.titleBox = [];
+  function boxEditor(film, url, onChange = () => {}) {
+    if (!Array.isArray(film.titleBox)) film.titleBox = [];
     const wrap = h('div', 'vcr-edit');
     const pic = h('div', 'vcr-poster');
     const img = new Image(); img.src = url; img.alt = ''; img.draggable = false;
@@ -344,7 +369,8 @@
       count.textContent = film.titleBox.length ? `${film.titleBox.length} line${film.titleBox.length > 1 ? 's' : ''} marked` : 'no title marked';
       undo.hidden = !film.titleBox.length;
     };
-    undo.addEventListener('click', () => { film.titleBox.pop(); draw(); });
+    wrap.redraw = draw;
+    undo.addEventListener('click', () => { film.titleBox.pop(); draw(); onChange(); });
 
     let start = null, live = null;
     const at = (e) => { const r = pic.getBoundingClientRect(); return [Math.min(1, Math.max(0, (e.clientX - r.left) / r.width)), Math.min(1, Math.max(0, (e.clientY - r.top) / r.height))]; };
@@ -364,6 +390,7 @@
       if (b[2] - b[0] > 0.03 && b[3] - b[1] > 0.01) {
         film.titleBox.push(b.map((v) => Math.round(v * 10000) / 10000));
         film.titleBox.sort((p, q) => p[1] - q[1]); // top line first
+        onChange();
       }
       draw();
     };
@@ -399,24 +426,18 @@
       }
       const next = { ...data, films: [...films, ...added].sort((a, b) => (a.watched || '').localeCompare(b.watched || '')) };
 
-      const ref = await (await gh(`/git/ref/heads/${BRANCH}`)).json();
-      const head = await (await gh(`/git/commits/${ref.object.sha}`)).json();
-      const tree = [{ path: 'films.json', mode: '100644', type: 'blob', content: JSON.stringify(next, null, 2) + '\n' }];
-      for (let i = 0; i < adds.length; i++) {
-        const e = adds[i], f = added.find((a) => a.imdb === e.imdb);
-        if (!e.posterBlob || !f || !f.poster) continue;
-        busy.textContent = `Recording… poster ${i + 1} of ${adds.length}`;
-        const blob = await ghJSON('/git/blobs', { content: await toBase64(e.posterBlob), encoding: 'base64' });
-        tree.push({ path: f.poster, mode: '100644', type: 'blob', sha: blob.sha });
+      const files = [{ path: 'films.json', content: JSON.stringify(next, null, 2) + '\n' }];
+      for (const e of adds) {
+        const f = added.find((a) => a.imdb === e.imdb);
+        if (e.posterBlob && f && f.poster) files.push({ path: f.poster, blob: e.posterBlob });
       }
-      const newTree = await ghJSON('/git/trees', { base_tree: head.tree.sha, tree });
 
       const parts = [];
       if (added.length) parts.push(`+${added.length} (${added.slice(0, 3).map((f) => f.title).join(', ')}${added.length > 3 ? '…' : ''})`);
       if (updates.length) parts.push(`${updates.length} rating${updates.length > 1 ? 's' : ''} synced`);
       if (remove.size) parts.push(`-${remove.size}`);
-      const commit = await ghJSON('/git/commits', { message: `Shelf: ${parts.join(', ')} from PTP ratings`, tree: newTree.sha, parents: [ref.object.sha] });
-      await ghJSON(`/git/refs/heads/${BRANCH}`, { sha: commit.sha }, 'PATCH');
+      const commit = await commitFiles(`Shelf: ${parts.join(', ')} from PTP ratings`, files,
+        (i, n) => { busy.textContent = `Recording… poster ${i} of ${n - 1}`; });
 
       busy.remove();
       const done = status('Recorded. GitHub Pages redeploys in about a minute, then reload. ', 'ok');
@@ -425,10 +446,124 @@
       state = null;
     } catch (e) {
       busy.remove();
-      status(e.message.includes('Update is not a fast forward')
-        ? 'The shelf changed on GitHub while this was open. Load the CSV again and re-record.'
-        : e.message, 'err');
+      status(e.message, 'err');
       goBtn.disabled = false;
     }
   }
+
+  /* ---------- re-mark a spine (only where the GitHub token is saved) ---------- */
+  const pending = new Map(); // filmKey -> { title, titleBox }
+  let spineBtn, saveBtn, ed;
+
+  function syncSpineButton() {
+    const info = document.querySelector('.info');
+    if (!info) return;
+    if (!spineBtn) {
+      spineBtn = h('button', 'vcr-respine', '✎ Re-mark spine'); spineBtn.type = 'button';
+      spineBtn.addEventListener('click', () => { const f = window.viewings && window.viewings.current; if (f) openSpineEditor(f); });
+      info.append(spineBtn);
+    }
+    spineBtn.hidden = !store.get(KEYS.gh);
+  }
+  syncSpineButton();
+
+  async function openSpineEditor(film) {
+    if (!film.poster) { alert('This tape has no poster to take the title from.'); return; }
+    const draft = { ...film, titleBox: (film.titleBox || []).map((b) => b.slice()) };
+    const before = JSON.stringify(film.titleBox || []);
+
+    ed = h('div', 'vcr open vcr-spine'); ed.setAttribute('aria-hidden', 'false');
+    const backdrop = h('div', 'vcr-backdrop');
+    const box = h('div', 'vcr-box'); box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', `Re-mark the spine for ${film.title}`);
+    const top = h('div', 'vcr-top');
+    top.append(h('span', 'vcr-led'), h('h2', null, 'Spine'), h('span', 'vcr-mode', film.title.toUpperCase().slice(0, 24)));
+    const x = h('button', 'vcr-x', '×'); x.type = 'button'; x.setAttribute('aria-label', 'Close'); top.append(x);
+
+    const body = h('div', 'vcr-spine-body');
+    const preview = h('div', 'vcr-preview');
+    const shelfBit = h('div', 'vcr-preview-shelf');
+    const label = h('span', 'vcr-dim', 'preview');
+    preview.append(shelfBit, label);
+
+    let seq = 0;
+    const update = async () => {
+      const n = ++seq;
+      const g = { ...draft, titleBox: draft.titleBox.length ? draft.titleBox.map((b) => b.slice()) : undefined };
+      const el = await window.viewings.preview(g);
+      if (n === seq) { shelfBit.textContent = ''; shelfBit.append(el); }
+    };
+    const editor = boxEditor(draft, film.poster, update);
+    editor.classList.add('vcr-edit-big');
+    body.append(editor, preview);
+
+    const hint = h('p', 'vcr-hint', 'Drag a box around each line of the title, top line first. Tight boxes look best: include the whole lettering and as little background as you can.');
+    const foot = h('div', 'vcr-foot');
+    const clear = h('button', 'vcr-link', 'clear: use a typeface instead'); clear.type = 'button';
+    clear.addEventListener('click', () => { draft.titleBox.length = 0; editor.redraw(); update(); });
+    const reset = h('button', 'vcr-link', 'reset'); reset.type = 'button';
+    reset.addEventListener('click', () => { draft.titleBox = JSON.parse(before); editor.redraw(); update(); });
+    const keep = h('button', 'vcr-go', 'Keep'); keep.type = 'button';
+    foot.append(clear, reset, keep);
+    box.append(top, hint, body, foot);
+    ed.append(backdrop, box);
+    document.body.append(ed);
+
+    const closeEd = () => { if (ed) { ed.remove(); ed = null; } };
+    backdrop.addEventListener('click', closeEd);
+    x.addEventListener('click', closeEd);
+    keep.addEventListener('click', async () => {
+      const boxes = draft.titleBox.map((b) => b.slice());
+      closeEd();
+      if (JSON.stringify(boxes) === before) return;
+      if (boxes.length) film.titleBox = boxes; else delete film.titleBox;
+      pending.set(filmKey(film), { title: film.title, titleBox: boxes });
+      await window.viewings.refresh(film);
+      syncSave();
+    });
+    update();
+  }
+
+  // While the editor is open, keys belong to it (Esc closes it, arrows don't flip tapes underneath).
+  document.addEventListener('keydown', (e) => {
+    if (!ed) return;
+    if (e.key === 'Escape') { ed.remove(); ed = null; }
+    if (['Escape', 'ArrowLeft', 'ArrowRight'].includes(e.key)) e.stopPropagation();
+  }, true);
+
+  function syncSave() {
+    if (!saveBtn) {
+      saveBtn = h('button', 'vcr-go vcr-save'); saveBtn.type = 'button';
+      saveBtn.addEventListener('click', saveSpines);
+      document.body.append(saveBtn);
+    }
+    saveBtn.hidden = !pending.size;
+    saveBtn.disabled = false;
+    saveBtn.textContent = `● Save ${pending.size} spine${pending.size === 1 ? '' : 's'}`;
+  }
+
+  async function saveSpines() {
+    saveBtn.disabled = true; saveBtn.textContent = 'Saving…';
+    try {
+      const data = await loadShelf(); // latest from GitHub, so nothing else gets undone
+      const byKey = new Map((data.films || []).map((f) => [filmKey(f), f]));
+      const names = [];
+      for (const [k, p] of pending) {
+        const f = byKey.get(k);
+        if (!f) continue;
+        if (p.titleBox.length) f.titleBox = p.titleBox; else delete f.titleBox;
+        names.push(p.title);
+      }
+      if (!names.length) throw new Error('Couldn’t find those tapes in films.json on GitHub.');
+      await commitFiles(`Spines: re-marked ${names.slice(0, 3).join(', ')}${names.length > 3 ? ` +${names.length - 3}` : ''}`,
+        [{ path: 'films.json', content: JSON.stringify(data, null, 2) + '\n' }]);
+      pending.clear();
+      saveBtn.hidden = false; saveBtn.textContent = '✓ Saved. Live in about a minute';
+      setTimeout(syncSave, 4000);
+    } catch (e) {
+      saveBtn.disabled = false;
+      saveBtn.textContent = `● Save ${pending.size} spine${pending.size === 1 ? '' : 's'} (retry)`;
+      alert(e.message);
+    }
+  }
+  window.addEventListener('beforeunload', (e) => { if (pending.size) { e.preventDefault(); e.returnValue = ''; } });
 })();

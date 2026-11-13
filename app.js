@@ -478,7 +478,8 @@
       st.textContent = g ? STICKER_WORDS[g] : 'NEW';
       b.append(st);
     }
-    b.addEventListener('click', () => openViewer(i));
+    if (i >= 0) b.addEventListener('click', () => openViewer(i));
+    else b.tabIndex = -1; // a preview (see window.viewings below), not a real tape
     return b;
   }
 
@@ -592,6 +593,14 @@
   document.querySelector('.panel').addEventListener('click', (e) => {
     if (e.target.classList.contains('panel')) closeViewer();
   });
+
+  // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
+  window.viewings = {
+    get films() { return films; },
+    get current() { return current >= 0 ? films[current] : null; },
+    async preview(f) { await prepare(f); return spineEl(f, -1); },
+    async refresh(f) { await prepare(f); layout(); },
+  };
 
   /* ---------- boot ---------- */
   async function boot() {

@@ -353,3 +353,28 @@ h1 span { color: var(--gold); }
   .vcr-card { flex-direction: column; }
   .vcr-edit { width: 100%; max-width: 260px; }
 }
+
+/* re-mark a spine (vcr.js; the button only shows where the GitHub token is saved) */
+.vcr-respine {
+  display: block; margin: 14px auto 0; appearance: none; background: none; border: 0; cursor: pointer;
+  color: var(--paper); opacity: .45; font: inherit; font-size: .78rem; text-decoration: underline;
+}
+.vcr-respine:hover { opacity: 1; color: var(--gold); }
+@media (min-width: 900px) and (orientation: landscape) { .vcr-respine { margin-left: 0; } }
+.vcr-spine .vcr-box { width: min(560px, 100%); }
+.vcr-spine-body { display: flex; gap: 22px; align-items: flex-start; justify-content: center; }
+.vcr-edit-big { width: min(300px, 62vw); }
+.vcr-preview { display: grid; justify-items: center; gap: 6px; }
+.vcr-preview-shelf {
+  display: flex; align-items: flex-end; min-width: 80px; min-height: 270px; padding: 10px 14px 0;
+  background: linear-gradient(180deg, #0a0704 0%, #1b120b 100%); border-bottom: 8px solid #43291a;
+  box-shadow: inset 0 14px 22px rgba(0,0,0,.65);
+}
+.vcr-preview-shelf .spine { cursor: default; }
+.vcr-spine .vcr-foot { justify-content: flex-start; align-items: center; gap: 16px; }
+.vcr-spine .vcr-go { margin-left: auto; }
+.vcr-save {
+  position: fixed; right: 18px; bottom: 18px; z-index: 40;
+  box-shadow: 0 10px 24px rgba(0,0,0,.6);
+}
+.vcr-save[hidden], .vcr-respine[hidden] { display: none; }
