@@ -49,6 +49,11 @@ h1 span { color: var(--gold); }
   border-radius: 2px;
 }
 
+.credit { max-width: 640px; margin: -50px auto 50px; padding: 0 20px; text-align: center; font-size: .72rem; line-height: 1.5; opacity: .45; }
+.credit p { margin: 0; }
+.credit a { color: inherit; }
+.credit a:hover { opacity: 1; color: var(--gold); }
+
 /* ---------- spines ---------- */
 .spine {
   appearance: none;
