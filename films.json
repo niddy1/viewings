@@ -210,7 +210,14 @@
       "tmdb": 1084242,
       "tmdbKind": "movie",
       "studio": "Walt Disney Animation Studios",
-      "logo": "logos/6125.png"
+      "logo": "logos/6125.png",
+      "top": "photo",
+      "photoBox": [
+        0.3372,
+        0.4921,
+        0.5485,
+        0.6329
+      ]
     },
     {
       "title": "Marty Supreme",
