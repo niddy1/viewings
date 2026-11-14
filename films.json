@@ -1486,7 +1486,14 @@
       "tmdb": 1084244,
       "tmdbKind": "movie",
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "top": "photo",
+      "photoBox": [
+        0.2178,
+        0.3667,
+        0.8245,
+        0.7712
+      ]
     },
     {
       "title": "Motor City",
