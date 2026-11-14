@@ -464,8 +464,13 @@
       "rating10": 8,
       "tmdb": 60315,
       "tmdbKind": "movie",
-      "studio": "",
-      "logo": ""
+      "top": "sticker",
+      "photoBox": [
+        0.1517,
+        0.28,
+        0.8558,
+        0.7495
+      ]
     },
     {
       "title": "The Secret Agent",
