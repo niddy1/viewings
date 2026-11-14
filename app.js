@@ -230,6 +230,10 @@
 
   async function prepare(f) {
     const img = await loadImg(f.poster);
+    // A designed spine picture (posters/<name>-spine-b.jpg, made by spinegen/) is used when there is one;
+    // films without one (new arrivals) keep the drawn spine below.
+    f._spine = null;
+    if (f.poster) { const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg'); if (await loadImg(sp)) f._spine = sp; }
     const pal = posterPalette(img);
     f._font = pickFont(f);
     const rt = f.runtime || (90 + hash(f.title) % 60);
@@ -575,6 +579,12 @@
     const r = f._r;
     b.style.cssText = `--w:${f._w}px;--h:${f._h}px;--c:${f._c};--t:${f._t};--f:'${f._font}';--fs:${fs.toFixed(1)}px;--top:${top}px;--bot:${BOTTOM_ZONE}px;`
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
+    if (f._spine && i >= 0) { // the designed picture carries its own lettering, wear and stickers
+      b.className = 'spine designed';
+      b.style.backgroundImage = `url("${f._spine}")`;
+      b.addEventListener('click', () => openViewer(i));
+      return b;
+    }
     if (f._top === 'logo' && f._logoCrop) {
       const c = f._logoCrop, k = Math.min((f._w - 10) / c.width, 26 / c.height);
       const lg = document.createElement('canvas'); lg.className = 'logo ' + (f._logoColor ? 'color' : 'mono'); lg.width = c.width; lg.height = c.height;
@@ -697,6 +707,7 @@
 
   function fill(i) {
     const f = films[i];
+    document.body.classList.toggle('designed-spine', !!f._spine); // hides "Re-mark spine": it only changes drawn spines
     cover.href = imdbUrl(f);
     cover.setAttribute('aria-label', `${f.title} on IMDb`);
     cover.style.setProperty('--c', f._c); cover.style.setProperty('--t', f._t);

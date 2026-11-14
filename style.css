@@ -205,6 +205,10 @@ h1 span { color: var(--gold); }
     linear-gradient(90deg, rgba(255,255,255,.2), transparent 12%, transparent 78%, rgba(0,0,0,.45)),
     linear-gradient(180deg, rgba(255,255,255,.1) 0, transparent 5px);
 }
+/* a designed spine picture (posters/<name>-spine-b.jpg): the image is the whole spine */
+.spine.designed { background-size: 100% 100%; background-repeat: no-repeat; background-color: #111; }
+.spine.designed::after { background: linear-gradient(90deg, rgba(255,255,255,.06), transparent 14%, transparent 80%, rgba(0,0,0,.22)); }
+body.designed-spine .vcr-respine { display: none; }
 .spine:hover, .spine:focus-visible { transform: translateY(-9px); filter: brightness(1.15); outline: none; }
 .spine:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
 

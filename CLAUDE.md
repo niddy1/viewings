@@ -16,6 +16,18 @@ Plain HTML/CSS/JS. No build step, no dependencies, no framework. Keep it that wa
 - `wall/`: Ian's own poster images (Anatomy of a Murder, Bande à part), hung full-size (560px wide, about real scale next to the tapes) in black frames either side of the case (`.room` in `index.html`). They hang off the case's edges and are allowed to run off the window (Ian's call); the case never narrows for them. Desktop only (≥1100px; hidden on phones).
 - `overrides.json`: fixes wrong TMDB matches, keyed `"Title|Year"` with `{ "tmdb": <id>, "type": "tv" (optional) }`.
 
+## Designed spine images (`posters/<name>-spine-b.jpg`)
+One designed spine picture per tape, made in November 2026 with `spinegen/` (ported from niddy1/readings and adapted for VHS). The shelf uses them: `prepare()` in `app.js` looks for `<poster name>-spine-b.jpg` next to the poster and, if it loads, `spineEl()` shows it as the whole spine (`.spine.designed`). A film without one (a new arrival from VCR) falls back to the drawn spine, and the Re-mark spine editor still works on it; the editor's top/picture/logo choices do not change a designed image (the button is hidden for those tapes), so change a designed spine by editing its spec and re-running the script. Deleting a film's `-spine-b.jpg` reverts it to the drawn spine. Each is 1100px tall; width follows the shelf's runtime rule (42-52px at 250px tall), so they can drop in at the current tape widths.
+
+- `spinegen/lib.py`: text rendering and `finish_vhs()`, which ages the box. `kind='slip'` is a card slipcase (white board at the folds, corners and mouth, scuffs, dents, torn patches, shelf rub); `kind='clam'` is a plastic clamshell (Zootopia 2, Hoppers, Toy Story 5). Wear is seeded per tape; nothing is identical on two spines.
+- `spinegen/eng.py`: layout engine (background + top-to-bottom items; text shrinks to fit). `L(...)` lifts the title lettering off the poster from the film's `titleBox` and re-inks it; `TT` is a line in several colours; `notch()` is the thumb cut-out at the foot.
+- `spinegen/tapes.py`: one hand-written spec per tape (`std(...)` for the usual layout, `add(...)` for the first five), plus the spine furniture: `logo()` (places the film's file from `logos/`, as is or in one ink; never redrawn), stickers (`rewind`, `barcode`, `price`, `dot`), format mark and catalogue numbers.
+- Run from the repo root: `python3 spinegen/tapes.py` (all) or `python3 spinegen/tapes.py sinners-2025 creed-2015` (some). Needs Pillow, NumPy, OpenCV. Fonts are bundled in `spinegen/fonts/`. Output is deterministic.
+- Titles are lifted from the poster where the `titleBox` gives a clean result and typeset otherwise (e.g. F1, Heel, Crime 101, Marty Supreme, Con Air, Face/Off, Spider-Man, the films with no `titleBox`).
+- Catalogue numbers, sticker text and prices are invented. Malice uses the Castle Rock logo file because `films.json` has the wrong studio (Nelvana) for it.
+- Check new spines scaled to 250px tall; thin lettering fades at that size.
+- To add a tape: add a spec to `tapes.py` (copy a similar one), pick the `photo=ph(cx, cy, w, ar)` crop so it avoids the poster's title, run the script for that key.
+
 ## Workflow notes
 - The fetch step must run on Ian's own Mac (`TMDB_KEY=... node fetch-posters.js diary.csv`). Claude's workspace cannot reach TMDB or download images.
 - Source of ratings is now PassThePopcorn (`Title, Rating10, WatchedDate, ImdbID`), out of 10. Stored as `rating10`; `rating` = `Math.round(rating10)/2` for the stars. The viewer shows `x / 10`. Only rows whose WatchedDate is in the shelf's year are used.
