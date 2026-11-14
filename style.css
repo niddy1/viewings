@@ -2,54 +2,179 @@
   --gold: #e8b64a;
   --paper: #efe6d2;
   --dim: #4a4036;
+  --wall: #18223a;  /* the room's paint: a deep navy */
+  --ink: var(--paper); /* text on the wall */
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
   min-height: 100vh;
   color: var(--paper);
-  font-family: 'Special Elite', ui-monospace, monospace;
-  background:
-    radial-gradient(ellipse at 50% -10%, #3a2d20 0%, #17110c 55%, #0b0806 100%);
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-weight: 500;
+  background: var(--wall);
 }
 
-header { text-align: center; padding: 44px 20px 6px; }
+header { text-align: center; padding: 44px 20px 6px; color: var(--ink); }
 h1 {
   margin: 0;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Anton', 'Impact', sans-serif;
   font-weight: 400;
-  letter-spacing: .22em;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 6.5vw, 4rem);
+  line-height: 1;
 }
 h1 span { color: var(--gold); }
-.sub { margin: 6px 0 0; opacity: .55; font-size: .85rem; }
+.sub { margin: 10px 0 0; opacity: .7; font-size: .9rem; letter-spacing: .14em; text-transform: uppercase; }
 
-/* ---------- shelf ---------- */
-#shelves { max-width: 1120px; margin: 36px auto 90px; padding: 0 18px; }
+/* ---------- shelf ----------
+   A home-built pine case (after Ian's reference photo): a wide honey-stained face frame, light
+   woodgrain wall panelling behind with dark grooves at uneven spacing, and thin shelf boards
+   resting on little cleat blocks at each end. Grain is SVG turbulence, so there are no image files. */
+:root {
+  /* stained pine: dark late-wood streaks, paler figure, fine pores */
+  --pine-h: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1400' height='200'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.0016 .09' numOctaves='4' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .16 0 0 0 0 .04 0 0 0 0 .02 3.8 0 0 0 -1.55'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --pine-hl: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='220'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.0011 .05' numOctaves='3' seed='21' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .70 0 0 0 0 .33 0 0 0 0 .20 2.4 0 0 0 -1.0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --pine-hf: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='120'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.012 .75' numOctaves='2' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .33 0 0 0 0 .17 0 0 0 0 .04 2.0 0 0 0 -.85'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --pine-v: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='1400'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.09 .0016' numOctaves='4' seed='11' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .16 0 0 0 0 .04 0 0 0 0 .02 3.8 0 0 0 -1.55'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --pine-vl: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='1600'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.05 .0011' numOctaves='3' seed='23' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .70 0 0 0 0 .33 0 0 0 0 .20 2.4 0 0 0 -1.0'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --pine-vf: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='600'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.75 .012' numOctaves='2' seed='5' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .33 0 0 0 0 .17 0 0 0 0 .04 2.0 0 0 0 -.85'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  /* the wall panelling: printed woodgrain, softer and paler */
+  --panel-v: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='1400'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.06 .0025' numOctaves='4' seed='31' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42 0 0 0 0 .30 0 0 0 0 .16 2.2 0 0 0 -.95'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --panel-vf: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='600'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.5 .015' numOctaves='2' seed='37' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .40 0 0 0 0 .28 0 0 0 0 .15 1.6 0 0 0 -.7'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  --stain: #6b2c1a;
+}
+#shelves {
+  --side: 26px;     /* the face frame's stiles */
+  --end-gap: 12px;  /* breathing room at each end of a shelf (app.js reads this) */
+  position: relative;
+  max-width: 1120px;
+  margin: 72px auto 120px;
+  padding: 0 var(--side);
+  background:
+    linear-gradient(90deg, rgba(255,205,175,.35), rgba(255,205,175,.08) 2px, transparent 20%, transparent 80%, rgba(60,30,5,.35)) left / var(--side) 100% no-repeat,
+    linear-gradient(270deg, rgba(60,30,5,.45), rgba(60,30,5,.15) 2px, transparent 25%, transparent 80%, rgba(255,205,175,.15)) right / var(--side) 100% no-repeat,
+    var(--pine-vf), var(--pine-v), var(--pine-vl),
+    linear-gradient(180deg, #6e2d1a, #5c2415 60%, #4c1d11);
+  box-shadow: 0 34px 54px -22px rgba(4,8,18,.8), 0 6px 22px rgba(4,8,18,.35);
+}
+/* top and bottom rails of the face frame */
+#shelves::before, #shelves::after {
+  content: ""; position: absolute; left: 0; right: 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(60,30,5,.25), transparent 3%, transparent 97%, rgba(60,30,5,.3)),
+    var(--pine-hf), var(--pine-h), var(--pine-hl),
+    linear-gradient(180deg, #78331f, #5a2314);
+}
+#shelves::before {
+  top: -38px; height: 38px; border-radius: 2px 2px 0 0;
+  box-shadow: inset 0 2px 0 rgba(255,205,175,.4), inset 0 -2px 0 rgba(60,30,5,.45);
+}
+#shelves::after {
+  bottom: -34px; height: 34px; border-radius: 0 0 2px 2px;
+  box-shadow: inset 0 2px 0 rgba(255,205,175,.3), 0 18px 24px -8px rgba(4,8,18,.75);
+}
 
-.shelf-row { margin-bottom: 6px; }
+.shelf-row { margin: 0; }
 .shelf {
   position: relative;
   display: flex;
   align-items: flex-end;
   gap: 0;
   height: 284px;
-  padding: 0 16px;
-  background: linear-gradient(180deg, #0a0704 0%, #1b120b 100%);
-  box-shadow: inset 0 18px 28px rgba(0,0,0,.65), inset 10px 0 14px rgba(0,0,0,.4), inset -10px 0 14px rgba(0,0,0,.4);
-  border-left: 10px solid #2c1c10;
-  border-right: 10px solid #2c1c10;
-}
-.board {
-  height: 22px;
+  padding: 0 var(--end-gap);
+  /* the panelling: planks of uneven width, dark V-grooves, lit from the room in front */
   background:
-    repeating-linear-gradient(92deg, rgba(255,255,255,.035) 0 2px, transparent 2px 9px),
-    linear-gradient(#6a4528, #43291a 55%, #1f130b);
-  box-shadow: 0 16px 22px rgba(0,0,0,.6);
-  border-radius: 2px;
+    linear-gradient(180deg, rgba(40,22,6,.55) 0, rgba(40,22,6,.18) 14px, transparent 46px),
+    linear-gradient(0deg, rgba(40,22,6,.28), transparent 18px),
+    /* the inside faces of the case's sides, seen at an angle */
+    linear-gradient(90deg, #3f170d 0, #55210f 9px, rgba(40,22,6,.45) 9px, rgba(40,22,6,.12) 16px, transparent 34px) left / 50% 100% no-repeat,
+    linear-gradient(270deg, #36140b 0, #4c1d0e 9px, rgba(40,22,6,.5) 9px, rgba(40,22,6,.15) 16px, transparent 34px) right / 50% 100% no-repeat,
+    repeating-linear-gradient(90deg,
+      transparent 0 92px, rgba(58,48,40,.85) 92px 94px, rgba(255,240,210,.18) 94px 95px,
+      transparent 95px 241px, rgba(58,48,40,.85) 241px 243px, rgba(255,240,210,.18) 243px 244px,
+      transparent 244px 371px, rgba(58,48,40,.85) 371px 373px, rgba(255,240,210,.18) 373px 374px,
+      transparent 374px 486px),
+    var(--panel-vf), var(--panel-v),
+    linear-gradient(180deg, #9a7a58, #a98864 40%, #a0805d);
+}
+.shelf-row:first-child .shelf::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 12px; z-index: 0; pointer-events: none;
+  background: linear-gradient(180deg, #36140b, #55210f 80%, rgba(30,10,4,.5));
+}
+/* each tape casts a soft shadow onto the panelling */
+.shelf .spine { box-shadow: inset 1px 0 0 rgba(0,0,0,.3), inset -1px 0 0 rgba(0,0,0,.4), 0 -3px 7px rgba(40,22,6,.35), 3px 0 6px rgba(40,22,6,.25); }
+
+/* a thin pine board: a sliver of its top in front of the tapes, then the sawn front edge */
+.board {
+  position: relative; z-index: 2;
+  height: 19px;
+  background:
+    linear-gradient(180deg, rgba(30,15,3,.6) 0, rgba(30,15,3,.2) 2px, transparent 5px) 0 0 / 100% 6px no-repeat,
+    linear-gradient(180deg, transparent 6px, rgba(255,205,175,.5) 6px, rgba(255,205,175,.1) 7.5px, transparent 10px, transparent 75%, rgba(50,25,5,.4)),
+    linear-gradient(90deg, rgba(50,25,5,.35), transparent 3%, transparent 97%, rgba(50,25,5,.35)),
+    var(--pine-hf), var(--pine-h), var(--pine-hl),
+    linear-gradient(180deg, #8c4128 0, #7c3621 6px, #6b2c1a 6px, #521f12);
+  box-shadow: 0 8px 10px -4px rgba(40,22,6,.55);
+}
+/* the cleats it rests on, one under each end */
+.board::before, .board::after {
+  content: ""; position: absolute; top: 100%; width: 22px; height: 24px; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(30,15,3,.55), transparent 5px),
+    linear-gradient(90deg, rgba(255,205,175,.2), transparent 30%, transparent 70%, rgba(30,15,3,.35)),
+    var(--pine-vf),
+    linear-gradient(180deg, #4e1e10, #3a160b);
+  box-shadow: 0 4px 6px rgba(40,22,6,.45);
+}
+.board::before { left: 9px; }
+.board::after { right: 9px; }
+.shelf-row:last-child .board::before, .shelf-row:last-child .board::after { display: none; }
+.shelf-row:last-child .board { box-shadow: none; }
+
+/* ---------- posters on the wall (desktop only) ----------
+   Full-size one-sheets in black frames, hung either side of the case at roughly the same scale as
+   the tapes. The case never gives up width for them: they hang off its edges and simply run off the
+   window on narrower screens. Below 1100px they come down altogether. */
+.wall-poster { display: none; }
+@media (min-width: 1100px) {
+  html, body { overflow-x: clip; }
+  .room { position: relative; max-width: 1120px; margin: 0 auto; }
+  .wall-poster.left { position: absolute; top: 0; right: calc(100% + 64px); }
+  .wall-poster.right { position: absolute; top: 0; left: calc(100% + 64px); }
+  .wall-poster {
+    display: block;
+    width: 560px;
+    margin: 0;
+    padding: 14px;                     /* the moulding */
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.16), transparent 18%, transparent 82%, rgba(255,255,255,.05)),
+      linear-gradient(180deg, #1c1c1c, #0a0a0a);
+    border-radius: 1px;
+    box-shadow:
+      inset 0 0 0 1px rgba(255,255,255,.07),   /* outer arris */
+      inset 0 1px 0 rgba(255,255,255,.22),
+      0 2px 3px rgba(4,8,18,.55),
+      0 22px 34px -10px rgba(4,8,18,.7);
+  }
+  .wall-poster.left { transform: rotate(-.3deg); margin-top: 58px; }
+  .wall-poster.right { transform: rotate(.35deg); margin-top: 96px; }
+  .wall-poster img {
+    display: block; width: 100%; height: auto;
+    filter: saturate(.92) contrast(1.02) sepia(.06);
+  }
+  /* the frame's lip shading the edge of the print, and the glass catching the light */
+  .wall-poster::before, .wall-poster::after { content: ""; position: absolute; inset: 14px; pointer-events: none; }
+  .wall-poster::before { box-shadow: inset 0 0 0 1px rgba(0,0,0,.6), inset 0 3px 6px rgba(0,0,0,.55), inset 0 0 14px rgba(0,0,0,.25); }
+  .wall-poster::after {
+    background:
+      linear-gradient(118deg, rgba(255,255,255,.13) 0%, rgba(255,255,255,.04) 26%, transparent 27%, transparent 64%, rgba(255,255,255,.05) 78%, transparent 79%),
+      linear-gradient(180deg, rgba(255,214,160,.08), transparent 40%);
+  }
 }
 
-.credit { max-width: 640px; margin: -50px auto 50px; padding: 0 20px; text-align: center; font-size: .72rem; line-height: 1.5; opacity: .45; }
+.credit { max-width: 640px; margin: 0 auto 50px; padding: 0 20px; text-align: center; font-size: .72rem; line-height: 1.5; opacity: .5; color: var(--ink); }
 .credit p { margin: 0; }
 .credit a { color: inherit; }
 .credit a:hover { opacity: 1; color: var(--gold); }
@@ -281,7 +406,12 @@ h1 span { color: var(--gold); }
 .close:hover { background: rgba(239,230,210,.12); }
 
 @media (max-width: 640px) {
-  .shelf { height: 270px; padding: 0 8px; border-left-width: 6px; border-right-width: 6px; }
+  #shelves { --side: 14px; --end-gap: 8px; margin-top: 56px; }
+  #shelves::before { top: -26px; height: 26px; }
+  #shelves::after { bottom: -24px; height: 24px; }
+  .shelf { height: 270px; }
+  .board::before, .board::after { width: 14px; height: 18px; }
+  .board::before { left: 6px; } .board::after { right: 6px; }
   .nav { font-size: 2.2rem; padding: 6px; }
   .info { margin-top: 12px; }
   .info h2 { font-size: clamp(1.35rem, 6.4vw, 1.9rem); line-height: 1.1; }

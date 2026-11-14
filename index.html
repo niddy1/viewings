@@ -7,7 +7,7 @@
   <meta name="description" content="Everything I've watched this year, shelved as VHS tapes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@500;700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,16 @@
     <p class="sub"><span id="count">0</span> tapes on the shelf &middot; click one to pull it out</p>
   </header>
 
-  <main id="shelves" aria-label="Shelf of watched films"></main>
+  <div class="room">
+    <!-- framed posters on the wall either side of the case; desktop only -->
+    <figure class="wall-poster left" aria-hidden="true">
+      <img src="wall/anatomy-of-a-murder-1959.jpg" alt="" width="448" height="674" loading="lazy">
+    </figure>
+    <main id="shelves" aria-label="Shelf of watched films"></main>
+    <figure class="wall-poster right" aria-hidden="true">
+      <img src="wall/bande-a-part-1964.jpg" alt="" width="620" height="888" loading="lazy">
+    </figure>
+  </div>
 
   <footer class="credit">
     <p>Film data and posters from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>

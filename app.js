@@ -653,7 +653,9 @@
   function layout() {
     shelves.textContent = '';
     spineEls = films.map(spineEl);
-    const avail = shelves.clientWidth - 2 * (10 + 16);
+    // room inside the case: its width less the side panels (padding) and the gap at each end of a shelf
+    const cs = getComputedStyle(shelves), gap = parseFloat(cs.getPropertyValue('--end-gap')) || 16;
+    const avail = shelves.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 2 * gap;
     let row = [], used = 0, rows = [];
     films.forEach((f, i) => {
       const w = f._w;
