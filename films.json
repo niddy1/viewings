@@ -161,7 +161,14 @@
       "tmdb": 1306368,
       "tmdbKind": "movie",
       "studio": "Artists Equity",
-      "logo": "logos/187968.png"
+      "logo": "logos/187968.png",
+      "top": "photo",
+      "photoBox": [
+        0.4113,
+        0,
+        0.9995,
+        0.3921
+      ]
     },
     {
       "title": "F1",
