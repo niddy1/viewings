@@ -1149,7 +1149,14 @@
       "tmdb": 1701,
       "tmdbKind": "movie",
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "top": "photo",
+      "photoBox": [
+        0.2493,
+        0.0063,
+        0.691,
+        0.3161
+      ]
     },
     {
       "title": "The Crash",
