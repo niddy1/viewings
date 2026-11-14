@@ -1905,7 +1905,14 @@
       "tmdb": 1380417,
       "tmdbKind": "movie",
       "studio": "Hammerstone Studios",
-      "logo": "logos/106754.png"
+      "logo": "logos/106754.png",
+      "top": "photo",
+      "photoBox": [
+        0.5899,
+        0.0666,
+        0.8857,
+        0.2639
+      ]
     },
     {
       "title": "Deep Water",
