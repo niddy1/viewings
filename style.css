@@ -30,12 +30,13 @@ h1 span { color: var(--gold); }
 h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.45)); }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .tally {
-  position: absolute; right: 14px; bottom: 2px; margin: 0;
+  position: absolute; right: 14px; bottom: -30px; margin: 0;
   font-family: 'Blockletter', 'Impact', sans-serif; font-weight: 400; text-transform: uppercase;
-  font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; letter-spacing: .04em; word-spacing: .12em;
+  font-size: clamp(1.6rem, 4vw, 3.2rem); line-height: .8; letter-spacing: .04em;
   color: #f1c203; text-shadow: 0 4px 12px rgba(0,0,0,.45);
 }
-@media (max-width: 640px) { .tally { position: static; margin: 14px 0 0; text-align: right; padding-right: 4px; } }
+.tally #count { font-size: 2em; letter-spacing: .02em; margin-right: .12em; }
+@media (max-width: 640px) { .tally { position: static; margin: 10px 0 -40px; text-align: right; padding-right: 4px; } }
 
 /* ---------- shelf ----------
    A home-built pine case (after Ian's reference photo): a wide honey-stained face frame, light
