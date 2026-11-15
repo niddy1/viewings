@@ -207,7 +207,7 @@ def finish(img, seed, gloss=0.0, creases=0, wear=0.5, paper=(238, 232, 220), mat
     b = np.clip(b + lum + chro + fine, 0, 255).astype(np.uint8)
     im = Image.fromarray(b)
     if out:
-        im.save(out, quality=jpegq, subsampling=0)
+        web_copy(im).save(out, quality=jpegq, subsampling=0, optimize=True, progressive=True)
     return im
 
 
@@ -219,6 +219,13 @@ def canvas(w, color):
 def _lay(a, k, col):
     k = np.clip(k, 0, 1)[..., None]
     return a * (1 - k) + col * k
+
+
+WEB_H = 550  # saved height: twice the 250px the shelf shows (sharp on retina); 1100px files made the first load slow
+
+
+def web_copy(im):
+    return im if im.height <= WEB_H else im.resize((round(im.width * WEB_H / im.height), WEB_H), Image.LANCZOS)
 
 
 def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0, matte=0.025,
@@ -358,5 +365,5 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
     fine = cv2.GaussianBlur(rng.standard_normal((hh, ww)).astype(np.float32), (0, 0), 1.1)[..., None] * 4.5
     im = Image.fromarray(np.clip(b + lum + chro + fine, 0, 255).astype(np.uint8))
     if out:
-        im.save(out, quality=jpegq, subsampling=0)
+        web_copy(im).save(out, quality=jpegq, subsampling=0, optimize=True, progressive=True)
     return im

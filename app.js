@@ -228,12 +228,21 @@
     return { cv, rgb, lighter };
   }
 
-  async function prepare(f) {
-    const img = await loadImg(f.poster);
+  async function prepare(f, drawn) {
     // A designed spine picture (posters/<name>-spine-b.jpg, made by spinegen/) is used when there is one;
-    // films without one (new arrivals) keep the drawn spine below.
+    // films without one (new arrivals) keep the drawn spine below. A designed tape needs only its spine
+    // picture, so the full poster isn't downloaded or analysed for it (that made the first load slow).
+    // drawn=true (the Re-mark spine preview) always builds the drawn spine.
     f._spine = null;
     if (f.poster) { const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg'); if (await loadImg(sp)) f._spine = sp; }
+    if (f._spine && !drawn) {
+      const rt = f.runtime || (90 + hash(f.title) % 60);
+      f._w = Math.round(Math.min(52, Math.max(42, 40 + (rt - 90) * 0.12)));
+      f._r = hash(f.title + 'wear'); f._h = SPINE_H; f._dmg = []; f._top = ''; f._font = pickFont(f);
+      f._c = '#222'; f._t = '#efe6d2';
+      return;
+    }
+    const img = await loadImg(f.poster);
     const pal = posterPalette(img);
     f._font = pickFont(f);
     const rt = f.runtime || (90 + hash(f.title) % 60);
@@ -778,7 +787,7 @@
   window.viewings = {
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },
-    async preview(f) { await prepare(f); return spineEl(f, -1); },
+    async preview(f) { await prepare(f, true); return spineEl(f, -1); },
     async refresh(f) { await prepare(f); layout(); },
   };
 
@@ -791,7 +800,7 @@
     $('year').textContent = data.year || new Date().getFullYear();
     $('count').textContent = films.length;
     $('tapes').textContent = films.length === 1 ? 'Tape' : 'Tapes';
-    await Promise.all(films.map(prepare));
+    await Promise.all(films.map((f) => prepare(f)));
     layout();
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
   }
