@@ -800,6 +800,7 @@
     $('year').textContent = data.year || new Date().getFullYear();
     $('count').textContent = films.length;
     $('tapes').textContent = films.length === 1 ? 'Tape' : 'Tapes';
+    $('count').parentNode.hidden = false; // hidden until the real number is known (no "0 TAPES" while loading)
     await Promise.all(films.map((f) => prepare(f)));
     layout();
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });

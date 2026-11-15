@@ -13,7 +13,7 @@
 <body>
   <header>
     <h1 class="ticket"><img src="watched-2026.png" alt="Watched 2026" width="900" height="561"><span class="vh">Viewings <span id="year">2026</span></span></h1>
-    <p class="tally"><span id="count">0</span> <span id="tapes">Tapes</span></p>
+    <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
   </header>
 
   <div class="room">
@@ -21,7 +21,10 @@
     <figure class="wall-poster left" aria-hidden="true">
       <img src="wall/anatomy-of-a-murder-1959.jpg" alt="" width="448" height="674" loading="lazy">
     </figure>
-    <main id="shelves" aria-label="Shelf of watched films"></main>
+    <main id="shelves" aria-label="Shelf of watched films">
+      <!-- shown until app.js stocks the shelf (layout() clears it) -->
+      <div class="loading"><img src="loading.webp" alt="" width="500" height="270" fetchpriority="high"><p>Stocking the shelf...</p></div>
+    </main>
     <figure class="wall-poster right" aria-hidden="true">
       <img src="wall/bande-a-part-1964.jpg" alt="" width="620" height="888" loading="lazy">
     </figure>
