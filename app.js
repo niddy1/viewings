@@ -790,6 +790,7 @@
     films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
     $('year').textContent = data.year || new Date().getFullYear();
     $('count').textContent = films.length;
+    $('tapes').textContent = films.length === 1 ? 'Tape' : 'Tapes';
     await Promise.all(films.map(prepare));
     layout();
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });

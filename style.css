@@ -15,7 +15,8 @@ body {
   background: var(--wall);
 }
 
-header { text-align: center; padding: 44px 20px 6px; color: var(--ink); }
+@font-face { font-family: 'Blockletter'; src: url('fonts/Blockletter.otf') format('opentype'); font-display: swap; }
+header { position: relative; max-width: 1120px; margin: 0 auto; text-align: center; padding: 44px 20px 6px; color: var(--ink); }
 h1 {
   margin: 0;
   font-family: 'Bungee', 'Impact', sans-serif;
@@ -28,7 +29,13 @@ h1 {
 h1 span { color: var(--gold); }
 h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.45)); }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-.sub { margin: 12px 0 0; opacity: .75; font-size: 1rem; letter-spacing: .16em; text-transform: uppercase; }
+.tally {
+  position: absolute; right: 14px; bottom: 2px; margin: 0;
+  font-family: 'Blockletter', 'Impact', sans-serif; font-weight: 400; text-transform: uppercase;
+  font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1; letter-spacing: .04em; word-spacing: .12em;
+  color: #f1c203; text-shadow: 0 4px 12px rgba(0,0,0,.45);
+}
+@media (max-width: 640px) { .tally { position: static; margin: 14px 0 0; text-align: right; padding-right: 4px; } }
 
 /* ---------- shelf ----------
    A home-built pine case (after Ian's reference photo): a wide honey-stained face frame, light
