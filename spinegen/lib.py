@@ -229,7 +229,7 @@ def web_copy(im):
 
 
 def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0, matte=0.025,
-               card=(236, 231, 220), tears=0, dents=0, sun=0.0, blur=0.55, jpegq=90, out=None):
+               card=(236, 231, 220), tears=0, dents=0, sun=0.0, blur=0.55, jpegq=90, out=None, notch=None):
     """img: RGBA/RGB at S scale -> final RGB image.
     kind='slip': printed cardboard slipcase (white board showing at the folds, corners and mouth,
     scuffs, dents, torn patches).  kind='clam': plastic clamshell with a paper insert under a clear
@@ -323,6 +323,14 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
                 cv2.circle(sc, (int(rng.uniform(0, w)), int(rng.uniform(0, h))), int(rng.uniform(0.5, 1.6) * S), int(rng.uniform(80, 255)), -1, cv2.LINE_AA)
             scf = cv2.GaussianBlur(sc.astype(np.float32) / 255, (0, 0), 0.5 * S) * np.clip(mid * 2 + 0.8, 0, 1)
             a = _lay(a, scf * (0.25 + 0.4 * wear), crd)
+        if notch:  # the cassette showing through the thumb cut-out is plastic: no board wear on it
+            cx, by, r, ry = notch
+            for sx, sy, y0, col in ((1.0, 1.0, 0.0, (14, 14, 15)), (0.86, 1.0, 0.45, (26, 26, 28))):
+                d = np.sqrt(((xx - cx) / (r * sx)) ** 2 + ((yy - by + (0 if not y0 else 0)) / (ry * (sy if not y0 else 1))) ** 2)
+                if y0:  # the inner, lighter shell: same ellipse as drawn in eng.notch()
+                    cy2, ry2 = by + ry * 0.225, ry * 0.775
+                    d = np.sqrt(((xx - cx) / (r * sx)) ** 2 + ((yy - cy2) / ry2) ** 2)
+                a = _lay(a, (1 - d) * r / (1.2 * S), np.array(col, np.float32) / 255.0)
         # light: a flat board face, slightly lit from one side, folds turning away at the edges
         a *= (1 + rng.uniform(-0.07, 0.07) * (xn - 0.5) - rng.uniform(-0.03, 0.06) * (yn - 0.5) + 0.03 * fbm(h, w, 400 * S, rng, 1))[..., None]
         e0, e1 = rng.uniform(0.08, 0.2, 2)

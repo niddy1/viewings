@@ -103,7 +103,7 @@ def std(id, bg, ink, title, order='LPTF', photo=None, pb=WHT, pin=14, lg=None, l
         elif ch == 't': it += [Hh(title if isinstance(title, list) else [title], gap=8, margin=14), Gap(22)]
         elif ch == 'C': it += [tiny(credit, ccol, size=16), Gap(22)]
         elif ch == 'S': it += [stick, Gap(18)]
-        elif ch == 'F': it += foot(ft, fcol, vbox, vink, cat, id)
+        elif ch == 'F': it += ([] if 'T' in order else [Flex(1)]) + foot(ft, fcol, vbox, vink, cat, id)
         elif ch == '-': it += [Rule(scol, 2, 16), Gap(16)]
         elif ch == 'g': it += [Gap(14)]
         elif ch == 'b': it += [bars(barcols), Gap(20)]
@@ -381,11 +381,11 @@ std('dead-man-s-wire-2025', ('solid', (234, 228, 210)), (206, 36, 44),
     photo=ph(.5, .27, .8, 1.15), pb=(30, 28, 26), lg=(30, 28, 26), lw=.74, order='LPTCF', credit=['A GUS VAN SANT', 'FILM'],
     ccol=(30, 28, 26), ft='c', vbox=(206, 36, 44), fcol=(30, 28, 26), fin=dict(WORN, warm=.015))
 
-# Girl in the Box: TV movie, title block across the spine in its own serif
+# Girl in the Box: TV movie, thin cream Roman capitals down a black spine
 std('girl-in-the-box-2016', ('solid', (13, 11, 10)), (226, 214, 180),
-    L(tb('girl-in-the-box-2016'), 190, (226, 214, 180), speck=.002),
-    photo=ph(.55, .36, .62, 1.3), pb=(190, 150, 70), lg=None, lw=.7, order='LtPF', ft='a', vbox=(232, 40, 110),
-    fcol=(196, 186, 160), fin=SLIP, stick=None)
+    T('GIRL IN THE BOX', 'ter', 100, (226, 214, 180), track=.06, bold=.5),
+    photo=ph(.55, .36, .62, 1.3), pb=(190, 150, 70), lg=None, lw=.7, order='LPTCF', credit=['A LIFETIME', 'ORIGINAL MOVIE'],
+    ccol=(232, 40, 110), ft='a', vbox=(232, 40, 110), fcol=(196, 186, 160), fin=SLIP)
 
 # Heel: cold teal room, tall blood-red condensed letters
 std('heel-2025', ('grad', [(0, (16, 52, 60)), (1, (8, 24, 30))]), (206, 44, 34),
@@ -493,10 +493,10 @@ std('louis-c-k-ridiculous-2026', ('grad', [(0, (30, 42, 54)), (1, (10, 14, 20))]
     photo=ph(.5, .68, .9, 1.0), pb=(150, 190, 206), studio=['STAND-UP', 'SPECIAL'], scol=(150, 190, 206), order='lPTF',
     ft='b', fcol=(170, 186, 196), fin=SLIP)
 
-# The Devil Wears Prada 2: couture red, title block across in its serif caps
+# The Devil Wears Prada 2: couture red, white Roman capitals and a script 2
 std('the-devil-wears-prada-2-2026', ('solid', (172, 22, 36)), WHT,
-    L(tb('the-devil-wears-prada-2-2026', pad=.004), 180, WHT, speck=.003),
-    photo=ph(.5, .82, .62, 1.1), pb=WHT, photo2=ph(.38, .18, .5, 1.0), lg=WHT, lw=.5, order='LptPF', ft='a', vbox=(16, 14, 14),
+    T('THE DEVIL WEARS PRADA 2', 'ter', 92, WHT, track=.05, bold=.5),
+    photo=ph(.38, .18, .5, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(16, 14, 14),
     fcol=WHT, fin=dict(MINT, gloss=.1))
 
 # Jeff Arcuri: Nice to Meet You: marquee bulbs and heavy white

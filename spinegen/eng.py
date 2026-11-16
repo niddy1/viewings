@@ -367,9 +367,9 @@ def build(spec, out=None):
     for fn in spec.get('over', []):
         r = fn(im, W, rng)
         if r is not None: im = r
-    if spec.get('notch', True):
-        notch(im, W, rng)
     fin = dict(spec.get('fin', {}))
+    if spec.get('notch', True):
+        fin['notch'] = notch(im, W, rng)  # finish_vhs repaints the cassette there, so card wear never lands on it
     return finish_vhs(im, seed, out=out or (B + f"{spec['id']}-spine-b.jpg"), **fin)
 
 
@@ -382,3 +382,4 @@ def notch(im, W, rng):
     d.ellipse([cx - r - 1.5 * S, by - ry - 1.5 * S, cx + r + 1.5 * S, by + ry + 1.5 * S], fill=(232, 228, 216, 255))  # cut edge of the board
     d.ellipse([cx - r, by - ry, cx + r, by + ry], fill=(14, 14, 15, 255))
     d.ellipse([cx - r * 0.86, by - ry * 0.55, cx + r * 0.86, by + ry], fill=(26, 26, 28, 255))  # the cassette shell catching light
+    return (cx, by, r, ry)
