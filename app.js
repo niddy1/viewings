@@ -696,12 +696,14 @@
   }
 
   /* ---------- sorting and the genre filter ---------- */
-  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, year: -1 }; // oldest viewing first; best and newest first
+  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1 }; // oldest viewing first; best and newest first
   const r10 = (f) => (f.rating10 != null ? f.rating10 : (f.rating || 0) * 2);
   const byWatched = (a, b) => (a.watched || '').localeCompare(b.watched || '');
   const SORTS = {
     watched: byWatched,
     rating: (a, b) => r10(a) - r10(b),
+    // films without an IMDb score (new arrivals until it's filled in) go to the end either way
+    imdb: (a, b) => (a.imdbRating == null) - (b.imdbRating == null) || view.dir * ((a.imdbRating || 0) - (b.imdbRating || 0)),
     year: (a, b) => (a.year || 0) - (b.year || 0) || byWatched(a, b),
   };
 
@@ -710,7 +712,7 @@
     order = films.map((f, i) => i)
       .filter((i) => !view.genres.size || (films[i].genres || []).some((g) => view.genres.has(g)))
       // ties (same rating, same year) keep the order they were watched in
-      .sort((a, b) => view.dir * cmp(films[a], films[b]) || byWatched(films[a], films[b]));
+      .sort((a, b) => (view.sort === 'imdb' ? cmp(films[a], films[b]) : view.dir * cmp(films[a], films[b])) || byWatched(films[a], films[b]));
   }
 
   function updateTally() {
@@ -730,7 +732,7 @@
 
   function loadView() {
     const q = new URLSearchParams(location.search);
-    const m = /^(watched|rating|year)(-rev)?$/.exec(q.get('sort') || '');
+    const m = /^(watched|rating|imdb|year)(-rev)?$/.exec(q.get('sort') || '');
     if (m) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
     (q.get('genre') || '').split(',').filter(Boolean).forEach((g) => view.genres.add(g));
   }
@@ -833,6 +835,7 @@
     const facts = [f.year, f.runtime ? `${f.runtime} min` : null, f.director ? `dir. ${f.director}` : null].filter(Boolean);
     $('v-facts').textContent = facts.join(' · ');
     $('v-rating').innerHTML = stars(f);
+    $('v-imdb').textContent = f.imdbRating != null ? `IMDb ${f.imdbRating.toFixed(1)}` : '';
     $('v-watched').textContent = `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
     $('v-note').textContent = f.note || '';
