@@ -345,12 +345,6 @@ std('f1-2025', ('grad', [(0, (84, 96, 98)), (.5, (52, 62, 66)), (1, (22, 26, 30)
     photo=ph(.5, .42, .56, 1.6), pb=(226, 230, 228), lg=WHT, lw=.5, order='LPTCF', credit=['A JOSEPH KOSINSKI', 'FILM'],
     ccol=(226, 60, 44), ft='c', vbox=(226, 60, 44), fcol=(214, 218, 216), fin=dict(SLIP, gloss=.09))
 
-# Zootopia 2: white clamshell, candy-coloured type, the crowd from the poster
-std('zootopia-2-2025', ('solid', (249, 249, 244)), (20, 120, 84),
-    TT([('ZOOTOPIA', (22, 140, 92)), ('2', (240, 132, 20))], 'popb', 96, track=.02),
-    photo=ph(.5, .62, .86, 1.3), pb=(22, 140, 92), lg=(24, 50, 130), lw=.74, order='LPTSF',
-    stick=flow(dot, 70, ['FAMILY', 'FUN'], (240, 132, 20), d=70), ft='a', vbox=(24, 50, 130), fcol=(24, 50, 130), fin=CLAM, notch=False, bot=40)
-
 # Marty Supreme: sweat-and-sepia black, stacked condensed whites
 std('marty-supreme-2025', ('solid', (20, 15, 13)), (240, 234, 222),
     T('MARTY SUPREME', 'hcnb', 124, (240, 234, 222), squeeze=.8, rough=.35),
@@ -481,12 +475,6 @@ std('sentimental-value-2025', ('grad', [(0, (30, 60, 38)), (1, (14, 30, 20))]), 
     photo=ph(.5, .74, 1.0, .7), pb=WHT, lg=WHT, lw=.6, order='LTPCF', credit=['EN FILM AV', 'JOACHIM TRIER'], ccol=(236, 214, 150),
     ft='b', fcol=(200, 214, 200), fin=MINT)
 
-# Hoppers: Pixar yellow clamshell
-std('hoppers-2026', ('solid', (250, 190, 22)), (20, 18, 16),
-    L(tb('hoppers-2026'), 104, (20, 18, 16), speck=.001),
-    photo=ph(.5, .42, .92, 1.15), pb=(20, 18, 16), lg=(20, 18, 16), lw=.7, order='LPTF', ft='a', vbox=(20, 18, 16), vink=(250, 190, 22),
-    fcol=(20, 18, 16), fin=CLAM, notch=False, bot=40)
-
 # Louis C.K.: Ridiculous: a comedy-club special, slate and spotlight
 std('louis-c-k-ridiculous-2026', ('grad', [(0, (30, 42, 54)), (1, (10, 14, 20))]), WHT,
     TT([('LOUIS C.K.', (150, 190, 206)), ('RIDICULOUS', WHT)], 'her', 70, track=.02, sp=.22),
@@ -575,12 +563,6 @@ std('the-invite-2026', ('solid', (247, 245, 238)), (18, 17, 16),
     L(tb('the-invite-2026'), 104, (18, 17, 16)),
     photo=ph(.5, .32, .92, 1.0), pb=(18, 17, 16), lg=(18, 17, 16), lw=.4, order='LPTF', ft='d', fcol=(18, 17, 16), fin=MINT,
     dotst=(['COMEDY'], (196, 50, 40)))
-
-# Toy Story 5: toy-box blue clamshell
-std('toy-story-5-2026', ('solid', (34, 96, 206)), (250, 214, 40),
-    TT([('TOY', (250, 214, 40)), ('STORY', (232, 44, 40)), ('5', (250, 214, 40))], 'popb', 100, track=.01),
-    photo=ph(.5, .68, .92, 1.25), pb=(250, 214, 40), lg=WHT, lw=.7, order='LPTF', ft='a', vbox=(232, 44, 40), fcol=WHT,
-    fin=CLAM, notch=False, bot=40)
 
 # Motor City: pulp-paperback yellow, burnt-orange stencil
 std('motor-city-2025', ('solid', (246, 172, 30)), (176, 44, 16),
@@ -703,6 +685,163 @@ std('deep-web-2015', ('grad', [(0, (12, 12, 20)), (.5, (40, 40, 120)), (1, (14, 
     photo=ph(.5, .62, .9, .85), pb=(206, 232, 240), lg=WHT, lw=.7, order='LPTCF', credit=['THE CRIME SAGA OF', 'THE DIGITAL AGE'], ccol=(150, 160, 250),
     ft='e', fcol=(206, 232, 240), fin=WORN)
 
+
+
+# =====================================================================================
+# Disney and Pixar: the white clamshell.  Ian's rule (16 Nov 2026): every Disney or Pixar film gets
+# this box, laid out the way the 1990s Disney clamshell spines were: artwork running the full length,
+# a black diamond at the head, the studio logo reading down, the title in the film's own logo lettering,
+# a character portrait in a red diamond near the foot, then CC, VHS and the number.  The case itself
+# (white caps, sleeve, extra height and thickness) is added by finish_vhs(kind='clam').
+# =====================================================================================
+def head_diamond(lines, h=150):
+    """a tall black diamond with a silver sheen and keyline, holding plain type that reads down the spine"""
+    def fn(im, W, y0, rng):
+        cx, cy, rx, ry = W / 2 * S, (y0 + h / 2) * S, W * 0.27 * S, h / 2 * S
+        m = Image.new('L', im.size, 0)
+        pts = [(cx, cy - ry), (cx + rx, cy), (cx, cy + ry), (cx - rx, cy)]
+        ImageDraw.Draw(m).polygon(pts, fill=255)
+        yy, xx = np.mgrid[0:im.height, 0:im.width].astype(np.float32)
+        t = (xx - cx + (yy - cy) * 0.55) / (rx * 0.9)  # slanted bands of sheen, as on foil
+        sheen = 14 + 70 * np.exp(-((t + 0.25) / 0.22) ** 2) + 40 * np.exp(-((t - 0.55) / 0.16) ** 2)
+        fill = Image.fromarray(np.dstack([sheen, sheen, sheen * 1.04, np.full_like(sheen, 255)]).clip(0, 255).astype(np.uint8), 'RGBA')
+        fill.putalpha(m); im.alpha_composite(fill)
+        d = ImageDraw.Draw(im)
+        d.line(pts + [pts[0]], fill=(226, 228, 232, 255), width=int(1.8 * S), joint='curve')
+        ims = []
+        for t_, sz in lines:
+            i_ = T(t_, 'terb', sz, (246, 246, 242), track=.03).render(1.0); p = int((10 + sz * 0.12) * S)
+            ims.append(rot(i_.crop((p, p, i_.width - p, i_.height - p))))
+        tot = sum(i.width for i in ims) + 3 * S * (len(ims) - 1)
+        x = cx + tot / 2
+        for i_ in ims:
+            x -= i_.width; im.alpha_composite(i_, (int(x), int(cy - i_.height / 2))); x -= 3 * S
+    return Fn(fn, h)
+
+
+def head_emblem(path, h):
+    """the head emblem placed from an image file in logos/ (Ian's photo of it, squared up); never redrawn"""
+    src = Image.open(REPO + path).convert('RGBA')
+
+    def fn(im, W, y0, rng):
+        e = src.resize((int(h * S * src.width / src.height), int(h * S)), Image.LANCZOS).filter(ImageFilter.UnsharpMask(4, 90, 2))
+        im.alpha_composite(e, (int(W * S / 2 - e.width / 2), int(y0 * S)))
+    return Fn(fn, h)
+
+
+def vlogo(id, color, length, path=None):
+    """the studio's logo file from logos/, in one ink, turned to read down the spine"""
+    src = Image.open(REPO + (path or FILMS[id]['logo'])).convert('RGBA')
+    big = src.resize((int(length * S), int(length * S * src.height / src.width)), Image.LANCZOS)
+    a = np.asarray(big).astype(np.float32) / 255
+    m = np.clip((cv2.GaussianBlur(a[..., 3], (0, 0), 0.6) - 0.5) * 3 + 0.5, 0, 1)
+    big = rot(colorize(Image.fromarray((m * 255).astype(np.uint8)), color))
+
+    def fn(im, W, y0, rng):
+        sh = Image.new('RGBA', big.size, (0, 0, 0, 0)); sh.putalpha(big.getchannel('A').point(lambda v: int(v * .55)))
+        x, y = int(W * S / 2 - big.width / 2), int(y0 * S)
+        im.alpha_composite(sh.filter(ImageFilter.GaussianBlur(1.2 * S)), (x + S, y + S))
+        im.alpha_composite(big, (x, y))
+    return Fn(fn, length)
+
+
+def portrait(box, h, border=(214, 30, 40), inner=(250, 214, 60)):
+    """a crop of the poster in a red diamond frame"""
+    def fn(im, W, y0, rng):
+        cov = Image.open(CUR['cover']).convert('RGB'); cw, ch = cov.size
+        w_ = W * 0.80  # a true diamond: clearly taller than it is wide, not a square on its corner
+        c = cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch))).resize((int(w_ * S), int(h * S)), Image.LANCZOS)
+        c = c.filter(ImageFilter.UnsharpMask(3, 60, 2)).convert('RGBA')
+        m = Image.new('L', c.size, 0); d = ImageDraw.Draw(m)
+        pts = [(c.width / 2, 0), (c.width, c.height / 2), (c.width / 2, c.height), (0, c.height / 2)]
+        d.polygon(pts, fill=255); c.putalpha(m)
+        d2 = ImageDraw.Draw(c)
+        d2.line(pts + [pts[0]], fill=tuple(border) + (255,), width=int(4.5 * S), joint='curve')
+        k = 0.93; q = [(c.width / 2 + (x - c.width / 2) * k, c.height / 2 + (y - c.height / 2) * k) for x, y in pts]
+        d2.line(q + [q[0]], fill=tuple(inner) + (255,), width=int(1.2 * S))
+        c.putalpha(m)
+        im.alpha_composite(c, (int((W - w_) / 2 * S), int(y0 * S)))
+    return Fn(fn, h)
+
+
+def ccbox(col, w=30, h=20):
+    def fn(im, W, y0, rng):
+        d = ImageDraw.Draw(im)
+        x0 = (W - w) / 2 * S
+        d.rounded_rectangle([x0, y0 * S, x0 + w * S, (y0 + h) * S], radius=4 * S, fill=tuple(col) + (255,))
+        t = T('CC', 'intxb', 13, (20, 20, 24) if sum(col) > 380 else (240, 240, 236)).render(1.0)
+        p = int((10 + 13 * 0.12) * S); t = t.crop((p, p, t.width - p, t.height - p))
+        im.alpha_composite(t, (int(W * S / 2 - t.width / 2), int((y0 + h / 2) * S - t.height / 2)))
+    return Fn(fn, h)
+
+
+EMBLEM = 'logos/classics-diamond.png'  # Ian's own photo of the clamshell head emblem; without the file a plain diamond is drawn
+
+
+def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, studio=True, **kw):
+    W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
+    items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22)] + ([vlogo(id, lcol, int(W * .62), lpath), Gap(22)] if studio else []) + [  # studio=False when the title logo already carries the studio's name
+             Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
+             portrait(face, int(W * 1.12)), Gap(16), ccbox(ink), Gap(12),
+             tiny(['VHS'], ink, font='intsb', size=22, track=.04), Gap(8), catno(cat or catfor(id)[:4], ink, size=20)]
+    kw.setdefault('side', 22)
+    add(id, bg, items, fin=fin or dict(CLAM), W=W, notch=False, top=16, bot=26, **kw)
+
+
+# Toy Story 5: bedroom-wall blue; the poster's own logo taken apart and laid along the spine the way the
+# Toy Story tapes did it: TOY, then the red STORY plate, then the number.
+def _soft(m, r=1.4):
+    return np.clip((cv2.GaussianBlur(m.astype(np.float32), (0, 0), r) - 0.5) * 4 + 0.5, 0, 1)
+
+
+def _biggest(m):
+    n, lab, st, _ = cv2.connectedComponentsWithStats(m.astype(np.uint8), connectivity=8)
+    return lab == (1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))) if n > 1 else m
+
+
+def ts_letters(rgb):
+    """yellow letters with their blue edge, off the sky and off the red plate"""
+    r, g, b = [rgb[..., i].astype(np.int32) for i in range(3)]
+    yel = (r > 170) & (g > 130) & (b < 130) & (r - b > 90)
+    blu = (b > 110) & (r < 100) & (b - r > 70)
+    m = cv2.morphologyEx((yel | blu).astype(np.uint8), cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+    m = _biggest(m)
+    filled = np.zeros_like(m, np.uint8)
+    cs, _ = cv2.findContours(m.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    cv2.drawContours(filled, cs, -1, 1, -1)
+    hole = (filled == 1) & ~(yel | blu) & (r > 95)  # the sky showing through the O stays a hole
+    return rgb, _soft(filled.astype(bool) & ~cv2.erode(hole.astype(np.uint8), np.ones((5, 5), np.uint8)).astype(bool))
+
+
+def ts_plate(y0f, y1f):
+    """the red plate with STORY on it; the bits of TOY and the 5 that overlap it are painted back to red"""
+    def fn(rgb):
+        r, g, b = [rgb[..., i].astype(np.int32) for i in range(3)]
+        red = (r > 130) & (g < 80) & (b < 90)
+        hull = np.zeros(red.shape, np.uint8)
+        pts = cv2.findNonZero(_biggest(cv2.morphologyEx(red.astype(np.uint8), cv2.MORPH_OPEN, np.ones((7, 7), np.uint8))).astype(np.uint8))
+        cv2.fillConvexPoly(hull, cv2.convexHull(pts), 1)
+        h = rgb.shape[0]
+        band = np.zeros(red.shape, bool); band[int(y0f * h):int(y1f * h)] = True  # the rows holding STORY
+        keep = red | (band & (hull == 1))
+        out = rgb.copy(); out[(hull == 1) & ~keep] = np.median(rgb[red], axis=0).astype(np.uint8)
+        return out, _soft(hull)
+    return fn
+
+
+disney('toy-story-5-2026', ('strip', dict(x0=.0, blur=14, wash=((44, 110, 214), .62))),
+       LC([(0.375, 0.064, 0.625, 0.146), (0.380, 0.126, 0.610, 0.190), (0.450, 0.168, 0.550, 0.250)], 170, gapf=.05,
+          cuts=[ts_letters, ts_plate(.30, .68), ts_letters]),
+       ph(.335, .305, .19, 1.4))
+
+# Hoppers: the poster's yellow all the way down, its glitchy black lettering
+disney('hoppers-2026', ('grad', [(0, (252, 200, 30)), (.6, (250, 186, 20)), (1, (236, 150, 14))]),
+       L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), ph(.5, .305, .22, 1.4), lcol=(20, 18, 16), ink=(20, 18, 16))
+
+# Zootopia 2: the film's own title logo (Ian supplied the image: logos/zootopia-2-title.png, kept on its
+# night-blue field and feathered at the edges), on a spine graded to the same blues
+disney('zootopia-2-2025', ('grad', [(0, (8, 8, 34)), (.5, (12, 12, 50)), (1, (10, 16, 46))]),
+       Pic('logos/zootopia-2-title.png', 226), ph(.47, .705, .2, 1.4), lcol=WHT, side=4, studio=False)
 
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):

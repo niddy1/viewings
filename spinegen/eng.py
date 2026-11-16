@@ -113,8 +113,67 @@ class TT(T):
         x = pad
         for m, (_, col) in zip(ms, s.runs):
             cnv.alpha_composite(colorize(m, col), (x, pad + hh - m.height)); x += m.width + gap
+        if s.outline:  # a keyline round the whole line, e.g. yellow letters edged in blue
+            al = dilate(cnv.getchannel('A'), max(1, int(s.outline[1] * S * k)))
+            und = colorize(al, s.outline[0]); und.alpha_composite(cnv); cnv = und
         s._pad = pad
         return cnv
+
+
+class LC:
+    """lettering lifted off the poster in its own colours (a multi-coloured title logo), cut from its
+    background with GrabCut.  boxes are joined into one line, scaled together.  size = height of the tallest."""
+    def __init__(s, boxes, size, gapf=0.16, valign='mid', outline=None, cuts=None):
+        s.__dict__.update(locals()); del s.__dict__['s']  # cuts: per box, fn(rgb x4) -> (rgb, alpha 0..1), or None for GrabCut
+
+    def _cut(s, box, fn=None):
+        cov = cv2.cvtColor(cv2.imread(CUR['cover']), cv2.COLOR_BGR2RGB)
+        ch, cw = cov.shape[:2]
+        m = 6
+        x0, y0, x1, y1 = int(box[0] * cw) - m, int(box[1] * ch) - m, int(box[2] * cw) + m, int(box[3] * ch) + m
+        c = np.ascontiguousarray(cov[max(0, y0):y1, max(0, x0):x1])
+        big = cv2.resize(c, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC)
+        if fn:
+            big, al = fn(big)
+            im = Image.fromarray(np.dstack([big, (np.clip(al, 0, 1) * 255).astype(np.uint8)]), 'RGBA')
+            return im.crop(im.getchannel('A').point(lambda v: 255 if v > 60 else 0).getbbox())
+        mask = np.zeros(big.shape[:2], np.uint8)
+        cv2.setRNGSeed(11)
+        cv2.grabCut(cv2.cvtColor(big, cv2.COLOR_RGB2BGR), mask, (6, 6, big.shape[1] - 12, big.shape[0] - 12), np.zeros((1, 65)), np.zeros((1, 65)), 6, cv2.GC_INIT_WITH_RECT)
+        al = cv2.GaussianBlur(((mask == 1) | (mask == 3)).astype(np.float32), (0, 0), 1.6)
+        al = np.clip((al - 0.5) * 4 + 0.5, 0, 1)
+        im = Image.fromarray(np.dstack([big, (al * 255).astype(np.uint8)]), 'RGBA')
+        return im.crop(im.getchannel('A').point(lambda v: 255 if v > 60 else 0).getbbox())
+
+    def render(s, k=1.0, seed=0):
+        parts = [s._cut(b, (s.cuts or [None] * len(s.boxes))[i]) for i, b in enumerate(s.boxes)]
+        th = max(4, int(s.size * k * S))
+        f = th / max(p.height for p in parts)
+        parts = [p.resize((max(1, int(p.width * f)), max(1, int(p.height * f))), Image.LANCZOS).filter(ImageFilter.UnsharpMask(3, 80, 2)) for p in parts]
+        gap = int(th * s.gapf); pad = int(10 * S)
+        cnv = Image.new('RGBA', (sum(p.width for p in parts) + gap * (len(parts) - 1) + 2 * pad, th + 2 * pad), (0, 0, 0, 0))
+        x = pad
+        for p_ in parts:
+            cnv.alpha_composite(p_, (x, pad + ((th - p_.height) // 2 if s.valign == 'mid' else th - p_.height))); x += p_.width + gap
+        if s.outline:
+            al = dilate(cnv.getchannel('A'), max(1, int(s.outline[1] * S * k)))
+            und = colorize(al, s.outline[0]); und.alpha_composite(cnv); cnv = und
+        s._pad = pad
+        return cnv
+
+
+class Pic:
+    """a title-logo picture file (RGBA, e.g. one Ian supplied in logos/) used as a line of lettering; never redrawn.
+    size = its height on the spine (it reads down the spine like any other title line)."""
+    def __init__(s, path, size):
+        s.path = path; s.size = size
+
+    def render(s, k=1.0, seed=0):
+        src = Image.open(REPO + s.path).convert('RGBA')
+        th = max(4, int(s.size * k * S))
+        im = src.resize((max(1, int(src.width * th / src.height)), th), Image.LANCZOS).filter(ImageFilter.UnsharpMask(3, 60, 2))
+        s._pad = 0
+        return im
 
 
 def lift_mask(box, mode='auto', key=None, t=(55, 115), cut=(0.35, 0.65), close=0, speck=0.004, k=2, nbg=1, gain=2.4):

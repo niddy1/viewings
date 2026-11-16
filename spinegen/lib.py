@@ -224,8 +224,12 @@ def _lay(a, k, col):
 WEB_H = 550  # saved height: twice the 250px the shelf shows (sharp on retina); 1100px files made the first load slow
 
 
+CLAM_CAP = 44  # white plastic showing above and below a clamshell's paper insert (px in the full-size drawing)
+
+
 def web_copy(im):
-    return im if im.height <= WEB_H else im.resize((round(im.width * WEB_H / im.height), WEB_H), Image.LANCZOS)
+    f = WEB_H / H  # one scale for every tape, so a clamshell (taller and thicker than a slipcase) stays bigger on the shelf
+    return im.resize((round(im.width * f), round(im.height * f)), Image.LANCZOS)
 
 
 def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0, matte=0.025,
@@ -237,6 +241,16 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
     Everything is seeded per tape; nothing here is the same on two spines."""
     rng = np.random.default_rng(seed)
     a = np.asarray(img.convert('RGB')).astype(np.float32) / 255.0
+    ins0 = ins1 = 0
+    if kind == 'clam':  # the insert sits in a white plastic case that shows above, below and as a sliver each side
+        r2 = np.random.default_rng(seed + 77)
+        yel = r2.uniform(0, 1) ** 2  # some cases have yellowed
+        plast = np.array([240, 240 - 10 * yel, 234 - 40 * yel], np.float32) / 255.0
+        cap = np.ones((CLAM_CAP * S, a.shape[1], 3), np.float32) * plast
+        sl = int(r2.uniform(2.5, 4.5) * S)
+        a[:, :sl] = plast; a[:, -sl:] = plast
+        ins0, ins1 = cap.shape[0], cap.shape[0] + a.shape[0]
+        a = np.concatenate([cap, a, cap], 0)
     h, w, _ = a.shape
     yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
     xn, yn = xx / (w - 1), yy / (h - 1)
@@ -341,17 +355,34 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
             a = 1 - (1 - a) * (1 - gloss * band[..., None])
     else:  # clamshell
         # moulded plastic rounds away at both sides; the sleeve catches light in streaks
-        a *= (1 - 0.30 * np.clip(1 - dx / 9.0, 0, 1) ** 2)[..., None]
+        # the whole spine is a rounded moulding, not a flat face: it curves away to both long edges,
+        # so it darkens steadily toward them (more on the side away from the light) under a soft highlight
+        u = 2 * xn - 1
+        lit = rng.uniform(-0.25, -0.1)
+        a *= (1 - 0.16 * (u - lit) ** 2 - 0.30 * np.abs(u) ** 5 - 0.10 * np.clip(u, 0, 1) ** 2)[..., None]
+        a = 1 - (1 - a) * (1 - 0.10 * np.exp(-((u - lit) / 0.30) ** 2)[..., None])
         for xc, wd, st in ((rng.uniform(0.2, 0.42), 0.035, 1.0), (rng.uniform(0.55, 0.8), 0.09, 0.45)):
             band = np.exp(-((xn - xc - 0.03 * fbm(h, w, 260 * S, rng, 2)) / wd) ** 2)
             band *= np.clip(0.55 + 0.9 * fbm(h, w, 120 * S, rng, 2), 0, 1.3) * st
             a = 1 - (1 - a) * (1 - (0.10 + gloss) * band[..., None])
-        # sleeve weld ridge near top and bottom
-        for yc in (rng.uniform(8, 13), None):
-            yv = yy / S if yc else (h - 1 - yy) / S
-            yc = yc or rng.uniform(8, 13)
-            a *= (1 - 0.14 * np.exp(-((yv - yc) / 1.2) ** 2))[..., None]
-            a += (0.05 * np.exp(-((yv - yc - 2.2) / 1.2) ** 2))[..., None]
+        # the clear sleeve stops at the insert: a welded edge top and bottom, a faint shadow under it
+        for yb, sg in ((ins0, 1), (ins1, -1)):
+            yv = (yy - yb) * sg / S
+            a *= (1 - 0.30 * np.exp(-((yv - 1.0) / 1.3) ** 2))[..., None]
+            a *= (1 - 0.16 * np.clip(1 - (yv - 1.0) / 9.0, 0, 1) * (yv > 0))[..., None]  # the cap stands proud: its shadow on the sleeve
+            a += (0.05 * np.exp(-((yv - 4.0) / 1.4) ** 2))[..., None]
+        # the caps: moulded plastic rounding over at the very ends, a seam, a little grime
+        capm = ((yy < ins0) | (yy >= ins1)).astype(np.float32)
+        dy_ = np.minimum(yy, h - 1 - yy) / S
+        a *= (1 - capm * (0.10 * np.clip(1 - dy_ / 6.0, 0, 1) ** 2 + 0.05 * np.clip(fbm(h, w, 14 * S, rng, 3), -1, 1) ** 2))[..., None]
+        # the ends are rolled: the plastic turns away at each corner, so shade into the corners
+        cr = 12.0  # a small ease only: the ends of the case are close to square
+        cd = np.sqrt(np.clip(1 - dx / cr, 0, 1) ** 2 + np.clip(1 - dy_ / cr, 0, 1) ** 2)
+        a *= (1 - 0.18 * np.clip(cd - 0.8, 0, 1) / 0.6)[..., None]
+        a *= (1 - capm * 0.07 * np.clip((dy_ - 0.55 * CLAM_CAP) / 3.0, 0, 1))[..., None]  # the lip nearest the sleeve sits a shade darker
+        seam = rng.uniform(0.45, 0.62) * CLAM_CAP
+        a *= (1 - capm * 0.16 * np.exp(-((dy_ - seam) / 0.9) ** 2))[..., None]
+        a += (capm * 0.05 * np.exp(-((dy_ - seam + 2.0) / 1.0) ** 2))[..., None]
         sc = np.zeros((h, w), np.uint8)
         for i in range(int(10 + 50 * wear)):
             x0, y0 = rng.uniform(0, w), rng.uniform(0, h)
