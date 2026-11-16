@@ -40,7 +40,7 @@ h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height:
 
 /* sort + genre filter: bottom left of the header, opposite the tally */
 .controls {
-  position: absolute; left: 14px; bottom: -34px; z-index: 20;
+  position: absolute; left: 14px; bottom: -34px; z-index: 9; /* over the case (for the genre list), under the viewer (10) */
   display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
   font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; text-align: left;
 }
@@ -446,6 +446,8 @@ body.designed-spine .vcr-respine { display: none; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .rating small { font-size: .85rem; letter-spacing: 0; opacity: .6; margin-left: 10px; vertical-align: middle; }
+.imdb-score { margin: 8px 0 0; font-size: .85rem; letter-spacing: .08em; opacity: .7; }
+.imdb-score:empty { display: none; }
 .watched { margin: 12px 0 10px; font-size: .9rem; }
 .genres { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
 .genres span { border: 1px solid rgba(239,230,210,.3); border-radius: 99px; padding: 2px 12px; font-size: .75rem; letter-spacing: .06em; }
