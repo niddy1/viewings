@@ -236,11 +236,15 @@
     // picture, so the full poster isn't downloaded or analysed for it (that made the first load slow).
     // drawn=true (the Re-mark spine preview) always builds the drawn spine.
     f._spine = null;
-    if (f.poster) { const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg'); if (await loadImg(sp)) f._spine = sp; }
+    let si = null;
+    if (f.poster) { const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg'); si = await loadImg(sp); if (si) f._spine = sp; }
     if (f._spine && !drawn) {
       const rt = f.runtime || (90 + hash(f.title) % 60);
       f._w = Math.round(Math.min(52, Math.max(42, 40 + (rt - 90) * 0.12)));
       f._r = hash(f.title + 'wear'); f._h = SPINE_H; f._dmg = []; f._top = ''; f._font = pickFont(f);
+      // Spine pictures are saved at 550px for a 250px slipcase. A taller picture is a Disney/Pixar clamshell,
+      // which is a bigger box: show it at the same scale, so it stands taller and thicker than its neighbours.
+      if (si.naturalHeight > 560) { const k = SPINE_H / 550; f._w = Math.round(si.naturalWidth * k); f._h = Math.round(si.naturalHeight * k); }
       f._c = '#222'; f._t = '#efe6d2';
       return;
     }
