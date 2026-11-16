@@ -695,20 +695,27 @@ std('deep-web-2015', ('grad', [(0, (12, 12, 20)), (.5, (40, 40, 120)), (1, (14, 
 # (white caps, sleeve, extra height and thickness) is added by finish_vhs(kind='clam').
 # =====================================================================================
 def head_diamond(lines, h=150):
-    """a black diamond with a white keyline holding a couple of lines of plain type"""
+    """a tall black diamond with a silver sheen and keyline, holding plain type that reads down the spine"""
     def fn(im, W, y0, rng):
+        cx, cy, rx, ry = W / 2 * S, (y0 + h / 2) * S, W * 0.27 * S, h / 2 * S
+        m = Image.new('L', im.size, 0)
+        pts = [(cx, cy - ry), (cx + rx, cy), (cx, cy + ry), (cx - rx, cy)]
+        ImageDraw.Draw(m).polygon(pts, fill=255)
+        yy, xx = np.mgrid[0:im.height, 0:im.width].astype(np.float32)
+        t = (xx - cx + (yy - cy) * 0.55) / (rx * 0.9)  # slanted bands of sheen, as on foil
+        sheen = 14 + 70 * np.exp(-((t + 0.25) / 0.22) ** 2) + 40 * np.exp(-((t - 0.55) / 0.16) ** 2)
+        fill = Image.fromarray(np.dstack([sheen, sheen, sheen * 1.04, np.full_like(sheen, 255)]).clip(0, 255).astype(np.uint8), 'RGBA')
+        fill.putalpha(m); im.alpha_composite(fill)
         d = ImageDraw.Draw(im)
-        cx, cy, rx, ry = W / 2 * S, (y0 + h / 2) * S, W * 0.40 * S, h / 2 * S
-        d.polygon([(cx, cy - ry), (cx + rx, cy), (cx, cy + ry), (cx - rx, cy)], fill=(12, 12, 14, 255))
-        k = 0.86
-        d.line([(cx, cy - ry * k), (cx + rx * k, cy), (cx, cy + ry * k), (cx - rx * k, cy), (cx, cy - ry * k)], fill=(236, 236, 232, 255), width=int(1.6 * S))
-        ims = [T(t, 'terb', sz, (240, 240, 236), track=.04).render(1.0) for t, sz in lines]
-        tot = sum(i.height - 2 * (int((10 + sz * 0.12) * S)) for i, (_, sz) in zip(ims, lines)) + 3 * S * (len(ims) - 1)
-        y = cy - tot / 2
-        for i_, (_, sz) in zip(ims, lines):
-            p = int((10 + sz * 0.12) * S)
-            i_ = i_.crop((p, p, i_.width - p, i_.height - p))
-            im.alpha_composite(i_, (int(cx - i_.width / 2), int(y))); y += i_.height + 3 * S
+        d.line(pts + [pts[0]], fill=(226, 228, 232, 255), width=int(1.8 * S), joint='curve')
+        ims = []
+        for t_, sz in lines:
+            i_ = T(t_, 'terb', sz, (246, 246, 242), track=.03).render(1.0); p = int((10 + sz * 0.12) * S)
+            ims.append(rot(i_.crop((p, p, i_.width - p, i_.height - p))))
+        tot = sum(i.width for i in ims) + 3 * S * (len(ims) - 1)
+        x = cx + tot / 2
+        for i_ in ims:
+            x -= i_.width; im.alpha_composite(i_, (int(x), int(cy - i_.height / 2))); x -= 3 * S
     return Fn(fn, h)
 
 
@@ -758,9 +765,9 @@ def ccbox(col, w=30, h=20):
     return Fn(fn, h)
 
 
-def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 26), ('2026', 17)), ink=WHT, cat=None, lpath=None, fin=None, **kw):
+def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, **kw):
     W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
-    items = [Gap(4), head_diamond(head, int(W * .56)), Gap(16), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
+    items = [Gap(4), Gap(10), head_diamond(head, int(W * .78)), Gap(22), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
              portrait(face, int(W * 1.04)), Gap(16), ccbox(ink), Gap(12),
              tiny(['VHS'], ink, font='intsb', size=22, track=.04), Gap(8), catno(cat or catfor(id)[:4], ink, size=20)]

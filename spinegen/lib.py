@@ -368,8 +368,9 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
         # the clear sleeve stops at the insert: a welded edge top and bottom, a faint shadow under it
         for yb, sg in ((ins0, 1), (ins1, -1)):
             yv = (yy - yb) * sg / S
-            a *= (1 - 0.22 * np.exp(-((yv - 1.0) / 1.3) ** 2))[..., None]
-            a += (0.06 * np.exp(-((yv - 4.0) / 1.4) ** 2))[..., None]
+            a *= (1 - 0.30 * np.exp(-((yv - 1.0) / 1.3) ** 2))[..., None]
+            a *= (1 - 0.16 * np.clip(1 - (yv - 1.0) / 9.0, 0, 1) * (yv > 0))[..., None]  # the cap stands proud: its shadow on the sleeve
+            a += (0.05 * np.exp(-((yv - 4.0) / 1.4) ** 2))[..., None]
         # the caps: moulded plastic rounding over at the very ends, a seam, a little grime
         capm = ((yy < ins0) | (yy >= ins1)).astype(np.float32)
         dy_ = np.minimum(yy, h - 1 - yy) / S
@@ -378,6 +379,7 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
         cr = 12.0  # a small ease only: the ends of the case are close to square
         cd = np.sqrt(np.clip(1 - dx / cr, 0, 1) ** 2 + np.clip(1 - dy_ / cr, 0, 1) ** 2)
         a *= (1 - 0.18 * np.clip(cd - 0.8, 0, 1) / 0.6)[..., None]
+        a *= (1 - capm * 0.07 * np.clip((dy_ - 0.55 * CLAM_CAP) / 3.0, 0, 1))[..., None]  # the lip nearest the sleeve sits a shade darker
         seam = rng.uniform(0.45, 0.62) * CLAM_CAP
         a *= (1 - capm * 0.16 * np.exp(-((dy_ - seam) / 0.9) ** 2))[..., None]
         a += (capm * 0.05 * np.exp(-((dy_ - seam + 2.0) / 1.0) ** 2))[..., None]
