@@ -126,7 +126,7 @@ async function tmdb(endpoint, params = {}) {
   for (const base of byFilm.values()) {
     n++;
     let old = base.imdb ? existing.get(base.imdb) : existing.get(key(base.title, base.year));
-    if (ptp && old) { base.title = old.title; base.year = old.year; } // PTP has no year and its own spellings; keep the shelf's
+    if (ptp && old && old.year) { base.title = old.title; base.year = old.year; } // PTP has no year and its own spellings; keep the shelf's (a seed entry without a year takes TMDB's)
     const k = key(base.title, base.year);
     // "tmdbOverride" in films.json forces a specific TMDB movie. It is re-fetched
     // whenever it differs from the "tmdb" id the script recorded last time.
@@ -160,7 +160,7 @@ async function tmdb(endpoint, params = {}) {
       const d = await tmdb(`/${isTv ? 'tv' : 'movie'}/${hit.id}`, { append_to_response: 'credits,external_ids' });
       const dTitle = d.title || d.name || '';
       const relYear = Number((d.release_date || d.first_air_date || '').slice(0, 4));
-      if (ptp && !old) { base.title = dTitle || base.title; base.year = relYear || undefined; } // new film: TMDB's title and year
+      if (ptp && !(old && old.year)) { base.title = dTitle || base.title; base.year = relYear || undefined; } // new film (or a bare seed entry): TMDB's title and year
       if (!override && !base.imdb && (Math.abs(relYear - base.year) > 1 || dTitle.toLowerCase() !== base.title.toLowerCase()))
         review.push(`${base.title} (${base.year}): matched "${dTitle}" (${relYear}) - check this one`);
 
