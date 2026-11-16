@@ -23,6 +23,38 @@
 
   const $ = (id) => document.getElementById(id);
   const shelves = $('shelves');
+
+  /* ---------- which year's shelf: ?shelf=2025 (no param = the newest) ---------- */
+  // One data file and one ticket image per year. Add a year here (and its watched-<year>.png) to add a shelf.
+  const SHELVES = { 2025: 'films-2025.json', 2026: 'films.json' };
+  const YEARS = Object.keys(SHELVES).map(Number).sort((a, b) => a - b);
+  const NEWEST = YEARS[YEARS.length - 1];
+  const SHELF = (() => { const y = Number(new URLSearchParams(location.search).get('shelf')); return SHELVES[y] ? y : NEWEST; })();
+  const DATA_FILE = SHELVES[SHELF];
+  (function shelfHeader() {
+    const img = document.querySelector('h1.ticket img');
+    if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
+    $('year').textContent = SHELF;
+    if (SHELF !== NEWEST) document.title = `Viewings ${SHELF}`;
+    // arrows either side of the ticket: older shelf on the left, newer on the right
+    const link = (y) => {
+      const q = new URLSearchParams(location.search);
+      q.delete('genre'); // genres differ from year to year
+      if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
+      const qs = q.toString();
+      return location.pathname + (qs ? '?' + qs : '');
+    };
+    const i = YEARS.indexOf(SHELF);
+    [['shelf-prev', YEARS[i - 1]], ['shelf-next', YEARS[i + 1]]].forEach(([id, y]) => {
+      const a = $(id);
+      if (!a) return;
+      if (y == null) { a.hidden = true; return; }
+      a.href = link(y);
+      a.querySelector('.yr').textContent = y;
+      a.setAttribute('aria-label', `${y} shelf`);
+      a.hidden = false;
+    });
+  })();
   let films = [];
   let spineEls = [];
   let current = -1;
@@ -893,6 +925,8 @@
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
+    shelf: SHELF,        // the year on show
+    dataFile: DATA_FILE, // films.json for the newest year, films-<year>.json for older ones (vcr.js reads and commits this)
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },
     async preview(f) { await prepare(f, true); return spineEl(f, -1); },
@@ -902,10 +936,9 @@
   /* ---------- boot ---------- */
   async function boot() {
     let data;
-    try { data = await (await fetch('films.json', { cache: 'no-cache' })).json(); }
-    catch { shelves.innerHTML = '<p style="text-align:center;opacity:.6">Couldn\'t load films.json. Serve this folder over http (see README).</p>'; return; }
+    try { data = await (await fetch(DATA_FILE, { cache: 'no-cache' })).json(); }
+    catch { shelves.innerHTML = `<p style="text-align:center;opacity:.6">Couldn't load ${DATA_FILE}. Serve this folder over http (see README).</p>`; return; }
     films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
-    $('year').textContent = data.year || new Date().getFullYear();
     loadView();
     computeOrder();
     renderControls();

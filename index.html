@@ -12,7 +12,12 @@
 </head>
 <body>
   <header>
-    <h1 class="ticket"><img src="watched-2026.png" alt="Watched 2026" width="900" height="561"><span class="vh">Viewings <span id="year">2026</span></span></h1>
+    <div class="ticket-row">
+      <!-- step to the year before / after; app.js fills these in and hides the one with nowhere to go -->
+      <a class="shelf-arrow prev" id="shelf-prev" hidden><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M30 4 8 24l22 20"/></svg><span class="yr"></span></a>
+      <h1 class="ticket"><img src="watched-2026.png" alt="Watched 2026" width="900" height="561"><span class="vh">Viewings <span id="year">2026</span></span></h1>
+      <a class="shelf-arrow next" id="shelf-next" hidden><span class="yr"></span><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M10 4l22 20-22 20"/></svg></a>
+    </div>
     <div class="controls" id="controls" hidden>
       <div class="sort" role="group" aria-label="Sort the shelf">
         <span class="label">Sort</span>

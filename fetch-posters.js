@@ -5,6 +5,9 @@
  *
  *   TMDB_KEY=your_key node fetch-posters.js path/to/ratings.csv [year]
  *
+ * Each year is its own shelf: the newest year lives in films.json, older ones in films-<year>.json
+ * (e.g. `... ratings.csv 2025` writes films-2025.json, shown at ?shelf=2025).
+ *
  * (The VCR panel on the site does the same thing from the browser: type "vcr" on the page.)
  *
  * - Needs Node 18+ (built-in fetch). No npm install.
@@ -21,7 +24,10 @@ const path = require('path');
 const KEY = process.env.TMDB_KEY;
 const CSV = process.argv[2] || 'ratings.csv';
 const YEAR = String(process.argv[3] || process.env.YEAR || new Date().getFullYear());
-const OUT = path.join(__dirname, 'films.json');
+// films.json holds the newest shelf; any other year goes to films-<year>.json (see SHELVES in app.js).
+const MAIN = path.join(__dirname, 'films.json');
+const mainYear = (() => { try { return String(JSON.parse(fs.readFileSync(MAIN, 'utf8')).year); } catch { return ''; } })();
+const OUT = !mainYear || mainYear === YEAR ? MAIN : path.join(__dirname, `films-${YEAR}.json`);
 const POSTERS = path.join(__dirname, 'posters');
 const LOGOS = path.join(__dirname, 'logos');
 
@@ -205,5 +211,5 @@ async function tmdb(endpoint, params = {}) {
   films.sort((a, b) => a.watched.localeCompare(b.watched));
   fs.writeFileSync(OUT, JSON.stringify({ year: Number(YEAR), films }, null, 2) + '\n');
   fs.writeFileSync(path.join(__dirname, 'needs_review.txt'), review.length ? review.join('\n') + '\n' : 'All matches looked confident.\n');
-  console.log(`\nWrote films.json (${films.length} films). ${review.length ? review.length + ' to double-check, see needs_review.txt' : 'No matches flagged.'}`);
+  console.log(`\nWrote ${path.basename(OUT)} (${films.length} films). ${review.length ? review.length + ' to double-check, see needs_review.txt' : 'No matches flagged.'}`);
 })();
