@@ -26,6 +26,8 @@
   let films = [];
   let spineEls = [];
   let current = -1;
+  let order = [];      // indices into films, in shelf order, after sorting and the genre filter
+  const view = { sort: 'watched', dir: 1, genres: new Set() };
 
   const hash = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
 
@@ -676,8 +678,8 @@
     const cs = getComputedStyle(shelves), gap = parseFloat(cs.getPropertyValue('--end-gap')) || 16;
     const avail = shelves.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 2 * gap;
     let row = [], used = 0, rows = [];
-    films.forEach((f, i) => {
-      const w = f._w;
+    order.forEach((i) => {
+      const w = films[i]._w;
       if (used + w > avail && row.length) { rows.push(row); row = []; used = 0; }
       row.push(i); used += w;
     });
@@ -692,6 +694,102 @@
     });
     if (current >= 0) spineEls[current].classList.add('out');
   }
+
+  /* ---------- sorting and the genre filter ---------- */
+  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, year: -1 }; // oldest viewing first; best and newest first
+  const r10 = (f) => (f.rating10 != null ? f.rating10 : (f.rating || 0) * 2);
+  const byWatched = (a, b) => (a.watched || '').localeCompare(b.watched || '');
+  const SORTS = {
+    watched: byWatched,
+    rating: (a, b) => r10(a) - r10(b),
+    year: (a, b) => (a.year || 0) - (b.year || 0) || byWatched(a, b),
+  };
+
+  function computeOrder() {
+    const cmp = SORTS[view.sort];
+    order = films.map((f, i) => i)
+      .filter((i) => !view.genres.size || (films[i].genres || []).some((g) => view.genres.has(g)))
+      // ties (same rating, same year) keep the order they were watched in
+      .sort((a, b) => view.dir * cmp(films[a], films[b]) || byWatched(films[a], films[b]));
+  }
+
+  function updateTally() {
+    const n = order.length;
+    $('count').textContent = n;
+    $('tapes').textContent = n === 1 ? 'Tape' : 'Tapes';
+  }
+
+  function saveView() { // in the address bar, so a sorted/filtered shelf can be shared or bookmarked
+    const q = new URLSearchParams(location.search);
+    const def = view.sort === 'watched' && view.dir === 1;
+    if (def) q.delete('sort'); else q.set('sort', view.sort + (view.dir === SORT_DEFAULT_DIR[view.sort] ? '' : '-rev'));
+    if (view.genres.size) q.set('genre', [...view.genres].join(',')); else q.delete('genre');
+    const qs = q.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+
+  function loadView() {
+    const q = new URLSearchParams(location.search);
+    const m = /^(watched|rating|year)(-rev)?$/.exec(q.get('sort') || '');
+    if (m) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
+    (q.get('genre') || '').split(',').filter(Boolean).forEach((g) => view.genres.add(g));
+  }
+
+  function applyView() {
+    if (current >= 0 && !order.includes(current)) closeViewer();
+    computeOrder();
+    updateTally();
+    renderControls();
+    layout();
+    saveView();
+  }
+
+  const controls = $('controls'), genreBtn = $('genre-btn'), genreList = $('genre-list');
+
+  function renderControls() {
+    controls.querySelectorAll('[data-sort]').forEach((b) => {
+      const on = b.dataset.sort === view.sort;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on);
+      const arrow = view.sort === 'watched' ? (view.dir > 0 ? '\u2191' : '\u2193') : (view.dir < 0 ? '\u2193' : '\u2191');
+      b.dataset.arrow = on ? arrow : '';
+      b.title = on ? 'Click again to reverse' : '';
+    });
+    // genres present on the shelf, most common first
+    const counts = new Map();
+    films.forEach((f) => (f.genres || []).forEach((g) => counts.set(g, (counts.get(g) || 0) + 1)));
+    [...view.genres].forEach((g) => { if (!counts.has(g)) view.genres.delete(g); });
+    const list = [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+    genreList.textContent = '';
+    const all = document.createElement('button');
+    all.type = 'button'; all.className = 'all' + (view.genres.size ? '' : ' on'); all.textContent = 'All';
+    all.addEventListener('click', () => { view.genres.clear(); applyView(); });
+    genreList.append(all);
+    list.forEach(([g, n]) => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = view.genres.has(g) ? 'on' : '';
+      b.setAttribute('aria-pressed', view.genres.has(g));
+      b.innerHTML = `${g} <small>${n}</small>`;
+      b.addEventListener('click', () => { view.genres.has(g) ? view.genres.delete(g) : view.genres.add(g); applyView(); });
+      genreList.append(b);
+    });
+    const sel = [...view.genres];
+    $('genre-sel').textContent = !sel.length ? 'All' : sel.length <= 2 ? sel.join(' + ') : `${sel.length} picked`;
+    genreBtn.classList.toggle('on', sel.length > 0);
+  }
+
+  controls.querySelectorAll('[data-sort]').forEach((b) => b.addEventListener('click', () => {
+    const k = b.dataset.sort;
+    if (view.sort === k) view.dir *= -1; else { view.sort = k; view.dir = SORT_DEFAULT_DIR[k]; }
+    applyView();
+  }));
+  function setGenreOpen(open) {
+    genreList.hidden = !open; genreBtn.setAttribute('aria-expanded', open);
+  }
+  genreBtn.addEventListener('click', () => setGenreOpen(genreList.hidden));
+  genreList.addEventListener('click', (e) => e.stopPropagation()); // the chips are redrawn on click, so the outside-click check below can't see them
+  document.addEventListener('click', (e) => { if (!e.target.closest('.genre-pick')) setGenreOpen(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !genreList.hidden) { setGenreOpen(false); genreBtn.focus(); } });
 
   /* ---------- viewer ---------- */
   const viewer = $('viewer'), cover = $('cover');
@@ -763,7 +861,9 @@
 
   function step(d) {
     if (current < 0) return;
-    const n = (current + d + films.length) % films.length;
+    const p = order.indexOf(current);
+    if (p < 0 || order.length < 2) return;
+    const n = order[(p + d + order.length) % order.length];
     spineEls[current].classList.remove('out');
     current = n; spineEls[n].classList.add('out'); fill(n);
   }
@@ -788,7 +888,7 @@
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },
     async preview(f) { await prepare(f, true); return spineEl(f, -1); },
-    async refresh(f) { await prepare(f); layout(); },
+    async refresh(f) { await prepare(f); computeOrder(); updateTally(); renderControls(); layout(); },
   };
 
   /* ---------- boot ---------- */
@@ -798,11 +898,14 @@
     catch { shelves.innerHTML = '<p style="text-align:center;opacity:.6">Couldn\'t load films.json. Serve this folder over http (see README).</p>'; return; }
     films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
     $('year').textContent = data.year || new Date().getFullYear();
-    $('count').textContent = films.length;
-    $('tapes').textContent = films.length === 1 ? 'Tape' : 'Tapes';
+    loadView();
+    computeOrder();
+    renderControls();
+    updateTally();
     $('count').parentNode.hidden = false; // hidden until the real number is known (no "0 TAPES" while loading)
     await Promise.all(films.map((f) => prepare(f)));
     layout();
+    controls.hidden = false;
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
   }
   boot();

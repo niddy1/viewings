@@ -13,6 +13,18 @@
 <body>
   <header>
     <h1 class="ticket"><img src="watched-2026.png" alt="Watched 2026" width="900" height="561"><span class="vh">Viewings <span id="year">2026</span></span></h1>
+    <div class="controls" id="controls" hidden>
+      <div class="sort" role="group" aria-label="Sort the shelf">
+        <span class="label">Sort</span>
+        <button type="button" data-sort="watched">Watched</button>
+        <button type="button" data-sort="rating">Rating</button>
+        <button type="button" data-sort="year">Year</button>
+      </div>
+      <div class="genre-pick">
+        <button type="button" id="genre-btn" aria-expanded="false" aria-controls="genre-list"><span class="label">Genre</span> <span id="genre-sel">All</span> <span class="caret">&#9662;</span></button>
+        <div class="genre-list" id="genre-list" hidden></div>
+      </div>
+    </div>
     <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
   </header>
 
