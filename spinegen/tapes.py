@@ -719,6 +719,16 @@ def head_diamond(lines, h=150):
     return Fn(fn, h)
 
 
+def head_emblem(path, h):
+    """the head emblem placed from an image file in logos/ (Ian's photo of it, squared up); never redrawn"""
+    src = Image.open(REPO + path).convert('RGBA')
+
+    def fn(im, W, y0, rng):
+        e = src.resize((int(h * S * src.width / src.height), int(h * S)), Image.LANCZOS).filter(ImageFilter.UnsharpMask(4, 90, 2))
+        im.alpha_composite(e, (int(W * S / 2 - e.width / 2), int(y0 * S)))
+    return Fn(fn, h)
+
+
 def vlogo(id, color, length, path=None):
     """the studio's logo file from logos/, in one ink, turned to read down the spine"""
     src = Image.open(REPO + (path or FILMS[id]['logo'])).convert('RGBA')
@@ -765,9 +775,12 @@ def ccbox(col, w=30, h=20):
     return Fn(fn, h)
 
 
+EMBLEM = 'logos/classics-diamond.png'  # Ian's own photo of the clamshell head emblem; without the file a plain diamond is drawn
+
+
 def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, **kw):
     W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
-    items = [Gap(4), Gap(10), head_diamond(head, int(W * .78)), Gap(22), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
+    items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
              portrait(face, int(W * 1.12)), Gap(16), ccbox(ink), Gap(12),
              tiny(['VHS'], ink, font='intsb', size=22, track=.04), Gap(8), catno(cat or catfor(id)[:4], ink, size=20)]
