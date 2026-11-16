@@ -244,7 +244,8 @@
       f._r = hash(f.title + 'wear'); f._h = SPINE_H; f._dmg = []; f._top = ''; f._font = pickFont(f);
       // Spine pictures are saved at 550px for a 250px slipcase. A taller picture is a Disney/Pixar clamshell,
       // which is a bigger box: show it at the same scale, so it stands taller and thicker than its neighbours.
-      if (si.naturalHeight > 560) { const k = SPINE_H / 550; f._w = Math.round(si.naturalWidth * k); f._h = Math.round(si.naturalHeight * k); }
+      f._clam = si.naturalHeight > 560;
+      if (f._clam) { const k = SPINE_H / 550; f._w = Math.round(si.naturalWidth * k); f._h = Math.round(si.naturalHeight * k); }
       f._c = '#222'; f._t = '#efe6d2';
       return;
     }
@@ -595,7 +596,7 @@
     b.style.cssText = `--w:${f._w}px;--h:${f._h}px;--c:${f._c};--t:${f._t};--f:'${f._font}';--fs:${fs.toFixed(1)}px;--top:${top}px;--bot:${BOTTOM_ZONE}px;`
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
     if (f._spine && i >= 0) { // the designed picture carries its own lettering, wear and stickers
-      b.className = 'spine designed';
+      b.className = 'spine designed' + (f._clam ? ' clam' : ''); // a clamshell's moulded corners are rounded (CSS)
       b.style.backgroundImage = `url("${f._spine}")`;
       b.addEventListener('click', () => openViewer(i));
       return b;
