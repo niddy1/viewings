@@ -15,12 +15,14 @@
         "Fantasy"
       ],
       "imdb": "tt4772188",
-      "poster": "",
+      "poster": "posters/flow-2024.jpg",
       "rating10": 7.5,
       "tmdb": 823219,
       "tmdbKind": "movie",
       "imdbRating": 7.8,
-      "imdbVotes": 155831
+      "imdbVotes": 155831,
+      "studio": "Dream Well Studio",
+      "logo": "logos/153335.png"
     },
     {
       "title": "You're Cordially Invited",
@@ -34,12 +36,14 @@
         "Romance"
       ],
       "imdb": "tt21227864",
-      "poster": "",
+      "poster": "posters/you-re-cordially-invited-2025.jpg",
       "rating10": 4.5,
       "tmdb": 996821,
       "tmdbKind": "movie",
       "imdbRating": 5.5,
-      "imdbVotes": 31894
+      "imdbVotes": 31894,
+      "studio": "Amazon MGM Studios",
+      "logo": "logos/210099.png"
     },
     {
       "title": "Little Children",
@@ -53,12 +57,14 @@
         "Romance"
       ],
       "imdb": "tt0404203",
-      "poster": "",
+      "poster": "posters/little-children-2006.jpg",
       "rating10": 7.5,
       "tmdb": 1440,
       "tmdbKind": "movie",
       "imdbRating": 7.5,
-      "imdbVotes": 123074
+      "imdbVotes": 123074,
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "One of Them Days",
@@ -71,12 +77,14 @@
         "Comedy"
       ],
       "imdb": "tt32221196",
-      "poster": "",
+      "poster": "posters/one-of-them-days-2025.jpg",
       "rating10": 6,
       "tmdb": 1280672,
       "tmdbKind": "movie",
       "imdbRating": 6.4,
-      "imdbVotes": 21257
+      "imdbVotes": 21257,
+      "studio": "TriStar Pictures",
+      "logo": "logos/559.png"
     },
     {
       "title": "Babygirl",
@@ -90,12 +98,14 @@
         "Thriller"
       ],
       "imdb": "tt30057084",
-      "poster": "",
+      "poster": "posters/babygirl-2024.jpg",
       "rating10": 4,
       "tmdb": 1097549,
       "tmdbKind": "movie",
       "imdbRating": 5.7,
-      "imdbVotes": 85632
+      "imdbVotes": 85632,
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Hard Truths",
@@ -109,12 +119,14 @@
         "Comedy"
       ],
       "imdb": "tt11891850",
-      "poster": "",
+      "poster": "posters/hard-truths-2024.jpg",
       "rating10": 7.5,
       "tmdb": 1013154,
       "tmdbKind": "movie",
       "imdbRating": 7.1,
-      "imdbVotes": 9692
+      "imdbVotes": 9692,
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "Nickel Boys",
@@ -128,12 +140,14 @@
         "History"
       ],
       "imdb": "tt23055660",
-      "poster": "",
+      "poster": "posters/nickel-boys-2024.jpg",
       "rating10": 7,
       "tmdb": 1028196,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 24984
+      "imdbVotes": 24984,
+      "studio": "Plan B Entertainment",
+      "logo": "logos/81.png"
     },
     {
       "title": "Anora",
@@ -148,12 +162,14 @@
         "Romance"
       ],
       "imdb": "tt28607951",
-      "poster": "",
+      "poster": "posters/anora-2024.jpg",
       "rating10": 8,
       "tmdb": 1064213,
       "tmdbKind": "movie",
       "imdbRating": 7.4,
-      "imdbVotes": 314811
+      "imdbVotes": 314811,
+      "studio": "Cre Film",
+      "logo": "logos/88152.png"
     },
     {
       "title": "The Brutalist",
@@ -166,12 +182,14 @@
         "Drama"
       ],
       "imdb": "tt8999762",
-      "poster": "",
+      "poster": "posters/the-brutalist-2024.jpg",
       "rating10": 8,
       "tmdb": 549509,
       "tmdbKind": "movie",
       "imdbRating": 7.2,
-      "imdbVotes": 166739
+      "imdbVotes": 166739,
+      "studio": "Brookstreet Pictures",
+      "logo": "logos/237811.png"
     },
     {
       "title": "Gaucho Gaucho",
@@ -179,17 +197,19 @@
       "rating": 4,
       "watched": "2025-03-04",
       "runtime": 85,
-      "director": "Michael Dweck & Gregory Kershaw",
+      "director": "Michael Dweck",
       "genres": [
         "Documentary"
       ],
       "imdb": "tt30319823",
-      "poster": "",
+      "poster": "posters/gaucho-gaucho-2024.jpg",
       "rating10": 7.5,
       "tmdb": 1214457,
       "tmdbKind": "movie",
       "imdbRating": 7,
-      "imdbVotes": 532
+      "imdbVotes": 532,
+      "studio": "Beautiful Stories",
+      "logo": "logos/215336.png"
     },
     {
       "title": "The Wild Robot",
@@ -205,12 +225,14 @@
         "Adventure"
       ],
       "imdb": "tt29623480",
-      "poster": "",
+      "poster": "posters/the-wild-robot-2024.jpg",
       "rating10": 7,
       "tmdb": 1184918,
       "tmdbKind": "movie",
       "imdbRating": 8.1,
-      "imdbVotes": 242842
+      "imdbVotes": 242842,
+      "studio": "DreamWorks Animation",
+      "logo": "logos/521.png"
     },
     {
       "title": "Flight Risk",
@@ -224,12 +246,14 @@
         "Thriller"
       ],
       "imdb": "tt10078772",
-      "poster": "",
+      "poster": "posters/flight-risk-2025.jpg",
       "rating10": 5.5,
       "tmdb": 1126166,
       "tmdbKind": "movie",
       "imdbRating": 5.2,
-      "imdbVotes": 47562
+      "imdbVotes": 47562,
+      "studio": "Davis Entertainment",
+      "logo": "logos/1302.png"
     },
     {
       "title": "Adolescence",
@@ -241,12 +265,15 @@
         "Crime"
       ],
       "imdb": "tt31806037",
-      "poster": "",
+      "poster": "posters/adolescence-2025.jpg",
       "rating10": 7.5,
       "tmdb": 249042,
       "tmdbKind": "tv",
       "imdbRating": 8.1,
-      "imdbVotes": 321794
+      "imdbVotes": 321794,
+      "director": "Stephen Graham",
+      "studio": "Warp Films",
+      "logo": "logos/12180.png"
     },
     {
       "title": "Carnal Knowledge",
@@ -261,12 +288,14 @@
         "Comedy"
       ],
       "imdb": "tt0066892",
-      "poster": "",
+      "poster": "posters/carnal-knowledge-1971.jpg",
       "rating10": 7.5,
       "tmdb": 36492,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 17452
+      "imdbVotes": 17452,
+      "studio": "AVCO Embassy Pictures",
+      "logo": "logos/494.png"
     },
     {
       "title": "Rich Flu",
@@ -280,12 +309,14 @@
         "Science Fiction"
       ],
       "imdb": "tt17677434",
-      "poster": "",
+      "poster": "posters/rich-flu-2024.jpg",
       "rating10": 5.5,
       "tmdb": 934584,
       "tmdbKind": "movie",
       "imdbRating": 4.9,
-      "imdbVotes": 8610
+      "imdbVotes": 8610,
+      "studio": "Nostromo Pictures",
+      "logo": "logos/11068.png"
     },
     {
       "title": "Riff Raff",
@@ -300,12 +331,14 @@
         "Drama"
       ],
       "imdb": "tt27775403",
-      "poster": "",
+      "poster": "posters/riff-raff-2025.jpg",
       "rating10": 6,
       "tmdb": 1127767,
       "tmdbKind": "movie",
       "imdbRating": 5.7,
-      "imdbVotes": 9563
+      "imdbVotes": 9563,
+      "studio": "Signature Films",
+      "logo": "logos/206783.png"
     },
     {
       "title": "Not a Pretty Picture",
@@ -320,12 +353,14 @@
         "Documentary"
       ],
       "imdb": "tt0073467",
-      "poster": "",
+      "poster": "posters/not-a-pretty-picture-1976.jpg",
       "rating10": 6.5,
       "tmdb": 432907,
       "tmdbKind": "movie",
       "imdbRating": 7.3,
-      "imdbVotes": 407
+      "imdbVotes": 407,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Frantic",
@@ -339,12 +374,14 @@
         "Thriller"
       ],
       "imdb": "tt0095174",
-      "poster": "",
+      "poster": "posters/frantic-1988.jpg",
       "rating10": 5.5,
       "tmdb": 10675,
       "tmdbKind": "movie",
       "imdbRating": 6.8,
-      "imdbVotes": 62507
+      "imdbVotes": 62507,
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Sacramento",
@@ -358,12 +395,14 @@
         "Drama"
       ],
       "imdb": "tt13491834",
-      "poster": "",
+      "poster": "posters/sacramento-2025.jpg",
       "rating10": 6.5,
       "tmdb": 842931,
       "tmdbKind": "movie",
       "imdbRating": 5.9,
-      "imdbVotes": 4475
+      "imdbVotes": 4475,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Assessment",
@@ -378,12 +417,14 @@
         "Thriller"
       ],
       "imdb": "tt32768323",
-      "poster": "",
+      "poster": "posters/the-assessment-2025.jpg",
       "rating10": 6,
       "tmdb": 1317088,
       "tmdbKind": "movie",
       "imdbRating": 6.6,
-      "imdbVotes": 26262
+      "imdbVotes": 26262,
+      "studio": "Augenschein Filmproduktion",
+      "logo": "logos/20037.png"
     },
     {
       "title": "Tombstone",
@@ -397,12 +438,14 @@
         "Action"
       ],
       "imdb": "tt0108358",
-      "poster": "",
+      "poster": "posters/tombstone-1993.jpg",
       "rating10": 6.5,
       "tmdb": 11969,
       "tmdbKind": "movie",
       "imdbRating": 7.8,
-      "imdbVotes": 196951
+      "imdbVotes": 196951,
+      "studio": "Cinergi Pictures",
+      "logo": "logos/1504.png"
     },
     {
       "title": "Hot Summer Nights",
@@ -416,12 +459,14 @@
         "Crime"
       ],
       "imdb": "tt3416536",
-      "poster": "",
+      "poster": "posters/hot-summer-nights-2018.jpg",
       "rating10": 6,
       "tmdb": 347866,
       "tmdbKind": "movie",
       "imdbRating": 6.4,
-      "imdbVotes": 29106
+      "imdbVotes": 29106,
+      "studio": "Imperative Entertainment",
+      "logo": "logos/81121.png"
     },
     {
       "title": "Mountainhead",
@@ -436,12 +481,14 @@
         "TV Movie"
       ],
       "imdb": "tt35396529",
-      "poster": "",
+      "poster": "posters/mountainhead-2025.jpg",
       "rating10": 5.5,
       "tmdb": 1417059,
       "tmdbKind": "movie",
       "imdbRating": 5.4,
-      "imdbVotes": 22648
+      "imdbVotes": 22648,
+      "studio": "HBO Films",
+      "logo": "logos/7429.png"
     },
     {
       "title": "Black Bag",
@@ -455,12 +502,14 @@
         "Thriller"
       ],
       "imdb": "tt30988739",
-      "poster": "",
+      "poster": "posters/black-bag-2025.jpg",
       "rating10": 5.5,
       "tmdb": 1233575,
       "tmdbKind": "movie",
       "imdbRating": 6.7,
-      "imdbVotes": 100487
+      "imdbVotes": 100487,
+      "studio": "Casey Silver Productions",
+      "logo": "logos/877.png"
     },
     {
       "title": "Ghost in the Shell",
@@ -475,12 +524,14 @@
         "Science Fiction"
       ],
       "imdb": "tt0113568",
-      "poster": "",
+      "poster": "posters/ghost-in-the-shell-1995.jpg",
       "rating10": 7,
       "tmdb": 9323,
       "tmdbKind": "movie",
       "imdbRating": 7.9,
-      "imdbVotes": 178432
+      "imdbVotes": 178432,
+      "studio": "Bandai Visual",
+      "logo": "logos/528.png"
     },
     {
       "title": "The Accountant",
@@ -495,12 +546,14 @@
         "Drama"
       ],
       "imdb": "tt2140479",
-      "poster": "",
+      "poster": "posters/the-accountant-2016.jpg",
       "rating10": 6.5,
       "tmdb": 302946,
       "tmdbKind": "movie",
       "imdbRating": 7.3,
-      "imdbVotes": 406340
+      "imdbVotes": 406340,
+      "studio": "Zero Gravity Management",
+      "logo": "logos/5357.png"
     },
     {
       "title": "Kneecap",
@@ -515,12 +568,14 @@
         "Drama"
       ],
       "imdb": "tt27367464",
-      "poster": "",
+      "poster": "posters/kneecap-2024.jpg",
       "rating10": 7.5,
       "tmdb": 1180629,
       "tmdbKind": "movie",
       "imdbRating": 7.6,
-      "imdbVotes": 26449
+      "imdbVotes": 26449,
+      "studio": "Fine Point Films",
+      "logo": "logos/80995.png"
     },
     {
       "title": "Y Tu Mamá También",
@@ -534,12 +589,14 @@
         "Romance"
       ],
       "imdb": "tt0245574",
-      "poster": "",
+      "poster": "posters/y-tu-mama-tambien-2001.jpg",
       "rating10": 7.5,
       "tmdb": 1391,
       "tmdbKind": "movie",
       "imdbRating": 7.7,
-      "imdbVotes": 143750
+      "imdbVotes": 143750,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Materialists",
@@ -553,12 +610,14 @@
         "Drama"
       ],
       "imdb": "tt30253473",
-      "poster": "",
+      "poster": "posters/materialists-2025.jpg",
       "rating10": 3,
       "tmdb": 1136867,
       "tmdbKind": "movie",
       "imdbRating": 6.2,
-      "imdbVotes": 109623
+      "imdbVotes": 109623,
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Crumb",
@@ -571,12 +630,14 @@
         "Documentary"
       ],
       "imdb": "tt0109508",
-      "poster": "",
+      "poster": "posters/crumb-1995.jpg",
       "rating10": 8,
       "tmdb": 26564,
       "tmdbKind": "movie",
       "imdbRating": 8,
-      "imdbVotes": 23317
+      "imdbVotes": 23317,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Thursday Murder Club",
@@ -591,12 +652,14 @@
         "Crime"
       ],
       "imdb": "tt12001534",
-      "poster": "",
+      "poster": "posters/the-thursday-murder-club-2025.jpg",
       "rating10": 6,
       "tmdb": 744653,
       "tmdbKind": "movie",
       "imdbRating": 6.5,
-      "imdbVotes": 94439
+      "imdbVotes": 94439,
+      "studio": "Amblin Entertainment",
+      "logo": "logos/56.png"
     },
     {
       "title": "Havoc",
@@ -612,12 +675,14 @@
         "Drama"
       ],
       "imdb": "tt14123284",
-      "poster": "",
+      "poster": "posters/havoc-2025.jpg",
       "rating10": 4.5,
       "tmdb": 668489,
       "tmdbKind": "movie",
       "imdbRating": 5.6,
-      "imdbVotes": 72502
+      "imdbVotes": 72502,
+      "studio": "XYZ Films",
+      "logo": "logos/12142.png"
     },
     {
       "title": "Play Dirty",
@@ -633,12 +698,14 @@
         "Drama"
       ],
       "imdb": "tt18392014",
-      "poster": "",
+      "poster": "posters/play-dirty-2025.jpg",
       "rating10": 5.5,
       "tmdb": 941109,
       "tmdbKind": "movie",
       "imdbRating": 5.9,
-      "imdbVotes": 30325
+      "imdbVotes": 30325,
+      "studio": "Team Downey",
+      "logo": "logos/27467.png"
     },
     {
       "title": "Relay",
@@ -653,12 +720,14 @@
         "Thriller"
       ],
       "imdb": "tt11539996",
-      "poster": "",
+      "poster": "posters/relay-2025.jpg",
       "rating10": 6.5,
       "tmdb": 1088166,
       "tmdbKind": "movie",
       "imdbRating": 7,
-      "imdbVotes": 42514
+      "imdbVotes": 42514,
+      "studio": "Thunder Road",
+      "logo": "logos/3528.png"
     },
     {
       "title": "Caught Stealing",
@@ -673,12 +742,14 @@
         "Comedy"
       ],
       "imdb": "tt1493274",
-      "poster": "",
+      "poster": "posters/caught-stealing-2025.jpg",
       "rating10": 6,
       "tmdb": 1245993,
       "tmdbKind": "movie",
       "imdbRating": 6.8,
-      "imdbVotes": 92857
+      "imdbVotes": 92857,
+      "studio": "Protozoa Pictures",
+      "logo": "logos/7503.png"
     },
     {
       "title": "Honey Don't!",
@@ -693,12 +764,14 @@
         "Thriller"
       ],
       "imdb": "tt30645201",
-      "poster": "",
+      "poster": "posters/honey-don-t-2025.jpg",
       "rating10": 5,
       "tmdb": 1149504,
       "tmdbKind": "movie",
       "imdbRating": 5.3,
-      "imdbVotes": 31468
+      "imdbVotes": 31468,
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Friendship",
@@ -712,12 +785,14 @@
         "Drama"
       ],
       "imdb": "tt30505698",
-      "poster": "",
+      "poster": "posters/friendship-2025.jpg",
       "rating10": 6.5,
       "tmdb": 1239655,
       "tmdbKind": "movie",
       "imdbRating": 6.6,
-      "imdbVotes": 42905
+      "imdbVotes": 42905,
+      "studio": "BoulderLight Pictures",
+      "logo": "logos/18609.png"
     },
     {
       "title": "Perfect Days",
@@ -730,12 +805,14 @@
         "Drama"
       ],
       "imdb": "tt27503384",
-      "poster": "",
+      "poster": "posters/perfect-days-2023.jpg",
       "rating10": 8,
       "tmdb": 976893,
       "tmdbKind": "movie",
       "imdbRating": 7.9,
-      "imdbVotes": 115272
+      "imdbVotes": 115272,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Dìdi",
@@ -749,12 +826,14 @@
         "Drama"
       ],
       "imdb": "tt30319503",
-      "poster": "",
+      "poster": "posters/didi-2024.jpg",
       "rating10": 7,
       "tmdb": 1158915,
       "tmdbKind": "movie",
       "imdbRating": 7.3,
-      "imdbVotes": 17035
+      "imdbVotes": 17035,
+      "studio": "Unapologetic Projects",
+      "logo": "logos/216060.png"
     },
     {
       "title": "The Teachers' Lounge",
@@ -767,12 +846,14 @@
         "Drama"
       ],
       "imdb": "tt26612950",
-      "poster": "",
+      "poster": "posters/the-teachers-lounge-2023.jpg",
       "rating10": 7.5,
       "tmdb": 998022,
       "tmdbKind": "movie",
       "imdbRating": 7.4,
-      "imdbVotes": 32189
+      "imdbVotes": 32189,
+      "studio": "if... Productions",
+      "logo": "logos/56655.png"
     },
     {
       "title": "Snake Eyes",
@@ -787,12 +868,14 @@
         "Thriller"
       ],
       "imdb": "tt0120832",
-      "poster": "",
+      "poster": "posters/snake-eyes-1998.jpg",
       "rating10": 6,
       "tmdb": 8688,
       "tmdbKind": "movie",
       "imdbRating": 6.2,
-      "imdbVotes": 94781
+      "imdbVotes": 94781,
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "One Battle After Another",
@@ -807,12 +890,14 @@
         "Comedy"
       ],
       "imdb": "tt30144839",
-      "poster": "",
+      "poster": "posters/one-battle-after-another-2025.jpg",
       "rating10": 7,
       "tmdb": 1054867,
       "tmdbKind": "movie",
       "imdbRating": 7.6,
-      "imdbVotes": 458418
+      "imdbVotes": 458418,
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Companion",
@@ -827,12 +912,14 @@
         "Thriller"
       ],
       "imdb": "tt26584495",
-      "poster": "",
+      "poster": "posters/companion-2025.jpg",
       "rating10": 7,
       "tmdb": 1084199,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 197015
+      "imdbVotes": 197015,
+      "studio": "BoulderLight Pictures",
+      "logo": "logos/18609.png"
     },
     {
       "title": "Roofman",
@@ -847,12 +934,14 @@
         "Drama"
       ],
       "imdb": "tt4627382",
-      "poster": "",
+      "poster": "posters/roofman-2025.jpg",
       "rating10": 6.5,
       "tmdb": 1242419,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 91721
+      "imdbVotes": 91721,
+      "studio": "Limelight",
+      "logo": "logos/128360.png"
     },
     {
       "title": "Night Stalker: The Hunt for a Serial Killer",
@@ -865,12 +954,15 @@
         "Mystery"
       ],
       "imdb": "tt13651632",
-      "poster": "",
+      "poster": "posters/night-stalker-the-hunt-for-a-serial-killer-2021.jpg",
       "rating10": 7.5,
       "tmdb": 114705,
       "tmdbKind": "tv",
       "imdbRating": 7.5,
-      "imdbVotes": 34660
+      "imdbVotes": 34660,
+      "runtime": 48,
+      "studio": "The Intellectual Property Corporation",
+      "logo": "logos/83966.png"
     },
     {
       "title": "Spider-Man: Across the Spider-Verse",
@@ -878,7 +970,7 @@
       "rating": 4,
       "watched": "2025-11-19",
       "runtime": 140,
-      "director": "Joaquim Dos Santos, Kemp Powers & Justin K. Thompson",
+      "director": "Kemp Powers",
       "genres": [
         "Animation",
         "Action",
@@ -886,12 +978,14 @@
         "Science Fiction"
       ],
       "imdb": "tt9362722",
-      "poster": "",
+      "poster": "posters/spider-man-across-the-spider-verse-2023.jpg",
       "rating10": 7.5,
       "tmdb": 569094,
       "tmdbKind": "movie",
       "imdbRating": 8.5,
-      "imdbVotes": 562985
+      "imdbVotes": 562985,
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Gone Girls: The Long Island Serial Killer",
@@ -903,12 +997,14 @@
         "Crime"
       ],
       "imdb": "tt35629774",
-      "poster": "",
+      "poster": "posters/gone-girls-the-long-island-serial-killer-2025.jpg",
       "rating10": 7.5,
       "tmdb": 285084,
       "tmdbKind": "tv",
       "imdbRating": 7.1,
-      "imdbVotes": 6755
+      "imdbVotes": 6755,
+      "studio": "Story Syndicate",
+      "logo": "logos/136480.png"
     },
     {
       "title": "Who Took Johnny",
@@ -916,17 +1012,19 @@
       "rating": 3.5,
       "watched": "2025-11-19",
       "runtime": 80,
-      "director": "David Beilinson & Suki Hawley",
+      "director": "David Beilinson",
       "genres": [
         "Documentary"
       ],
       "imdb": "tt2704816",
-      "poster": "",
+      "poster": "posters/who-took-johnny-2014.jpg",
       "rating10": 7,
       "tmdb": 251220,
       "tmdbKind": "movie",
       "imdbRating": 7.1,
-      "imdbVotes": 3472
+      "imdbVotes": 3472,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Disappearance of Madeleine McCann",
@@ -938,12 +1036,16 @@
         "Documentary"
       ],
       "imdb": "tt9879074",
-      "poster": "",
+      "poster": "posters/the-disappearance-of-madeleine-mccann-2019.jpg",
       "rating10": 7,
       "tmdb": 87600,
       "tmdbKind": "tv",
       "imdbRating": 6.6,
-      "imdbVotes": 12549
+      "imdbVotes": 12549,
+      "runtime": 55,
+      "director": "Chris Smith",
+      "studio": "Pulse Films",
+      "logo": "logos/57430.png"
     },
     {
       "title": "The Carman Family Deaths",
@@ -957,12 +1059,14 @@
         "Crime"
       ],
       "imdb": "tt31137117",
-      "poster": "",
+      "poster": "posters/the-carman-family-deaths-2025.jpg",
       "rating10": 7,
       "tmdb": 1363282,
       "tmdbKind": "movie",
       "imdbRating": 6.2,
-      "imdbVotes": 3992
+      "imdbVotes": 3992,
+      "studio": "Loki Films",
+      "logo": "logos/7370.png"
     },
     {
       "title": "Bad Timing",
@@ -977,12 +1081,14 @@
         "Thriller"
       ],
       "imdb": "tt0080408",
-      "poster": "",
+      "poster": "posters/bad-timing-1980.jpg",
       "rating10": 6.5,
       "tmdb": 33214,
       "tmdbKind": "movie",
       "imdbRating": 6.8,
-      "imdbVotes": 10529
+      "imdbVotes": 10529,
+      "studio": "Recorded Picture Company",
+      "logo": "logos/11561.png"
     },
     {
       "title": "Carmel: Who Killed Maria Marta?",
@@ -994,12 +1100,16 @@
         "Crime"
       ],
       "imdb": "tt13244092",
-      "poster": "",
+      "poster": "posters/carmel-who-killed-maria-marta-2020.jpg",
       "rating10": 6.5,
       "tmdb": 111495,
       "tmdbKind": "tv",
       "imdbRating": 7,
-      "imdbVotes": 3005
+      "imdbVotes": 3005,
+      "runtime": 60,
+      "director": "Alejandro Hartmann",
+      "studio": "Haddock Films",
+      "logo": "logos/5623.png"
     },
     {
       "title": "Sophie: A Murder in West Cork",
@@ -1012,12 +1122,15 @@
         "Mystery"
       ],
       "imdb": "tt14681732",
-      "poster": "",
+      "poster": "posters/sophie-a-murder-in-west-cork-2021.jpg",
       "rating10": 6.5,
       "tmdb": 126396,
       "tmdbKind": "tv",
       "imdbRating": 6.8,
-      "imdbVotes": 6806
+      "imdbVotes": 6806,
+      "runtime": 65,
+      "studio": "Lightbox Entertainment",
+      "logo": "logos/15285.png"
     },
     {
       "title": "Love Liza",
@@ -1031,12 +1144,14 @@
         "Drama"
       ],
       "imdb": "tt0282698",
-      "poster": "",
+      "poster": "posters/love-liza-2002.jpg",
       "rating10": 7,
       "tmdb": 15395,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 9515
+      "imdbVotes": 9515,
+      "studio": "Kinowelt Filmproduktion",
+      "logo": "logos/2051.png"
     },
     {
       "title": "I'm Still Here",
@@ -1050,12 +1165,14 @@
         "History"
       ],
       "imdb": "tt14961016",
-      "poster": "",
+      "poster": "posters/i-m-still-here-2024.jpg",
       "rating10": 8,
       "tmdb": 1000837,
       "tmdbKind": "movie",
       "imdbRating": 8.1,
-      "imdbVotes": 173230
+      "imdbVotes": 173230,
+      "studio": "VideoFilmes",
+      "logo": "logos/346.png"
     },
     {
       "title": "Sorry, Baby",
@@ -1069,12 +1186,14 @@
         "Comedy"
       ],
       "imdb": "tt32843349",
-      "poster": "",
+      "poster": "posters/sorry-baby-2025.jpg",
       "rating10": 7,
       "tmdb": 1205515,
       "tmdbKind": "movie",
       "imdbRating": 7.1,
-      "imdbVotes": 27311
+      "imdbVotes": 27311,
+      "studio": "PASTEL",
+      "logo": "logos/103697.png"
     },
     {
       "title": "Wake Up Dead Man: A Knives Out Mystery",
@@ -1089,12 +1208,14 @@
         "Comedy"
       ],
       "imdb": "tt14364480",
-      "poster": "",
+      "poster": "posters/wake-up-dead-man-a-knives-out-mystery-2025.jpg",
       "rating10": 6.5,
       "tmdb": 812583,
       "tmdbKind": "movie",
       "imdbRating": 7.3,
-      "imdbVotes": 266488
+      "imdbVotes": 266488,
+      "studio": "T-Street",
+      "logo": "logos/37871.png"
     },
     {
       "title": "The Mastermind",
@@ -1108,12 +1229,14 @@
         "Crime"
       ],
       "imdb": "tt33455099",
-      "poster": "",
+      "poster": "posters/the-mastermind-2025.jpg",
       "rating10": 6.5,
       "tmdb": 1352624,
       "tmdbKind": "movie",
       "imdbRating": 6.2,
-      "imdbVotes": 14769
+      "imdbVotes": 14769,
+      "studio": "filmscience",
+      "logo": "logos/1976.png"
     },
     {
       "title": "Predators",
@@ -1127,12 +1250,14 @@
         "Crime"
       ],
       "imdb": "tt34963732",
-      "poster": "",
+      "poster": "posters/predators-2025.jpg",
       "rating10": 5,
       "tmdb": 1400382,
       "tmdbKind": "movie",
       "imdbRating": 6.7,
-      "imdbVotes": 4276
+      "imdbVotes": 4276,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Murder in Monaco",
@@ -1146,12 +1271,14 @@
         "Documentary"
       ],
       "imdb": "tt38984577",
-      "poster": "",
+      "poster": "posters/murder-in-monaco-2025.jpg",
       "rating10": 6.5,
       "tmdb": 1584619,
       "tmdbKind": "movie",
       "imdbRating": 6.5,
-      "imdbVotes": 3934
+      "imdbVotes": 3934,
+      "studio": "Ventureland",
+      "logo": "logos/138301.png"
     },
     {
       "title": "One False Move",
@@ -1166,12 +1293,14 @@
         "Thriller"
       ],
       "imdb": "tt0102592",
-      "poster": "",
+      "poster": "posters/one-false-move-1992.jpg",
       "rating10": 6,
       "tmdb": 21128,
       "tmdbKind": "movie",
       "imdbRating": 7.1,
-      "imdbVotes": 17253
+      "imdbVotes": 17253,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Dave Chappelle: The Unstoppable...",
@@ -1184,12 +1313,14 @@
         "Comedy"
       ],
       "imdb": "tt39227597",
-      "poster": "",
+      "poster": "posters/dave-chappelle-the-unstoppable-2025.jpg",
       "rating10": 7.5,
       "tmdb": 1601195,
       "tmdbKind": "movie",
       "imdbRating": 6.3,
-      "imdbVotes": 5734
+      "imdbVotes": 5734,
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Eternity",
@@ -1204,12 +1335,14 @@
         "Drama"
       ],
       "imdb": "tt24950660",
-      "poster": "",
+      "poster": "posters/eternity-2025.jpg",
       "rating10": 5.5,
       "tmdb": 1259102,
       "tmdbKind": "movie",
       "imdbRating": 6.9,
-      "imdbVotes": 71005
+      "imdbVotes": 71005,
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Ricky Gervais: Mortality",
@@ -1223,12 +1356,14 @@
         "TV Movie"
       ],
       "imdb": "tt32767869",
-      "poster": "",
+      "poster": "posters/ricky-gervais-mortality-2025.jpg",
       "rating10": 5,
       "tmdb": 1312150,
       "tmdbKind": "movie",
       "imdbRating": 6.8,
-      "imdbVotes": 7796
+      "imdbVotes": 7796,
+      "studio": "",
+      "logo": ""
     }
   ]
 }
