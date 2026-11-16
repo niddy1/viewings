@@ -6,980 +6,2101 @@
       "rating": 4,
       "watched": "2024-01-01",
       "imdb": "tt27502426",
-      "poster": "",
+      "poster": "posters/four-daughters-2023.jpg",
       "rating10": 7.5,
       "imdbRating": 7.4,
-      "imdbVotes": 4634
+      "imdbVotes": 4634,
+      "year": 2023,
+      "tmdb": 1069193,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Kaouther Ben Hania",
+      "genres": [
+        "Documentary",
+        "Drama"
+      ],
+      "studio": "Tanit Films",
+      "logo": "logos/75445.png"
     },
     {
       "title": "Past Lives",
       "rating": 4,
       "watched": "2024-01-02",
       "imdb": "tt13238346",
-      "poster": "",
+      "poster": "posters/past-lives-2023.jpg",
       "rating10": 8,
       "imdbRating": 7.8,
-      "imdbVotes": 180301
+      "imdbVotes": 180301,
+      "year": 2023,
+      "tmdb": 666277,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Celine Song",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Saltburn",
       "rating": 4.5,
       "watched": "2024-01-06",
       "imdb": "tt17351924",
-      "poster": "",
+      "poster": "posters/saltburn-2023.jpg",
       "rating10": 8.5,
       "imdbRating": 7,
-      "imdbVotes": 274149
+      "imdbVotes": 274149,
+      "year": 2023,
+      "tmdb": 930564,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Emerald Fennell",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "LuckyChap Entertainment",
+      "logo": "logos/82968.png"
     },
     {
       "title": "Wonka",
       "rating": 3,
       "watched": "2024-01-21",
       "imdb": "tt6166392",
-      "poster": "",
+      "poster": "posters/wonka-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.9,
-      "imdbVotes": 199132
+      "imdbVotes": 199132,
+      "year": 2023,
+      "tmdb": 787699,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Paul King",
+      "genres": [
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Elemental",
       "rating": 3.5,
       "watched": "2024-01-23",
       "imdb": "tt15789038",
-      "poster": "",
+      "poster": "posters/elemental-2023.jpg",
       "rating10": 7,
       "imdbRating": 7,
-      "imdbVotes": 171465
+      "imdbVotes": 171465,
+      "year": 2023,
+      "tmdb": 976573,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Peter Sohn",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Romance"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Sanctuary",
       "rating": 3,
       "watched": "2024-02-01",
       "imdb": "tt15364972",
-      "poster": "",
+      "poster": "posters/sanctuary-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.2,
-      "imdbVotes": 13713
+      "imdbVotes": 13713,
+      "year": 2023,
+      "tmdb": 870518,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Zachary Wigon",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Rumble Films",
+      "logo": "logos/81794.png"
     },
     {
-      "title": "Anyone But You",
+      "title": "Anyone but You",
       "rating": 2.5,
       "watched": "2024-02-09",
       "imdb": "tt26047818",
-      "poster": "",
+      "poster": "posters/anyone-but-you-2023.jpg",
       "rating10": 5,
       "imdbRating": 6.1,
-      "imdbVotes": 182991
+      "imdbVotes": 182991,
+      "year": 2023,
+      "tmdb": 1072790,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Will Gluck",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Olive Bridge Entertainment",
+      "logo": "logos/7291.png"
     },
     {
       "title": "The Killing of Two Lovers",
       "rating": 3.5,
       "watched": "2024-02-14",
       "imdb": "tt10702148",
-      "poster": "",
+      "poster": "posters/the-killing-of-two-lovers-2021.jpg",
       "rating10": 7,
       "imdbRating": 6.8,
-      "imdbVotes": 6003
+      "imdbVotes": 6003,
+      "year": 2021,
+      "tmdb": 653712,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Robert Machoian",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Lover, Stalker, Killer",
       "rating": 3.5,
       "watched": "2024-02-14",
       "imdb": "tt30852970",
-      "poster": "",
+      "poster": "posters/lover-stalker-killer-2024.jpg",
       "rating10": 7,
       "imdbRating": 7,
-      "imdbVotes": 15578
+      "imdbVotes": 15578,
+      "year": 2024,
+      "tmdb": 1229958,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Sam Hobkinson",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "Curious Films",
+      "logo": "logos/81364.png"
     },
     {
       "title": "Poor Things",
       "rating": 4.5,
       "watched": "2024-02-27",
       "imdb": "tt14230458",
-      "poster": "",
+      "poster": "posters/poor-things-2023.jpg",
       "rating10": 9,
       "imdbRating": 7.7,
-      "imdbVotes": 428096
+      "imdbVotes": 428096,
+      "year": 2023,
+      "tmdb": 792307,
+      "tmdbKind": "movie",
+      "runtime": 141,
+      "director": "Yorgos Lanthimos",
+      "genres": [
+        "Science Fiction",
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Searchlight Pictures",
+      "logo": "logos/127929.png"
     },
     {
       "title": "American Fiction",
       "rating": 4,
       "watched": "2024-03-02",
       "imdb": "tt23561236",
-      "poster": "",
+      "poster": "posters/american-fiction-2023.jpg",
       "rating10": 8,
       "imdbRating": 7.5,
-      "imdbVotes": 158383
+      "imdbVotes": 158383,
+      "year": 2023,
+      "tmdb": 1056360,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Cord Jefferson",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "MRC",
+      "logo": "logos/2531.png"
     },
     {
       "title": "The Zone of Interest",
       "rating": 3.5,
       "watched": "2024-03-11",
       "imdb": "tt7160372",
-      "poster": "",
+      "poster": "posters/the-zone-of-interest-2023.jpg",
       "rating10": 7,
       "imdbRating": 7.3,
-      "imdbVotes": 194728
+      "imdbVotes": 194728,
+      "year": 2023,
+      "tmdb": 467244,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Jonathan Glazer",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "JW Films",
+      "logo": "logos/27543.png"
     },
     {
       "title": "Ricky Stanicky",
       "rating": 3,
       "watched": "2024-03-25",
       "imdb": "tt1660648",
-      "poster": "",
+      "poster": "posters/ricky-stanicky-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.2,
-      "imdbVotes": 64354
+      "imdbVotes": 64354,
+      "year": 2024,
+      "tmdb": 1022690,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Peter Farrelly",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "RocketScience",
+      "logo": "logos/52059.png"
     },
     {
       "title": "Road House",
       "rating": 2.5,
       "watched": "2024-03-25",
       "imdb": "tt3359350",
-      "poster": "",
+      "poster": "posters/road-house-2024.jpg",
       "rating10": 5,
       "imdbRating": 6.2,
-      "imdbVotes": 193819
+      "imdbVotes": 193819,
+      "year": 2024,
+      "tmdb": 359410,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Doug Liman",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Silver Pictures",
+      "logo": "logos/1885.png"
     },
     {
       "title": "Argylle",
       "rating": 2.5,
       "watched": "2024-03-25",
       "imdb": "tt15009428",
-      "poster": "",
+      "poster": "posters/argylle-2024.jpg",
       "rating10": 5,
       "imdbRating": 5.6,
-      "imdbVotes": 103366
+      "imdbVotes": 103366,
+      "year": 2024,
+      "tmdb": 848538,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Matthew Vaughn",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "studio": "Marv",
+      "logo": "logos/5374.png"
     },
     {
       "title": "Snack Shack",
       "rating": 4,
       "watched": "2024-04-07",
       "imdb": "tt22004344",
-      "poster": "",
+      "poster": "posters/snack-shack-2024.jpg",
       "rating10": 8,
       "imdbRating": 7,
-      "imdbVotes": 19093
+      "imdbVotes": 19093,
+      "year": 2024,
+      "tmdb": 1037113,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Adam Rehmeier",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "T-Street",
+      "logo": "logos/37871.png"
     },
     {
-      "title": "Black Flies",
+      "title": "Asphalt City",
       "rating": 3.5,
       "watched": "2024-04-28",
       "imdb": "tt9663896",
-      "poster": "",
+      "poster": "posters/asphalt-city-2024.jpg",
       "rating10": 7,
       "imdbRating": 6.1,
-      "imdbVotes": 9713
+      "imdbVotes": 9713,
+      "year": 2024,
+      "tmdb": 628922,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Jean-Stéphane Sauvaire",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Projected Picture Works",
+      "logo": "logos/174772.png"
     },
     {
       "title": "Love Lies Bleeding",
       "rating": 3,
       "watched": "2024-04-30",
       "imdb": "tt19637052",
-      "poster": "",
+      "poster": "posters/love-lies-bleeding-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 66129
+      "imdbVotes": 66129,
+      "year": 2024,
+      "tmdb": 948549,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Rose Glass",
+      "genres": [
+        "Crime",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "Challengers",
       "rating": 3.5,
       "watched": "2024-05-20",
       "imdb": "tt16426418",
-      "poster": "",
+      "poster": "posters/challengers-2024.jpg",
       "rating10": 7,
       "imdbRating": 7,
-      "imdbVotes": 186686
+      "imdbVotes": 186686,
+      "year": 2024,
+      "tmdb": 937287,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Luca Guadagnino",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Pascal Pictures",
+      "logo": "logos/84041.png"
     },
     {
       "title": "Red Rooms",
       "rating": 4,
       "watched": "2024-05-24",
       "imdb": "tt22207786",
-      "poster": "",
+      "poster": "posters/red-rooms-2023.jpg",
       "rating10": 7.5,
       "imdbRating": 7.1,
-      "imdbVotes": 25400
+      "imdbVotes": 25400,
+      "year": 2023,
+      "tmdb": 912480,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Pascal Plante",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Némésis Films",
+      "logo": "logos/73017.png"
     },
     {
       "title": "Reunion",
       "rating": 2.5,
       "watched": "2024-05-24",
       "imdb": "tt15338966",
-      "poster": "",
+      "poster": "posters/reunion-2024.jpg",
       "rating10": 5,
       "imdbRating": 5.6,
-      "imdbVotes": 7971
+      "imdbVotes": 7971,
+      "year": 2024,
+      "tmdb": 869597,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Chris Nelson",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "Artists Road",
+      "logo": "logos/160096.png"
     },
     {
       "title": "South Park: The End of Obesity",
       "rating": 2.5,
       "watched": "2024-05-24",
       "imdb": "tt32375562",
-      "poster": "",
+      "poster": "posters/south-park-the-end-of-obesity-2024.jpg",
       "rating10": 5,
       "imdbRating": 7.1,
-      "imdbVotes": 10021
+      "imdbVotes": 10021,
+      "year": 2024,
+      "tmdb": 1290938,
+      "tmdbKind": "movie",
+      "runtime": 51,
+      "director": "Trey Parker",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "TV Movie"
+      ],
+      "studio": "MTV Entertainment Studios",
+      "logo": "logos/6329.png"
     },
     {
       "title": "Pizza, Beer, and Cigarettes",
       "rating": 4,
       "watched": "2024-05-25",
       "imdb": "tt0145393",
-      "poster": "",
+      "poster": "posters/pizza-beer-and-cigarettes-1998.jpg",
       "rating10": 7.5,
       "imdbRating": 7,
-      "imdbVotes": 3311
+      "imdbVotes": 3311,
+      "year": 1998,
+      "tmdb": 127471,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Bruno Stagnaro",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Hubert Bals Fund",
+      "logo": "logos/13413.png"
     },
     {
       "title": "Red Rocket",
       "rating": 3.5,
       "watched": "2024-05-25",
       "imdb": "tt13453006",
-      "poster": "",
+      "poster": "posters/red-rocket-2021.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 44190
+      "imdbVotes": 44190,
+      "year": 2021,
+      "tmdb": 763329,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Sean Baker",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "Purple Noon",
       "rating": 4,
       "watched": "2024-06-07",
       "imdb": "tt0054189",
-      "poster": "",
+      "poster": "posters/purple-noon-1960.jpg",
       "rating10": 7.5,
       "imdbRating": 7.7,
-      "imdbVotes": 24760
+      "imdbVotes": 24760,
+      "year": 1960,
+      "tmdb": 10363,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "René Clément",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
     },
     {
       "title": "Faults",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt3021360",
-      "poster": "",
+      "poster": "posters/faults-2014.jpg",
       "rating10": 7,
       "imdbRating": 6.7,
-      "imdbVotes": 11740
+      "imdbVotes": 11740,
+      "year": 2014,
+      "tmdb": 243526,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Riley Stearns",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Snoot Entertainment",
+      "logo": "logos/15159.png"
     },
     {
       "title": "Searching",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt7668870",
-      "poster": "",
+      "poster": "posters/searching-2018.jpg",
       "rating10": 7,
       "imdbRating": 7.6,
-      "imdbVotes": 196162
+      "imdbVotes": 196162,
+      "year": 2018,
+      "tmdb": 489999,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Aneesh Chaganty",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Bazelevs",
+      "logo": "logos/109501.png"
     },
     {
       "title": "Wyrm",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt12826940",
-      "poster": "",
+      "poster": "posters/wyrm-2019.jpg",
       "rating10": 7,
       "imdbRating": 6.5,
-      "imdbVotes": 1262
+      "imdbVotes": 1262,
+      "year": 2019,
+      "tmdb": 630476,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Christopher Winterbauer",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Science Fiction"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Puss in Boots: The Last Wish",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt3915174",
-      "poster": "",
+      "poster": "posters/puss-in-boots-the-last-wish-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.9,
-      "imdbVotes": 234455
+      "imdbVotes": 234455,
+      "year": 2022,
+      "tmdb": 315162,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Joel Crawford",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Fantasy",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "DreamWorks Animation",
+      "logo": "logos/521.png"
     },
     {
       "title": "All of Us Strangers",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt21192142",
-      "poster": "",
+      "poster": "posters/all-of-us-strangers-2023.jpg",
       "rating10": 7,
       "imdbRating": 7.6,
-      "imdbVotes": 82099
+      "imdbVotes": 82099,
+      "year": 2023,
+      "tmdb": 994108,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Andrew Haigh",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Fantasy"
+      ],
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "Changeling",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt0824747",
-      "poster": "",
+      "poster": "posters/changeling-2008.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 277392
+      "imdbVotes": 277392,
+      "year": 2008,
+      "tmdb": 3580,
+      "tmdbKind": "movie",
+      "runtime": 142,
+      "director": "Clint Eastwood",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "King of New York",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt0099939",
-      "poster": "",
+      "poster": "posters/king-of-new-york-1990.jpg",
       "rating10": 6.5,
       "imdbRating": 6.9,
-      "imdbVotes": 50485
+      "imdbVotes": 50485,
+      "year": 1990,
+      "tmdb": 9558,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Abel Ferrara",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Reteitalia",
+      "logo": "logos/1242.png"
     },
     {
       "title": "Blades of Glory",
       "rating": 3.5,
       "watched": "2024-06-10",
       "imdb": "tt0445934",
-      "poster": "",
+      "poster": "posters/blades-of-glory-2007.jpg",
       "rating10": 6.5,
       "imdbRating": 6.3,
-      "imdbVotes": 188216
+      "imdbVotes": 188216,
+      "year": 2007,
+      "tmdb": 9955,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Josh Gordon",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "DreamWorks Pictures",
+      "logo": "logos/7.png"
     },
     {
       "title": "The Hunt",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt8244784",
-      "poster": "",
+      "poster": "posters/the-hunt-2020.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 160210
+      "imdbVotes": 160210,
+      "year": 2020,
+      "tmdb": 514847,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Craig Zobel",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Horror"
+      ],
+      "studio": "Blumhouse Productions",
+      "logo": "logos/3172.png"
     },
     {
       "title": "Eileen",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt5198890",
-      "poster": "",
+      "poster": "posters/eileen-2023.jpg",
       "rating10": 6,
       "imdbRating": 5.9,
-      "imdbVotes": 21117
+      "imdbVotes": 21117,
+      "year": 2023,
+      "tmdb": 664341,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "William Oldroyd",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Likely Story",
+      "logo": "logos/1785.png"
     },
     {
       "title": "Hit Man",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt20215968",
-      "poster": "",
+      "poster": "posters/hit-man-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.8,
-      "imdbVotes": 135902
+      "imdbVotes": 135902,
+      "year": 2024,
+      "tmdb": 974635,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Richard Linklater",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Crime"
+      ],
+      "studio": "Aggregate Films",
+      "logo": "logos/37361.png"
     },
     {
       "title": "Strays",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt15153532",
-      "poster": "",
+      "poster": "posters/strays-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 6.3,
-      "imdbVotes": 38810
+      "imdbVotes": 38810,
+      "year": 2023,
+      "tmdb": 912908,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Josh Greenbaum",
+      "genres": [
+        "Comedy",
+        "Adventure"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Miller's Girl",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt8310486",
-      "poster": "",
+      "poster": "posters/miller-s-girl-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 5.2,
-      "imdbVotes": 28518
+      "imdbVotes": 28518,
+      "year": 2024,
+      "tmdb": 1026436,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Jade Halley Bartlett",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Point Grey Pictures",
+      "logo": "logos/16615.png"
     },
     {
       "title": "Sleeping Dogs",
       "rating": 3,
       "watched": "2024-06-10",
       "imdb": "tt8542964",
-      "poster": "",
+      "poster": "posters/sleeping-dogs-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6.2,
-      "imdbVotes": 28520
+      "imdbVotes": 28520,
+      "year": 2024,
+      "tmdb": 978592,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Adam Cooper",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Nickel City Pictures",
+      "logo": "logos/110723.png"
     },
     {
       "title": "I Used to Be Funny",
       "rating": 3.5,
       "watched": "2024-06-19",
       "imdb": "tt16300138",
-      "poster": "",
+      "poster": "posters/i-used-to-be-funny-2024.jpg",
       "rating10": 6.5,
       "imdbRating": 6.5,
-      "imdbVotes": 5153
+      "imdbVotes": 5153,
+      "year": 2024,
+      "tmdb": 918287,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Ally Pankiw",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Crave",
+      "logo": "logos/157740.png"
     },
     {
       "title": "Hell or High Water",
       "rating": 3.5,
       "watched": "2024-06-23",
       "imdb": "tt2582782",
-      "poster": "",
+      "poster": "posters/hell-or-high-water-2016.jpg",
       "rating10": 7,
       "imdbRating": 7.6,
-      "imdbVotes": 283746
+      "imdbVotes": 283746,
+      "year": 2016,
+      "tmdb": 338766,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "David Mackenzie",
+      "genres": [
+        "Western",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Sidney Kimmel Entertainment",
+      "logo": "logos/737.png"
     },
     {
       "title": "Sexy Beast",
       "rating": 3.5,
       "watched": "2024-07-02",
       "imdb": "tt0203119",
-      "poster": "",
+      "poster": "posters/sexy-beast-2001.jpg",
       "rating10": 7,
       "imdbRating": 7.3,
-      "imdbVotes": 77661
+      "imdbVotes": 77661,
+      "year": 2001,
+      "tmdb": 11826,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Jonathan Glazer",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Recorded Picture Company",
+      "logo": "logos/11561.png"
     },
     {
       "title": "Hot Fuzz",
       "rating": 3.5,
       "watched": "2024-07-02",
       "imdb": "tt0425112",
-      "poster": "",
+      "poster": "posters/hot-fuzz-2007.jpg",
       "rating10": 6.5,
       "imdbRating": 7.8,
-      "imdbVotes": 575703
+      "imdbVotes": 575703,
+      "year": 2007,
+      "tmdb": 4638,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Edgar Wright",
+      "genres": [
+        "Crime",
+        "Action",
+        "Comedy"
+      ],
+      "studio": "Big Talk Studios",
+      "logo": "logos/443.png"
     },
     {
       "title": "The Disruptors",
       "rating": 3.5,
       "watched": "2024-07-02",
       "imdb": "tt21048468",
-      "poster": "",
+      "poster": "posters/the-disruptors-2024.jpg",
       "rating10": 6.5,
       "imdbRating": 5.7,
-      "imdbVotes": 195
+      "imdbVotes": 195,
+      "year": 2024,
+      "tmdb": 1026292,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Adam Frucci",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Babes",
       "rating": 3,
       "watched": "2024-07-03",
       "imdb": "tt21276958",
-      "poster": "",
+      "poster": "posters/babes-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6.3,
-      "imdbVotes": 7882
+      "imdbVotes": 7882,
+      "year": 2024,
+      "tmdb": 999582,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Pamela Adlon",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "Beverly Hills Cop: Axel F",
       "rating": 3,
       "watched": "2024-07-04",
       "imdb": "tt3083016",
-      "poster": "",
+      "poster": "posters/beverly-hills-cop-axel-f-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.4,
-      "imdbVotes": 89042
+      "imdbVotes": 89042,
+      "year": 2024,
+      "tmdb": 280180,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Mark Molloy",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Don Simpson/Jerry Bruckheimer Films",
+      "logo": "logos/10288.png"
     },
     {
       "title": "The Bikeriders",
       "rating": 3,
       "watched": "2024-08-01",
       "imdb": "tt21454134",
-      "poster": "",
+      "poster": "posters/the-bikeriders-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 80652
+      "imdbVotes": 80652,
+      "year": 2024,
+      "tmdb": 1008409,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Jeff Nichols",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "New Regency Pictures",
+      "logo": "logos/10104.png"
     },
     {
       "title": "Jackpot!",
       "rating": 2.5,
       "watched": "2024-08-15",
       "imdb": "tt26940324",
-      "poster": "",
+      "poster": "posters/jackpot-2024.jpg",
       "rating10": 5,
       "imdbRating": 5.8,
-      "imdbVotes": 36118
+      "imdbVotes": 36118,
+      "year": 2024,
+      "tmdb": 1094138,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Paul Feig",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "studio": "Roth-Kirschenbaum Films",
+      "logo": "logos/105052.png"
     },
     {
       "title": "The Instigators",
       "rating": 2.5,
       "watched": "2024-08-16",
       "imdb": "tt24169886",
-      "poster": "",
+      "poster": "posters/the-instigators-2024.jpg",
       "rating10": 5,
       "imdbRating": 6.2,
-      "imdbVotes": 45936
+      "imdbVotes": 45936,
+      "year": 2024,
+      "tmdb": 1059064,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Doug Liman",
+      "genres": [
+        "Crime",
+        "Comedy"
+      ],
+      "studio": "Artists Equity",
+      "logo": "logos/187968.png"
     },
     {
       "title": "Telemarketers",
       "rating": 4,
       "watched": "2024-08-28",
       "imdb": "tt28498129",
-      "poster": "",
+      "poster": "posters/telemarketers-2023.jpg",
       "rating10": 7.5,
       "imdbRating": 7.3,
-      "imdbVotes": 5227
+      "imdbVotes": 5227,
+      "year": 2023,
+      "tmdb": 231396,
+      "tmdbKind": "tv",
+      "director": "Sam Lipman-Stern",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Elara Pictures",
+      "logo": "logos/94312.png"
     },
     {
       "title": "LaRoy, Texas",
       "rating": 3,
       "watched": "2024-09-01",
       "imdb": "tt20102596",
-      "poster": "",
+      "poster": "posters/laroy-texas-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.5,
-      "imdbVotes": 8662
+      "imdbVotes": 8662,
+      "year": 2024,
+      "tmdb": 1001783,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Shane Atkinson",
+      "genres": [
+        "Crime",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "Lotus Entertainment",
+      "logo": "logos/74208.png"
     },
     {
       "title": "The Fugitive",
       "rating": 3.5,
       "watched": "2024-09-03",
       "imdb": "tt0106977",
-      "poster": "",
+      "poster": "posters/the-fugitive-1993.jpg",
       "rating10": 7,
       "imdbRating": 7.8,
-      "imdbVotes": 352395
+      "imdbVotes": 352395,
+      "year": 1993,
+      "tmdb": 5503,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Andrew Davis",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Ol' Dirty Bastard: A Tale of Two Dirtys",
       "rating": 3.5,
       "watched": "2024-09-03",
       "imdb": "tt32460476",
-      "poster": "",
+      "poster": "posters/ol-dirty-bastard-a-tale-of-two-dirtys-2024.jpg",
       "rating10": 7,
       "imdbRating": 6.7,
-      "imdbVotes": 273
+      "imdbVotes": 273,
+      "year": 2024,
+      "tmdb": 958283,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Sam Pollard",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Pulse Films",
+      "logo": "logos/57430.png"
     },
     {
       "title": "Adventures in Babysitting",
       "rating": 3,
       "watched": "2024-09-03",
       "imdb": "tt0092513",
-      "poster": "",
+      "poster": "posters/adventures-in-babysitting-1987.jpg",
       "rating10": 6,
       "imdbRating": 7,
-      "imdbVotes": 55351
+      "imdbVotes": 55351,
+      "year": 1987,
+      "tmdb": 14367,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Chris Columbus",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "Greedy People",
       "rating": 3,
       "watched": "2024-09-03",
       "imdb": "tt20201748",
-      "poster": "",
+      "poster": "posters/greedy-people-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6.2,
-      "imdbVotes": 16735
+      "imdbVotes": 16735,
+      "year": 2024,
+      "tmdb": 974250,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Potsy Ponciroli",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "Hideout Pictures",
+      "logo": "logos/74808.png"
     },
     {
       "title": "The Grifters",
       "rating": 2.5,
       "watched": "2024-09-10",
       "imdb": "tt0099703",
-      "poster": "",
+      "poster": "posters/the-grifters-1990.jpg",
       "rating10": 5,
       "imdbRating": 6.8,
-      "imdbVotes": 33890
+      "imdbVotes": 33890,
+      "year": 1990,
+      "tmdb": 18129,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Stephen Frears",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Rebel Ridge",
       "rating": 3,
       "watched": "2024-09-16",
       "imdb": "tt11301886",
-      "poster": "",
+      "poster": "posters/rebel-ridge-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.8,
-      "imdbVotes": 108234
+      "imdbVotes": 108234,
+      "year": 2024,
+      "tmdb": 646097,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Jeremy Saulnier",
+      "genres": [
+        "Crime",
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "filmscience",
+      "logo": "logos/1976.png"
     },
     {
       "title": "Blink Twice",
       "rating": 3.5,
       "watched": "2024-09-19",
       "imdb": "tt14858658",
-      "poster": "",
+      "poster": "posters/blink-twice-2024.jpg",
       "rating10": 6.5,
       "imdbRating": 6.5,
-      "imdbVotes": 136190
+      "imdbVotes": 136190,
+      "year": 2024,
+      "tmdb": 840705,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Zoë Kravitz",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Free Association",
+      "logo": "logos/57743.png"
     },
     {
       "title": "What You Wish For",
       "rating": 3.5,
       "watched": "2024-09-24",
       "imdb": "tt13638858",
-      "poster": "",
+      "poster": "posters/what-you-wish-for-2024.jpg",
       "rating10": 7,
       "imdbRating": 6.7,
-      "imdbVotes": 14134
+      "imdbVotes": 14134,
+      "year": 2024,
+      "tmdb": 1126934,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Nicholas Tomnay",
+      "genres": [
+        "Thriller",
+        "Comedy",
+        "Horror"
+      ],
+      "studio": "Jaguar Bite",
+      "logo": "logos/128081.png"
     },
     {
       "title": "Enter the Void",
       "rating": 3.5,
       "watched": "2024-09-28",
       "imdb": "tt1191111",
-      "poster": "",
+      "poster": "posters/enter-the-void-2010.jpg",
       "rating10": 7,
       "imdbRating": 7.2,
-      "imdbVotes": 96136
+      "imdbVotes": 96136,
+      "year": 2010,
+      "tmdb": 34647,
+      "tmdbKind": "movie",
+      "runtime": 161,
+      "director": "Gaspar Noé",
+      "genres": [
+        "Fantasy",
+        "Drama"
+      ],
+      "studio": "Wild Bunch",
+      "logo": "logos/856.png"
     },
     {
       "title": "Wolfs",
       "rating": 2.5,
       "watched": "2024-09-28",
       "imdb": "tt14257582",
-      "poster": "",
+      "poster": "posters/wolfs-2024.jpg",
       "rating10": 5,
       "imdbRating": 6.5,
-      "imdbVotes": 110004
+      "imdbVotes": 110004,
+      "year": 2024,
+      "tmdb": 877817,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Jon Watts",
+      "genres": [
+        "Crime",
+        "Comedy"
+      ],
+      "studio": "Smokehouse Pictures",
+      "logo": "logos/1782.png"
     },
     {
       "title": "In the Company of Men",
       "rating": 4,
       "watched": "2024-09-29",
       "imdb": "tt0119361",
-      "poster": "",
+      "poster": "posters/in-the-company-of-men-1997.jpg",
       "rating10": 7.5,
       "imdbRating": 7.1,
-      "imdbVotes": 14945
+      "imdbVotes": 14945,
+      "year": 1997,
+      "tmdb": 14585,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Neil LaBute",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Alliance Atlantis",
+      "logo": "logos/803.png"
     },
     {
       "title": "Deadpool & Wolverine",
       "rating": 4,
       "watched": "2024-10-01",
       "imdb": "tt6263850",
-      "poster": "",
+      "poster": "posters/deadpool-wolverine-2024.jpg",
       "rating10": 7.5,
       "imdbRating": 7.5,
-      "imdbVotes": 603071
+      "imdbVotes": 603071,
+      "year": 2024,
+      "tmdb": 533535,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Shawn Levy",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "The Wasp",
       "rating": 3,
       "watched": "2024-10-01",
       "imdb": "tt21958136",
-      "poster": "",
+      "poster": "posters/the-wasp-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 6589
+      "imdbVotes": 6589,
+      "year": 2024,
+      "tmdb": 1019404,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Guillem Morales",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "XYZ Films",
+      "logo": "logos/12142.png"
     },
     {
       "title": "The 4:30 Movie",
       "rating": 3.5,
       "watched": "2024-10-04",
       "imdb": "tt28658276",
-      "poster": "",
+      "poster": "posters/the-4-30-movie-2024.jpg",
       "rating10": 7,
       "imdbRating": 6,
-      "imdbVotes": 5051
+      "imdbVotes": 5051,
+      "year": 2024,
+      "tmdb": 1146556,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Destro Films",
+      "logo": "logos/35043.png"
     },
     {
       "title": "Dune: Part Two",
       "rating": 4,
       "watched": "2024-10-05",
       "imdb": "tt15239678",
-      "poster": "",
+      "poster": "posters/dune-part-two-2024.jpg",
       "rating10": 8,
       "imdbRating": 8.4,
-      "imdbVotes": 807116
+      "imdbVotes": 807116,
+      "year": 2024,
+      "tmdb": 693134,
+      "tmdbKind": "movie",
+      "runtime": 167,
+      "director": "Denis Villeneuve",
+      "genres": [
+        "Science Fiction",
+        "Adventure"
+      ],
+      "studio": "Legendary Pictures",
+      "logo": "logos/923.png"
     },
     {
       "title": "It's What's Inside",
       "rating": 4,
       "watched": "2024-10-05",
       "imdb": "tt14577874",
-      "poster": "",
+      "poster": "posters/it-s-what-s-inside-2024.jpg",
       "rating10": 7.5,
       "imdbRating": 6.6,
-      "imdbVotes": 55350
+      "imdbVotes": 55350,
+      "year": 2024,
+      "tmdb": 1052280,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Greg Jardin",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Science Fiction"
+      ],
+      "studio": "Edith Productions",
+      "logo": "logos/140678.png"
     },
     {
       "title": "Inside Out 2",
       "rating": 3.5,
       "watched": "2024-10-19",
       "imdb": "tt22022452",
-      "poster": "",
+      "poster": "posters/inside-out-2-2024.jpg",
       "rating10": 7,
       "imdbRating": 7.5,
-      "imdbVotes": 263824
+      "imdbVotes": 263824,
+      "year": 2024,
+      "tmdb": 1022789,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Kelsey Mann",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Kitbull",
       "rating": 3.5,
       "watched": "2024-10-19",
       "imdb": "tt9536832",
-      "poster": "",
+      "poster": "posters/kitbull-2019.jpg",
       "rating10": 7,
       "imdbRating": 8,
-      "imdbVotes": 8202
+      "imdbVotes": 8202,
+      "year": 2019,
+      "tmdb": 574074,
+      "tmdbKind": "movie",
+      "runtime": 9,
+      "director": "Rosana Sullivan",
+      "genres": [
+        "Animation",
+        "Family",
+        "Drama"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "The Last Stop in Yuma County",
       "rating": 3,
       "watched": "2024-10-19",
       "imdb": "tt11674730",
-      "poster": "",
+      "poster": "posters/the-last-stop-in-yuma-county-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.9,
-      "imdbVotes": 27099
+      "imdbVotes": 27099,
+      "year": 2024,
+      "tmdb": 1047020,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Francis Galluppi",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Random Lane Productions",
+      "logo": "logos/185930.png"
     },
     {
       "title": "Purl",
       "rating": 3,
       "watched": "2024-10-19",
       "imdb": "tt8980868",
-      "poster": "",
+      "poster": "posters/purl-2019.jpg",
       "rating10": 5.5,
       "imdbRating": 6.5,
-      "imdbVotes": 5705
+      "imdbVotes": 5705,
+      "year": 2019,
+      "tmdb": 532953,
+      "tmdbKind": "movie",
+      "runtime": 9,
+      "director": "Kristen Lester",
+      "genres": [
+        "Animation",
+        "Comedy"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Rillington Place",
       "rating": 3.5,
       "watched": "2024-10-23",
       "imdb": "tt5568438",
-      "poster": "",
+      "poster": "posters/rillington-place-2016.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 4891
+      "imdbVotes": 4891,
+      "year": 2016,
+      "tmdb": 68800,
+      "tmdbKind": "tv",
+      "runtime": 52,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "BBC",
+      "logo": "logos/3324.png"
     },
     {
       "title": "The Last Duel",
       "rating": 3.5,
       "watched": "2024-10-23",
       "imdb": "tt4244994",
-      "poster": "",
+      "poster": "posters/the-last-duel-2021.jpg",
       "rating10": 6.5,
       "imdbRating": 7.3,
-      "imdbVotes": 212377
+      "imdbVotes": 212377,
+      "year": 2021,
+      "tmdb": 617653,
+      "tmdbKind": "movie",
+      "runtime": 153,
+      "director": "Ridley Scott",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "20th Century Studios",
+      "logo": "logos/127928.png"
     },
     {
       "title": "Into the Fire: The Lost Daughter",
       "rating": 3.5,
       "watched": "2024-11-01",
       "imdb": "tt33163756",
-      "poster": "",
+      "poster": "posters/into-the-fire-the-lost-daughter-2024.jpg",
       "rating10": 7,
       "imdbRating": 7.6,
-      "imdbVotes": 10552
+      "imdbVotes": 10552,
+      "year": 2024,
+      "tmdb": 261649,
+      "tmdbKind": "tv",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "Denver & Delilah Productions",
+      "logo": "logos/3574.png"
     },
     {
       "title": "Jailbreak: Love on the Run",
       "rating": 3.5,
       "watched": "2024-11-01",
       "imdb": "tt33058713",
-      "poster": "",
+      "poster": "posters/jailbreak-love-on-the-run-2024.jpg",
       "rating10": 6.5,
       "imdbRating": 6.4,
-      "imdbVotes": 4141
+      "imdbVotes": 4141,
+      "year": 2024,
+      "tmdb": 1341685,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Dan Abrams",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "AMPLE Entertainment",
+      "logo": "logos/87403.png"
     },
     {
       "title": "Into the Night",
       "rating": 3,
       "watched": "2024-11-01",
       "imdb": "tt0089346",
-      "poster": "",
+      "poster": "posters/into-the-night-1985.jpg",
       "rating10": 6,
       "imdbRating": 6.4,
-      "imdbVotes": 15055
+      "imdbVotes": 15055,
+      "year": 1985,
+      "tmdb": 11338,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "John Landis",
+      "genres": [
+        "Thriller",
+        "Comedy"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Killer",
       "rating": 3,
       "watched": "2024-11-01",
       "imdb": "tt1121948",
-      "poster": "",
+      "poster": "posters/the-killer-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 5.7,
-      "imdbVotes": 19311
+      "imdbVotes": 19311,
+      "year": 2024,
+      "tmdb": 970347,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "John Woo",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Killer Heat",
       "rating": 2.5,
       "watched": "2024-11-01",
       "imdb": "tt27419292",
-      "poster": "",
+      "poster": "posters/killer-heat-2024.jpg",
       "rating10": 5,
       "imdbRating": 5.6,
-      "imdbVotes": 16372
+      "imdbVotes": 16372,
+      "year": 2024,
+      "tmdb": 1108566,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Philippe Lacôte",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Makeready",
+      "logo": "logos/106839.png"
     },
     {
       "title": "Brothers",
       "rating": 2.5,
       "watched": "2024-11-01",
       "imdb": "tt9860566",
-      "poster": "",
+      "poster": "posters/brothers-2024.jpg",
       "rating10": 5,
       "imdbRating": 5.4,
-      "imdbVotes": 16147
+      "imdbVotes": 16147,
+      "year": 2024,
+      "tmdb": 616446,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Max Barbakow",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Mad Chance",
+      "logo": "logos/1757.png"
     },
     {
       "title": "A Woman Under the Influence",
       "rating": 4.5,
       "watched": "2024-11-03",
       "imdb": "tt0072417",
-      "poster": "",
+      "poster": "posters/a-woman-under-the-influence-1974.jpg",
       "rating10": 8.5,
       "imdbRating": 8,
-      "imdbVotes": 34473
+      "imdbVotes": 34473,
+      "year": 1974,
+      "tmdb": 29845,
+      "tmdbKind": "movie",
+      "runtime": 155,
+      "director": "John Cassavetes",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Joker: Folie à Deux",
       "rating": 3,
       "watched": "2024-11-05",
       "imdb": "tt11315808",
-      "poster": "",
+      "poster": "posters/joker-folie-a-deux-2024.jpg",
       "rating10": 6,
       "imdbRating": 5.2,
-      "imdbVotes": 190871
+      "imdbVotes": 190871,
+      "year": 2024,
+      "tmdb": 889737,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Todd Phillips",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Woman of the Hour",
       "rating": 3,
       "watched": "2024-11-07",
       "imdb": "tt7737800",
-      "poster": "",
+      "poster": "posters/woman-of-the-hour-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 77700
+      "imdbVotes": 77700,
+      "year": 2024,
+      "tmdb": 835113,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Anna Kendrick",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "BoulderLight Pictures",
+      "logo": "logos/18609.png"
     },
     {
       "title": "A Different Man",
       "rating": 3,
       "watched": "2024-11-07",
       "imdb": "tt21097228",
-      "poster": "",
+      "poster": "posters/a-different-man-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.8,
-      "imdbVotes": 40711
+      "imdbVotes": 40711,
+      "year": 2024,
+      "tmdb": 989662,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Aaron Schimberg",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Magpie",
       "rating": 3.5,
       "watched": "2024-11-16",
       "imdb": "tt20202324",
-      "poster": "",
+      "poster": "posters/magpie-2024.jpg",
       "rating10": 7,
       "imdbRating": 6.3,
-      "imdbVotes": 5393
+      "imdbVotes": 5393,
+      "year": 2024,
+      "tmdb": 974292,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Sam Yates",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Type 55 Films",
+      "logo": "logos/21207.png"
     },
     {
       "title": "My Old Ass",
       "rating": 3,
       "watched": "2024-11-16",
       "imdb": "tt18559464",
-      "poster": "",
+      "poster": "posters/my-old-ass-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.9,
-      "imdbVotes": 49393
+      "imdbVotes": 49393,
+      "year": 2024,
+      "tmdb": 947891,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Megan Park",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Indian Paintbrush",
+      "logo": "logos/9350.png"
     },
     {
       "title": "The Servant",
       "rating": 4,
       "watched": "2024-11-17",
       "imdb": "tt0057490",
-      "poster": "",
+      "poster": "posters/the-servant-1963.jpg",
       "rating10": 7.5,
       "imdbRating": 7.7,
-      "imdbVotes": 16240
+      "imdbVotes": 16240,
+      "year": 1963,
+      "tmdb": 42987,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Joseph Losey",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Topkapi",
       "rating": 3.5,
       "watched": "2024-11-17",
       "imdb": "tt0058672",
-      "poster": "",
+      "poster": "posters/topkapi-1964.jpg",
       "rating10": 7,
       "imdbRating": 6.9,
-      "imdbVotes": 11808
+      "imdbVotes": 11808,
+      "year": 1964,
+      "tmdb": 5052,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Jules Dassin",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Adventure"
+      ],
+      "studio": "Filmways Pictures",
+      "logo": "logos/1138.png"
     },
     {
       "title": "The Critic",
       "rating": 3,
       "watched": "2024-11-17",
       "imdb": "tt13457790",
-      "poster": "",
+      "poster": "posters/the-critic-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6,
-      "imdbVotes": 6880
+      "imdbVotes": 6880,
+      "year": 2024,
+      "tmdb": 992940,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Anand Tucker",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "BK Studios",
+      "logo": "logos/72316.png"
     },
     {
       "title": "What Jennifer Did",
       "rating": 3,
       "watched": "2024-11-17",
       "imdb": "tt31747163",
-      "poster": "",
+      "poster": "posters/what-jennifer-did-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6.1,
-      "imdbVotes": 13681
+      "imdbVotes": 13681,
+      "year": 2024,
+      "tmdb": 1261924,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Jenny Popplewell",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "studio": "RAW",
+      "logo": "logos/23949.png"
     },
     {
       "title": "Trainwreck",
       "rating": 2.5,
       "watched": "2024-11-17",
       "imdb": "tt3152624",
-      "poster": "",
+      "poster": "posters/trainwreck-2015.jpg",
       "rating10": 5,
       "imdbRating": 6.2,
-      "imdbVotes": 148123
+      "imdbVotes": 148123,
+      "year": 2015,
+      "tmdb": 271718,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Judd Apatow",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Apatow Productions",
+      "logo": "logos/10105.png"
     },
     {
       "title": "An Inspector Calls",
       "rating": 3.5,
       "watched": "2024-11-23",
       "imdb": "tt0047119",
-      "poster": "",
+      "poster": "posters/an-inspector-calls-1954.jpg",
       "rating10": 6.5,
       "imdbRating": 7.5,
-      "imdbVotes": 6221
+      "imdbVotes": 6221,
+      "year": 1954,
+      "tmdb": 18174,
+      "tmdbKind": "movie",
+      "runtime": 80,
+      "director": "Guy Hamilton",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Hitcher",
       "rating": 3,
       "watched": "2024-11-30",
       "imdb": "tt0091209",
-      "poster": "",
+      "poster": "posters/the-hitcher-1986.jpg",
       "rating10": 6,
       "imdbRating": 7.2,
-      "imdbVotes": 60728
+      "imdbVotes": 60728,
+      "year": 1986,
+      "tmdb": 9542,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Robert Harmon",
+      "genres": [
+        "Horror",
+        "Action",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Juror #2",
       "rating": 3,
       "watched": "2024-12-07",
       "imdb": "tt27403986",
-      "poster": "",
+      "poster": "posters/juror-2-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 7,
-      "imdbVotes": 133731
+      "imdbVotes": 133731,
+      "year": 2024,
+      "tmdb": 1106739,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Clint Eastwood",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Venom: The Last Dance",
       "rating": 2.5,
       "watched": "2024-12-12",
       "imdb": "tt16366836",
-      "poster": "",
+      "poster": "posters/venom-the-last-dance-2024.jpg",
       "rating10": 5,
       "imdbRating": 6,
-      "imdbVotes": 167929
+      "imdbVotes": 167929,
+      "year": 2024,
+      "tmdb": 912649,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Kelly Marcel",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Carry-On",
       "rating": 3,
       "watched": "2024-12-16",
       "imdb": "tt21382296",
-      "poster": "",
+      "poster": "posters/carry-on-2024.jpg",
       "rating10": 5.5,
       "imdbRating": 6.5,
-      "imdbVotes": 200873
+      "imdbVotes": 200873,
+      "year": 2024,
+      "tmdb": 1005331,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Jaume Collet-Serra",
+      "genres": [
+        "Thriller",
+        "Action"
+      ],
+      "studio": "Dylan Clark Productions",
+      "logo": "logos/119245.png"
     },
     {
       "title": "The Order",
       "rating": 3.5,
       "watched": "2024-12-25",
       "imdb": "tt26625693",
-      "poster": "",
+      "poster": "posters/the-order-2024.jpg",
       "rating10": 7,
       "imdbRating": 6.8,
-      "imdbVotes": 66077
+      "imdbVotes": 66077,
+      "year": 2024,
+      "tmdb": 1082195,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Justin Kurzel",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "AGC Studios",
+      "logo": "logos/110799.png"
     },
     {
       "title": "Gladiator II",
       "rating": 3,
       "watched": "2024-12-25",
       "imdb": "tt9218128",
-      "poster": "",
+      "poster": "posters/gladiator-ii-2024.jpg",
       "rating10": 6,
       "imdbRating": 6.4,
-      "imdbVotes": 317813
+      "imdbVotes": 317813,
+      "year": 2024,
+      "tmdb": 558449,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Ridley Scott",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Misery",
       "rating": 4,
       "watched": "2024-12-27",
       "imdb": "tt0100157",
-      "poster": "",
+      "poster": "posters/misery-1990.jpg",
       "rating10": 7.5,
       "imdbRating": 7.8,
-      "imdbVotes": 272148
+      "imdbVotes": 272148,
+      "year": 1990,
+      "tmdb": 1700,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Rob Reiner",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Castle Rock Entertainment",
+      "logo": "logos/97.png"
     }
   ]
 }
