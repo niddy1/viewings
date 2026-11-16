@@ -233,7 +233,7 @@ def web_copy(im):
 
 
 def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0, matte=0.025,
-               card=(236, 231, 220), tears=0, dents=0, sun=0.0, blur=0.55, jpegq=90, out=None, notch=None):
+               card=(236, 231, 220), tears=0, dents=0, sun=0.0, blur=0.55, jpegq=90, out=None, notch=None, vivid=0.0):
     """img: RGBA/RGB at S scale -> final RGB image.
     kind='slip': printed cardboard slipcase (white board showing at the folds, corners and mouth,
     scuffs, dents, torn patches).  kind='clam': plastic clamshell with a paper insert under a clear
@@ -241,11 +241,14 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
     Everything is seeded per tape; nothing here is the same on two spines."""
     rng = np.random.default_rng(seed)
     a = np.asarray(img.convert('RGB')).astype(np.float32) / 255.0
+    if vivid:  # a brighter, more saturated print (asked for where a spine looked dull)
+        g_ = a.mean(axis=2, keepdims=True)
+        a = np.clip((g_ + (a - g_) * (1 + vivid)) * (1 + 0.45 * vivid), 0, 1)
     ins0 = ins1 = 0
     if kind == 'clam':  # the insert sits in a white plastic case that shows above, below and as a sliver each side
         r2 = np.random.default_rng(seed + 77)
-        yel = r2.uniform(0, 1) ** 2  # some cases have yellowed
-        plast = np.array([240, 240 - 10 * yel, 234 - 40 * yel], np.float32) / 255.0
+        yel = r2.uniform(0, 1) ** 2 * 0.15  # clean bright white (Ian's note); only the faintest warmth varies
+        plast = np.array([252, 252 - 6 * yel, 250 - 22 * yel], np.float32) / 255.0
         cap = np.ones((CLAM_CAP * S, a.shape[1], 3), np.float32) * plast
         sl = int(r2.uniform(2.5, 4.5) * S)
         a[:, :sl] = plast; a[:, -sl:] = plast
@@ -359,7 +362,8 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
         # so it darkens steadily toward them (more on the side away from the light) under a soft highlight
         u = 2 * xn - 1
         lit = rng.uniform(-0.25, -0.1)
-        a *= (1 - 0.16 * (u - lit) ** 2 - 0.30 * np.abs(u) ** 5 - 0.10 * np.clip(u, 0, 1) ** 2)[..., None]
+        capw = 1 - 0.55 * ((yy < ins0) | (yy >= ins1))  # the white caps take much less of the shading, so they stay bright
+        a *= (1 - capw * (0.16 * (u - lit) ** 2 + 0.30 * np.abs(u) ** 5 + 0.10 * np.clip(u, 0, 1) ** 2))[..., None]
         a = 1 - (1 - a) * (1 - 0.10 * np.exp(-((u - lit) / 0.30) ** 2)[..., None])
         for xc, wd, st in ((rng.uniform(0.2, 0.42), 0.035, 1.0), (rng.uniform(0.55, 0.8), 0.09, 0.45)):
             band = np.exp(-((xn - xc - 0.03 * fbm(h, w, 260 * S, rng, 2)) / wd) ** 2)
@@ -374,14 +378,14 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
         # the caps: moulded plastic rounding over at the very ends, a seam, a little grime
         capm = ((yy < ins0) | (yy >= ins1)).astype(np.float32)
         dy_ = np.minimum(yy, h - 1 - yy) / S
-        a *= (1 - capm * (0.10 * np.clip(1 - dy_ / 6.0, 0, 1) ** 2 + 0.05 * np.clip(fbm(h, w, 14 * S, rng, 3), -1, 1) ** 2))[..., None]
+        a *= (1 - capm * (0.07 * np.clip(1 - dy_ / 6.0, 0, 1) ** 2 + 0.012 * np.clip(fbm(h, w, 14 * S, rng, 3), -1, 1) ** 2))[..., None]
         # the ends are rolled: the plastic turns away at each corner, so shade into the corners
         cr = 12.0  # a small ease only: the ends of the case are close to square
         cd = np.sqrt(np.clip(1 - dx / cr, 0, 1) ** 2 + np.clip(1 - dy_ / cr, 0, 1) ** 2)
         a *= (1 - 0.18 * np.clip(cd - 0.8, 0, 1) / 0.6)[..., None]
-        a *= (1 - capm * 0.07 * np.clip((dy_ - 0.55 * CLAM_CAP) / 3.0, 0, 1))[..., None]  # the lip nearest the sleeve sits a shade darker
+        a *= (1 - capm * 0.035 * np.clip((dy_ - 0.55 * CLAM_CAP) / 3.0, 0, 1))[..., None]  # the lip nearest the sleeve sits a shade darker
         seam = rng.uniform(0.45, 0.62) * CLAM_CAP
-        a *= (1 - capm * 0.16 * np.exp(-((dy_ - seam) / 0.9) ** 2))[..., None]
+        a *= (1 - capm * 0.10 * np.exp(-((dy_ - seam) / 0.9) ** 2))[..., None]
         a += (capm * 0.05 * np.exp(-((dy_ - seam + 2.0) / 1.0) ** 2))[..., None]
         sc = np.zeros((h, w), np.uint8)
         for i in range(int(10 + 50 * wear)):

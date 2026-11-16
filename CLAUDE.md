@@ -30,12 +30,54 @@ One designed spine picture per tape, made in November 2026 with `spinegen/` (por
 - Catalogue numbers, sticker text and prices are invented. Malice uses the Castle Rock logo file because `films.json` has the wrong studio (Nelvana) for it.
 - Check new spines scaled to 250px tall; thin lettering fades at that size.
 - Rules Ian has set for spines: card wear must never show on the cassette inside the thumb notch (it is plastic; `finish_vhs(notch=...)` repaints it after the wear), the VHS mark and numbers always sit at the foot, and every spine has its title running down it (no title blocks set across the top; Girl in the Box and The Devil Wears Prada 2 were redone for this on 16 November 2026).
-- Disney and Pixar rule (Ian, 16 November 2026): every Disney or Pixar film gets the white clamshell, not a slipcase, laid out like the 1990s Disney clamshell spines (his reference photos): artwork the full length, a black diamond at the head, the studio logo reading down, the title in the film's own logo lettering, a single character's face in a red diamond near the foot (a true diamond, taller than wide, not a square on its corner), then CC, VHS and the number. Use `disney(...)` in `tapes.py` (currently Zootopia 2, Hoppers, Toy Story 5). A clamshell is a bigger box: its picture is drawn wider and 1188px tall (white plastic caps top and bottom, added by `finish_vhs(kind='clam')`) and saved at the same scale as the others, and `prepare()` in `app.js` sizes any spine picture taller than 560px from the picture itself, so these stand about 270px tall and 53px wide beside the 250px slipcases. The whole spine is rounded plastic, not a flat rectangular face (Ian's note): the picture is shaded as a curved moulding that falls away to both long edges, and `.spine.designed.clam` in `style.css` adds the same roll-off. The ends stay close to square (4px corner radius; a rounder end was tried and Ian found it too rounded). The head emblem is `logos/classics-diamond.png`: Ian's own low-res photo crop of the black-diamond emblem, squared up and placed as a picture (not redrawn); if that file is missing, `disney()` falls back to a plain diamond with "VHS 2026". A sharper photo saved over that file will be picked up on the next render. Zootopia 2's title is `logos/zootopia-2-title.png`, the film's title logo as Ian supplied it (kept on its own night-blue field, feathered at the edges, on a spine graded to match), placed with `Pic(...)`. Toy Story 5's title is the poster's own logo cut into its three pieces by colour (`ts_letters`, `ts_plate`) and laid along the spine as TOY, the red STORY plate, then the 5, the way the Toy Story tapes did it.
+- Disney and Pixar films do not use the slipcase layout: see "Disney and Pixar clamshells" below.
 - Look and sources: modelled on Ian's reference image of modern films given retro VHS box spines (title in the poster's own lettering, a framed picture at the head, studio logo, format mark and catalogue number at the foot, rental stickers, worn card). Studio logos and poster crops (including animated and comic characters) are welcome on spines; logos are placed from `logos/`, never redrawn. The typed-only "ZIPPORAH FILMS" (High School) and "UTOPIA" (The Sweet East), and the cast/director credit lines on some spines, were written from memory and may be wrong.
 - Five tapes have no logo file and carry a line of type instead: High School, The Sweet East, Louis C.K.: Ridiculous, Jeff Arcuri, Face/Off.
 - Not verified: that the "Re-mark spine" button is hidden on designed tapes (it only shows with the GitHub token saved, so it could not be seen in a test browser).
 - Ian decided against making the generator follow the Re-mark spine editor (a GitHub Action re-rendering on each edit was considered and dropped as too much trouble). To change a designed spine, ask Claude to edit its spec.
 - To add a tape: add a spec to `tapes.py` (copy a similar one), pick the `photo=ph(cx, cy, w, ar)` crop so it avoids the poster's title, run the script for that key.
+
+## Disney and Pixar clamshells
+Ian's rule (16 November 2026): **every Disney or Pixar film gets the white plastic clamshell, never a slipcase.** Currently Zootopia 2, Hoppers and Toy Story 5. The Devil Wears Prada 2 (20th Century Studios), Con Air (Touchstone) and Spider-Man (Marvel) are Disney-owned labels or partners and stay in slipcases unless Ian says otherwise. The model is the 1990s Walt Disney "Classics" clamshell spine, from his reference photos.
+
+### What the spine must have, top to bottom
+1. **White cap**: bright, clean white plastic showing above the paper insert (and the same at the foot). No yellowing or grime.
+2. **Head emblem**: the thin black diamond, `logos/classics-diamond.png`. This is Ian's own low-res photo crop of the emblem, squared up and placed as a picture. It is never redrawn in code; if the file is missing a plain black diamond with "VHS 2026" is drawn instead. A sharper photo saved over the file is picked up on the next render.
+3. **Studio logo reading down** the spine, in one ink, from the film's `logos/` file (left out when the title logo already carries the studio's name, as on Zootopia 2).
+4. **Title in the film's own logo lettering**, reading down. Never a generic typeset title if the real logo can be had (see "Getting the title" below).
+5. **One character's face in a red diamond** near the foot. A true diamond, clearly taller than wide, not a square on its corner, and a single face, not a group.
+6. **CC box, "VHS", catalogue number** at the foot, then the bottom white cap.
+
+Artwork or a colour taken from the poster runs the full length behind all of it. No thumb notch, no stickers, no card wear.
+
+### The case itself
+- **Bigger than a slipcase**: drawn 1.15x a slipcase's width and 1188px tall (1100 + a 44px cap each end), so on the shelf it stands about 270px tall and 49px wide beside 250px slipcases. (1.26x was tried first; Ian wanted it a tad slimmer.) `prepare()` in `app.js` sizes any spine picture taller than 560px from the picture itself and adds the `clam` class.
+- **Rounded plastic, not a flat face**: the picture is shaded as a curved moulding falling away to both long edges, and `.spine.designed.clam` in `style.css` adds the same roll-off.
+- **Ends close to square**: 4px corner radius, with the cap standing slightly proud of the sleeve. A rounder end was tried and Ian found it too rounded.
+- **Bright print**: if a clamshell looks dark or dull, pass `fin=dict(CLAM, vivid=.2 to .3)` (Toy Story 5 and Hoppers use it).
+
+### How to make one
+1. In `spinegen/tapes.py`, add a `disney(...)` call in the "Disney and Pixar" block (copy the nearest of the three):
+   `disney(id, bg, title, face, lcol=..., ink=..., studio=True, fin=dict(CLAM, vivid=.25))`
+   - `id`: the poster file name without `.jpg`.
+   - `bg`: `('strip', dict(x0=..., blur=14, wash=((r, g, b), .6)))` for blurred poster artwork tinted to one colour, or `('grad', [...])` for a colour run taken from the poster.
+   - `title`: see below.
+   - `face`: `ph(cx, cy, w, 1.4)`, a poster crop centred on one character's face (`w` about .2). Find the face by cropping the poster with a coordinate grid first; a guess usually lands on an ear or a neighbour.
+   - `lcol` / `ink`: colour of the studio logo and of the CC/VHS/number (dark on a pale spine).
+   - `studio=False` drops the studio logo line; `side=4` lets a wide title logo use nearly the full width.
+2. **Getting the title**, in order of preference:
+   - Ian supplies the title logo as an image: save it in `logos/<film>-title.png` and use `Pic('logos/<film>-title.png', size)`. If it sits on a coloured field that can't be cut away cleanly, keep the field, feather the edges to transparent, and grade the spine `bg` to match (Zootopia 2).
+   - The logo is on the poster in one colour on a plain ground: `L(tb(id), size, ink)` (Hoppers).
+   - The logo is on the poster in several colours: `LC([boxes...], size, cuts=[...])` cuts each piece out in its own colours. Toy Story 5 is the pattern for a stacked logo: its pieces are laid along the spine in reading order (TOY, the red STORY plate, the 5) the way the real Toy Story tapes did, using `ts_letters` and `ts_plate`.
+   - Only if none of those work, typeset it, and tell Ian so he can supply the logo.
+3. Render and check: `python3 spinegen/tapes.py <id>`, look at the picture at full size (cap, emblem, title, a single face in the diamond), then serve the site and screenshot the tape on the shelf next to its neighbours (see Workflow notes).
+4. Logos and emblems are only ever placed from image files (TMDB's or Ian's). Never redraw one in code.
+
+### Where the code is
+- `disney()`, `head_emblem()`, `head_diamond()` (fallback), `vlogo()`, `portrait()`, `ccbox()` in `spinegen/tapes.py`.
+- `Pic` (a logo picture as a title line) and `LC` (multi-colour lift) in `spinegen/eng.py`.
+- `finish_vhs(kind='clam', vivid=...)` and `CLAM_CAP` in `spinegen/lib.py`: caps, sleeve edge, curved shading.
+- `.spine.designed.clam` in `style.css`; the `f._clam` sizing in `prepare()` in `app.js`.
 
 ## Workflow notes
 - **Whenever a new film is added to the shelf (VCR commit, fetch script, or by hand), refresh the IMDb scores for every film, the new ones included.** How: open any imdb.com page in Ian's built-in browser (the site is already allowed), run one fetch() script there over all the films' `imdb` ids (`/title/<id>/`, read `aggregateRating.ratingValue`/`ratingCount` from the page's `<script type="application/ld+json">`, about six at a time), then write `imdbRating`/`imdbVotes` into films.json (keep its 2-space JSON format) and push with the new film. Takes a few seconds; don't open the pages one by one.
