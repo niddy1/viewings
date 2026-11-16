@@ -140,7 +140,7 @@ async function tmdb(endpoint, params = {}) {
       films.push({ ...old, rating: base.rating, watched: base.watched, ...(ptp ? { rating10: base.rating10 } : { rewatch: base.rewatch }) });
       continue;
     }
-    process.stdout.write(`[${n}/${byFilm.size}] ${base.title} (${base.year}) ... `);
+    process.stdout.write(`[${n}/${byFilm.size}] ${base.title}${base.year ? ` (${base.year})` : ''} ... `); // a seed entry has no year until TMDB gives it one
     try {
       let hit;
       let ptpKind = 'movie';
