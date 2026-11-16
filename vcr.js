@@ -3,7 +3,7 @@
  *
  * Type "vcr" anywhere on the page (or open the page with #vcr on the end, for phones),
  * drop in a PassThePopcorn ratings CSV, and it:
- *   - keeps only films rated in this shelf's year (films.json "year"),
+ *   - keeps only films rated in this shelf's year ("year" in the shelf's data file: films.json, or films-2025.json on ?shelf=2025),
  *   - matches them to the shelf by IMDb id (no fuzzy title matching),
  *   - looks up new films on TMDB (poster, runtime, director, genres),
  *   - lets you drag a box around the title lettering on each new poster,
@@ -96,9 +96,9 @@
   // Latest films.json straight from GitHub (so a stale Pages deploy can't undo an earlier update).
   async function loadShelf() {
     if (store.get(KEYS.gh)) {
-      return (await gh(`/contents/films.json?ref=${BRANCH}`, { headers: { Accept: 'application/vnd.github.raw+json' }, cache: 'no-store' })).json();
+      return (await gh(`/contents/${DATA()}?ref=${BRANCH}`, { headers: { Accept: 'application/vnd.github.raw+json' }, cache: 'no-store' })).json();
     }
-    return (await fetch('films.json', { cache: 'no-cache' })).json();
+    return (await fetch(DATA(), { cache: 'no-cache' })).json();
   }
 
   // One commit on BRANCH. files: [{ path, content }] for text, [{ path, blob }] for binary.
@@ -120,6 +120,8 @@
     catch (e) { throw new Error(/fast forward/i.test(e.message) ? 'The shelf changed on GitHub while this was open. Try again.' : e.message); }
     return commit;
   }
+  // The shelf on show (?shelf=2025) has its own data file; app.js says which.
+  const DATA = () => (window.viewings && window.viewings.dataFile) || 'films.json';
   const filmKey = (f) => f.imdb || `${f.title}|${f.year}`;
 
   const toBase64 = (blob) => new Promise((resolve, reject) => {
@@ -433,7 +435,7 @@
       }
       const next = { ...data, films: [...films, ...added].sort((a, b) => (a.watched || '').localeCompare(b.watched || '')) };
 
-      const files = [{ path: 'films.json', content: JSON.stringify(next, null, 2) + '\n' }];
+      const files = [{ path: DATA(), content: JSON.stringify(next, null, 2) + '\n' }];
       for (const e of adds) {
         const f = added.find((a) => a.imdb === e.imdb);
         if (e.posterBlob && f && f.poster) files.push({ path: f.poster, blob: e.posterBlob });
@@ -672,8 +674,8 @@
         p.blobs.forEach((b) => files.push(b));
         names.push(p.title);
       }
-      if (!names.length) throw new Error('Couldn’t find those tapes in films.json on GitHub.');
-      files.unshift({ path: 'films.json', content: JSON.stringify(data, null, 2) + '\n' });
+      if (!names.length) throw new Error(`Couldn’t find those tapes in ${DATA()} on GitHub.`);
+      files.unshift({ path: DATA(), content: JSON.stringify(data, null, 2) + '\n' });
       await commitFiles(`Spines: re-marked ${names.slice(0, 3).join(', ')}${names.length > 3 ? ` +${names.length - 3}` : ''}`, files);
       pending.clear();
       saveBtn.hidden = false; saveBtn.textContent = '✓ Saved. Live in about a minute';

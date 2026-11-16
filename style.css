@@ -28,6 +28,25 @@ h1 {
 }
 h1 span { color: var(--gold); }
 h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height: auto; filter: drop-shadow(0 6px 14px rgba(0,0,0,.45)); }
+
+/* arrows either side of the ticket: flip to the year before / after */
+.ticket-row { display: flex; align-items: center; justify-content: center; gap: clamp(10px, 3vw, 34px); }
+.ticket-row h1.ticket { flex: 0 1 auto; }
+.ticket-row h1.ticket img { width: min(380px, 62vw); }
+.shelf-arrow {
+  flex: none; display: flex; flex-direction: column; align-items: center; gap: 4px;
+  width: 64px; color: #f1c203; text-decoration: none;
+  font-family: 'Blockletter', 'Impact', sans-serif; font-size: 1.25rem; letter-spacing: .04em; line-height: 1;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,.45));
+  transition: transform .15s ease, color .15s ease;
+}
+.shelf-arrow[hidden] { display: flex; visibility: hidden; } /* keep its room so the ticket stays centred */
+.shelf-arrow svg { width: 34px; height: 42px; fill: none; stroke: currentColor; stroke-width: 9; stroke-linecap: square; stroke-linejoin: miter; }
+.shelf-arrow.next { flex-direction: column-reverse; }
+.shelf-arrow:hover, .shelf-arrow:focus-visible { color: #ffd84a; outline: none; }
+.shelf-arrow.prev:hover, .shelf-arrow.prev:focus-visible { transform: translateX(-4px); }
+.shelf-arrow.next:hover, .shelf-arrow.next:focus-visible { transform: translateX(4px); }
+@media (max-width: 640px) { .shelf-arrow { width: 40px; font-size: .95rem; } .shelf-arrow svg { width: 24px; height: 30px; stroke-width: 8; } }
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .tally {
   position: absolute; right: 14px; bottom: -30px; margin: 0;
