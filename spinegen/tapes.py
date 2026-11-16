@@ -18,7 +18,11 @@ CLAM = dict(kind='clam', wear=.4, gloss=.06)                                    
 WHT, BLK, CRM = (246, 243, 234), (20, 19, 19), (240, 233, 212)
 VRED = (200, 32, 38)
 
-FILMS = {f['poster'].split('/')[-1][:-4]: f for f in json.load(open(REPO + 'films.json', encoding='utf8'))['films']}
+import glob, os
+# every shelf: films.json (newest year) and films-<year>.json (older ones)
+FILMS = {f['poster'].split('/')[-1][:-4]: f
+         for p in [REPO + 'films.json'] + sorted(glob.glob(REPO + 'films-*.json'))
+         for f in json.load(open(p, encoding='utf8'))['films'] if f.get('poster')}
 SPECS = {}
 
 
@@ -685,6 +689,77 @@ std('deep-web-2015', ('grad', [(0, (12, 12, 20)), (.5, (40, 40, 120)), (1, (14, 
     photo=ph(.5, .62, .9, .85), pb=(206, 232, 240), lg=WHT, lw=.7, order='LPTCF', credit=['THE CRIME SAGA OF', 'THE DIGITAL AGE'], ccol=(150, 160, 250),
     ft='e', fcol=(206, 232, 240), fin=WORN)
 
+
+
+# =====================================================================================
+# the 2025 shelf (films-2025.json).  These posters have no titleBox in the data, so the
+# lettering boxes are given here directly.
+# =====================================================================================
+
+# Flow: flood-water sky running down to green water, the poster's white brush lettering, the cat up top
+std('flow-2024', ('grad', [(0, (118, 196, 230)), (.45, (70, 160, 186)), (1, (16, 70, 72))]), WHT,
+    L((0.18, 0.095, 0.80, 0.295), 120, WHT, mode='key', key=(250, 250, 250), t=(40, 110), speck=.01),
+    photo=ph(.57, .45, .42, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'GINTS ZILBALODIS'], ccol=(236, 246, 240),
+    ft='e', fcol=(226, 242, 240), fin=MINT, dotst=(['ANIMATED'], (236, 120, 40)))
+
+# You're Cordially Invited: wedding-invitation white, navy serif over the fat INVITED (lifted; the thin
+# serif line above it is typeset, as it would not lift cleanly off the poster)
+std('you-re-cordially-invited-2025', ('solid', (247, 245, 240)), (30, 38, 70),
+    [T("You’re Cordially", 'ter', 54, (30, 38, 70), track=-.01),
+     L((0.09, 0.183, 0.92, 0.255), 104, (30, 38, 70), mode='key', key=(30, 38, 70), t=(60, 140))],
+    photo=ph(.67, .55, .62, 1.3), pb=(30, 38, 70), lg=(176, 140, 70), lw=.74, order='LPTF', tgap=10,
+    ft='d', fcol=(30, 38, 70), fin=MINT, dotst=(['COMEDY'], (200, 60, 70)))
+
+# Little Children: black, the thin white Roman title, the sleeping pair at the foot of the poster
+std('little-children-2006', ('solid', (10, 10, 11)), WHT,
+    L((0.01, 0.345, 0.99, 0.44), 80, WHT, mode='light', speck=.01),
+    photo=ph(.55, .85, 1.0, .55), pb=(214, 200, 170), lg=WHT, lw=.8, order='LPTCF', credit=['A TODD FIELD', 'FILM'], ccol=(214, 200, 170),
+    ft='b', fcol=(176, 172, 166), fin=SLIP)
+
+# One of Them Days: brick-red rowhouse, the stacked white grunge capitals, the two of them on the orange couch
+std('one-of-them-days-2025', ('grad', [(0, (140, 44, 36)), (.6, (96, 28, 24)), (1, (44, 14, 12))]), WHT,
+    L([(0.322, 0.15, 0.672, 0.26), (0.322, 0.272, 0.672, 0.387), (0.322, 0.398, 0.672, 0.522)], 120, WHT, mode='light', speck=.002, gapf=.18),
+    photo=ph(.5, .79, 1.0, .5), pb=(246, 150, 40), lg=WHT, lw=.7, order='LPTSF', tgap=8,
+    stick=RWD(fill=(246, 150, 40), ink=(40, 14, 10)), ft='a', vbox=(246, 150, 40), vink=(44, 14, 12), fcol=WHT, fin=WORN)
+
+# Babygirl: the poster's sea-glass teal and bubblegum serif
+std('babygirl-2024', ('grad', [(0, (46, 120, 118)), (.6, (26, 80, 80)), (1, (10, 36, 38))]), (232, 140, 204),
+    L((0.18, 0.36, 0.81, 0.475), 112, (238, 146, 208), mode='key', key=(232, 140, 204), t=(50, 110)),
+    photo=ph(.58, .76, .8, 1.0), pb=(238, 146, 208), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(200, 226, 222), fin=MINT)
+
+# Hard Truths: near-black brown, the poster's chunky lemon-yellow grotesque
+std('hard-truths-2024', ('solid', (24, 20, 17)), (238, 226, 96),
+    [L((0.07, 0.355, 0.63, 0.467), 96, (240, 228, 98), mode='key', key=(240, 228, 100), t=(55, 115)),
+     L((0.19, 0.472, 0.93, 0.572), 96, (240, 228, 98), mode='key', key=(240, 228, 100), t=(55, 115))],
+    photo=ph(.66, .17, .5, 1.0), pb=(240, 228, 98), lg=WHT, lw=.7, order='LPTCF', tgap=8, credit=['A MIKE LEIGH', 'FILM'], ccol=WHT,
+    ft='a', vbox=(240, 228, 98), vink=(24, 20, 17), fcol=(200, 196, 186), fin=SLIP)
+
+# Nickel Boys: Florida dirt and floorboards, the cream Roman capitals, the two boys seen from above
+std('nickel-boys-2024', ('grad', [(0, (118, 96, 62)), (.5, (78, 62, 40)), (1, (32, 26, 18))]), (240, 232, 214),
+    L((0.07, 0.815, 0.95, 0.885), 70, (242, 234, 214), mode='light', speck=.01),
+    photo=ph(.55, .4, .66, 1.3), pb=(240, 232, 214), lg=(240, 232, 214), lw=.6, order='LPTCF', credit=['A RAMELL ROSS', 'FILM'],
+    ccol=(226, 190, 120), ft='c', vbox=(240, 232, 214), vink=(40, 32, 22), fcol=(240, 232, 214), fin=SLIP)
+
+# Anora: Brighton Beach night, the pink neon signature
+std('anora-2024', ('grad', [(0, (52, 12, 40)), (.5, (28, 8, 26)), (1, (10, 6, 12))]), (255, 120, 150),
+    L((0.07, 0.655, 0.915, 0.895), 140, (255, 236, 240), mode='key', key=(255, 244, 244), t=(28, 80), speck=.03, grow=.08,
+      outline=((255, 60, 110), 2.4)),
+    photo=ph(.6, .3, .64, 1.15), pb=(255, 140, 166), lg=WHT, lw=.7, order='LPTCF', credit=['A SEAN BAKER', 'FILM'], ccol=(255, 200, 120),
+    ft='a', vbox=(230, 40, 90), fcol=(220, 200, 214), fin=dict(SLIP, gloss=.09), dotst=(['STAFF', 'PICK'], (255, 200, 60), (40, 10, 30)))
+
+# The Brutalist: the poster's pale sky, the heavy black condensed capitals with the big B,
+# Liberty upside down, and a two-tape set for a 215-minute film
+std('the-brutalist-2024', ('grad', [(0, (222, 232, 238)), (1, (186, 204, 214))]), (16, 16, 18),
+    [T('THE', 'hcnb', 40, (16, 16, 18), track=.12), T('BRUTALIST', 'hcnb', 128, (16, 16, 18), squeeze=.86, track=-.01)],
+    photo=ph(.42, .18, .55, 1.5), pb=(16, 16, 18), lg=(16, 16, 18), lw=.4, order='LPTCSF', tgap=8, credit=['A BRADY CORBET', 'FILM'], ccol=(16, 16, 18),
+    stick=PRC(['2-TAPE', 'SET']), ft='d', fcol=(16, 16, 18), fin=SLIP)
+
+# Gaucho Gaucho: old circus-poster parchment, red western capitals with a cream keyline
+std('gaucho-gaucho-2024', ('grad', [(0, (238, 218, 172)), (.6, (222, 190, 128)), (1, (168, 120, 70))]), (206, 64, 34),
+    [T('"GAUCHO', 'bonb', 76, (206, 64, 34), outline=((250, 238, 206), 2.2), shadow=((80, 34, 16), 3, 3), track=.02),
+     T('GAUCHO"', 'bonb', 76, (206, 64, 34), outline=((250, 238, 206), 2.2), shadow=((80, 34, 16), 3, 3), track=.02)],
+    photo=ph(.27, .12, .5, 1.2), pb=(80, 34, 16), lg=(70, 34, 18), lw=.8, order='LPTCF', tgap=10,
+    credit=['A DOCUMENTARY BY', 'MICHAEL DWECK', '& GREGORY KERSHAW'], ccol=(80, 34, 16), ft='e', fcol=(70, 34, 18), fin=OLD)
 
 
 # =====================================================================================

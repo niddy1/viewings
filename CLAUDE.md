@@ -38,6 +38,7 @@ One designed spine picture per tape, made in November 2026 with `spinegen/` (por
 - Five tapes have no logo file and carry a line of type instead: High School, The Sweet East, Louis C.K.: Ridiculous, Jeff Arcuri, Face/Off.
 - Not verified: that the "Re-mark spine" button is hidden on designed tapes (it only shows with the GitHub token saved, so it could not be seen in a test browser).
 - Ian decided against making the generator follow the Re-mark spine editor (a GitHub Action re-rendering on each edit was considered and dropped as too much trouble). To change a designed spine, ask Claude to edit its spec.
+- 2025 shelf: `tapes.py` reads every `films-*.json` too. Spines exist for the first 10 watched in 2025 (Flow to Gaucho Gaucho, 16 Nov 2026), in a block of their own. Those films have no `titleBox`, so their specs give the lettering boxes directly; The Brutalist (diagonal title) and Gaucho Gaucho (arched) are typeset, and so is the thin "You're Cordially" line over the lifted INVITED. The Brutalist carries a "2-TAPE SET" sticker for its 215 minutes.
 - To add a tape: add a spec to `tapes.py` (copy a similar one), pick the `photo=ph(cx, cy, w, ar)` crop so it avoids the poster's title, run the script for that key.
 
 ## Disney and Pixar clamshells
