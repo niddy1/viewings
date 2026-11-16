@@ -373,11 +373,11 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
         # the caps: moulded plastic rounding over at the very ends, a seam, a little grime
         capm = ((yy < ins0) | (yy >= ins1)).astype(np.float32)
         dy_ = np.minimum(yy, h - 1 - yy) / S
-        a *= (1 - capm * (0.20 * np.clip(1 - dy_ / 12.0, 0, 1) ** 2 + 0.05 * np.clip(fbm(h, w, 14 * S, rng, 3), -1, 1) ** 2))[..., None]
+        a *= (1 - capm * (0.10 * np.clip(1 - dy_ / 6.0, 0, 1) ** 2 + 0.05 * np.clip(fbm(h, w, 14 * S, rng, 3), -1, 1) ** 2))[..., None]
         # the ends are rolled: the plastic turns away at each corner, so shade into the corners
-        cr = 30.0
+        cr = 12.0  # a small ease only: the ends of the case are close to square
         cd = np.sqrt(np.clip(1 - dx / cr, 0, 1) ** 2 + np.clip(1 - dy_ / cr, 0, 1) ** 2)
-        a *= (1 - 0.34 * np.clip(cd - 0.72, 0, 1) ** 1.3 / 0.5)[..., None]
+        a *= (1 - 0.18 * np.clip(cd - 0.8, 0, 1) / 0.6)[..., None]
         seam = rng.uniform(0.45, 0.62) * CLAM_CAP
         a *= (1 - capm * 0.16 * np.exp(-((dy_ - seam) / 0.9) ** 2))[..., None]
         a += (capm * 0.05 * np.exp(-((dy_ - seam + 2.0) / 1.0) ** 2))[..., None]
