@@ -428,14 +428,15 @@ def build(spec, out=None):
         if r is not None: im = r
     fin = dict(spec.get('fin', {}))
     if spec.get('notch', True):
-        fin['notch'] = notch(im, W, rng)  # finish_vhs repaints the cassette there, so card wear never lands on it
+        fin['notch'] = notch(im, W, rng, spec.get('notch_w'))  # finish_vhs repaints the cassette there, so card wear never lands on it
     return finish_vhs(im, seed, out=out or (B + f"{spec['id']}-spine-b.jpg"), **fin)
 
 
-def notch(im, W, rng):
-    """the thumb cut-out at the open end of a slipcase, with the black cassette showing through"""
+def notch(im, W, rng, nw=None):
+    """the thumb cut-out at the open end of a slipcase, with the black cassette showing through.
+    nw: size the cut for a box this wide instead of W (a multi-tape box keeps a thumb-sized notch)"""
     d = ImageDraw.Draw(im)
-    r = W * rng.uniform(0.19, 0.22) * S
+    r = (nw or W) * rng.uniform(0.19, 0.22) * S
     cx, by = W / 2 * S + rng.uniform(-2, 2) * S, H * S
     ry = r * rng.uniform(0.78, 0.9)
     d.ellipse([cx - r - 1.5 * S, by - ry - 1.5 * S, cx + r + 1.5 * S, by + ry + 1.5 * S], fill=(232, 228, 216, 255))  # cut edge of the board

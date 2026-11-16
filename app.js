@@ -278,6 +278,8 @@
       // which is a bigger box: show it at the same scale, so it stands taller and thicker than its neighbours.
       f._clam = si.naturalHeight > 560;
       if (f._clam) { const k = SPINE_H / 550; f._w = Math.round(si.naturalWidth * k); f._h = Math.round(si.naturalHeight * k); }
+      // A picture much wider than the runtime rule is a multi-tape box (The Brutalist's 2-tape set): as wide as its picture.
+      else if (si.naturalWidth * SPINE_H / 550 > f._w * 1.4) f._w = Math.round(si.naturalWidth * SPINE_H / 550);
       f._c = '#222'; f._t = '#efe6d2';
       return;
     }
