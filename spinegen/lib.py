@@ -355,7 +355,12 @@ def finish_vhs(img, seed, kind='slip', wear=0.5, gloss=0.05, fade=0.0, warm=0.0,
             a = 1 - (1 - a) * (1 - gloss * band[..., None])
     else:  # clamshell
         # moulded plastic rounds away at both sides; the sleeve catches light in streaks
-        a *= (1 - 0.30 * np.clip(1 - dx / 9.0, 0, 1) ** 2)[..., None]
+        # the whole spine is a rounded moulding, not a flat face: it curves away to both long edges,
+        # so it darkens steadily toward them (more on the side away from the light) under a soft highlight
+        u = 2 * xn - 1
+        lit = rng.uniform(-0.25, -0.1)
+        a *= (1 - 0.16 * (u - lit) ** 2 - 0.30 * np.abs(u) ** 5 - 0.10 * np.clip(u, 0, 1) ** 2)[..., None]
+        a = 1 - (1 - a) * (1 - 0.10 * np.exp(-((u - lit) / 0.30) ** 2)[..., None])
         for xc, wd, st in ((rng.uniform(0.2, 0.42), 0.035, 1.0), (rng.uniform(0.55, 0.8), 0.09, 0.45)):
             band = np.exp(-((xn - xc - 0.03 * fbm(h, w, 260 * S, rng, 2)) / wd) ** 2)
             band *= np.clip(0.55 + 0.9 * fbm(h, w, 120 * S, rng, 2), 0, 1.3) * st

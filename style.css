@@ -258,10 +258,10 @@ h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height:
 .spine.designed { background-size: 100% 100%; background-repeat: no-repeat; background-color: #111; }
 .spine.designed::after { background: linear-gradient(90deg, rgba(255,255,255,.06), transparent 14%, transparent 80%, rgba(0,0,0,.22)); }
 /* a Disney/Pixar clamshell: soft moulded plastic, so the ends roll over instead of meeting at a square corner */
-.spine.designed.clam { border-radius: 9px / 7px; }
+.spine.designed.clam { border-radius: 13px / 10px; }
 .spine.designed.clam::after { border-radius: inherit; background:
-  linear-gradient(90deg, rgba(255,255,255,.10), transparent 16%, transparent 78%, rgba(0,0,0,.22)),
-  linear-gradient(180deg, rgba(0,0,0,.16) 0, transparent 5px, transparent calc(100% - 6px), rgba(0,0,0,.22)); }
+  linear-gradient(90deg, rgba(0,0,0,.30) 0, rgba(0,0,0,.06) 9%, rgba(255,255,255,.10) 30%, transparent 55%, rgba(0,0,0,.10) 86%, rgba(0,0,0,.42) 100%),
+  linear-gradient(180deg, rgba(0,0,0,.16) 0, transparent 6px, transparent calc(100% - 7px), rgba(0,0,0,.22)); }
 body.designed-spine .vcr-respine { display: none; }
 .spine:hover, .spine:focus-visible { transform: translateY(-9px); filter: brightness(1.15); outline: none; }
 .spine:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
