@@ -779,7 +779,7 @@ EMBLEM = 'logos/classics-diamond.png'  # Ian's own photo of the clamshell head e
 
 
 def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, studio=True, **kw):
-    W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
+    W = int(round(w_for(FILMS[id].get('runtime')) * 1.15))  # a clamshell is a thicker box (1.26 was tried; Ian wanted it a tad slimmer)
     items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22)] + ([vlogo(id, lcol, int(W * .62), lpath), Gap(22)] if studio else []) + [  # studio=False when the title logo already carries the studio's name
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
              portrait(face, int(W * 1.12)), Gap(16), ccbox(ink), Gap(12),
@@ -829,14 +829,14 @@ def ts_plate(y0f, y1f):
     return fn
 
 
-disney('toy-story-5-2026', ('strip', dict(x0=.0, blur=14, wash=((44, 110, 214), .62))),
-       LC([(0.375, 0.064, 0.625, 0.146), (0.380, 0.126, 0.610, 0.190), (0.450, 0.168, 0.550, 0.250)], 170, gapf=.05,
+disney('toy-story-5-2026', ('strip', dict(x0=.0, blur=14, wash=((36, 124, 242), .6))), fin=dict(CLAM, vivid=.3),
+       title=LC([(0.375, 0.064, 0.625, 0.146), (0.380, 0.126, 0.610, 0.190), (0.450, 0.168, 0.550, 0.250)], 170, gapf=.05,
           cuts=[ts_letters, ts_plate(.30, .68), ts_letters]),
-       ph(.335, .305, .19, 1.4))
+       face=ph(.335, .305, .19, 1.4))
 
 # Hoppers: the poster's yellow all the way down, its glitchy black lettering
-disney('hoppers-2026', ('grad', [(0, (252, 200, 30)), (.6, (250, 186, 20)), (1, (236, 150, 14))]),
-       L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), ph(.5, .305, .22, 1.4), lcol=(20, 18, 16), ink=(20, 18, 16))
+disney('hoppers-2026', ('grad', [(0, (255, 214, 28)), (.6, (255, 202, 18)), (1, (252, 178, 10))]), fin=dict(CLAM, vivid=.22),
+       title=L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), face=ph(.5, .305, .22, 1.4), lcol=(20, 18, 16), ink=(20, 18, 16))
 
 # Zootopia 2: the film's own title logo (Ian supplied the image: logos/zootopia-2-title.png, kept on its
 # night-blue field and feathered at the edges), on a spine graded to the same blues
