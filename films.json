@@ -25,7 +25,9 @@
       "tmdb": 312221,
       "tmdbKind": "movie",
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 342280
     },
     {
       "title": "No Other Choice",
@@ -53,7 +55,9 @@
       "tmdb": 639988,
       "tmdbKind": "movie",
       "studio": "CJ ENM Studios",
-      "logo": "logos/199265.png"
+      "logo": "logos/199265.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 79423
     },
     {
       "title": "Sinners",
@@ -88,7 +92,9 @@
         0.0114,
         1,
         1
-      ]
+      ],
+      "imdbRating": 7.5,
+      "imdbVotes": 543529
     },
     {
       "title": "Devil in Disguise: John Wayne Gacy",
@@ -127,7 +133,9 @@
       ],
       "rating10": 8,
       "studio": "UCP",
-      "logo": "logos/7938.png"
+      "logo": "logos/7938.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 9515
     },
     {
       "title": "The Rip",
@@ -168,7 +176,9 @@
         0,
         0.9995,
         0.3921
-      ]
+      ],
+      "imdbRating": 6.7,
+      "imdbVotes": 151414
     },
     {
       "title": "F1",
@@ -195,7 +205,9 @@
       "tmdb": 911430,
       "tmdbKind": "movie",
       "studio": "Plan B Entertainment",
-      "logo": "logos/81.png"
+      "logo": "logos/81.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 402357
     },
     {
       "title": "Zootopia 2",
@@ -224,7 +236,9 @@
         0.4921,
         0.5485,
         0.6329
-      ]
+      ],
+      "imdbRating": 7.3,
+      "imdbVotes": 160111
     },
     {
       "title": "Marty Supreme",
@@ -264,7 +278,9 @@
         0.0211,
         0.8539,
         0.4999
-      ]
+      ],
+      "imdbRating": 7.5,
+      "imdbVotes": 230699
     },
     {
       "title": "The Housemaid",
@@ -304,7 +320,9 @@
         0.0656,
         0.4651,
         0.332
-      ]
+      ],
+      "imdbRating": 6.7,
+      "imdbVotes": 214531
     },
     {
       "title": "Bugonia",
@@ -332,7 +350,9 @@
       "tmdb": 701387,
       "tmdbKind": "movie",
       "studio": "Element Pictures",
-      "logo": "logos/3353.png"
+      "logo": "logos/3353.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 234880
     },
     {
       "title": "The Perfect Neighbor",
@@ -351,7 +371,9 @@
       "tmdb": 1400782,
       "tmdbKind": "movie",
       "studio": "Park Pictures Features",
-      "logo": "logos/13466.png"
+      "logo": "logos/13466.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 34653
     },
     {
       "title": "Dead Man's Wire",
@@ -378,7 +400,9 @@
         0.018,
         0.7307,
         0.2578
-      ]
+      ],
+      "imdbRating": 6.4,
+      "imdbVotes": 16050
     },
     {
       "title": "Girl in the Box",
@@ -405,7 +429,9 @@
       "tmdb": 413337,
       "tmdbKind": "movie",
       "studio": "Lifetime",
-      "logo": "logos/3431.png"
+      "logo": "logos/3431.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 3808
     },
     {
       "title": "Heel",
@@ -433,7 +459,9 @@
         ]
       ],
       "studio": "Recorded Picture Company",
-      "logo": "logos/11561.png"
+      "logo": "logos/11561.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 21213
     },
     {
       "title": "High School",
@@ -470,7 +498,9 @@
         0.28,
         0.8558,
         0.7495
-      ]
+      ],
+      "imdbRating": 7.5,
+      "imdbVotes": 2838
     },
     {
       "title": "The Secret Agent",
@@ -504,7 +534,9 @@
       "tmdb": 1220564,
       "tmdbKind": "movie",
       "studio": "Lemming Film",
-      "logo": "logos/2345.png"
+      "logo": "logos/2345.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 65601
     },
     {
       "title": "Zodiac Killer Project",
@@ -531,7 +563,9 @@
       "tmdb": 1400744,
       "tmdbKind": "movie",
       "studio": "Field of Vision",
-      "logo": "logos/71551.png"
+      "logo": "logos/71551.png",
+      "imdbRating": 6.1,
+      "imdbVotes": 576
     },
     {
       "title": "The Sweet East",
@@ -557,7 +591,9 @@
       "tmdb": 1010639,
       "tmdbKind": "movie",
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.4,
+      "imdbVotes": 4217
     },
     {
       "title": "Crime 101",
@@ -590,7 +626,9 @@
       "tmdb": 1171145,
       "tmdbKind": "movie",
       "studio": "Working Title",
-      "logo": "logos/10163.png"
+      "logo": "logos/10163.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 100869
     },
     {
       "title": "How to Make a Killing",
@@ -624,7 +662,9 @@
       "tmdb": 467905,
       "tmdbKind": "movie",
       "studio": "StudioCanal",
-      "logo": "logos/694.png"
+      "logo": "logos/694.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 49003
     },
     {
       "title": "The Drama",
@@ -658,7 +698,9 @@
       "tmdb": 1325734,
       "tmdbKind": "movie",
       "studio": "A24",
-      "logo": "logos/41077.png"
+      "logo": "logos/41077.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 145044
     },
     {
       "title": "Over Your Dead Body",
@@ -692,7 +734,9 @@
       "tmdb": 1390300,
       "tmdbKind": "movie",
       "studio": "87North Productions",
-      "logo": "logos/121470.png"
+      "logo": "logos/121470.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 38753
     },
     {
       "title": "Psycho Therapy: The Shallow Tale of a Writer Who Decided to Write About a Serial Killer",
@@ -725,7 +769,9 @@
       "tmdb": 681434,
       "tmdbKind": "movie",
       "studio": "Cinegryphon Entertainment",
-      "logo": "logos/201965.png"
+      "logo": "logos/201965.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 4555
     },
     {
       "title": "Maternal Instinct",
@@ -752,7 +798,9 @@
       "tmdb": 1699155,
       "tmdbKind": "movie",
       "studio": "Story Syndicate",
-      "logo": "logos/136480.png"
+      "logo": "logos/136480.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 13664
     },
     {
       "title": "The Threesome",
@@ -780,7 +828,9 @@
       "tmdb": 993708,
       "tmdbKind": "movie",
       "studio": "Filmopoly",
-      "logo": "logos/198179.png"
+      "logo": "logos/198179.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 6998
     },
     {
       "title": "In the Grey",
@@ -819,7 +869,9 @@
       "tmdb": 1122573,
       "tmdbKind": "movie",
       "studio": "C2 Motion Picture Group",
-      "logo": "logos/184518.png"
+      "logo": "logos/184518.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 59444
     },
     {
       "title": "I Love Boosters",
@@ -853,7 +905,9 @@
       "tmdb": 1227877,
       "tmdbKind": "movie",
       "studio": "Savage Rose Films",
-      "logo": "logos/183820.png"
+      "logo": "logos/183820.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 10169
     },
     {
       "title": "Project Hail Mary",
@@ -892,7 +946,9 @@
       "tmdb": 687163,
       "tmdbKind": "movie",
       "studio": "Lord Miller",
-      "logo": "logos/77973.png"
+      "logo": "logos/77973.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 604104
     },
     {
       "title": "Sentimental Value",
@@ -937,7 +993,9 @@
         0.531,
         0.5214,
         0.6114
-      ]
+      ],
+      "imdbRating": 7.7,
+      "imdbVotes": 93637
     },
     {
       "title": "The Negotiator",
@@ -972,7 +1030,9 @@
       "tmdb": 9631,
       "tmdbKind": "movie",
       "studio": "Regency Enterprises",
-      "logo": "logos/508.png"
+      "logo": "logos/508.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 171633
     },
     {
       "title": "Hoppers",
@@ -1002,7 +1062,9 @@
       "tmdb": 1327819,
       "tmdbKind": "movie",
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 91066
     },
     {
       "title": "Louis C.K.: Ridiculous",
@@ -1034,7 +1096,9 @@
       "tmdb": 1662958,
       "tmdbKind": "movie",
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 2764
     },
     {
       "title": "The Devil Wears Prada 2",
@@ -1061,7 +1125,9 @@
       "tmdb": 1314481,
       "tmdbKind": "movie",
       "studio": "20th Century Studios",
-      "logo": "logos/127928.png"
+      "logo": "logos/127928.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 124492
     },
     {
       "title": "Jeff Arcuri: Nice to Meet You",
@@ -1092,7 +1158,9 @@
       "tmdb": 1720716,
       "tmdbKind": "movie",
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 973
     },
     {
       "title": "Pretty Maids All in a Row",
@@ -1121,7 +1189,9 @@
       "tmdb": 69321,
       "tmdbKind": "movie",
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 6,
+      "imdbVotes": 3241
     },
     {
       "title": "Con Air",
@@ -1156,7 +1226,9 @@
         0.0063,
         0.691,
         0.3161
-      ]
+      ],
+      "imdbRating": 6.9,
+      "imdbVotes": 344383
     },
     {
       "title": "The Crash",
@@ -1183,7 +1255,9 @@
       "tmdb": 1662317,
       "tmdbKind": "movie",
       "studio": "RAW",
-      "logo": "logos/23949.png"
+      "logo": "logos/23949.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 14629
     },
     {
       "title": "Face/Off",
@@ -1211,7 +1285,9 @@
       "tmdb": 754,
       "tmdbKind": "movie",
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 433220
     },
     {
       "title": "Do Revenge",
@@ -1239,7 +1315,9 @@
       "tmdb": 762968,
       "tmdbKind": "movie",
       "studio": "Likely Story",
-      "logo": "logos/1785.png"
+      "logo": "logos/1785.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 58540
     },
     {
       "title": "Obsession",
@@ -1266,7 +1344,9 @@
       "tmdb": 1339713,
       "tmdbKind": "movie",
       "studio": "Tea Shop Productions",
-      "logo": "logos/155758.png"
+      "logo": "logos/155758.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 433673
     },
     {
       "title": "LifeHack",
@@ -1293,7 +1373,9 @@
       "tmdb": 1285669,
       "tmdbKind": "movie",
       "studio": "The Avenue Entertainment",
-      "logo": "logos/185127.png"
+      "logo": "logos/185127.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 1566
     },
     {
       "title": "Tuner",
@@ -1320,7 +1402,9 @@
       "tmdb": 1340206,
       "tmdbKind": "movie",
       "studio": "Black Bear Pictures",
-      "logo": "logos/22146.png"
+      "logo": "logos/22146.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 41575
     },
     {
       "title": "Talladega Nights: The Ballad of Ricky Bobby",
@@ -1353,7 +1437,9 @@
       "tmdb": 9718,
       "tmdbKind": "movie",
       "studio": "Apatow Productions",
-      "logo": "logos/10105.png"
+      "logo": "logos/10105.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 217907
     },
     {
       "title": "My Man Godfrey",
@@ -1385,7 +1471,9 @@
       "tmdb": 13562,
       "tmdbKind": "movie",
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 29202
     },
     {
       "title": "Body of Lies",
@@ -1413,7 +1501,9 @@
       "tmdb": 12113,
       "tmdbKind": "movie",
       "studio": "De Line Pictures",
-      "logo": "logos/2609.png"
+      "logo": "logos/2609.png",
+      "imdbRating": 7,
+      "imdbVotes": 253437
     },
     {
       "title": "Monster",
@@ -1441,7 +1531,9 @@
       "tmdb": 1050035,
       "tmdbKind": "movie",
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 44471
     },
     {
       "title": "The Invite",
@@ -1469,7 +1561,9 @@
       "tmdb": 950028,
       "tmdbKind": "movie",
       "studio": "Annapurna Pictures",
-      "logo": "logos/13184.png"
+      "logo": "logos/13184.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 105528
     },
     {
       "title": "Toy Story 5",
@@ -1512,7 +1606,9 @@
         0.3667,
         0.8245,
         0.7712
-      ]
+      ],
+      "imdbRating": 7.3,
+      "imdbVotes": 108432
     },
     {
       "title": "Motor City",
@@ -1541,7 +1637,9 @@
       "tmdb": 87513,
       "tmdbKind": "movie",
       "studio": "Stampede Ventures",
-      "logo": "logos/118472.png"
+      "logo": "logos/118472.png",
+      "imdbRating": 5.7,
+      "imdbVotes": 12952
     },
     {
       "title": "A Deadly American Marriage",
@@ -1580,7 +1678,9 @@
       "tmdb": 1466938,
       "tmdbKind": "movie",
       "studio": "Knickerbockerglory TV",
-      "logo": "logos/95614.png"
+      "logo": "logos/95614.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 8446
     },
     {
       "title": "Stavros Halkias: Uncle Stav",
@@ -1612,7 +1712,9 @@
       "tmdb": 1664003,
       "tmdbKind": "movie",
       "studio": "Zapruder Films",
-      "logo": "logos/72063.png"
+      "logo": "logos/72063.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 730
     },
     {
       "title": "Pacific Heights",
@@ -1640,7 +1742,9 @@
       "tmdb": 2990,
       "tmdbKind": "movie",
       "studio": "Morgan Creek Entertainment",
-      "logo": "logos/10210.png"
+      "logo": "logos/10210.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 26443
     },
     {
       "title": "The Rivals of Amziah King",
@@ -1668,7 +1772,9 @@
       "tmdb": 1124142,
       "tmdbKind": "movie",
       "studio": "Black Bear Pictures",
-      "logo": "logos/22146.png"
+      "logo": "logos/22146.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 9463
     },
     {
       "title": "Molly's Game",
@@ -1695,7 +1801,9 @@
       "tmdb": 396371,
       "tmdbKind": "movie",
       "studio": "The Mark Gordon Company",
-      "logo": "logos/1557.png"
+      "logo": "logos/1557.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 207326
     },
     {
       "title": "Beverly Hills Cop II",
@@ -1729,7 +1837,9 @@
       "tmdb": 96,
       "tmdbKind": "movie",
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 148977
     },
     {
       "title": "Lethal Weapon",
@@ -1757,7 +1867,9 @@
       "tmdb": 941,
       "tmdbKind": "movie",
       "studio": "Silver Pictures",
-      "logo": "logos/1885.png"
+      "logo": "logos/1885.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 300295
     },
     {
       "title": "Our Hero, Balthazar",
@@ -1796,7 +1908,9 @@
       "tmdb": 1465557,
       "tmdbKind": "movie",
       "studio": "Spacemaker Productions",
-      "logo": "logos/146684.png"
+      "logo": "logos/146684.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 2183
     },
     {
       "title": "Spider-Man: Brand New Day",
@@ -1824,7 +1938,9 @@
       "tmdb": 969681,
       "tmdbKind": "movie",
       "studio": "Marvel Studios",
-      "logo": "logos/420.png"
+      "logo": "logos/420.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 388093
     },
     {
       "title": "Bad Apples",
@@ -1851,7 +1967,9 @@
       "tmdb": 1198654,
       "tmdbKind": "movie",
       "studio": "HanWay Films",
-      "logo": "logos/2395.png"
+      "logo": "logos/2395.png",
+      "imdbRating": 6.7,
+      "imdbVotes": 8410
     },
     {
       "title": "Coyote vs. Acme",
@@ -1872,7 +1990,9 @@
       "tmdb": 1204680,
       "tmdbKind": "movie",
       "studio": "Troll Court Entertainment",
-      "logo": "logos/94218.png"
+      "logo": "logos/94218.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 52403
     },
     {
       "title": "By Any Means",
@@ -1919,7 +2039,9 @@
         0.0666,
         0.8857,
         0.2639
-      ]
+      ],
+      "imdbRating": 6.5,
+      "imdbVotes": 9361
     },
     {
       "title": "Deep Water",
@@ -1939,7 +2061,9 @@
       "tmdb": 619979,
       "tmdbKind": "movie",
       "studio": "New Regency Pictures",
-      "logo": "logos/10104.png"
+      "logo": "logos/10104.png",
+      "imdbRating": 5.5,
+      "imdbVotes": 74380
     },
     {
       "title": "Primetime",
@@ -1967,7 +2091,9 @@
       "tmdb": 1375441,
       "tmdbKind": "movie",
       "studio": "A24",
-      "logo": "logos/41077.png"
+      "logo": "logos/41077.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 45303
     },
     {
       "title": "Christine",
@@ -1993,7 +2119,9 @@
         ]
       ],
       "studio": "Great Point Media",
-      "logo": "logos/52352.png"
+      "logo": "logos/52352.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 18223
     },
     {
       "title": "Your Mother Your Mother Your Mother",
@@ -2021,7 +2149,9 @@
       "tmdb": 1437396,
       "tmdbKind": "movie",
       "studio": "Two & Two Pictures",
-      "logo": "logos/114128.png"
+      "logo": "logos/114128.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 8202
     },
     {
       "title": "The Odyssey",
@@ -2049,7 +2179,9 @@
       "tmdb": 1368337,
       "tmdbKind": "movie",
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 572243
     },
     {
       "title": "Barcelona",
@@ -2077,7 +2209,9 @@
       "tmdb": 16771,
       "tmdbKind": "movie",
       "studio": "Castle Rock Entertainment",
-      "logo": "logos/97.png"
+      "logo": "logos/97.png",
+      "imdbRating": 7,
+      "imdbVotes": 7155
     },
     {
       "title": "Heart of the Beast",
@@ -2096,7 +2230,9 @@
       "tmdb": 1263337,
       "tmdbKind": "movie",
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 58440
     },
     {
       "title": "Malice",
@@ -2122,7 +2258,9 @@
         ]
       ],
       "studio": "Nelvana",
-      "logo": "logos/1023.png"
+      "logo": "logos/1023.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 31884
     },
     {
       "title": "The Widower: 'Til Death Do Us Part",
@@ -2148,7 +2286,9 @@
         ]
       ],
       "studio": "Library Films",
-      "logo": "logos/113634.png"
+      "logo": "logos/113634.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 3158
     },
     {
       "title": "Deep Web",
@@ -2174,7 +2314,9 @@
         ]
       ],
       "studio": "Trouper",
-      "logo": "logos/43613.png"
+      "logo": "logos/43613.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 9937
     }
   ]
 }
