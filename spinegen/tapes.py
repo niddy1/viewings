@@ -739,7 +739,7 @@ def portrait(box, h, border=(214, 30, 40), inner=(250, 214, 60)):
     """a crop of the poster in a red diamond frame"""
     def fn(im, W, y0, rng):
         cov = Image.open(CUR['cover']).convert('RGB'); cw, ch = cov.size
-        w_ = W * 0.94
+        w_ = W * 0.80  # a true diamond: clearly taller than it is wide, not a square on its corner
         c = cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch))).resize((int(w_ * S), int(h * S)), Image.LANCZOS)
         c = c.filter(ImageFilter.UnsharpMask(3, 60, 2)).convert('RGBA')
         m = Image.new('L', c.size, 0); d = ImageDraw.Draw(m)
@@ -769,7 +769,7 @@ def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026',
     W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
     items = [Gap(4), Gap(10), head_diamond(head, int(W * .78)), Gap(22), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
-             portrait(face, int(W * 1.04)), Gap(16), ccbox(ink), Gap(12),
+             portrait(face, int(W * 1.12)), Gap(16), ccbox(ink), Gap(12),
              tiny(['VHS'], ink, font='intsb', size=22, track=.04), Gap(8), catno(cat or catfor(id)[:4], ink, size=20)]
     add(id, bg, items, fin=fin or dict(CLAM), W=W, notch=False, top=16, bot=26, side=22, **kw)
 
@@ -818,16 +818,16 @@ def ts_plate(y0f, y1f):
 disney('toy-story-5-2026', ('strip', dict(x0=.0, blur=14, wash=((44, 110, 214), .62))),
        LC([(0.375, 0.064, 0.625, 0.146), (0.380, 0.126, 0.610, 0.190), (0.450, 0.168, 0.550, 0.250)], 170, gapf=.05,
           cuts=[ts_letters, ts_plate(.30, .68), ts_letters]),
-       ph(.37, .335, .46, 1.3))
+       ph(.335, .305, .19, 1.4))
 
 # Hoppers: the poster's yellow all the way down, its glitchy black lettering
 disney('hoppers-2026', ('grad', [(0, (252, 200, 30)), (.6, (250, 186, 20)), (1, (236, 150, 14))]),
-       L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), ph(.5, .31, .36, 1.3), lcol=(20, 18, 16), ink=(20, 18, 16))
+       L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), ph(.5, .305, .22, 1.4), lcol=(20, 18, 16), ink=(20, 18, 16))
 
 # Zootopia 2: city-sky artwork, street-sign green and the crossing-light 2
 disney('zootopia-2-2025', ('strip', dict(x0=.7, blur=10, wash=((40, 120, 200), .45))),
        TT([('ZOOTOPIA', WHT), ('2', (250, 206, 50))], 'popb', 104, track=.02, sp=.12, outline=((14, 96, 60), 4)),
-       ph(.56, .625, .5, 1.3), lcol=WHT)
+       ph(.47, .705, .2, 1.4), lcol=WHT)
 
 
 if __name__ == '__main__':
