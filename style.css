@@ -38,6 +38,41 @@ h1.ticket img { display: block; margin: 0 auto; width: min(380px, 78vw); height:
 .tally #count { font-size: 2em; letter-spacing: .02em; margin-right: .12em; }
 @media (max-width: 640px) { .tally { position: static; margin: 10px 0 -40px; text-align: right; padding-right: 4px; } }
 
+/* sort + genre filter: bottom left of the header, opposite the tally */
+.controls {
+  position: absolute; left: 14px; bottom: -34px; z-index: 9; /* over the case (for the genre list), under the viewer (10) */
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px;
+  font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; text-align: left;
+}
+.controls[hidden] { display: none; }
+.controls .label { opacity: .55; margin-right: 2px; }
+.controls button {
+  appearance: none; font: inherit; letter-spacing: inherit; text-transform: inherit; color: var(--paper);
+  background: rgba(10,14,28,.35); border: 1px solid rgba(239,230,210,.28); border-radius: 99px;
+  padding: 3px 11px; cursor: pointer; line-height: 1.3;
+}
+.controls button:hover { border-color: rgba(239,230,210,.6); }
+.controls button.on { background: #f1c203; border-color: #f1c203; color: #1a1408; }
+.controls button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.sort { display: flex; align-items: center; gap: 6px; }
+.sort button.on::after { content: attr(data-arrow); margin-left: 4px; }
+.genre-pick { position: relative; }
+#genre-btn .label { opacity: .7; }
+#genre-btn.on .label { opacity: .6; }
+#genre-btn .caret { font-size: .7em; margin-left: 2px; }
+.genre-list {
+  position: absolute; top: calc(100% + 8px); left: 0; width: min(420px, 86vw);
+  display: flex; flex-wrap: wrap; gap: 6px; padding: 12px;
+  background: rgba(14,19,36,.97); border: 1px solid rgba(239,230,210,.18); border-radius: 6px;
+  box-shadow: 0 14px 34px rgba(0,0,0,.55);
+}
+.genre-list[hidden] { display: none; }
+.genre-list small { opacity: .55; margin-left: 2px; font-size: .85em; }
+@media (max-width: 640px) {
+  .controls { position: relative; left: auto; bottom: auto; margin: 16px 0 0; justify-content: flex-start; gap: 8px 12px; font-size: .74rem; }
+  .controls button { padding: 3px 9px; }
+}
+
 /* ---------- shelf ----------
    A home-built pine case (after Ian's reference photo): a wide honey-stained face frame, light
    woodgrain wall panelling behind with dark grooves at uneven spacing, and thin shelf boards
@@ -411,6 +446,8 @@ body.designed-spine .vcr-respine { display: none; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .rating small { font-size: .85rem; letter-spacing: 0; opacity: .6; margin-left: 10px; vertical-align: middle; }
+.imdb-score { margin: 8px 0 0; font-size: .85rem; letter-spacing: .08em; opacity: .7; }
+.imdb-score:empty { display: none; }
 .watched { margin: 12px 0 10px; font-size: .9rem; }
 .genres { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
 .genres span { border: 1px solid rgba(239,230,210,.3); border-radius: 99px; padding: 2px 12px; font-size: .75rem; letter-spacing: .06em; }
