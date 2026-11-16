@@ -36,6 +36,7 @@ One designed spine picture per tape, made in November 2026 with `spinegen/` (por
 - To add a tape: add a spec to `tapes.py` (copy a similar one), pick the `photo=ph(cx, cy, w, ar)` crop so it avoids the poster's title, run the script for that key.
 
 ## Workflow notes
+- **Whenever a new film is added to the shelf (VCR commit, fetch script, or by hand), refresh the IMDb scores for every film, the new ones included.** How: open any imdb.com page in Ian's built-in browser (the site is already allowed), run one fetch() script there over all the films' `imdb` ids (`/title/<id>/`, read `aggregateRating.ratingValue`/`ratingCount` from the page's `<script type="application/ld+json">`, about six at a time), then write `imdbRating`/`imdbVotes` into films.json (keep its 2-space JSON format) and push with the new film. Takes a few seconds; don't open the pages one by one.
 - Publishing: `main` is the live site. Claude pushes work to a branch and Ian merges it on github.com (Compare & pull request → Create pull request → Merge pull request → Confirm merge), then waits a minute or two and hard-refreshes. Claude can merge and push to `main` instead if Ian asks.
 - The site can be checked in Claude's workspace before pushing: `python3 -m http.server` in the repo root, then load it with Playwright driving `/usr/bin/google-chrome` and screenshot (count `.spine.designed`).
 - The fetch step must run on Ian's own Mac (`TMDB_KEY=... node fetch-posters.js diary.csv`). Claude's workspace cannot reach TMDB or download images.
