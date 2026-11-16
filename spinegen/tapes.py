@@ -747,15 +747,15 @@ std('anora-2024', ('grad', [(0, (52, 12, 40)), (.5, (28, 8, 26)), (1, (10, 6, 12
     photo=ph(.6, .3, .64, 1.15), pb=(255, 140, 166), lg=WHT, lw=.7, order='LPTCF', credit=['A SEAN BAKER', 'FILM'], ccol=(255, 200, 120),
     ft='a', vbox=(230, 40, 90), fcol=(220, 200, 214), fin=dict(SLIP, gloss=.09), dotst=(['STAFF', 'PICK'], (255, 200, 60), (40, 10, 30)))
 
-# The Brutalist: a 2-tape set for a 215-minute film, so the box is two tapes wide (W = twice the
-# widest slipcase; app.js shows a picture this wide at its own width).  The poster's pale sky, the heavy
+# The Brutalist: a 2-tape set for a 215-minute film, so the box is two tapes wide (W = twice an average
+# slipcase; app.js shows a picture this wide at its own width).  The poster's pale sky, the heavy
 # black condensed capitals, Liberty upside down.
 std('the-brutalist-2024', ('grad', [(0, (222, 232, 238)), (1, (186, 204, 214))]), (16, 16, 18),
     [T('THE', 'hcnb', 70, (16, 16, 18), track=.12), T('BRUTALIST', 'hcnb', 230, (16, 16, 18), squeeze=.86, track=-.01)],
     photo=ph(.42, .17, .7, .42), pb=(16, 16, 18), pin=22, lg=(16, 16, 18), lw=.24, order='LPTCSF', tgap=10,
     credit=['A BRADY CORBET FILM', 'ADRIEN BRODY  FELICITY JONES  GUY PEARCE'], ccol=(16, 16, 18),
     stick=flow(dot, 112, ['2-TAPE', 'SET'], (200, 40, 36), WHT, d=104), ft='c', vbox=(16, 16, 18), fcol=(16, 16, 18), fin=SLIP,
-    W=2 * w_for(215))
+    W=2 * w_for(115), notch_w=1.5 * w_for(115))  # twice an average tape (about 43px on the shelf), notch 1.5x a normal one
 
 # Gaucho Gaucho: old circus-poster parchment, red western capitals with a cream keyline
 std('gaucho-gaucho-2024', ('grad', [(0, (238, 218, 172)), (.6, (222, 190, 128)), (1, (168, 120, 70))]), (206, 64, 34),
