@@ -162,6 +162,20 @@ class LC:
         return cnv
 
 
+class Pic:
+    """a title-logo picture file (RGBA, e.g. one Ian supplied in logos/) used as a line of lettering; never redrawn.
+    size = its height on the spine (it reads down the spine like any other title line)."""
+    def __init__(s, path, size):
+        s.path = path; s.size = size
+
+    def render(s, k=1.0, seed=0):
+        src = Image.open(REPO + s.path).convert('RGBA')
+        th = max(4, int(s.size * k * S))
+        im = src.resize((max(1, int(src.width * th / src.height)), th), Image.LANCZOS).filter(ImageFilter.UnsharpMask(3, 60, 2))
+        s._pad = 0
+        return im
+
+
 def lift_mask(box, mode='auto', key=None, t=(55, 115), cut=(0.35, 0.65), close=0, speck=0.004, k=2, nbg=1, gain=2.4):
     """lettering inside box (fractions of the current poster) as a tight L mask at poster resolution.
     'auto' splits the crop into k colour clusters; the nbg clusters commonest round the edge are background.

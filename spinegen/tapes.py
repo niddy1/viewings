@@ -778,13 +778,14 @@ def ccbox(col, w=30, h=20):
 EMBLEM = 'logos/classics-diamond.png'  # Ian's own photo of the clamshell head emblem; without the file a plain diamond is drawn
 
 
-def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, **kw):
+def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, studio=True, **kw):
     W = int(round(w_for(FILMS[id].get('runtime')) * 1.26))  # a clamshell is a thicker box
-    items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22), vlogo(id, lcol, int(W * .62), lpath), Gap(22),
+    items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22)] + ([vlogo(id, lcol, int(W * .62), lpath), Gap(22)] if studio else []) + [  # studio=False when the title logo already carries the studio's name
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
              portrait(face, int(W * 1.12)), Gap(16), ccbox(ink), Gap(12),
              tiny(['VHS'], ink, font='intsb', size=22, track=.04), Gap(8), catno(cat or catfor(id)[:4], ink, size=20)]
-    add(id, bg, items, fin=fin or dict(CLAM), W=W, notch=False, top=16, bot=26, side=22, **kw)
+    kw.setdefault('side', 22)
+    add(id, bg, items, fin=fin or dict(CLAM), W=W, notch=False, top=16, bot=26, **kw)
 
 
 # Toy Story 5: bedroom-wall blue; the poster's own logo taken apart and laid along the spine the way the
@@ -837,11 +838,10 @@ disney('toy-story-5-2026', ('strip', dict(x0=.0, blur=14, wash=((44, 110, 214), 
 disney('hoppers-2026', ('grad', [(0, (252, 200, 30)), (.6, (250, 186, 20)), (1, (236, 150, 14))]),
        L(tb('hoppers-2026'), 120, (20, 18, 16), speck=.001), ph(.5, .305, .22, 1.4), lcol=(20, 18, 16), ink=(20, 18, 16))
 
-# Zootopia 2: city-sky artwork, street-sign green and the crossing-light 2
-disney('zootopia-2-2025', ('strip', dict(x0=.7, blur=10, wash=((40, 120, 200), .45))),
-       TT([('ZOOTOPIA', WHT), ('2', (250, 206, 50))], 'popb', 104, track=.02, sp=.12, outline=((14, 96, 60), 4)),
-       ph(.47, .705, .2, 1.4), lcol=WHT)
-
+# Zootopia 2: the film's own title logo (Ian supplied the image: logos/zootopia-2-title.png, kept on its
+# night-blue field and feathered at the edges), on a spine graded to the same blues
+disney('zootopia-2-2025', ('grad', [(0, (8, 8, 34)), (.5, (12, 12, 50)), (1, (10, 16, 46))]),
+       Pic('logos/zootopia-2-title.png', 226), ph(.47, .705, .2, 1.4), lcol=WHT, side=4, studio=False)
 
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
