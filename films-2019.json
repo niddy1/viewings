@@ -7,29 +7,63 @@
       "rating10": 7,
       "watched": "2019-01-22",
       "imdb": "tt7008872",
-      "poster": "",
+      "poster": "posters/boy-erased-2018.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 46770
+      "imdbVotes": 46770,
+      "year": 2018,
+      "tmdb": 472451,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Joel Edgerton",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Anonymous Content",
+      "logo": "logos/10039.png"
     },
     {
       "title": "The Favourite",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-02-19",
       "imdb": "tt5083738",
-      "poster": "",
+      "poster": "posters/the-favourite-2018.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 262668
+      "imdbVotes": 262668,
+      "year": 2018,
+      "tmdb": 375262,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Yorgos Lanthimos",
+      "genres": [
+        "History",
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Waypoint Entertainment",
+      "logo": "logos/22842.png"
     },
     {
       "title": "Cold War",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-02-19",
       "imdb": "tt6543652",
-      "poster": "",
+      "poster": "posters/cold-war-2018.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 66454
+      "imdbVotes": 66454,
+      "year": 2018,
+      "tmdb": 440298,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Paweł Pawlikowski",
+      "genres": [
+        "Romance",
+        "Music",
+        "Drama"
+      ],
+      "studio": "Opus Film",
+      "logo": "logos/6477.png"
     },
     {
       "title": "Green Book",
@@ -37,29 +71,65 @@
       "rating10": 7,
       "watched": "2019-02-21",
       "imdb": "tt6966692",
-      "poster": "",
+      "poster": "posters/green-book-2018.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 712243
+      "imdbVotes": 712243,
+      "year": 2018,
+      "tmdb": 490132,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Peter Farrelly",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "History"
+      ],
+      "studio": "Participant",
+      "logo": "logos/6735.png"
     },
     {
       "title": "Shoplifters",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-02-22",
       "imdb": "tt8075192",
-      "poster": "",
+      "poster": "posters/shoplifters-2018.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 97376
+      "imdbVotes": 97376,
+      "year": 2018,
+      "tmdb": 505192,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Hirokazu Kore-eda",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Fuji Television Network",
+      "logo": "logos/3341.png"
     },
     {
       "title": "Border",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-02-22",
       "imdb": "tt5501104",
-      "poster": "",
+      "poster": "posters/border-2018.jpg",
       "imdbRating": 7,
-      "imdbVotes": 38041
+      "imdbVotes": 38041,
+      "year": 2018,
+      "tmdb": 517839,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Ali Abbasi",
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Meta Film Stockholm",
+      "logo": "logos/108004.png"
     },
     {
       "title": "The Ballad of Buster Scruggs",
@@ -67,19 +137,40 @@
       "rating10": 8.5,
       "watched": "2019-02-23",
       "imdb": "tt6412452",
-      "poster": "",
+      "poster": "posters/the-ballad-of-buster-scruggs-2018.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 188424
+      "imdbVotes": 188424,
+      "year": 2018,
+      "tmdb": 537996,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Joel Coen",
+      "genres": [
+        "Western",
+        "Comedy"
+      ],
+      "studio": "Mike Zoss Productions",
+      "logo": "logos/2092.png"
     },
     {
       "title": "Minding the Gap",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-02-23",
       "imdb": "tt7476236",
-      "poster": "",
+      "poster": "posters/minding-the-gap-2018.jpg",
       "imdbRating": 8,
-      "imdbVotes": 11247
+      "imdbVotes": 11247,
+      "year": 2018,
+      "tmdb": 489985,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Bing Liu",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "ITVS",
+      "logo": "logos/10943.png"
     },
     {
       "title": "A Star Is Born",
@@ -87,9 +178,21 @@
       "rating10": 7,
       "watched": "2019-02-23",
       "imdb": "tt1517451",
-      "poster": "",
+      "poster": "posters/a-star-is-born-2018.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 454939
+      "imdbVotes": 454939,
+      "year": 2018,
+      "tmdb": 332562,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Bradley Cooper",
+      "genres": [
+        "Music",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Free Solo",
@@ -97,9 +200,20 @@
       "rating10": 7,
       "watched": "2019-02-23",
       "imdb": "tt7775622",
-      "poster": "",
+      "poster": "posters/free-solo-2018.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 89385
+      "imdbVotes": 89385,
+      "year": 2018,
+      "tmdb": 515042,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Jimmy Chin",
+      "genres": [
+        "Documentary",
+        "Adventure"
+      ],
+      "studio": "National Geographic Documentary Films",
+      "logo": "logos/189457.png"
     },
     {
       "title": "Roma",
@@ -107,19 +221,42 @@
       "rating10": 8.5,
       "watched": "2019-02-24",
       "imdb": "tt6155172",
-      "poster": "",
+      "poster": "posters/roma-2018.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 180464
+      "imdbVotes": 180464,
+      "year": 2018,
+      "tmdb": 426426,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Alfonso Cuarón",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Participant",
+      "logo": "logos/6735.png"
     },
     {
       "title": "Spider-Man: Into the Spider-Verse",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-02-24",
       "imdb": "tt4633694",
-      "poster": "",
+      "poster": "posters/spider-man-into-the-spider-verse-2018.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 825162
+      "imdbVotes": 825162,
+      "year": 2018,
+      "tmdb": 324857,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Bob Persichetti",
+      "genres": [
+        "Animation",
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Can You Ever Forgive Me?",
@@ -127,19 +264,42 @@
       "rating10": 7,
       "watched": "2019-02-24",
       "imdb": "tt4595882",
-      "poster": "",
+      "poster": "posters/can-you-ever-forgive-me-2018.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 59360
+      "imdbVotes": 59360,
+      "year": 2018,
+      "tmdb": 401847,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Marielle Heller",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Comedy"
+      ],
+      "studio": "Archer Gray",
+      "logo": "logos/41640.png"
     },
     {
-      "title": "Mid90s",
+      "title": "mid90s",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2019-02-26",
       "imdb": "tt5613484",
-      "poster": "",
+      "poster": "posters/mid90s-2018.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 90381
+      "imdbVotes": 90381,
+      "year": 2018,
+      "tmdb": 437586,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Jonah Hill",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Bohemian Rhapsody",
@@ -147,9 +307,20 @@
       "rating10": 7,
       "watched": "2019-02-26",
       "imdb": "tt1727824",
-      "poster": "",
+      "poster": "posters/bohemian-rhapsody-2018.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 657815
+      "imdbVotes": 657815,
+      "year": 2018,
+      "tmdb": 424694,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Bryan Singer",
+      "genres": [
+        "Music",
+        "Drama"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Triple Frontier",
@@ -157,69 +328,151 @@
       "rating10": 6.5,
       "watched": "2019-03-17",
       "imdb": "tt1488606",
-      "poster": "",
+      "poster": "posters/triple-frontier-2019.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 164701
+      "imdbVotes": 164701,
+      "year": 2019,
+      "tmdb": 399361,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "J.C. Chandor",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime",
+        "Adventure"
+      ],
+      "studio": "Atlas Entertainment",
+      "logo": "logos/507.png"
     },
     {
       "title": "Guava Island",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-04-15",
       "imdb": "tt8858104",
-      "poster": "",
+      "poster": "posters/guava-island-2019.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 12299
+      "imdbVotes": 12299,
+      "year": 2019,
+      "tmdb": 543343,
+      "tmdbKind": "movie",
+      "runtime": 56,
+      "director": "Hiro Murai",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Music"
+      ],
+      "studio": "New Regency Pictures",
+      "logo": "logos/10104.png"
     },
     {
       "title": "The Boy Band Con: The Lou Pearlman Story",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-05-03",
       "imdb": "tt9617710",
-      "poster": "",
+      "poster": "posters/the-boy-band-con-the-lou-pearlman-story-2019.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 744
+      "imdbVotes": 744,
+      "year": 2019,
+      "tmdb": 576709,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Aaron Kunkel",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Pilgrim Media Group",
+      "logo": "logos/26420.png"
     },
     {
       "title": "Extremely Wicked, Shockingly Evil and Vile",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2019-05-07",
       "imdb": "tt2481498",
-      "poster": "",
+      "poster": "posters/extremely-wicked-shockingly-evil-and-vile-2019.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 114282
+      "imdbVotes": 114282,
+      "year": 2019,
+      "tmdb": 457799,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Joe Berlinger",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Voltage Pictures",
+      "logo": "logos/6626.png"
     },
     {
       "title": "Unicorn Store",
-      "rating": 2.0,
+      "rating": 2,
       "rating10": 4,
       "watched": "2019-05-07",
       "imdb": "tt2338454",
-      "poster": "",
+      "poster": "posters/unicorn-store-2017.jpg",
       "imdbRating": 5.6,
-      "imdbVotes": 21726
+      "imdbVotes": 21726,
+      "year": 2017,
+      "tmdb": 423949,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Brie Larson",
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Rhea Films",
+      "logo": "logos/37504.png"
     },
     {
       "title": "Dolemite Is My Name",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-10-27",
       "imdb": "tt8526872",
-      "poster": "",
+      "poster": "posters/dolemite-is-my-name-2019.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 68852
+      "imdbVotes": 68852,
+      "year": 2019,
+      "tmdb": 528888,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Craig Brewer",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "History"
+      ],
+      "studio": "Davis Entertainment",
+      "logo": "logos/1302.png"
     },
     {
       "title": "Greenberg",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-11-02",
       "imdb": "tt1234654",
-      "poster": "",
+      "poster": "posters/greenberg-2010.jpg",
       "imdbRating": 6.1,
-      "imdbVotes": 40522
+      "imdbVotes": 40522,
+      "year": 2010,
+      "tmdb": 27583,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Noah Baumbach",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Good Boys",
@@ -227,9 +480,19 @@
       "rating10": 7,
       "watched": "2019-11-02",
       "imdb": "tt6977338",
-      "poster": "",
+      "poster": "posters/good-boys-2019.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 91508
+      "imdbVotes": 91508,
+      "year": 2019,
+      "tmdb": 521777,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Gene Stupnitsky",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Good Universe",
+      "logo": "logos/17393.png"
     },
     {
       "title": "Twinsters",
@@ -237,9 +500,20 @@
       "rating10": 6.5,
       "watched": "2019-11-19",
       "imdb": "tt2980626",
-      "poster": "",
+      "poster": "posters/twinsters-2015.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 4983
+      "imdbVotes": 4983,
+      "year": 2015,
+      "tmdb": 324325,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Samantha Futerman",
+      "genres": [
+        "Family",
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Booksmart",
@@ -247,69 +521,147 @@
       "rating10": 7,
       "watched": "2019-11-20",
       "imdb": "tt1489887",
-      "poster": "",
+      "poster": "posters/booksmart-2019.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 142764
+      "imdbVotes": 142764,
+      "year": 2019,
+      "tmdb": 505600,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Olivia Wilde",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Annapurna Pictures",
+      "logo": "logos/13184.png"
     },
     {
       "title": "Three Identical Strangers",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-11-23",
       "imdb": "tt7664504",
-      "poster": "",
+      "poster": "posters/three-identical-strangers-2018.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 45598
+      "imdbVotes": 45598,
+      "year": 2018,
+      "tmdb": 489988,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Tim Wardle",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "RAW",
+      "logo": "logos/23949.png"
     },
     {
       "title": "Stop Making Sense",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-11-23",
       "imdb": "tt0088178",
-      "poster": "",
+      "poster": "posters/stop-making-sense-1984.jpg",
       "imdbRating": 8.7,
-      "imdbVotes": 24784
+      "imdbVotes": 24784,
+      "year": 1984,
+      "tmdb": 24128,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Jonathan Demme",
+      "genres": [
+        "Documentary",
+        "Music"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Over the Garden Wall",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-11-23",
       "imdb": "tt3718778",
-      "poster": "",
+      "poster": "posters/over-the-garden-wall-2014.jpg",
       "imdbRating": 8.7,
-      "imdbVotes": 94832
+      "imdbVotes": 94832,
+      "year": 2014,
+      "tmdb": 61617,
+      "tmdbKind": "tv",
+      "runtime": 12,
+      "director": "Patrick McHale",
+      "genres": [
+        "Mystery",
+        "Sci-Fi & Fantasy",
+        "Animation",
+        "Family",
+        "Comedy"
+      ],
+      "studio": "Cartoon Network Studios",
+      "logo": "logos/7899.png"
     },
     {
-      "title": "I Love You, Now Die: The Commonwealth Vs. Michelle Carter",
-      "rating": 4.0,
+      "title": "I Love You, Now Die: The Commonwealth v. Michelle Carter",
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-11-23",
       "imdb": "tt9614090",
-      "poster": "",
+      "poster": "posters/i-love-you-now-die-the-commonwealth-v-michelle-carter-2019.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 9257
+      "imdbVotes": 9257,
+      "year": 2019,
+      "tmdb": 87518,
+      "tmdbKind": "tv",
+      "runtime": 70,
+      "director": "Erin Lee Carr",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "studio": "Abstract",
+      "logo": "logos/130514.png"
     },
     {
       "title": "The Lunchbox",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-11-23",
       "imdb": "tt2350496",
-      "poster": "",
+      "poster": "posters/the-lunchbox-2013.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 70673
+      "imdbVotes": 70673,
+      "year": 2013,
+      "tmdb": 191714,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Ritesh Batra",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "DAR Motion Pictures",
+      "logo": "logos/19142.png"
     },
     {
       "title": "Mommy Dead and Dearest",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-11-23",
       "imdb": "tt6442978",
-      "poster": "",
+      "poster": "posters/mommy-dead-and-dearest-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 13880
+      "imdbVotes": 13880,
+      "year": 2017,
+      "tmdb": 438446,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Erin Lee Carr",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "HBO Documentary Films",
+      "logo": "logos/14914.png"
     },
     {
       "title": "Titus",
@@ -317,9 +669,20 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt0120866",
-      "poster": "",
+      "poster": "posters/titus-1999.jpg",
       "imdbRating": 7,
-      "imdbVotes": 22440
+      "imdbVotes": 22440,
+      "year": 1999,
+      "tmdb": 12524,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "Julie Taymor",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Leaving Neverland",
@@ -327,9 +690,17 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt9573980",
-      "poster": "",
+      "poster": "posters/leaving-neverland-2019.jpg",
       "imdbRating": 7,
-      "imdbVotes": 33117
+      "imdbVotes": 33117,
+      "year": 2019,
+      "tmdb": 86951,
+      "tmdbKind": "tv",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Amos Pictures",
+      "logo": "logos/63246.png"
     },
     {
       "title": "The Big Sick",
@@ -337,9 +708,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt5462602",
-      "poster": "",
+      "poster": "posters/the-big-sick-2017.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 152228
+      "imdbVotes": 152228,
+      "year": 2017,
+      "tmdb": 416477,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Michael Showalter",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "Sleepers",
@@ -347,9 +730,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt0117665",
-      "poster": "",
+      "poster": "posters/sleepers-1996.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 260828
+      "imdbVotes": 260828,
+      "year": 1996,
+      "tmdb": 819,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Barry Levinson",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Propaganda Films",
+      "logo": "logos/278.png"
     },
     {
       "title": "English Vinglish",
@@ -357,9 +752,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt2181931",
-      "poster": "",
+      "poster": "posters/english-vinglish-2012.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 45987
+      "imdbVotes": 45987,
+      "year": 2012,
+      "tmdb": 118628,
+      "tmdbKind": "movie",
+      "runtime": 134,
+      "director": "Gauri Shinde",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Family"
+      ],
+      "studio": "Eros International",
+      "logo": "logos/3653.png"
     },
     {
       "title": "Living Dolls",
@@ -367,9 +774,19 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt2950434",
-      "poster": "",
+      "poster": "posters/living-dolls-2013.jpg",
       "imdbRating": 7,
-      "imdbVotes": 85
+      "imdbVotes": 85,
+      "year": 2013,
+      "tmdb": 536349,
+      "tmdbKind": "movie",
+      "runtime": 73,
+      "director": "Maureen Judge",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Shaw Media",
+      "logo": "logos/7224.png"
     },
     {
       "title": "All the Money in the World",
@@ -377,9 +794,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt5294550",
-      "poster": "",
+      "poster": "posters/all-the-money-in-the-world-2017.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 97713
+      "imdbVotes": 97713,
+      "year": 2017,
+      "tmdb": 446791,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Ridley Scott",
+      "genres": [
+        "Crime",
+        "History",
+        "Thriller"
+      ],
+      "studio": "Imperative Entertainment",
+      "logo": "logos/81121.png"
     },
     {
       "title": "Shot Caller",
@@ -387,9 +816,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt4633690",
-      "poster": "",
+      "poster": "posters/shot-caller-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 116502
+      "imdbVotes": 116502,
+      "year": 2017,
+      "tmdb": 339692,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Ric Roman Waugh",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "DirecTV",
+      "logo": "logos/34625.png"
     },
     {
       "title": "The Problem with Apu",
@@ -397,9 +838,19 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt7588752",
-      "poster": "",
+      "poster": "posters/the-problem-with-apu-2017.jpg",
       "imdbRating": 3.7,
-      "imdbVotes": 3234
+      "imdbVotes": 3234,
+      "year": 2017,
+      "tmdb": 474273,
+      "tmdbKind": "movie",
+      "runtime": 49,
+      "director": "Michael Melamedoff",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Avalon Television",
+      "logo": "logos/57685.png"
     },
     {
       "title": "Police Story",
@@ -407,9 +858,21 @@
       "rating10": 7,
       "watched": "2019-11-23",
       "imdb": "tt0089374",
-      "poster": "",
+      "poster": "posters/police-story-1985.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 47686
+      "imdbVotes": 47686,
+      "year": 1985,
+      "tmdb": 9056,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Jackie Chan",
+      "genres": [
+        "Action",
+        "Crime",
+        "Comedy"
+      ],
+      "studio": "Orange Sky Golden Harvest",
+      "logo": "logos/2521.png"
     },
     {
       "title": "The Wife",
@@ -417,9 +880,19 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt3750872",
-      "poster": "",
+      "poster": "posters/the-wife-2017.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 45514
+      "imdbVotes": 45514,
+      "year": 2017,
+      "tmdb": 340613,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Björn Runge",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Anonymous Content",
+      "logo": "logos/10039.png"
     },
     {
       "title": "The Old Man & the Gun",
@@ -427,9 +900,21 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt2837574",
-      "poster": "",
+      "poster": "posters/the-old-man-the-gun-2018.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 53241
+      "imdbVotes": 53241,
+      "year": 2018,
+      "tmdb": 429203,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "David Lowery",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Condé Nast Entertainment",
+      "logo": "logos/51513.png"
     },
     {
       "title": "A Serious Man",
@@ -437,9 +922,20 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt1019452",
-      "poster": "",
+      "poster": "posters/a-serious-man-2009.jpg",
       "imdbRating": 7,
-      "imdbVotes": 160643
+      "imdbVotes": 160643,
+      "year": 2009,
+      "tmdb": 12573,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Ethan Coen",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Taking Lives",
@@ -447,9 +943,19 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt0364045",
-      "poster": "",
+      "poster": "posters/taking-lives-2004.jpg",
       "imdbRating": 6.2,
-      "imdbVotes": 102449
+      "imdbVotes": 102449,
+      "year": 2004,
+      "tmdb": 11081,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "D.J. Caruso",
+      "genres": [
+        "Thriller"
+      ],
+      "studio": "Village Roadshow Pictures",
+      "logo": "logos/79.png"
     },
     {
       "title": "One Hour Photo",
@@ -457,9 +963,20 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt0265459",
-      "poster": "",
+      "poster": "posters/one-hour-photo-2002.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 142030
+      "imdbVotes": 142030,
+      "year": 2002,
+      "tmdb": 9357,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Mark Romanek",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "We Live in Public",
@@ -467,9 +984,19 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt0498329",
-      "poster": "",
+      "poster": "posters/we-live-in-public-2009.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 2097
+      "imdbVotes": 2097,
+      "year": 2009,
+      "tmdb": 34015,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Ondi Timoner",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Interloper Films",
+      "logo": "logos/5443.png"
     },
     {
       "title": "Mike Tyson: Undisputed Truth",
@@ -477,9 +1004,22 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt3009336",
-      "poster": "",
+      "poster": "posters/mike-tyson-undisputed-truth-2013.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 3381
+      "imdbVotes": 3381,
+      "year": 2013,
+      "tmdb": 210041,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Spike Lee",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Documentary",
+        "TV Movie"
+      ],
+      "studio": "HBO Films",
+      "logo": "logos/7429.png"
     },
     {
       "title": "Perfect Bid: The Contestant Who Knew Too Much",
@@ -487,9 +1027,19 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt6854248",
-      "poster": "",
+      "poster": "posters/perfect-bid-the-contestant-who-knew-too-much-2017.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 3362
+      "imdbVotes": 3362,
+      "year": 2017,
+      "tmdb": 491766,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "CJ Wallis",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "McCabe & Mrs. Miller",
@@ -497,79 +1047,174 @@
       "rating10": 6.5,
       "watched": "2019-11-23",
       "imdb": "tt0067411",
-      "poster": "",
+      "poster": "posters/mccabe-mrs-miller-1971.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 30977
+      "imdbVotes": 30977,
+      "year": 1971,
+      "tmdb": 29005,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Robert Altman",
+      "genres": [
+        "Drama",
+        "Western"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Miami Vice",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-11-23",
       "imdb": "tt0430357",
-      "poster": "",
+      "poster": "posters/miami-vice-2006.jpg",
       "imdbRating": 6.1,
-      "imdbVotes": 134741
+      "imdbVotes": 134741,
+      "year": 2006,
+      "tmdb": 82,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Michael Mann",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Small Town Crime",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-11-23",
       "imdb": "tt5751998",
-      "poster": "",
+      "poster": "posters/small-town-crime-2018.jpg",
       "imdbRating": 6.6,
-      "imdbVotes": 13506
+      "imdbVotes": 13506,
+      "year": 2018,
+      "tmdb": 412000,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Eshom Nelms",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Mystery",
+        "Drama",
+        "Action"
+      ],
+      "studio": "6 Foot Films",
+      "logo": "logos/99913.png"
     },
     {
-      "title": "Criminal Squad",
-      "rating": 3.0,
+      "title": "Den of Thieves",
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-11-23",
       "imdb": "tt1259528",
-      "poster": "",
+      "poster": "posters/den-of-thieves-2018.jpg",
       "imdbRating": 7,
-      "imdbVotes": 156747
+      "imdbVotes": 156747,
+      "year": 2018,
+      "tmdb": 449443,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Christian Gudegast",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Action"
+      ],
+      "studio": "Atmosphere Entertainment MM",
+      "logo": "logos/2995.png"
     },
     {
       "title": "The Bits of Yesterday",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-11-23",
       "imdb": "tt7116478",
-      "poster": "",
+      "poster": "posters/the-bits-of-yesterday-2018.jpg",
       "imdbRating": 5.6,
-      "imdbVotes": 166
+      "imdbVotes": 166,
+      "year": 2018,
+      "tmdb": 530862,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Darrin Peloquin",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Equalizer 2",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-11-23",
       "imdb": "tt3766354",
-      "poster": "",
+      "poster": "posters/the-equalizer-2-2018.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 235401
+      "imdbVotes": 235401,
+      "year": 2018,
+      "tmdb": 345887,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Antoine Fuqua",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Escape Artists",
+      "logo": "logos/1423.png"
     },
     {
       "title": "The Magnificent Seven",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2019-11-23",
       "imdb": "tt2404435",
-      "poster": "",
+      "poster": "posters/the-magnificent-seven-2016.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 250752
+      "imdbVotes": 250752,
+      "year": 2016,
+      "tmdb": 333484,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Antoine Fuqua",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Western"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
-      "title": "Blood In, Blood Out",
-      "rating": 3.0,
+      "title": "Bound by Honor",
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2019-11-23",
       "imdb": "tt0106469",
-      "poster": "",
+      "poster": "posters/bound-by-honor-1993.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 38620
+      "imdbVotes": 38620,
+      "year": 1993,
+      "tmdb": 9702,
+      "tmdbKind": "movie",
+      "runtime": 190,
+      "director": "Taylor Hackford",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Hollywood Pictures",
+      "logo": "logos/915.png"
     },
     {
       "title": "The Act of Killing",
@@ -577,9 +1222,20 @@
       "rating10": 8.5,
       "watched": "2019-11-27",
       "imdb": "tt2375605",
-      "poster": "",
+      "poster": "posters/the-act-of-killing-2012.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 45090
+      "imdbVotes": 45090,
+      "year": 2012,
+      "tmdb": 123678,
+      "tmdbKind": "movie",
+      "runtime": 159,
+      "director": "Joshua Oppenheimer",
+      "genres": [
+        "Documentary",
+        "History"
+      ],
+      "studio": "Final Cut for Real",
+      "logo": "logos/29062.png"
     },
     {
       "title": "At the Heart of Gold: Inside the USA Gymnastics Scandal",
@@ -587,9 +1243,19 @@
       "rating10": 8.5,
       "watched": "2019-11-27",
       "imdb": "tt8299654",
-      "poster": "",
+      "poster": "posters/at-the-heart-of-gold-inside-the-usa-gymnastics-scandal-2019.jpg",
       "imdbRating": 8,
-      "imdbVotes": 3748
+      "imdbVotes": 3748,
+      "year": 2019,
+      "tmdb": 557800,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Erin Lee Carr",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "HBO",
+      "logo": "logos/3268.png"
     },
     {
       "title": "Camp Hollywood",
@@ -597,69 +1263,145 @@
       "rating10": 6.5,
       "watched": "2019-11-27",
       "imdb": "tt0439489",
-      "poster": "",
+      "poster": "posters/camp-hollywood-2004.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 608
+      "imdbVotes": 608,
+      "year": 2004,
+      "tmdb": 327304,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Steve Markle",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Parasite",
-      "rating": 5.0,
+      "rating": 5,
       "rating10": 9.5,
       "watched": "2019-12-06",
       "imdb": "tt6751668",
-      "poster": "",
+      "poster": "posters/parasite-2019.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 1209661
+      "imdbVotes": 1209661,
+      "year": 2019,
+      "tmdb": 496243,
+      "tmdbKind": "movie",
+      "runtime": 133,
+      "director": "Bong Joon Ho",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Barunson E&A",
+      "logo": "logos/4399.png"
     },
     {
       "title": "Once Upon a Time in America",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-12-08",
       "imdb": "tt0087843",
-      "poster": "",
+      "poster": "posters/once-upon-a-time-in-america-1984.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 414394
+      "imdbVotes": 414394,
+      "year": 1984,
+      "tmdb": 311,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Sergio Leone",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "PSO",
+      "logo": "logos/1256.png"
     },
     {
       "title": "Under the Skin",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-12-09",
       "imdb": "tt1441395",
-      "poster": "",
+      "poster": "posters/under-the-skin-2014.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 174822
+      "imdbVotes": 174822,
+      "year": 2014,
+      "tmdb": 97370,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Jonathan Glazer",
+      "genres": [
+        "Thriller",
+        "Science Fiction",
+        "Drama"
+      ],
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "A Separation",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-12-10",
       "imdb": "tt1832382",
-      "poster": "",
+      "poster": "posters/a-separation-2011.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 281794
+      "imdbVotes": 281794,
+      "year": 2011,
+      "tmdb": 60243,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Asghar Farhadi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Memento Production",
+      "logo": "logos/5162.png"
     },
     {
       "title": "Marriage Story",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-12-12",
       "imdb": "tt7653254",
-      "poster": "",
+      "poster": "posters/marriage-story-2019.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 377401
+      "imdbVotes": 377401,
+      "year": 2019,
+      "tmdb": 492188,
+      "tmdbKind": "movie",
+      "runtime": 137,
+      "director": "Noah Baumbach",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Heyday Films",
+      "logo": "logos/437.png"
     },
     {
       "title": "Dheepan",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-12-12",
       "imdb": "tt4082068",
-      "poster": "",
+      "poster": "posters/dheepan-2015.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 18175
+      "imdbVotes": 18175,
+      "year": 2015,
+      "tmdb": 314402,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Jacques Audiard",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "France 2 Cinéma",
+      "logo": "logos/83.png"
     },
     {
       "title": "Apollo 11",
@@ -667,9 +1409,21 @@
       "rating10": 7,
       "watched": "2019-12-24",
       "imdb": "tt8760684",
-      "poster": "",
+      "poster": "posters/apollo-11-2019.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 29201
+      "imdbVotes": 29201,
+      "year": 2019,
+      "tmdb": 549559,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Todd Douglas Miller",
+      "genres": [
+        "Documentary",
+        "History",
+        "Drama"
+      ],
+      "studio": "CNN Films",
+      "logo": "logos/29605.png"
     },
     {
       "title": "Eyes Wide Shut",
@@ -677,9 +1431,21 @@
       "rating10": 8.5,
       "watched": "2019-12-26",
       "imdb": "tt0120663",
-      "poster": "",
+      "poster": "posters/eyes-wide-shut-1999.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 445532
+      "imdbVotes": 445532,
+      "year": 1999,
+      "tmdb": 345,
+      "tmdbKind": "movie",
+      "runtime": 159,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Love Actually",
@@ -687,9 +1453,21 @@
       "rating10": 7,
       "watched": "2019-12-27",
       "imdb": "tt0314331",
-      "poster": "",
+      "poster": "posters/love-actually-2003.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 586796
+      "imdbVotes": 586796,
+      "year": 2003,
+      "tmdb": 508,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Richard Curtis",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Working Title",
+      "logo": "logos/10163.png"
     },
     {
       "title": "The Celebration",
@@ -697,9 +1475,19 @@
       "rating10": 7,
       "watched": "2019-12-27",
       "imdb": "tt0154420",
-      "poster": "",
+      "poster": "posters/the-celebration-1998.jpg",
       "imdbRating": 8,
-      "imdbVotes": 101369
+      "imdbVotes": 101369,
+      "year": 1998,
+      "tmdb": 309,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Thomas Vinterberg",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "DR",
+      "logo": "logos/119.png"
     },
     {
       "title": "Klaus",
@@ -707,69 +1495,150 @@
       "rating10": 7,
       "watched": "2019-12-27",
       "imdb": "tt4729430",
-      "poster": "",
+      "poster": "posters/klaus-2019.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 245194
+      "imdbVotes": 245194,
+      "year": 2019,
+      "tmdb": 508965,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Sergio Pablos",
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy"
+      ],
+      "studio": "Atresmedia",
+      "logo": "logos/29566.png"
     },
     {
-      "title": "48 Hours",
+      "title": "48 Hrs.",
       "rating": 3.5,
       "rating10": 6.5,
       "watched": "2019-12-27",
       "imdb": "tt0083511",
-      "poster": "",
+      "poster": "posters/48-hrs-1982.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 94923
+      "imdbVotes": 94923,
+      "year": 1982,
+      "tmdb": 150,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Walter Hill",
+      "genres": [
+        "Crime",
+        "Action",
+        "Comedy"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Hustlers",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2019-12-27",
       "imdb": "tt5503686",
-      "poster": "",
+      "poster": "posters/hustlers-2019.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 114363
+      "imdbVotes": 114363,
+      "year": 2019,
+      "tmdb": 540901,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Lorene Scafaria",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Gloria Sanchez Productions",
+      "logo": "logos/77152.png"
     },
     {
       "title": "Joker",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2019-12-29",
       "imdb": "tt7286456",
-      "poster": "",
+      "poster": "posters/joker-2019.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 1737659
+      "imdbVotes": 1737659,
+      "year": 2019,
+      "tmdb": 475557,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Todd Phillips",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Shirkers",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-12-29",
       "imdb": "tt7472352",
-      "poster": "",
+      "poster": "posters/shirkers-2018.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 6063
+      "imdbVotes": 6063,
+      "year": 2018,
+      "tmdb": 489994,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Sandi Tan",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Cinereach",
+      "logo": "logos/12219.png"
     },
     {
       "title": "True Grit",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-12-30",
       "imdb": "tt1403865",
-      "poster": "",
+      "poster": "posters/true-grit-2010.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 380700
+      "imdbVotes": 380700,
+      "year": 2010,
+      "tmdb": 44264,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Ethan Coen",
+      "genres": [
+        "Drama",
+        "Adventure",
+        "Western"
+      ],
+      "studio": "Scott Rudin Productions",
+      "logo": "logos/258.png"
     },
     {
       "title": "Inside Llewyn Davis",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2019-12-30",
       "imdb": "tt2042568",
-      "poster": "",
+      "poster": "posters/inside-llewyn-davis-2013.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 173912
+      "imdbVotes": 173912,
+      "year": 2013,
+      "tmdb": 86829,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Joel Coen",
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "studio": "StudioCanal",
+      "logo": "logos/694.png"
     },
     {
       "title": "Toy Story 4",
@@ -777,9 +1646,22 @@
       "rating10": 7,
       "watched": "2019-12-30",
       "imdb": "tt1979376",
-      "poster": "",
+      "poster": "posters/toy-story-4-2019.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 333734
+      "imdbVotes": 333734,
+      "year": 2019,
+      "tmdb": 301528,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Josh Cooley",
+      "genres": [
+        "Family",
+        "Comedy",
+        "Animation",
+        "Adventure"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Cinemania",
@@ -787,9 +1669,19 @@
       "rating10": 7,
       "watched": "2019-12-31",
       "imdb": "tt0281724",
-      "poster": "",
+      "poster": "posters/cinemania-2003.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 2463
+      "imdbVotes": 2463,
+      "year": 2003,
+      "tmdb": 51230,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Angela Christlieb",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Hanfgarn & Ufer Filmproduktion",
+      "logo": "logos/24283.png"
     }
   ]
 }

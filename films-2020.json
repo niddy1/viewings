@@ -7,19 +7,40 @@
       "rating10": 7,
       "watched": "2020-01-02",
       "imdb": "tt0054632",
-      "poster": "",
+      "poster": "posters/last-year-at-marienbad-1961.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 27492
+      "imdbVotes": 27492,
+      "year": 1961,
+      "tmdb": 4024,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Alain Resnais",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Argos films",
+      "logo": "logos/6116.png"
     },
     {
       "title": "Pain and Glory",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-01-03",
       "imdb": "tt8291806",
-      "poster": "",
+      "poster": "posters/pain-and-glory-2019.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 68036
+      "imdbVotes": 68036,
+      "year": 2019,
+      "tmdb": 519010,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Pedro Almodóvar",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "Blue Collar",
@@ -27,9 +48,20 @@
       "rating10": 7,
       "watched": "2020-01-03",
       "imdb": "tt0077248",
-      "poster": "",
+      "poster": "posters/blue-collar-1978.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 12419
+      "imdbVotes": 12419,
+      "year": 1978,
+      "tmdb": 14839,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Paul Schrader",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Bridge on the River Kwai",
@@ -37,9 +69,21 @@
       "rating10": 6.5,
       "watched": "2020-01-05",
       "imdb": "tt0050212",
-      "poster": "",
+      "poster": "posters/the-bridge-on-the-river-kwai-1957.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 253133
+      "imdbVotes": 253133,
+      "year": 1957,
+      "tmdb": 826,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "David Lean",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Bad Lieutenant",
@@ -47,39 +91,85 @@
       "rating10": 7,
       "watched": "2020-01-06",
       "imdb": "tt0103759",
-      "poster": "",
+      "poster": "posters/bad-lieutenant-1992.jpg",
       "imdbRating": 7,
-      "imdbVotes": 53735
+      "imdbVotes": 53735,
+      "year": 1992,
+      "tmdb": 12143,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Abel Ferrara",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Pressman Film",
+      "logo": "logos/6455.png"
     },
     {
-      "title": "Once Upon a Time... in Hollywood",
+      "title": "Once Upon a Time in... Hollywood",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2020-01-06",
       "imdb": "tt7131622",
-      "poster": "",
+      "poster": "posters/once-upon-a-time-in-hollywood-2019.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 987056
+      "imdbVotes": 987056,
+      "year": 2019,
+      "tmdb": 466272,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "Quentin Tarantino",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Heyday Films",
+      "logo": "logos/437.png"
     },
     {
       "title": "Harlem Nights",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-01-06",
       "imdb": "tt0097481",
-      "poster": "",
+      "poster": "posters/harlem-nights-1989.jpg",
       "imdbRating": 6.2,
-      "imdbVotes": 27816
+      "imdbVotes": 27816,
+      "year": 1989,
+      "tmdb": 9085,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Eddie Murphy",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Two Popes",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-01-09",
       "imdb": "tt8404614",
-      "poster": "",
+      "poster": "posters/the-two-popes-2019.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 148765
+      "imdbVotes": 148765,
+      "year": 2019,
+      "tmdb": 551332,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Fernando Meirelles",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Rideback",
+      "logo": "logos/118854.png"
     },
     {
       "title": "The Asphalt Jungle",
@@ -87,9 +177,20 @@
       "rating10": 7,
       "watched": "2020-01-09",
       "imdb": "tt0042208",
-      "poster": "",
+      "poster": "posters/the-asphalt-jungle-1950.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 33659
+      "imdbVotes": 33659,
+      "year": 1950,
+      "tmdb": 16958,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "John Huston",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "To Catch a Thief",
@@ -97,9 +198,21 @@
       "rating10": 7,
       "watched": "2020-01-09",
       "imdb": "tt0048728",
-      "poster": "",
+      "poster": "posters/to-catch-a-thief-1955.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 88121
+      "imdbVotes": 88121,
+      "year": 1955,
+      "tmdb": 381,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Mystery",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Bank Job",
@@ -107,9 +220,21 @@
       "rating10": 6.5,
       "watched": "2020-01-10",
       "imdb": "tt0200465",
-      "poster": "",
+      "poster": "posters/the-bank-job-2008.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 199088
+      "imdbVotes": 199088,
+      "year": 2008,
+      "tmdb": 8848,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Roger Donaldson",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Relativity Media",
+      "logo": "logos/7295.png"
     },
     {
       "title": "Dunkirk",
@@ -117,9 +242,21 @@
       "rating10": 9,
       "watched": "2020-01-11",
       "imdb": "tt5013056",
-      "poster": "",
+      "poster": "posters/dunkirk-2017.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 833141
+      "imdbVotes": 833141,
+      "year": 2017,
+      "tmdb": 374720,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Christopher Nolan",
+      "genres": [
+        "War",
+        "Action",
+        "History"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Alanis",
@@ -127,9 +264,19 @@
       "rating10": 7,
       "watched": "2020-01-11",
       "imdb": "tt7297954",
-      "poster": "",
+      "poster": "posters/alanis-2017.jpg",
       "imdbRating": 6.2,
-      "imdbVotes": 1534
+      "imdbVotes": 1534,
+      "year": 2017,
+      "tmdb": 472035,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Anahí Berneri",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "INCAA",
+      "logo": "logos/6458.png"
     },
     {
       "title": "Notting Hill",
@@ -137,29 +284,62 @@
       "rating10": 7,
       "watched": "2020-01-16",
       "imdb": "tt0125439",
-      "poster": "",
+      "poster": "posters/notting-hill-1999.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 393235
+      "imdbVotes": 393235,
+      "year": 1999,
+      "tmdb": 509,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Roger Michell",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Working Title",
+      "logo": "logos/10163.png"
     },
     {
       "title": "Hearts and Minds",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-01-21",
       "imdb": "tt0071604",
-      "poster": "",
+      "poster": "posters/hearts-and-minds-1974.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 6697
+      "imdbVotes": 6697,
+      "year": 1974,
+      "tmdb": 42449,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Peter Davis",
+      "genres": [
+        "Documentary",
+        "War"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Barkley Marathons: The Race That Eats Its Young",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-01-21",
       "imdb": "tt2400291",
-      "poster": "",
+      "poster": "posters/the-barkley-marathons-the-race-that-eats-its-young-2014.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 6511
+      "imdbVotes": 6511,
+      "year": 2014,
+      "tmdb": 334495,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Annika Iltis",
+      "genres": [
+        "Documentary",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Lighthouse",
@@ -167,29 +347,62 @@
       "rating10": 7,
       "watched": "2020-01-21",
       "imdb": "tt7984734",
-      "poster": "",
+      "poster": "posters/the-lighthouse-2019.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 313666
+      "imdbVotes": 313666,
+      "year": 2019,
+      "tmdb": 503919,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Robert Eggers",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Thriller"
+      ],
+      "studio": "RT Features",
+      "logo": "logos/30666.png"
     },
     {
       "title": "Abducted in Plain Sight",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-01-24",
       "imdb": "tt3444312",
-      "poster": "",
+      "poster": "posters/abducted-in-plain-sight-2017.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 25261
+      "imdbVotes": 25261,
+      "year": 2017,
+      "tmdb": 470401,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Skye Borgman",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Good Liar",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-01-25",
       "imdb": "tt5563334",
-      "poster": "",
+      "poster": "posters/the-good-liar-2019.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 55153
+      "imdbVotes": 55153,
+      "year": 2019,
+      "tmdb": 511322,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Bill Condon",
+      "genres": [
+        "Crime"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Uncut Gems",
@@ -197,39 +410,85 @@
       "rating10": 7,
       "watched": "2020-02-02",
       "imdb": "tt5727208",
-      "poster": "",
+      "poster": "posters/uncut-gems-2019.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 364802
+      "imdbVotes": 364802,
+      "year": 2019,
+      "tmdb": 473033,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Benny Safdie",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
-      "title": "Le Mans 66",
-      "rating": 4.0,
+      "title": "Ford v Ferrari",
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-02-05",
       "imdb": "tt1950186",
-      "poster": "",
+      "poster": "posters/ford-v-ferrari-2019.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 592790
+      "imdbVotes": 592790,
+      "year": 2019,
+      "tmdb": 359724,
+      "tmdbKind": "movie",
+      "runtime": 153,
+      "director": "James Mangold",
+      "genres": [
+        "Drama",
+        "History",
+        "Action"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Jojo Rabbit",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-02-07",
       "imdb": "tt2584384",
-      "poster": "",
+      "poster": "posters/jojo-rabbit-2019.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 497780
+      "imdbVotes": 497780,
+      "year": 2019,
+      "tmdb": 515001,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Taika Waititi",
+      "genres": [
+        "Comedy",
+        "War",
+        "Drama"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "Won't You Be My Neighbor?",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-02-20",
       "imdb": "tt7681902",
-      "poster": "",
+      "poster": "posters/won-t-you-be-my-neighbor-2018.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 28400
+      "imdbVotes": 28400,
+      "year": 2018,
+      "tmdb": 490003,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Morgan Neville",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Tremolo Productions",
+      "logo": "logos/58637.png"
     },
     {
       "title": "A Rainy Day in New York",
@@ -237,29 +496,62 @@
       "rating10": 7,
       "watched": "2020-02-20",
       "imdb": "tt7139936",
-      "poster": "",
+      "poster": "posters/a-rainy-day-in-new-york-2019.jpg",
       "imdbRating": 6.4,
-      "imdbVotes": 59486
+      "imdbVotes": 59486,
+      "year": 2019,
+      "tmdb": 475303,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Woody Allen",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Little Women",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-03-27",
       "imdb": "tt3281548",
-      "poster": "",
+      "poster": "posters/little-women-2019.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 291091
+      "imdbVotes": 291091,
+      "year": 2019,
+      "tmdb": 331482,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Greta Gerwig",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Richard Jewell",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-03-27",
       "imdb": "tt3513548",
-      "poster": "",
+      "poster": "posters/richard-jewell-2019.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 110210
+      "imdbVotes": 110210,
+      "year": 2019,
+      "tmdb": 292011,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Clint Eastwood",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Sincerely Louis C.K.",
@@ -267,9 +559,19 @@
       "rating10": 8.5,
       "watched": "2020-04-08",
       "imdb": "tt12087624",
-      "poster": "",
+      "poster": "posters/sincerely-louis-c-k-2020.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 7144
+      "imdbVotes": 7144,
+      "year": 2020,
+      "tmdb": 689643,
+      "tmdbKind": "movie",
+      "runtime": 60,
+      "director": "Louis C.K.",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Murmur of the Heart",
@@ -277,9 +579,20 @@
       "rating10": 9,
       "watched": "2020-04-12",
       "imdb": "tt0067778",
-      "poster": "",
+      "poster": "posters/murmur-of-the-heart-1971.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 11859
+      "imdbVotes": 11859,
+      "year": 1971,
+      "tmdb": 42501,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Louis Malle",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Knives Out",
@@ -287,29 +600,63 @@
       "rating10": 9,
       "watched": "2020-04-27",
       "imdb": "tt8946378",
-      "poster": "",
+      "poster": "posters/knives-out-2019.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 897407
+      "imdbVotes": 897407,
+      "year": 2019,
+      "tmdb": 546554,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Rian Johnson",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "MRC",
+      "logo": "logos/2531.png"
     },
     {
       "title": "Bad Boys for Life",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-04-27",
       "imdb": "tt1502397",
-      "poster": "",
+      "poster": "posters/bad-boys-for-life-2020.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 200730
+      "imdbVotes": 200730,
+      "year": 2020,
+      "tmdb": 38700,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Bilall Fallah",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Crime"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Waking Ned",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-05-04",
       "imdb": "tt0166396",
-      "poster": "",
+      "poster": "posters/waking-ned-1998.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 30203
+      "imdbVotes": 30203,
+      "year": 1998,
+      "tmdb": 10162,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Kirk Jones",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Canal+",
+      "logo": "logos/104.png"
     },
     {
       "title": "The Gentlemen",
@@ -317,19 +664,40 @@
       "rating10": 6.5,
       "watched": "2020-05-10",
       "imdb": "tt8367814",
-      "poster": "",
+      "poster": "posters/the-gentlemen-2020.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 472870
+      "imdbVotes": 472870,
+      "year": 2020,
+      "tmdb": 522627,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Guy Ritchie",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "The Last Dance",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-05-19",
       "imdb": "tt8420184",
-      "poster": "",
+      "poster": "posters/the-last-dance-2020.jpg",
       "imdbRating": 9,
-      "imdbVotes": 186160
+      "imdbVotes": 186160,
+      "year": 2020,
+      "tmdb": 79525,
+      "tmdbKind": "tv",
+      "runtime": 50,
+      "director": "Michael Tollin",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "ESPN Films",
+      "logo": "logos/18595.png"
     },
     {
       "title": "Jasper Mall",
@@ -337,9 +705,19 @@
       "rating10": 7,
       "watched": "2020-07-04",
       "imdb": "tt11262098",
-      "poster": "",
+      "poster": "posters/jasper-mall-2020.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 1716
+      "imdbVotes": 1716,
+      "year": 2020,
+      "tmdb": 654911,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Brett Whitcomb",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Window Pictures",
+      "logo": "logos/23232.png"
     },
     {
       "title": "Palm Springs",
@@ -347,19 +725,41 @@
       "rating10": 7,
       "watched": "2020-07-22",
       "imdb": "tt9484998",
-      "poster": "",
+      "poster": "posters/palm-springs-2020.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 221242
+      "imdbVotes": 221242,
+      "year": 2020,
+      "tmdb": 587792,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Max Barbakow",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Science Fiction"
+      ],
+      "studio": "Limelight",
+      "logo": "logos/128360.png"
     },
     {
-      "title": "Sex, Lies, and Videotape",
-      "rating": 4.0,
+      "title": "sex, lies, and videotape",
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-07-30",
       "imdb": "tt0098724",
-      "poster": "",
+      "poster": "posters/sex-lies-and-videotape-1989.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 65669
+      "imdbVotes": 65669,
+      "year": 1989,
+      "tmdb": 1412,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Outlaw Productions",
+      "logo": "logos/889.png"
     },
     {
       "title": "The Weight of Gold",
@@ -367,9 +767,19 @@
       "rating10": 6.5,
       "watched": "2020-07-30",
       "imdb": "tt8311394",
-      "poster": "",
+      "poster": "posters/the-weight-of-gold-2020.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 988
+      "imdbVotes": 988,
+      "year": 2020,
+      "tmdb": 724343,
+      "tmdbKind": "movie",
+      "runtime": 60,
+      "director": "Brett Rapkin",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "HBO Documentary Films",
+      "logo": "logos/14914.png"
     },
     {
       "title": "The Count of Monte Cristo",
@@ -377,9 +787,22 @@
       "rating10": 8.5,
       "watched": "2020-08-09",
       "imdb": "tt0245844",
-      "poster": "",
+      "poster": "posters/the-count-of-monte-cristo-2002.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 162762
+      "imdbVotes": 162762,
+      "year": 2002,
+      "tmdb": 11362,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Kevin Reynolds",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "History",
+        "Action"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "Unbelievable",
@@ -387,9 +810,19 @@
       "rating10": 9,
       "watched": "2020-08-29",
       "imdb": "tt7909970",
-      "poster": "",
+      "poster": "posters/unbelievable-2019.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 140639
+      "imdbVotes": 140639,
+      "year": 2019,
+      "tmdb": 91275,
+      "tmdbKind": "tv",
+      "director": "Susannah Grant",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "CBS Studios",
+      "logo": "logos/1081.png"
     },
     {
       "title": "Defending Jacob",
@@ -397,19 +830,42 @@
       "rating10": 8.5,
       "watched": "2020-08-29",
       "imdb": "tt2304589",
-      "poster": "",
+      "poster": "posters/defending-jacob-2020.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 82204
+      "imdbVotes": 82204,
+      "year": 2020,
+      "tmdb": 87784,
+      "tmdbKind": "tv",
+      "director": "Mark Bomback",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "Anonymous Content",
+      "logo": "logos/10039.png"
     },
     {
       "title": "The Irishman",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-08-29",
       "imdb": "tt1302006",
-      "poster": "",
+      "poster": "posters/the-irishman-2019.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 482948
+      "imdbVotes": 482948,
+      "year": 2019,
+      "tmdb": 398978,
+      "tmdbKind": "movie",
+      "runtime": 209,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Crime",
+        "Drama",
+        "History"
+      ],
+      "studio": "Tribeca Productions",
+      "logo": "logos/11391.png"
     },
     {
       "title": "El Camino: A Breaking Bad Movie",
@@ -417,9 +873,21 @@
       "rating10": 7,
       "watched": "2020-08-29",
       "imdb": "tt9243946",
-      "poster": "",
+      "poster": "posters/el-camino-a-breaking-bad-movie-2019.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 356442
+      "imdbVotes": 356442,
+      "year": 2019,
+      "tmdb": 559969,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Vince Gilligan",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Sony Pictures Television",
+      "logo": "logos/11073.png"
     },
     {
       "title": "Class Action Park",
@@ -427,9 +895,19 @@
       "rating10": 7,
       "watched": "2020-08-29",
       "imdb": "tt11015214",
-      "poster": "",
+      "poster": "posters/class-action-park-2020.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 9542
+      "imdbVotes": 9542,
+      "year": 2020,
+      "tmdb": 634233,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Seth Porges",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Basic Instinct",
@@ -437,29 +915,63 @@
       "rating10": 6.5,
       "watched": "2020-08-29",
       "imdb": "tt0103772",
-      "poster": "",
+      "poster": "posters/basic-instinct-1992.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 248972
+      "imdbVotes": 248972,
+      "year": 1992,
+      "tmdb": 402,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Paul Verhoeven",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Carolco Pictures",
+      "logo": "logos/275.png"
     },
     {
       "title": "A Simple Favor",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-08-29",
       "imdb": "tt7040874",
-      "poster": "",
+      "poster": "posters/a-simple-favor-2018.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 192945
+      "imdbVotes": 192945,
+      "year": 2018,
+      "tmdb": 484247,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Paul Feig",
+      "genres": [
+        "Thriller",
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "Feigco Entertainment",
+      "logo": "logos/61791.png"
     },
     {
-      "title": "Don't Fuck with Cats: Hunting an Internet Killer",
-      "rating": 3.0,
+      "title": "Don't F**k with Cats: Hunting an Internet Killer",
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-08-29",
       "imdb": "tt11318602",
-      "poster": "",
+      "poster": "posters/don-t-f-k-with-cats-hunting-an-internet-killer-2019.jpg",
       "imdbRating": 8,
-      "imdbVotes": 71438
+      "imdbVotes": 71438,
+      "year": 2019,
+      "tmdb": 96129,
+      "tmdbKind": "tv",
+      "runtime": 62,
+      "director": "Mark Lewis",
+      "genres": [
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "RAW",
+      "logo": "logos/23949.png"
     },
     {
       "title": "Fatal Attraction",
@@ -467,9 +979,21 @@
       "rating10": 5,
       "watched": "2020-08-31",
       "imdb": "tt0093010",
-      "poster": "",
+      "poster": "posters/fatal-attraction-1987.jpg",
       "imdbRating": 7,
-      "imdbVotes": 113932
+      "imdbVotes": 113932,
+      "year": 1987,
+      "tmdb": 10998,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Adrian Lyne",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "A Time to Kill",
@@ -477,59 +1001,125 @@
       "rating10": 6.5,
       "watched": "2020-09-01",
       "imdb": "tt0117913",
-      "poster": "",
+      "poster": "posters/a-time-to-kill-1996.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 215133
+      "imdbVotes": 215133,
+      "year": 1996,
+      "tmdb": 1645,
+      "tmdbKind": "movie",
+      "runtime": 149,
+      "director": "Joel Schumacher",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Regency Enterprises",
+      "logo": "logos/508.png"
     },
     {
       "title": "Sorry, Wrong Number",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-09-01",
       "imdb": "tt0040823",
-      "poster": "",
+      "poster": "posters/sorry-wrong-number-1948.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 14654
+      "imdbVotes": 14654,
+      "year": 1948,
+      "tmdb": 21635,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Anatole Litvak",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Dreamers",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-09-02",
       "imdb": "tt0309987",
-      "poster": "",
+      "poster": "posters/the-dreamers-2003.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 142983
+      "imdbVotes": 142983,
+      "year": 2003,
+      "tmdb": 1278,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Bernardo Bertolucci",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Recorded Picture Company",
+      "logo": "logos/11561.png"
     },
     {
       "title": "Runaway Jury",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-09-02",
       "imdb": "tt0313542",
-      "poster": "",
+      "poster": "posters/runaway-jury-2003.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 123177
+      "imdbVotes": 123177,
+      "year": 2003,
+      "tmdb": 11329,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Gary Fleder",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "New Regency Pictures",
+      "logo": "logos/10104.png"
     },
     {
       "title": "The Pelican Brief",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-09-02",
       "imdb": "tt0107798",
-      "poster": "",
+      "poster": "posters/the-pelican-brief-1993.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 106815
+      "imdbVotes": 106815,
+      "year": 1993,
+      "tmdb": 9944,
+      "tmdbKind": "movie",
+      "runtime": 141,
+      "director": "Alan J. Pakula",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Icarus",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-09-06",
       "imdb": "tt6333060",
-      "poster": "",
+      "poster": "posters/icarus-2017.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 58892
+      "imdbVotes": 58892,
+      "year": 2017,
+      "tmdb": 432976,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Bryan Fogel",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Diamond Docs",
+      "logo": "logos/4183.png"
     },
     {
       "title": "Blow Out",
@@ -537,9 +1127,21 @@
       "rating10": 7,
       "watched": "2020-09-06",
       "imdb": "tt0082085",
-      "poster": "",
+      "poster": "posters/blow-out-1981.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 79939
+      "imdbVotes": 79939,
+      "year": 1981,
+      "tmdb": 11644,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Brian De Palma",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "X-Men: First Class",
@@ -547,9 +1149,21 @@
       "rating10": 7,
       "watched": "2020-09-06",
       "imdb": "tt1270798",
-      "poster": "",
+      "poster": "posters/x-men-first-class-2011.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 777993
+      "imdbVotes": 777993,
+      "year": 2011,
+      "tmdb": 49538,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Matthew Vaughn",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "studio": "The Donners' Company",
+      "logo": "logos/431.png"
     },
     {
       "title": "Exit Through the Gift Shop",
@@ -557,9 +1171,19 @@
       "rating10": 7,
       "watched": "2020-09-06",
       "imdb": "tt1587707",
-      "poster": "",
+      "poster": "posters/exit-through-the-gift-shop-2010.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 70866
+      "imdbVotes": 70866,
+      "year": 2010,
+      "tmdb": 39452,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Banksy",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Oscilloscope",
+      "logo": "logos/4748.png"
     },
     {
       "title": "The Body",
@@ -567,9 +1191,20 @@
       "rating10": 7,
       "watched": "2020-09-06",
       "imdb": "tt1937149",
-      "poster": "",
+      "poster": "posters/the-body-2012.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 81423
+      "imdbVotes": 81423,
+      "year": 2012,
+      "tmdb": 111083,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Oriol Paulo",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Rodar y Rodar",
+      "logo": "logos/11651.png"
     },
     {
       "title": "Logan",
@@ -577,19 +1212,43 @@
       "rating10": 6.5,
       "watched": "2020-09-06",
       "imdb": "tt3315342",
-      "poster": "",
+      "poster": "posters/logan-2017.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 947575
+      "imdbVotes": 947575,
+      "year": 2017,
+      "tmdb": 263115,
+      "tmdbKind": "movie",
+      "runtime": 137,
+      "director": "James Mangold",
+      "genres": [
+        "Action",
+        "Drama",
+        "Science Fiction"
+      ],
+      "studio": "Hutch Parker Entertainment",
+      "logo": "logos/91797.png"
     },
     {
       "title": "The Death of Stalin",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-09-06",
       "imdb": "tt4686844",
-      "poster": "",
+      "poster": "posters/the-death-of-stalin-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 129391
+      "imdbVotes": 129391,
+      "year": 2017,
+      "tmdb": 402897,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Armando Iannucci",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "History"
+      ],
+      "studio": "Gaumont",
+      "logo": "logos/9.png"
     },
     {
       "title": "Captain Marvel",
@@ -597,9 +1256,21 @@
       "rating10": 7,
       "watched": "2020-09-08",
       "imdb": "tt4154664",
-      "poster": "",
+      "poster": "posters/captain-marvel-2019.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 678662
+      "imdbVotes": 678662,
+      "year": 2019,
+      "tmdb": 299537,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Ryan Fleck",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Captain America: The First Avenger",
@@ -607,9 +1278,21 @@
       "rating10": 7,
       "watched": "2020-09-08",
       "imdb": "tt0458339",
-      "poster": "",
+      "poster": "posters/captain-america-the-first-avenger-2011.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 995084
+      "imdbVotes": 995084,
+      "year": 2011,
+      "tmdb": 1771,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Joe Johnston",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Thor",
@@ -617,9 +1300,21 @@
       "rating10": 7,
       "watched": "2020-09-08",
       "imdb": "tt0800369",
-      "poster": "",
+      "poster": "posters/thor-2011.jpg",
       "imdbRating": 7,
-      "imdbVotes": 991008
+      "imdbVotes": 991008,
+      "year": 2011,
+      "tmdb": 10195,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Kenneth Branagh",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Thor: The Dark World",
@@ -627,19 +1322,44 @@
       "rating10": 6.5,
       "watched": "2020-09-08",
       "imdb": "tt1981115",
-      "poster": "",
+      "poster": "posters/thor-the-dark-world-2013.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 798234
+      "imdbVotes": 798234,
+      "year": 2013,
+      "tmdb": 76338,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Alan Taylor",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Thor: Ragnarok",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-09-16",
       "imdb": "tt3501632",
-      "poster": "",
+      "poster": "posters/thor-ragnarok-2017.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 921046
+      "imdbVotes": 921046,
+      "year": 2017,
+      "tmdb": 284053,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Taika Waititi",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "The Intouchables",
@@ -647,9 +1367,20 @@
       "rating10": 7,
       "watched": "2020-09-16",
       "imdb": "tt1675434",
-      "poster": "",
+      "poster": "posters/the-intouchables-2011.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 1049270
+      "imdbVotes": 1049270,
+      "year": 2011,
+      "tmdb": 77338,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Éric Toledano",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Gaumont",
+      "logo": "logos/9.png"
     },
     {
       "title": "Doctor Strange",
@@ -657,9 +1388,21 @@
       "rating10": 7,
       "watched": "2020-09-16",
       "imdb": "tt1211837",
-      "poster": "",
+      "poster": "posters/doctor-strange-2016.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 904865
+      "imdbVotes": 904865,
+      "year": 2016,
+      "tmdb": 284052,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Scott Derrickson",
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Avengers: Infinity War",
@@ -667,9 +1410,21 @@
       "rating10": 7,
       "watched": "2020-09-16",
       "imdb": "tt4154756",
-      "poster": "",
+      "poster": "posters/avengers-infinity-war-2018.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 1425101
+      "imdbVotes": 1425101,
+      "year": 2018,
+      "tmdb": 299536,
+      "tmdbKind": "movie",
+      "runtime": 149,
+      "director": "Joe Russo",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Guardians of the Galaxy Vol. 2",
@@ -677,9 +1432,21 @@
       "rating10": 7,
       "watched": "2020-09-16",
       "imdb": "tt3896198",
-      "poster": "",
+      "poster": "posters/guardians-of-the-galaxy-vol-2-2017.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 853832
+      "imdbVotes": 853832,
+      "year": 2017,
+      "tmdb": 283995,
+      "tmdbKind": "movie",
+      "runtime": 137,
+      "director": "James Gunn",
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Avengers: Age of Ultron",
@@ -687,9 +1454,21 @@
       "rating10": 6.5,
       "watched": "2020-09-16",
       "imdb": "tt2395427",
-      "poster": "",
+      "poster": "posters/avengers-age-of-ultron-2015.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 1031235
+      "imdbVotes": 1031235,
+      "year": 2015,
+      "tmdb": 99861,
+      "tmdbKind": "movie",
+      "runtime": 141,
+      "director": "Joss Whedon",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Avengers: Endgame",
@@ -697,39 +1476,87 @@
       "rating10": 6.5,
       "watched": "2020-09-16",
       "imdb": "tt4154796",
-      "poster": "",
+      "poster": "posters/avengers-endgame-2019.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 1509234
+      "imdbVotes": 1509234,
+      "year": 2019,
+      "tmdb": 299534,
+      "tmdbKind": "movie",
+      "runtime": 181,
+      "director": "Joe Russo",
+      "genres": [
+        "Adventure",
+        "Science Fiction",
+        "Action"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Iron Man 2",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-09-16",
       "imdb": "tt1228705",
-      "poster": "",
+      "poster": "posters/iron-man-2-2010.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 964915
+      "imdbVotes": 964915,
+      "year": 2010,
+      "tmdb": 10138,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Jon Favreau",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Captain America: Civil War",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-09-16",
       "imdb": "tt3498820",
-      "poster": "",
+      "poster": "posters/captain-america-civil-war-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 957750
+      "imdbVotes": 957750,
+      "year": 2016,
+      "tmdb": 271110,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Joe Russo",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Ant-Man and the Wasp",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-09-16",
       "imdb": "tt5095030",
-      "poster": "",
+      "poster": "posters/ant-man-and-the-wasp-2018.jpg",
       "imdbRating": 7,
-      "imdbVotes": 511745
+      "imdbVotes": 511745,
+      "year": 2018,
+      "tmdb": 363088,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Peyton Reed",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Manhattan Murder Mystery",
@@ -737,9 +1564,20 @@
       "rating10": 7,
       "watched": "2020-10-11",
       "imdb": "tt0107507",
-      "poster": "",
+      "poster": "posters/manhattan-murder-mystery-1993.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 50387
+      "imdbVotes": 50387,
+      "year": 1993,
+      "tmdb": 10440,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Woody Allen",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "TriStar Pictures",
+      "logo": "logos/559.png"
     },
     {
       "title": "Wild Tales",
@@ -747,9 +1585,21 @@
       "rating10": 9,
       "watched": "2020-10-15",
       "imdb": "tt3011894",
-      "poster": "",
+      "poster": "posters/wild-tales-2014.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 243189
+      "imdbVotes": 243189,
+      "year": 2014,
+      "tmdb": 265195,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Damián Szifron",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Comedy"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "Incendies",
@@ -757,9 +1607,21 @@
       "rating10": 9,
       "watched": "2020-10-15",
       "imdb": "tt1255953",
-      "poster": "",
+      "poster": "posters/incendies-2010.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 263404
+      "imdbVotes": 263404,
+      "year": 2010,
+      "tmdb": 46738,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Denis Villeneuve",
+      "genres": [
+        "Drama",
+        "War",
+        "Mystery"
+      ],
+      "studio": "TS Productions",
+      "logo": "logos/313.png"
     },
     {
       "title": "Tangerines",
@@ -767,9 +1629,20 @@
       "rating10": 9,
       "watched": "2020-10-15",
       "imdb": "tt2991224",
-      "poster": "",
+      "poster": "posters/tangerines-2013.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 52270
+      "imdbVotes": 52270,
+      "year": 2013,
+      "tmdb": 238628,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Zaza Urushadze",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "studio": "Allfilm",
+      "logo": "logos/6154.png"
     },
     {
       "title": "Mary and Max",
@@ -777,9 +1650,21 @@
       "rating10": 8.5,
       "watched": "2020-10-15",
       "imdb": "tt0978762",
-      "poster": "",
+      "poster": "posters/mary-and-max-2009.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 204332
+      "imdbVotes": 204332,
+      "year": 2009,
+      "tmdb": 24238,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Adam Elliot",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Screen Australia",
+      "logo": "logos/7584.png"
     },
     {
       "title": "Barry Lyndon",
@@ -787,9 +1672,20 @@
       "rating10": 8.5,
       "watched": "2020-10-15",
       "imdb": "tt0072684",
-      "poster": "",
+      "poster": "posters/barry-lyndon-1975.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 210381
+      "imdbVotes": 210381,
+      "year": 1975,
+      "tmdb": 3175,
+      "tmdbKind": "movie",
+      "runtime": 188,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Three Colors: White",
@@ -797,9 +1693,21 @@
       "rating10": 8.5,
       "watched": "2020-10-15",
       "imdb": "tt0111507",
-      "poster": "",
+      "poster": "posters/three-colors-white-1994.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 86061
+      "imdbVotes": 86061,
+      "year": 1994,
+      "tmdb": 109,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Krzysztof Kieślowski",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "France 3 Cinéma",
+      "logo": "logos/591.png"
     },
     {
       "title": "Three Colors: Red",
@@ -807,219 +1715,471 @@
       "rating10": 8.5,
       "watched": "2020-10-15",
       "imdb": "tt0111495",
-      "poster": "",
+      "poster": "posters/three-colors-red-1994.jpg",
       "imdbRating": 8,
-      "imdbVotes": 117530
+      "imdbVotes": 117530,
+      "year": 1994,
+      "tmdb": 110,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Krzysztof Kieślowski",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Romance"
+      ],
+      "studio": "France 3 Cinéma",
+      "logo": "logos/591.png"
     },
     {
       "title": "My Father and My Son",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0476735",
-      "poster": "",
+      "poster": "posters/my-father-and-my-son-2005.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 102890
+      "imdbVotes": 102890,
+      "year": 2005,
+      "tmdb": 13393,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Çağan Irmak",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Avşar Film",
+      "logo": "logos/67496.png"
     },
     {
       "title": "Andhadhun",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt8108198",
-      "poster": "",
+      "poster": "posters/andhadhun-2018.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 119246
+      "imdbVotes": 119246,
+      "year": 2018,
+      "tmdb": 534780,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Sriram Raghavan",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller",
+        "Comedy"
+      ],
+      "studio": "Viacom18 Studios",
+      "logo": "logos/6808.png"
     },
     {
       "title": "Hotel Rwanda",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0395169",
-      "poster": "",
+      "poster": "posters/hotel-rwanda-2004.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 396250
+      "imdbVotes": 396250,
+      "year": 2004,
+      "tmdb": 205,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Terry George",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "Three Colors: Blue",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0108394",
-      "poster": "",
+      "poster": "posters/three-colors-blue-1993.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 120111
+      "imdbVotes": 120111,
+      "year": 1993,
+      "tmdb": 108,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Krzysztof Kieślowski",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "France 3 Cinéma",
+      "logo": "logos/591.png"
     },
     {
       "title": "Amadeus",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0086879",
-      "poster": "",
+      "poster": "posters/amadeus-1984.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 476020
+      "imdbVotes": 476020,
+      "year": 1984,
+      "tmdb": 279,
+      "tmdbKind": "movie",
+      "runtime": 160,
+      "director": "Miloš Forman",
+      "genres": [
+        "Drama",
+        "History",
+        "Music"
+      ],
+      "studio": "The Saul Zaentz Company",
+      "logo": "logos/5237.png"
     },
     {
       "title": "Children of Heaven",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0118849",
-      "poster": "",
+      "poster": "posters/children-of-heaven-1997.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 91948
+      "imdbVotes": 91948,
+      "year": 1997,
+      "tmdb": 21334,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Majid Majidi",
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "studio": "Kanoon",
+      "logo": "logos/11459.png"
     },
     {
-      "title": "Alone in the Wilderness Part II",
-      "rating": 4.0,
+      "title": "Alone in the Wilderness: Part II",
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt2708794",
-      "poster": "",
+      "poster": "posters/alone-in-the-wilderness-part-ii-2011.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 560
+      "imdbVotes": 560,
+      "year": 2011,
+      "tmdb": 81976,
+      "tmdbKind": "movie",
+      "runtime": 58,
+      "director": "Dick Proenneke",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Gangs of Wasseypur",
-      "rating": 4.0,
+      "title": "Gangs of Wasseypur - Part 1",
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt1954470",
-      "poster": "",
+      "poster": "posters/gangs-of-wasseypur-part-1-2012.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 116440
+      "imdbVotes": 116440,
+      "year": 2012,
+      "tmdb": 117691,
+      "tmdbKind": "movie",
+      "runtime": 160,
+      "director": "Anurag Kashyap",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "X-Men: Days of Future Past",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt1877832",
-      "poster": "",
+      "poster": "posters/x-men-days-of-future-past-2014.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 802273
+      "imdbVotes": 802273,
+      "year": 2014,
+      "tmdb": 127585,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Bryan Singer",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Bad Hat Harry Productions",
+      "logo": "logos/9168.png"
     },
     {
-      "title": "Your Name",
-      "rating": 4.0,
+      "title": "Your Name.",
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt5311514",
-      "poster": "",
+      "poster": "posters/your-name-2016.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 410447
+      "imdbVotes": 410447,
+      "year": 2016,
+      "tmdb": 372058,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Makoto Shinkai",
+      "genres": [
+        "Animation",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "CoMix Wave Films",
+      "logo": "logos/3756.png"
     },
     {
       "title": "Capernaum",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt8267604",
-      "poster": "",
+      "poster": "posters/capernaum-2018.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 128187
+      "imdbVotes": 128187,
+      "year": 2018,
+      "tmdb": 517814,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Nadine Labaki",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Boo Pictures",
+      "logo": "logos/54268.png"
     },
     {
       "title": "Metropolis",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-15",
       "imdb": "tt0017136",
-      "poster": "",
+      "poster": "posters/metropolis-1927.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 204160
+      "imdbVotes": 204160,
+      "year": 1927,
+      "tmdb": 19,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Fritz Lang",
+      "genres": [
+        "Drama",
+        "Science Fiction"
+      ],
+      "studio": "UFA",
+      "logo": "logos/12372.png"
     },
     {
       "title": "Drishyam",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt4430212",
-      "poster": "",
+      "poster": "posters/drishyam-2015.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 112746
+      "imdbVotes": 112746,
+      "year": 2015,
+      "tmdb": 352173,
+      "tmdbKind": "movie",
+      "runtime": 163,
+      "director": "Nishikant Kamat",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Panorama Studios",
+      "logo": "logos/44223.png"
     },
     {
       "title": "Elite Squad",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0861739",
-      "poster": "",
+      "poster": "posters/elite-squad-2007.jpg",
       "imdbRating": 8,
-      "imdbVotes": 122004
+      "imdbVotes": 122004,
+      "year": 2007,
+      "tmdb": 7347,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "José Padilha",
+      "genres": [
+        "Drama",
+        "Action",
+        "Crime"
+      ],
+      "studio": "Universal Pictures do Brasil",
+      "logo": "logos/47046.png"
     },
     {
       "title": "M",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0022100",
-      "poster": "",
+      "poster": "posters/m-1931.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 185305
+      "imdbVotes": 185305,
+      "year": 1931,
+      "tmdb": 832,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Fritz Lang",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Nero-Film AG",
+      "logo": "logos/43854.png"
     },
     {
       "title": "Talk to Her",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0287467",
-      "poster": "",
+      "poster": "posters/talk-to-her-2002.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 121523
+      "imdbVotes": 121523,
+      "year": 2002,
+      "tmdb": 64,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Pedro Almodóvar",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "Ray",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0350258",
-      "poster": "",
+      "poster": "posters/ray-2004.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 167952
+      "imdbVotes": 167952,
+      "year": 2004,
+      "tmdb": 1677,
+      "tmdbKind": "movie",
+      "runtime": 152,
+      "director": "Taylor Hackford",
+      "genres": [
+        "Drama",
+        "Music"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Shutter Island",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt1130884",
-      "poster": "",
+      "poster": "posters/shutter-island-2010.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 1698540
+      "imdbVotes": 1698540,
+      "year": 2010,
+      "tmdb": 11324,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Portrait of a Lady on Fire",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt8613070",
-      "poster": "",
+      "poster": "posters/portrait-of-a-lady-on-fire-2019.jpg",
       "imdbRating": 8,
-      "imdbVotes": 131493
+      "imdbVotes": 131493,
+      "year": 2019,
+      "tmdb": 531428,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Céline Sciamma",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Lilies Films",
+      "logo": "logos/43649.png"
     },
     {
       "title": "The Great Dictator",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0032553",
-      "poster": "",
+      "poster": "posters/the-great-dictator-1940.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 261495
+      "imdbVotes": 261495,
+      "year": 1940,
+      "tmdb": 914,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Nausicaä of the Valley of the Wind",
-      "rating": 4.0,
+      "title": "Warriors of the Wind",
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2020-10-15",
       "imdb": "tt0087544",
-      "poster": "",
+      "poster": "posters/warriors-of-the-wind-1984.jpg",
       "imdbRating": 8,
-      "imdbVotes": 200418
+      "imdbVotes": 200418,
+      "year": 1984,
+      "tmdb": 81,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Hayao Miyazaki",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Fantasy"
+      ],
+      "studio": "Topcraft",
+      "logo": "logos/29.png"
     },
     {
       "title": "The Last Samurai",
@@ -1027,19 +2187,43 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0325710",
-      "poster": "",
+      "poster": "posters/the-last-samurai-2003.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 514593
+      "imdbVotes": 514593,
+      "year": 2003,
+      "tmdb": 616,
+      "tmdbKind": "movie",
+      "runtime": 154,
+      "director": "Edward Zwick",
+      "genres": [
+        "Drama",
+        "Action",
+        "War"
+      ],
+      "studio": "Radar Pictures",
+      "logo": "logos/350.png"
     },
     {
-      "title": "The Boat",
+      "title": "Das Boot",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0082096",
-      "poster": "",
+      "poster": "posters/das-boot-1981.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 291783
+      "imdbVotes": 291783,
+      "year": 1981,
+      "tmdb": 387,
+      "tmdbKind": "movie",
+      "runtime": 150,
+      "director": "Wolfgang Petersen",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "Bavaria Film",
+      "logo": "logos/1704.png"
     },
     {
       "title": "City Lights",
@@ -1047,9 +2231,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0021749",
-      "poster": "",
+      "poster": "posters/city-lights-1931.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 219279
+      "imdbVotes": 219279,
+      "year": 1931,
+      "tmdb": 901,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Judgment at Nuremberg",
@@ -1057,9 +2253,20 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0055031",
-      "poster": "",
+      "poster": "posters/judgment-at-nuremberg-1961.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 99139
+      "imdbVotes": 99139,
+      "year": 1961,
+      "tmdb": 821,
+      "tmdbKind": "movie",
+      "runtime": 191,
+      "director": "Stanley Kramer",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "To Be or Not to Be",
@@ -1067,9 +2274,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0035446",
-      "poster": "",
+      "poster": "posters/to-be-or-not-to-be-1942.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 50664
+      "imdbVotes": 50664,
+      "year": 1942,
+      "tmdb": 198,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Ernst Lubitsch",
+      "genres": [
+        "Comedy",
+        "War",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "My Neighbor Totoro",
@@ -1077,9 +2296,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0096283",
-      "poster": "",
+      "poster": "posters/my-neighbor-totoro-1988.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 443530
+      "imdbVotes": 443530,
+      "year": 1988,
+      "tmdb": 8392,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Hayao Miyazaki",
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Family"
+      ],
+      "studio": "Studio Ghibli",
+      "logo": "logos/10342.png"
     },
     {
       "title": "Deliverance",
@@ -1087,19 +2318,41 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0068473",
-      "poster": "",
+      "poster": "posters/deliverance-1972.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 130849
+      "imdbVotes": 130849,
+      "year": 1972,
+      "tmdb": 10669,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "John Boorman",
+      "genres": [
+        "Drama",
+        "Adventure",
+        "Thriller"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
-      "title": "Monty Python's Life of Brian",
+      "title": "Life of Brian",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0079470",
-      "poster": "",
+      "poster": "posters/life-of-brian-1979.jpg",
       "imdbRating": 8,
-      "imdbVotes": 437005
+      "imdbVotes": 437005,
+      "year": 1979,
+      "tmdb": 583,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Terry Jones",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Handmade Films",
+      "logo": "logos/20076.png"
     },
     {
       "title": "Downfall",
@@ -1107,19 +2360,41 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0363163",
-      "poster": "",
+      "poster": "posters/downfall-2004.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 405875
+      "imdbVotes": 405875,
+      "year": 2004,
+      "tmdb": 613,
+      "tmdbKind": "movie",
+      "runtime": 155,
+      "director": "Oliver Hirschbiegel",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "NDR",
+      "logo": "logos/7201.png"
     },
     {
-      "title": "The King of Kong",
+      "title": "The King of Kong: A Fistful of Quarters",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0923752",
-      "poster": "",
+      "poster": "posters/the-king-of-kong-a-fistful-of-quarters-2007.jpg",
       "imdbRating": 8,
-      "imdbVotes": 38741
+      "imdbVotes": 38741,
+      "year": 2007,
+      "tmdb": 13958,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Seth Gordon",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Cinema Paradiso",
@@ -1127,9 +2402,20 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0095765",
-      "poster": "",
+      "poster": "posters/cinema-paradiso-1988.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 323010
+      "imdbVotes": 323010,
+      "year": 1988,
+      "tmdb": 11216,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Giuseppe Tornatore",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Rai 3",
+      "logo": "logos/155418.png"
     },
     {
       "title": "Sherlock Jr.",
@@ -1137,9 +2423,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0015324",
-      "poster": "",
+      "poster": "posters/sherlock-jr-1924.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 67624
+      "imdbVotes": 67624,
+      "year": 1924,
+      "tmdb": 992,
+      "tmdbKind": "movie",
+      "runtime": 45,
+      "director": "Buster Keaton",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "Metro Pictures Corporation",
+      "logo": "logos/16101.png"
     },
     {
       "title": "Andrei Rublev",
@@ -1147,9 +2445,20 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0060107",
-      "poster": "",
+      "poster": "posters/andrei-rublev-1966.jpg",
       "imdbRating": 8,
-      "imdbVotes": 61524
+      "imdbVotes": 61524,
+      "year": 1966,
+      "tmdb": 895,
+      "tmdbKind": "movie",
+      "runtime": 183,
+      "director": "Andrei Tarkovsky",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Mosfilm",
+      "logo": "logos/344.png"
     },
     {
       "title": "Cinderella Man",
@@ -1157,9 +2466,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0352248",
-      "poster": "",
+      "poster": "posters/cinderella-man-2005.jpg",
       "imdbRating": 8,
-      "imdbVotes": 211995
+      "imdbVotes": 211995,
+      "year": 2005,
+      "tmdb": 921,
+      "tmdbKind": "movie",
+      "runtime": 144,
+      "director": "Ron Howard",
+      "genres": [
+        "Romance",
+        "Drama",
+        "History"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Invisible Guest",
@@ -1167,9 +2488,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt4857264",
-      "poster": "",
+      "poster": "posters/the-invisible-guest-2017.jpg",
       "imdbRating": 8,
-      "imdbVotes": 219404
+      "imdbVotes": 219404,
+      "year": 2017,
+      "tmdb": 411088,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Oriol Paulo",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Think Studio",
+      "logo": "logos/10128.png"
     },
     {
       "title": "The Elephant Man",
@@ -1177,9 +2510,20 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0080678",
-      "poster": "",
+      "poster": "posters/the-elephant-man-1980.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 286466
+      "imdbVotes": 286466,
+      "year": 1980,
+      "tmdb": 1955,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "David Lynch",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "EMI Films",
+      "logo": "logos/538.png"
     },
     {
       "title": "Midnight Cowboy",
@@ -1187,9 +2531,19 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0064665",
-      "poster": "",
+      "poster": "posters/midnight-cowboy-1969.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 133509
+      "imdbVotes": 133509,
+      "year": 1969,
+      "tmdb": 3116,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "John Schlesinger",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "Bound",
@@ -1197,9 +2551,21 @@
       "rating10": 7,
       "watched": "2020-10-15",
       "imdb": "tt0115736",
-      "poster": "",
+      "poster": "posters/bound-1996.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 68856
+      "imdbVotes": 68856,
+      "year": 1996,
+      "tmdb": 9303,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Lana Wachowski",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "The De Laurentiis Company",
+      "logo": "logos/10308.png"
     },
     {
       "title": "Stalker",
@@ -1207,9 +2573,20 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0079944",
-      "poster": "",
+      "poster": "posters/stalker-1979.jpg",
       "imdbRating": 8,
-      "imdbVotes": 159155
+      "imdbVotes": 159155,
+      "year": 1979,
+      "tmdb": 1398,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "Andrei Tarkovsky",
+      "genres": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "studio": "Mosfilm",
+      "logo": "logos/344.png"
     },
     {
       "title": "The Gold Rush",
@@ -1217,9 +2594,21 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0015864",
-      "poster": "",
+      "poster": "posters/the-gold-rush-1925.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 129759
+      "imdbVotes": 129759,
+      "year": 1925,
+      "tmdb": 962,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Modern Times",
@@ -1227,9 +2616,21 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0027977",
-      "poster": "",
+      "poster": "posters/modern-times-1936.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 289254
+      "imdbVotes": 289254,
+      "year": 1936,
+      "tmdb": 3082,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Passion of Joan of Arc",
@@ -1237,9 +2638,20 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0019254",
-      "poster": "",
+      "poster": "posters/the-passion-of-joan-of-arc-1928.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 69812
+      "imdbVotes": 69812,
+      "year": 1928,
+      "tmdb": 780,
+      "tmdbKind": "movie",
+      "runtime": 81,
+      "director": "Carl Theodor Dreyer",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Kid",
@@ -1247,9 +2659,20 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0012349",
-      "poster": "",
+      "poster": "posters/the-kid-1921.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 147878
+      "imdbVotes": 147878,
+      "year": 1921,
+      "tmdb": 10098,
+      "tmdbKind": "movie",
+      "runtime": 68,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Circus",
@@ -1257,9 +2680,21 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0018773",
-      "poster": "",
+      "poster": "posters/the-circus-1928.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 39126
+      "imdbVotes": 39126,
+      "year": 1928,
+      "tmdb": 28978,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Charlie Chaplin",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The General",
@@ -1267,19 +2702,44 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0017925",
-      "poster": "",
+      "poster": "posters/the-general-1926.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 106785
+      "imdbVotes": 106785,
+      "year": 1926,
+      "tmdb": 961,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Clyde Bruckman",
+      "genres": [
+        "Comedy",
+        "War",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Paint It Yellow",
+      "title": "Rang De Basanti",
       "rating": 3.5,
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt0405508",
-      "poster": "",
+      "poster": "posters/rang-de-basanti-2006.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 127739
+      "imdbVotes": 127739,
+      "year": 2006,
+      "tmdb": 7913,
+      "tmdbKind": "movie",
+      "runtime": 157,
+      "director": "Rakeysh Omprakash Mehra",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "History",
+        "Romance"
+      ],
+      "studio": "UTV Motion Pictures",
+      "logo": "logos/2320.png"
     },
     {
       "title": "Hamilton",
@@ -1287,69 +2747,149 @@
       "rating10": 6.5,
       "watched": "2020-10-15",
       "imdb": "tt8503618",
-      "poster": "",
+      "poster": "posters/hamilton-2025.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 144264
+      "imdbVotes": 144264,
+      "year": 2025,
+      "tmdb": 556574,
+      "tmdbKind": "movie",
+      "runtime": 160,
+      "director": "Thomas Kail",
+      "genres": [
+        "History",
+        "Drama"
+      ],
+      "studio": "RadicalMedia",
+      "logo": "logos/89394.png"
     },
     {
       "title": "Ben-Hur",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-15",
       "imdb": "tt0052618",
-      "poster": "",
+      "poster": "posters/ben-hur-1959.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 274795
+      "imdbVotes": 274795,
+      "year": 1959,
+      "tmdb": 665,
+      "tmdbKind": "movie",
+      "runtime": 212,
+      "director": "William Wyler",
+      "genres": [
+        "History",
+        "Drama",
+        "Adventure"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "Dangal",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-15",
       "imdb": "tt5074352",
-      "poster": "",
+      "poster": "posters/dangal-2016.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 250430
+      "imdbVotes": 250430,
+      "year": 2016,
+      "tmdb": 360814,
+      "tmdbKind": "movie",
+      "runtime": 161,
+      "director": "Nitesh Tiwari",
+      "genres": [
+        "Drama",
+        "Family",
+        "Comedy"
+      ],
+      "studio": "Aamir Khan Productions",
+      "logo": "logos/2140.png"
     },
     {
       "title": "Grindhouse",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-15",
       "imdb": "tt0462322",
-      "poster": "",
+      "poster": "posters/grindhouse-2007.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 198322
+      "imdbVotes": 198322,
+      "year": 2007,
+      "tmdb": 285923,
+      "tmdbKind": "movie",
+      "runtime": 191,
+      "director": "Robert Rodriguez",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Horror"
+      ],
+      "studio": "Dimension Films",
+      "logo": "logos/7405.png"
     },
     {
       "title": "Witness",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-15",
       "imdb": "tt0090329",
-      "poster": "",
+      "poster": "posters/witness-1985.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 116215
+      "imdbVotes": 116215,
+      "year": 1985,
+      "tmdb": 9281,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Peter Weir",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Anand",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-15",
       "imdb": "tt0066763",
-      "poster": "",
+      "poster": "posters/anand-1971.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 38135
+      "imdbVotes": 38135,
+      "year": 1971,
+      "tmdb": 26237,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Hrishikesh Mukherjee",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Hachi: A Dog's Tale",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2020-10-15",
       "imdb": "tt1028532",
-      "poster": "",
+      "poster": "posters/hachi-a-dog-s-tale-2009.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 350785
+      "imdbVotes": 350785,
+      "year": 2009,
+      "tmdb": 28178,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Lasse Hallström",
+      "genres": [
+        "Drama",
+        "Family"
+      ],
+      "studio": "Scion Films",
+      "logo": "logos/7419.png"
     },
     {
       "title": "Come and See",
@@ -1357,9 +2897,22 @@
       "rating10": 5,
       "watched": "2020-10-15",
       "imdb": "tt0091251",
-      "poster": "",
+      "poster": "posters/come-and-see-1985.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 128247
+      "imdbVotes": 128247,
+      "year": 1985,
+      "tmdb": 25237,
+      "tmdbKind": "movie",
+      "runtime": 142,
+      "director": "Elem Klimov",
+      "genres": [
+        "Drama",
+        "War",
+        "Horror",
+        "History"
+      ],
+      "studio": "Belarusfilm",
+      "logo": "logos/12617.png"
     },
     {
       "title": "The Bandit",
@@ -1367,9 +2920,21 @@
       "rating10": 5,
       "watched": "2020-10-15",
       "imdb": "tt0116231",
-      "poster": "",
+      "poster": "posters/the-bandit-1996.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 76216
+      "imdbVotes": 76216,
+      "year": 1996,
+      "tmdb": 26900,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Yavuz Turgul",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Shithouse",
@@ -1377,9 +2942,21 @@
       "rating10": 7,
       "watched": "2020-10-16",
       "imdb": "tt11618536",
-      "poster": "",
+      "poster": "posters/shithouse-2020.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 8088
+      "imdbVotes": 8088,
+      "year": 2020,
+      "tmdb": 637053,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Cooper Raiff",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Dangerous Days: Making Blade Runner",
@@ -1387,9 +2964,19 @@
       "rating10": 0.5,
       "watched": "2020-10-16",
       "imdb": "tt1080585",
-      "poster": "",
+      "poster": "posters/dangerous-days-making-blade-runner-2007.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 2248
+      "imdbVotes": 2248,
+      "year": 2007,
+      "tmdb": 57656,
+      "tmdbKind": "movie",
+      "runtime": 214,
+      "director": "Charles de Lauzirika",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Scott Free Productions",
+      "logo": "logos/1645.png"
     },
     {
       "title": "The Mole: Undercover in North Korea",
@@ -1397,29 +2984,63 @@
       "rating10": 0.5,
       "watched": "2020-10-16",
       "imdb": "tt13243898",
-      "poster": "",
+      "poster": "posters/the-mole-undercover-in-north-korea-2020.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 6415
+      "imdbVotes": 6415,
+      "year": 2020,
+      "tmdb": 751490,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Mads Brügger",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Wingman Media",
+      "logo": "logos/116819.png"
     },
     {
       "title": "Kajillionaire",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-10-18",
       "imdb": "tt8143990",
-      "poster": "",
+      "poster": "posters/kajillionaire-2020.jpg",
       "imdbRating": 6.4,
-      "imdbVotes": 24389
+      "imdbVotes": 24389,
+      "year": 2020,
+      "tmdb": 541305,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Miranda July",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Plan B Entertainment",
+      "logo": "logos/81.png"
     },
     {
       "title": "The Firm",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-10-18",
       "imdb": "tt0106918",
-      "poster": "",
+      "poster": "posters/the-firm-1993.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 166166
+      "imdbVotes": 166166,
+      "year": 1993,
+      "tmdb": 37233,
+      "tmdbKind": "movie",
+      "runtime": 154,
+      "director": "Sydney Pollack",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Mirage Enterprises",
+      "logo": "logos/932.png"
     },
     {
       "title": "Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan",
@@ -1427,9 +3048,19 @@
       "rating10": 7,
       "watched": "2020-10-24",
       "imdb": "tt13143964",
-      "poster": "",
+      "poster": "posters/borat-subsequent-moviefilm-delivery-of-prodigious-bribe-to-american-regime-for-make-benefit-once-glorious-nation-of-kazakhstan-2020.jpg",
       "imdbRating": 6.6,
-      "imdbVotes": 168165
+      "imdbVotes": 168165,
+      "year": 2020,
+      "tmdb": 740985,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Jason Woliner",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Holiday",
@@ -1437,9 +3068,20 @@
       "rating10": 7,
       "watched": "2020-10-31",
       "imdb": "tt7328154",
-      "poster": "",
+      "poster": "posters/holiday-2018.jpg",
       "imdbRating": 5.7,
-      "imdbVotes": 5122
+      "imdbVotes": 5122,
+      "year": 2018,
+      "tmdb": 490033,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Isabella Eklöf",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Common Ground Pictures",
+      "logo": "logos/33384.png"
     },
     {
       "title": "Quiz",
@@ -1447,29 +3089,60 @@
       "rating10": 7,
       "watched": "2020-11-01",
       "imdb": "tt10228230",
-      "poster": "",
+      "poster": "posters/quiz-2020.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 9119
+      "imdbVotes": 9119,
+      "year": 2020,
+      "tmdb": 101543,
+      "tmdbKind": "tv",
+      "runtime": 47,
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Left Bank Pictures",
+      "logo": "logos/5340.png"
     },
     {
       "title": "You Were Never Really Here",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2020-11-01",
       "imdb": "tt5742374",
-      "poster": "",
+      "poster": "posters/you-were-never-really-here-2017.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 137047
+      "imdbVotes": 137047,
+      "year": 2017,
+      "tmdb": 398181,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Lynne Ramsay",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Why Not Productions",
+      "logo": "logos/729.png"
     },
     {
       "title": "The Fresh Prince of Bel-Air Reunion",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2020-11-23",
       "imdb": "tt13315308",
-      "poster": "",
+      "poster": "posters/the-fresh-prince-of-bel-air-reunion-2020.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 4287
+      "imdbVotes": 4287,
+      "year": 2020,
+      "tmdb": 738362,
+      "tmdbKind": "movie",
+      "runtime": 75,
+      "director": "Marcus Raboy",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Westbrook",
+      "logo": "logos/122771.png"
     }
   ]
 }
