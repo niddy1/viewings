@@ -3037,73 +3037,73 @@ std('i-love-you-now-die-the-commonwealth-v-michelle-carter-2019', ('grad', [(0, 
     photo=ph(.45, .25, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(30, 34, 50), fcol=(190, 196, 210), fin=MINT)
 
-# The Lunchbox: the poster's warm cream, the red script Lunch and dark BOX (typeset), Saajan and his tiffin
+# The Lunchbox: the poster's warm cream, its red script the Lunch and dark BOX cut off it, Saajan and his tiffin
 std('the-lunchbox-2013', ('grad', [(0, (240, 228, 200)), (.6, (220, 200, 160)), (1, (150, 110, 70))]), (190, 30, 30),
-    TT([('the', (190, 30, 30)), ('Lunch', (190, 30, 30)), ('BOX', (40, 30, 24))], 'cho', 100, sp=.12),
+    LC([(0.03, 0.125, 0.655, 0.265)], 120, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .55) & (a[..., 1] < .3)))]),
     photo=ph(.45, .45, .4, 1.0), pb=(190, 30, 30), lg=(40, 30, 24), lw=.6, order='LPTCF', credit=['IRRFAN KHAN'], ccol=(40, 30, 24),
     ft='a', vbox=(190, 30, 30), fcol=(40, 30, 24), fin=SLIP)
 
-# Mommy Dead and Dearest: the poster's cream wallpaper, black capitals on the yellow crime-scene tape (typeset), mother and daughter
+# Mommy Dead and Dearest: the poster's cream wallpaper, its black capitals lifted off the crime-scene tape and set back on yellow, mother and daughter
 std('mommy-dead-and-dearest-2017', ('grad', [(0, (240, 234, 220)), (.6, (220, 210, 190)), (1, (160, 150, 130))]), (20, 18, 16),
-    T('MOMMY DEAD AND DEAREST', 'hcnb', 60, (20, 18, 16), squeeze=.8, box=((246, 222, 40), 10, 6)),
+    [L((0.1, 0.63, 0.9, 0.712), 60, (20, 18, 16), mode='dark', plate=((246, 222, 40), 10, 6)), L((0.165, 0.745, 0.815, 0.828), 60, (20, 18, 16), mode='dark', plate=((246, 222, 40), 10, 6))],
     photo=ph(.5, .25, .9, .6), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=MINT)
 
-# Titus (1999): a real rental, the poster's electric blue, the spaced white Roman capitals (typeset), Titus in his helmet (no logo file: its company in type)
+# Titus (1999): a real rental, the poster's electric blue, the spaced white Roman capitals, Titus in his helmet (no logo file: its company in type)
 std('titus-1999', ('grad', [(0, (40, 150, 230)), (.5, (20, 80, 160)), (1, (6, 20, 50))]), WHT,
-    T('TITUS', 'ter', 90, WHT, track=.5),
+    L((0.035, 0.122, 0.96, 0.22), 90, WHT, mode='light'),
     photo=ph(.5, .45, .55, 1.0), pb=WHT, studio=['CLEAR BLUE SKY', 'PRODUCTIONS'], scol=WHT, order='lPTCSF', credit=['ANTHONY HOPKINS', 'JESSICA LANGE'], ccol=WHT,
     stick=PRC(['$2.49', 'DRAMA']), ft='a', vbox=WHT, vink=(20, 80, 160), fcol=(200, 220, 240), fin=RENTAL, seed=1999)
 
-# Leaving Neverland: the old photo's dark, the white heavy capitals (typeset: on the photo), the boy in the hat
+# Leaving Neverland: the old photo's dark, the white heavy capitals lifted off it, the boy in the hat
 std('leaving-neverland-2019', ('grad', [(0, (90, 40, 40)), (.6, (30, 16, 16)), (1, (8, 4, 4))]), WHT,
-    T('LEAVING NEVERLAND', 'intbk', 66, WHT, squeeze=.86),
+    [L((0.345, 0.525, 0.92, 0.596), 66, WHT, mode='key', key=(252, 252, 252), t=(30, 70)), L((0.028, 0.594, 0.972, 0.67), 66, WHT, mode='key', key=(252, 252, 252), t=(30, 70))],
     photo=ph(.6, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(30, 16, 16), fcol=(210, 196, 196), fin=MINT)
 
-# The Big Sick: Chicago sky, the yellow fat lower case (typeset: on the family), Kumail and Emily
+# The Big Sick: Chicago sky, the yellow fat big sick lifted off the family (its thin THE, half on the giraffe, typeset), Kumail and Emily
 std('the-big-sick-2017', ('grad', [(0, (190, 210, 226)), (.5, (120, 140, 160)), (1, (40, 50, 60))]), (246, 230, 30),
-    TT([('the', (246, 230, 30)), ('big sick', (246, 230, 30))], 'popb', 100, sp=.15, outline=((40, 40, 40), 1.4)),
+    [T('THE', 'her', 34, (246, 230, 30), track=.1), L((0.09, 0.735, 0.93, 0.875), 120, (246, 230, 30), mode='key', key=(245, 235, 40), t=(90, 180), outline=((40, 40, 40), 1.4))],
     photo=ph(.5, .38, .6, 1.0), pb=(246, 230, 30), lg=WHT, lw=.6, order='LPTCF', credit=['KUMAIL NANJIANI', 'ZOE KAZAN'], ccol=WHT,
     ft='a', vbox=(246, 230, 30), vink=(40, 50, 60), fcol=WHT, fin=MINT)
 
-# Sleepers (1996): a real rental, black, the spaced gold serif capitals (typeset), the four of them
+# Sleepers (1996): a real rental, black, the spaced gold serif capitals, the four of them
 std('sleepers-1996', ('grad', [(0, (40, 36, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), (210, 170, 90),
-    T('SLEEPERS', 'ter', 76, (214, 174, 96), track=.35),
+    L((0.04, 0.322, 0.965, 0.392), 76, (214, 174, 96), mode='light'),
     photo=ph(.5, .72, .9, .6), pb=(214, 174, 96), lg=WHT, lw=.6, order='LPTCSF', credit=['ROBERT DE NIRO', 'BRAD PITT'], ccol=(214, 174, 96),
     stick=BAR('15 01996', top='DRAMA', fill=(236, 230, 214), ink=(40, 34, 28)), ft='a', vbox=(214, 174, 96), vink=(14, 12, 10), fcol=(190, 180, 160), fin=RENTAL, seed=1996)
 
-# English Vinglish: the poster's yellow-green, black heavy capitals with its red letters (typeset; the Devanagari letters set as Latin), Shashi with her arms out
+# English Vinglish: the poster's yellow-green, its black heavy capitals with the red Devanagari letters cut off it as they are, Shashi with her arms out
 std('english-vinglish-2012', ('grad', [(0, (236, 230, 120)), (.6, (190, 190, 80)), (1, (100, 100, 40))]), (20, 18, 16),
-    TT([('EN', (20, 18, 16)), ('G', (200, 30, 30)), ('LISH VINGLI', (20, 18, 16)), ('SH', (200, 30, 30))], 'intbk', 70, sp=0, squeeze=.86),
+    [LC([(0.028, 0.068, 0.97, 0.183)], 70, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .55) & (a[..., 1] < .3)))]), LC([(0.058, 0.183, 0.934, 0.302)], 70, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .55) & (a[..., 1] < .3)))])],
     photo=ph(.5, .45, .45, 1.0), pb=(200, 30, 30), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['SRIDEVI'], ccol=(20, 18, 16),
     ft='a', vbox=(200, 30, 30), fcol=(20, 18, 16), fin=SLIP)
 
-# Living Dolls: the poster's white, the grey heavy capitals and red subtitle (typeset), the painted nesting dolls
+# Living Dolls: the poster's white, the grey heavy capitals and red subtitle lifted, the painted nesting dolls
 std('living-dolls-2013', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 216)), (1, (170, 160, 156))]), (70, 70, 74),
-    [T('LIVING DOLLS', 'intbk', 70, (72, 72, 76), squeeze=.86), T('THE SUBCULTURE OF DOLL COLLECTING', 'herb', 18, (210, 40, 70), track=.08)], tgap=8,
+    [L((0.148, 0.802, 0.845, 0.862), 70, (72, 72, 76), mode='dark'), L((0.142, 0.864, 0.846, 0.887), 18, (210, 40, 70), mode='key', key=(220, 50, 80), t=(60, 140), speck=0)], tgap=8,
     photo=ph(.5, .6, .9, .6), pb=(210, 40, 70), lg=(72, 72, 76), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(72, 72, 76),
     ft='a', vbox=(210, 40, 70), fcol=(72, 72, 76), fin=MINT)
 
-# All the Money in the World: Rome by flashbulb, the cream engraved capitals (typeset), Gail in the press scrum
+# All the Money in the World: Rome by flashbulb, the cream engraved capitals lifted, Gail in the press scrum
 std('all-the-money-in-the-world-2017', ('grad', [(0, (60, 70, 50)), (.6, (20, 24, 18)), (1, (6, 6, 4))]), (236, 228, 206),
-    [T('ALL THE MONEY', 'ter', 62, (238, 230, 208), track=.08), T('IN THE WORLD', 'ter', 62, (238, 230, 208), track=.08)], tgap=8,
+    [L([(0.363, 0.66, 0.634, 0.696), (0.163, 0.702, 0.834, 0.786)], 62, (238, 230, 208), mode='light'), L([(0.382, 0.792, 0.614, 0.827), (0.162, 0.833, 0.837, 0.918)], 62, (238, 230, 208), mode='light')], tgap=8,
     photo=ph(.45, .3, .4, 1.0), pb=(238, 230, 208), lg=WHT, lw=.6, order='LPTCF', credit=['MICHELLE WILLIAMS', 'CHRISTOPHER PLUMMER'], ccol=(238, 230, 208),
     ft='a', vbox=(238, 230, 208), vink=(20, 24, 18), fcol=(200, 196, 180), fin=MINT)
 
-# Shot Caller: prison-yard black, the grey distressed capitals (typeset), Money's face
+# Shot Caller: prison-yard black, grey distressed capitals (typeset: the poster's letters lift, but they are scratched so heavily that at spine size they read as noise), Money's face
 std('shot-caller-2017', ('grad', [(0, (60, 60, 60)), (.6, (22, 22, 22)), (1, (6, 6, 6))]), (200, 200, 200),
     T('SHOT CALLER', 'hcnb', 92, (206, 206, 206), squeeze=.76, bold=1.0, rough=.6),
     photo=ph(.5, .17, .35, 1.0), pb=(206, 206, 206), lg=WHT, lw=.6, order='LPTCF', credit=['A RIC ROMAN WAUGH', 'FILM'], ccol=(206, 206, 206),
     ft='a', vbox=(206, 206, 206), vink=(22, 22, 22), fcol=(180, 180, 180), fin=SLIP)
 
-# The Problem with Apu: Springfield yellow, the red The Problem with and the black APU (typeset), Hari in his glasses
+# The Problem with Apu: Springfield yellow, the red The Problem with and the black APU lifted, Hari in his glasses
 std('the-problem-with-apu-2017', ('solid', (250, 210, 30)), (20, 18, 16),
-    [T('The Problem with', 'her', 36, (200, 40, 30)), T('APU', 'intbk', 110, (20, 18, 16))], tgap=8,
+    [L((0.274, 0.438, 0.724, 0.482), 36, (200, 40, 30), mode='key', key=(200, 40, 30), t=(70, 150), speck=0), L((0.314, 0.503, 0.684, 0.615), 110, (20, 18, 16), mode='dark')], tgap=8,
     photo=ph(.55, .9, .4, 1.0), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['HARI KONDABOLU'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), vink=(250, 210, 30), fcol=(20, 18, 16), fin=MINT)
 
-# Police Story (1985): an import rental, black capitals on the yellow police tape (typeset), Jackie with his gun
+# Police Story (1985): an import rental, black capitals on the yellow police tape (typeset: on the poster they are printed on two crossed, tilted strips of tape), Jackie with his gun
 std('police-story-1985', ('grad', [(0, (90, 96, 90)), (.6, (40, 44, 40)), (1, (14, 14, 12))]), (20, 18, 16),
     T('POLICE STORY', 'hcnb', 76, (20, 18, 16), squeeze=.8, bold=.8, box=((246, 222, 40), 10, 6)),
     photo=ph(.4, .15, .45, 1.0), pb=(246, 222, 40), lg=WHT, lw=.6, order='LPTCSF', credit=['JACKIE CHAN'], ccol=(246, 222, 40),
