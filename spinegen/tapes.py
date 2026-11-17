@@ -2959,39 +2959,39 @@ std('triple-frontier-2019', ('grad', [(0, (230, 230, 226)), (.6, (200, 200, 196)
     photo=ph(.5, .22, .9, .6), pb=(34, 36, 34), lg=(34, 36, 34), lw=.6, order='LPTCF', credit=['BEN AFFLECK', 'OSCAR ISAAC'], ccol=(34, 36, 34),
     ft='a', vbox=(34, 36, 34), fcol=(34, 36, 34), fin=MINT)
 
-# Guava Island: black with the poster's teal leaves, red hand-cut capitals (typeset: they lean and tumble), the island's face
+# Guava Island: the jungle black, the poster's red hand-cut GUAVA ISLAND cut off it, Deni and Kofi
 std('guava-island-2019', ('grad', [(0, (20, 50, 46)), (.6, (8, 16, 16)), (1, (4, 6, 6))]), (214, 70, 60),
-    T('GUAVA ISLAND', 'bonb', 80, (216, 72, 62), track=.04, rough=.5),
+    LC([(0.21, 0.022, 0.75, 0.19), (0.155, 0.186, 0.808, 0.356)], 90, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .45) & (a[..., 2] < .45))] * 2),
     photo=ph(.45, .62, .5, 1.0), pb=(40, 140, 120), lg=WHT, lw=.6, order='LPTCF', credit=['DONALD GLOVER', 'RIHANNA'], ccol=(216, 72, 62),
     ft='a', vbox=(216, 72, 62), vink=(8, 16, 16), fcol=(170, 200, 190), fin=MINT)
 
-# The Boy Band Con: the poster's flat orange, hollow outlined capitals (typeset), Lou at his desk under the spotlight
+# The Boy Band Con: the poster's flat orange, its cream outlined THE BOY BAND CON and the subtitle lifted (stacked there, one line here)
 std('the-boy-band-con-the-lou-pearlman-story-2019', ('solid', (240, 90, 20)), (250, 236, 220),
-    [T('THE BOY BAND CON', 'hcn', 70, (240, 90, 20), squeeze=.8, outline=((252, 238, 222), 2.2)), T('THE LOU PEARLMAN STORY', 'herb', 22, (252, 238, 222), track=.3)], tgap=8,
+    [L([(0.05, 0.095, 0.2, 0.15), (0.055, 0.152, 0.285, 0.234), (0.055, 0.236, 0.36, 0.315), (0.05, 0.317, 0.285, 0.4)], 70, (252, 238, 222), mode='light', speck=0, gapf=.35), L((0.055, 0.433, 0.415, 0.454), 22, (252, 238, 222), mode='light', speck=0)], tgap=8,
     photo=ph(.75, .68, .45, 1.0), pb=(252, 238, 222), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=MINT)
 
-# Extremely Wicked, Shockingly Evil and Vile: line-up navy, the yellow heavy capitals (typeset), Ted in his yellow sweater
+# Extremely Wicked, Shockingly Evil and Vile: courtroom black, the poster's yellow EXTREMELY / WICKED, SHOCKINGLY EVIL AND VILE lifted, Ted at the head
 std('extremely-wicked-shockingly-evil-and-vile-2019', ('grad', [(0, (30, 40, 60)), (.6, (14, 18, 28)), (1, (4, 6, 10))]), (248, 210, 40),
-    [T('EXTREMELY WICKED', 'intbk', 66, (248, 212, 44), squeeze=.8), T('SHOCKINGLY EVIL AND VILE', 'herb', 26, (248, 212, 44), track=.08)], tgap=8,
+    [L((0.035, 0.05, 0.965, 0.143), 66, (248, 212, 44), mode='key', key=(240, 210, 50), t=(70, 150)), L((0.03, 0.147, 0.965, 0.307), 66, (248, 212, 44), mode='key', key=(240, 210, 50), t=(70, 150))], tgap=8,
     photo=ph(.52, .6, .4, 1.0), pb=(248, 212, 44), lg=WHT, lw=.6, order='LPTCF', credit=['ZAC EFRON', 'LILY COLLINS'], ccol=(248, 212, 44),
     ft='a', vbox=(248, 212, 44), vink=(14, 18, 28), fcol=(190, 196, 210), fin=MINT)
 
-# Unicorn Store: lawn green, the rainbow capitals (typeset with the poster's pastel run), Kit in the grass
+# Unicorn Store: the lawn's green, the poster's rainbow-sheen UNICORN STORE cut off it in its own colours, Kit in her paint
 std('unicorn-store-2017', ('grad', [(0, (60, 110, 50)), (.6, (26, 50, 22)), (1, (8, 16, 6))]), (200, 170, 240),
-    T('UNICORN STORE', 'popb', 72, WHT, grad=[(0, (190, 150, 240)), (.35, (130, 200, 250)), (.7, (150, 236, 190)), (1, (250, 200, 150))]),
+    LC([(0.1, 0.18, 0.91, 0.355)], 110, cuts=[key_cut(lambda a: _lum(a) > .6)]),
     photo=ph(.5, .66, .5, 1.0), pb=(250, 200, 230), lg=WHT, lw=.6, order='LPTCF', credit=['BRIE LARSON'], ccol=(250, 200, 230),
     ft='a', vbox=(250, 200, 230), vink=(26, 50, 22), fcol=(200, 220, 190), fin=MINT)
 
-# Dolemite Is My Name: the poster's cream and seventies orange-teal stripes, the black slab capitals (typeset), Rudy in his white suit
+# Dolemite Is My Name: the poster's cream and seventies orange-teal stripes, black slab capitals (typeset: the poster's climb a slanted baseline across dark photo stripes, which a lift picks up with them), Rudy in his white suit
 std('dolemite-is-my-name-2019', ('grad', [(0, (240, 232, 216)), (.35, (40, 140, 140)), (.7, (210, 90, 30)), (1, (90, 36, 14))]), (20, 18, 16),
     T('DOLEMITE IS MY NAME', 'intbk', 72, (20, 18, 16), squeeze=.84, outline=((244, 236, 220), 2.0)),
     photo=ph(.52, .13, .3, 1.0), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['EDDIE MURPHY'], ccol=WHT,
     ft='a', vbox=(20, 18, 16), fcol=WHT, fin=MINT)
 
-# Greenberg (2010): white, the small green heavy capitals (typeset: too small to lift), Roger looking up
+# Greenberg: white, the small green GREENBERG lifted off the poster, Roger looking up
 std('greenberg-2010', ('solid', (244, 244, 240)), (30, 110, 60),
-    T('GREENBERG', 'hcnb', 84, (30, 112, 62), squeeze=.86, bold=.6),
+    L((0.27, 0.278, 0.73, 0.327), 84, (30, 112, 62), mode='dark'),
     photo=ph(.5, .85, .4, 1.0), pb=(30, 112, 62), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['BEN STILLER'], ccol=(30, 30, 30),
     ft='a', vbox=(30, 112, 62), fcol=(30, 30, 30), fin=SLIP, seed=2010)
 
@@ -3001,39 +3001,39 @@ std('good-boys-2019', ('solid', (214, 40, 30)), WHT,
     photo=ph(.5, .88, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JACOB TREMBLAY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(214, 40, 30), fcol=WHT, fin=MINT)
 
-# Twinsters: soft morning grey, the navy thin capitals (typeset), the twins asleep (no logo file: its company in type)
+# Twinsters: the bedsheet white, the slate-blue thin capitals lifted off the poster, Sam and Anaïs in bed
 std('twinsters-2015', ('grad', [(0, (236, 238, 240)), (.6, (200, 204, 208)), (1, (150, 154, 160))]), (40, 54, 80),
-    T('TWINSTERS', 'her', 76, (42, 56, 82), track=.02),
+    L((0.105, 0.108, 0.895, 0.218), 76, (42, 56, 82), mode='dark'),
     photo=ph(.5, .82, .9, .6), pb=(42, 56, 82), studio=['SMALL PACKAGE', 'FILMS'], scol=(42, 56, 82), order='lPTCF', credit=['A DOCUMENTARY'], ccol=(42, 56, 82),
     ft='a', vbox=(42, 56, 82), fcol=(42, 56, 82), fin=SLIP)
 
-# Booksmart: the poster's school-day blue, the yellow chunky lower case (typeset: it runs over their arms), Amy and Molly
+# Booksmart: the poster's denim blue, the yellow slab lower case lifted, Amy and Molly
 std('booksmart-2019', ('grad', [(0, (230, 226, 220)), (.35, (40, 70, 130)), (1, (14, 24, 50))]), (248, 220, 40),
-    T('booksmart', 'bonb', 100, (250, 222, 44)),
+    L((0.02, 0.51, 0.98, 0.604), 100, (250, 222, 44), mode='key', key=(254, 234, 47), t=(60, 120)),
     photo=ph(.5, .2, .9, .6), pb=(250, 222, 44), lg=(30, 30, 34), lw=.6, order='LPTCF', credit=['KAITLYN DEVER', 'BEANIE FELDSTEIN'], ccol=(250, 222, 44),
     ft='a', vbox=(250, 222, 44), vink=(14, 24, 50), fcol=(200, 210, 230), fin=MINT)
 
-# Three Identical Strangers: the poster's flat yellow, the black jigsaw capitals (typeset), the three boys
+# Three Identical Strangers: the poster's yellow, its black jigsaw-tile THREE / IDENTICAL / STRANGERS cut off it as tiles and set end to end, the three brothers
 std('three-identical-strangers-2018', ('solid', (246, 214, 30)), (20, 18, 14),
-    T('THREE IDENTICAL STRANGERS', 'intbk', 62, (20, 18, 14), squeeze=.8, rough=.5),  # typeset: the jigsaw letters broke up
+    LC([(0.045, 0.112, 0.955, 0.285), (0.045, 0.285, 0.955, 0.452), (0.045, 0.452, 0.955, 0.625)], 70, gapf=.04, margin=0, cuts=[key_cut(lambda a: _lum(a) > -1)] * 3),
     photo=ph(.5, .88, .9, .6), pb=(20, 18, 14), lg=(20, 18, 14), lw=.5, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(20, 18, 14),
     ft='a', vbox=(20, 18, 14), vink=(246, 214, 30), fcol=(20, 18, 14), fin=MINT)
 
-# Stop Making Sense (1984): a well-played music tape, black, the thin red capitals (typeset), David's big suit (no logo file: the band's company in type)
+# Stop Making Sense (1984): an old tape, the stage black, the poster's thin red STOP / MAKING / SENSE lifted (stacked there, one line here), David in the big suit
 std('stop-making-sense-1984', ('grad', [(0, (40, 36, 34)), (.6, (14, 12, 12)), (1, (4, 4, 4))]), (220, 40, 30),
-    T('STOP MAKING SENSE', 'hcn', 76, (224, 44, 34), squeeze=.7),
+    L([(0.55, 0.665, 0.93, 0.813), (0.55, 0.813, 0.93, 0.861), (0.55, 0.86, 0.93, 0.955)], 76, (224, 44, 34), mode='key', key=(233, 38, 24), t=(60, 130), speck=0),
     photo=ph(.4, .35, .6, 1.0), pb=(224, 44, 34), studio=['TALKING HEADS'], scol=(220, 214, 200), order='lPTCSF', credit=['A JONATHAN DEMME', 'FILM'], ccol=(220, 214, 200),
     stick=flow(dot, 70, ['MUSIC'], (40, 110, 200), d=60), ft='e', fcol=(220, 214, 200), fin=OLD, seed=1984)
 
-# Over the Garden Wall: the Unknown's autumn wood, the gold storybook capitals (typeset: ornamented), Wirt and Greg in the clearing
+# Over the Garden Wall: the autumn wood's dusk, the poster's gold storybook OVER THE GARDEN WALL cut off it, Wirt and Greg
 std('over-the-garden-wall-2014', ('grad', [(0, (120, 110, 60)), (.5, (60, 50, 26)), (1, (20, 16, 8))]), (210, 160, 70),
-    [T('OVER THE', 'ter', 40, (214, 166, 76), track=.12), T('GARDEN WALL', 'ter', 66, (214, 166, 76), track=.06, bold=.4)], tgap=8,
+    LC([(0.1, 0.775, 0.9, 0.965)], 140, cuts=[key_cut(lambda a: (_lum(a) > .22) & (a[..., 0] > a[..., 2] + .1))]), tgap=8,
     photo=ph(.5, .5, .4, 1.0), pb=(214, 166, 76), lg=WHT, lw=.6, order='LPTCF', credit=['ELIJAH WOOD'], ccol=(214, 166, 76),
     ft='a', vbox=(214, 166, 76), vink=(60, 50, 26), fcol=(210, 200, 180), fin=SLIP)
 
-# I Love You, Now Die: cold blue, the white heavy capitals and the spaced subtitle (typeset), Michelle's face
+# I Love You, Now Die: the poster's slatted blue face, its white heavy title and red subtitle lifted, Michelle
 std('i-love-you-now-die-the-commonwealth-v-michelle-carter-2019', ('grad', [(0, (80, 90, 120)), (.6, (30, 34, 50)), (1, (8, 10, 16))]), WHT,
-    [T('I LOVE YOU, NOW DIE', 'intbk', 60, WHT, squeeze=.86), T('THE COMMONWEALTH V. MICHELLE CARTER', 'herb', 18, (220, 70, 70), track=.12)], tgap=8,
+    [L((0.02, 0.705, 0.98, 0.762), 60, WHT, mode='light'), L((0.02, 0.762, 0.98, 0.786), 18, (220, 70, 70), mode='key', key=(200, 40, 40), t=(80, 170), speck=0)], tgap=8,
     photo=ph(.45, .25, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(30, 34, 50), fcol=(190, 196, 210), fin=MINT)
 
