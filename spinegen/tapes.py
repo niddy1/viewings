@@ -3943,15 +3943,15 @@ std('shutter-island-2010', ('grad', [(0, (50, 56, 60)), (.6, (16, 18, 20)), (1, 
     photo=ph(.5, .15, .5, 1.0), pb=(214, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['LEONARDO DiCAPRIO'], ccol=WHT,
     ft='a', vbox=(214, 32, 32), fcol=(200, 200, 204), fin=SLIP, seed=2010)
 
-# Portrait of a Lady on Fire: Brittany night, the white handwriting (typeset), Héloïse with her dress alight
+# Portrait of a Lady on Fire: Brittany night, the white handwritten portrait of a lady on fire lifted off the poster, Héloïse with her dress alight
 std('portrait-of-a-lady-on-fire-2019', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, (40, 16, 6))]), WHT,
-    T('Portrait of a Lady on Fire', 'cho', 76, WHT),
+    L((0.237, 0.302, 0.764, 0.684), 170, WHT, mode='light'),
     photo=ph(.5, .75, .45, 1.0), pb=(240, 160, 60), lg=WHT, lw=.6, order='LPTCF', credit=['A CÉLINE SCIAMMA', 'FILM'], ccol=WHT,
     ft='a', vbox=(240, 160, 60), vink=(14, 12, 10), fcol=(210, 200, 190), fin=MINT, dotst=(['STAFF', 'PICK'], (200, 60, 30)))
 
-# The Great Dictator (1940): an old tape, the poster's lemon yellow, the red script Great and DICTATOR (typeset), Hynkel and the globe (no logo file: Chaplin's company in type)
+# The Great Dictator (1940): an old tape, the poster's lemon yellow, its red THE Great DICTATOR cut off it, Hynkel with the globe
 std('the-great-dictator-1940', ('grad', [(0, (246, 236, 140)), (.6, (236, 220, 110)), (1, (160, 140, 60))]), (200, 30, 40),
-    TT([('THE', (200, 30, 40)), ('Great', (200, 30, 40)), ('DICTATOR', (200, 30, 40))], 'hcnb', 80, sp=.2, squeeze=.8, bold=.6),
+    [LC([(0.027, 0.345, 0.56, 0.6)], 150, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .45) & (a[..., 2] < .45))]), LC([(0.027, 0.6, 0.963, 0.72)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .45) & (a[..., 2] < .45))])],
     photo=ph(.6, .2, .45, 1.0), pb=(200, 30, 40), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=(40, 30, 20), order='lPTCSF', credit=['CHARLES CHAPLIN'], ccol=(40, 30, 20),
     stick=PRC(['$2.99', 'CLASSIC']), ft='e', fcol=(40, 30, 20), fin=OLD, seed=1940)
 
@@ -3961,61 +3961,61 @@ std('warriors-of-the-wind-1984', ('grad', [(0, (60, 140, 220)), (.5, (150, 200, 
     photo=ph(.6, .38, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A HAYAO MIYAZAKI', 'FILM'], ccol=(30, 50, 90),
     stick=flow(dot, 70, ['ANIME'], (220, 60, 100), d=60), ft='a', vbox=(30, 50, 90), fcol=(30, 50, 90), fin=WORN, seed=1984)
 
-# The Last Samurai (2003): the poster's ember orange, the copper serif capitals (typeset), Algren in armour
+# The Last Samurai (2003): the battlefield's red haze, the pale serif THE LAST SAMURAI lifted off the poster, Algren in armour
 std('the-last-samurai-2003', ('grad', [(0, (220, 120, 70)), (.5, (130, 50, 30)), (1, (20, 8, 6))]), (240, 180, 130),
-    [T('THE', 'ter', 30, (244, 186, 136), track=.4), T('LAST SAMURAI', 'ter', 76, (244, 186, 136), track=.1)], tgap=6,
+    [L((0.431, 0.751, 0.591, 0.784), 30, (244, 186, 136), mode='light', speck=0), L([(0.369, 0.786, 0.665, 0.861), (0.236, 0.857, 0.793, 0.934)], 76, (244, 186, 136), mode='light', gapf=.3)], tgap=6,
     photo=ph(.4, .18, .4, 1.0), pb=(244, 186, 136), lg=WHT, lw=.6, order='LPTCF', credit=['TOM CRUISE', 'KEN WATANABE'], ccol=WHT,
     ft='a', vbox=(244, 186, 136), vink=(130, 50, 30), fcol=(240, 210, 190), fin=WORN, seed=2003)
 
-# Das Boot (1981): an old tape, the North Atlantic blue, the white weathered capitals (typeset), the captain
+# Das Boot (1981): the sea's deep blue, white roughed slab capitals (typeset: the poster's scribble-textured letters are drawn on a white plate of the same tone, so a lift comes off as one white block), the U-boat in the periscope
 std('das-boot-1981', ('grad', [(0, (40, 100, 160)), (.6, (16, 44, 76)), (1, (4, 12, 22))]), WHT,
     [T('DAS BOOT', 'bonb', 96, WHT, rough=.8), T('A WOLFGANG PETERSEN FILM', 'herb', 20, WHT, track=.2)], tgap=8,
     photo=ph(.5, .4, .55, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['JÜRGEN PROCHNOW'], ccol=WHT,
     stick=BAR('15 01981', top='WAR', fill=(236, 232, 214), ink=(30, 40, 60)), ft='e', fcol=(200, 210, 224), fin=OLD, seed=1981)
 
-# City Lights (1931): an old tape, the poster's teal, the green brush lettering (typeset), the Tramp in the ring (no logo file: Chaplin's company in type)
+# City Lights (1931): an old tape, the poster's sky blue and ring yellow, its green City Lights lifted, the Tramp in the ring
 std('city-lights-1931', ('grad', [(0, (60, 140, 160)), (.6, (30, 80, 100)), (1, (10, 26, 30))]), (60, 140, 60),
-    T('City Lights', 'cho', 110, (90, 170, 80), outline=((240, 230, 140), 2.0)),
+    L((0.06, 0.845, 0.928, 0.993), 110, (90, 170, 80), mode='key', key=(110, 150, 60), t=(60, 130), outline=((240, 230, 140), 2.0)),
     photo=ph(.5, .25, .4, 1.0), pb=(240, 230, 140), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['CHARLES CHAPLIN'], ccol=WHT,
     ft='e', fcol=(220, 230, 230), fin=OLD, seed=1931)
 
-# Judgment at Nuremberg (1961): an old 2-tape box (191 minutes), black, white condensed capitals (typeset), the faces (no logo file: its distributor in type)
+# Judgment at Nuremberg (1961): an old 2-tape box, black, the white condensed Judgment at Nuremberg lifted, the faces in the dark
 std('judgment-at-nuremberg-1961', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
-    [T('JUDGMENT AT', 'hcnb', 70, WHT, squeeze=.74, bold=.4), T('NUREMBERG', 'hcnb', 150, WHT, squeeze=.74, bold=.6)],
+    L((0.13, 0.834, 0.869, 0.919), 90, WHT, mode='light'),
     photo=ph(.5, .35, .5, .5), pb=WHT, studio=['UNITED ARTISTS'], scol=WHT, order='lPTCSF', tgap=10, credit=['SPENCER TRACY', 'BURT LANCASTER'], ccol=WHT,
     stick=TWOST(WHT, (16, 16, 16)), ft='c', vbox=WHT, vink=(16, 16, 16), fcol=(200, 200, 200), fin=OLD, seed=1961, **TWO)
 
-# To Be or Not to Be (1942): an old tape, the poster's yellow, the navy heavy capitals (typeset), Maria and Joseph (no logo file: its distributor in type)
+# To Be or Not to Be (1942): an old tape, the poster's sunny yellow, its blue TO BE / NOT and red or / to cut off it, Carole and Jack
 std('to-be-or-not-to-be-1942', ('grad', [(0, (246, 236, 150)), (.6, (236, 222, 120)), (1, (160, 140, 70))]), (30, 40, 140),
-    TT([('TO BE', (30, 40, 140)), ('or', (200, 30, 30)), ('NOT', (30, 40, 140)), ('to', (200, 30, 30)), ('BE', (30, 40, 140))], 'intbk', 74, sp=.18, squeeze=.84),
+    LC([(0.164, 0.657, 0.656, 0.849)], 140, cuts=[key_cut(lambda a: ((a[..., 2] > .35) & (a[..., 0] < .35)) | ((a[..., 0] > .55) & (a[..., 1] < .3)))]),
     photo=ph(.5, .3, .6, 1.0), pb=(30, 40, 140), studio=['UNITED ARTISTS'], scol=(30, 40, 140), order='lPTCF', credit=['CAROLE LOMBARD', 'JACK BENNY'], ccol=(30, 40, 140),
     ft='e', fcol=(30, 40, 140), fin=OLD, seed=1942)
 
-# My Neighbor Totoro (1988): a Ghibli tape (a slipcase), the rainy forest green, the white serif capitals (typeset), Totoro at the bus stop
+# My Neighbor Totoro (1988): a Ghibli tape (a slipcase), the rainy night's blue-green, the white My Neighbor TOTORO lifted off the poster, Totoro at the bus stop
 std('my-neighbor-totoro-1988', ('grad', [(0, (60, 90, 70)), (.6, (24, 40, 30)), (1, (8, 14, 10))]), WHT,
-    [T('My Neighbor', 'ter', 40, WHT), T('TOTORO', 'terb', 100, WHT, track=.02)], tgap=6,
+    L((0.13, 0.1, 0.87, 0.275), 130, WHT, mode='key', key=(250, 250, 250), t=(30, 70), speck=0), tgap=6,
     photo=ph(.62, .55, .55, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A HAYAO MIYAZAKI', 'FILM'], ccol=WHT,
     stick=PRC(['$2.99', 'FAMILY']), ft='a', vbox=WHT, vink=(24, 40, 30), fcol=(210, 220, 214), fin=WORN, seed=1988)
 
-# Deliverance (1972): an old tape, the river's pale blue, the navy heavy lettering (typeset), the hand and the rifle
+# Deliverance (1972): an old tape, the poster's white, its blue-to-black heavy Deliverance cut off it, the hand and the bow
 std('deliverance-1972', ('grad', [(0, (210, 226, 236)), (.6, (170, 196, 214)), (1, (90, 110, 130))]), (30, 50, 130),
-    T('Deliverance', 'intbk', 84, (30, 52, 134), squeeze=.86),
+    LC([(0.285, 0.88, 0.985, 0.955)], 84, cuts=[key_cut(lambda a: _lum(a) < .75)]),
     photo=ph(.5, .5, .45, 1.0), pb=(30, 52, 134), lg=(30, 52, 134), lw=.6, order='LPTCSF', credit=['JON VOIGHT', 'BURT REYNOLDS'], ccol=(30, 52, 134),
     stick=PRC(['$1.99', 'THRILLER']), ft='e', fcol=(30, 52, 134), fin=OLD, seed=1972)
 
-# Life of Brian (1979): an old tape, space black, the orange stone block capitals (typeset), the camels on the horizon
+# Life of Brian (1979): an old tape, the starry night, orange stone capitals (typeset: on the poster LIFE OF BRIAN is a 3-D block of bricks seen from below, falling diagonally), the Wise Men's camels
 std('life-of-brian-1979', ('grad', [(0, (30, 30, 60)), (.6, (10, 10, 24)), (1, (4, 4, 8))]), (246, 160, 40),
-    TT([('LIFE', (248, 170, 50)), ('of', (248, 210, 60)), ('BRIAN', (248, 170, 50))], 'bonb', 96, sp=.15, outline=((120, 40, 10), 1.8), shadow=((90, 30, 10), 4, 4)),
+    TT([('LIFE', (248, 170, 50)), ('of', (248, 210, 60)), ('BRIAN', (248, 170, 50))], 'bonb', 96, sp=.15, outline=((120, 40, 10), 1.8)),
     photo=ph(.25, .7, .4, 1.0), pb=(248, 170, 50), lg=WHT, lw=.6, order='LPTCSF', credit=['GRAHAM CHAPMAN', 'JOHN CLEESE'], ccol=WHT,
     stick=flow(dot, 70, ['CULT'], (40, 120, 200), d=60), ft='e', fcol=(200, 200, 214), fin=OLD, seed=1979)
 
-# Downfall (2004): Berlin smoke black, the red condensed capitals (typeset), Hitler in his cap
+# Downfall (2004): the bunker's grey, the poster's red stencil DOWNFALL lifted, Hitler under his cap
 std('downfall-2004', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (4, 4, 4))]), (220, 30, 30),
-    T('DOWNFALL', 'hcnb', 104, (224, 32, 32), squeeze=.76, bold=.6),
+    L((0.037, 0.764, 0.969, 0.884), 104, (224, 32, 32), mode='key', key=(220, 30, 30), t=(70, 150)),
     photo=ph(.5, .2, .45, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['BRUNO GANZ'], ccol=WHT,
     ft='a', vbox=(224, 32, 32), fcol=(200, 200, 200), fin=WORN, seed=2004)
 
-# The King of Kong: A Fistful of Quarters: the poster's arcade navy, orange curved capitals (typeset), Steve and Billy in their medallions
+# The King of Kong: A Fistful of Quarters: the arcade cabinet's navy, orange capitals (typeset: the poster's two lines arch over and under the portraits on curved banners), Steve and Billy
 std('the-king-of-kong-a-fistful-of-quarters-2007', ('grad', [(0, (30, 70, 160)), (.6, (16, 34, 80)), (1, (6, 12, 30))]), (246, 160, 40),
     [T('THE KING OF KONG', 'intbk', 66, (248, 166, 46), squeeze=.86), T('A FISTFUL OF QUARTERS', 'herb', 24, (248, 166, 46), track=.1)], tgap=8,
     photo=ph(.5, .32, .7, .6), pb=(248, 166, 46), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
