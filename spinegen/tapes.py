@@ -4444,75 +4444,75 @@ std('get-out-2017', ('grad', [(0, (60, 60, 60)), (.6, (18, 18, 18)), (1, (4, 4, 
     photo=ph(.45, .35, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A JORDAN PEELE', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(18, 18, 18), fcol=(200, 200, 200), fin=MINT, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
 
-# The Keepers: the old photo's black, the cream serif (typeset), Sister Cathy
+# The Keepers: the old photo's black, the cream serif, Sister Cathy
 std('the-keepers-2017', ('grad', [(0, (50, 46, 40)), (.6, (18, 16, 14)), (1, (4, 4, 4))]), (240, 232, 200),
-    T('The Keepers', 'ter', 100, (242, 234, 202)),
+    L([(0.26, 0.035, 0.62, 0.145), (0.05, 0.14, 0.93, 0.27)], 100, (242, 234, 202), mode='key', key=(250, 250, 210), t=(22, 45)),
     photo=ph(.48, .45, .4, 1.0), pb=(242, 234, 202), lg=WHT, lw=.6, order='LPTCF', credit=['THE COMPLETE', 'DOCUSERIES'], ccol=(242, 234, 202),
     ft='a', vbox=(242, 234, 202), vink=(18, 16, 14), fcol=(200, 196, 186), fin=MINT)
 
-# The Imposter (2012): the arrivals hall's blue-grey, white heavy capitals (typeset), the hooded figure
+# The Imposter (2012): the arrivals hall's blue-grey, white heavy capitals, the hooded figure
 std('the-imposter-2012', ('grad', [(0, (60, 80, 110)), (.6, (20, 28, 40)), (1, (4, 6, 10))]), WHT,
-    [T('THE', 'intbk', 36, WHT), T('IMPOSTER', 'intbk', 92, WHT, rough=.4)], tgap=6,
+    L([(0.06, 0.835, 0.16, 0.865), (0.06, 0.86, 0.95, 0.955)], 92, WHT, mode='light', valign='base'), tgap=6,
     photo=ph(.5, .45, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A BART LAYTON', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 28, 40), fcol=(190, 200, 214), fin=SLIP)
 
-# A Murder in the Park: black and blood red, the red and white condensed capitals (typeset), Anthony's face (no logo file: its company in type)
+# A Murder in the Park: black and blood red, the poster's red and white condensed capitals cut off its dark band in their own colours, Anthony's face (no logo file: its company in type)
 std('a-murder-in-the-park-2015', ('grad', [(0, (60, 40, 36)), (.6, (20, 12, 10)), (1, (4, 2, 2))]), (220, 30, 30),
-    TT([('A', WHT), ('MURDER', (224, 32, 32)), ('IN THE', WHT), ('PARK', WHT)], 'hcnb', 84, sp=.2, squeeze=.78, bold=.6),
+    LC([(0.06, 0.625, 0.94, 0.695)], 84, cuts=[key_cut(lambda a: ((_lum(a) > .68) & (_sat(a) < .22)) | ((_sat(a) > .38) & (a[..., 0] > .42) & (a[..., 0] > a[..., 1] * 1.6)))]),
     photo=ph(.6, .18, .5, 1.0), pb=(224, 32, 32), studio=['TRANSITION', 'STUDIOS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(224, 32, 32), fcol=(200, 196, 196), fin=MINT)
 
-# Amanda Knox: her face's warm grey, white spaced capitals (typeset), her eyes
+# Amanda Knox: her face's warm grey, white spaced capitals, her eyes
 std('amanda-knox-2016', ('grad', [(0, (150, 130, 120)), (.6, (80, 66, 60)), (1, (24, 20, 18))]), WHT,
-    TT([('AMANDA', WHT), ('KNOX', WHT)], 'her', 66, sp=.25, track=.2),
+    L((0.06, 0.55, 0.95, 0.615), 66, WHT, mode='key', key=(250, 250, 250), t=(30, 80), speck=0),
     photo=ph(.5, .37, .7, .45), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 66, 60), fcol=(230, 220, 214), fin=MINT)
 
-# The Witness (2015): the torn newsprint white, grey spaced capitals (typeset), Kitty's portrait (no logo file: its company in type)
+# The Witness (2015): the torn newsprint white, grey spaced capitals, Kitty's portrait (no logo file: its company in type)
 std('the-witness-2015', ('grad', [(0, (236, 236, 232)), (.6, (210, 210, 206)), (1, (140, 140, 136))]), (60, 60, 60),
-    [T('THE', 'her', 26, (60, 60, 60), track=.4), T('WITNESS', 'her', 76, (60, 60, 60), track=.3)], tgap=6,
+    L([(0.21, 0.428, 0.29, 0.447), (0.21, 0.447, 0.81, 0.512)], 76, (60, 60, 60), mode='key', key=(250, 250, 250), t=(18, 40), speck=0), tgap=6,
     photo=ph(.55, .24, .4, 1.0), pb=(60, 60, 60), studio=['FIVE MORE MINUTES', 'PRODUCTIONS'], scol=(60, 60, 60), order='lPTCF', credit=['A DOCUMENTARY'], ccol=(60, 60, 60),
     ft='a', vbox=(60, 60, 60), fcol=(30, 30, 30), fin=MINT)
 
-# Annihilation: the Shimmer's violet-blue, white spaced capitals (typeset), Lena in the light
+# Annihilation: the Shimmer's violet-blue, white spaced capitals, Lena in the light
 std('annihilation-2018', ('grad', [(0, (30, 40, 90)), (.5, (60, 50, 140)), (1, (8, 10, 24))]), WHT,
-    T('ANNIHILATION', 'her', 66, WHT, track=.25),
+    L((0.09, 0.865, 0.91, 0.935), 66, WHT, mode='light'),
     photo=ph(.5, .65, .5, 1.0), pb=(160, 200, 255), lg=WHT, lw=.6, order='LPTCF', credit=['AN ALEX GARLAND', 'FILM'], ccol=WHT,
     ft='a', vbox=(160, 200, 255), vink=(30, 40, 90), fcol=(200, 206, 230), fin=MINT)
 
-# Film Stars Don't Die in Liverpool: the lamplit amber, cream wide capitals (typeset), Gloria's blonde hair
+# Film Stars Don't Die in Liverpool: the lamplit amber, cream wide capitals, Gloria's blonde hair
 std('film-stars-don-t-die-in-liverpool-2017', ('grad', [(0, (150, 100, 50)), (.6, (60, 36, 18)), (1, (14, 8, 4))]), (246, 236, 210),
-    [T('FILM STARS', 'herb', 58, (248, 238, 212), track=.25), T("DON'T DIE IN LIVERPOOL", 'herb', 28, (248, 238, 212), track=.2)], tgap=8,
+    [L((0.04, 0.255, 0.96, 0.343), 58, (248, 238, 212), mode='key', key=(234, 234, 220), t=(22, 50)), L([(0.04, 0.462, 0.96, 0.518), (0.04, 0.635, 0.96, 0.725)], 40, (248, 238, 212), mode='key', key=(234, 234, 220), t=(22, 50), speck=0, gapf=.6)], tgap=8,
     photo=ph(.5, .9, .4, 1.0), pb=(248, 238, 212), lg=WHT, lw=.6, order='LPTCF', credit=['ANNETTE BENING', 'JAMIE BELL'], ccol=(248, 238, 212),
     ft='a', vbox=(248, 238, 212), vink=(60, 36, 18), fcol=(220, 206, 190), fin=MINT)
 
-# Phantom Thread: the House of Woodcock's black, the pale serif capitals (typeset), Alma in the gown
+# Phantom Thread: the House of Woodcock's black, the pale serif capitals, Alma in the gown
 std('phantom-thread-2017', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (4, 4, 4))]), (230, 226, 216),
-    T('PHANTOM THREAD', 'ter', 72, (232, 228, 218), track=.04),
+    L([(0.23, 0.78, 0.8, 0.845), (0.23, 0.84, 0.8, 0.905)], 72, (232, 228, 218), mode='light'),
     photo=ph(.55, .38, .4, 1.0), pb=(232, 228, 218), lg=WHT, lw=.6, order='LPTCF', credit=['DANIEL DAY-LEWIS', 'VICKY KRIEPS'], ccol=(232, 228, 218),
     ft='a', vbox=(232, 228, 218), vink=(20, 20, 20), fcol=(200, 200, 196), fin=MINT)
 
-# The Post: the newsroom's dusk, white heavy lower case (typeset), Kay at the typewriter
+# The Post: the newsroom's dusk, white heavy lower case, Kay at the typewriter
 std('the-post-2017', ('grad', [(0, (60, 70, 70)), (.6, (22, 26, 26)), (1, (6, 8, 8))]), WHT,
-    T('The Post', 'herb', 100, WHT),
+    L((0.045, 0.08, 0.65, 0.165), 100, WHT, mode='light'),
     photo=ph(.7, .4, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['MERYL STREEP', 'TOM HANKS'], ccol=WHT,
     ft='a', vbox=WHT, vink=(22, 26, 26), fcol=(200, 206, 206), fin=MINT)
 
-# The Commuter: the train's blue, white italic condensed capitals (typeset), Michael on the platform
+# The Commuter: the train's blue, white italic condensed capitals, Michael on the platform
 std('the-commuter-2018', ('grad', [(0, (60, 90, 130)), (.6, (20, 30, 50)), (1, (6, 8, 14))]), WHT,
-    T('THE COMMUTER', 'intbki', 84, WHT, squeeze=.78),
+    L((0.13, 0.5, 0.88, 0.605), 84, WHT, mode='light'),
     photo=ph(.45, .12, .35, 1.0), pb=(240, 190, 50), lg=WHT, lw=.6, order='LPTCF', credit=['LIAM NEESON'], ccol=WHT,
     ft='a', vbox=(240, 190, 50), vink=(20, 30, 50), fcol=(196, 206, 220), fin=MINT)
 
-# We Need to Talk About Kevin (2011): black, the small red line and white heavy KEVIN (typeset), Eva and Kevin
+# We Need to Talk About Kevin (2011): black, the small red line and white heavy KEVIN, Eva and Kevin
 std('we-need-to-talk-about-kevin-2011', ('grad', [(0, (50, 40, 36)), (.6, (16, 12, 10)), (1, (4, 4, 4))]), WHT,
-    [T('WE NEED TO TALK ABOUT', 'herb', 28, (226, 60, 50), track=.15), T('KEVIN', 'intbk', 110, WHT)], tgap=6,
+    [L((0.13, 0.2, 0.87, 0.235), 28, (226, 60, 50), mode='light'), L((0.13, 0.235, 0.87, 0.355), 110, WHT, mode='light')], tgap=6,
     photo=ph(.5, .62, .6, .8), pb=(226, 60, 50), lg=WHT, lw=.6, order='LPTCF', credit=['TILDA SWINTON', 'JOHN C. REILLY'], ccol=WHT,
     ft='a', vbox=(226, 60, 50), fcol=(200, 196, 196), fin=SLIP, seed=2011)
 
-# Andre the Giant: the old photo's amber, the gold heavy capitals (typeset), Andre with his arms folded
+# Andre the Giant: the old photo's amber, the gold GIANT lifted off the poster (ANDRE THE typeset: it sits on his skin, the same gold), Andre with his arms folded
 std('andre-the-giant-2018', ('grad', [(0, (120, 90, 50)), (.6, (50, 36, 20)), (1, (14, 10, 6))]), (230, 210, 100),
-    [T('ANDRE THE', 'hcnb', 40, (234, 214, 104), squeeze=.8), T('GIANT', 'hcnb', 120, (234, 214, 104), squeeze=.76, bold=.8)], tgap=6,
+    [T('ANDRE THE', 'hcnb', 40, (234, 214, 104), squeeze=.8), L((0.08, 0.605, 0.93, 0.835), 120, (234, 214, 104), mode='key', key=(222, 206, 110), t=(45, 95), close=2)], tgap=6,
     photo=ph(.5, .15, .45, 1.0), pb=(234, 214, 104), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(234, 214, 104),
     ft='a', vbox=(234, 214, 104), vink=(50, 36, 20), fcol=(220, 206, 186), fin=MINT)
 
