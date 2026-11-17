@@ -2863,9 +2863,9 @@ std('the-unforgivable-2021', ('grad', [(0, (90, 96, 90)), (.6, (40, 42, 40)), (1
 # checked on IMDb (17 Nov 2026).  Toy Story 4 (Pixar) is a clamshell.
 # =====================================================================================
 
-# Boy Erased: the poster's warm lamplight gold, the white serif capitals (typeset: they sit on the coat), Jared between his parents
+# Boy Erased: the poster's warm lamplight gold, the white serif capitals lifted off the coat, Jared between his parents
 std('boy-erased-2018', ('grad', [(0, (190, 150, 70)), (.6, (100, 76, 36)), (1, (30, 22, 10))]), WHT,
-    [T('BOY', 'ter', 60, WHT, track=.12), T('ERASED', 'ter', 60, WHT, track=.12)], tgap=8,
+    [L((0.395, 0.68, 0.608, 0.737), 60, WHT, mode='light', cut=(.25, .55), speck=0), L((0.295, 0.738, 0.704, 0.795), 60, WHT, mode='light', cut=(.25, .55), speck=0)], tgap=8,
     photo=ph(.51, .38, .32, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['LUCAS HEDGES', 'NICOLE KIDMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(100, 76, 36), fcol=(236, 222, 196), fin=MINT)
 
@@ -2881,13 +2881,13 @@ std('cold-war-2018', ('grad', [(0, (60, 60, 60)), (.5, (20, 20, 20)), (1, (6, 6,
     photo=ph(.52, .27, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A PAWEŁ PAWLIKOWSKI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 20, 20), fcol=(200, 200, 200), fin=MINT)
 
-# Green Book: the car's turquoise, thin white capitals (typeset: too thin to lift), Tony and Don in the car
+# Green Book: the car's turquoise, the thin white capitals lifted off the sky, Tony and Don in the car
 std('green-book-2018', ('grad', [(0, (40, 140, 160)), (.6, (20, 110, 130)), (1, (8, 50, 60))]), WHT,
-    T('GREEN BOOK', 'her', 70, WHT, track=.04),
+    L((0.07, 0.182, 0.93, 0.266), 70, WHT, mode='light', cut=(.25, .55), speck=0),
     photo=ph(.5, .58, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['VIGGO MORTENSEN', 'MAHERSHALA ALI'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 110, 130), fcol=(210, 236, 240), fin=MINT)
 
-# Shoplifters: the woodblock-print sand and indigo, a white italic like the poster's (typeset: it runs over the waves), the family at the shore
+# Shoplifters: the woodblock-print sand and indigo, a white italic like the poster's (typeset: the poster's is set sideways inside a framed panel of waves, and white on the sand here would vanish), the family at the shore
 std('shoplifters-2018', ('grad', [(0, (222, 210, 184)), (.6, (200, 186, 160)), (1, (160, 150, 130))]), (40, 50, 96),
     T('Shoplifters', 'teri', 92, (36, 46, 92)),
     photo=ph(.42, .42, .6, 1.0), pb=(36, 46, 92), lg=(36, 46, 92), lw=.6, order='LPTCF', credit=['A HIROKAZU KOREEDA', 'FILM'], ccol=(36, 46, 92),
@@ -2899,27 +2899,27 @@ std('border-2018', ('grad', [(0, (30, 50, 30)), (.6, (12, 22, 12)), (1, (4, 8, 4
     photo=ph(.43, .35, .3, 1.0), pb=(242, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['AN ALI ABBASI', 'FILM'], ccol=(242, 222, 44),
     ft='a', vbox=(242, 222, 44), vink=(12, 22, 12), fcol=(200, 210, 196), fin=MINT)
 
-# The Ballad of Buster Scruggs: the poster's red tooled leather, the cream western script (typeset: it twines through the guns)
+# The Ballad of Buster Scruggs: the poster's red tooled leather, its cream western script cut off it (the gun barrels it twines through left behind)
 std('the-ballad-of-buster-scruggs-2018', ('grad', [(0, (170, 40, 30)), (.6, (110, 24, 18)), (1, (50, 10, 8))]), (240, 220, 180),
-    [T('The Ballad of', 'cho', 50, (242, 222, 184)), T('Buster Scruggs', 'cho', 90, (242, 222, 184))], tgap=4,
+    LC([(0.165, 0.1, 0.89, 0.66)], 260, cuts=[key_cut(lambda a: (a[..., 0] > .65) & (a[..., 1] > .5) & (a[..., 2] > .35))]), tgap=4,
     lg=(242, 222, 184), lw=.6, order='LTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(242, 222, 184),
     ft='a', vbox=(242, 222, 184), vink=(110, 24, 18), fcol=(230, 200, 180), fin=SLIP)
 
-# Minding the Gap: black torn tape, the white hand lettering (typeset: the torn paper round it is white too), Zack skating
+# Minding the Gap: black torn tape, the white hand lettering lifted off the poster's black strip, Zack skating
 std('minding-the-gap-2018', ('grad', [(0, (40, 40, 44)), (.6, (16, 16, 18)), (1, (6, 6, 6))]), WHT,
-    T('Minding the Gap', 'cho', 90, WHT),
+    L((0.055, 0.562, 0.94, 0.682), 90, WHT, mode='light'),
     photo=ph(.5, .13, .9, .6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A BING LIU', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 16, 18), fcol=(200, 200, 204), fin=MINT)
 
-# A Star Is Born: stage-light black, the gold serif capitals (typeset: stepped down the poster), Jack and Ally
+# A Star Is Born: stage-light black, the gold serif capitals cut off the poster word by word (stepped there, one line here), Jack and Ally
 std('a-star-is-born-2018', ('grad', [(0, (70, 70, 70)), (.6, (30, 30, 30)), (1, (10, 10, 10))]), (196, 150, 50),
-    T('A STAR IS BORN', 'ter', 76, (200, 156, 56), track=.06, grad=[(0, (226, 186, 90)), (1, (170, 124, 36))]),
+    LC([(0.223, 0.145, 0.351, 0.208), (0.145, 0.202, 0.631, 0.303), (0.51, 0.301, 0.693, 0.402), (0.378, 0.398, 0.917, 0.5)], 76, gapf=.5, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .18) & (a[..., 1] > .33))] * 4),
     photo=ph(.42, .72, .6, 1.0), pb=(200, 156, 56), lg=WHT, lw=.6, order='LPTCF', credit=['BRADLEY COOPER', 'LADY GAGA'], ccol=WHT,
     ft='a', vbox=(200, 156, 56), vink=(30, 30, 30), fcol=(210, 210, 210), fin=MINT)
 
-# Free Solo: El Capitan's granite and the forest far below, white spaced capitals (typeset), Alex on the wall
+# Free Solo: El Capitan's granite and the forest far below, the white spaced capitals lifted off the trees, Alex on the wall
 std('free-solo-2018', ('grad', [(0, (150, 130, 110)), (.5, (70, 80, 60)), (1, (20, 30, 20))]), WHT,
-    T('FREE SOLO', 'herb', 70, WHT, track=.4),
+    [L((0.245, 0.658, 0.755, 0.735), 70, WHT, mode='light', cut=(.3, .6), speck=0), L((0.15, 0.74, 0.85, 0.842), 70, WHT, mode='light', cut=(.3, .6), speck=0)],
     photo=ph(.48, .3, .55, 1.0), pb=WHT, lg=WHT, lw=.7, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(70, 80, 60), fcol=(220, 220, 210), fin=MINT)
 
@@ -2929,34 +2929,33 @@ std('roma-2018', ('grad', [(0, (226, 226, 224)), (.6, (190, 190, 188)), (1, (130
     photo=ph(.55, .38, .6, 1.0), pb=(234, 192, 44), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['AN ALFONSO CUARÓN', 'FILM'], ccol=(20, 20, 20),
     ft='a', vbox=(234, 192, 44), vink=(20, 20, 20), fcol=(220, 220, 220), fin=MINT, dotst=(['STAFF', 'PICK'], (30, 30, 30), (234, 192, 44)))
 
-# Spider-Man: Into the Spider-Verse: the upside-down city blue, the red comic capitals (typeset), Miles falling
+# Spider-Man: Into the Spider-Verse: the upside-down city blue, the poster's red comic SPIDER-MAN and its subtitle cut off it, Miles falling
 std('spider-man-into-the-spider-verse-2018', ('grad', [(0, (30, 40, 90)), (.5, (60, 110, 180)), (1, (200, 220, 240))]), (226, 30, 40),
-    [T('SPIDER-MAN', 'intbk', 84, (228, 32, 42), squeeze=.84, outline=((14, 14, 20), 2.4), shadow=((14, 14, 20), 3, 3)),
-     T('INTO THE SPIDER-VERSE', 'herb', 28, (226, 30, 40), track=.1, outline=(WHT, 1.2))], tgap=8,
+    [LC([(0.13, 0.77, 0.875, 0.892)], 84), L((0.265, 0.896, 0.735, 0.924), 26, WHT, mode='light', speck=0)], tgap=8,
     photo=ph(.45, .4, .5, 1.0), pb=(228, 32, 42), lg=(14, 14, 20), lw=.6, order='LPTF',
     ft='a', vbox=(228, 32, 42), fcol=(20, 30, 60), fin=MINT)
 
-# Can You Ever Forgive Me?: the poster's typing-paper cream, the typewriter lettering (typeset: it runs over Lee), the typewriter at the head
+# Can You Ever Forgive Me?: the poster's typing-paper cream, typewriter lettering (typeset: the poster's battered typewriter letters lift, but at spine size they lose the F and the M), the typewriter at the head
 std('can-you-ever-forgive-me-2018', ('grad', [(0, (236, 228, 210)), (.6, (210, 200, 180)), (1, (120, 110, 96))]), (30, 28, 26),
     T('Can You Ever Forgive Me?', 'monob', 54, (30, 28, 26), track=.02, rough=.3),
     photo=ph(.5, .62, .8, .6), pb=(30, 28, 26), lg=(30, 28, 26), lw=.6, order='LPTCF', credit=['MELISSA McCARTHY', 'RICHARD E. GRANT'], ccol=(30, 28, 26),
     ft='a', vbox=(30, 28, 26), fcol=(30, 28, 26), fin=MINT)
 
-# mid90s: LA sky blue, the big white serif lower case (typeset: it sits on his T-shirt), Stevie at the head
+# mid90s: LA sky blue, the big white serif lower case lifted off the poster, Stevie at the head
 std('mid90s-2018', ('grad', [(0, (150, 180, 210)), (.5, (120, 100, 80)), (1, (50, 36, 26))]), WHT,
-    T('mid90s', 'ter', 120, WHT),
+    L((0.035, 0.585, 0.965, 0.745), 120, WHT, mode='key', key=(252, 252, 252), t=(25, 60)),
     photo=ph(.5, .38, .4, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A JONAH HILL', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 100, 80), fcol=(230, 220, 210), fin=MINT)
 
-# Bohemian Rhapsody: the poster's violet-to-gold Live Aid sky, its yellow BOHEMIAN and the thin gold RHAPSODY (typeset), Freddie on stage
+# Bohemian Rhapsody: the poster's violet-to-gold Live Aid sky, its yellow BOHEMIAN and thin gold RHAPSODY lifted, Freddie on stage
 std('bohemian-rhapsody-2018', ('grad', [(0, (140, 50, 200)), (.45, (200, 70, 150)), (.75, (240, 160, 40)), (1, (120, 60, 10))]), (246, 214, 50),
-    [L((0.13, 0.17, 0.87, 0.255), 70, (248, 216, 54), mode='key', key=(246, 210, 50), t=(70, 150), speck=.01), T('RHAPSODY', 'ter', 50, (248, 216, 54), track=.08)], tgap=8,
+    [L((0.13, 0.17, 0.87, 0.255), 70, (248, 216, 54), mode='key', key=(246, 210, 50), t=(70, 150), speck=.01), L((0.205, 0.274, 0.8, 0.346), 50, (248, 216, 54), mode='key', key=(240, 200, 60), t=(60, 130), speck=0)], tgap=8,
     photo=ph(.5, .68, .55, 1.0), pb=(248, 216, 54), lg=WHT, lw=.6, order='LPTCF', credit=['RAMI MALEK'], ccol=WHT,
     ft='a', vbox=(248, 216, 54), vink=(120, 60, 10), fcol=WHT, fin=SLIP)
 
-# Triple Frontier: the poster's torn-paper white, the dark distressed capitals (typeset), the five of them
+# Triple Frontier: the poster's torn-paper white, dark distressed capitals (typeset: on the poster FRONTIER dissolves into the treeline, so a lift comes off half-faded), the five of them
 std('triple-frontier-2019', ('grad', [(0, (230, 230, 226)), (.6, (200, 200, 196)), (1, (110, 110, 104))]), (34, 36, 34),
-    T('TRIPLE FRONTIER', 'intbk', 74, (34, 36, 34), squeeze=.84, rough=.6),  # typeset: the distressed letters fell apart
+    T('TRIPLE FRONTIER', 'intbk', 74, (34, 36, 34), squeeze=.84, rough=.6),
     photo=ph(.5, .22, .9, .6), pb=(34, 36, 34), lg=(34, 36, 34), lw=.6, order='LPTCF', credit=['BEN AFFLECK', 'OSCAR ISAAC'], ccol=(34, 36, 34),
     ft='a', vbox=(34, 36, 34), fcol=(34, 36, 34), fin=MINT)
 
