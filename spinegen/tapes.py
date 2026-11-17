@@ -4761,74 +4761,74 @@ std('whiplash-2014', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4,
     photo=ph(.5, .6, .5, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['MILES TELLER', 'J.K. SIMMONS'], ccol=WHT,
     ft='a', vbox=(224, 32, 32), fcol=(200, 200, 204), fin=SLIP)
 
-# Steve Jobs: white, black lower case (typeset), Steve with his hand at his chin
+# Steve Jobs: white, black lower case, Steve with his hand at his chin
 std('steve-jobs-2015', ('grad', [(0, (246, 246, 246)), (.6, (226, 226, 226)), (1, (150, 150, 150))]), (20, 20, 20),
-    T('steve jobs', 'her', 100, (20, 20, 20)),
+    L((0.04, 0.772, 0.74, 0.882), 100, (20, 20, 20), mode='light'),
     photo=ph(.4, .3, .5, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['MICHAEL FASSBENDER'], ccol=(20, 20, 20),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
 
-# The Hateful Eight: a 2-tape box (188 minutes), the blizzard white, the red and black slab capitals (typeset), the stagecoach party in the snow
+# The Hateful Eight (2015): an old 2-tape box, the snow's white, the poster's red THE and EIGHT and black HATEFUL cut off it in their own colours, the stagecoach men in the snow
 std('the-hateful-eight-2015', ('grad', [(0, (236, 236, 236)), (.6, (210, 210, 210)), (1, (130, 130, 130))]), (190, 30, 30),
-    [TT([('THE', (194, 32, 32)), ('HATEFUL', (20, 18, 18))], 'bonb', 190, sp=.2), T('EIGHT', 'bonb', 190, (194, 32, 32))],
+    [LC([(0.245, 0.738, 0.41, 0.797), (0.21, 0.798, 0.79, 0.889)], 190, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (_sat(a) > .4) & (a[..., 0] > .45)), key_cut(lambda a: _lum(a) < .3)]), LC([(0.305, 0.889, 0.695, 0.979)], 190, margin=0, cuts=[key_cut(lambda a: (_sat(a) > .4) & (a[..., 0] > .45))])],
     photo=ph(.5, .3, .8, .45), pb=(20, 18, 18), lg=(20, 18, 18), lw=.5, order='LPTCSF', tgap=10, credit=['A QUENTIN TARANTINO', 'FILM'], ccol=(20, 18, 18),
     stick=TWOST((194, 32, 32), WHT), ft='c', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP, **TWO)
 
-# The Revenant: frozen forest blue, the pale spaced capitals (typeset), Glass's eye
+# The Revenant: frozen forest blue, the pale spaced capitals, Glass's eye
 std('the-revenant-2015', ('grad', [(0, (100, 130, 150)), (.6, (40, 54, 64)), (1, (10, 14, 18))]), (210, 226, 236),
-    T('THE REVENANT', 'herb', 64, (214, 230, 240), track=.3),
+    L((0.07, 0.062, 0.91, 0.136), 64, (214, 230, 240), mode='dark'),
     photo=ph(.55, .38, .5, 1.0), pb=(214, 230, 240), lg=WHT, lw=.6, order='LPTCF', credit=['LEONARDO DiCAPRIO', 'TOM HARDY'], ccol=WHT,
     ft='a', vbox=(214, 230, 240), vink=(40, 54, 64), fcol=(200, 210, 216), fin=SLIP)
 
-# Barbershop: The Next Cut: the shop's white tiles, red BARBERSHOP and black script (typeset), the crew
+# Barbershop: The Next Cut: the shop's white, the poster's red BARBERSHOP logo cut off it with its pole (THE NEXT CUT typeset: its thin letters break up), the crew
 std('barbershop-the-next-cut-2016', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 220)), (1, (150, 150, 150))]), (200, 30, 40),
-    [T('BARBERSHOP', 'ter', 80, (204, 32, 42), track=.02, bold=.4), T('THE NEXT CUT', 'herbi', 30, (20, 20, 30), track=.12)], tgap=6,
+    [LC([(0.1, 0.055, 0.86, 0.168)], 90), T('THE NEXT CUT', 'herbi', 30, (20, 20, 30), track=.12)], tgap=6,
     photo=ph(.5, .5, .8, .6), pb=(204, 32, 42), lg=(20, 20, 30), lw=.6, order='LPTCF', credit=['ICE CUBE', 'REGINA HALL'], ccol=(20, 20, 30),
     ft='a', vbox=(204, 32, 42), fcol=(20, 20, 30), fin=MINT)
 
-# The Jungle Book (2016): a Disney clamshell.  Jungle green, a gold storybook title (typeset), Bagheera in the diamond
+# The Jungle Book (2016): a Disney clamshell.  Jungle green, the poster's gold storybook title cut off it, Bagheera in the diamond
 disney('the-jungle-book-2016', ('grad', [(0, (40, 90, 60)), (.5, (20, 50, 30)), (1, (6, 20, 10))]), fin=dict(CLAM, vivid=.25),
-       title=[T('The', 'pagb', 50, (236, 206, 90)), T('JUNGLE BOOK', 'pagb', 96, (236, 206, 90), grad=[(0, (250, 230, 130)), (1, (200, 150, 50))], shadow=((10, 20, 10), 3, 3))],  # typeset: the gold logo wouldn't cut off the jungle; Ian could supply it
+       title=LC([(0.09, 0.808, 0.87, 0.932)], 120, cuts=[key_cut(lambda a: (_sat(a) > .3) & (a[..., 0] > .55) & (a[..., 1] > .45))]),
        face=ph(.6, .58, .13, 1.4), lcol=WHT)
 
-# Champs: the ring's black, silver heavy capitals (typeset), the fighter's gloves (no logo file: its company in type)
+# Champs: the ring's black, silver heavy capitals, the fighter's gloves (no logo file: its company in type)
 std('champs-2015', ('grad', [(0, (60, 40, 40)), (.6, (20, 14, 14)), (1, (4, 4, 4))]), (220, 220, 220),
-    T('CHAMPS', 'intbk', 110, WHT, grad=[(0, (250, 250, 250)), (.5, (150, 150, 156)), (1, (230, 230, 236))]),
+    L((0.08, 0.76, 0.93, 0.915), 110, WHT, mode='light', grad=[(0, (250, 250, 250)), (.5, (150, 150, 156)), (1, (230, 230, 236))]),
     photo=ph(.5, .3, .6, 1.0), pb=(200, 40, 40), studio=['BERT MARCUS', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(200, 40, 40), fcol=(200, 196, 196), fin=SLIP)
 
-# Iverson: black, the gold condensed capitals (typeset), the cornrows (no logo file: its company in type)
+# Iverson: black, the gold condensed capitals, the cornrows (no logo file: its company in type)
 std('iverson-2014', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), (220, 170, 70),
-    T('IVERSON', 'hcnb', 100, (224, 174, 74), squeeze=.86),
+    L((0.07, 0.115, 0.94, 0.235), 100, (224, 174, 74), mode='light'),
     photo=ph(.5, .65, .6, 1.0), pb=(224, 174, 74), studio=['214 FILMS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(224, 174, 74), vink=(16, 16, 16), fcol=(200, 200, 200), fin=SLIP)
 
-# Star Wars: The Force Awakens (Lucasfilm, a slipcase): space black, the yellow outline STAR WARS (typeset), Rey with the saber
+# Star Wars: The Force Awakens (Lucasfilm, a slipcase): the poster's starfield, the yellow outlined STAR WARS / THE FORCE AWAKENS lifted off it, Rey and Kylo
 std('star-wars-the-force-awakens-2015', ('grad', [(0, (30, 30, 50)), (.6, (10, 10, 18)), (1, (4, 4, 6))]), (246, 220, 40),
-    [T('STAR WARS', 'intbk', 84, (10, 10, 18), outline=((248, 222, 44), 2.4)), T('THE FORCE AWAKENS', 'herb', 28, (248, 222, 44), track=.25)], tgap=8,
+    L((0.25, 0.74, 0.8, 0.935), 140, (248, 222, 44), mode='light'), tgap=8,
     photo=ph(.5, .3, .4, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['DAISY RIDLEY', 'JOHN BOYEGA'], ccol=WHT,
     ft='a', vbox=(248, 222, 44), vink=(10, 10, 18), fcol=(200, 200, 210), fin=SLIP)
 
-# Spring, Summer, Fall, Winter... and Spring (2003): white, black serif (typeset), the temple on the lake
+# Spring, Summer, Fall, Winter... and Spring (2003): white, black serif, the temple on the lake
 std('spring-summer-fall-winter-and-spring-2003', ('grad', [(0, (244, 244, 240)), (.6, (222, 224, 218)), (1, (150, 160, 150))]), (20, 20, 20),
-    T('SPRING, SUMMER, FALL, WINTER... AND SPRING', 'ter', 44, (20, 20, 20)),
+    [L([(0.148, 0.138, 0.482, 0.188), (0.092, 0.185, 0.708, 0.241)], 44, (20, 20, 20), mode='dark'), L([(0.373, 0.239, 0.795, 0.286), (0.473, 0.287, 0.902, 0.334)], 44, (20, 20, 20), mode='dark')],
     photo=ph(.5, .63, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A KIM KI-DUK', 'FILM'], ccol=(20, 20, 20),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=WORN, seed=2003)
 
-# Trumbo: Hollywood night blue, the white spaced capitals (typeset), Dalton in his white suit
+# Trumbo: Hollywood night blue, the white spaced capitals, Dalton in his white suit
 std('trumbo-2015', ('grad', [(0, (40, 60, 90)), (.6, (14, 22, 34)), (1, (4, 6, 10))]), WHT,
-    T('TRUMBO', 'her', 80, WHT, track=.5),
+    L((0.07, 0.03, 0.93, 0.13), 80, WHT, mode='light'),
     photo=ph(.55, .45, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['BRYAN CRANSTON'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 22, 34), fcol=(200, 206, 220), fin=SLIP)
 
-# Four Weddings and a Funeral (1994): a real rental, confetti white, the red serif (typeset), Charles and Carrie
+# Four Weddings and a Funeral (1994): a real rental, confetti white, the red serif, Charles and Carrie
 std('four-weddings-and-a-funeral-1994', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 220)), (1, (170, 160, 150))]), (170, 30, 40),
-    T('FOUR WEDDINGS AND A FUNERAL', 'ter', 56, (174, 32, 42), bold=.3),
+    [L((0.485, 0.105, 0.935, 0.226), 110, (174, 32, 42), mode='key', key=(180, 40, 45), t=(70, 150)), L((0.485, 0.24, 0.935, 0.31), 80, (174, 32, 42), mode='key', key=(180, 40, 45), t=(70, 150))],
     photo=ph(.35, .55, .5, 1.0), pb=(174, 32, 42), lg=(30, 30, 30), lw=.6, order='LPTCSF', credit=['HUGH GRANT', 'ANDIE MacDOWELL'], ccol=(30, 30, 30),
     stick=PRC(['$1.99', 'ROM-COM']), ft='a', vbox=(174, 32, 42), fcol=(30, 30, 30), fin=RENTAL, seed=1994)
 
-# Post Tenebras Lux (2012): the poster's flat red and teal, the pink rounded lettering (typeset), the red figure
+# Post Tenebras Lux (2012): the poster's flat red and teal, the pink rounded lettering, the red figure
 std('post-tenebras-lux-2012', ('grad', [(0, (40, 30, 90)), (.5, (60, 150, 200)), (1, (200, 50, 40))]), (240, 120, 160),
-    T('Post Tenebras Lux', 'popm', 76, (244, 126, 166)),
+    L((0.03, 0.525, 0.98, 0.615), 76, (244, 126, 166), mode='key', key=(225, 70, 80), t=(70, 150)),
     photo=ph(.5, .3, .4, 1.0), pb=(244, 126, 166), lg=WHT, lw=.6, order='LPTCF', credit=['A CARLOS REYGADAS', 'FILM'], ccol=WHT,
     ft='a', vbox=(244, 126, 166), vink=(40, 30, 90), fcol=WHT, fin=SLIP)
 
