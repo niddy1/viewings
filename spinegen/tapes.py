@@ -4367,15 +4367,15 @@ std('logan-lucky-2017', ('grad', [(0, (236, 232, 220)), (.6, (220, 214, 196)), (
 # (Pixar) are clamshells; The Last Jedi (Lucasfilm) and the Marvel films are slipcases.
 # =====================================================================================
 
-# Tokyo Idols: Akihabara pink and neon, the pink heavy capitals with yellow shadow (typeset), the idol on stage
+# Tokyo Idols: Akihabara pink and neon, the pink TOKYO IDOLS cut off the poster in its own pink-to-orange (the idol stands in front of the O, so it keeps her outline), the idol on stage
 std('tokyo-idols-2017', ('grad', [(0, (230, 80, 170)), (.5, (120, 60, 160)), (1, (30, 30, 80))]), (250, 110, 190),
-    T('TOKYO IDOLS', 'intbk', 84, (252, 116, 196), outline=((250, 230, 60), 2.0)),
+    LC([(0.06, 0.13, 0.94, 0.272), (0.08, 0.29, 0.86, 0.43)], 100, outline=(WHT, 1.6), cuts=[key_cut(lambda a: (_sat(a) > .5) & (_lum(a) > .35) & (a[..., 0] > .8))] * 2),
     photo=ph(.5, .62, .4, 1.0), pb=(250, 230, 60), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(250, 230, 60), vink=(120, 60, 160), fcol=WHT, fin=MINT)
 
-# The Florida Project: the motel sky's teal, the white script (typeset), Moonee running
+# The Florida Project: the motel sky's teal, the white script, Moonee running
 std('the-florida-project-2017', ('grad', [(0, (90, 180, 190)), (.6, (60, 140, 160)), (1, (200, 150, 180))]), WHT,
-    [T('The', 'cho', 40, WHT), T('Florida Project', 'cho', 90, WHT)], tgap=4,
+    [L((0.17, 0.25, 0.8, 0.475), 120, WHT, mode='key', key=(250, 250, 250), t=(25, 60)), L((0.19, 0.465, 0.85, 0.635), 100, WHT, mode='key', key=(250, 250, 250), t=(25, 60))], tgap=4,
     photo=ph(.6, .86, .5, 1.0), pb=(240, 120, 180), lg=WHT, lw=.6, order='LPTCF', credit=['A SEAN BAKER', 'FILM'], ccol=WHT,
     ft='a', vbox=(240, 120, 180), fcol=WHT, fin=MINT)
 
@@ -4384,63 +4384,63 @@ disney('coco-2017', ('grad', [(0, (90, 60, 140)), (.5, (50, 30, 90)), (1, (20, 1
        title=LC([(0.14, 0.8, 0.86, 0.9)], 150, cuts=[key_cut(lambda a: (_sat(a) > .45) & (_lum(a) > .3))]),
        face=ph(.73, .32, .2, 1.4), lcol=WHT)
 
-# Darkest Hour: black, the white heavy condensed capitals (typeset), Churchill with his cigar
+# Darkest Hour: black, the white heavy condensed capitals, Churchill with his cigar
 std('darkest-hour-2017', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
-    T('DARKEST HOUR', 'hcnb', 96, WHT, squeeze=.74, bold=.8),
+    L((0.13, 0.775, 0.87, 0.85), 96, WHT, mode='light'),
     photo=ph(.42, .2, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['GARY OLDMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 16, 16), fcol=(200, 200, 200), fin=MINT)
 
-# My Friend Dahmer: the poster's faded cream, the red heavy capitals (typeset), Jeff in his glasses
+# My Friend Dahmer: the poster's faded cream, the red heavy capitals, Jeff in his glasses
 std('my-friend-dahmer-2017', ('grad', [(0, (236, 226, 214)), (.6, (220, 206, 190)), (1, (160, 140, 120))]), (200, 40, 40),
-    TT([('MY FRIEND', (204, 44, 44)), ('DAHMER', (204, 44, 44))], 'hcnb', 92, sp=.2, squeeze=.78, bold=.8),
+    L([(0.59, 0.575, 0.95, 0.612), (0.57, 0.608, 0.97, 0.68)], 92, (204, 44, 44), mode='key', key=(200, 50, 50), t=(70, 150)),
     photo=ph(.62, .27, .3, 1.0), pb=(204, 44, 44), lg=(50, 40, 30), lw=.6, order='LPTCF', credit=['ROSS LYNCH'], ccol=(50, 40, 30),
     ft='a', vbox=(204, 44, 44), fcol=(50, 40, 30), fin=MINT)
 
-# Murder on the Orient Express (2017): the dining car's teal night, pale blue spaced capitals (typeset), Poirot
+# Murder on the Orient Express (2017): the dining car's teal night, pale blue spaced capitals, Poirot
 std('murder-on-the-orient-express-2017', ('grad', [(0, (40, 80, 100)), (.6, (14, 30, 40)), (1, (4, 10, 14))]), (150, 210, 230),
-    T('MURDER ON THE ORIENT EXPRESS', 'her', 50, (156, 214, 234), track=.15),
+    [L((0.06, 0.06, 0.93, 0.14), 50, (156, 214, 234), mode='light'), L((0.06, 0.14, 0.94, 0.2), 40, (156, 214, 234), mode='light')],
     photo=ph(.25, .42, .4, 1.0), pb=(156, 214, 234), lg=WHT, lw=.6, order='LPTCF', credit=['KENNETH BRANAGH', 'PENÉLOPE CRUZ'], ccol=WHT,
     ft='a', vbox=(156, 214, 234), vink=(14, 30, 40), fcol=(190, 210, 220), fin=MINT)
 
-# Three Billboards Outside Ebbing, Missouri: the Missouri dusk, red stencil THREE BILLBOARDS (typeset), the billboards
+# Three Billboards Outside Ebbing, Missouri: the Missouri dusk, red stencil THREE BILLBOARDS, the billboards
 std('three-billboards-outside-ebbing-missouri-2017', ('grad', [(0, (40, 50, 70)), (.6, (16, 20, 30)), (1, (60, 20, 14))]), (226, 70, 50),
-    [T('THREE BILLBOARDS', 'hcnb', 70, (230, 74, 52), squeeze=.84, bold=.4), T('OUTSIDE EBBING, MISSOURI', 'herb', 24, (230, 74, 52), track=.12)], tgap=8,
+    [L((0.29, 0.37, 0.99, 0.5), 130, (230, 74, 52), mode='light', cut=(.2, .5)), L((0.455, 0.5, 0.82, 0.66), 90, (230, 74, 52), mode='light', cut=(.2, .5), speck=0)], tgap=8,
     photo=ph(.5, .82, .9, .6), pb=(230, 74, 52), lg=WHT, lw=.6, order='LPTCF', credit=['FRANCES McDORMAND'], ccol=WHT,
     ft='a', vbox=(230, 74, 52), fcol=(200, 200, 210), fin=MINT)
 
-# Call Me by Your Name: the poster's flat blue, the yellow handwriting (typeset), Elio and Oliver
+# Call Me by Your Name: the poster's flat blue, the yellow handwriting, Elio and Oliver
 std('call-me-by-your-name-2017', ('solid', (30, 100, 200)), (246, 220, 40),
-    T('Call Me by Your Name', 'cho', 84, (248, 222, 44)),
+    L((0.05, 0.09, 0.95, 0.345), 170, (248, 222, 44), mode='key', key=(232, 222, 50), t=(70, 150)),
     photo=ph(.4, .8, .6, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TIMOTHÉE CHALAMET', 'ARMIE HAMMER'], ccol=WHT,
     ft='a', vbox=(248, 222, 44), vink=(30, 100, 200), fcol=WHT, fin=MINT)
 
-# Lady Bird: the poster's white with the stained-glass border, the red blackletter (typeset), Christine
+# Lady Bird: the poster's white with the stained-glass border, the red blackletter, Christine
 std('lady-bird-2017', ('grad', [(0, (244, 242, 236)), (.6, (226, 222, 214)), (1, (170, 160, 150))]), (176, 30, 30),
-    T('Lady Bird', 'pagb', 100, (180, 32, 32)),
+    L((0.08, 0.06, 0.9, 0.19), 100, (180, 32, 32), mode='key', key=(190, 40, 40), t=(70, 150)),
     photo=ph(.62, .58, .4, 1.0), pb=(180, 32, 32), lg=(40, 30, 30), lw=.6, order='LPTCF', credit=['A GRETA GERWIG', 'FILM'], ccol=(40, 30, 30),
     ft='a', vbox=(180, 32, 32), fcol=(40, 30, 30), fin=MINT, under=[frame((60, 120, 180), 8, 2.0)])
 
-# Spider-Man: Homecoming: Queens sky blue, red SPIDER-MAN and the script Homecoming (typeset), Peter crouched
+# Spider-Man: Homecoming: Queens sky blue, red SPIDER-MAN and the script Homecoming, Peter crouched
 std('spider-man-homecoming-2017', ('grad', [(0, (130, 180, 220)), (.5, (60, 90, 140)), (1, (20, 24, 40))]), (220, 40, 40),
-    [T('SPIDER-MAN', 'intbk', 80, (224, 44, 44), squeeze=.84, outline=((20, 20, 30), 1.8)), T('Homecoming', 'cho', 40, WHT)], tgap=6,
+    [L((0.13, 0.86, 0.78, 0.917), 80, (224, 44, 44), mode='light', outline=((20, 20, 30), 1.8)), L((0.22, 0.913, 0.71, 0.955), 40, WHT, mode='light')], tgap=6,
     photo=ph(.35, .55, .45, 1.0), pb=(224, 44, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TOM HOLLAND'], ccol=WHT,
     ft='a', vbox=(224, 44, 44), fcol=(210, 220, 236), fin=SLIP)
 
-# I, Tonya: the rink-wall white, the pink heavy capitals (typeset), Tonya in her costume
+# I, Tonya: the rink-wall white, the pink heavy capitals, Tonya in her costume
 std('i-tonya-2017', ('grad', [(0, (246, 244, 244)), (.6, (226, 222, 224)), (1, (170, 160, 166))]), (230, 40, 110),
-    T('I, TONYA', 'intbk', 104, (232, 44, 114)),
+    L((0.04, 0.095, 0.93, 0.208), 104, (232, 44, 114), mode='key', key=(230, 50, 120), t=(70, 150)),
     photo=ph(.4, .45, .45, 1.0), pb=(232, 44, 114), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['MARGOT ROBBIE'], ccol=(30, 30, 30),
     ft='a', vbox=(232, 44, 114), fcol=(30, 30, 30), fin=MINT)
 
-# The Shape of Water: underwater teal, the pale serif capitals (typeset), Elisa and the creature
+# The Shape of Water: underwater teal, the pale serif capitals, Elisa and the creature
 std('the-shape-of-water-2017', ('grad', [(0, (40, 120, 120)), (.6, (14, 50, 54)), (1, (4, 16, 18))]), (210, 230, 220),
-    T('THE SHAPE OF WATER', 'ter', 66, (214, 234, 224), track=.06),
+    L((0.15, 0.827, 0.86, 0.88), 66, (214, 234, 224), mode='key', key=(195, 199, 168), t=(50, 110)),
     photo=ph(.5, .5, .5, 1.0), pb=(214, 234, 224), lg=WHT, lw=.6, order='LPTCF', credit=['A GUILLERMO DEL TORO', 'FILM'], ccol=(214, 234, 224),
     ft='a', vbox=(214, 234, 224), vink=(14, 50, 54), fcol=(190, 210, 206), fin=MINT)
 
-# Get Out: the poster's black and white split, white heavy capitals (typeset), Chris in the chair
+# Get Out: the poster's black and white split, its heavy capitals lifted (GET white off the black half, OUT black off the white half), Chris in the chair
 std('get-out-2017', ('grad', [(0, (60, 60, 60)), (.6, (18, 18, 18)), (1, (4, 4, 4))]), WHT,
-    T('GET OUT', 'intbk', 120, WHT, squeeze=.9),
+    L([(0.145, 0.105, 0.491, 0.178), (0.497, 0.105, 0.846, 0.178)], 120, WHT, mode=['key', 'dark'], key=(245, 245, 245), t=(40, 90), gapf=.12),
     photo=ph(.45, .35, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A JORDAN PEELE', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(18, 18, 18), fcol=(200, 200, 200), fin=MINT, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
 
