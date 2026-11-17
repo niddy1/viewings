@@ -2791,15 +2791,15 @@ std('black-widow-2021', ('grad', [(0, (180, 20, 24)), (.5, (70, 8, 10)), (1, (8,
     photo=ph(.5, .12, .3, 1.0), pb=(214, 30, 34), lg=WHT, lw=.7, order='LPTCF', credit=['SCARLETT JOHANSSON'], ccol=WHT,
     ft='a', vbox=(214, 30, 34), fcol=(220, 200, 200), fin=SLIP)
 
-# Kate: Tokyo neon, a hollow cyan KATE like the sign (typeset), Kate at the head
+# Kate: Tokyo neon, a hollow cyan KATE like the sign (typeset: on the poster the car's roof hides the foot of the E, so a lift reads KATF), Kate at the head
 std('kate-2021', ('grad', [(0, (40, 30, 70)), (.5, (100, 20, 70)), (1, (20, 6, 20))]), (60, 230, 240),
     T('KATE', 'adv', 130, (40, 30, 70), track=.08, outline=((80, 240, 250), 2.6), soft=((60, 220, 240), 8, .6)),
     photo=ph(.63, .1, .35, 1.0), pb=(80, 240, 250), lg=WHT, lw=.6, order='LPTCF', credit=['MARY ELIZABETH', 'WINSTEAD'], ccol=(250, 120, 200),
     ft='a', vbox=(250, 80, 180), fcol=(210, 200, 230), fin=MINT)
 
-# Free Guy: Free City's sky, white FREE and blue GUY (typeset: over the explosions), Guy and his coffee
+# Free Guy: Free City's sky, the poster's white FREE and blue GUY cut off it, Guy and his coffee
 std('free-guy-2021', ('grad', [(0, (120, 170, 220)), (.5, (60, 100, 160)), (1, (20, 30, 60))]), WHT,
-    TT([('FREE', WHT), ('GUY', (40, 170, 240))], 'intbk', 100, sp=.25, squeeze=.9),
+    LC([(0.075, 0.845, 0.925, 0.933)], 100, cuts=[key_cut(lambda a: (_lum(a) > .85) | ((a[..., 2] > .7) & (a[..., 0] < .4)))]),
     photo=ph(.45, .3, .3, 1.0), pb=(40, 170, 240), lg=WHT, lw=.7, order='LPTCF', credit=['RYAN REYNOLDS'], ccol=WHT,
     ft='a', vbox=(40, 170, 240), fcol=(210, 226, 240), fin=MINT)
 
@@ -2809,19 +2809,19 @@ std('road-house-1989', ('grad', [(0, (70, 74, 90)), (.5, (24, 26, 34)), (1, (60,
     photo=ph(.42, .15, .4, 1.0), pb=(150, 246, 255), lg=WHT, lw=.6, order='LPTCSF', credit=['PATRICK SWAYZE'], ccol=(150, 246, 255),
     stick=PRC(['2 NIGHTS', '$1.99']), ft='a', vbox=(150, 246, 255), vink=(24, 26, 34), fcol=(200, 206, 214), fin=RENTAL, seed=1989)
 
-# Man Push Cart (2006): a Manhattan night, the white wide-spaced capitals (typeset: three stepped lines), Ahmad's cart
+# Man Push Cart (2006): a Manhattan night, the white wide-spaced MAN PUSH CART lifted word by word (stepped on the poster, one line here), Ahmad's cart
 std('man-push-cart-2006', ('grad', [(0, (40, 54, 60)), (.6, (14, 20, 24)), (1, (4, 6, 8))]), WHT,
-    T('MAN PUSH CART', 'her', 64, WHT, track=.35),
+    L([(0.395, 0.104, 0.67, 0.163), (0.186, 0.168, 0.564, 0.229), (0.298, 0.232, 0.857, 0.296)], 64, WHT, mode='key', key=(236, 232, 220), t=(40, 90), speck=.03, gapf=1.3),
     photo=ph(.5, .55, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A RAMIN BAHRANI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 20, 24), fcol=(190, 200, 204), fin=WORN, seed=2006)
 
-# Deep Cover (1992): a real rental, the poster's blood red and black, the white condensed capitals (typeset), John's face
+# Deep Cover (1992): a real rental, the poster's blood red and black, the white condensed capitals, John's face
 std('deep-cover-1992', ('grad', [(0, (160, 20, 20)), (.5, (70, 8, 8)), (1, (8, 2, 2))]), WHT,
-    T('DEEP COVER', 'hcnb', 96, WHT, squeeze=.74, bold=1.2),  # typeset: the lift broke on the red
+    [L((0.335, 0.7, 0.665, 0.8), 96, WHT, mode='key', key=(245, 245, 245), t=(40, 100)), L((0.335, 0.8, 0.65, 0.882), 96, WHT, mode='key', key=(245, 245, 245), t=(40, 100))],
     photo=ph(.62, .25, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['LAURENCE FISHBURNE', 'JEFF GOLDBLUM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(70, 8, 8), fcol=(220, 196, 196), fin=RENTAL, seed=1992, over=[dot(262, ['NEW', 'JACK'], (250, 210, 40), (30, 20, 10), x=.72, d=62)])
 
-# The Card Counter: casino-card white and red, the thin spaced capitals (typeset), William at the head
+# The Card Counter: casino-card white and red, the thin spaced capitals (typeset: the poster's are white and its C and D sit on the white wall, so they can't be lifted), William at the head
 std('the-card-counter-2021', ('grad', [(0, (240, 234, 226)), (.6, (210, 200, 190)), (1, (90, 70, 60))]), (40, 36, 34),
     [T('THE', 'her', 28, (40, 36, 34), track=.6), T('CARD COUNTER', 'her', 56, (40, 36, 34), track=.4)], tgap=8,
     photo=ph(.5, .22, .35, 1.0), pb=(200, 40, 40), lg=(40, 36, 34), lw=.6, order='LPTCF', credit=['OSCAR ISAAC'], ccol=(200, 40, 40),
@@ -2833,28 +2833,27 @@ std('the-guilty-2021', ('grad', [(0, (60, 30, 26)), (.6, (22, 12, 10)), (1, (6, 
     photo=ph(.5, .4, .6, 1.0), pb=(214, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['JAKE GYLLENHAAL'], ccol=(214, 32, 32),
     ft='a', vbox=(214, 32, 32), fcol=(200, 190, 186), fin=MINT)
 
-# Venom: Let There Be Carnage: symbiote blue-black, silver VENOM and the scratchy subtitle (typeset), Venom at the head
+# Venom: Let There Be Carnage: symbiote blue-black, the chrome VENOM and the scratchy subtitle cut off the poster, Venom at the head
 std('venom-let-there-be-carnage-2021', ('grad', [(0, (30, 70, 130)), (.5, (12, 26, 50)), (1, (4, 6, 12))]), (220, 224, 230),
-    [T('VENOM', 'ter', 100, (226, 230, 236), track=.04, grad=[(0, (250, 250, 255)), (.5, (160, 170, 186)), (1, (230, 234, 240))], outline=((10, 10, 16), 1.6)),
-     T('LET THERE BE CARNAGE', 'herbi', 30, (220, 40, 40), track=.12)], tgap=8,
+    LC([(0.1, 0.7, 0.9, 0.94)], 200, cuts=[key_cut(lambda a: (_lum(a) > .3) & ~((a[..., 2] > a[..., 0] + .12) & (_sat(a) > .25)))]), tgap=8,
     photo=ph(.72, .23, .3, 1.0), pb=(220, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['TOM HARDY'], ccol=WHT,
     ft='a', vbox=(220, 40, 40), fcol=(190, 200, 214), fin=SLIP)
 
-# Dune: Arrakis haze, the poster's spaced glyph lettering set in wide capitals (typeset), Paul at the head
+# Dune: Arrakis haze, the poster's spaced glyph lettering lifted, Paul at the head
 std('dune-2021', ('grad', [(0, (150, 186, 190)), (.5, (110, 130, 130)), (.8, (190, 140, 90)), (1, (90, 60, 34))]), (30, 28, 26),
-    T('DUNE', 'adv', 110, (34, 32, 30), track=.7),
+    L((0.06, 0.668, 0.94, 0.745), 110, (34, 32, 30), mode='dark', speck=0),
     photo=ph(.52, .1, .3, 1.0), pb=(34, 32, 30), lg=(34, 32, 30), lw=.6, order='LPTCF', credit=['A DENIS VILLENEUVE', 'FILM'], ccol=(34, 32, 30),
     ft='a', vbox=(34, 32, 30), fcol=(34, 32, 30), fin=MINT)
 
-# No Time to Die: the gun-barrel black and white, the gold stencil capitals (typeset: stacked), Bond at the head
+# No Time to Die: the gun-barrel black and white, the gold stencil capitals cut off the poster in two lines, Bond at the head
 std('no-time-to-die-2021', ('grad', [(0, (236, 236, 236)), (.35, (40, 40, 40)), (1, (6, 6, 6))]), (200, 160, 70),
-    [T('NO TIME TO DIE', 'hcnb', 80, (204, 164, 74), squeeze=.8, grad=[(0, (226, 190, 100)), (1, (170, 130, 50))]), T('007', 'herbi', 30, (220, 220, 220))], tgap=8,
+    [LC([(0.528, 0.633, 0.692, 0.7), (0.528, 0.7, 0.828, 0.764)], 80, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] > .35) & (a[..., 2] < .4) & (_sat(a) > .25))] * 2), LC([(0.61, 0.763, 0.78, 0.827), (0.695, 0.826, 0.882, 0.89)], 80, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] > .35) & (a[..., 2] < .4) & (_sat(a) > .25))] * 2)], tgap=8,
     photo=ph(.4, .16, .35, 1.0), pb=(204, 164, 74), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['DANIEL CRAIG'], ccol=(204, 164, 74),
     ft='a', vbox=(204, 164, 74), vink=(20, 20, 20), fcol=(200, 196, 190), fin=SLIP)
 
-# The Unforgivable: prison grey-green, the white heavy capitals (typeset), Ruth's face
+# The Unforgivable: prison grey-green, the white heavy THE UNFORGIVABLE lifted off the poster, Ruth's face
 std('the-unforgivable-2021', ('grad', [(0, (90, 96, 90)), (.6, (40, 42, 40)), (1, (12, 12, 12))]), WHT,
-    TT([('THE', WHT), ('UNFORGIVABLE', WHT)], 'hcnb', 84, sp=.25, squeeze=.74, bold=1.2),  # typeset: the lift broke on her shoulder
+    L((0.18, 0.75, 0.82, 0.89), 120, WHT, mode='key', key=(245, 245, 245), t=(40, 100)),
     photo=ph(.55, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['SANDRA BULLOCK'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 42, 40), fcol=(200, 204, 200), fin=MINT)
 
