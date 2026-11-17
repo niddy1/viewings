@@ -176,16 +176,17 @@ class Pic:
         return im
 
 
-def lift_mask(box, mode='auto', key=None, t=(55, 115), cut=(0.35, 0.65), close=0, speck=0.004, k=2, nbg=1, gain=2.4):
+def lift_mask(box, mode='auto', key=None, t=(55, 115), cut=(0.35, 0.65), close=0, speck=0.004, k=2, nbg=1, gain=2.4, fill=None):
     """lettering inside box (fractions of the current poster) as a tight L mask at poster resolution.
     'auto' splits the crop into k colour clusters; the nbg clusters commonest round the edge are background.
-    'light' / 'dark' key on brightness; 'key' on distance from colour `key` (t0..t1)."""
+    'light' / 'dark' key on brightness; 'key' on distance from colour `key` (t0..t1); 'nkey' keeps what is NOT `key` (for two-tone lettering on a flat ground)."""
     cov = Image.open(CUR['cover']).convert('RGB')
     cw, ch = cov.size
     c = np.asarray(cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch)))).astype(np.float32)
-    if mode == 'key':
+    if mode in ('key', 'nkey'):  # 'nkey': key on the ground colour instead and keep everything that isn't it
         d = np.sqrt(((c - np.array(key, np.float32)) ** 2).sum(axis=2))
         m = np.clip(1 - (d - t[0]) / (t[1] - t[0]), 0, 1)
+        if mode == 'nkey': m = 1 - m
     elif mode == 'auto':
         px = c.reshape(-1, 3)
         cv2.setRNGSeed(7)
@@ -202,6 +203,15 @@ def lift_mask(box, mode='auto', key=None, t=(55, 115), cut=(0.35, 0.65), close=0
         bg, fg = np.percentile(lum, 50), np.percentile(lum, 99.5 if mode == 'light' else 0.5)
         m = np.clip(((lum - bg) / (fg - bg) - cut[0]) / (cut[1] - cut[0]), 0, 1)
     m = (m * 255).astype(np.uint8)
+    if fill is not None:  # outlined lettering filled with pictures: everything inside an outline, except counters of the ground colour
+        hard = (m > 90).astype(np.uint8)
+        pad = cv2.copyMakeBorder(1 - hard, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=1)
+        ff = pad.copy(); cv2.floodFill(ff, np.zeros((ff.shape[0] + 2, ff.shape[1] + 2), np.uint8), (0, 0), 2)
+        inside = (ff[1:-1, 1:-1] != 2).astype(np.uint8)
+        g = (np.sqrt(((c - np.array(fill, np.float32)) ** 2).sum(axis=2)) < 14).astype(np.uint8) * inside
+        n, lab, st, _ = cv2.connectedComponentsWithStats(g, connectivity=4)
+        hole = np.zeros(n, bool); hole[1:] = st[1:, cv2.CC_STAT_AREA] > 0.002 * g.size
+        m = np.maximum(m, inside * 255).astype(np.uint8); m[hole[lab]] = 0
     if speck:  # drop stray flecks that are not lettering
         n, lab, st, _ = cv2.connectedComponentsWithStats((m > 90).astype(np.uint8), connectivity=8)
         big = st[1:, cv2.CC_STAT_AREA].max() if n > 1 else 0
@@ -225,7 +235,8 @@ class L:
     def render(s, k=1.0, seed=0):
         boxes = s.box if isinstance(s.box[0], (list, tuple)) else [s.box]
         cols = s.color if isinstance(s.color[0], (list, tuple)) else [s.color] * len(boxes)
-        ms = [lift_mask(b, s.mode, **s.mk) for b in boxes]
+        modes = s.mode if isinstance(s.mode, (list, tuple)) else [s.mode] * len(boxes)  # one mode per box allowed
+        ms = [lift_mask(b, m, **s.mk) for b, m in zip(boxes, modes)]
         th = max(4, int(s.size * k * S))
         f = th / max(m.height for m in ms)
         ms = [m.resize((max(1, int(m.width * f)), max(1, int(m.height * f))), Image.LANCZOS) for m in ms]

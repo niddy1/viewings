@@ -1838,6 +1838,22 @@ def key_cut(test, soft=1.4):
         return rgb, _soft(m, soft)
     return fn
 
+
+def fill_cut(ground=(0, 0, 0), tol=40, soft=1.2):
+    """an LC cut for outlined lettering filled with pictures on a flat ground (The Bad Kids): keeps everything
+    an outline encloses, in its own colours, and opens the counters that show the ground through them"""
+    def fn(rgb):
+        a = rgb.astype(np.float32)
+        gnd = np.sqrt(((a - np.array(ground, np.float32)) ** 2).sum(axis=2)) < tol
+        pad = cv2.copyMakeBorder(gnd.astype(np.uint8), 2, 2, 2, 2, cv2.BORDER_CONSTANT, value=1)
+        cv2.floodFill(pad, np.zeros((pad.shape[0] + 2, pad.shape[1] + 2), np.uint8), (0, 0), 2)
+        m = (pad[2:-2, 2:-2] != 2).astype(np.uint8)
+        n, lab, st, _ = cv2.connectedComponentsWithStats((gnd & (m > 0)).astype(np.uint8), connectivity=4)
+        hole = np.zeros(n, bool); hole[1:] = st[1:, cv2.CC_STAT_AREA] > 0.002 * m.size
+        m[hole[lab]] = 0
+        return rgb, _soft(m.astype(np.float32), soft)
+    return fn
+
 _sat = lambda a: a.max(2) - a.min(2)
 _lum = lambda a: a @ np.array([.299, .587, .114], np.float32)
 
@@ -4196,27 +4212,27 @@ std('the-fresh-prince-of-bel-air-reunion-2020', ('grad', [(0, (200, 196, 190)), 
 # Rogue One (Lucasfilm) is a slipcase like the Marvel films.
 # =====================================================================================
 
-# Elle: black, the cream distressed capitals (typeset), Michèle at the edge of the frame
+# Elle: black, the cream distressed capitals, Michèle at the edge of the frame
 std('elle-2016', ('grad', [(0, (50, 46, 44)), (.6, (18, 16, 16)), (1, (4, 4, 4))]), (236, 226, 210),
-    T('ELLE', 'bonb', 130, (238, 228, 212), rough=.8),
+    L((0.5, 0.225, 0.93, 0.405), 130, (238, 228, 212), mode='light', speck=.02),
     photo=ph(.15, .3, .3, 1.0), pb=(200, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['ISABELLE HUPPERT'], ccol=(238, 228, 212),
     ft='a', vbox=(200, 40, 40), fcol=(200, 196, 190), fin=SLIP)
 
-# The Night Of: the city at night from above, white spaced capitals (typeset), the streets
+# The Night Of: the city at night from above, white spaced capitals, the streets
 std('the-night-of-2016', ('grad', [(0, (50, 56, 54)), (.6, (16, 20, 18)), (1, (4, 6, 6))]), WHT,
-    T('THE NIGHT OF', 'herb', 64, WHT, track=.45),
+    L((0.06, 0.56, 0.96, 0.615), 64, WHT, mode='light'),
     photo=ph(.5, .3, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['THE COMPLETE', 'SERIES'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 20, 18), fcol=(190, 200, 196), fin=MINT)
 
-# Alone in the Wilderness (2004): Twin Lakes' mountains, the white serif lettering (typeset), Dick by his cabin (no logo file: its company in type)
+# Alone in the Wilderness (2004): Twin Lakes' mountains, the white serif lettering, Dick by his cabin (no logo file: its company in type)
 std('alone-in-the-wilderness-2004', ('grad', [(0, (110, 150, 200)), (.5, (60, 90, 60)), (1, (20, 30, 16))]), WHT,
-    T('Alone in the Wilderness', 'ter', 66, WHT, outline=((30, 40, 30), 1.2)),
+    L([(0.34, 0.02, 0.89, 0.115), (0.47, 0.115, 0.67, 0.165), (0.09, 0.155, 0.955, 0.25)], 66, WHT, mode='key', key=(252, 252, 252), t=(15, 45), speck=.03),
     photo=ph(.55, .7, .5, 1.0), pb=WHT, studio=['BOB SWERER', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['DICK PROENNEKE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 90, 60), fcol=(220, 230, 214), fin=WORN, seed=2004)
 
-# Weiner: the tabloid grey, the red heavy capitals (typeset), Anthony on the street
+# Weiner: the tabloid grey, the red heavy capitals, Anthony on the street
 std('weiner-2016', ('grad', [(0, (220, 220, 218)), (.6, (170, 170, 168)), (1, (80, 80, 78))]), (220, 40, 40),
-    T('WEINER', 'intbk', 110, (222, 42, 42), track=.06),
+    L((0.08, 0.82, 0.97, 0.92), 110, (222, 42, 42), mode='key', key=(228, 60, 60), t=(70, 150)),
     photo=ph(.5, .22, .45, 1.0), pb=(222, 42, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(30, 30, 30),
     ft='a', vbox=(222, 42, 42), fcol=WHT, fin=MINT)
 
@@ -4225,123 +4241,123 @@ disney('finding-dory-2016', ('grad', [(0, (40, 140, 220)), (.5, (20, 80, 170)), 
        title=LC([(0.2, 0.32, 0.82, 0.46)], 150, cuts=[key_cut(lambda a: (_lum(a) > .78) & (_sat(a) < .25))]),
        face=ph(.55, .53, .2, 1.4), lcol=WHT)
 
-# Hunt for the Wilderpeople: the bush green, the white antler lettering (typeset), Ricky and Hec
+# Hunt for the Wilderpeople: the bush green, the white antler lettering, Ricky and Hec
 std('hunt-for-the-wilderpeople-2016', ('grad', [(0, (110, 160, 120)), (.6, (50, 80, 50)), (1, (14, 24, 14))]), WHT,
-    T('Hunt for the Wilderpeople', 'cho', 76, WHT),
+    L((0.0, 0.875, 1.0, 0.99), 76, WHT, mode='light'),
     photo=ph(.6, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A TAIKA WAITITI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(50, 80, 50), fcol=(220, 230, 214), fin=MINT, dotst=(['STAFF', 'PICK'], (230, 120, 30)))
 
-# True Story: black and white, the yellow stencil capitals (typeset), Christian and Michael
+# True Story: black and white, the yellow stencil capitals, Christian and Michael
 std('true-story-2015', ('grad', [(0, (70, 70, 70)), (.6, (24, 24, 24)), (1, (6, 6, 6))]), (240, 200, 40),
-    T('TRUE STORY', 'hcnb', 96, (242, 204, 44), squeeze=.8, bold=.8, rough=.5),
+    L((0.0, 0.81, 0.99, 0.935), 96, (242, 204, 44), mode='key', key=(236, 196, 40), t=(70, 150)),
     photo=ph(.5, .35, .8, .6), pb=(242, 204, 44), lg=WHT, lw=.6, order='LPTCF', credit=['JONAH HILL', 'JAMES FRANCO'], ccol=WHT,
     ft='a', vbox=(242, 204, 44), vink=(24, 24, 24), fcol=(200, 200, 200), fin=SLIP)
 
-# Sour Grapes: the poster's art-deco bottles, cream and wine red, the red-on-cream SOUR GRAPES (typeset) (no logo file: its company in type)
+# Sour Grapes: the poster's art-deco bottles, cream and wine red, the red-on-cream SOUR GRAPES (no logo file: its company in type)
 std('sour-grapes-2016', ('grad', [(0, (240, 220, 190)), (.5, (200, 120, 90)), (1, (60, 20, 20))]), (190, 40, 30),
-    T('SOUR GRAPES', 'adv', 76, (194, 44, 32), track=.06, bold=.6),
+    L([(0.12, 0.41, 0.48, 0.505), (0.13, 0.515, 0.49, 0.6)], 76, (194, 44, 32), mode='key', key=(200, 50, 40), t=(110, 190)),
     photo=ph(.5, .12, .7, .6), pb=(194, 44, 32), studio=['METFILM', 'PRODUCTION'], scol=(60, 30, 20), order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(194, 44, 32), fcol=WHT, fin=MINT)
 
-# Manchester by the Sea: the harbour's winter blue, the slate thin capitals (typeset), Lee and Randi
+# Manchester by the Sea: the harbour's winter blue, the slate thin capitals, Lee and Randi
 std('manchester-by-the-sea-2016', ('grad', [(0, (210, 226, 236)), (.6, (170, 190, 204)), (1, (100, 116, 130))]), (50, 70, 90),
-    [T('MANCHESTER', 'her', 64, (52, 72, 92), track=.04), T('BY THE SEA', 'her', 34, (52, 72, 92), track=.1)], tgap=6,
+    [L((0.1, 0.09, 0.9, 0.175), 64, (52, 72, 92), mode='dark'), L((0.38, 0.17, 0.91, 0.245), 34, (52, 72, 92), mode='dark')], tgap=6,
     photo=ph(.5, .65, .6, 1.0), pb=(52, 72, 92), lg=(52, 72, 92), lw=.6, order='LPTCF', credit=['CASEY AFFLECK', 'MICHELLE WILLIAMS'], ccol=(52, 72, 92),
     ft='a', vbox=(52, 72, 92), fcol=(40, 50, 60), fin=MINT)
 
-# Moonlight: the poster's blue and violet, thin white glowing capitals (typeset), the three faces as one
+# Moonlight: the poster's blue and violet, thin white glowing capitals, the three faces as one
 std('moonlight-2016', ('grad', [(0, (60, 120, 200)), (.5, (110, 70, 170)), (1, (20, 20, 50))]), WHT,
-    T('MOONLIGHT', 'her', 76, WHT, track=.1, soft=((120, 200, 255), 6, .6)),
+    L((0.06, 0.82, 0.94, 0.91), 76, WHT, mode='light'),
     photo=ph(.5, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A BARRY JENKINS', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 70, 170), fcol=(220, 220, 240), fin=MINT)
 
-# Arrival: Montana mist grey, the spaced thin capitals (typeset), Louise
+# Arrival: Montana mist grey, the spaced thin capitals, Louise
 std('arrival-2016', ('grad', [(0, (180, 186, 186)), (.6, (100, 106, 104)), (1, (30, 32, 30))]), WHT,
-    T('ARRIVAL', 'her', 76, WHT, track=.6),
+    L((0.06, 0.89, 0.96, 0.945), 76, WHT, mode='light'),
     photo=ph(.55, .25, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AMY ADAMS', 'JEREMY RENNER'], ccol=WHT,
     ft='a', vbox=WHT, vink=(100, 106, 104), fcol=(220, 226, 224), fin=MINT)
 
-# The Girl on the Train: the rain-streaked window's teal, white spaced capitals (typeset), Rachel at the glass
+# The Girl on the Train: the rain-streaked window's teal, white spaced capitals, Rachel at the glass
 std('the-girl-on-the-train-2016', ('grad', [(0, (60, 100, 100)), (.6, (20, 36, 36)), (1, (6, 10, 10))]), WHT,
-    T('THE GIRL ON THE TRAIN', 'herb', 50, WHT, track=.25),
+    L((0.06, 0.565, 0.94, 0.61), 50, WHT, mode='light'),
     photo=ph(.7, .2, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['EMILY BLUNT'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 36, 36), fcol=(200, 214, 214), fin=MINT)
 
-# Captain Fantastic: the Pacific Northwest sky, white stencil capitals (typeset), the family by the bus
+# Captain Fantastic: the Pacific Northwest sky, white stencil capitals, the family by the bus
 std('captain-fantastic-2016', ('grad', [(0, (90, 140, 200)), (.6, (60, 80, 100)), (1, (40, 24, 20))]), WHT,
-    T('CAPTAIN FANTASTIC', 'hcnb', 76, WHT, squeeze=.8, bold=.6, rough=.4),
+    L([(0.19, 0.105, 0.84, 0.195), (0.14, 0.195, 0.89, 0.285)], 76, WHT, mode='key', key=(250, 250, 250), t=(50, 110), grow=.2, gapf=.4),
     photo=ph(.4, .7, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['VIGGO MORTENSEN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 80, 100), fcol=(220, 220, 226), fin=MINT)
 
-# The Founder: the arches' red and yellow, cream condensed capitals (typeset), Ray in his suit
+# The Founder: the arches' red and yellow, cream condensed capitals, Ray in his suit
 std('the-founder-2016', ('solid', (210, 30, 30)), (250, 236, 210),
-    TT([('THE', (250, 200, 40)), ('FOUNDER', (250, 236, 210))], 'hcnb', 96, sp=.2, squeeze=.78, bold=.6),
+    L([(0.12, 0.13, 0.195, 0.18), (0.185, 0.12, 0.87, 0.25)], 96, [(250, 200, 40), (250, 236, 210)], mode='light'),
     photo=ph(.5, .55, .4, 1.0), pb=(250, 200, 40), lg=WHT, lw=.6, order='LPTCF', credit=['MICHAEL KEATON'], ccol=(250, 200, 40),
     ft='a', vbox=(250, 200, 40), vink=(210, 30, 30), fcol=(250, 236, 210), fin=MINT, under=[frame((250, 200, 40), 8, 2.4)])
 
-# Aguirre, the Wrath of God (1972): an old tape, the jungle's dark green, the yellow gothic capitals (typeset), Aguirre in his helmet
+# Aguirre, the Wrath of God (1972): an old tape, the jungle's dark green, the yellow gothic capitals, Aguirre in his helmet
 std('aguirre-the-wrath-of-god-1972', ('grad', [(0, (60, 80, 70)), (.6, (20, 30, 24)), (1, (6, 8, 6))]), (226, 220, 50),
-    [T('AGUIRRE,', 'hcnb', 84, (230, 224, 54), squeeze=.76, bold=.4), T('THE WRATH OF GOD', 'hcnb', 36, (230, 224, 54), squeeze=.8)], tgap=6,
+    [L((0.28, 0.075, 0.72, 0.195), 84, (230, 224, 54), mode='key', key=(228, 214, 60), t=(70, 150)), L((0.3, 0.193, 0.71, 0.245), 36, (230, 224, 54), mode='key', key=(228, 214, 60), t=(70, 150))], tgap=6,
     photo=ph(.3, .72, .45, 1.0), pb=(230, 224, 54), lg=WHT, lw=.6, order='LPTCSF', credit=['KLAUS KINSKI', 'A WERNER HERZOG FILM'], ccol=(230, 224, 54),
     stick=PRC(['$2.99', 'FOREIGN']), ft='e', fcol=(200, 210, 200), fin=OLD, seed=1972)
 
-# Betting on Zero: blender white, the green heavy capitals (typeset), the cash in the jug
+# Betting on Zero: blender white, the green heavy capitals, the cash in the jug
 std('betting-on-zero-2016', ('grad', [(0, (244, 244, 240)), (.6, (220, 222, 216)), (1, (150, 160, 150))]), (30, 130, 60),
-    T('BETTING ON ZERO', 'intbk', 70, (30, 132, 62), squeeze=.86),
+    L([(0.29, 0.812, 0.69, 0.868), (0.28, 0.865, 0.71, 0.92)], 70, (30, 132, 62), mode='light'),
     photo=ph(.5, .2, .5, 1.0), pb=(30, 132, 62), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(30, 30, 30),
     ft='a', vbox=(30, 132, 62), fcol=(30, 30, 30), fin=MINT)
 
-# Paterson: the bedroom's dark blue, the white handwriting (typeset), Paterson and Laura asleep
+# Paterson: the bedroom's dark blue, the white handwriting, Paterson and Laura asleep
 std('paterson-2016', ('grad', [(0, (40, 50, 80)), (.6, (14, 18, 30)), (1, (4, 6, 10))]), WHT,
-    T('PATERSON', 'cho', 100, WHT),
+    L((0.24, 0.8, 0.76, 0.895), 100, WHT, mode='light'),
     photo=ph(.55, .45, .55, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A JIM JARMUSCH', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 18, 30), fcol=(190, 196, 214), fin=MINT)
 
-# Hacksaw Ridge: the smoke's grey-white, dark spaced capitals (typeset), Desmond carrying a man
+# Hacksaw Ridge: the smoke's grey-white, dark spaced capitals, Desmond carrying a man
 std('hacksaw-ridge-2016', ('grad', [(0, (226, 228, 224)), (.6, (196, 200, 194)), (1, (130, 136, 130))]), (40, 44, 40),
-    T('HACKSAW RIDGE', 'herb', 64, (40, 44, 40), track=.2),
+    L([(0.28, 0.445, 0.71, 0.505), (0.36, 0.515, 0.64, 0.58)], 64, (40, 44, 40), mode='light', grow=.08),
     photo=ph(.55, .18, .45, 1.0), pb=(40, 44, 40), lg=(40, 44, 40), lw=.6, order='LPTCF', credit=['ANDREW GARFIELD'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 44, 40), fcol=WHT, fin=SLIP)
 
-# Eating You Alive: the prescription-pad grey, black and white heavy capitals (typeset), the fork in the O (no logo file: its company in type)
+# Eating You Alive: the prescription-pad grey, black and white heavy capitals, the fork in the O (no logo file: its company in type)
 std('eating-you-alive-2016', ('grad', [(0, (200, 204, 204)), (.6, (150, 156, 156)), (1, (60, 120, 50))]), (20, 20, 20),
-    TT([('EATING', (20, 20, 20)), ('YOU', WHT), ('ALIVE', (20, 20, 20))], 'hcnb', 92, sp=.2, squeeze=.78, bold=.8, outline=((60, 60, 60), 1.0)),
+    L([(0.14, 0.045, 0.85, 0.215), (0.19, 0.215, 0.86, 0.415), (0.13, 0.44, 0.9, 0.66)], 92, [(20, 20, 20), WHT, (20, 20, 20)], mode=['key', 'light', 'key'], key=(25, 25, 25), t=(60, 130)),
     photo=ph(.12, .89, .2, 1.0), pb=(20, 20, 20), studio=['SMALLBOX', 'ENTERTAINMENT'], scol=(20, 20, 20), order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(20, 20, 20), fcol=WHT, fin=MINT)
 
-# Wonder Woman: the Themysciran sunset orange, white spaced capitals (typeset), Diana with her sword
+# Wonder Woman: the Themysciran sunset orange, white spaced capitals, Diana with her sword
 std('wonder-woman-2017', ('grad', [(0, (240, 170, 70)), (.5, (200, 90, 40)), (1, (60, 20, 14))]), WHT,
-    T('WONDER WOMAN', 'her', 66, WHT, track=.3),
+    L((0.1, 0.76, 0.92, 0.83), 66, WHT, mode='light'),
     photo=ph(.5, .45, .45, 1.0), pb=(230, 190, 90), lg=WHT, lw=.6, order='LPTCF', credit=['GAL GADOT', 'CHRIS PINE'], ccol=WHT,
     ft='a', vbox=(230, 190, 90), vink=(200, 90, 40), fcol=WHT, fin=SLIP)
 
-# The Bad Kids: black, the red and blue photo-filled capitals (typeset; no picture: the poster is all title) (no logo file: its company in type)
+# The Bad Kids: black, the photo-filled THE BAD KIDS cut off the poster in its own colours (no picture: the poster is all title) (no logo file: the label in type)
 std('the-bad-kids-2016', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), (220, 60, 70),
-    TT([('THE', WHT), ('BAD', (220, 70, 80)), ('KIDS', (110, 140, 220))], 'intbk', 100, sp=.2, outline=(WHT, 1.4)),
+    LC([(0.02, 0.15, 0.98, 0.48), (0.02, 0.48, 0.98, 0.81)], 150, gapf=.12, cuts=[fill_cut(), fill_cut()]),
     studio=['LOW KEY PICTURES'], scol=WHT, order='lTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 14, 16), fcol=(190, 190, 196), fin=MINT)
 
-# Rogue One: A Star Wars Story (Lucasfilm, a slipcase like the Marvel films): Scarif blue-grey, the cream serif ROGUE ONE (typeset), Jyn
+# Rogue One: A Star Wars Story (Lucasfilm, a slipcase like the Marvel films): Scarif blue-grey, the framed ROGUE ONE / A STAR WARS STORY logo lifted off the poster (copper there, cream here), Jyn
 std('rogue-one-a-star-wars-story-2016', ('grad', [(0, (120, 150, 160)), (.6, (40, 56, 66)), (1, (10, 14, 18))]), (230, 220, 200),
-    [T('ROGUE ONE', 'ter', 84, (232, 222, 202), track=.12), T('A STAR WARS STORY', 'herb', 24, (232, 222, 202), track=.2)], tgap=8,
+    L((0.225, 0.728, 0.775, 0.803), 120, (232, 222, 202), mode='key', key=(123, 76, 51), t=(100, 170), speck=0), tgap=8,
     photo=ph(.48, .2, .4, 1.0), pb=(232, 222, 202), lg=WHT, lw=.6, order='LPTCF', credit=['FELICITY JONES', 'DIEGO LUNA'], ccol=(232, 222, 202),
     ft='a', vbox=(232, 222, 202), vink=(40, 56, 66), fcol=(200, 210, 214), fin=SLIP)
 
-# Jim & Andy: The Great Beyond: the poster's beige, white heavy capitals (typeset), Jim upside down
+# Jim & Andy: The Great Beyond: the poster's beige, white heavy capitals, Jim upside down
 std('jim-andy-the-great-beyond-featuring-a-very-special-contractually-obligated-mention-of-tony-clifton-2017', ('grad', [(0, (220, 200, 170)), (.6, (190, 160, 130)), (1, (110, 80, 60))]), WHT,
-    [T('JIM & ANDY', 'intbk', 84, WHT, outline=((90, 60, 40), 1.4)), T('THE GREAT BEYOND', 'herb', 26, (60, 40, 30), track=.2)], tgap=8,
+    [L((0.16, 0.755, 0.84, 0.84), 84, WHT, mode='light', outline=((90, 60, 40), 1.4)), L((0.34, 0.84, 0.66, 0.875), 26, (60, 40, 30), mode='light')], tgap=8,
     photo=ph(.5, .35, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(60, 40, 30),
     ft='a', vbox=WHT, vink=(110, 80, 60), fcol=WHT, fin=MINT)
 
-# Cameraperson: black, the cream condensed capitals (typeset), the road through the trees
+# Cameraperson: black, the cream condensed capitals, the road through the trees
 std('cameraperson-2016', ('grad', [(0, (40, 44, 36)), (.6, (14, 16, 12)), (1, (4, 4, 4))]), (230, 226, 210),
-    T('CAMERAPERSON', 'hcnb', 84, (232, 228, 212), squeeze=.76, bold=.6),
+    L((0.15, 0.745, 0.85, 0.845), 84, (232, 228, 212), mode='light'),
     photo=ph(.5, .45, .55, 1.0), pb=(232, 228, 212), lg=WHT, lw=.6, order='LPTCF', credit=['A KIRSTEN JOHNSON', 'FILM'], ccol=(232, 228, 212),
     ft='a', vbox=(232, 228, 212), vink=(14, 16, 12), fcol=(190, 196, 186), fin=MINT)
 
-# Logan Lucky: the poster's cream and the race-car yellow, the red italic capitals (typeset), the Logans on the car
+# Logan Lucky: the poster's cream and the race-car yellow, the yellow-over-red italic capitals (keyed off the cream), the Logans on the car
 std('logan-lucky-2017', ('grad', [(0, (236, 232, 220)), (.6, (220, 214, 196)), (1, (160, 150, 120))]), (210, 30, 30),
-    T('LOGAN LUCKY', 'intbki', 90, (214, 32, 32), squeeze=.84, outline=((246, 200, 40), 1.6)),
+    L((0.07, 0.807, 0.95, 0.885), 90, (214, 32, 32), mode='nkey', key=(228, 224, 210), t=(25, 70), grad=[(0, (244, 186, 30)), (.5, (244, 186, 30)), (.52, (226, 32, 26)), (1, (226, 32, 26))]),
     photo=ph(.5, .35, .8, .7), pb=(214, 32, 32), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['CHANNING TATUM', 'ADAM DRIVER'], ccol=(30, 30, 30),
     ft='a', vbox=(214, 32, 32), fcol=(30, 30, 30), fin=MINT)
 
