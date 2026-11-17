@@ -3425,75 +3425,75 @@ std('alanis-2017', ('grad', [(0, (200, 70, 80)), (.6, (120, 30, 40)), (1, (30, 8
     photo=ph(.45, .15, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AN ANAHÍ BERNERI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 30, 40), fcol=(240, 210, 214), fin=MINT)
 
-# Notting Hill (1999): a real rental, the poster's white, navy and blue serif (typeset), Anna's face
+# Notting Hill (1999): a real rental, the poster's white, its navy and blue serif Notting Hill cut off it, Anna's face
 std('notting-hill-1999', ('grad', [(0, (246, 246, 248)), (.6, (226, 228, 234)), (1, (170, 174, 186))]), (30, 40, 110),
-    TT([('Notting', (30, 40, 110)), ('Hill', (40, 90, 190))], 'schb', 84, sp=.2),
+    LC([(0.132, 0.105, 0.826, 0.199)], 84, cuts=[key_cut(lambda a: (a[..., 2] > a[..., 0] + .2) & (_lum(a) < .65))]),
     photo=ph(.45, .4, .5, 1.0), pb=(30, 40, 110), lg=(30, 40, 110), lw=.6, order='LPTCF', credit=['JULIA ROBERTS', 'HUGH GRANT'], ccol=(30, 40, 110),
     ft='a', vbox=(30, 40, 110), fcol=(30, 40, 110), fin=RENTAL, seed=1999, over=[dot(262, ['ROM', 'COM'], (220, 60, 90), x=.72, d=62)])
 
-# Hearts and Minds (1974): an old tape, the poster's paper white, red HEARTS and black & MINDS (typeset), the woodcut (no logo file: its company in type)
+# Hearts and Minds (1974): an old tape, the poster's paper white, its red HEARTS and black & MINDS cut off it, the woodcut (no logo file: its company in type)
 std('hearts-and-minds-1974', ('grad', [(0, (238, 232, 222)), (.6, (220, 212, 198)), (1, (150, 140, 124))]), (20, 18, 16),
-    TT([('HEARTS', (200, 40, 34)), ('& MINDS', (20, 18, 16))], 'ter', 80, sp=.2),
+    LC([(0.214, 0.074, 0.783, 0.158), (0.221, 0.167, 0.774, 0.252)], 80, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35))] + [key_cut(lambda a: _lum(a) < .3)]),
     photo=ph(.5, .55, .6, 1.0), pb=(20, 18, 16), studio=['BBS PRODUCTIONS'], scol=(20, 18, 16), order='lPTCF', credit=['A DOCUMENTARY'], ccol=(20, 18, 16),
     ft='e', fcol=(20, 18, 16), fin=OLD, seed=1974)
 
-# The Barkley Marathons: forest dark with the poster's yellow border, the yellow heavy capitals (typeset), Laz at the gate (no company to name: left off)
+# The Barkley Marathons: forest dark with the poster's yellow border, its yellow THE BARKLEY MARATHONS block cut off it, Laz at the gate (no company to name: left off)
 std('the-barkley-marathons-the-race-that-eats-its-young-2014', ('grad', [(0, (60, 70, 40)), (.6, (24, 28, 16)), (1, (8, 10, 6))]), (240, 220, 40),
-    [T('THE BARKLEY MARATHONS', 'intbk', 54, (242, 222, 44), squeeze=.84), T('THE RACE THAT EATS ITS YOUNG', 'herb', 20, (242, 222, 44), track=.08)], tgap=8,
+    LC([(0.049, 0.028, 0.949, 0.337)], 200, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .35))]), tgap=8,
     photo=ph(.8, .5, .3, 1.0), pb=(242, 222, 44), order='PTCF', credit=['A DOCUMENTARY'], ccol=(242, 222, 44),
     ft='a', vbox=(242, 222, 44), vink=(24, 28, 16), fcol=(200, 206, 190), fin=SLIP, under=[frame((242, 222, 44), 8, 1.6)])
 
-# The Lighthouse: storm grey, white serif spaced capitals (typeset), Ephraim at the head
+# The Lighthouse: storm grey, the white serif THE LIGHTHOUSE lifted off the poster, Ephraim at the head
 std('the-lighthouse-2019', ('grad', [(0, (120, 120, 120)), (.6, (50, 50, 50)), (1, (10, 10, 10))]), WHT,
-    [T('THE', 'ter', 30, WHT, track=.3), T('LIGHTHOUSE', 'ter', 80, WHT, track=.12)], tgap=8,
+    [L((0.405, 0.823, 0.597, 0.873), 30, WHT, mode='light'), L((0.045, 0.88, 0.956, 0.951), 80, WHT, mode='light')], tgap=8,
     photo=ph(.84, .45, .3, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT PATTINSON', 'WILLEM DAFOE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(50, 50, 50), fcol=(200, 200, 200), fin=MINT)
 
-# Abducted in Plain Sight: the poster's red halftone, black slab capitals (typeset), Jan as a girl (no logo file: the label in type)
+# Abducted in Plain Sight: the poster's red halftone, its black slab capitals lifted, Jan as a girl (no logo file: the label in type)
 std('abducted-in-plain-sight-2017', ('grad', [(0, (230, 60, 50)), (.6, (190, 30, 30)), (1, (80, 10, 10))]), (20, 16, 16),
-    [T('ABDUCTED', 'bonb', 90, (20, 16, 16)), T('IN PLAIN SIGHT', 'bonb', 40, (20, 16, 16), track=.06)], tgap=8,
+    [L((0.037, 0.036, 0.972, 0.148), 90, (20, 16, 16), mode='key', key=(20, 16, 16), t=(60, 130)), L((0.118, 0.144, 0.942, 0.212), 40, (20, 16, 16), mode='key', key=(20, 16, 16), t=(60, 130))], tgap=8,
     photo=ph(.5, .55, .6, 1.0), pb=WHT, studio=['NETFLIX'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(190, 30, 30), fcol=WHT, fin=MINT)
 
-# The Good Liar: the poster's black and white, the red condensed capitals (typeset), Betty and Roy
+# The Good Liar: the poster's black and white, its red condensed THE GOOD LIAR lifted (stacked there, one line here), Betty and Roy
 std('the-good-liar-2019', ('grad', [(0, (60, 60, 60)), (.6, (22, 22, 22)), (1, (6, 6, 6))]), (180, 30, 34),
-    T('THE GOOD LIAR', 'hcnb', 94, (190, 34, 38), squeeze=.72, bold=.8),
+    L([(0.05, 0.311, 0.333, 0.453), (0.055, 0.457, 0.441, 0.602), (0.058, 0.607, 0.381, 0.749)], 94, (190, 34, 38), mode='key', key=(160, 30, 36), t=(70, 150), gapf=.3),
     photo=ph(.62, .22, .45, 1.0), pb=(190, 34, 38), lg=WHT, lw=.6, order='LPTCF', credit=['HELEN MIRREN', 'IAN McKELLEN'], ccol=WHT,
     ft='a', vbox=(190, 34, 38), fcol=(200, 200, 200), fin=MINT)
 
-# Uncut Gems: black, the white condensed capitals (typeset), Howard with his rings
+# Uncut Gems: black, the white condensed Uncut Gems lifted off the poster, Howard with his rings
 std('uncut-gems-2019', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), WHT,
-    T('Uncut Gems', 'hcnb', 100, WHT, squeeze=.8, bold=.6),
+    L((0.045, 0.124, 0.513, 0.194), 100, WHT, mode='light'),
     photo=ph(.5, .66, .35, 1.0), pb=(90, 200, 170), lg=WHT, lw=.6, order='LPTCF', credit=['ADAM SANDLER'], ccol=WHT,
     ft='a', vbox=(90, 200, 170), vink=(14, 14, 16), fcol=(190, 190, 196), fin=MINT, dotst=(['STAFF', 'PICK'], (90, 200, 170), (14, 14, 16)))
 
-# Ford v Ferrari: Le Mans morning grey, blue FORD and red FERRARI (typeset), the GT40
+# Ford v Ferrari: Le Mans morning grey, the poster's blue FORD and red FERRARI cut off it, the GT40
 std('ford-v-ferrari-2019', ('grad', [(0, (226, 228, 230)), (.6, (190, 194, 200)), (1, (90, 96, 106))]), (30, 30, 34),
-    TT([('FORD', (60, 120, 210)), ('v', (30, 30, 34)), ('FERRARI', (210, 40, 40))], 'hcnb', 92, sp=.2, squeeze=.8, bold=.6),
+    LC([(0.41, 0.588, 0.935, 0.657)], 92, cuts=[key_cut(lambda a: ((a[..., 2] > a[..., 0] + .1) & (_lum(a) < .8)) | ((a[..., 0] > .5) & (a[..., 1] < .35)) | (_lum(a) < .3))]),
     photo=ph(.5, .85, .8, .6), pb=(30, 30, 34), lg=(30, 30, 34), lw=.6, order='LPTCF', credit=['MATT DAMON', 'CHRISTIAN BALE'], ccol=(30, 30, 34),
     ft='a', vbox=(210, 40, 40), fcol=(30, 30, 34), fin=MINT)
 
-# Jojo Rabbit: the poster's red, the white condensed capitals on the black band (typeset), Jojo in his cap
+# Jojo Rabbit: the poster's red, white condensed capitals on a black band (typeset: on the poster the band is torn and tilted, and the cast stand over its ends), Jojo in his cap
 std('jojo-rabbit-2019', ('grad', [(0, (220, 40, 40)), (.6, (160, 20, 24)), (1, (50, 8, 8))]), WHT,
     T('JOJO RABBIT', 'hcnb', 90, WHT, squeeze=.74, bold=.6, box=((20, 18, 18), 10, 6)),
     photo=ph(.51, .26, .3, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A TAIKA WAITITI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(160, 20, 24), fcol=(250, 220, 220), fin=MINT)
 
-# Won't You Be My Neighbor?: the poster's sky blue, white rounded capitals (typeset), Fred in his red cardigan
+# Won't You Be My Neighbor?: the poster's sky blue, its white rounded lettering lifted, Fred in his red cardigan
 std('won-t-you-be-my-neighbor-2018', ('grad', [(0, (40, 110, 210)), (.6, (20, 60, 150)), (1, (8, 20, 60))]), WHT,
-    [T("WON'T YOU BE MY", 'popb', 40, WHT), T('NEIGHBOR?', 'popb', 80, WHT)], tgap=8,
+    [L((0.062, 0.057, 0.836, 0.142), 40, WHT, mode='light'), L((0.239, 0.14, 0.937, 0.226), 80, WHT, mode='light')], tgap=8,
     photo=ph(.72, .33, .35, 1.0), pb=(220, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(220, 40, 40), fcol=(210, 220, 240), fin=MINT)
 
-# A Rainy Day in New York: the umbrella's red on grey, white serif (typeset), the kiss under the umbrella (no logo file: its company in type)
+# A Rainy Day in New York: the umbrella's red on grey, the white serif title lifted off the umbrella, the kiss under it (no logo file: its company in type)
 std('a-rainy-day-in-new-york-2019', ('grad', [(0, (210, 50, 50)), (.6, (150, 30, 30)), (1, (60, 60, 64))]), WHT,
-    T('A Rainy Day in New York', 'ter', 66, WHT),
+    L((0.2, 0.43, 0.75, 0.68), 160, WHT, mode='light'),
     photo=ph(.65, .25, .5, 1.0), pb=WHT, studio=['GRAVIER', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['TIMOTHÉE CHALAMET', 'ELLE FANNING'], ccol=WHT,
     ft='a', vbox=WHT, vink=(150, 30, 30), fcol=(230, 220, 220), fin=MINT)
 
-# Little Women: Concord's dusk green, white spaced capitals (typeset), the March sisters at the window
+# Little Women: Concord's dusk green, the white hand-drawn LITTLE WOMEN lifted off the poster, the March sisters at the window
 std('little-women-2019', ('grad', [(0, (60, 90, 80)), (.6, (24, 36, 32)), (1, (8, 12, 10))]), WHT,
-    T('LITTLE WOMEN', 'her', 70, WHT, track=.2),
+    L((0.294, 0.717, 0.705, 0.881), 120, WHT, mode='light'),
     photo=ph(.5, .15, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['SAOIRSE RONAN', 'EMMA WATSON'], ccol=WHT,
     ft='a', vbox=WHT, vink=(24, 36, 32), fcol=(210, 220, 214), fin=MINT)
 
