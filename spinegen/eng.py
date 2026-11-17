@@ -123,13 +123,13 @@ class TT(T):
 class LC:
     """lettering lifted off the poster in its own colours (a multi-coloured title logo), cut from its
     background with GrabCut.  boxes are joined into one line, scaled together.  size = height of the tallest."""
-    def __init__(s, boxes, size, gapf=0.16, valign='mid', outline=None, cuts=None):
+    def __init__(s, boxes, size, gapf=0.16, valign='mid', outline=None, cuts=None, margin=6):
         s.__dict__.update(locals()); del s.__dict__['s']  # cuts: per box, fn(rgb x4) -> (rgb, alpha 0..1), or None for GrabCut
 
     def _cut(s, box, fn=None):
         cov = cv2.cvtColor(cv2.imread(CUR['cover']), cv2.COLOR_BGR2RGB)
         ch, cw = cov.shape[:2]
-        m = 6
+        m = s.margin  # px of poster kept round the box (0 when stacked lines sit close)
         x0, y0, x1, y1 = int(box[0] * cw) - m, int(box[1] * ch) - m, int(box[2] * cw) + m, int(box[3] * ch) + m
         c = np.ascontiguousarray(cov[max(0, y0):y1, max(0, x0):x1])
         big = cv2.resize(c, None, fx=4, fy=4, interpolation=cv2.INTER_CUBIC)

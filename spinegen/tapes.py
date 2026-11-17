@@ -4689,75 +4689,75 @@ disney('bao-2018', ('grad', [(0, (244, 236, 220)), (.6, (234, 222, 200)), (1, (2
 # The Hateful Eight (188 min) is a 2-tape box and O.J.: Made in America (467 min) a box set.
 # =====================================================================================
 
-# Sicario: the poster's desert cream, black stencil capitals (typeset), Kate's double exposure
+# Sicario: the poster's desert cream, black stencil capitals, Kate's double exposure
 std('sicario-2015', ('grad', [(0, (236, 226, 206)), (.6, (210, 196, 170)), (1, (120, 100, 76))]), (24, 22, 20),
-    T('SICARIO', 'intbk', 110, (24, 22, 20), squeeze=.9),
+    L((0.09, 0.83, 0.9, 0.92), 110, (24, 22, 20), mode='dark'),
     photo=ph(.55, .3, .55, 1.0), pb=(24, 22, 20), lg=(24, 22, 20), lw=.6, order='LPTCF', credit=['EMILY BLUNT', 'JOSH BROLIN'], ccol=(24, 22, 20),
     ft='a', vbox=(24, 22, 20), fcol=(24, 22, 20), fin=SLIP)
 
-# Goodnight Mommy: black, white and red art-deco capitals (typeset), the bandaged head
+# Goodnight Mommy: black, white and red art-deco capitals, the bandaged head
 std('goodnight-mommy-2015', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (4, 4, 4))]), WHT,
-    TT([('GOODNIGHT', WHT), ('MOMMY', (220, 40, 40))], 'adv', 76, sp=.25, track=.04, bold=.5),
+    L([(0.0, 0.035, 1.0, 0.125), (0.19, 0.12, 0.81, 0.215)], 76, [WHT, (220, 40, 40)], mode=['light', 'key'], key=(210, 30, 30), t=(70, 150)),
     photo=ph(.5, .52, .5, 1.0), pb=(220, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['FIALA & FRANZ'], ccol=WHT,
     ft='a', vbox=(220, 40, 40), fcol=(200, 200, 200), fin=SLIP)
 
-# The Lobster: the poster's cream, black heavy capitals (typeset), David's head over the empty embrace
+# The Lobster: the poster's cream, black heavy capitals, David's head over the empty embrace
 std('the-lobster-2015', ('solid', (240, 236, 226)), (20, 18, 18),
-    T('THE LOBSTER', 'intbk', 90, (20, 18, 18)),
+    L((0.16, 0.81, 0.83, 0.89), 90, (20, 18, 18), mode='dark'),
     photo=ph(.5, .25, .5, 1.0), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['A YORGOS LANTHIMOS', 'FILM'], ccol=(20, 18, 18),
     ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
 
-# 20 Feet from Stardom (2013): the stage's black and glitter, magenta and white serif (typeset), the singer
+# 20 Feet from Stardom: the stage lights' dark, the poster's magenta 20 FEET FROM and white STARDOM cut off it in their own colours and laid in one line, Darlene singing (no logo file: the label in type)
 std('20-feet-from-stardom-2013', ('grad', [(0, (60, 30, 50)), (.6, (20, 10, 18)), (1, (4, 2, 4))]), (230, 40, 160),
-    TT([('20 FEET FROM', (234, 44, 164)), ('STARDOM', WHT)], 'ter', 74, sp=.25),
+    LC([(0.078, 0.673, 0.2, 0.732), (0.078, 0.733, 0.367, 0.79), (0.078, 0.79, 0.394, 0.85), (0.075, 0.851, 0.61, 0.91)], 74, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (_sat(a) > .35) & (a[..., 0] > .4) & (a[..., 0] > a[..., 1] * 1.5)), key_cut(lambda a: (_sat(a) > .35) & (a[..., 0] > .4) & (a[..., 0] > a[..., 1] * 1.5)), key_cut(lambda a: (_sat(a) > .35) & (a[..., 0] > .4) & (a[..., 0] > a[..., 1] * 1.5)), key_cut(lambda a: (_lum(a) > .75) & (_sat(a) < .2))]),
     photo=ph(.5, .2, .5, 1.0), pb=(234, 44, 164), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(234, 44, 164), fcol=(210, 200, 210), fin=SLIP)
 
-# Chef (2014): the poster's taco-truck yellow, the red block capitals (typeset), the crew at the window
+# Chef (2014): the poster's taco-truck yellow, the red block capitals, the crew at the window
 std('chef-2014', ('solid', (248, 196, 30)), (214, 40, 30),
-    T('CHEF', 'bonb', 140, (218, 44, 32)),
+    L((0.17, 0.075, 0.83, 0.225), 140, (218, 44, 32), mode='key', key=(220, 50, 40), t=(70, 150)),
     photo=ph(.6, .5, .5, 1.0), pb=(218, 44, 32), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['JON FAVREAU'], ccol=(40, 30, 20),
     ft='a', vbox=(218, 44, 32), fcol=(40, 30, 20), fin=SLIP)
 
-# Room (2015): the overcast sky, the yellow keyline ROOM (typeset), Ma and Jack
+# Room (2015): the overcast sky, the yellow keyline ROOM, Ma and Jack
 std('room-2015', ('grad', [(0, (130, 150, 170)), (.6, (70, 80, 90)), (1, (30, 34, 30))]), (246, 220, 40),
-    T('ROOM', 'ter', 100, (248, 222, 44), track=.2, box=((30, 34, 40), 10, 6)),
+    L((0.19, 0.77, 0.82, 0.9), 100, (248, 222, 44), mode='key', key=(240, 210, 40), t=(70, 150)),
     photo=ph(.6, .45, .55, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['BRIE LARSON', 'JACOB TREMBLAY'], ccol=WHT,
     ft='a', vbox=(248, 222, 44), vink=(30, 34, 40), fcol=(210, 214, 220), fin=SLIP)
 
-# The Danish Girl: the teal of the paintings, the cream spaced serif capitals (typeset), Lili
+# The Danish Girl: the teal of the paintings, the cream spaced serif capitals, Lili
 std('the-danish-girl-2015', ('grad', [(0, (40, 90, 100)), (.6, (16, 36, 40)), (1, (4, 10, 12))]), (236, 226, 206),
-    T('THE DANISH GIRL', 'ter', 64, (238, 228, 208), track=.2),
+    L((0.06, 0.77, 0.91, 0.83), 64, (238, 228, 208), mode='light'),
     photo=ph(.7, .3, .45, 1.0), pb=(238, 228, 208), lg=WHT, lw=.6, order='LPTCF', credit=['EDDIE REDMAYNE', 'ALICIA VIKANDER'], ccol=(238, 228, 208),
     ft='a', vbox=(238, 228, 208), vink=(16, 36, 40), fcol=(200, 210, 206), fin=SLIP)
 
-# The Big Short: white, gold THE and SHORT round the black BIG (typeset), the four in their frames
+# The Big Short: white, the poster's gold THE and SHORT and black BIG cut off it in their own colours, the four in the boxes
 std('the-big-short-2015', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (150, 140, 120))]), (20, 18, 18),
-    TT([('THE', (170, 140, 70)), ('BIG', (20, 18, 18)), ('SHORT', (170, 140, 70))], 'terb', 96, sp=.2),
+    LC([(0.37, 0.668, 0.735, 0.752), (0.3, 0.748, 0.86, 0.868), (0.27, 0.865, 0.91, 0.945)], 96, gapf=.2, valign='base', cuts=[key_cut(lambda a: (_sat(a) > .25) & (a[..., 0] > .45) & (_lum(a) < .85)), key_cut(lambda a: _lum(a) < .3), key_cut(lambda a: (_sat(a) > .25) & (a[..., 0] > .45) & (_lum(a) < .85))]),
     photo=ph(.5, .3, .8, .7), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['CHRISTIAN BALE', 'STEVE CARELL'], ccol=(20, 18, 18),
     ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP)
 
-# Spotlight: the newsroom's grey-white, the gold serif capitals (typeset), the Globe team
+# Spotlight: the newsroom's grey-white, the gold serif capitals, the Globe team
 std('spotlight-2015', ('grad', [(0, (70, 74, 76)), (.6, (30, 32, 34)), (1, (8, 8, 10))]), (200, 160, 50),
-    T('SPOTLIGHT', 'terb', 86, (206, 166, 54)),
+    L((0.035, 0.805, 0.95, 0.93), 86, (206, 166, 54), mode='key', key=(220, 180, 60), t=(70, 150)),
     photo=ph(.6, .45, .6, 1.0), pb=(206, 166, 54), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['MARK RUFFALO', 'MICHAEL KEATON'], ccol=WHT,
     ft='a', vbox=(206, 166, 54), vink=(30, 30, 30), fcol=WHT, fin=SLIP)
 
-# Brooklyn (2015): the harbour sky, cream spaced capitals (typeset), Eilis at the rail
+# Brooklyn (2015): the harbour sky, cream spaced capitals, Eilis at the rail
 std('brooklyn-2015', ('grad', [(0, (110, 150, 170)), (.6, (50, 70, 80)), (1, (16, 24, 30))]), (240, 232, 214),
-    T('BROOKLYN', 'her', 76, (242, 234, 216), track=.3),
+    L((0.09, 0.075, 0.91, 0.15), 76, (242, 234, 216), mode='light'),
     photo=ph(.55, .4, .45, 1.0), pb=(242, 234, 216), lg=WHT, lw=.6, order='LPTCF', credit=['SAOIRSE RONAN'], ccol=(242, 234, 216),
     ft='a', vbox=(242, 234, 216), vink=(50, 70, 80), fcol=(210, 220, 224), fin=SLIP)
 
-# Anomalisa: the poster's misty grey, the black handwriting (typeset), Michael
+# Anomalisa: the poster's misty grey, the black handwriting, Michael
 std('anomalisa-2015', ('grad', [(0, (210, 210, 208)), (.6, (170, 170, 168)), (1, (80, 80, 78))]), (30, 30, 30),
-    T('Anomalisa', 'cho', 110, (30, 30, 30)),
+    L((0.11, 0.12, 0.91, 0.24), 110, (30, 30, 30), mode='dark'),
     photo=ph(.4, .55, .5, 1.0), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['CHARLIE KAUFMAN', '& DUKE JOHNSON'], ccol=(30, 30, 30),
     ft='a', vbox=(30, 30, 30), fcol=WHT, fin=SLIP)
 
-# Whiplash (2014): black, the red wide capitals (typeset), Andrew at the kit
+# Whiplash (2014): black, the red wide capitals, Andrew at the kit
 std('whiplash-2014', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), (220, 30, 30),
-    T('WHIPLASH', 'herb', 90, (224, 32, 32), track=.06),
+    L((0.02, 0.21, 0.97, 0.31), 90, (224, 32, 32), mode='key', key=(210, 30, 30), t=(70, 150)),
     photo=ph(.5, .6, .5, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['MILES TELLER', 'J.K. SIMMONS'], ccol=WHT,
     ft='a', vbox=(224, 32, 32), fcol=(200, 200, 204), fin=SLIP)
 
