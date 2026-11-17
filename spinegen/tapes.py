@@ -3721,73 +3721,73 @@ std('thor-2011', ('grad', [(0, (30, 40, 70)), (.6, (12, 16, 30)), (1, (4, 6, 10)
     photo=ph(.5, .47, .35, 1.0), pb=(210, 34, 34), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS HEMSWORTH', 'NATALIE PORTMAN'], ccol=WHT,
     ft='a', vbox=(210, 34, 34), fcol=(190, 196, 210), fin=SLIP, seed=2011)
 
-# Thor: The Dark World: Svartalfheim teal-grey, the steel capitals (typeset), Thor at the head
+# Thor: The Dark World: Svartalfheim teal-grey, the steel THOR / THE DARK WORLD logo cut off the poster, Thor at the head
 std('thor-the-dark-world-2013', ('grad', [(0, (90, 120, 120)), (.6, (30, 42, 44)), (1, (8, 12, 12))]), (210, 214, 220),
-    [T('THOR', 'intbk', 100, WHT, grad=[(0, (240, 242, 246)), (.5, (130, 140, 150)), (1, (220, 224, 230))], outline=((20, 24, 30), 1.6)), T('THE DARK WORLD', 'herb', 26, (200, 206, 214), track=.3)], tgap=8,
+    LC([(0.08, 0.78, 0.92, 0.935)], 140), tgap=8,
     photo=ph(.52, .27, .3, 1.0), pb=(200, 206, 214), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS HEMSWORTH'], ccol=WHT,
     ft='a', vbox=(200, 206, 214), vink=(30, 42, 44), fcol=(190, 200, 200), fin=SLIP)
 
-# Thor: Ragnarok: Sakaar's eighties blue and green, orange THOR and the rainbow RAGNAROK (typeset), Thor at the head
+# Thor: Ragnarok: Sakaar's eighties blue and green, the poster's orange THOR and rainbow RAGNAROK cut off it, Thor at the head
 std('thor-ragnarok-2017', ('grad', [(0, (40, 80, 180)), (.5, (30, 50, 110)), (1, (20, 60, 40))]), (250, 150, 40),
-    [T('THOR', 'intbk', 70, (250, 160, 40)), T('RAGNAROK', 'intbk', 70, WHT, grad=[(0, (240, 80, 160)), (.5, (250, 200, 80)), (1, (80, 200, 240))], outline=((20, 20, 40), 1.6))], tgap=8,
+    LC([(0.1, 0.82, 0.9, 0.935)], 140), tgap=8,
     photo=ph(.47, .45, .3, 1.0), pb=(250, 160, 40), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS HEMSWORTH', 'TOM HIDDLESTON'], ccol=WHT,
     ft='a', vbox=(250, 160, 40), vink=(30, 50, 110), fcol=WHT, fin=SLIP)
 
-# The Intouchables (2011): the poster's warm black and green, the cream lower case (typeset), Philippe and Driss
+# The Intouchables (2011): the poster's warm black and green, the cream The Intouchables lifted, Philippe and Driss
 std('the-intouchables-2011', ('grad', [(0, (60, 70, 50)), (.6, (24, 26, 20)), (1, (6, 6, 4))]), (240, 226, 190),
-    [T('The', 'her', 36, (242, 228, 192)), T('Intouchables', 'her', 76, (242, 228, 192))], tgap=6,
+    L([(0.44, 0.81, 0.565, 0.862), (0.44, 0.866, 0.95, 0.928)], 76, (242, 228, 192), mode='light', speck=0), tgap=6,
     photo=ph(.74, .2, .45, 1.0), pb=(242, 228, 192), lg=WHT, lw=.6, order='LPTCF', credit=['FRANÇOIS CLUZET', 'OMAR SY'], ccol=(242, 228, 192),
     ft='a', vbox=(242, 228, 192), vink=(24, 26, 20), fcol=(210, 206, 190), fin=SLIP, seed=2011, dotst=(['STAFF', 'PICK'], (60, 120, 70)))
 
-# Doctor Strange (2016): the mirror city's sky, the gold engraved capitals (typeset), Strange in the portal
+# Doctor Strange (2016): the mirror city's sky, the gold engraved DOCTOR STRANGE cut off the poster, Strange in the portal
 std('doctor-strange-2016', ('grad', [(0, (120, 160, 200)), (.5, (50, 70, 110)), (1, (14, 18, 30))]), (230, 180, 70),
-    [T('DOCTOR', 'ter', 44, (234, 186, 76), track=.1), T('STRANGE', 'ter', 90, (234, 186, 76), track=.04, grad=[(0, (250, 220, 120)), (1, (200, 140, 40))])], tgap=6,
+    [LC([(0.28, 0.785, 0.72, 0.84)], 44), LC([(0.08, 0.838, 0.92, 0.93)], 90)], tgap=6,
     photo=ph(.5, .3, .5, 1.0), pb=(234, 186, 76), lg=WHT, lw=.6, order='LPTCF', credit=['BENEDICT CUMBERBATCH'], ccol=(234, 186, 76),
     ft='a', vbox=(234, 186, 76), vink=(50, 70, 110), fcol=(200, 210, 224), fin=SLIP)
 
-# Avengers: Infinity War: Titan's fire red and orange, gold AVENGERS (typeset), the whole line-up
+# Avengers: Infinity War: Titan's fire red and orange, the poster's gold AVENGERS / INFINITY WAR logo cut off it, the whole line-up
 std('avengers-infinity-war-2018', ('grad', [(0, (220, 100, 40)), (.5, (130, 30, 30)), (1, (30, 8, 10))]), (240, 190, 80),
-    [T('AVENGERS', 'intbki', 84, (244, 196, 86), grad=[(0, (250, 226, 140)), (1, (210, 140, 40))], outline=((60, 20, 10), 1.6)), T('INFINITY WAR', 'ter', 32, (244, 196, 86), track=.2)], tgap=8,
+    LC([(0.1, 0.77, 0.9, 0.93)], 140), tgap=8,
     photo=ph(.5, .4, .8, .6), pb=(244, 196, 86), lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT DOWNEY JR.', 'CHRIS HEMSWORTH'], ccol=WHT,
     ft='a', vbox=(244, 196, 86), vink=(130, 30, 30), fcol=(240, 210, 190), fin=SLIP)
 
-# Guardians of the Galaxy Vol. 2: the cosmic purple and orange, the blue-gold capitals and the pink VOL. 2 (typeset), Peter at the head
+# Guardians of the Galaxy Vol. 2: the cosmic purple and orange, the poster's blue GUARDIANS OF THE GALAXY and red VOL. 2 cut off it, Peter at the head
 std('guardians-of-the-galaxy-vol-2-2017', ('grad', [(0, (60, 40, 120)), (.5, (180, 70, 90)), (1, (40, 20, 60))]), (100, 180, 240),
-    [T('GUARDIANS OF THE GALAXY', 'intbk', 54, (110, 190, 250), squeeze=.86, outline=((20, 20, 50), 1.6)), T('VOL. 2', 'cho', 50, (250, 100, 160))], tgap=8,
+    LC([(0.08, 0.775, 0.95, 0.975)], 170), tgap=8,
     photo=ph(.5, .25, .4, 1.0), pb=(250, 200, 80), lg=WHT, lw=.6, order='LPTCF', credit=['A JAMES GUNN', 'FILM'], ccol=WHT,
     ft='a', vbox=(250, 200, 80), vink=(60, 40, 120), fcol=WHT, fin=SLIP)
 
-# Avengers: Age of Ultron: Sokovia's ash grey and blue, the red AVENGERS (typeset), the team charging
+# Avengers: Age of Ultron: Sokovia's ash grey and blue, the poster's red AVENGERS / AGE OF ULTRON logo cut off it, the team charging
 std('avengers-age-of-ultron-2015', ('grad', [(0, (180, 186, 190)), (.5, (70, 80, 100)), (1, (14, 18, 26))]), (200, 30, 30),
-    [T('AVENGERS', 'intbki', 84, (206, 32, 32), outline=((30, 10, 10), 1.6)), T('AGE OF ULTRON', 'herbi', 30, WHT, track=.12)], tgap=8,
+    LC([(0.1, 0.768, 0.9, 0.94)], 140), tgap=8,
     photo=ph(.5, .45, .8, .6), pb=(206, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['A JOSS WHEDON', 'FILM'], ccol=WHT,
     ft='a', vbox=(206, 32, 32), fcol=(200, 206, 214), fin=SLIP, seed=2015)
 
-# Avengers: Endgame (181 minutes, one tape like Oppenheimer): the poster's violet, silver-blue AVENGERS (typeset), the survivors
+# Avengers: Endgame (181 minutes, one tape like Oppenheimer): the poster's violet, its blue AVENGERS / ENDGAME logo cut off it, the survivors
 std('avengers-endgame-2019', ('grad', [(0, (80, 60, 160)), (.5, (40, 30, 90)), (1, (10, 8, 26))]), (180, 190, 230),
-    [T('AVENGERS', 'intbki', 84, (190, 200, 240), grad=[(0, (220, 226, 250)), (1, (110, 120, 200))], outline=((20, 16, 50), 1.6)), T('ENDGAME', 'her', 32, (200, 206, 240), track=.4)], tgap=8,
+    LC([(0.18, 0.76, 0.82, 0.9)], 140), tgap=8,
     photo=ph(.5, .25, .6, 1.0), pb=(190, 200, 240), lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT DOWNEY JR.', 'CHRIS EVANS'], ccol=WHT,
     ft='a', vbox=(190, 200, 240), vink=(40, 30, 90), fcol=(200, 200, 226), fin=SLIP)
 
-# Iron Man 2 (2010): Stark red and gold on black, the red stencil capitals (typeset), the helmet
+# Iron Man 2 (2010): Stark red and gold on black, the poster's red metal IRON MAN 2 cut off it, the helmet
 std('iron-man-2-2010', ('grad', [(0, (60, 60, 64)), (.6, (20, 20, 22)), (1, (6, 6, 6))]), (210, 30, 30),
-    T('IRON MAN 2', 'hcnb', 96, (214, 34, 34), squeeze=.76, bold=.8, outline=((230, 180, 60), 1.4)),
+    LC([(0.1, 0.85, 0.9, 0.955)], 96),
     photo=ph(.6, .15, .35, 1.0), pb=(230, 180, 60), lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT DOWNEY JR.'], ccol=(230, 180, 60),
     ft='a', vbox=(214, 34, 34), fcol=(200, 200, 204), fin=SLIP, seed=2010)
 
-# Captain America: Civil War: the shield's steel and red, the red-and-silver capitals (typeset), Steve and Tony face to face
+# Captain America: Civil War: the shield's steel and red, the poster's CAPTAIN AMERICA over steel CIVIL WAR cut off it, Steve and Tony face to face
 std('captain-america-civil-war-2016', ('grad', [(0, (150, 160, 176)), (.5, (70, 80, 100)), (1, (16, 18, 26))]), (200, 30, 30),
-    [T('CAPTAIN AMERICA', 'herb', 28, (206, 34, 34), track=.2), T('CIVIL WAR', 'intbk', 96, WHT, grad=[(0, (250, 250, 255)), (.5, (150, 160, 176)), (1, (230, 232, 240))], outline=((180, 30, 30), 2.0))], tgap=8,
+    LC([(0.27, 0.425, 0.73, 0.55)], 150), tgap=8,
     photo=ph(.5, .2, .9, .6), pb=(206, 34, 34), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS EVANS', 'ROBERT DOWNEY JR.'], ccol=WHT,
     ft='a', vbox=(206, 34, 34), fcol=(210, 214, 220), fin=SLIP, seed=2016)
 
-# Ant-Man and the Wasp: the poster's red-and-gold slash on white, red ANT-MAN and gold WASP (typeset), Hope at the head
+# Ant-Man and the Wasp: the poster's red-and-gold slash on white, red ANT-MAN and gold WASP (typeset: the poster's run up a steep diagonal), Hope at the head
 std('ant-man-and-the-wasp-2018', ('grad', [(0, (244, 240, 236)), (.4, (230, 120, 60)), (1, (130, 20, 20))]), (200, 30, 30),
-    TT([('ANT-MAN', (206, 32, 32)), ('AND THE', (40, 30, 30)), ('WASP', (240, 180, 40))], 'intbki', 72, sp=.2, squeeze=.84, outline=((40, 20, 20), 1.2)),
+    TT([('ANT-MAN', (206, 32, 32)), ('AND THE', (40, 30, 30)), ('WASP', (240, 180, 40))], 'intbki', 72, sp=.2, squeeze=.84, outline=((40, 20, 20), 1.4)),
     photo=ph(.5, .15, .3, 1.0), pb=(206, 32, 32), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['PAUL RUDD', 'EVANGELINE LILLY'], ccol=WHT,
     ft='a', vbox=(206, 32, 32), fcol=WHT, fin=SLIP)
 
-# Manhattan Murder Mystery (1993): a real rental, the poster's royal blue night, yellow condensed capitals (typeset), the four in their frames
+# Manhattan Murder Mystery (1993): a real rental, the poster's royal blue night, yellow condensed capitals (typeset: on the poster MURDER is printed upside down, which reads as a misprint on a spine), the four in their frames
 std('manhattan-murder-mystery-1993', ('grad', [(0, (40, 60, 180)), (.6, (20, 30, 110)), (1, (6, 10, 30))]), (246, 230, 50),
     T('MANHATTAN MURDER MYSTERY', 'hcnb', 70, (248, 232, 54), squeeze=.76),
     photo=ph(.5, .25, .9, .6), pb=(248, 232, 54), lg=WHT, lw=.6, order='LPTCSF', credit=['WOODY ALLEN', 'DIANE KEATON'], ccol=WHT,
