@@ -2636,9 +2636,9 @@ std('black-bear-2020', ('grad', [(0, (40, 80, 84)), (.6, (16, 30, 32)), (1, (110
     photo=ph(.5, .55, .45, 1.0), pb=(200, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['AUBREY PLAZA'], ccol=WHT,
     ft='a', vbox=(200, 40, 40), fcol=(200, 210, 210), fin=MINT)
 
-# Never Rarely Sometimes Always: the poster's putty panel, the grey condensed capitals, Autumn's face
+# Never Rarely Sometimes Always: the poster's putty panel, its grey condensed capitals lifted, Autumn's face
 std('never-rarely-sometimes-always-2020', ('solid', (232, 228, 214)), (90, 86, 80),
-    [T('NEVER RARELY', 'hcn', 64, (92, 88, 82), squeeze=.72), T('SOMETIMES ALWAYS', 'hcn', 64, (92, 88, 82), squeeze=.72)], tgap=10,  # typeset: the thin condensed letters broke up
+    [L((0.045, 0.067, 0.722, 0.153), 64, (92, 88, 82), mode='dark'), L((0.041, 0.161, 0.958, 0.249), 64, (92, 88, 82), mode='dark')], tgap=10,
     photo=ph(.62, .55, .55, 1.0), pb=(92, 88, 82), lg=(92, 88, 82), lw=.7, order='LPTCF', credit=['AN ELIZA HITTMAN', 'FILM'], ccol=(92, 88, 82),
     ft='a', vbox=(92, 88, 82), fcol=(92, 88, 82), fin=MINT)
 
@@ -3175,9 +3175,9 @@ std('small-town-crime-2018', ('grad', [(0, (238, 236, 230)), (.6, (214, 210, 204
     photo=ph(.55, .12, .3, 1.0), pb=(182, 42, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['JOHN HAWKES'], ccol=(30, 30, 30),
     ft='a', vbox=(182, 42, 42), fcol=(30, 30, 30), fin=MINT)
 
-# Den of Thieves: LA steel blue, the red heavy capitals off the white band, Big Nick in his vest
+# Den of Thieves: LA steel blue, the poster's red heavy capitals lifted off its white band and set back on one, Big Nick in his vest
 std('den-of-thieves-2018', ('grad', [(0, (90, 110, 130)), (.6, (34, 42, 50)), (1, (10, 12, 14))]), (220, 30, 30),
-    T('DEN OF THIEVES', 'hcnb', 84, (220, 30, 30), squeeze=.76, bold=1.0, box=(WHT, 10, 6)),  # typeset on its white band
+    L((0.086, 0.485, 0.906, 0.59), 84, (220, 30, 30), mode='key', key=(220, 30, 30), t=(70, 150), plate=(WHT, 10, 6)),
     photo=ph(.6, .75, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['GERARD BUTLER'], ccol=WHT,
     ft='a', vbox=(220, 30, 30), fcol=(200, 206, 214), fin=MINT)
 
@@ -3955,9 +3955,9 @@ std('the-great-dictator-1940', ('grad', [(0, (246, 236, 140)), (.6, (236, 220, 1
     photo=ph(.6, .2, .45, 1.0), pb=(200, 30, 40), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=(40, 30, 20), order='lPTCSF', credit=['CHARLES CHAPLIN'], ccol=(40, 30, 20),
     stick=PRC(['$2.99', 'CLASSIC']), ft='e', fcol=(40, 30, 20), fin=OLD, seed=1940)
 
-# Warriors of the Wind (1984): the US cut of Nausicaä, but the poster is Nausicaä's, so the spine is too: Ghibli sky blue, the white serif capitals (typeset), Nausicaä by the Ohmu
+# Warriors of the Wind (1984): the US cut of Nausicaä, but the poster is Nausicaä's, so the spine is too: Ghibli sky blue, its white NAUSICAÄ / OF THE VALLEY OF THE WIND lifted, Nausicaä on the Ohmu shell
 std('warriors-of-the-wind-1984', ('grad', [(0, (60, 140, 220)), (.5, (150, 200, 230)), (1, (190, 170, 130))]), WHT,
-    [T('NAUSICAÄ', 'ter', 84, WHT, track=.06, outline=((30, 60, 120), 1.4)), T('OF THE VALLEY OF THE WIND', 'ter', 26, WHT, track=.08, outline=((30, 60, 120), 1.0))], tgap=8,
+    [L((0.092, 0.088, 0.909, 0.19), 84, WHT, mode='light', speck=0, outline=((30, 60, 120), 1.4)), L((0.072, 0.193, 0.923, 0.229), 26, WHT, mode='light', speck=0)], tgap=8,
     photo=ph(.6, .38, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A HAYAO MIYAZAKI', 'FILM'], ccol=(30, 50, 90),
     stick=flow(dot, 70, ['ANIME'], (220, 60, 100), d=60), ft='a', vbox=(30, 50, 90), fcol=(30, 50, 90), fin=WORN, seed=1984)
 
@@ -4021,9 +4021,9 @@ std('the-king-of-kong-a-fistful-of-quarters-2007', ('grad', [(0, (30, 70, 160)),
     photo=ph(.5, .32, .7, .6), pb=(248, 166, 46), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(248, 166, 46), vink=(16, 34, 80), fcol=(200, 210, 230), fin=WORN, seed=2007)
 
-# Cinema Paradiso (1988): the projection booth's black and gold, the gold art-deco lettering, Totò's smile
+# Cinema Paradiso (1988): the projection booth's black and gold, the poster's gold art-deco cinema PARADISO cut off it, Totò's smile
 std('cinema-paradiso-1988', ('grad', [(0, (60, 40, 20)), (.6, (20, 14, 8)), (1, (4, 4, 2))]), (240, 214, 130),
-    [T('cinema', 'cho', 50, (244, 218, 134)), T('PARADISO', 'adv', 84, (244, 218, 134), track=.08, bold=.4)], tgap=6,
+    LC([(0.131, 0.62, 0.855, 0.884)], 170, cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 0] > a[..., 2] + .2) & (_lum(a) > .4))]), tgap=6,
     photo=ph(.6, .22, .5, 1.0), pb=(244, 218, 134), lg=WHT, lw=.6, order='LPTCSF', credit=['A GIUSEPPE TORNATORE', 'FILM'], ccol=(244, 218, 134),
     stick=RWD(fill=(250, 240, 220)), ft='a', vbox=(244, 218, 134), vink=(20, 14, 8), fcol=(210, 200, 180), fin=RENTAL, seed=1988)
 
