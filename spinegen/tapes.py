@@ -3641,27 +3641,27 @@ std('sorry-wrong-number-1948', ('grad', [(0, (246, 226, 70)), (.6, (230, 200, 50
     photo=ph(.2, .72, .4, 1.0), pb=(204, 42, 42), lg=(30, 26, 20), lw=.6, order='LPTCF', credit=['BARBARA STANWYCK', 'BURT LANCASTER'], ccol=(30, 26, 20),
     ft='e', fcol=(30, 26, 20), fin=OLD, seed=1948)
 
-# The Dreamers (2003): the poster's Paris pink, white rough capitals (typeset), Isabelle at the head
+# The Dreamers (2003): the poster's Paris pink, the white rough capitals lifted off it, Isabelle at the head
 std('the-dreamers-2003', ('grad', [(0, (200, 80, 130)), (.6, (120, 40, 80)), (1, (30, 10, 20))]), WHT,
-    T('THE DREAMERS', 'herb', 70, WHT, rough=.6),
+    L((0.051, 0.108, 0.837, 0.184), 70, WHT, mode='light'),
     photo=ph(.5, .45, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A BERNARDO BERTOLUCCI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 40, 80), fcol=(240, 210, 226), fin=WORN, seed=2003)
 
-# Runaway Jury (2003): the courthouse black and sepia, white serif capitals (typeset), Nick at the head
+# Runaway Jury (2003): the courthouse black and sepia, the white serif RUNAWAY JURY lifted, Nick at the head
 std('runaway-jury-2003', ('grad', [(0, (70, 56, 40)), (.6, (26, 20, 14)), (1, (6, 4, 4))]), WHT,
-    [T('RUNAWAY', 'ter', 44, WHT, track=.08), T('JURY', 'ter', 100, WHT, track=.04)], tgap=6,
+    [L((0.231, 0.792, 0.742, 0.845), 44, WHT, mode='light'), L((0.43, 0.846, 0.958, 0.959), 100, WHT, mode='light')], tgap=6,
     photo=ph(.4, .45, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JOHN CUSACK', 'GENE HACKMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(26, 20, 14), fcol=(220, 206, 190), fin=WORN, seed=2003)
 
-# The Pelican Brief (1993): a real rental, sepia gold, white serif capitals (typeset), Darby at the screen
+# The Pelican Brief (1993): a real rental, sepia gold, the white serif THE PELICAN BRIEF lifted off the poster, Darby at the screen
 std('the-pelican-brief-1993', ('grad', [(0, (170, 110, 50)), (.6, (80, 50, 20)), (1, (20, 12, 6))]), WHT,
-    [T('THE', 'ter', 26, WHT, track=.3), T('PELICAN BRIEF', 'ter', 72, WHT, track=.02)], tgap=6,
+    [L((0.44, 0.064, 0.565, 0.084), 26, WHT, mode='light', speck=0), L((0.136, 0.083, 0.854, 0.151), 72, WHT, mode='light')], tgap=6,
     photo=ph(.55, .4, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['JULIA ROBERTS', 'DENZEL WASHINGTON'], ccol=WHT,
     stick=RWD(fill=(250, 246, 200)), ft='a', vbox=WHT, vink=(80, 50, 20), fcol=(230, 210, 190), fin=RENTAL, seed=1993)
 
-# Icarus: the poster's flat red, yellow capitals with the white R (typeset; the poster's R is backwards), the puppet-master's hand
+# Icarus: the poster's flat red, its yellow ICARUS with the backwards white R cut off it, the puppet-master's hand
 std('icarus-2017', ('solid', (226, 30, 30)), (250, 210, 40),
-    TT([('ICA', (250, 212, 44)), ('R', WHT), ('US', (250, 212, 44))], 'hcnb', 110, sp=0, squeeze=.8, bold=.6),
+    LC([(0.113, 0.398, 0.886, 0.529)], 110, cuts=[key_cut(lambda a: ((a[..., 0] > .8) & (a[..., 1] > .65) & (a[..., 2] < .4)) | (_lum(a) > .85))]),
     photo=ph(.5, .12, .5, 1.0), pb=(20, 18, 18), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(20, 18, 18), fcol=WHT, fin=MINT)
 
@@ -3671,37 +3671,37 @@ std('blow-out-1981', ('grad', [(0, (40, 40, 50)), (.6, (14, 14, 18)), (1, (4, 4,
     photo=ph(.75, .35, .45, 1.0), pb=WHT, studio=['FILMWAYS PICTURES'], scol=WHT, order='lPTCSF', credit=['JOHN TRAVOLTA'], ccol=WHT,
     stick=flow(dot, 70, ['CULT'], (240, 140, 30), d=60), ft='e', fcol=(200, 200, 206), fin=OLD, seed=1981)
 
-# X-Men: First Class: Cuban-crisis teal, the silver capitals (typeset), the class on the beach
+# X-Men: First Class: Cuban-crisis teal, the silver X-MEN FIRST CLASS lifted off the poster, the class on the beach
 std('x-men-first-class-2011', ('grad', [(0, (50, 90, 100)), (.6, (16, 30, 36)), (1, (4, 8, 10))]), (220, 224, 230),
-    [T('X-MEN', 'intbk', 90, WHT, grad=[(0, (250, 250, 255)), (.5, (150, 160, 176)), (1, (230, 234, 240))]), T('FIRST CLASS', 'intbk', 40, (200, 206, 214), track=.1)], tgap=8,
+    [L((0.189, 0.79, 0.815, 0.871), 90, WHT, mode='light'), L((0.189, 0.872, 0.815, 0.908), 40, (200, 206, 214), mode='light')], tgap=8,
     photo=ph(.5, .35, .8, .8), pb=(230, 190, 60), lg=WHT, lw=.6, order='LPTCF', credit=['JAMES McAVOY', 'MICHAEL FASSBENDER'], ccol=WHT,
     ft='a', vbox=(230, 190, 60), vink=(16, 30, 36), fcol=(190, 200, 206), fin=SLIP, seed=2011)
 
-# Exit Through the Gift Shop: gallery white, the red dripping spray capitals (typeset), the rat with the paint can
+# Exit Through the Gift Shop: gallery white, the poster's red dripping spray-paint lettering cut off it, the rat with the paint can
 std('exit-through-the-gift-shop-2010', ('solid', (244, 242, 238)), (200, 30, 30),
-    T('EXIT THROUGH THE GIFT SHOP', 'intbk', 60, (204, 32, 32), squeeze=.82, rough=.5),
+    LC([(0.03, 0.005, 0.99, 0.197), (0.03, 0.197, 0.99, 0.408), (0.03, 0.408, 0.99, 0.57), (0.03, 0.57, 0.99, 0.736)], 90, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35) & (a[..., 2] < .35))] * 4),
     photo=ph(.8, .85, .35, 1.0), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['A BANKSY FILM'], ccol=(20, 18, 18),
     ft='a', vbox=(204, 32, 32), fcol=(20, 18, 18), fin=SLIP, seed=2010)
 
-# The Body (2012): the morgue's dark teal, white heavy capitals (typeset), Mayka between the two men
+# The Body (2012): the morgue's dark teal, the white heavy THE BODY lifted, Mayka between the two men
 std('the-body-2012', ('grad', [(0, (40, 60, 60)), (.6, (14, 20, 20)), (1, (4, 6, 6))]), WHT,
-    T('THE BODY', 'intbk', 100, WHT),
+    L((0.214, 0.71, 0.783, 0.773), 100, WHT, mode='light'),
     photo=ph(.48, .2, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AN ORIOL PAULO', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 20, 20), fcol=(190, 200, 200), fin=SLIP)
 
-# Logan: the dust-orange sun, white heavy capitals (typeset), Logan and Laura
+# Logan: the dust-orange sun, the white heavy LOGAN lifted off the poster, Logan and Laura
 std('logan-2017', ('grad', [(0, (210, 110, 40)), (.5, (110, 50, 20)), (1, (20, 10, 6))]), WHT,
-    T('LOGAN', 'intbk', 120, WHT),
+    L((0.124, 0.831, 0.819, 0.924), 120, WHT, mode='light'),
     photo=ph(.5, .2, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['HUGH JACKMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 50, 20), fcol=(240, 220, 200), fin=SLIP)
 
-# The Death of Stalin: the white plate, the red heavy capitals (typeset), the committee
+# The Death of Stalin: the white plate, the poster's red heavy THE DEATH OF STALIN (with its star) lifted, the committee
 std('the-death-of-stalin-2017', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 220)), (1, (170, 160, 150))]), (210, 30, 30),
-    TT([('THE DEATH OF', (214, 32, 32)), ('STALIN', (214, 32, 32))], 'intbk', 66, sp=.25, squeeze=.86),
+    [L((0.04, 0.721, 0.961, 0.788), 60, (214, 32, 32), mode='key', key=(220, 30, 30), t=(70, 150)), L((0.036, 0.79, 0.961, 0.925), 120, (214, 32, 32), mode='key', key=(220, 30, 30), t=(70, 150))],
     photo=ph(.55, .35, .8, .6), pb=(214, 32, 32), lg=(30, 26, 24), lw=.6, order='LPTCF', credit=['AN ARMANDO IANNUCCI', 'FILM'], ccol=(30, 26, 24),
     ft='a', vbox=(214, 32, 32), fcol=(30, 26, 24), fin=SLIP)
 
-# Captain Marvel: cosmic red and blue, the gold-and-red capitals (typeset), Carol at the head
+# Captain Marvel: cosmic red and blue, gold-and-red capitals (typeset: the poster's are beveled red on a red glow, and no cut separates them), Carol at the head
 std('captain-marvel-2019', ('grad', [(0, (40, 50, 120)), (.5, (150, 30, 50)), (1, (30, 10, 20))]), (250, 200, 80),
     [T('CAPTAIN', 'intbk', 40, (250, 204, 90), track=.12), T('MARVEL', 'intbk', 100, (220, 40, 40), outline=((250, 204, 90), 2.0))], tgap=8,
     photo=ph(.5, .12, .35, 1.0), pb=(250, 204, 90), lg=WHT, lw=.6, order='LPTCF', credit=['BRIE LARSON'], ccol=(250, 204, 90),
@@ -3709,15 +3709,15 @@ std('captain-marvel-2019', ('grad', [(0, (40, 50, 120)), (.5, (150, 30, 50)), (1
 
 # ----- the 2020 Marvel run (Marvel Studios: slipcases, like Deadpool & Wolverine) -----
 
-# Captain America: The First Avenger (2011): the poster's war-smoke grey, silver capitals (typeset), Steve at the head
+# Captain America: The First Avenger (2011): the poster's war-smoke grey, silver capitals (typeset: the poster's chrome sits on a speckled grey of the same tone, and a lift comes off as specks), Steve at the head
 std('captain-america-the-first-avenger-2011', ('grad', [(0, (150, 150, 150)), (.6, (60, 60, 62)), (1, (16, 16, 18))]), (220, 224, 230),
-    [T('CAPTAIN AMERICA', 'intbk', 66, WHT, squeeze=.86, grad=[(0, (250, 250, 255)), (.5, (150, 156, 170)), (1, (230, 232, 240))], outline=((20, 24, 40), 1.6)), T('THE FIRST AVENGER', 'herb', 24, (200, 40, 40), track=.3)], tgap=8,
+    [T('CAPTAIN AMERICA', 'intbk', 66, WHT, squeeze=.86, grad=[(0, (250, 250, 255)), (.5, (150, 156, 170)), (1, (230, 232, 240))], outline=((20, 24, 40), 1.4)), T('THE FIRST AVENGER', 'herb', 22, WHT, track=.3)], tgap=8,
     photo=ph(.45, .12, .3, 1.0), pb=(200, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS EVANS'], ccol=WHT,
     ft='a', vbox=(200, 40, 40), fcol=(210, 210, 214), fin=SLIP, seed=2011)
 
-# Thor (2011): Asgard night, the red Roman capitals (typeset), Thor with the hammer
+# Thor (2011): Asgard night, the red Roman THOR lifted off the poster, Thor with the hammer
 std('thor-2011', ('grad', [(0, (30, 40, 70)), (.6, (12, 16, 30)), (1, (4, 6, 10))]), (200, 30, 30),
-    T('THOR', 'ter', 120, (210, 34, 34), track=.3),
+    L((0.157, 0.096, 0.861, 0.197), 120, (210, 34, 34), mode='key', key=(190, 30, 30), t=(70, 150)),
     photo=ph(.5, .47, .35, 1.0), pb=(210, 34, 34), lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS HEMSWORTH', 'NATALIE PORTMAN'], ccol=WHT,
     ft='a', vbox=(210, 34, 34), fcol=(190, 196, 210), fin=SLIP, seed=2011)
 
