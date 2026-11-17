@@ -2660,9 +2660,9 @@ std('judas-and-the-black-messiah-2021', ('grad', [(0, (200, 36, 30)), (.6, (120,
     photo=ph(.62, .22, .55, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DANIEL KALUUYA', 'LAKEITH STANFIELD'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 16, 14), fcol=(240, 210, 206), fin=MINT)
 
-# Shiva Baby: midnight violet, the pink neon script (typeset: the glow wouldn't lift), Danielle with her bagel
+# Shiva Baby: midnight violet, the poster's pink neon script cut off it in its own glow, Danielle with her bagel
 std('shiva-baby-2021', ('grad', [(0, (60, 40, 90)), (.6, (26, 18, 44)), (1, (10, 6, 16))]), (250, 150, 220),
-    T('Shiva Baby', 'cho', 120, (252, 170, 230), soft=((240, 80, 200), 7, .7)),
+    LC([(0.02, 0.02, 0.97, 0.212)], 140, cuts=[key_cut(lambda a: _lum(a) > .45)]),
     photo=ph(.46, .34, .34, 1.0), pb=(252, 170, 230), lg=WHT, lw=.6, order='LPTCF', credit=['RACHEL SENNOTT'], ccol=(252, 170, 230),
     ft='a', vbox=(252, 170, 230), vink=(26, 18, 44), fcol=(210, 200, 226), fin=MINT)
 
@@ -2678,15 +2678,15 @@ std('another-round-2020', ('grad', [(0, (90, 150, 196)), (.6, (40, 80, 120)), (1
     photo=ph(.4, .5, .5, 1.0), pb=WHT, lg=WHT, lw=.7, order='LPTCF', credit=['MADS MIKKELSEN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 80, 120), fcol=(210, 222, 234), fin=MINT)
 
-# Mank: black and white, the white brush script (typeset: it runs over the crowd), Mank in the middle (no logo file: the label in type)
+# Mank: black and white, the white brush script lifted off the poster, Mank in the middle (no logo file: the label in type)
 std('mank-2020', ('grad', [(0, (120, 120, 120)), (.5, (50, 50, 50)), (1, (10, 10, 10))]), WHT,
-    T('Mank', 'cho', 150, WHT, shadow=((0, 0, 0), 3, 3)),
+    L((0.3, 0.52, 0.83, 0.665), 150, WHT, mode='key', key=(250, 250, 250), t=(20, 50), shadow=((0, 0, 0), 3, 3)),
     photo=ph(.48, .2, .5, 1.0), pb=WHT, studio=['NETFLIX'], scol=WHT, order='lPTCF', credit=['A DAVID FINCHER', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(50, 50, 50), fcol=(200, 200, 200), fin=MINT)
 
-# I Care a Lot: the poster's flat teal, the cream italic capitals (typeset: they overlap her hair), Marla in her shades
+# I Care a Lot: the poster's flat teal, its cream italic I CARE A LOT. lifted word by word, Marla in her shades
 std('i-care-a-lot-2021', ('solid', (98, 146, 146)), (250, 222, 196),
-    T('I CARE A LOT.', 'intbki', 92, (250, 222, 196), squeeze=.86),
+    L([(0.185, 0.105, 0.275, 0.25), (0.39, 0.25, 0.94, 0.4), (0.145, 0.45, 0.285, 0.59), (0.39, 0.632, 0.795, 0.78)], 92, (250, 222, 196), mode='key', key=(250, 222, 196), t=(40, 90), gapf=.3),
     photo=ph(.7, .5, .3, 1.0), pb=(226, 52, 44), lg=WHT, lw=.6, order='LPTCF', credit=['ROSAMUND PIKE'], ccol=(250, 222, 196),
     ft='a', vbox=(226, 52, 44), fcol=(250, 222, 196), fin=MINT)
 
@@ -2696,9 +2696,9 @@ std('the-father-2020', ('grad', [(0, (120, 84, 50)), (.6, (50, 34, 20)), (1, (14
     photo=ph(.77, .42, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ANTHONY HOPKINS', 'OLIVIA COLMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(50, 34, 20), fcol=(220, 206, 190), fin=MINT)
 
-# Nobody: black with the bloody knuckles, the grungy white stencil (typeset: the lift came off as scratches), Hutch at the head
+# Nobody: black with the bloody knuckles, the poster's scuffed white NOBODY plate cut off it as it is, Hutch at the head
 std('nobody-2021', ('grad', [(0, (50, 46, 44)), (.6, (18, 16, 16)), (1, (60, 10, 10))]), WHT,
-    T('NOBODY', 'intbki', 120, (240, 238, 234), squeeze=.8, rough=.8),
+    LC([(0.19, 0.795, 0.83, 0.935)], 120, cuts=[key_cut(lambda a: _lum(a) > .55)]),
     photo=ph(.45, .26, .5, 1.0), pb=(190, 30, 30), lg=WHT, lw=.7, order='LPTCF', credit=['BOB ODENKIRK'], ccol=WHT,
     ft='a', vbox=(190, 30, 30), fcol=(200, 196, 194), fin=SLIP)
 
@@ -2719,11 +2719,9 @@ disney('soul-2020', ('grad', [(0, (40, 90, 190)), (.5, (24, 50, 120)), (1, (10, 
        title=TT([('S', (60, 150, 245)), ('O', (250, 206, 70)), ('UL', (60, 150, 245))], 'popb', 150, sp=0, shadow=((10, 20, 60), 3, 3)),  # typeset: the logo's blues run into the sky; Ian could supply it
        face=ph(.37, .2, .2, 1.4), lcol=WHT)
 
-# Friends: The Reunion: Central Perk's dark brick, F.R.I.E.N.D.S with its coloured dots and the yellow-brush THE REUNION (typeset), the six on the stoop
+# Friends: The Reunion: Central Perk's dark brick, the poster's F.R.I.E.N.D.S with its coloured dots and the yellow-brush THE REUNION cut off it, the six on the stoop
 std('friends-the-reunion-2021', ('grad', [(0, (60, 54, 44)), (.6, (26, 22, 18)), (1, (8, 6, 6))]), WHT,
-    [TT([('F', WHT), ('.', (220, 40, 40)), ('R', WHT), ('.', (40, 140, 220)), ('I', WHT), ('.', (250, 210, 40)), ('E', WHT), ('.', (220, 40, 40)),
-         ('N', WHT), ('.', (250, 210, 40)), ('D', WHT), ('.', (40, 140, 220)), ('S', WHT)], 'ter', 92, sp=.02),
-     T('THE REUNION', 'herbi', 34, (30, 26, 20), box=((250, 220, 50), 8, 4), track=.25)], tgap=10,
+    LC([(0.03, 0.075, 0.985, 0.225)], 120), tgap=10,
     photo=ph(.5, .42, .8, .6), pb=(250, 220, 50), lg=WHT, lw=.7, order='LPTF',
     ft='a', vbox=(250, 220, 50), vink=(26, 22, 18), fcol=(210, 204, 196), fin=MINT)
 
@@ -2738,9 +2736,9 @@ disney('cruella-2021', ('grad', [(0, (60, 60, 62)), (.5, (24, 24, 26)), (1, (8, 
        title=LC([(0.09, 0.49, 0.93, 0.84)], 150, cuts=[key_cut(lambda a: (a[..., 0] > .42) & (a[..., 0] > a[..., 1] + .25) & (a[..., 0] > a[..., 2] + .2), soft=1.0)]),
        face=ph(.52, .2, .2, 1.4), lcol=WHT)
 
-# False Positive: hospital black, the thin white condensed capitals with the red I (typeset), Lucy at the centre
+# False Positive: hospital black, the thin white condensed capitals with the red I cut off the poster, Lucy at the centre
 std('false-positive-2021', ('grad', [(0, (50, 50, 54)), (.6, (18, 18, 20)), (1, (6, 6, 6))]), WHT,
-    TT([('FALSE POS', WHT), ('I', (220, 40, 40)), ('T', WHT), ('I', (220, 40, 40)), ('VE', WHT)], 'hcn', 84, squeeze=.6, sp=0),
+    LC([(0.2, 0.638, 0.8, 0.724)], 84, cuts=[key_cut(lambda a: (_lum(a) > .7) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
     photo=ph(.42, .37, .4, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['ILANA GLAZER', 'JUSTIN THEROUX'], ccol=WHT,
     ft='a', vbox=(220, 40, 40), fcol=(200, 200, 204), fin=MINT)
 
@@ -2763,21 +2761,21 @@ std('space-jam-a-new-legacy-2021', ('grad', [(0, (250, 140, 30)), (.5, (226, 60,
     photo=ph(.53, .3, .22, 1.0), pb=WHT, lg=WHT, lw=.7, order='LPTCF', credit=['LeBRON JAMES'], ccol=WHT,
     ft='a', vbox=WHT, vink=(226, 60, 90), fcol=WHT, fin=MINT)
 
-# Woodstock 99: Peace, Love, and Rage: the poster's burnt orange, the white heavy capitals and subtitle (typeset: they sit in a ruled box), the stage and the crowd
+# Woodstock 99: Peace, Love, and Rage: the poster's burnt orange, its white MUSIC BOX / WOODSTOCK 99: / PEACE, LOVE, AND RAGE block lifted, the stage and the crowd
 std('woodstock-99-peace-love-and-rage-2021', ('grad', [(0, (226, 100, 40)), (.6, (170, 80, 40)), (1, (60, 40, 20))]), WHT,
-    [T('WOODSTOCK 99', 'intbk', 70, WHT, squeeze=.86), T('PEACE, LOVE, AND RAGE', 'herb', 28, WHT, track=.1)], tgap=8,
+    L((0.03, 0.125, 0.97, 0.28), 130, WHT, mode='light', speck=0), tgap=8,
     photo=ph(.5, .55, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(170, 80, 40), fcol=(250, 230, 210), fin=MINT)
 
-# Those Who Wish Me Dead: wildfire orange and black, the yellow condensed capitals (typeset: stacked five high), Hannah at the head
+# Those Who Wish Me Dead: wildfire orange and black, the poster's yellow condensed capitals lifted (stacked five high there, two lines here), Hannah at the head
 std('those-who-wish-me-dead-2021', ('grad', [(0, (180, 70, 20)), (.5, (80, 24, 10)), (1, (12, 6, 4))]), (240, 196, 40),
-    T('THOSE WHO WISH ME DEAD', 'hcnb', 80, (242, 198, 44), squeeze=.78, bold=.8),
+    [L([(0.35, 0.238, 0.65, 0.322), (0.39, 0.328, 0.61, 0.411), (0.375, 0.417, 0.625, 0.5)], 80, (242, 198, 44), mode='key', key=(240, 190, 50), t=(70, 150)), L([(0.43, 0.507, 0.57, 0.588), (0.375, 0.594, 0.625, 0.676)], 80, (242, 198, 44), mode='key', key=(240, 190, 50), t=(70, 150))],
     photo=ph(.86, .09, .28, 1.0), pb=(242, 198, 44), lg=WHT, lw=.6, order='LPTCF', credit=['ANGELINA JOLIE'], ccol=(242, 198, 44),
     ft='a', vbox=(242, 198, 44), vink=(80, 24, 10), fcol=(230, 210, 190), fin=MINT)
 
-# The Suicide Squad: the poster's cream, red and black comic capitals (typeset), the whole squad at the head
+# The Suicide Squad: the poster's cream, its red cracked THE SUICIDE SQUAD cut off it (black keyline added back), the whole squad at the head
 std('the-suicide-squad-2021', ('grad', [(0, (238, 230, 214)), (.6, (226, 214, 190)), (1, (170, 150, 120))]), (210, 30, 30),
-    [T('THE', 'intbk', 40, (214, 32, 32), outline=((20, 18, 18), 1.6)), T('SUICIDE SQUAD', 'intbk', 84, (214, 32, 32), squeeze=.82, outline=((20, 18, 18), 2.4), shadow=((20, 18, 18), 3, 3))], tgap=8,
+    [LC([(0.36, 0.762, 0.64, 0.806)], 50, outline=((20, 18, 18), 1.6), cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4))]), LC([(0.25, 0.806, 0.755, 0.95)], 140, outline=((20, 18, 18), 2.4), cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4))])], tgap=8,
     photo=ph(.5, .33, .8, .8), pb=(20, 18, 18), lg=(20, 18, 18), lw=.5, order='LPTCF', credit=['A JAMES GUNN', 'FILM'], ccol=(20, 18, 18),
     ft='a', vbox=(214, 32, 32), fcol=(20, 18, 18), fin=SLIP)
 
@@ -2787,9 +2785,9 @@ std('pig-2021', ('grad', [(0, (60, 40, 44)), (.6, (24, 16, 18)), (1, (6, 4, 4))]
     photo=ph(.6, .33, .5, 1.0), pb=(226, 216, 212), lg=WHT, lw=.6, order='LPTCF', credit=['NICOLAS CAGE'], ccol=(226, 216, 212),
     ft='a', vbox=(226, 216, 212), vink=(24, 16, 18), fcol=(190, 180, 180), fin=MINT, dotst=(['STAFF', 'PICK'], (150, 40, 60)))
 
-# Black Widow: the poster's red hourglass on black, white italic capitals (typeset: brushed and small), Natasha at the head
+# Black Widow: the poster's red hourglass on black, the white brushed italic capitals and the red hourglass cut off it, Natasha at the head
 std('black-widow-2021', ('grad', [(0, (180, 20, 24)), (.5, (70, 8, 10)), (1, (8, 4, 4))]), WHT,
-    TT([('BLACK', WHT), ('WIDOW', WHT)], 'intbki', 84, sp=.3, squeeze=.84, rough=.3),
+    LC([(0.145, 0.8, 0.855, 0.88)], 100, cuts=[key_cut(lambda a: ((_lum(a) > .6) & (_sat(a) < .3)) | ((a[..., 0] > .8) & (a[..., 1] < .15)))]),
     photo=ph(.5, .12, .3, 1.0), pb=(214, 30, 34), lg=WHT, lw=.7, order='LPTCF', credit=['SCARLETT JOHANSSON'], ccol=WHT,
     ft='a', vbox=(214, 30, 34), fcol=(220, 200, 200), fin=SLIP)
 
