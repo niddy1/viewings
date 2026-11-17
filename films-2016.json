@@ -7,39 +7,86 @@
       "rating10": 7,
       "watched": "2016-01-06",
       "imdb": "tt3397884",
-      "poster": "",
+      "poster": "posters/sicario-2015.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 555124
+      "imdbVotes": 555124,
+      "year": 2015,
+      "tmdb": 273481,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Denis Villeneuve",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Lionsgate",
+      "logo": "logos/1632.png"
     },
     {
       "title": "Goodnight Mommy",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-01-09",
       "imdb": "tt3086442",
-      "poster": "",
+      "poster": "posters/goodnight-mommy-2015.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 65308
+      "imdbVotes": 65308,
+      "year": 2015,
+      "tmdb": 284303,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Severin Fiala",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Ulrich Seidl Filmproduktion",
+      "logo": "logos/25523.png"
     },
     {
       "title": "The Lobster",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-02-11",
       "imdb": "tt3464902",
-      "poster": "",
+      "poster": "posters/the-lobster-2015.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 340218
+      "imdbVotes": 340218,
+      "year": 2015,
+      "tmdb": 254320,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Yorgos Lanthimos",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Haut et Court",
+      "logo": "logos/726.png"
     },
     {
       "title": "20 Feet from Stardom",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-02-11",
       "imdb": "tt2396566",
-      "poster": "",
+      "poster": "posters/20-feet-from-stardom-2013.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 14607
+      "imdbVotes": 14607,
+      "year": 2013,
+      "tmdb": 159014,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Morgan Neville",
+      "genres": [
+        "Documentary",
+        "Music"
+      ],
+      "studio": "Tremolo Productions",
+      "logo": "logos/58637.png"
     },
     {
       "title": "Chef",
@@ -47,59 +94,124 @@
       "rating10": 7,
       "watched": "2016-02-11",
       "imdb": "tt2883512",
-      "poster": "",
+      "poster": "posters/chef-2014.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 255375
+      "imdbVotes": 255375,
+      "year": 2014,
+      "tmdb": 212778,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Jon Favreau",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Fairview Entertainment",
+      "logo": "logos/7297.png"
     },
     {
       "title": "Room",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-02-28",
       "imdb": "tt3170832",
-      "poster": "",
+      "poster": "posters/room-2015.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 487035
+      "imdbVotes": 487035,
+      "year": 2015,
+      "tmdb": 264644,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Lenny Abrahamson",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Téléfilm Canada",
+      "logo": "logos/806.png"
     },
     {
       "title": "The Danish Girl",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-03-05",
       "imdb": "tt0810819",
-      "poster": "",
+      "poster": "posters/the-danish-girl-2015.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 208053
+      "imdbVotes": 208053,
+      "year": 2015,
+      "tmdb": 306819,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Tom Hooper",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Working Title",
+      "logo": "logos/10163.png"
     },
     {
       "title": "The Big Short",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-03-05",
       "imdb": "tt1596363",
-      "poster": "",
+      "poster": "posters/the-big-short-2015.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 551713
+      "imdbVotes": 551713,
+      "year": 2015,
+      "tmdb": 318846,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Adam McKay",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Spotlight",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-03-05",
       "imdb": "tt1895587",
-      "poster": "",
+      "poster": "posters/spotlight-2015.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 543687
+      "imdbVotes": 543687,
+      "year": 2015,
+      "tmdb": 314365,
+      "tmdbKind": "movie",
+      "runtime": 129,
+      "director": "Tom McCarthy",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Participant",
+      "logo": "logos/6735.png"
     },
     {
       "title": "Brooklyn",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-03-05",
       "imdb": "tt2381111",
-      "poster": "",
+      "poster": "posters/brooklyn-2015.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 160301
+      "imdbVotes": 160301,
+      "year": 2015,
+      "tmdb": 167073,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "John Crowley",
+      "genres": [
+        "Drama",
+        "History",
+        "Romance"
+      ],
+      "studio": "Wildgaze Films",
+      "logo": "logos/1508.png"
     },
     {
       "title": "Anomalisa",
@@ -107,49 +219,109 @@
       "rating10": 7,
       "watched": "2016-03-21",
       "imdb": "tt2401878",
-      "poster": "",
+      "poster": "posters/anomalisa-2015.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 79396
+      "imdbVotes": 79396,
+      "year": 2015,
+      "tmdb": 291270,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Duke Johnson",
+      "genres": [
+        "Animation",
+        "Drama",
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Starburns Industries",
+      "logo": "logos/32542.png"
     },
     {
       "title": "Whiplash",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-05-01",
       "imdb": "tt2582802",
-      "poster": "",
+      "poster": "posters/whiplash-2014.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 1193401
+      "imdbVotes": 1193401,
+      "year": 2014,
+      "tmdb": 244786,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Damien Chazelle",
+      "genres": [
+        "Drama",
+        "Music",
+        "Thriller"
+      ],
+      "studio": "Bold Films",
+      "logo": "logos/2266.png"
     },
     {
       "title": "Steve Jobs",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-05-01",
       "imdb": "tt2080374",
-      "poster": "",
+      "poster": "posters/steve-jobs-2015.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 189192
+      "imdbVotes": 189192,
+      "year": 2015,
+      "tmdb": 321697,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Danny Boyle",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Scott Rudin Productions",
+      "logo": "logos/258.png"
     },
     {
       "title": "The Hateful Eight",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-01",
       "imdb": "tt3460252",
-      "poster": "",
+      "poster": "posters/the-hateful-eight-2015.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 735568
+      "imdbVotes": 735568,
+      "year": 2015,
+      "tmdb": 273248,
+      "tmdbKind": "movie",
+      "runtime": 188,
+      "director": "Quentin Tarantino",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Western"
+      ],
+      "studio": "The Weinstein Company",
+      "logo": "logos/308.png"
     },
     {
       "title": "The Revenant",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-01",
       "imdb": "tt1663202",
-      "poster": "",
+      "poster": "posters/the-revenant-2015.jpg",
       "imdbRating": 8,
-      "imdbVotes": 968867
+      "imdbVotes": 968867,
+      "year": 2015,
+      "tmdb": 281957,
+      "tmdbKind": "movie",
+      "runtime": 157,
+      "director": "Alejandro G. Iñárritu",
+      "genres": [
+        "Western",
+        "Drama",
+        "Adventure"
+      ],
+      "studio": "Regency Enterprises",
+      "logo": "logos/508.png"
     },
     {
       "title": "Barbershop: The Next Cut",
@@ -157,69 +329,144 @@
       "rating10": 7,
       "watched": "2016-05-01",
       "imdb": "tt3628584",
-      "poster": "",
+      "poster": "posters/barbershop-the-next-cut-2016.jpg",
       "imdbRating": 5.9,
-      "imdbVotes": 17386
+      "imdbVotes": 17386,
+      "year": 2016,
+      "tmdb": 326423,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Malcolm D. Lee",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "The Jungle Book",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2016-05-01",
       "imdb": "tt3040964",
-      "poster": "",
+      "poster": "posters/the-jungle-book-2016.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 309008
+      "imdbVotes": 309008,
+      "year": 2016,
+      "tmdb": 278927,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Jon Favreau",
+      "genres": [
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Walt Disney Pictures",
+      "logo": "logos/2.png"
     },
     {
       "title": "Champs",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-05-06",
       "imdb": "tt1698652",
-      "poster": "",
+      "poster": "posters/champs-2015.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 2025
+      "imdbVotes": 2025,
+      "year": 2015,
+      "tmdb": 262436,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Bert Marcus",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Iverson",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-06",
       "imdb": "tt2088745",
-      "poster": "",
+      "poster": "posters/iverson-2014.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 4214
+      "imdbVotes": 4214,
+      "year": 2014,
+      "tmdb": 266442,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Zatella Beatty",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Star Wars: Episode VII - The Force Awakens",
-      "rating": 4.0,
+      "title": "Star Wars: The Force Awakens",
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-06",
       "imdb": "tt2488496",
-      "poster": "",
+      "poster": "posters/star-wars-the-force-awakens-2015.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 1039334
+      "imdbVotes": 1039334,
+      "year": 2015,
+      "tmdb": 140607,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "J.J. Abrams",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Lucasfilm Ltd.",
+      "logo": "logos/1.png"
     },
     {
       "title": "Spring, Summer, Fall, Winter... and Spring",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-06",
       "imdb": "tt0374546",
-      "poster": "",
+      "poster": "posters/spring-summer-fall-winter-and-spring-2003.jpg",
       "imdbRating": 8,
-      "imdbVotes": 91933
+      "imdbVotes": 91933,
+      "year": 2003,
+      "tmdb": 113,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Kim Ki-duk",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Pandora Film",
+      "logo": "logos/140.png"
     },
     {
       "title": "Trumbo",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-06",
       "imdb": "tt3203606",
-      "poster": "",
+      "poster": "posters/trumbo-2015.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 88277
+      "imdbVotes": 88277,
+      "year": 2015,
+      "tmdb": 294016,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Jay Roach",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Shivhans Pictures",
+      "logo": "logos/33603.png"
     },
     {
       "title": "Four Weddings and a Funeral",
@@ -227,19 +474,41 @@
       "rating10": 7,
       "watched": "2016-05-06",
       "imdb": "tt0109831",
-      "poster": "",
+      "poster": "posters/four-weddings-and-a-funeral-1994.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 185670
+      "imdbVotes": 185670,
+      "year": 1994,
+      "tmdb": 712,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Mike Newell",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "PolyGram Filmed Entertainment",
+      "logo": "logos/1382.png"
     },
     {
-      "title": "Light After Darkness",
+      "title": "Post Tenebras Lux",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2016-05-06",
       "imdb": "tt1754367",
-      "poster": "",
+      "poster": "posters/post-tenebras-lux-2012.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 6298
+      "imdbVotes": 6298,
+      "year": 2012,
+      "tmdb": 103689,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Carlos Reygadas",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Le Pacte",
+      "logo": "logos/5125.png"
     },
     {
       "title": "Only God Forgives",
@@ -247,9 +516,21 @@
       "rating10": 6.5,
       "watched": "2016-05-06",
       "imdb": "tt1602613",
-      "poster": "",
+      "poster": "posters/only-god-forgives-2013.jpg",
       "imdbRating": 5.7,
-      "imdbVotes": 124318
+      "imdbVotes": 124318,
+      "year": 2013,
+      "tmdb": 77987,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Nicolas Winding Refn",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Wild Bunch",
+      "logo": "logos/856.png"
     },
     {
       "title": "Deadpool",
@@ -257,9 +538,21 @@
       "rating10": 7,
       "watched": "2016-05-15",
       "imdb": "tt1431045",
-      "poster": "",
+      "poster": "posters/deadpool-2016.jpg",
       "imdbRating": 8,
-      "imdbVotes": 1279468
+      "imdbVotes": 1279468,
+      "year": 2016,
+      "tmdb": 293660,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Tim Miller",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Comedy"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "The Great Beauty",
@@ -267,9 +560,19 @@
       "rating10": 9,
       "watched": "2016-05-21",
       "imdb": "tt2358891",
-      "poster": "",
+      "poster": "posters/the-great-beauty-2013.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 107764
+      "imdbVotes": 107764,
+      "year": 2013,
+      "tmdb": 179144,
+      "tmdbKind": "movie",
+      "runtime": 142,
+      "director": "Paolo Sorrentino",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "France 2 Cinéma",
+      "logo": "logos/83.png"
     },
     {
       "title": "Zootopia",
@@ -277,9 +580,22 @@
       "rating10": 8.5,
       "watched": "2016-05-21",
       "imdb": "tt2948356",
-      "poster": "",
+      "poster": "posters/zootopia-2016.jpg",
       "imdbRating": 8,
-      "imdbVotes": 653934
+      "imdbVotes": 653934,
+      "year": 2016,
+      "tmdb": 269149,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Byron Howard",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Comedy"
+      ],
+      "studio": "Walt Disney Animation Studios",
+      "logo": "logos/6125.png"
     },
     {
       "title": "Spring Breakers",
@@ -287,9 +603,20 @@
       "rating10": 7,
       "watched": "2016-05-21",
       "imdb": "tt2101441",
-      "poster": "",
+      "poster": "posters/spring-breakers-2013.jpg",
       "imdbRating": 5.3,
-      "imdbVotes": 156099
+      "imdbVotes": 156099,
+      "year": 2013,
+      "tmdb": 122081,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Harmony Korine",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Iconoclast",
+      "logo": "logos/78780.png"
     },
     {
       "title": "The Deep Blue Sea",
@@ -297,29 +624,63 @@
       "rating10": 7,
       "watched": "2016-05-26",
       "imdb": "tt1700844",
-      "poster": "",
+      "poster": "posters/the-deep-blue-sea-2011.jpg",
       "imdbRating": 6.2,
-      "imdbVotes": 17650
+      "imdbVotes": 17650,
+      "year": 2011,
+      "tmdb": 51994,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Terence Davies",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "UK Film Council",
+      "logo": "logos/2452.png"
     },
     {
       "title": "Skyfall",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-28",
       "imdb": "tt1074638",
-      "poster": "",
+      "poster": "posters/skyfall-2012.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 784170
+      "imdbVotes": 784170,
+      "year": 2012,
+      "tmdb": 37724,
+      "tmdbKind": "movie",
+      "runtime": 143,
+      "director": "Sam Mendes",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Thriller"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "The Cabin in the Woods",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-05-28",
       "imdb": "tt1259521",
-      "poster": "",
+      "poster": "posters/the-cabin-in-the-woods-2012.jpg",
       "imdbRating": 7,
-      "imdbVotes": 499836
+      "imdbVotes": 499836,
+      "year": 2012,
+      "tmdb": 22970,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Drew Goddard",
+      "genres": [
+        "Horror",
+        "Mystery"
+      ],
+      "studio": "Mutant Enemy Productions",
+      "logo": "logos/10567.png"
     },
     {
       "title": "Zero Dark Thirty",
@@ -327,9 +688,20 @@
       "rating10": 7,
       "watched": "2016-05-28",
       "imdb": "tt1790885",
-      "poster": "",
+      "poster": "posters/zero-dark-thirty-2012.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 346566
+      "imdbVotes": 346566,
+      "year": 2012,
+      "tmdb": 97630,
+      "tmdbKind": "movie",
+      "runtime": 157,
+      "director": "Kathryn Bigelow",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Annapurna Pictures",
+      "logo": "logos/13184.png"
     },
     {
       "title": "Star Wars: Episode III - Revenge of the Sith",
@@ -337,19 +709,43 @@
       "rating10": 7,
       "watched": "2016-05-28",
       "imdb": "tt0121766",
-      "poster": "",
+      "poster": "posters/star-wars-episode-iii-revenge-of-the-sith-2005.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 939001
+      "imdbVotes": 939001,
+      "year": 2005,
+      "tmdb": 1895,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "George Lucas",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Lucasfilm Ltd.",
+      "logo": "logos/1.png"
     },
     {
       "title": "Mission: Impossible - Ghost Protocol",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2016-05-28",
       "imdb": "tt1229238",
-      "poster": "",
+      "poster": "posters/mission-impossible-ghost-protocol-2011.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 571687
+      "imdbVotes": 571687,
+      "year": 2011,
+      "tmdb": 56292,
+      "tmdbKind": "movie",
+      "runtime": 133,
+      "director": "Brad Bird",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Adventure"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Woman in the Dunes",
@@ -357,79 +753,169 @@
       "rating10": 8.5,
       "watched": "2016-06-28",
       "imdb": "tt0058625",
-      "poster": "",
+      "poster": "posters/woman-in-the-dunes-1964.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 27178
+      "imdbVotes": 27178,
+      "year": 1964,
+      "tmdb": 16672,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Hiroshi Teshigahara",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Tokyo Story",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-06-28",
       "imdb": "tt0046438",
-      "poster": "",
+      "poster": "posters/tokyo-story-1953.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 79413
+      "imdbVotes": 79413,
+      "year": 1953,
+      "tmdb": 18148,
+      "tmdbKind": "movie",
+      "runtime": 137,
+      "director": "Yasujirō Ozu",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Shochiku",
+      "logo": "logos/192.png"
     },
     {
       "title": "O.J.: Made in America",
-      "rating": 5.0,
+      "rating": 5,
       "rating10": 9.5,
       "watched": "2016-07-30",
       "imdb": "tt5275892",
-      "poster": "",
+      "poster": "posters/o-j-made-in-america-2016.jpg",
       "imdbRating": 8.9,
-      "imdbVotes": 24303
+      "imdbVotes": 24303,
+      "year": 2016,
+      "tmdb": 377462,
+      "tmdbKind": "movie",
+      "runtime": 467,
+      "director": "Ezra Edelman",
+      "genres": [
+        "Documentary",
+        "Crime",
+        "History"
+      ],
+      "studio": "ESPN Films",
+      "logo": "logos/18595.png"
     },
     {
       "title": "10 Cloverfield Lane",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-07-30",
       "imdb": "tt1179933",
-      "poster": "",
+      "poster": "posters/10-cloverfield-lane-2016.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 392000
+      "imdbVotes": 392000,
+      "year": 2016,
+      "tmdb": 333371,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Dan Trachtenberg",
+      "genres": [
+        "Thriller",
+        "Science Fiction",
+        "Drama",
+        "Horror"
+      ],
+      "studio": "Bad Robot",
+      "logo": "logos/11461.png"
     },
     {
       "title": "Punch-Drunk Love",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-07-30",
       "imdb": "tt0272338",
-      "poster": "",
+      "poster": "posters/punch-drunk-love-2002.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 200779
+      "imdbVotes": 200779,
+      "year": 2002,
+      "tmdb": 8051,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Paul Thomas Anderson",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Revolution Studios",
+      "logo": "logos/497.png"
     },
     {
       "title": "These Birds Walk",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-07-30",
       "imdb": "tt2130282",
-      "poster": "",
+      "poster": "posters/these-birds-walk-2012.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 392
+      "imdbVotes": 392,
+      "year": 2012,
+      "tmdb": 175427,
+      "tmdbKind": "movie",
+      "runtime": 71,
+      "director": "Omar Mullick",
+      "genres": [
+        "Documentary",
+        "Drama"
+      ],
+      "studio": "Oscilloscope",
+      "logo": "logos/4748.png"
     },
     {
       "title": "Doubt",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-07-30",
       "imdb": "tt0918927",
-      "poster": "",
+      "poster": "posters/doubt-2008.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 149296
+      "imdbVotes": 149296,
+      "year": 2008,
+      "tmdb": 14359,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "John Patrick Shanley",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Scott Rudin Productions",
+      "logo": "logos/258.png"
     },
     {
       "title": "A Girl Walks Home Alone at Night",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-07-30",
       "imdb": "tt2326554",
-      "poster": "",
+      "poster": "posters/a-girl-walks-home-alone-at-night-2014.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 41986
+      "imdbVotes": 41986,
+      "year": 2014,
+      "tmdb": 252171,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Ana Lily Amirpour",
+      "genres": [
+        "Horror",
+        "Romance"
+      ],
+      "studio": "SpectreVision",
+      "logo": "logos/34519.png"
     },
     {
       "title": "Before the Devil Knows You're Dead",
@@ -437,9 +923,21 @@
       "rating10": 7,
       "watched": "2016-07-30",
       "imdb": "tt0292963",
-      "poster": "",
+      "poster": "posters/before-the-devil-knows-you-re-dead-2007.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 124898
+      "imdbVotes": 124898,
+      "year": 2007,
+      "tmdb": 7972,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Sidney Lumet",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Capitol Films",
+      "logo": "logos/826.png"
     },
     {
       "title": "The Savages",
@@ -447,9 +945,20 @@
       "rating10": 7,
       "watched": "2016-07-30",
       "imdb": "tt0775529",
-      "poster": "",
+      "poster": "posters/the-savages-2007.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 40059
+      "imdbVotes": 40059,
+      "year": 2007,
+      "tmdb": 8272,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Tamara Jenkins",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "Clouds of Sils Maria",
@@ -457,9 +966,19 @@
       "rating10": 7,
       "watched": "2016-07-30",
       "imdb": "tt2452254",
-      "poster": "",
+      "poster": "posters/clouds-of-sils-maria-2014.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 32840
+      "imdbVotes": 32840,
+      "year": 2014,
+      "tmdb": 246860,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Olivier Assayas",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Pallas Film",
+      "logo": "logos/789.png"
     },
     {
       "title": "Bridesmaids",
@@ -467,9 +986,20 @@
       "rating10": 7,
       "watched": "2016-07-30",
       "imdb": "tt1478338",
-      "poster": "",
+      "poster": "posters/bridesmaids-2011.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 329716
+      "imdbVotes": 329716,
+      "year": 2011,
+      "tmdb": 55721,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Paul Feig",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Apatow Productions",
+      "logo": "logos/10105.png"
     },
     {
       "title": "King Jack",
@@ -477,19 +1007,41 @@
       "rating10": 7,
       "watched": "2016-07-30",
       "imdb": "tt3863484",
-      "poster": "",
+      "poster": "posters/king-jack-2015.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 3561
+      "imdbVotes": 3561,
+      "year": 2015,
+      "tmdb": 330916,
+      "tmdbKind": "movie",
+      "runtime": 81,
+      "director": "Felix Thompson",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Whitewater Films",
+      "logo": "logos/3095.png"
     },
     {
       "title": "Tamasha",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2016-07-30",
       "imdb": "tt3148502",
-      "poster": "",
+      "poster": "posters/tamasha-2015.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 37413
+      "imdbVotes": 37413,
+      "year": 2015,
+      "tmdb": 339274,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Imtiaz Ali",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "UTV Motion Pictures",
+      "logo": "logos/2320.png"
     },
     {
       "title": "The Nice Guys",
@@ -497,9 +1049,21 @@
       "rating10": 6.5,
       "watched": "2016-08-11",
       "imdb": "tt3799694",
-      "poster": "",
+      "poster": "posters/the-nice-guys-2016.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 428839
+      "imdbVotes": 428839,
+      "year": 2016,
+      "tmdb": 290250,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Shane Black",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Action"
+      ],
+      "studio": "Silver Pictures",
+      "logo": "logos/1885.png"
     },
     {
       "title": "Howl's Moving Castle",
@@ -507,19 +1071,43 @@
       "rating10": 6.5,
       "watched": "2016-09-04",
       "imdb": "tt0347149",
-      "poster": "",
+      "poster": "posters/howl-s-moving-castle-2004.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 526009
+      "imdbVotes": 526009,
+      "year": 2004,
+      "tmdb": 4935,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Hayao Miyazaki",
+      "genres": [
+        "Fantasy",
+        "Animation",
+        "Adventure"
+      ],
+      "studio": "Studio Ghibli",
+      "logo": "logos/10342.png"
     },
     {
       "title": "Scarface",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-09-05",
       "imdb": "tt0086250",
-      "poster": "",
+      "poster": "posters/scarface-1983.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 1042908
+      "imdbVotes": 1042908,
+      "year": 1983,
+      "tmdb": 111,
+      "tmdbKind": "movie",
+      "runtime": 170,
+      "director": "Brian De Palma",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The In-Laws",
@@ -527,19 +1115,40 @@
       "rating10": 7,
       "watched": "2016-09-05",
       "imdb": "tt0079336",
-      "poster": "",
+      "poster": "posters/the-in-laws-1979.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 11309
+      "imdbVotes": 11309,
+      "year": 1979,
+      "tmdb": 19827,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Arthur Hiller",
+      "genres": [
+        "Comedy",
+        "Adventure"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "About Elly",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-09-18",
       "imdb": "tt1360860",
-      "poster": "",
+      "poster": "posters/about-elly-2009.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 61913
+      "imdbVotes": 61913,
+      "year": 2009,
+      "tmdb": 37181,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Asghar Farhadi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Manhattan",
@@ -547,9 +1156,21 @@
       "rating10": 8.5,
       "watched": "2016-09-25",
       "imdb": "tt0079522",
-      "poster": "",
+      "poster": "posters/manhattan-1979.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 153985
+      "imdbVotes": 153985,
+      "year": 1979,
+      "tmdb": 696,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Woody Allen",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "Trainspotting",
@@ -557,9 +1178,20 @@
       "rating10": 7,
       "watched": "2016-09-25",
       "imdb": "tt0117951",
-      "poster": "",
+      "poster": "posters/trainspotting-1996.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 778253
+      "imdbVotes": 778253,
+      "year": 1996,
+      "tmdb": 627,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Danny Boyle",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "DNA Films",
+      "logo": "logos/284.png"
     },
     {
       "title": "Blade Runner",
@@ -567,49 +1199,103 @@
       "rating10": 7,
       "watched": "2016-09-25",
       "imdb": "tt0083658",
-      "poster": "",
+      "poster": "posters/blade-runner-1982.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 897451
+      "imdbVotes": 897451,
+      "year": 1982,
+      "tmdb": 78,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Ridley Scott",
+      "genres": [
+        "Science Fiction",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Shaw Brothers",
+      "logo": "logos/5798.png"
     },
     {
       "title": "Dawg Fight",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-09-26",
       "imdb": "tt1421361",
-      "poster": "",
+      "poster": "posters/dawg-fight-2015.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 1779
+      "imdbVotes": 1779,
+      "year": 2015,
+      "tmdb": 325365,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Billy Corben",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "rakontur",
+      "logo": "logos/6303.png"
     },
     {
       "title": "Parched",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-10-31",
       "imdb": "tt3043252",
-      "poster": "",
+      "poster": "posters/parched-2015.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 6656
+      "imdbVotes": 6656,
+      "year": 2015,
+      "tmdb": 352205,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Leena Yadav",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Blue Waters Motion Pictures",
+      "logo": "logos/78688.png"
     },
     {
       "title": "The Handmaiden",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2016-11-28",
       "imdb": "tt4016934",
-      "poster": "",
+      "poster": "posters/the-handmaiden-2016.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 210400
+      "imdbVotes": 210400,
+      "year": 2016,
+      "tmdb": 290098,
+      "tmdbKind": "movie",
+      "runtime": 145,
+      "director": "Park Chan-wook",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Moho Film",
+      "logo": "logos/34725.png"
     },
     {
-      "title": "Boca de Lixo",
-      "rating": 4.0,
+      "title": "The Scavengers",
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-12-12",
       "imdb": "tt0321487",
-      "poster": "",
+      "poster": "posters/the-scavengers-1992.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 156
+      "imdbVotes": 156,
+      "year": 1992,
+      "tmdb": 257158,
+      "tmdbKind": "movie",
+      "runtime": 45,
+      "director": "Eduardo Coutinho",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Pink",
@@ -617,19 +1303,41 @@
       "rating10": 7,
       "watched": "2016-12-12",
       "imdb": "tt5571734",
-      "poster": "",
+      "poster": "posters/pink-2016.jpg",
       "imdbRating": 8,
-      "imdbVotes": 52992
+      "imdbVotes": 52992,
+      "year": 2016,
+      "tmdb": 415358,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Aniruddha Roy Chowdhury",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Salaam Bombay!",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2016-12-18",
       "imdb": "tt0096028",
-      "poster": "",
+      "poster": "posters/salaam-bombay-1988.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 11420
+      "imdbVotes": 11420,
+      "year": 1988,
+      "tmdb": 45129,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Mira Nair",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Doordarshan",
+      "logo": "logos/66632.png"
     }
   ]
 }

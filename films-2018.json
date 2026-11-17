@@ -7,39 +7,84 @@
       "rating10": 7,
       "watched": "2018-01-08",
       "imdb": "tt6039532",
-      "poster": "",
+      "poster": "posters/tokyo-idols-2017.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 1388
+      "imdbVotes": 1388,
+      "year": 2017,
+      "tmdb": 433092,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Kyoko Miyake",
+      "genres": [
+        "Music",
+        "Documentary"
+      ],
+      "studio": "EyeSteelFilm",
+      "logo": "logos/38993.png"
     },
     {
       "title": "The Florida Project",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-02-01",
       "imdb": "tt5649144",
-      "poster": "",
+      "poster": "posters/the-florida-project-2017.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 150484
+      "imdbVotes": 150484,
+      "year": 2017,
+      "tmdb": 394117,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Sean Baker",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Cre Film",
+      "logo": "logos/88152.png"
     },
     {
       "title": "Coco",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-02-09",
       "imdb": "tt2380307",
-      "poster": "",
+      "poster": "posters/coco-2017.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 735641
+      "imdbVotes": 735641,
+      "year": 2017,
+      "tmdb": 354912,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Lee Unkrich",
+      "genres": [
+        "Family",
+        "Animation",
+        "Music",
+        "Adventure"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Darkest Hour",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2018-02-09",
       "imdb": "tt4555426",
-      "poster": "",
+      "poster": "posters/darkest-hour-2017.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 247151
+      "imdbVotes": 247151,
+      "year": 2017,
+      "tmdb": 399404,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Joe Wright",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Working Title",
+      "logo": "logos/10163.png"
     },
     {
       "title": "My Friend Dahmer",
@@ -47,9 +92,21 @@
       "rating10": 7,
       "watched": "2018-02-10",
       "imdb": "tt2291540",
-      "poster": "",
+      "poster": "posters/my-friend-dahmer-2017.jpg",
       "imdbRating": 6.2,
-      "imdbVotes": 26184
+      "imdbVotes": 26184,
+      "year": 2017,
+      "tmdb": 445040,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Marc Meyers",
+      "genres": [
+        "History",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Ibid Filmworks",
+      "logo": "logos/54369.png"
     },
     {
       "title": "Murder on the Orient Express",
@@ -57,9 +114,21 @@
       "rating10": 4.5,
       "watched": "2018-02-10",
       "imdb": "tt3402236",
-      "poster": "",
+      "poster": "posters/murder-on-the-orient-express-2017.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 326890
+      "imdbVotes": 326890,
+      "year": 2017,
+      "tmdb": 392044,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Kenneth Branagh",
+      "genres": [
+        "Mystery",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "The Mark Gordon Company",
+      "logo": "logos/1557.png"
     },
     {
       "title": "Three Billboards Outside Ebbing, Missouri",
@@ -67,9 +136,20 @@
       "rating10": 8.5,
       "watched": "2018-02-15",
       "imdb": "tt5027774",
-      "poster": "",
+      "poster": "posters/three-billboards-outside-ebbing-missouri-2017.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 620692
+      "imdbVotes": 620692,
+      "year": 2017,
+      "tmdb": 359940,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Martin McDonagh",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Blueprint Pictures",
+      "logo": "logos/2376.png"
     },
     {
       "title": "Call Me by Your Name",
@@ -77,9 +157,20 @@
       "rating10": 9,
       "watched": "2018-02-18",
       "imdb": "tt5726616",
-      "poster": "",
+      "poster": "posters/call-me-by-your-name-2017.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 366823
+      "imdbVotes": 366823,
+      "year": 2017,
+      "tmdb": 398818,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Luca Guadagnino",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Frenesy Film",
+      "logo": "logos/46344.png"
     },
     {
       "title": "Lady Bird",
@@ -87,29 +178,63 @@
       "rating10": 8.5,
       "watched": "2018-02-18",
       "imdb": "tt4925292",
-      "poster": "",
+      "poster": "posters/lady-bird-2017.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 371300
+      "imdbVotes": 371300,
+      "year": 2017,
+      "tmdb": 391713,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Greta Gerwig",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "IAC Films",
+      "logo": "logos/93105.png"
     },
     {
       "title": "Spider-Man: Homecoming",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2018-02-28",
       "imdb": "tt2250912",
-      "poster": "",
+      "poster": "posters/spider-man-homecoming-2017.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 847488
+      "imdbVotes": 847488,
+      "year": 2017,
+      "tmdb": 315635,
+      "tmdbKind": "movie",
+      "runtime": 133,
+      "director": "Jon Watts",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "I, Tonya",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2018-03-02",
       "imdb": "tt5580036",
-      "poster": "",
+      "poster": "posters/i-tonya-2017.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 265215
+      "imdbVotes": 265215,
+      "year": 2017,
+      "tmdb": 389015,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Craig Gillespie",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "LuckyChap Entertainment",
+      "logo": "logos/82968.png"
     },
     {
       "title": "The Shape of Water",
@@ -117,9 +242,21 @@
       "rating10": 7,
       "watched": "2018-03-02",
       "imdb": "tt5580390",
-      "poster": "",
+      "poster": "posters/the-shape-of-water-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 482664
+      "imdbVotes": 482664,
+      "year": 2017,
+      "tmdb": 399055,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Guillermo del Toro",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Romance"
+      ],
+      "studio": "Double Dare You",
+      "logo": "logos/101082.png"
     },
     {
       "title": "Get Out",
@@ -127,9 +264,21 @@
       "rating10": 6.5,
       "watched": "2018-03-09",
       "imdb": "tt5052448",
-      "poster": "",
+      "poster": "posters/get-out-2017.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 846791
+      "imdbVotes": 846791,
+      "year": 2017,
+      "tmdb": 419430,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Jordan Peele",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Horror"
+      ],
+      "studio": "Monkeypaw Productions",
+      "logo": "logos/88934.png"
     },
     {
       "title": "The Keepers",
@@ -137,9 +286,20 @@
       "rating10": 8.5,
       "watched": "2018-03-18",
       "imdb": "tt6792200",
-      "poster": "",
+      "poster": "posters/the-keepers-2017.jpg",
       "imdbRating": 8,
-      "imdbVotes": 28229
+      "imdbVotes": 28229,
+      "year": 2017,
+      "tmdb": 26101,
+      "tmdbKind": "tv",
+      "runtime": 62,
+      "genres": [
+        "Documentary",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "Film 45",
+      "logo": "logos/90560.png"
     },
     {
       "title": "The Imposter",
@@ -147,9 +307,21 @@
       "rating10": 8.5,
       "watched": "2018-03-18",
       "imdb": "tt1966604",
-      "poster": "",
+      "poster": "posters/the-imposter-2012.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 53803
+      "imdbVotes": 53803,
+      "year": 2012,
+      "tmdb": 84287,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Bart Layton",
+      "genres": [
+        "Documentary",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "RAW",
+      "logo": "logos/23949.png"
     },
     {
       "title": "A Murder in the Park",
@@ -157,9 +329,19 @@
       "rating10": 8.5,
       "watched": "2018-03-18",
       "imdb": "tt3168808",
-      "poster": "",
+      "poster": "posters/a-murder-in-the-park-2015.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 1328
+      "imdbVotes": 1328,
+      "year": 2015,
+      "tmdb": 343880,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Shawn Rech",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Amanda Knox",
@@ -167,19 +349,40 @@
       "rating10": 8.5,
       "watched": "2018-03-18",
       "imdb": "tt5952332",
-      "poster": "",
+      "poster": "posters/amanda-knox-2016.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 27786
+      "imdbVotes": 27786,
+      "year": 2016,
+      "tmdb": 411009,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Brian McGinn",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "studio": "Plus Pictures",
+      "logo": "logos/107390.png"
     },
     {
       "title": "The Witness",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2018-03-18",
       "imdb": "tt3568002",
-      "poster": "",
+      "poster": "posters/the-witness-2015.jpg",
       "imdbRating": 7,
-      "imdbVotes": 4846
+      "imdbVotes": 4846,
+      "year": 2015,
+      "tmdb": 356332,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "James Solomon",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Annihilation",
@@ -187,19 +390,41 @@
       "rating10": 6.5,
       "watched": "2018-03-19",
       "imdb": "tt2798920",
-      "poster": "",
+      "poster": "posters/annihilation-2018.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 400648
+      "imdbVotes": 400648,
+      "year": 2018,
+      "tmdb": 300668,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Alex Garland",
+      "genres": [
+        "Science Fiction",
+        "Horror"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Film Stars Don't Die in Liverpool",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2018-03-20",
       "imdb": "tt5711148",
-      "poster": "",
+      "poster": "posters/film-stars-don-t-die-in-liverpool-2017.jpg",
       "imdbRating": 6.7,
-      "imdbVotes": 11329
+      "imdbVotes": 11329,
+      "year": 2017,
+      "tmdb": 398174,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Paul McGuigan",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "studio": "EON Productions",
+      "logo": "logos/7576.png"
     },
     {
       "title": "Phantom Thread",
@@ -207,39 +432,84 @@
       "rating10": 7,
       "watched": "2018-04-03",
       "imdb": "tt5776858",
-      "poster": "",
+      "poster": "posters/phantom-thread-2017.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 165354
+      "imdbVotes": 165354,
+      "year": 2017,
+      "tmdb": 400617,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Paul Thomas Anderson",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "The Post",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2018-04-03",
       "imdb": "tt6294822",
-      "poster": "",
+      "poster": "posters/the-post-2017.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 174831
+      "imdbVotes": 174831,
+      "year": 2017,
+      "tmdb": 446354,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "The Commuter",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2018-04-04",
       "imdb": "tt1590193",
-      "poster": "",
+      "poster": "posters/the-commuter-2018.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 135813
+      "imdbVotes": 135813,
+      "year": 2018,
+      "tmdb": 399035,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Jaume Collet-Serra",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "StudioCanal",
+      "logo": "logos/694.png"
     },
     {
       "title": "We Need to Talk About Kevin",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2018-04-09",
       "imdb": "tt1242460",
-      "poster": "",
+      "poster": "posters/we-need-to-talk-about-kevin-2011.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 184661
+      "imdbVotes": 184661,
+      "year": 2011,
+      "tmdb": 71859,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Lynne Ramsay",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "BBC Film",
+      "logo": "logos/288.png"
     },
     {
       "title": "Andre the Giant",
@@ -247,9 +517,20 @@
       "rating10": 7,
       "watched": "2018-04-11",
       "imdb": "tt6543420",
-      "poster": "",
+      "poster": "posters/andre-the-giant-2018.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 7325
+      "imdbVotes": 7325,
+      "year": 2018,
+      "tmdb": 446663,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Jason Hehir",
+      "genres": [
+        "Documentary",
+        "TV Movie"
+      ],
+      "studio": "HBO Sports",
+      "logo": "logos/6751.png"
     },
     {
       "title": "The Cheshire Murders",
@@ -257,19 +538,39 @@
       "rating10": 7,
       "watched": "2018-04-11",
       "imdb": "tt2934036",
-      "poster": "",
+      "poster": "posters/the-cheshire-murders-2013.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 3772
+      "imdbVotes": 3772,
+      "year": 2013,
+      "tmdb": 209204,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "David Heilbroner",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "HBO Documentary Films",
+      "logo": "logos/14914.png"
     },
     {
       "title": "Mercury 13",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-04-22",
       "imdb": "tt8139850",
-      "poster": "",
+      "poster": "posters/mercury-13-2018.jpg",
       "imdbRating": 7,
-      "imdbVotes": 1383
+      "imdbVotes": 1383,
+      "year": 2018,
+      "tmdb": 511791,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Heather Walsh",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Fine Point Films",
+      "logo": "logos/80995.png"
     },
     {
       "title": "Before Sunrise",
@@ -277,9 +578,20 @@
       "rating10": 9,
       "watched": "2018-05-08",
       "imdb": "tt0112471",
-      "poster": "",
+      "poster": "posters/before-sunrise-1995.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 387128
+      "imdbVotes": 387128,
+      "year": 1995,
+      "tmdb": 76,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Richard Linklater",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Castle Rock Entertainment",
+      "logo": "logos/97.png"
     },
     {
       "title": "Before Midnight",
@@ -287,9 +599,20 @@
       "rating10": 8.5,
       "watched": "2018-05-08",
       "imdb": "tt2209418",
-      "poster": "",
+      "poster": "posters/before-midnight-2013.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 189379
+      "imdbVotes": 189379,
+      "year": 2013,
+      "tmdb": 132344,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Richard Linklater",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Castle Rock Entertainment",
+      "logo": "logos/97.png"
     },
     {
       "title": "Before Sunset",
@@ -297,9 +620,20 @@
       "rating10": 8.5,
       "watched": "2018-05-08",
       "imdb": "tt0381681",
-      "poster": "",
+      "poster": "posters/before-sunset-2004.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 321669
+      "imdbVotes": 321669,
+      "year": 2004,
+      "tmdb": 80,
+      "tmdbKind": "movie",
+      "runtime": 80,
+      "director": "Richard Linklater",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Warner Independent Pictures",
+      "logo": "logos/11509.png"
     },
     {
       "title": "The Rachel Divide",
@@ -307,29 +641,62 @@
       "rating10": 7,
       "watched": "2018-05-10",
       "imdb": "tt8106570",
-      "poster": "",
+      "poster": "posters/the-rachel-divide-2018.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 2925
+      "imdbVotes": 2925,
+      "year": 2018,
+      "tmdb": 510073,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Laura Brownson",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Malcolm X",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2018-05-16",
       "imdb": "tt0104797",
-      "poster": "",
+      "poster": "posters/malcolm-x-1992.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 113204
+      "imdbVotes": 113204,
+      "year": 1992,
+      "tmdb": 1883,
+      "tmdbKind": "movie",
+      "runtime": 202,
+      "director": "Spike Lee",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
-      "title": "Star Wars: Episode VIII - The Last Jedi",
+      "title": "Star Wars: The Last Jedi",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2018-05-16",
       "imdb": "tt2527336",
-      "poster": "",
+      "poster": "posters/star-wars-the-last-jedi-2017.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 730604
+      "imdbVotes": 730604,
+      "year": 2017,
+      "tmdb": 181808,
+      "tmdbKind": "movie",
+      "runtime": 152,
+      "director": "Rian Johnson",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Lucasfilm Ltd.",
+      "logo": "logos/1.png"
     },
     {
       "title": "A Fantastic Woman",
@@ -337,9 +704,19 @@
       "rating10": 7,
       "watched": "2018-05-16",
       "imdb": "tt5639354",
-      "poster": "",
+      "poster": "posters/a-fantastic-woman-2017.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 28779
+      "imdbVotes": 28779,
+      "year": 2017,
+      "tmdb": 429191,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Sebastián Lelio",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Komplizen Film",
+      "logo": "logos/1618.png"
     },
     {
       "title": "Everybody Wants Some!!",
@@ -347,9 +724,19 @@
       "rating10": 6.5,
       "watched": "2018-05-16",
       "imdb": "tt2937696",
-      "poster": "",
+      "poster": "posters/everybody-wants-some-2016.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 65172
+      "imdbVotes": 65172,
+      "year": 2016,
+      "tmdb": 295699,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Richard Linklater",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Annapurna Pictures",
+      "logo": "logos/13184.png"
     },
     {
       "title": "The Purge",
@@ -357,59 +744,126 @@
       "rating10": 4.5,
       "watched": "2018-05-17",
       "imdb": "tt2184339",
-      "poster": "",
+      "poster": "posters/the-purge-2013.jpg",
       "imdbRating": 5.8,
-      "imdbVotes": 267713
+      "imdbVotes": 267713,
+      "year": 2013,
+      "tmdb": 158015,
+      "tmdbKind": "movie",
+      "runtime": 85,
+      "director": "James DeMonaco",
+      "genres": [
+        "Science Fiction",
+        "Horror",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Bloodsport",
-      "rating": 0.0,
+      "rating": 0,
       "rating10": 0,
       "watched": "2018-05-17",
       "imdb": "tt0092675",
-      "poster": "",
+      "poster": "posters/bloodsport-1988.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 105398
+      "imdbVotes": 105398,
+      "year": 1988,
+      "tmdb": 11690,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Newt Arnold",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "studio": "The Cannon Group",
+      "logo": "logos/1444.png"
     },
     {
       "title": "Good Time",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2018-05-26",
       "imdb": "tt4846232",
-      "poster": "",
+      "poster": "posters/good-time-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 161078
+      "imdbVotes": 161078,
+      "year": 2017,
+      "tmdb": 429200,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Benny Safdie",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Elara Pictures",
+      "logo": "logos/94312.png"
     },
     {
-      "title": "Playtime",
+      "title": "PlayTime",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2018-05-29",
       "imdb": "tt0062136",
-      "poster": "",
+      "poster": "posters/playtime-1967.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 30492
+      "imdbVotes": 30492,
+      "year": 1967,
+      "tmdb": 10227,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Jacques Tati",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Specta Films",
+      "logo": "logos/30847.png"
     },
     {
       "title": "Red Sparrow",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2018-06-04",
       "imdb": "tt2873282",
-      "poster": "",
+      "poster": "posters/red-sparrow-2018.jpg",
       "imdbRating": 6.6,
-      "imdbVotes": 221000
+      "imdbVotes": 221000,
+      "year": 2018,
+      "tmdb": 401981,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Francis Lawrence",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Chernin Entertainment",
+      "logo": "logos/7076.png"
     },
     {
       "title": "Thoroughbreds",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2018-06-04",
       "imdb": "tt5649108",
-      "poster": "",
+      "poster": "posters/thoroughbreds-2018.jpg",
       "imdbRating": 6.6,
-      "imdbVotes": 50100
+      "imdbVotes": 50100,
+      "year": 2018,
+      "tmdb": 397722,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Cory Finley",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "June Pictures",
+      "logo": "logos/76901.png"
     },
     {
       "title": "Ready Player One",
@@ -417,9 +871,21 @@
       "rating10": 7,
       "watched": "2018-06-18",
       "imdb": "tt1677720",
-      "poster": "",
+      "poster": "posters/ready-player-one-2018.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 555529
+      "imdbVotes": 555529,
+      "year": 2018,
+      "tmdb": 333339,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Amblin Entertainment",
+      "logo": "logos/56.png"
     },
     {
       "title": "Isle of Dogs",
@@ -427,29 +893,64 @@
       "rating10": 8.5,
       "watched": "2018-07-05",
       "imdb": "tt5104604",
-      "poster": "",
+      "poster": "posters/isle-of-dogs-2018.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 216271
+      "imdbVotes": 216271,
+      "year": 2018,
+      "tmdb": 399174,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Wes Anderson",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Animation"
+      ],
+      "studio": "Studio Babelsberg",
+      "logo": "logos/264.png"
     },
     {
       "title": "Super Troopers 2",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2018-07-06",
       "imdb": "tt0859635",
-      "poster": "",
+      "poster": "posters/super-troopers-2-2018.jpg",
       "imdbRating": 6,
-      "imdbVotes": 31625
+      "imdbVotes": 31625,
+      "year": 2018,
+      "tmdb": 50022,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Jay Chandrasekhar",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Broken Lizard Industries",
+      "logo": "logos/2773.png"
     },
     {
       "title": "The Tale",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-07-13",
       "imdb": "tt4015500",
-      "poster": "",
+      "poster": "posters/the-tale-2018.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 21963
+      "imdbVotes": 21963,
+      "year": 2018,
+      "tmdb": 369523,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Jennifer Fox",
+      "genres": [
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "One Two Films",
+      "logo": "logos/39720.png"
     },
     {
       "title": "Tully",
@@ -457,9 +958,20 @@
       "rating10": 7,
       "watched": "2018-07-21",
       "imdb": "tt5610554",
-      "poster": "",
+      "poster": "posters/tully-2018.jpg",
       "imdbRating": 6.9,
-      "imdbVotes": 67269
+      "imdbVotes": 67269,
+      "year": 2018,
+      "tmdb": 400579,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Jason Reitman",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Bron Studios",
+      "logo": "logos/13240.png"
     },
     {
       "title": "Black Panther",
@@ -467,19 +979,42 @@
       "rating10": 7,
       "watched": "2018-08-01",
       "imdb": "tt1825683",
-      "poster": "",
+      "poster": "posters/black-panther-2018.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 933266
+      "imdbVotes": 933266,
+      "year": 2018,
+      "tmdb": 284054,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Ryan Coogler",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Blade Runner 2049",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-09-27",
       "imdb": "tt1856101",
-      "poster": "",
+      "poster": "posters/blade-runner-2049-2017.jpg",
       "imdbRating": 8,
-      "imdbVotes": 776911
+      "imdbVotes": 776911,
+      "year": 2017,
+      "tmdb": 335984,
+      "tmdbKind": "movie",
+      "runtime": 164,
+      "director": "Denis Villeneuve",
+      "genres": [
+        "Science Fiction",
+        "Drama"
+      ],
+      "studio": "Alcon Entertainment",
+      "logo": "logos/1088.png"
     },
     {
       "title": "American Animals",
@@ -487,29 +1022,64 @@
       "rating10": 7,
       "watched": "2018-09-27",
       "imdb": "tt6212478",
-      "poster": "",
+      "poster": "posters/american-animals-2018.jpg",
       "imdbRating": 7,
-      "imdbVotes": 54101
+      "imdbVotes": 54101,
+      "year": 2018,
+      "tmdb": 489931,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Bart Layton",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Documentary"
+      ],
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "Eighth Grade",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2018-10-25",
       "imdb": "tt7014006",
-      "poster": "",
+      "poster": "posters/eighth-grade-2018.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 87891
+      "imdbVotes": 87891,
+      "year": 2018,
+      "tmdb": 489925,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Bo Burnham",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
-      "title": "Black Klansman",
+      "title": "BlacKkKlansman",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2018-11-08",
       "imdb": "tt7349662",
-      "poster": "",
+      "poster": "posters/blackkklansman-2018.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 318821
+      "imdbVotes": 318821,
+      "year": 2018,
+      "tmdb": 487558,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Spike Lee",
+      "genres": [
+        "Crime",
+        "Drama",
+        "History"
+      ],
+      "studio": "Legendary Pictures",
+      "logo": "logos/923.png"
     },
     {
       "title": "Incredibles 2",
@@ -517,9 +1087,22 @@
       "rating10": 6.5,
       "watched": "2018-11-08",
       "imdb": "tt3606756",
-      "poster": "",
+      "poster": "posters/incredibles-2-2018.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 380465
+      "imdbVotes": 380465,
+      "year": 2018,
+      "tmdb": 260513,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Brad Bird",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Bao",
@@ -527,9 +1110,23 @@
       "rating10": 6.5,
       "watched": "2018-11-08",
       "imdb": "tt8075496",
-      "poster": "",
+      "poster": "posters/bao-2018.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 36240
+      "imdbVotes": 36240,
+      "year": 2018,
+      "tmdb": 514754,
+      "tmdbKind": "movie",
+      "runtime": 8,
+      "director": "Domee Shi",
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     }
   ]
 }

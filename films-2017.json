@@ -3,23 +3,46 @@
   "films": [
     {
       "title": "Elle",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-01-01",
       "imdb": "tt3716530",
-      "poster": "",
+      "poster": "posters/elle-2016.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 75255
+      "imdbVotes": 75255,
+      "year": 2016,
+      "tmdb": 337674,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Paul Verhoeven",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "France 2 Cinéma",
+      "logo": "logos/83.png"
     },
     {
       "title": "The Night Of",
-      "rating": 5.0,
+      "rating": 5,
       "rating10": 9.5,
       "watched": "2017-01-22",
       "imdb": "tt2401256",
-      "poster": "",
+      "poster": "posters/the-night-of-2016.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 203220
+      "imdbVotes": 203220,
+      "year": 2016,
+      "tmdb": 66276,
+      "tmdbKind": "tv",
+      "runtime": 60,
+      "director": "Richard Price",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "Bad Wolf",
+      "logo": "logos/82996.png"
     },
     {
       "title": "Alone in the Wilderness",
@@ -27,19 +50,41 @@
       "rating10": 9,
       "watched": "2017-01-22",
       "imdb": "tt0437806",
-      "poster": "",
+      "poster": "posters/alone-in-the-wilderness-2004.jpg",
       "imdbRating": 8.6,
-      "imdbVotes": 4281
+      "imdbVotes": 4281,
+      "year": 2004,
+      "tmdb": 14463,
+      "tmdbKind": "movie",
+      "runtime": 57,
+      "director": "Dick Proenneke",
+      "genres": [
+        "Documentary",
+        "History",
+        "TV Movie"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Weiner",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-01-22",
       "imdb": "tt5278596",
-      "poster": "",
+      "poster": "posters/weiner-2016.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 10902
+      "imdbVotes": 10902,
+      "year": 2016,
+      "tmdb": 376261,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Josh Kriegman",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Motto Pictures",
+      "logo": "logos/10978.png"
     },
     {
       "title": "Finding Dory",
@@ -47,9 +92,21 @@
       "rating10": 7,
       "watched": "2017-01-22",
       "imdb": "tt2277860",
-      "poster": "",
+      "poster": "posters/finding-dory-2016.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 342222
+      "imdbVotes": 342222,
+      "year": 2016,
+      "tmdb": 127380,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Andrew Stanton",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Family"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Hunt for the Wilderpeople",
@@ -57,49 +114,103 @@
       "rating10": 7,
       "watched": "2017-01-22",
       "imdb": "tt4698684",
-      "poster": "",
+      "poster": "posters/hunt-for-the-wilderpeople-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 157351
+      "imdbVotes": 157351,
+      "year": 2016,
+      "tmdb": 371645,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Taika Waititi",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Piki Films",
+      "logo": "logos/76342.png"
     },
     {
       "title": "True Story",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 5.5,
       "watched": "2017-01-22",
       "imdb": "tt2273657",
-      "poster": "",
+      "poster": "posters/true-story-2015.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 76417
+      "imdbVotes": 76417,
+      "year": 2015,
+      "tmdb": 245706,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Rupert Goold",
+      "genres": [
+        "Crime",
+        "Drama",
+        "History"
+      ],
+      "studio": "Plan B Entertainment",
+      "logo": "logos/81.png"
     },
     {
       "title": "Sour Grapes",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-02-04",
       "imdb": "tt5728684",
-      "poster": "",
+      "poster": "posters/sour-grapes-2016.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 6542
+      "imdbVotes": 6542,
+      "year": 2016,
+      "tmdb": 396232,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Reuben Atlas",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Manchester by the Sea",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-02-10",
       "imdb": "tt4034228",
-      "poster": "",
+      "poster": "posters/manchester-by-the-sea-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 366473
+      "imdbVotes": 366473,
+      "year": 2016,
+      "tmdb": 334541,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Kenneth Lonergan",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Pearl Street Films",
+      "logo": "logos/29313.png"
     },
     {
       "title": "Moonlight",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-02-18",
       "imdb": "tt4975722",
-      "poster": "",
+      "poster": "posters/moonlight-2016.jpg",
       "imdbRating": 7.4,
-      "imdbVotes": 357838
+      "imdbVotes": 357838,
+      "year": 2016,
+      "tmdb": 376867,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Barry Jenkins",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Arrival",
@@ -107,9 +218,21 @@
       "rating10": 7,
       "watched": "2017-02-19",
       "imdb": "tt2543164",
-      "poster": "",
+      "poster": "posters/arrival-2016.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 887167
+      "imdbVotes": 887167,
+      "year": 2016,
+      "tmdb": 329865,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Denis Villeneuve",
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "The Girl on the Train",
@@ -117,19 +240,42 @@
       "rating10": 7,
       "watched": "2017-03-01",
       "imdb": "tt3631112",
-      "poster": "",
+      "poster": "posters/the-girl-on-the-train-2016.jpg",
       "imdbRating": 6.5,
-      "imdbVotes": 214804
+      "imdbVotes": 214804,
+      "year": 2016,
+      "tmdb": 346685,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Tate Taylor",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Reliance Entertainment",
+      "logo": "logos/7294.png"
     },
     {
       "title": "Captain Fantastic",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2017-03-03",
       "imdb": "tt3553976",
-      "poster": "",
+      "poster": "posters/captain-fantastic-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 254644
+      "imdbVotes": 254644,
+      "year": 2016,
+      "tmdb": 334533,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Matt Ross",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Shivhans Pictures",
+      "logo": "logos/33603.png"
     },
     {
       "title": "The Founder",
@@ -137,9 +283,20 @@
       "rating10": 7,
       "watched": "2017-04-16",
       "imdb": "tt4276820",
-      "poster": "",
+      "poster": "posters/the-founder-2016.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 211295
+      "imdbVotes": 211295,
+      "year": 2016,
+      "tmdb": 310307,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "John Lee Hancock",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "Aguirre, the Wrath of God",
@@ -147,9 +304,21 @@
       "rating10": 7,
       "watched": "2017-04-16",
       "imdb": "tt0068182",
-      "poster": "",
+      "poster": "posters/aguirre-the-wrath-of-god-1972.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 69633
+      "imdbVotes": 69633,
+      "year": 1972,
+      "tmdb": 2000,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Werner Herzog",
+      "genres": [
+        "History",
+        "Adventure",
+        "Drama"
+      ],
+      "studio": "Werner Herzog Filmproduktion",
+      "logo": "logos/843.png"
     },
     {
       "title": "Betting on Zero",
@@ -157,19 +326,39 @@
       "rating10": 5,
       "watched": "2017-04-16",
       "imdb": "tt3762912",
-      "poster": "",
+      "poster": "posters/betting-on-zero-2016.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 5915
+      "imdbVotes": 5915,
+      "year": 2016,
+      "tmdb": 385805,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Ted Braun",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Zipper Bros Films",
+      "logo": "logos/55571.png"
     },
     {
       "title": "Paterson",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-04-17",
       "imdb": "tt5247022",
-      "poster": "",
+      "poster": "posters/paterson-2016.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 97062
+      "imdbVotes": 97062,
+      "year": 2016,
+      "tmdb": 370755,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "K5 International",
+      "logo": "logos/6715.png"
     },
     {
       "title": "Hacksaw Ridge",
@@ -177,59 +366,127 @@
       "rating10": 6.5,
       "watched": "2017-04-17",
       "imdb": "tt2119532",
-      "poster": "",
+      "poster": "posters/hacksaw-ridge-2016.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 703461
+      "imdbVotes": 703461,
+      "year": 2016,
+      "tmdb": 324786,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Mel Gibson",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "Summit Entertainment",
+      "logo": "logos/491.png"
     },
     {
       "title": "Eating You Alive",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 8,
       "watched": "2017-06-02",
       "imdb": "tt5241760",
-      "poster": "",
+      "poster": "posters/eating-you-alive-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 1018
+      "imdbVotes": 1018,
+      "year": 2016,
+      "tmdb": 423435,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Paul David Kennamer Jr.",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Wonder Woman",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2017-07-15",
       "imdb": "tt0451279",
-      "poster": "",
+      "poster": "posters/wonder-woman-2017.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 744901
+      "imdbVotes": 744901,
+      "year": 2017,
+      "tmdb": 297762,
+      "tmdbKind": "movie",
+      "runtime": 141,
+      "director": "Patty Jenkins",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "studio": "Atlas Entertainment",
+      "logo": "logos/507.png"
     },
     {
       "title": "The Bad Kids",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-08-15",
       "imdb": "tt5278458",
-      "poster": "",
+      "poster": "posters/the-bad-kids-2016.jpg",
       "imdbRating": 7,
-      "imdbVotes": 697
+      "imdbVotes": 697,
+      "year": 2016,
+      "tmdb": 376256,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Keith Fulton",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Rogue One",
-      "rating": 4.0,
+      "title": "Rogue One: A Star Wars Story",
+      "rating": 4,
       "rating10": 8,
       "watched": "2017-09-25",
       "imdb": "tt3748528",
-      "poster": "",
+      "poster": "posters/rogue-one-a-star-wars-story-2016.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 769763
+      "imdbVotes": 769763,
+      "year": 2016,
+      "tmdb": 330459,
+      "tmdbKind": "movie",
+      "runtime": 133,
+      "director": "Gareth Edwards",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Lucasfilm Ltd.",
+      "logo": "logos/1.png"
     },
     {
       "title": "Jim & Andy: The Great Beyond - Featuring a Very Special, Contractually Obligated Mention of Tony Clifton",
-      "rating": 4.0,
+      "rating": 4,
       "rating10": 7.5,
       "watched": "2017-11-23",
       "imdb": "tt7214762",
-      "poster": "",
+      "poster": "posters/jim-andy-the-great-beyond-featuring-a-very-special-contractually-obligated-mention-of-tony-clifton-2017.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 29302
+      "imdbVotes": 29302,
+      "year": 2017,
+      "tmdb": 469019,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Chris Smith",
+      "genres": [
+        "Documentary",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "VICE Media",
+      "logo": "logos/17209.png"
     },
     {
       "title": "Cameraperson",
@@ -237,19 +494,40 @@
       "rating10": 7,
       "watched": "2017-11-23",
       "imdb": "tt5375040",
-      "poster": "",
+      "poster": "posters/cameraperson-2016.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 3703
+      "imdbVotes": 3703,
+      "year": 2016,
+      "tmdb": 376534,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Kirsten Johnson",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Fork Films",
+      "logo": "logos/13045.png"
     },
     {
       "title": "Logan Lucky",
-      "rating": 3.0,
+      "rating": 3,
       "rating10": 6,
       "watched": "2017-11-27",
       "imdb": "tt5439796",
-      "poster": "",
+      "poster": "posters/logan-lucky-2017.jpg",
       "imdbRating": 7,
-      "imdbVotes": 179344
+      "imdbVotes": 179344,
+      "year": 2017,
+      "tmdb": 399170,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Fingerprint Releasing",
+      "logo": "logos/149869.png"
     }
   ]
 }
