@@ -3284,19 +3284,19 @@ std('the-celebration-1998', ('solid', (244, 242, 238)), (20, 18, 16),
     photo=ph(.5, .55, .8, .8), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['A THOMAS VINTERBERG', 'FILM'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=WORN, seed=1998)
 
-# Klaus: Smeerensburg's snowy night blue, an orange script like the poster's (typeset: small on the poster), Klaus himself
+# Klaus: Smeerensburg's snowy night blue, the poster's orange script Klaus cut off it, Klaus himself
 std('klaus-2019', ('grad', [(0, (40, 60, 90)), (.6, (20, 30, 50)), (1, (8, 12, 20))]), (240, 140, 50),
-    T('Klaus', 'cho', 130, (244, 146, 56), shadow=((10, 14, 24), 3, 3)),
+    LC([(0.285, 0.37, 0.735, 0.497)], 150, outline=((244, 230, 200), 1.6), cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .55) & (a[..., 2] < .45))]),
     photo=ph(.4, .78, .4, 1.0), pb=(244, 146, 56), lg=WHT, lw=.6, order='LPTCF', credit=['JASON SCHWARTZMAN', 'J.K. SIMMONS'], ccol=WHT,
     ft='a', vbox=(244, 146, 56), vink=(20, 30, 50), fcol=(200, 210, 224), fin=MINT)
 
-# 48 Hrs. (1982): a real rental, San Francisco night, the red digital-clock capitals (typeset), Reggie and Jack
+# 48 Hrs. (1982): a real rental, San Francisco night, the poster's white digital-clock 48 HRS. cut off it with its red edge, Reggie and Jack
 std('48-hrs-1982', ('grad', [(0, (30, 30, 60)), (.6, (12, 12, 26)), (1, (4, 4, 8))]), (240, 40, 50),
-    T('48 HRS.', 'intbki', 110, (244, 44, 54), soft=((240, 40, 60), 6, .6)),
+    LC([(0.19, 0.048, 0.825, 0.155)], 110, cuts=[key_cut(lambda a: _lum(a) > .75)], outline=((240, 40, 60), 1.4)),
     photo=ph(.5, .45, .8, .8), pb=(244, 44, 54), lg=WHT, lw=.6, order='LPTCSF', credit=['NICK NOLTE', 'EDDIE MURPHY'], ccol=WHT,
     stick=PRC(['$0.99', 'ACTION']), ft='a', vbox=(244, 44, 54), vink=(12, 12, 26), fcol=(190, 196, 220), fin=RENTAL, seed=1982)
 
-# Hustlers: club-light violet, the pink neon capitals (typeset), Destiny at the head
+# Hustlers: club-light violet, the pink neon capitals (typeset: on the poster the letters are stacked one above another as a sign, a glowing tube each, and over the photos), Destiny at the head
 std('hustlers-2019', ('grad', [(0, (60, 30, 110)), (.6, (26, 12, 50)), (1, (8, 4, 16))]), (250, 120, 220),
     T('HUSTLERS', 'adv', 96, (252, 160, 236), track=.1, soft=((240, 60, 200), 8, .8)),
     photo=ph(.17, .09, .3, 1.0), pb=(252, 160, 236), lg=WHT, lw=.6, order='LPTCF', credit=['CONSTANCE WU', 'JENNIFER LOPEZ'], ccol=(252, 160, 236),
@@ -3308,21 +3308,21 @@ std('joker-2019', ('grad', [(0, (150, 140, 110)), (.5, (70, 60, 44)), (1, (20, 1
     photo=ph(.45, .5, .5, 1.0), pb=(210, 40, 30), lg=WHT, lw=.6, order='LPTCF', credit=['JOAQUIN PHOENIX'], ccol=WHT,
     ft='a', vbox=(210, 40, 30), fcol=(220, 210, 196), fin=SLIP)
 
-# Shirkers: the poster's pink-to-violet sky, the white stencil capitals (typeset), Sandi on the scooter
+# Shirkers: the poster's pink-to-violet sky, its white stencil SHIRKERS lifted, Sandi on the scooter
 std('shirkers-2018', ('grad', [(0, (240, 110, 210)), (.5, (150, 100, 230)), (1, (40, 50, 160))]), WHT,
-    T('SHIRKERS', 'adv', 92, WHT, track=.1, outline=((60, 30, 90), 1.6)),
+    L((0.077, 0.03, 0.929, 0.254), 92, WHT, mode='key', key=(252, 252, 252), t=(25, 60), outline=((60, 30, 90), 1.6)),
     photo=ph(.5, .42, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A SANDI TAN', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 50, 160), fcol=WHT, fin=MINT)
 
-# True Grit (2010): weathered barn-board brown, the white outlined slab capitals (typeset), Rooster with his eye patch
+# True Grit (2010): weathered barn-board brown, the poster's white outlined slab TRUE GRIT cut off it, Rooster with his eye patch
 std('true-grit-2010', ('grad', [(0, (110, 90, 70)), (.6, (50, 40, 30)), (1, (14, 10, 8))]), WHT,
-    T('TRUE GRIT', 'schb', 92, WHT, track=.04, outline=((30, 24, 18), 2.2), shadow=((10, 8, 6), 3, 3)),
+    LC([(0.133, 0.447, 0.903, 0.668)], 150, cuts=[key_cut(lambda a: _lum(a) > .78)], outline=((30, 24, 18), 2.2)),
     photo=ph(.3, .17, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JEFF BRIDGES', 'MATT DAMON'], ccol=WHT,
     ft='a', vbox=WHT, vink=(50, 40, 30), fcol=(220, 210, 196), fin=SLIP, seed=2010)
 
-# Inside Llewyn Davis: Greenwich Village winter grey, the teal condensed capitals (typeset), Llewyn with the cat
+# Inside Llewyn Davis: Greenwich Village winter grey, the teal condensed capitals, Llewyn with the cat
 std('inside-llewyn-davis-2013', ('grad', [(0, (220, 220, 214)), (.6, (180, 180, 174)), (1, (110, 110, 104))]), (40, 100, 110),
-    [T('INSIDE', 'hcnb', 44, (40, 102, 112), squeeze=.8, track=.06), T('LLEWYN DAVIS', 'hcnb', 80, (40, 102, 112), squeeze=.76, bold=.4)], tgap=8,
+    [L((0.326, 0.095, 0.672, 0.19), 44, (40, 102, 112), mode='dark'), L((0.107, 0.192, 0.891, 0.277), 80, (40, 102, 112), mode='dark')], tgap=8,
     photo=ph(.5, .5, .4, 1.0), pb=(40, 102, 112), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(30, 30, 30),
     ft='a', vbox=(40, 102, 112), fcol=(30, 30, 30), fin=SLIP, dotst=(['FOLK'], (40, 102, 112)))
 
@@ -3332,9 +3332,9 @@ disney('toy-story-4-2019', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .
           cuts=[ts_letters, ts_plate(.30, .68), ts_letters]),
        face=ph(.5, .47, .19, 1.4))
 
-# Cinemania (2003): black, the red neon cine and yellow MANIA (typeset), Jack outside Film Forum
+# Cinemania (2003): black, the poster's red neon cine and yellow MANIA cut off it, Jack outside Film Forum
 std('cinemania-2003', ('grad', [(0, (40, 36, 34)), (.6, (14, 12, 12)), (1, (4, 4, 4))]), (230, 60, 40),
-    TT([('cine', (232, 64, 44)), ('MANIA', (246, 230, 60))], 'popb', 100, sp=0),
+    LC([(0.054, 0.616, 0.945, 0.784)], 120, cuts=[key_cut(lambda a: (_sat(a) > .4) & (a[..., 0] > .55))]),
     photo=ph(.5, .3, .6, 1.0), pb=(246, 230, 60), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(232, 64, 44), fcol=(200, 196, 190), fin=WORN, seed=2003)
 
