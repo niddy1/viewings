@@ -4903,75 +4903,75 @@ std('woman-in-the-dunes-1964', ('grad', [(0, (244, 242, 236)), (.6, (226, 222, 2
     photo=ph(.5, .65, .7, .8), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCSF', credit=['A HIROSHI TESHIGAHARA', 'FILM'], ccol=(20, 18, 16),
     stick=flow(dot, 70, ['FOREIGN'], (200, 60, 40), d=62), ft='e', fcol=(20, 18, 16), fin=OLD, seed=1964)
 
-# Tokyo Story (1953): an old tape, the grey of the harbour, white spaced capitals (typeset), the old couple
+# Tokyo Story (1953): an old tape, the grey of the harbour, white spaced capitals, the old couple
 std('tokyo-story-1953', ('grad', [(0, (150, 150, 150)), (.6, (70, 70, 70)), (1, (16, 16, 16))]), WHT,
-    T('TOKYO STORY', 'her', 70, WHT, track=.45),
+    [L((0.22, 0.748, 0.78, 0.803), 60, WHT, mode='light'), L((0.225, 0.826, 0.78, 0.882), 60, WHT, mode='light')],
     photo=ph(.4, .4, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A YASUJIRŌ OZU', 'FILM'], ccol=WHT,
     stick=PRC(['$2.99', 'CLASSIC']), ft='e', fcol=(220, 220, 220), fin=OLD, seed=1953)
 
-# O.J.: Made in America: a box set (467 minutes), the poster's newsprint grey, black condensed capitals (typeset), the flag-painted hand
+# O.J.: Made in America: a box set (467 minutes), the poster's newsprint grey, the black condensed O.J.: MADE IN AMERICA lifted off it, the flag-painted hand
 std('o-j-made-in-america-2016', ('grad', [(0, (220, 220, 218)), (.6, (180, 180, 178)), (1, (90, 90, 88))]), (20, 20, 20),
-    [T('O.J.:', 'hcnb', 150, (190, 30, 40), squeeze=.76, bold=.8), T('MADE IN AMERICA', 'hcnb', 150, (20, 20, 20), squeeze=.76, bold=.8)],
+    L((0.1, 0.83, 0.9, 0.948), 150, (20, 20, 20), mode='dark'),
     photo=ph(.5, .3, .6, .5), pb=(190, 30, 40), lg=(20, 20, 20), lw=.5, order='LPTCSF', tgap=10, credit=['THE COMPLETE DOCUSERIES', 'AN EZRA EDELMAN FILM'], ccol=(20, 20, 20),
     stick=flow(dot, 112, ['BOX', 'SET'], (190, 30, 40), WHT, d=104), ft='c', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=MINT, **TWO)
 
-# 10 Cloverfield Lane: the storm sky's green-black, white heavy condensed capitals (typeset), Michelle
+# 10 Cloverfield Lane: the storm sky's green-black, white heavy condensed capitals, Michelle
 std('10-cloverfield-lane-2016', ('grad', [(0, (60, 80, 70)), (.6, (18, 24, 20)), (1, (4, 6, 4))]), WHT,
-    [T('10', 'intbk', 60, WHT), T('CLOVERFIELD LANE', 'hcnb', 80, WHT, squeeze=.78, bold=.6)], tgap=8,
+    L((0.535, 0.265, 0.955, 0.483), 160, WHT, mode='light'), tgap=8,
     photo=ph(.75, .72, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JOHN GOODMAN', 'MARY ELIZABETH WINSTEAD'], ccol=WHT,
     ft='a', vbox=WHT, vink=(18, 24, 20), fcol=(196, 206, 200), fin=SLIP)
 
-# Punch-Drunk Love (2002): black and the colour wash, white tall serif (typeset), the kiss in the doorway
+# Punch-Drunk Love (2002): black and the colour wash, white tall serif, the kiss in the doorway
 std('punch-drunk-love-2002', ('grad', [(0, (30, 30, 50)), (.5, (20, 20, 30)), (1, (40, 80, 160))]), WHT,
-    T('PUNCH-DRUNK LOVE', 'adv', 70, WHT, track=.04),
+    L((0.08, 0.795, 0.92, 0.893), 70, WHT, mode='key', key=(252, 252, 252), t=(30, 70)),
     photo=ph(.5, .4, .5, 1.0), pb=(120, 170, 240), lg=WHT, lw=.6, order='LPTCF', credit=['ADAM SANDLER', 'EMILY WATSON'], ccol=WHT,
     ft='a', vbox=(120, 170, 240), vink=(20, 20, 30), fcol=(200, 200, 220), fin=WORN, seed=2002, dotst=(['STAFF', 'PICK'], (40, 80, 160)))
 
-# These Birds Walk: the dusty sky's peach, the pale ochre capitals (typeset), the boy mid-leap
+# These Birds Walk: the dusty sky's peach, the pale ochre capitals (typeset: on the poster they are thin see-through outlines over the boy, and a lift loses THESE), the boy mid-leap
 std('these-birds-walk-2012', ('grad', [(0, (236, 222, 196)), (.6, (220, 190, 150)), (1, (160, 120, 80))]), (190, 140, 60),
     T('THESE BIRDS WALK', 'her', 66, (160, 110, 40), track=.1, bold=.4),
     photo=ph(.5, .82, .6, 1.0), pb=(160, 110, 40), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(40, 30, 20),
     ft='a', vbox=(160, 110, 40), fcol=(40, 30, 20), fin=SLIP)
 
-# Doubt (2008): black, white blackletter D and spaced OUBT (typeset), Sister Aloysius
+# Doubt (2008): black, white blackletter D and spaced OUBT, Sister Aloysius
 std('doubt-2008', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), WHT,
-    T('DOUBT', 'ter', 100, WHT, track=.3),
+    L((0.21, 0.488, 0.74, 0.574), 100, WHT, mode='light'),
     photo=ph(.2, .17, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['MERYL STREEP', 'PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(14, 14, 16), fcol=(200, 200, 204), fin=WORN, seed=2008)
 
-# A Girl Walks Home Alone at Night: the poster's red and black, white and red condensed capitals (typeset), the girl in her chador
+# A Girl Walks Home Alone at Night: the poster's red and black, its red condensed capitals lifted off the black chador and set on a black panel, the girl in her chador
 std('a-girl-walks-home-alone-at-night-2014', ('solid', (226, 20, 20)), (20, 18, 18),
-    TT([('A', WHT), ('GIRL', WHT), ('WALKS HOME ALONE AT NIGHT', (20, 18, 18))], 'hcnb', 70, sp=.2, squeeze=.74, bold=.6),
+    [L((0.255, 0.614, 0.755, 0.69), 70, (226, 20, 20), mode='nkey', key=(12, 10, 10), t=(40, 90), plate=((16, 14, 14), 10, 6)), L([(0.255, 0.695, 0.755, 0.781), (0.326, 0.784, 0.69, 0.872)], 70, (226, 20, 20), mode='nkey', key=(12, 10, 10), t=(40, 90), plate=((16, 14, 14), 10, 6))],
     photo=ph(.5, .2, .4, 1.0), pb=(20, 18, 18), lg=WHT, lw=.6, order='LPTCF', credit=['AN ANA LILY AMIRPOUR', 'FILM'], ccol=(20, 18, 18),
     ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP)
 
-# Before the Devil Knows You're Dead (2007): black, white heavy capitals (typeset), Andy and Hank
+# Before the Devil Knows You're Dead (2007): black, white heavy capitals, Andy and Hank
 std('before-the-devil-knows-you-re-dead-2007', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
-    [T("BEFORE THE DEVIL", 'intbk', 60, WHT, squeeze=.84), T("KNOWS YOU'RE DEAD", 'intbk', 60, WHT, squeeze=.84)], tgap=8,
+    L((0.04, 0.355, 0.6, 0.64), 180, WHT, mode='key', key=(245, 245, 245), t=(80, 160), speck=0), tgap=8,
     photo=ph(.75, .15, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['PHILIP SEYMOUR HOFFMAN', 'ETHAN HAWKE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 16, 16), fcol=(200, 200, 200), fin=WORN, seed=2007)
 
-# The Savages (2007): the poster's winter blue-grey, the white SAVAGES on red (typeset), Wendy and Jon on the bench
+# The Savages (2007): the poster's winter blue-grey, the white SAVAGES with its black shadow lifted off the poster and set back on its red band, Wendy and Jon on the bench
 std('the-savages-2007', ('grad', [(0, (200, 214, 222)), (.6, (170, 186, 196)), (1, (110, 120, 130))]), WHT,
-    T('THE SAVAGES', 'intbk', 80, WHT, box=((220, 30, 60), 10, 6)),
+    L((0.06, 0.69, 0.94, 0.805), 80, WHT, mode='key', key=(250, 250, 250), t=(40, 90), shadow=((20, 20, 20), 3, 3), plate=((220, 30, 60), 12, 8)),
     photo=ph(.5, .45, .5, .8), pb=(220, 30, 60), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['LAURA LINNEY', 'PHILIP SEYMOUR HOFFMAN'], ccol=(30, 30, 30),
     ft='a', vbox=(220, 30, 60), fcol=(30, 30, 30), fin=WORN, seed=2007)
 
-# Clouds of Sils Maria: the Maloja snake's mist, white spaced capitals (typeset), Maria and Valentine
+# Clouds of Sils Maria: the Maloja snake's mist, white spaced capitals, Maria and Valentine
 std('clouds-of-sils-maria-2014', ('grad', [(0, (180, 214, 220)), (.6, (100, 140, 150)), (1, (30, 50, 56))]), WHT,
-    T('CLOUDS OF SILS MARIA', 'her', 58, WHT, track=.3),
+    L((0.15, 0.665, 0.85, 0.822), 150, WHT, mode='key', key=(252, 252, 252), t=(20, 45), speck=0),
     photo=ph(.55, .3, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JULIETTE BINOCHE', 'KRISTEN STEWART'], ccol=WHT,
     ft='a', vbox=WHT, vink=(100, 140, 150), fcol=WHT, fin=SLIP)
 
-# Bridesmaids (2011): the brick wall's red-brown, white heavy capitals (typeset), the bridal party in pink
+# Bridesmaids (2011): the brick wall's red-brown, white heavy capitals, the bridal party in pink
 std('bridesmaids-2011', ('grad', [(0, (140, 70, 60)), (.6, (70, 34, 30)), (1, (20, 10, 8))]), WHT,
-    T('BRIDESMAIDS', 'intbk', 92, WHT, squeeze=.86),
+    [L((0.06, 0.09, 0.94, 0.222), 92, WHT, mode='light'), L((0.06, 0.222, 0.94, 0.35), 92, WHT, mode='light')],
     photo=ph(.5, .62, .8, .6), pb=(240, 80, 160), lg=WHT, lw=.6, order='LPTCF', credit=['KRISTEN WIIG', 'MAYA RUDOLPH'], ccol=WHT,
     ft='a', vbox=(240, 80, 160), vink=(70, 34, 30), fcol=(230, 210, 206), fin=SLIP, seed=2011)
 
-# King Jack: the hazy violet, the white thin capitals with the drawn crown (typeset), Jack
+# King Jack: the hazy violet, the white thin capitals with the drawn crown, Jack
 std('king-jack-2015', ('grad', [(0, (150, 130, 160)), (.6, (80, 66, 90)), (1, (20, 16, 24))]), WHT,
-    T('KING JACK', 'her', 90, WHT, track=.06),
+    L((0.13, 0.81, 0.885, 0.945), 90, WHT, mode='key', key=(252, 252, 252), t=(20, 50)),
     photo=ph(.5, .35, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['CHARLIE PLUMMER'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 66, 90), fcol=(220, 210, 226), fin=SLIP)
 
