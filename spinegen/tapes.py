@@ -5077,21 +5077,21 @@ std('the-handmaiden-2016', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, 
     photo=ph(.5, .6, .45, 1.0), pb=(200, 170, 90), lg=WHT, lw=.6, order='LPTCF', credit=['A PARK CHAN-WOOK', 'FILM'], ccol=(232, 222, 192),
     ft='a', vbox=(200, 170, 90), vink=(14, 12, 10), fcol=(200, 196, 186), fin=MINT, under=[frame((200, 170, 90), 8, 1.4)])
 
-# The Scavengers (1992): the poster is Boca de Lixo's, so the spine is too: white, black serif (typeset), the balloons and the vulture
+# The Scavengers (1992): the poster is Boca de Lixo's, so the spine is too: white, its black serif BOCA DE LIXO lifted (THE SCAVENGERS typeset under it: the English title isn't on the poster), the balloons and the vulture
 std('the-scavengers-1992', ('grad', [(0, (246, 246, 244)), (.6, (224, 224, 220)), (1, (150, 150, 146))]), (20, 20, 20),
-    [T('BOCA DE LIXO', 'terb', 76, (20, 20, 20)), T('THE SCAVENGERS', 'her', 26, (20, 20, 20), track=.3)], tgap=8,
+    [L((0.12, 0.05, 0.86, 0.11), 76, (20, 20, 20), mode='dark'), T('THE SCAVENGERS', 'her', 26, (20, 20, 20), track=.3)], tgap=8,
     photo=ph(.5, .3, .6, 1.0), pb=(20, 20, 20), order='PTCF', credit=['AN EDUARDO COUTINHO', 'FILM'], ccol=(20, 20, 20),
     ft='e', fcol=(20, 20, 20), fin=OLD, seed=1992)
 
-# Pink (2016): the courtroom's dark, the hot-pink heavy capitals (typeset), Deepak (no logo file: its company in type)
+# Pink (2016): the courtroom's dark, the poster's hot-pink PINK with its clenched fists cut off it in its own colours, Deepak (no logo file: its company in type)
 std('pink-2016', ('grad', [(0, (50, 40, 40)), (.6, (18, 14, 14)), (1, (4, 4, 4))]), (240, 30, 150),
-    T('PINK', 'intbk', 130, (244, 34, 156)),
+    LC([(0.225, 0.7, 0.775, 0.845)], 130, cuts=[key_cut(lambda a: (_sat(a) > .4) & (a[..., 0] > .45) & (a[..., 2] > .25) & (a[..., 1] < a[..., 0] * .55))]),
     photo=ph(.5, .2, .5, 1.0), pb=(244, 34, 156), studio=['NH STUDIOZ'], scol=WHT, order='lPTCF', credit=['AMITABH BACHCHAN', 'TAAPSEE PANNU'], ccol=WHT,
     ft='a', vbox=(244, 34, 156), fcol=(200, 196, 196), fin=SLIP)
 
-# Salaam Bombay! (1988): an old tape, black, white and grey serif capitals (typeset), Krishna at the window
+# Salaam Bombay! (1988): an old tape, black, white and grey serif capitals, Krishna at the window
 std('salaam-bombay-1988', ('grad', [(0, (50, 40, 30)), (.6, (16, 12, 10)), (1, (4, 4, 4))]), WHT,
-    TT([('SALAAM', WHT), ('BOMBAY!', (190, 190, 190))], 'ter', 76, sp=.25),
+    L([(0.08, 0.1, 0.59, 0.17), (0.365, 0.168, 0.91, 0.235)], 76, [WHT, (190, 190, 190)], mode='light', gapf=.35),
     photo=ph(.3, .55, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A MIRA NAIR', 'FILM'], ccol=WHT,
     stick=PRC(['$1.99', 'FOREIGN']), ft='e', fcol=(210, 200, 190), fin=OLD, seed=1988)
 
