@@ -4832,74 +4832,74 @@ std('post-tenebras-lux-2012', ('grad', [(0, (40, 30, 90)), (.5, (60, 150, 200)),
     photo=ph(.5, .3, .4, 1.0), pb=(244, 126, 166), lg=WHT, lw=.6, order='LPTCF', credit=['A CARLOS REYGADAS', 'FILM'], ccol=WHT,
     ft='a', vbox=(244, 126, 166), vink=(40, 30, 90), fcol=WHT, fin=SLIP)
 
-# Only God Forgives: Bangkok neon pink and blue, the white condensed capitals (typeset), Julian
+# Only God Forgives: Bangkok neon pink and blue, the white condensed capitals, Julian
 std('only-god-forgives-2013', ('grad', [(0, (220, 40, 120)), (.5, (110, 40, 160)), (1, (20, 20, 60))]), WHT,
-    T('ONLY GOD FORGIVES', 'hcnb', 80, WHT, squeeze=.74, bold=.4),
+    L((0.085, 0.72, 0.915, 0.812), 80, WHT, mode='light'),
     photo=ph(.5, .2, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RYAN GOSLING'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 40, 160), fcol=(230, 210, 230), fin=SLIP)
 
-# Deadpool (2016): white, the red stencil capitals (typeset), Deadpool's mask
+# Deadpool (2016): white, the poster's red stencil DEADPOOL cut off it in its own colours (the top of his head shows under the PO), Deadpool's mask
 std('deadpool-2016', ('grad', [(0, (244, 244, 244)), (.6, (220, 220, 220)), (1, (140, 140, 140))]), (170, 20, 30),
-    T('DEADPOOL', 'hcnb', 100, (174, 22, 32), squeeze=.8, bold=1.0, rough=.4),
+    LC([(0.08, 0.075, 0.925, 0.188)], 100, cuts=[key_cut(lambda a: _lum(a) < .8)]),
     photo=ph(.5, .32, .3, 1.0), pb=(174, 22, 32), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['RYAN REYNOLDS'], ccol=(20, 20, 20),
     ft='a', vbox=(174, 22, 32), fcol=(20, 20, 20), fin=SLIP)
 
-# The Great Beauty: black, the yellow condensed capitals (typeset), Jep under the statue
+# The Great Beauty: black, the yellow condensed capitals, Jep under the statue
 std('the-great-beauty-2013', ('grad', [(0, (50, 46, 40)), (.6, (16, 14, 12)), (1, (4, 4, 4))]), (246, 230, 40),
-    T('THE GREAT BEAUTY', 'hcnb', 80, (248, 232, 44), squeeze=.8, bold=.4),
+    L((0.045, 0.11, 0.955, 0.195), 80, (248, 232, 44), mode='key', key=(240, 225, 50), t=(70, 150)),
     photo=ph(.5, .5, .55, 1.0), pb=(248, 232, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TONI SERVILLO'], ccol=(248, 232, 44),
     ft='a', vbox=(248, 232, 44), vink=(16, 14, 12), fcol=(200, 196, 190), fin=SLIP, dotst=(['STAFF', 'PICK'], (200, 160, 40), (16, 14, 12)))
 
-# Zootopia (2016): a Disney clamshell.  The city's blue sky, ZOOTOPIA in the street-sign green (typeset; Ian could supply the logo), Clawhauser in the diamond
+# Zootopia (2016): a Disney clamshell.  The city's blue sky, the poster's green ZOOTOPIA street sign cut off it, Clawhauser in the diamond
 disney('zootopia-2016', ('grad', [(0, (90, 170, 230)), (.5, (40, 100, 170)), (1, (14, 40, 80))]), fin=dict(CLAM, vivid=.25),
-       title=T('ZOOTOPIA', 'popb', 110, WHT, box=((40, 130, 70), 12, 8)),
+       title=LC([(0.13, 0.075, 0.69, 0.2)], 170),
        face=ph(.82, .77, .17, 1.4), lcol=WHT)
 
-# Spring Breakers: the poster's neon pink and violet, the scrawled neon lettering (typeset), the girls
+# Spring Breakers: the poster's neon pink and violet, the scrawled neon lettering, the girls
 std('spring-breakers-2013', ('grad', [(0, (200, 60, 160)), (.5, (100, 30, 110)), (1, (30, 10, 40))]), WHT,
-    T('SPRING BREAKERS', 'cho', 84, WHT, soft=((250, 120, 220), 7, .7)),
+    L((0.03, 0.685, 0.84, 0.9), 170, WHT, mode='key', key=(255, 235, 250), t=(40, 80), close=3, outline=((250, 120, 220), 1.2)),
     photo=ph(.5, .3, .6, 1.0), pb=(250, 140, 220), lg=WHT, lw=.6, order='LPTCF', credit=['A HARMONY KORINE', 'FILM'], ccol=WHT,
     ft='a', vbox=(250, 140, 220), vink=(100, 30, 110), fcol=WHT, fin=SLIP)
 
-# The Deep Blue Sea (2011): dim grey-blue, white condensed capitals (typeset), Hester and Freddie
+# The Deep Blue Sea (2011): dim grey-blue, white condensed capitals, Hester and Freddie
 std('the-deep-blue-sea-2011', ('grad', [(0, (60, 70, 80)), (.6, (20, 24, 28)), (1, (4, 6, 8))]), WHT,
-    T('THE DEEP BLUE SEA', 'hcn', 84, WHT, squeeze=.7),
+    L((0.075, 0.835, 0.935, 0.945), 84, WHT, mode='light'),
     photo=ph(.5, .3, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RACHEL WEISZ', 'TOM HIDDLESTON'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 24, 28), fcol=(196, 200, 206), fin=SLIP)
 
-# Skyfall: white, the black spaced capitals and 007 (typeset), Bond with his gun
+# Skyfall: white, the black spaced SKYFALL lifted off the poster, Bond with his gun
 std('skyfall-2012', ('grad', [(0, (246, 246, 246)), (.6, (224, 224, 224)), (1, (150, 150, 150))]), (20, 20, 20),
-    [T('SKYFALL', 'her', 76, (20, 20, 20), track=.4), T('007', 'intbki', 40, (20, 20, 20))], tgap=8,
+    L((0.09, 0.135, 0.91, 0.215), 76, (20, 20, 20), mode='dark'),
     photo=ph(.1, .87, .2, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['DANIEL CRAIG'], ccol=(20, 20, 20),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
 
-# The Cabin in the Woods: fog grey, the black serif (typeset), the cabin folding in on itself
+# The Cabin in the Woods: fog grey, the black serif, the cabin folding in on itself
 std('the-cabin-in-the-woods-2012', ('grad', [(0, (210, 210, 206)), (.6, (150, 150, 146)), (1, (50, 50, 48))]), (20, 20, 20),
-    [T('THE CABIN', 'ter', 76, (20, 20, 20)), T('IN THE WOODS', 'ter', 40, (20, 20, 20), track=.1)], tgap=6,
+    L((0.25, 0.763, 0.75, 0.915), 170, (20, 20, 20), mode='dark', speck=0), tgap=6,
     photo=ph(.5, .4, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A DREW GODDARD', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 20, 20), fcol=WHT, fin=SLIP)
 
-# Zero Dark Thirty: night-vision dark, white condensed capitals (typeset), Maya
+# Zero Dark Thirty: night-vision dark, white condensed capitals, Maya
 std('zero-dark-thirty-2012', ('grad', [(0, (70, 74, 70)), (.6, (24, 26, 24)), (1, (6, 6, 6))]), WHT,
-    T('ZERO DARK THIRTY', 'hcnb', 84, WHT, squeeze=.74, bold=.6),
+    L((0.09, 0.815, 0.91, 0.905), 84, WHT, mode='light'),
     photo=ph(.4, .3, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JESSICA CHASTAIN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(24, 26, 24), fcol=(200, 204, 200), fin=SLIP)
 
-# Star Wars: Episode III (Lucasfilm, a slipcase): Mustafar fire and black, the gold engraved capitals (typeset), Anakin
+# Star Wars: Episode III (Lucasfilm, a slipcase): Mustafar fire and black, the gold engraved STAR WARS EPISODE III / REVENGE OF THE SITH cut off the poster, Anakin
 std('star-wars-episode-iii-revenge-of-the-sith-2005', ('grad', [(0, (200, 80, 20)), (.5, (80, 26, 10)), (1, (10, 4, 2))]), (230, 190, 100),
-    [T('STAR WARS  EPISODE III', 'ter', 50, (234, 196, 106), track=.06), T('REVENGE OF THE SITH', 'ter', 34, (234, 196, 106), track=.2)], tgap=8,
+    LC([(0.09, 0.755, 0.9, 0.91), (0.1, 0.93, 0.89, 0.965)], 100, cuts=[key_cut(lambda a: (_lum(a) > .45) & (a[..., 0] > a[..., 2]))] * 2), tgap=8,
     photo=ph(.5, .1, .35, 1.0), pb=(234, 196, 106), lg=WHT, lw=.6, order='LPTCF', credit=['HAYDEN CHRISTENSEN', 'EWAN McGREGOR'], ccol=WHT,
     ft='a', vbox=(234, 196, 106), vink=(80, 26, 10), fcol=(220, 200, 180), fin=WORN, seed=2005)
 
-# Mission: Impossible - Ghost Protocol (2011): Dubai dust gold, red and white italic capitals (typeset), Ethan
+# Mission: Impossible - Ghost Protocol (2011): Dubai dust gold, the poster's red and white italic capitals cut off it in their own colours, Ethan
 std('mission-impossible-ghost-protocol-2011', ('grad', [(0, (230, 170, 80)), (.5, (120, 70, 30)), (1, (20, 12, 6))]), (220, 30, 30),
-    [T('MISSION: IMPOSSIBLE', 'hcnb', 54, (224, 32, 32), squeeze=.8, bold=.4), T('GHOST PROTOCOL', 'hcnb', 70, WHT, squeeze=.8, bold=.6)], tgap=8,
+    LC([(0.04, 0.73, 0.91, 0.895)], 110, cuts=[key_cut(lambda a: ((_sat(a) > .5) & (a[..., 0] > .6) & (a[..., 1] < .35)) | (_lum(a) > .88))]), tgap=8,
     photo=ph(.5, .25, .4, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['TOM CRUISE'], ccol=WHT,
     ft='a', vbox=(224, 32, 32), fcol=(240, 220, 200), fin=SLIP, seed=2011)
 
-# Woman in the Dunes (1964): an old tape, white, the black brush lettering (typeset), the ink-wash figure
+# Woman in the Dunes (1964): an old tape, white, the black brush lettering, the ink-wash figure
 std('woman-in-the-dunes-1964', ('grad', [(0, (244, 242, 236)), (.6, (226, 222, 212)), (1, (160, 150, 130))]), (20, 18, 16),
-    T('Woman in the Dunes', 'cho', 90, (20, 18, 16)),
+    L((0.39, 0.04, 0.96, 0.405), 180, (20, 18, 16), mode='dark', speck=0),
     photo=ph(.5, .65, .7, .8), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCSF', credit=['A HIROSHI TESHIGAHARA', 'FILM'], ccol=(20, 18, 16),
     stick=flow(dot, 70, ['FOREIGN'], (200, 60, 40), d=62), ft='e', fcol=(20, 18, 16), fin=OLD, seed=1964)
 
