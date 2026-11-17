@@ -3187,21 +3187,21 @@ std('the-bits-of-yesterday-2018', ('grad', [(0, (40, 160, 90)), (.5, (30, 60, 80
     photo=ph(.5, .45, .5, 1.0), pb=(250, 60, 200), studio=['DREAM CASE', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(250, 60, 200), fcol=WHT, fin=MINT)
 
-# The Equalizer 2: explosion amber and smoke, the yellow heavy capitals (typeset), McCall with his gun
+# The Equalizer 2: explosion amber and smoke, the yellow heavy capitals (typeset: on the poster the I of EQUALIZER is the falling 2, so a lift reads EQUAL ZER), McCall with his gun
 std('the-equalizer-2-2018', ('grad', [(0, (230, 140, 40)), (.5, (110, 60, 20)), (1, (20, 14, 10))]), (250, 210, 40),
     TT([('THE', (250, 212, 44)), ('EQUALIZER 2', (250, 212, 44))], 'intbk', 80, sp=.25, squeeze=.84, outline=((40, 20, 10), 1.6)),
     photo=ph(.25, .14, .4, 1.0), pb=(250, 212, 44), lg=WHT, lw=.6, order='LPTCF', credit=['DENZEL', 'WASHINGTON'], ccol=(250, 212, 44),
     ft='a', vbox=(250, 212, 44), vink=(20, 14, 10), fcol=(230, 210, 190), fin=MINT)
 
-# The Magnificent Seven (2016): the poster's blood-red splash, white heavy capitals (typeset), the seven walking
+# The Magnificent Seven (2016): the poster's grey-white, its white THE MAGNIFICENT SEVEN lifted off the red splash and set back on red, the seven walking
 std('the-magnificent-seven-2016', ('grad', [(0, (200, 30, 30)), (.5, (120, 16, 16)), (1, (30, 6, 6))]), WHT,
-    TT([('THE', WHT), ('MAGNIFICENT SEVEN', WHT)], 'intbk', 70, sp=.25, squeeze=.84),
+    L((0.12, 0.17, 0.88, 0.288), 70, WHT, mode='key', key=(250, 250, 250), t=(30, 70), plate=((190, 30, 30), 10, 6)),
     photo=ph(.5, .68, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DENZEL WASHINGTON', 'CHRIS PRATT'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 16, 16), fcol=(236, 210, 206), fin=SLIP, seed=2016)
 
-# Bound by Honor (1993): a 2-tape rental set, East LA red and black, the red slab BLOOD IN BLOOD OUT lettering for its US title (typeset), the three cousins
+# Bound by Honor (1993): a 2-tape rental set, East LA red and black, the poster's red BLOOD in BLOOD out block cut off it as it is (the US title BOUND BY HONOR typeset under it: it isn't on this poster), the three cousins
 std('bound-by-honor-1993', ('grad', [(0, (160, 20, 20)), (.5, (60, 8, 8)), (1, (6, 2, 2))]), (226, 30, 30),
-    [T('BOUND BY HONOR', 'bonb', 110, (244, 236, 220), track=.04, outline=((200, 30, 30), 2.4)), T('BLOOD IN BLOOD OUT', 'herb', 40, (244, 236, 220), track=.2)],
+    [LC([(0.186, 0.471, 0.814, 0.65)], 150, cuts=[key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .35))]), T('BOUND BY HONOR', 'herb', 32, (244, 236, 220), track=.2)],
     photo=ph(.5, .15, .9, .6), pb=(230, 34, 34), lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['A TAYLOR HACKFORD', 'FILM'], ccol=WHT,
     stick=flow(dot, 112, ['2-TAPE', 'SET'], (240, 230, 210), (60, 8, 8), d=104), ft='c', vbox=WHT, vink=(60, 8, 8), fcol=(220, 196, 196), fin=RENTAL, seed=1993,
     W=2 * w_for(115), notch_w=1.5 * w_for(115))  # 190 minutes: a 2-tape box
@@ -3212,39 +3212,39 @@ std('the-act-of-killing-2012', ('grad', [(0, (180, 40, 120)), (.6, (110, 20, 80)
     photo=ph(.5, .8, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 20, 80), fcol=(236, 210, 226), fin=SLIP)
 
-# At the Heart of Gold: white, black and gold condensed capitals (typeset), the gymnast mid-air
+# At the Heart of Gold: Inside the USA Gymnastics Scandal: the poster's white, its black AT THE and gold HEART OF GOLD cut off it word by word (stacked there, one line here) and the subtitle lifted, the gymnast mid-air
 std('at-the-heart-of-gold-inside-the-usa-gymnastics-scandal-2019', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (170, 160, 140))]), (20, 18, 16),
-    [TT([('AT THE', (20, 18, 16)), ('HEART OF GOLD', (190, 160, 90))], 'hcnb', 70, sp=.25, squeeze=.8), T('INSIDE THE USA GYMNASTICS SCANDAL', 'hcnb', 22, (20, 18, 16), track=.1)], tgap=8,
+    [LC([(0.795, 0.209, 0.932, 0.301), (0.71, 0.314, 0.932, 0.406), (0.575, 0.418, 0.932, 0.511), (0.786, 0.522, 0.931, 0.617), (0.641, 0.627, 0.932, 0.721)], 70, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) < .3), key_cut(lambda a: _lum(a) < .3), key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .15) & (_lum(a) < .85)), key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .15) & (_lum(a) < .85)), key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .15) & (_lum(a) < .85))]), L([(0.468, 0.747, 0.932, 0.79), (0.275, 0.796, 0.935, 0.839)], 22, (20, 18, 16), mode='dark', gapf=.4)], tgap=8,
     photo=ph(.4, .15, .5, 1.0), pb=(190, 160, 90), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(20, 18, 16),
     ft='a', vbox=(190, 160, 90), fcol=(20, 18, 16), fin=MINT)
 
-# Camp Hollywood (2004): LA sky blue, the red heavy capitals (typeset), the motel pool (no logo file: its company in type)
+# Camp Hollywood (2004): LA sky blue, the red heavy capitals, the motel pool (no logo file: its company in type)
 std('camp-hollywood-2004', ('grad', [(0, (180, 214, 230)), (.6, (120, 170, 190)), (1, (40, 70, 60))]), (180, 30, 30),
-    T('CAMP HOLLYWOOD', 'hcnb', 76, (182, 32, 32), squeeze=.8, bold=.8),
+    [L((0.308, 0.103, 0.645, 0.197), 76, (182, 32, 32), mode='key', key=(170, 40, 40), t=(70, 150)), L((0.116, 0.219, 0.86, 0.316), 76, (182, 32, 32), mode='key', key=(170, 40, 40), t=(70, 150))],
     photo=ph(.5, .82, .9, .6), pb=(182, 32, 32), studio=['INTERLOPER FILMS'], scol=(30, 40, 50), order='lPTCF', credit=['A DOCUMENTARY'], ccol=(30, 40, 50),
     ft='a', vbox=(182, 32, 32), fcol=(230, 236, 236), fin=SLIP, seed=2004)
 
-# Parasite: the Parks' lawn green, white wide serif capitals (typeset: they run over the lawn), the house and the family
+# Parasite: the lawn's green, the white serif PARASITE lifted off the poster, the family in the garden
 std('parasite-2019', ('grad', [(0, (60, 80, 70)), (.5, (70, 120, 50)), (1, (20, 40, 14))]), WHT,
-    T('PARASITE', 'schb', 84, WHT, track=.06),
+    L((0.025, 0.65, 0.972, 0.745), 84, WHT, mode='key', key=(250, 250, 250), t=(30, 70)),
     photo=ph(.5, .3, .8, .8), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A BONG JOON HO', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(70, 120, 50), fcol=(220, 230, 214), fin=MINT, dotst=(['STAFF', 'PICK'], (230, 60, 40)))
 
-# Once Upon a Time in America (1984): an old tape, the Manhattan Bridge in amber haze, black condensed capitals (typeset), the boys under the bridge
+# Once Upon a Time in America (1984): an old tape, the Manhattan Bridge haze, the poster's black art-deco ONCE UPON A TIME IN AMERICA block lifted, the boys under the bridge
 std('once-upon-a-time-in-america-1984', ('grad', [(0, (240, 220, 180)), (.5, (180, 130, 70)), (1, (50, 30, 14))]), (20, 16, 12),
-    [T('ONCE UPON A TIME', 'hcnb', 44, (20, 16, 12), squeeze=.76), T('IN AMERICA', 'hcnb', 90, (20, 16, 12), squeeze=.74, bold=.6)], tgap=8,
+    [L((0.287, 0.168, 0.71, 0.259), 50, (20, 16, 12), mode='dark'), L((0.25, 0.259, 0.8, 0.405), 90, (20, 16, 12), mode='dark')], tgap=8,
     photo=ph(.5, .75, .6, 1.0), pb=(20, 16, 12), lg=(20, 16, 12), lw=.6, order='LPTCSF', credit=['ROBERT DE NIRO', 'JAMES WOODS'], ccol=(240, 220, 190),
     stick=BAR('15 01984', top='DRAMA', fill=(220, 214, 230), ink=(40, 30, 60)), ft='a', vbox=(240, 220, 190), vink=(50, 30, 14), fcol=(240, 220, 190), fin=OLD, seed=1984)
 
-# Under the Skin: starfield black, teal spaced capitals (typeset), her face in the dark
+# Under the Skin: starfield black, teal spaced capitals, her face in the dark
 std('under-the-skin-2014', ('grad', [(0, (20, 30, 50)), (.6, (6, 10, 18)), (1, (2, 2, 4))]), (90, 170, 190),
-    T('UNDER THE SKIN', 'her', 56, (96, 176, 196), track=.2),
+    L((0.05, 0.89, 0.945, 0.949), 56, (96, 176, 196), mode='light'),
     photo=ph(.5, .25, .45, 1.0), pb=(96, 176, 196), lg=WHT, lw=.6, order='LPTCF', credit=['SCARLETT JOHANSSON'], ccol=(96, 176, 196),
     ft='a', vbox=(96, 176, 196), vink=(6, 10, 18), fcol=(160, 180, 196), fin=SLIP)
 
-# A Separation (2011): Tehran dust brown, white heavy capitals (typeset), Simin
+# A Separation (2011): Tehran dust brown, white heavy capitals, Simin
 std('a-separation-2011', ('grad', [(0, (150, 120, 90)), (.6, (80, 60, 44)), (1, (26, 20, 14))]), WHT,
-    T('A SEPARATION', 'herb', 70, WHT, track=.02),
+    L((0.035, 0.054, 0.942, 0.125), 70, WHT, mode='key', key=(250, 250, 250), t=(30, 70)),
     photo=ph(.4, .5, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AN ASGHAR FARHADI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 60, 44), fcol=(226, 216, 204), fin=SLIP)
 
@@ -3254,15 +3254,15 @@ std('marriage-story-2019', ('solid', (240, 232, 216)), (20, 18, 16),
     photo=ph(.5, .35, .6, 1.0), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['SCARLETT JOHANSSON', 'ADAM DRIVER'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=MINT)
 
-# Dheepan: the estate's brick red, white heavy capitals (typeset), Dheepan on the roof's edge
+# Dheepan: the estate's brick red, white heavy capitals, Dheepan on the roof's edge
 std('dheepan-2015', ('grad', [(0, (210, 90, 80)), (.6, (150, 50, 44)), (1, (50, 16, 14))]), WHT,
-    T('DHEEPAN', 'intbk', 100, WHT, squeeze=.86),
+    L((0.158, 0.04, 0.84, 0.138), 100, WHT, mode='key', key=(250, 250, 250), t=(25, 60)),
     photo=ph(.55, .65, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A JACQUES AUDIARD', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(150, 50, 44), fcol=(240, 220, 214), fin=SLIP)
 
-# Apollo 11: launch-pad dusk, thin white capitals (typeset), the Saturn V on the pad
+# Apollo 11: launch-pad dusk, thin white capitals, the Saturn V on the pad
 std('apollo-11-2019', ('grad', [(0, (60, 40, 60)), (.5, (130, 90, 110)), (1, (30, 20, 26))]), WHT,
-    T('APOLLO 11', 'her', 90, WHT, track=.04),
+    L((0.087, 0.849, 0.869, 0.94), 90, WHT, mode='light'),
     photo=ph(.45, .55, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 40, 60), fcol=(220, 210, 220), fin=MINT)
 
@@ -3272,9 +3272,9 @@ std('eyes-wide-shut-1999', ('grad', [(0, (80, 40, 90)), (.6, (44, 20, 50)), (1, 
     photo=ph(.5, .4, .5, 1.0), pb=(164, 222, 194), lg=WHT, lw=.6, order='LPTCSF', credit=['TOM CRUISE', 'NICOLE KIDMAN'], ccol=(164, 222, 194),
     stick=RWD(fill=(250, 240, 210)), ft='a', vbox=(164, 222, 194), vink=(44, 20, 50), fcol=(210, 200, 214), fin=RENTAL, seed=1999)
 
-# Love Actually (2003): the poster's white and the red ribbon, red love and black actually (typeset), the faces
+# Love Actually (2003): the poster's white and red ribbon, its red love and black actually cut off it, the cast in their boxes
 std('love-actually-2003', ('grad', [(0, (250, 248, 246)), (.6, (236, 232, 228)), (1, (190, 180, 176))]), (210, 30, 30),
-    TT([('love', (214, 30, 30)), ('actually', (30, 28, 28))], 'popb', 92, sp=0),
+    LC([(0.025, 0.815, 0.972, 0.949)], 92, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .55) & (a[..., 1] < .3)))]),
     photo=ph(.3, .12, .5, 1.0), pb=(214, 30, 30), lg=(30, 28, 28), lw=.6, order='LPTCF', credit=['HUGH GRANT', 'LIAM NEESON'], ccol=(30, 28, 28),
     ft='a', vbox=(214, 30, 30), fcol=(30, 28, 28), fin=WORN, seed=2003, over=[dot(262, ['HOLIDAY'], (40, 120, 60), x=.72, d=62)])
 
