@@ -993,7 +993,7 @@ std('gone-girls-the-long-island-serial-killer-2025', ('grad', [(0, (34, 66, 76))
 # Who Took Johnny (2014): a library copy of a true-crime documentary, concrete grey, the poster's distressed red capitals
 std('who-took-johnny-2014', ('grad', [(0, (90, 84, 78)), (.6, (52, 48, 44)), (1, (20, 18, 16))]), (220, 50, 40),
     L([(0.02, 0.33, 0.54, 0.52), (0.02, 0.52, 0.62, 0.735), (0.02, 0.735, 0.98, 0.94)], 124, (224, 54, 44), mode='key', key=(214, 50, 44), t=(70, 150), speck=.01, gapf=.18),
-    photo=ph(.7, .38, .36, 1.2), pb=(236, 232, 222), studio=['A DOCUMENTARY BY', 'BEILINSON & HAWLEY'], scol=(220, 214, 204), order='lPTSF',
+    photo=ph(.7, .38, .36, 1.2), pb=(236, 232, 222), studio=['A DOCUMENTARY BY', 'BEILINSON, GALINSKY', '& HAWLEY'], scol=(220, 214, 204), order='lPTSF',
     stick=BAR('364.15 WHO', top='PUBLIC LIBRARY', fill=(236, 234, 224)), ft='b', fcol=(190, 184, 176), fin=OLD, seed=2014)
 
 # The Disappearance of Madeleine McCann: a boxed docuseries, the Algarve sand and the shadow on it (title typeset in
@@ -1399,7 +1399,7 @@ std('telemarketers-2023', ('solid', (246, 226, 190)), (24, 20, 18),
 # LaRoy, Texas: a stormy teal sky, a motel-sign script and slab in neon (typeset: the sign won't lift off the sky)
 std('laroy-texas-2024', ('grad', [(0, (30, 80, 100)), (.6, (14, 40, 52)), (1, (40, 30, 16))]), (250, 160, 100),
     [T('LaRoy', 'cho', 110, (250, 210, 180), soft=((250, 120, 80), 8, .8), outline=((180, 60, 40), 1.4)), T('TEXAS', 'bonb', 56, (250, 170, 110), soft=((250, 100, 60), 7, .7), track=.1)],
-    photo=ph(.6, .8, .7, .6), pb=(150, 230, 230), lg=WHT, lw=.8, order='LPTCF', tgap=10, credit=['JOHN MAGARO', 'STEVE BUSCEMI'], ccol=(150, 230, 230),
+    photo=ph(.6, .8, .7, .6), pb=(150, 230, 230), lg=WHT, lw=.8, order='LPTCF', tgap=10, credit=['JOHN MAGARO', 'STEVE ZAHN'], ccol=(150, 230, 230),
     ft='a', vbox=(250, 160, 100), vink=(14, 40, 52), fcol=(200, 214, 220), fin=SLIP)
 
 # The Fugitive (1993): black with a white diagonal streak, tall white condensed capitals, Ford on the run
