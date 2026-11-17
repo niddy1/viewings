@@ -3497,75 +3497,75 @@ std('little-women-2019', ('grad', [(0, (60, 90, 80)), (.6, (24, 36, 32)), (1, (8
     photo=ph(.5, .15, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['SAOIRSE RONAN', 'EMMA WATSON'], ccol=WHT,
     ft='a', vbox=WHT, vink=(24, 36, 32), fcol=(210, 220, 214), fin=MINT)
 
-# Richard Jewell: the press scrum's grey, the black serif capitals (typeset), Richard in the crowd
+# Richard Jewell: the press scrum's grey, the black serif capitals lifted off the poster's white sky, Richard in the crowd
 std('richard-jewell-2019', ('grad', [(0, (226, 226, 224)), (.6, (170, 170, 168)), (1, (60, 60, 58))]), (20, 20, 20),
-    T('RICHARD JEWELL', 'ter', 76, (20, 20, 20), track=.04),  # typeset: the lift clipped the letters
+    [L((0.104, 0.107, 0.89, 0.2), 76, (20, 20, 20), mode='dark', speck=0), L((0.2, 0.206, 0.81, 0.304), 76, (20, 20, 20), mode='dark', speck=0)],
     photo=ph(.35, .55, .45, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A CLINT EASTWOOD', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 20, 20), fcol=WHT, fin=MINT)
 
-# Sincerely Louis C.K.: the club's black, white chalk handwriting (typeset), Louis on the stage (a stand-up special, said in type)
+# Sincerely Louis C.K.: the club's black, the white chalk handwriting lifted off the poster, Louis on the stage (a stand-up special, said in type)
 std('sincerely-louis-c-k-2020', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (4, 4, 4))]), WHT,
-    T('Sincerely Louis C.K.', 'cho', 84, (236, 236, 232)),
+    L((0.05, 0.05, 0.95, 0.39), 170, (236, 236, 232), mode='light', speck=0),
     photo=ph(.5, .6, .5, 1.0), pb=WHT, studio=['STAND-UP SPECIAL'], scol=WHT, order='lPTF',
     ft='a', vbox=WHT, vink=(14, 14, 14), fcol=(190, 190, 190), fin=MINT)
 
-# Murmur of the Heart (1971): an old art-house tape, aubergine black, cream serif capitals (typeset), Laurent with the cigar (no logo file: its company in type)
+# Murmur of the Heart (1971): an old art-house tape, aubergine black, the cream serif MURMUR OF THE HEART lifted off the poster, Laurent with the cigar (no logo file: its company in type)
 std('murmur-of-the-heart-1971', ('grad', [(0, (60, 30, 40)), (.6, (30, 14, 20)), (1, (10, 4, 6))]), (232, 214, 160),
-    T('MURMUR OF THE HEART', 'ter', 62, (234, 216, 164), track=.06),
+    L([(0.409, 0.611, 0.923, 0.697), (0.409, 0.701, 0.923, 0.796)], 62, (234, 216, 164), mode='key', key=(220, 190, 120), t=(60, 130), gapf=.3, speck=0),
     photo=ph(.5, .18, .45, 1.0), pb=(234, 216, 164), studio=['NOUVELLES ÉDITIONS', 'DE FILMS'], scol=(234, 216, 164), order='lPTCSF', credit=['A LOUIS MALLE', 'FILM'], ccol=(234, 216, 164),
     stick=flow(dot, 70, ['FOREIGN'], (60, 120, 70), d=60), ft='e', fcol=(220, 206, 170), fin=OLD, seed=1971)
 
-# Knives Out: Harlan's library brown, the yellow serif lettering (typeset), the family round the chair
+# Knives Out: Harlan's library brown, the poster's yellow serif Knives cut off it (Out typeset in a like face: on the poster the cast stand over its foot), the family round the chair
 std('knives-out-2019', ('grad', [(0, (90, 60, 40)), (.6, (40, 24, 16)), (1, (12, 6, 4))]), (246, 210, 30),
-    T('Knives Out', 'pagb', 110, (248, 212, 34)),  # typeset: the lift broke on the bookshelves
+    [LC([(0.116, 0.103, 0.941, 0.3)], 120, cuts=[key_cut(lambda a: (a[..., 0] > .75) & (a[..., 1] > .6) & (a[..., 2] < .3))]), T('Out', 'pagb', 120, (248, 212, 34))],
     photo=ph(.5, .62, .9, .6), pb=(248, 212, 34), lg=WHT, lw=.6, order='LPTCF', credit=['A RIAN JOHNSON', 'FILM'], ccol=(248, 212, 34),
     ft='a', vbox=(248, 212, 34), vink=(40, 24, 16), fcol=(220, 200, 180), fin=MINT)
 
-# Bad Boys for Life: Miami sunset and the Porsche, chrome-white capitals (typeset), Mike and Marcus
+# Bad Boys for Life: Miami sunset and the Porsche, the poster's chrome-white BAD BOYS FOR LIFE lifted, Mike and Marcus
 std('bad-boys-for-life-2020', ('grad', [(0, (240, 150, 60)), (.5, (130, 60, 70)), (1, (30, 20, 40))]), WHT,
-    [T('BAD BOYS', 'intbk', 86, WHT, squeeze=.82, grad=[(0, (255, 255, 255)), (.5, (180, 186, 200)), (1, (240, 240, 246))], outline=((20, 20, 30), 1.8)), T('FOR LIFE', 'intbk', 34, WHT, track=.12)], tgap=8,
+    [L((0.22, 0.44, 0.78, 0.53), 86, WHT, mode='key', key=(240, 240, 240), t=(30, 80), outline=((20, 20, 30), 1.8)), L((0.35, 0.53, 0.66, 0.6), 40, WHT, mode='key', key=(240, 240, 240), t=(30, 80))], tgap=8,
     photo=ph(.5, .1, .8, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['WILL SMITH', 'MARTIN LAWRENCE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(130, 60, 70), fcol=WHT, fin=MINT)
 
-# Waking Ned (1998): a real rental, the poster's sunny cream and green, the green serif lower case of its Waking Ned Devine (typeset), the old men on the hill
+# Waking Ned (1998): a real rental, the poster's sunny cream and green, its green serif waking neD Devine lifted, the old men on the hill
 std('waking-ned-1998', ('grad', [(0, (240, 226, 180)), (.6, (210, 200, 150)), (1, (90, 110, 50))]), (60, 110, 40),
-    T('waking Ned Devine', 'ter', 74, (60, 110, 40)),
+    L([(0.099, 0.065, 0.818, 0.342), (0.016, 0.336, 0.933, 0.49)], 110, (60, 110, 40), mode='key', key=(70, 120, 50), t=(60, 130), gapf=.3),
     photo=ph(.5, .8, .8, .6), pb=(60, 110, 40), lg=(40, 50, 30), lw=.6, order='LPTCSF', credit=['IAN BANNEN', 'DAVID KELLY'], ccol=(40, 50, 30),
     stick=PRC(['$1.99', 'COMEDY']), ft='a', vbox=(60, 110, 40), fcol=(240, 236, 220), fin=RENTAL, seed=1998)
 
-# The Gentlemen: white, the gold spaced serif capitals (typeset), the gang
+# The Gentlemen: white, the gold spaced serif THE GENTLEMEN lifted off the poster, the gang
 std('the-gentlemen-2020', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (150, 140, 120))]), (150, 120, 40),
-    [T('THE', 'ter', 30, (152, 122, 42), track=.4), T('GENTLEMEN', 'terb', 70, (152, 122, 42), track=.2)], tgap=8,
+    [L((0.36, 0.047, 0.634, 0.103), 30, (152, 122, 42), mode='dark'), L((0.0, 0.105, 1.0, 0.172), 70, (152, 122, 42), mode='key', key=(170, 130, 60), t=(60, 130), speck=0)], tgap=8,
     photo=ph(.5, .6, .8, .8), pb=(152, 122, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A GUY RITCHIE', 'FILM'], ccol=(30, 30, 30),
     ft='a', vbox=(152, 122, 42), fcol=(30, 30, 30), fin=MINT)
 
-# The Last Dance: arena-floor white, the black spaced condensed capitals with the red rule (typeset), the Bulls walking out
+# The Last Dance: arena-floor white, the black spaced condensed capitals and the red rule lifted off the poster, the Bulls walking out
 std('the-last-dance-2020', ('grad', [(0, (244, 244, 244)), (.6, (210, 210, 210)), (1, (120, 120, 120))]), (20, 20, 20),
-    T('THE LAST DANCE', 'hcnb', 70, (20, 20, 20), squeeze=.86, track=.14),
+    L((0.03, 0.18, 0.961, 0.276), 70, (20, 20, 20), mode='dark'),
     photo=ph(.5, .62, .8, .6), pb=(206, 30, 40), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['THE COMPLETE', 'DOCUSERIES'], ccol=(206, 30, 40),
     ft='a', vbox=(206, 30, 40), fcol=WHT, fin=MINT)
 
-# Jasper Mall: mall-ceiling white, the teal serif with the pink stripes (typeset), the walkers by the flag
+# Jasper Mall: mall-ceiling white, the poster's teal serif with its pink stripes cut off it, the walkers by the flag
 std('jasper-mall-2020', ('grad', [(0, (240, 240, 236)), (.6, (210, 214, 214)), (1, (120, 130, 130))]), (30, 150, 170),
-    T('Jasper Mall', 'schb', 80, (30, 152, 172)),
+    LC([(0.037, 0.092, 0.945, 0.242)], 120, cuts=[key_cut(lambda a: (a[..., 2] > a[..., 0] + .15) | ((a[..., 0] > .6) & (a[..., 1] < .5) & (a[..., 2] > .5)))]),
     photo=ph(.5, .75, .8, .6), pb=(220, 100, 180), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(30, 30, 30),
     ft='a', vbox=(30, 152, 172), fcol=WHT, fin=MINT)
 
-# Palm Springs: the pool's turquoise and desert sky, the pink neon script (typeset), Nyles and Sarah on their floats
+# Palm Springs: the pool's turquoise and desert sky, the poster's pink neon script cut off it, Nyles and Sarah on their floats
 std('palm-springs-2020', ('grad', [(0, (120, 200, 230)), (.5, (40, 190, 200)), (1, (10, 90, 110))]), (250, 120, 210),
-    T('Palm Springs', 'cho', 100, (252, 150, 226), soft=((240, 60, 200), 7, .7)),
+    LC([(0.045, 0.145, 0.956, 0.324)], 130, cuts=[key_cut(lambda a: (a[..., 0] > .8) & (a[..., 2] > .6) & (a[..., 1] < .8))]),
     photo=ph(.5, .72, .8, .6), pb=(252, 150, 226), lg=WHT, lw=.6, order='LPTCF', credit=['ANDY SAMBERG', 'CRISTIN MILIOTI'], ccol=WHT,
     ft='a', vbox=(252, 150, 226), vink=(10, 90, 110), fcol=WHT, fin=MINT)
 
-# sex, lies, and videotape (1989): a real rental, black, the white rounded lower case (typeset), Graham's eyes
+# sex, lies, and videotape (1989): a real rental, black, the white rounded lower case lifted word by word off the poster's black bands, Graham's eyes
 std('sex-lies-and-videotape-1989', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), WHT,
-    T('sex, lies, and videotape', 'popb', 60, WHT),
+    L([(0.342, 0.029, 0.66, 0.096), (0.342, 0.257, 0.664, 0.34), (0.359, 0.504, 0.645, 0.572), (0.105, 0.746, 0.896, 0.828)], 60, WHT, mode='key', key=(250, 250, 250), t=(30, 70), gapf=.35, speck=0),
     photo=ph(.5, .36, .9, .35), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A STEVEN SODERBERGH', 'FILM'], ccol=WHT,
     stick=BAR('15 01989', top='DRAMA', fill=(200, 230, 200), ink=(30, 60, 30)), ft='a', vbox=WHT, vink=(14, 14, 16), fcol=(190, 190, 196), fin=RENTAL, seed=1989)
 
-# The Weight of Gold: black, white heavy stacked capitals (typeset), Michael's face
+# The Weight of Gold: black, the white heavy THE WEIGHT OF GOLD lifted (stacked there, one line here), Michael's face
 std('the-weight-of-gold-2020', ('grad', [(0, (50, 50, 50)), (.6, (18, 18, 18)), (1, (4, 4, 4))]), WHT,
-    T('THE WEIGHT OF GOLD', 'hcnb', 76, WHT, squeeze=.76, bold=1.0),
+    L([(0.044, 0.648, 0.592, 0.753), (0.045, 0.753, 0.511, 0.861), (0.048, 0.86, 0.543, 0.967)], 76, WHT, mode='key', key=(250, 250, 250), t=(30, 70), gapf=.3),
     photo=ph(.65, .3, .45, 1.0), pb=(214, 180, 90), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(214, 180, 90),
     ft='a', vbox=(214, 180, 90), vink=(18, 18, 18), fcol=(190, 190, 190), fin=MINT)
 
