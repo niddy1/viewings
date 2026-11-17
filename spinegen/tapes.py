@@ -4346,6 +4346,327 @@ std('logan-lucky-2017', ('grad', [(0, (236, 232, 220)), (.6, (220, 214, 196)), (
     ft='a', vbox=(214, 32, 32), fcol=(30, 30, 30), fin=MINT)
 
 
+# =====================================================================================
+# the 2018 shelf (films-2018.json).  Same approach as 2017.  Coco, Incredibles 2 and the short Bao
+# (Pixar) are clamshells; The Last Jedi (Lucasfilm) and the Marvel films are slipcases.
+# =====================================================================================
+
+# Tokyo Idols: Akihabara pink and neon, the pink heavy capitals with yellow shadow (typeset), the idol on stage
+std('tokyo-idols-2017', ('grad', [(0, (230, 80, 170)), (.5, (120, 60, 160)), (1, (30, 30, 80))]), (250, 110, 190),
+    T('TOKYO IDOLS', 'intbk', 84, (252, 116, 196), outline=((250, 230, 60), 2.0)),
+    photo=ph(.5, .62, .4, 1.0), pb=(250, 230, 60), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(250, 230, 60), vink=(120, 60, 160), fcol=WHT, fin=MINT)
+
+# The Florida Project: the motel sky's teal, the white script (typeset), Moonee running
+std('the-florida-project-2017', ('grad', [(0, (90, 180, 190)), (.6, (60, 140, 160)), (1, (200, 150, 180))]), WHT,
+    [T('The', 'cho', 40, WHT), T('Florida Project', 'cho', 90, WHT)], tgap=4,
+    photo=ph(.6, .86, .5, 1.0), pb=(240, 120, 180), lg=WHT, lw=.6, order='LPTCF', credit=['A SEAN BAKER', 'FILM'], ccol=WHT,
+    ft='a', vbox=(240, 120, 180), fcol=WHT, fin=MINT)
+
+# Coco: a Pixar clamshell.  The Land of the Dead's violet, the poster's papel-picado COCO cut off it, Dante in the diamond
+disney('coco-2017', ('grad', [(0, (90, 60, 140)), (.5, (50, 30, 90)), (1, (20, 14, 40))]), fin=dict(CLAM, vivid=.25),
+       title=LC([(0.14, 0.8, 0.86, 0.9)], 150, cuts=[key_cut(lambda a: (_sat(a) > .45) & (_lum(a) > .3))]),
+       face=ph(.73, .32, .2, 1.4), lcol=WHT)
+
+# Darkest Hour: black, the white heavy condensed capitals (typeset), Churchill with his cigar
+std('darkest-hour-2017', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
+    T('DARKEST HOUR', 'hcnb', 96, WHT, squeeze=.74, bold=.8),
+    photo=ph(.42, .2, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['GARY OLDMAN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(16, 16, 16), fcol=(200, 200, 200), fin=MINT)
+
+# My Friend Dahmer: the poster's faded cream, the red heavy capitals (typeset), Jeff in his glasses
+std('my-friend-dahmer-2017', ('grad', [(0, (236, 226, 214)), (.6, (220, 206, 190)), (1, (160, 140, 120))]), (200, 40, 40),
+    TT([('MY FRIEND', (204, 44, 44)), ('DAHMER', (204, 44, 44))], 'hcnb', 92, sp=.2, squeeze=.78, bold=.8),
+    photo=ph(.62, .27, .3, 1.0), pb=(204, 44, 44), lg=(50, 40, 30), lw=.6, order='LPTCF', credit=['ROSS LYNCH'], ccol=(50, 40, 30),
+    ft='a', vbox=(204, 44, 44), fcol=(50, 40, 30), fin=MINT)
+
+# Murder on the Orient Express (2017): the dining car's teal night, pale blue spaced capitals (typeset), Poirot
+std('murder-on-the-orient-express-2017', ('grad', [(0, (40, 80, 100)), (.6, (14, 30, 40)), (1, (4, 10, 14))]), (150, 210, 230),
+    T('MURDER ON THE ORIENT EXPRESS', 'her', 50, (156, 214, 234), track=.15),
+    photo=ph(.25, .42, .4, 1.0), pb=(156, 214, 234), lg=WHT, lw=.6, order='LPTCF', credit=['KENNETH BRANAGH', 'PENÉLOPE CRUZ'], ccol=WHT,
+    ft='a', vbox=(156, 214, 234), vink=(14, 30, 40), fcol=(190, 210, 220), fin=MINT)
+
+# Three Billboards Outside Ebbing, Missouri: the Missouri dusk, red stencil THREE BILLBOARDS (typeset), the billboards
+std('three-billboards-outside-ebbing-missouri-2017', ('grad', [(0, (40, 50, 70)), (.6, (16, 20, 30)), (1, (60, 20, 14))]), (226, 70, 50),
+    [T('THREE BILLBOARDS', 'hcnb', 70, (230, 74, 52), squeeze=.84, bold=.4), T('OUTSIDE EBBING, MISSOURI', 'herb', 24, (230, 74, 52), track=.12)], tgap=8,
+    photo=ph(.5, .82, .9, .6), pb=(230, 74, 52), lg=WHT, lw=.6, order='LPTCF', credit=['FRANCES McDORMAND'], ccol=WHT,
+    ft='a', vbox=(230, 74, 52), fcol=(200, 200, 210), fin=MINT)
+
+# Call Me by Your Name: the poster's flat blue, the yellow handwriting (typeset), Elio and Oliver
+std('call-me-by-your-name-2017', ('solid', (30, 100, 200)), (246, 220, 40),
+    T('Call Me by Your Name', 'cho', 84, (248, 222, 44)),
+    photo=ph(.4, .8, .6, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TIMOTHÉE CHALAMET', 'ARMIE HAMMER'], ccol=WHT,
+    ft='a', vbox=(248, 222, 44), vink=(30, 100, 200), fcol=WHT, fin=MINT)
+
+# Lady Bird: the poster's white with the stained-glass border, the red blackletter (typeset), Christine
+std('lady-bird-2017', ('grad', [(0, (244, 242, 236)), (.6, (226, 222, 214)), (1, (170, 160, 150))]), (176, 30, 30),
+    T('Lady Bird', 'pagb', 100, (180, 32, 32)),
+    photo=ph(.62, .58, .4, 1.0), pb=(180, 32, 32), lg=(40, 30, 30), lw=.6, order='LPTCF', credit=['A GRETA GERWIG', 'FILM'], ccol=(40, 30, 30),
+    ft='a', vbox=(180, 32, 32), fcol=(40, 30, 30), fin=MINT, under=[frame((60, 120, 180), 8, 2.0)])
+
+# Spider-Man: Homecoming: Queens sky blue, red SPIDER-MAN and the script Homecoming (typeset), Peter crouched
+std('spider-man-homecoming-2017', ('grad', [(0, (130, 180, 220)), (.5, (60, 90, 140)), (1, (20, 24, 40))]), (220, 40, 40),
+    [T('SPIDER-MAN', 'intbk', 80, (224, 44, 44), squeeze=.84, outline=((20, 20, 30), 1.8)), T('Homecoming', 'cho', 40, WHT)], tgap=6,
+    photo=ph(.35, .55, .45, 1.0), pb=(224, 44, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TOM HOLLAND'], ccol=WHT,
+    ft='a', vbox=(224, 44, 44), fcol=(210, 220, 236), fin=SLIP)
+
+# I, Tonya: the rink-wall white, the pink heavy capitals (typeset), Tonya in her costume
+std('i-tonya-2017', ('grad', [(0, (246, 244, 244)), (.6, (226, 222, 224)), (1, (170, 160, 166))]), (230, 40, 110),
+    T('I, TONYA', 'intbk', 104, (232, 44, 114)),
+    photo=ph(.4, .45, .45, 1.0), pb=(232, 44, 114), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['MARGOT ROBBIE'], ccol=(30, 30, 30),
+    ft='a', vbox=(232, 44, 114), fcol=(30, 30, 30), fin=MINT)
+
+# The Shape of Water: underwater teal, the pale serif capitals (typeset), Elisa and the creature
+std('the-shape-of-water-2017', ('grad', [(0, (40, 120, 120)), (.6, (14, 50, 54)), (1, (4, 16, 18))]), (210, 230, 220),
+    T('THE SHAPE OF WATER', 'ter', 66, (214, 234, 224), track=.06),
+    photo=ph(.5, .5, .5, 1.0), pb=(214, 234, 224), lg=WHT, lw=.6, order='LPTCF', credit=['A GUILLERMO DEL TORO', 'FILM'], ccol=(214, 234, 224),
+    ft='a', vbox=(214, 234, 224), vink=(14, 50, 54), fcol=(190, 210, 206), fin=MINT)
+
+# Get Out: the poster's black and white split, white heavy capitals (typeset), Chris in the chair
+std('get-out-2017', ('grad', [(0, (60, 60, 60)), (.6, (18, 18, 18)), (1, (4, 4, 4))]), WHT,
+    T('GET OUT', 'intbk', 120, WHT, squeeze=.9),
+    photo=ph(.45, .35, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A JORDAN PEELE', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(18, 18, 18), fcol=(200, 200, 200), fin=MINT, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
+
+# The Keepers: the old photo's black, the cream serif (typeset), Sister Cathy
+std('the-keepers-2017', ('grad', [(0, (50, 46, 40)), (.6, (18, 16, 14)), (1, (4, 4, 4))]), (240, 232, 200),
+    T('The Keepers', 'ter', 100, (242, 234, 202)),
+    photo=ph(.48, .45, .4, 1.0), pb=(242, 234, 202), lg=WHT, lw=.6, order='LPTCF', credit=['THE COMPLETE', 'DOCUSERIES'], ccol=(242, 234, 202),
+    ft='a', vbox=(242, 234, 202), vink=(18, 16, 14), fcol=(200, 196, 186), fin=MINT)
+
+# The Imposter (2012): the arrivals hall's blue-grey, white heavy capitals (typeset), the hooded figure
+std('the-imposter-2012', ('grad', [(0, (60, 80, 110)), (.6, (20, 28, 40)), (1, (4, 6, 10))]), WHT,
+    [T('THE', 'intbk', 36, WHT), T('IMPOSTER', 'intbk', 92, WHT, rough=.4)], tgap=6,
+    photo=ph(.5, .45, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A BART LAYTON', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(20, 28, 40), fcol=(190, 200, 214), fin=SLIP)
+
+# A Murder in the Park: black and blood red, the red and white condensed capitals (typeset), Anthony's face (no logo file: its company in type)
+std('a-murder-in-the-park-2015', ('grad', [(0, (60, 40, 36)), (.6, (20, 12, 10)), (1, (4, 2, 2))]), (220, 30, 30),
+    TT([('A', WHT), ('MURDER', (224, 32, 32)), ('IN THE', WHT), ('PARK', WHT)], 'hcnb', 84, sp=.2, squeeze=.78, bold=.6),
+    photo=ph(.6, .18, .5, 1.0), pb=(224, 32, 32), studio=['TRANSITION', 'STUDIOS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(224, 32, 32), fcol=(200, 196, 196), fin=MINT)
+
+# Amanda Knox: her face's warm grey, white spaced capitals (typeset), her eyes
+std('amanda-knox-2016', ('grad', [(0, (150, 130, 120)), (.6, (80, 66, 60)), (1, (24, 20, 18))]), WHT,
+    TT([('AMANDA', WHT), ('KNOX', WHT)], 'her', 66, sp=.25, track=.2),
+    photo=ph(.5, .37, .7, .45), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(80, 66, 60), fcol=(230, 220, 214), fin=MINT)
+
+# The Witness (2015): the torn newsprint white, grey spaced capitals (typeset), Kitty's portrait (no logo file: its company in type)
+std('the-witness-2015', ('grad', [(0, (236, 236, 232)), (.6, (210, 210, 206)), (1, (140, 140, 136))]), (60, 60, 60),
+    [T('THE', 'her', 26, (60, 60, 60), track=.4), T('WITNESS', 'her', 76, (60, 60, 60), track=.3)], tgap=6,
+    photo=ph(.55, .24, .4, 1.0), pb=(60, 60, 60), studio=['FIVE MORE MINUTES', 'PRODUCTIONS'], scol=(60, 60, 60), order='lPTCF', credit=['A DOCUMENTARY'], ccol=(60, 60, 60),
+    ft='a', vbox=(60, 60, 60), fcol=(30, 30, 30), fin=MINT)
+
+# Annihilation: the Shimmer's violet-blue, white spaced capitals (typeset), Lena in the light
+std('annihilation-2018', ('grad', [(0, (30, 40, 90)), (.5, (60, 50, 140)), (1, (8, 10, 24))]), WHT,
+    T('ANNIHILATION', 'her', 66, WHT, track=.25),
+    photo=ph(.5, .65, .5, 1.0), pb=(160, 200, 255), lg=WHT, lw=.6, order='LPTCF', credit=['AN ALEX GARLAND', 'FILM'], ccol=WHT,
+    ft='a', vbox=(160, 200, 255), vink=(30, 40, 90), fcol=(200, 206, 230), fin=MINT)
+
+# Film Stars Don't Die in Liverpool: the lamplit amber, cream wide capitals (typeset), Gloria's blonde hair
+std('film-stars-don-t-die-in-liverpool-2017', ('grad', [(0, (150, 100, 50)), (.6, (60, 36, 18)), (1, (14, 8, 4))]), (246, 236, 210),
+    [T('FILM STARS', 'herb', 58, (248, 238, 212), track=.25), T("DON'T DIE IN LIVERPOOL", 'herb', 28, (248, 238, 212), track=.2)], tgap=8,
+    photo=ph(.5, .9, .4, 1.0), pb=(248, 238, 212), lg=WHT, lw=.6, order='LPTCF', credit=['ANNETTE BENING', 'JAMIE BELL'], ccol=(248, 238, 212),
+    ft='a', vbox=(248, 238, 212), vink=(60, 36, 18), fcol=(220, 206, 190), fin=MINT)
+
+# Phantom Thread: the House of Woodcock's black, the pale serif capitals (typeset), Alma in the gown
+std('phantom-thread-2017', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (4, 4, 4))]), (230, 226, 216),
+    T('PHANTOM THREAD', 'ter', 72, (232, 228, 218), track=.04),
+    photo=ph(.55, .38, .4, 1.0), pb=(232, 228, 218), lg=WHT, lw=.6, order='LPTCF', credit=['DANIEL DAY-LEWIS', 'VICKY KRIEPS'], ccol=(232, 228, 218),
+    ft='a', vbox=(232, 228, 218), vink=(20, 20, 20), fcol=(200, 200, 196), fin=MINT)
+
+# The Post: the newsroom's dusk, white heavy lower case (typeset), Kay at the typewriter
+std('the-post-2017', ('grad', [(0, (60, 70, 70)), (.6, (22, 26, 26)), (1, (6, 8, 8))]), WHT,
+    T('The Post', 'herb', 100, WHT),
+    photo=ph(.7, .4, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['MERYL STREEP', 'TOM HANKS'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(22, 26, 26), fcol=(200, 206, 206), fin=MINT)
+
+# The Commuter: the train's blue, white italic condensed capitals (typeset), Michael on the platform
+std('the-commuter-2018', ('grad', [(0, (60, 90, 130)), (.6, (20, 30, 50)), (1, (6, 8, 14))]), WHT,
+    T('THE COMMUTER', 'intbki', 84, WHT, squeeze=.78),
+    photo=ph(.45, .12, .35, 1.0), pb=(240, 190, 50), lg=WHT, lw=.6, order='LPTCF', credit=['LIAM NEESON'], ccol=WHT,
+    ft='a', vbox=(240, 190, 50), vink=(20, 30, 50), fcol=(196, 206, 220), fin=MINT)
+
+# We Need to Talk About Kevin (2011): black, the small red line and white heavy KEVIN (typeset), Eva and Kevin
+std('we-need-to-talk-about-kevin-2011', ('grad', [(0, (50, 40, 36)), (.6, (16, 12, 10)), (1, (4, 4, 4))]), WHT,
+    [T('WE NEED TO TALK ABOUT', 'herb', 28, (226, 60, 50), track=.15), T('KEVIN', 'intbk', 110, WHT)], tgap=6,
+    photo=ph(.5, .62, .6, .8), pb=(226, 60, 50), lg=WHT, lw=.6, order='LPTCF', credit=['TILDA SWINTON', 'JOHN C. REILLY'], ccol=WHT,
+    ft='a', vbox=(226, 60, 50), fcol=(200, 196, 196), fin=SLIP, seed=2011)
+
+# Andre the Giant: the old photo's amber, the gold heavy capitals (typeset), Andre with his arms folded
+std('andre-the-giant-2018', ('grad', [(0, (120, 90, 50)), (.6, (50, 36, 20)), (1, (14, 10, 6))]), (230, 210, 100),
+    [T('ANDRE THE', 'hcnb', 40, (234, 214, 104), squeeze=.8), T('GIANT', 'hcnb', 120, (234, 214, 104), squeeze=.76, bold=.8)], tgap=6,
+    photo=ph(.5, .15, .45, 1.0), pb=(234, 214, 104), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(234, 214, 104),
+    ft='a', vbox=(234, 214, 104), vink=(50, 36, 20), fcol=(220, 206, 186), fin=MINT)
+
+# The Cheshire Murders (2013): white, the black typewriter capitals (typeset), the house in the snapshot
+std('the-cheshire-murders-2013', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (150, 150, 146))]), (30, 30, 30),
+    [T('THE', 'monob', 28, (30, 30, 30)), T('CHESHIRE MURDERS', 'monob', 56, (30, 30, 30))], tgap=6,
+    photo=ph(.5, .33, .55, 1.0), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(30, 30, 30),
+    ft='a', vbox=(30, 30, 30), fcol=(30, 30, 30), fin=SLIP)
+
+# Mercury 13: the poster's night navy, the rocket and the orange smoke, the black serif on cream (typeset)
+std('mercury-13-2018', ('grad', [(0, (20, 24, 70)), (.6, (10, 12, 40)), (1, (4, 4, 16))]), (240, 236, 220),
+    T('MERCURY 13', 'terb', 80, (20, 20, 24), box=((242, 238, 224), 10, 6)),
+    photo=ph(.5, .4, .55, 1.0), pb=(240, 120, 50), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(240, 120, 50), vink=(10, 12, 40), fcol=(200, 200, 220), fin=MINT)
+
+# Before Sunrise (1995): a real rental, the poster's cream, the gold spaced serif capitals (typeset), Jesse and Céline
+std('before-sunrise-1995', ('grad', [(0, (244, 236, 214)), (.6, (230, 220, 194)), (1, (170, 150, 120))]), (190, 150, 70),
+    T('BEFORE SUNRISE', 'terb', 66, (150, 110, 40), track=.25),
+    photo=ph(.5, .72, .6, 1.0), pb=(192, 152, 72), lg=(60, 50, 40), lw=.6, order='LPTCSF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=(60, 50, 40),
+    stick=flow(dot, 70, ['ROMANCE'], (200, 60, 80), d=62), ft='a', vbox=(192, 152, 72), fcol=(60, 50, 40), fin=RENTAL, seed=1995)
+
+# Before Midnight (2013): the Peloponnese sky, white and gold serif capitals (typeset), Jesse and Céline walking
+std('before-midnight-2013', ('grad', [(0, (60, 120, 160)), (.6, (40, 70, 60)), (1, (14, 20, 14))]), WHT,
+    TT([('BEFORE', WHT), ('MIDNIGHT', (240, 200, 60))], 'terb', 76, sp=.25, track=.04),
+    photo=ph(.5, .6, .55, 1.0), pb=(240, 200, 60), lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=WHT,
+    ft='a', vbox=(240, 200, 60), vink=(40, 70, 60), fcol=(210, 220, 210), fin=SLIP)
+
+# Before Sunset (2004): the Seine at sunset, gold serif (typeset), Jesse and Céline by the river
+std('before-sunset-2004', ('grad', [(0, (40, 30, 20)), (.5, (110, 70, 20)), (1, (14, 10, 6))]), (240, 200, 60),
+    T('Before Sunset', 'terb', 84, (242, 202, 64)),
+    photo=ph(.5, .52, .7, .7), pb=(242, 202, 64), lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=(242, 202, 64),
+    ft='a', vbox=(242, 202, 64), vink=(40, 30, 20), fcol=(220, 206, 180), fin=WORN, seed=2004)
+
+# The Rachel Divide: the silhouette's black and white, the red condensed capitals (typeset) (no logo file: the label in type)
+std('the-rachel-divide-2018', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (4, 4, 4))]), (200, 40, 40),
+    [T('THE', 'hcnb', 40, (204, 44, 44), squeeze=.8), T('RACHEL DIVIDE', 'hcnb', 90, (204, 44, 44), squeeze=.78, bold=.6)], tgap=6,
+    photo=ph(.45, .7, .5, 1.0), pb=WHT, studio=['NETFLIX'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(204, 44, 44), fcol=(200, 200, 200), fin=MINT)
+
+# Malcolm X (1992): an old 2-tape box (202 minutes), the poster's red X on grey, white thin capitals (typeset), Malcolm
+std('malcolm-x-1992', ('grad', [(0, (200, 30, 30)), (.6, (120, 16, 16)), (1, (30, 4, 4))]), WHT,
+    T('MALCOLM X', 'her', 150, WHT),
+    photo=ph(.5, .6, .8, .5), pb=WHT, lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['DENZEL WASHINGTON', 'A SPIKE LEE JOINT'], ccol=WHT,
+    stick=TWOST(WHT, (120, 16, 16)), ft='c', vbox=WHT, vink=(120, 16, 16), fcol=(240, 210, 206), fin=RENTAL, seed=1992, **TWO)
+
+# Star Wars: The Last Jedi (Lucasfilm, a slipcase): the poster's red, the black outlined STAR WARS (typeset), Luke in his hood
+std('star-wars-the-last-jedi-2017', ('grad', [(0, (200, 30, 30)), (.6, (110, 14, 14)), (1, (20, 4, 4))]), (20, 18, 18),
+    [T('STAR WARS', 'intbk', 84, (20, 18, 18), outline=(WHT, 2.2)), T('THE LAST JEDI', 'herb', 30, WHT, track=.25)], tgap=8,
+    photo=ph(.5, .12, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DAISY RIDLEY', 'MARK HAMILL'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(110, 14, 14), fcol=(240, 210, 206), fin=SLIP)
+
+# A Fantastic Woman: the poster's pink-to-blue light, white condensed capitals (typeset), Marina
+std('a-fantastic-woman-2017', ('grad', [(0, (60, 70, 200)), (.5, (220, 70, 120)), (1, (240, 130, 70))]), WHT,
+    T('A FANTASTIC WOMAN', 'hcn', 76, WHT, squeeze=.74),
+    photo=ph(.6, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DANIELA VEGA'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(220, 70, 120), fcol=WHT, fin=MINT)
+
+# Everybody Wants Some!! (2016): the 1980 front lawn, the orange and cream script (typeset), the team piled up
+std('everybody-wants-some-2016', ('grad', [(0, (150, 180, 200)), (.5, (110, 100, 70)), (1, (40, 30, 20))]), (246, 140, 40),
+    T('Everybody Wants Some!!', 'popb', 66, (248, 146, 44), outline=((250, 240, 220), 2.0)),
+    photo=ph(.5, .55, .7, .7), pb=(248, 146, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A RICHARD LINKLATER', 'FILM'], ccol=WHT,
+    ft='a', vbox=(248, 146, 44), vink=(40, 30, 20), fcol=WHT, fin=SLIP)
+
+# The Purge (2013): black and violet, the white distressed capitals (typeset), the grinning mask
+std('the-purge-2013', ('grad', [(0, (60, 40, 80)), (.6, (20, 12, 28)), (1, (4, 2, 6))]), WHT,
+    [T('THE', 'intbk', 40, WHT), T('PURGE', 'intbk', 110, WHT, rough=.8)], tgap=6,
+    photo=ph(.6, .6, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'LENA HEADEY'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(20, 12, 28), fcol=(200, 196, 210), fin=SLIP)
+
+# Bloodsport (1988): a real rental, the Kumite's black, the red brush script (typeset), Frank in his fighting stance
+std('bloodsport-1988', ('grad', [(0, (50, 30, 26)), (.6, (18, 10, 8)), (1, (4, 2, 2))]), (220, 50, 40),
+    T('Bloodsport', 'cho', 110, (224, 54, 42)),
+    photo=ph(.45, .35, .5, 1.0), pb=(224, 54, 42), lg=WHT, lw=.6, order='LPTCSF', credit=['JEAN-CLAUDE VAN DAMME'], ccol=WHT,
+    stick=BAR('15 01988', top='ACTION', fill=(250, 220, 200), ink=(80, 30, 20)), ft='a', vbox=(224, 54, 42), fcol=(200, 190, 186), fin=RENTAL, seed=1988)
+
+# Good Time: Queens night, the neon green and red GOOD TIME (typeset), Connie in the jar
+std('good-time-2017', ('grad', [(0, (60, 20, 50)), (.6, (20, 8, 20)), (1, (4, 2, 4))]), (120, 240, 90),
+    TT([('GOOD', (220, 40, 60)), ('TIME', (130, 246, 100))], 'intbk', 100, sp=.2, soft=((120, 240, 90), 6, .5)),
+    photo=ph(.5, .2, .4, 1.0), pb=(130, 246, 100), lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT PATTINSON'], ccol=WHT,
+    ft='a', vbox=(130, 246, 100), vink=(20, 8, 20), fcol=(200, 190, 200), fin=MINT)
+
+# Playtime (1967): an old tape, the poster's grey-white grid, the green deco PlayTime (typeset), Hulot in the lobby
+std('playtime-1967', ('grad', [(0, (236, 234, 226)), (.6, (216, 214, 204)), (1, (150, 146, 136))]), (40, 140, 110),
+    T('PlayTime', 'adv', 100, (42, 144, 112), track=.04),
+    photo=ph(.85, .72, .35, 1.0), pb=(42, 144, 112), lg=(40, 40, 40), lw=.6, order='LPTCSF', credit=['A JACQUES TATI', 'FILM'], ccol=(40, 40, 40),
+    stick=PRC(['$2.99', 'COMEDY']), ft='e', fcol=(40, 40, 40), fin=OLD, seed=1967)
+
+# Red Sparrow: the poster's red, white spaced condensed capitals (typeset), Dominika
+std('red-sparrow-2018', ('grad', [(0, (200, 30, 30)), (.6, (100, 12, 12)), (1, (20, 4, 4))]), WHT,
+    T('RED SPARROW', 'hcnb', 84, WHT, squeeze=.74, track=.2),
+    photo=ph(.55, .15, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JENNIFER LAWRENCE'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(100, 12, 12), fcol=(240, 210, 206), fin=MINT)
+
+# Thoroughbreds: the lawn's cream, black spaced serif capitals (typeset), Lily and Amanda
+std('thoroughbreds-2018', ('grad', [(0, (240, 230, 216)), (.6, (220, 206, 190)), (1, (110, 140, 90))]), (30, 30, 30),
+    T('THOROUGHBREDS', 'ter', 64, (30, 30, 30), track=.2),
+    photo=ph(.6, .3, .45, 1.0), pb=(200, 40, 40), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['OLIVIA COOKE', 'ANYA TAYLOR-JOY'], ccol=(30, 30, 30),
+    ft='a', vbox=(200, 40, 40), fcol=(30, 30, 30), fin=MINT)
+
+# Ready Player One: the OASIS's electric blue, the outlined white capitals (typeset), the crowd
+std('ready-player-one-2018', ('grad', [(0, (40, 60, 150)), (.5, (90, 60, 170)), (1, (14, 16, 40))]), WHT,
+    T('READY PLAYER ONE', 'popb', 66, (40, 60, 150), outline=(WHT, 2.4), soft=((120, 160, 255), 6, .5)),
+    photo=ph(.5, .25, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(40, 60, 150), fcol=(200, 206, 230), fin=SLIP)
+
+# Isle of Dogs: the poster's white, the red slab capitals (typeset), Atari and the dogs in their cage
+std('isle-of-dogs-2018', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (150, 140, 130))]), (190, 40, 40),
+    T('ISLE OF DOGS', 'schb', 80, (194, 42, 42)),
+    photo=ph(.4, .3, .55, 1.0), pb=(194, 42, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A WES ANDERSON', 'FILM'], ccol=(30, 30, 30),
+    ft='a', vbox=(194, 42, 42), fcol=(30, 30, 30), fin=MINT, dotst=(['STAFF', 'PICK'], (30, 30, 30)))
+
+# Super Troopers 2: the orange sunset, gold outlined capitals (typeset), the troopers and the flag
+std('super-troopers-2-2018', ('grad', [(0, (240, 150, 40)), (.5, (180, 80, 20)), (1, (50, 20, 6))]), (240, 200, 80),
+    T('SUPER TROOPERS 2', 'intbki', 76, (244, 206, 86), outline=((60, 30, 10), 1.8)),
+    photo=ph(.6, .2, .6, 1.0), pb=(244, 206, 86), lg=WHT, lw=.6, order='LPTCF', credit=['JAY CHANDRASEKHAR', 'KEVIN HEFFERNAN'], ccol=WHT,
+    ft='a', vbox=(244, 206, 86), vink=(180, 80, 20), fcol=WHT, fin=MINT)
+
+# The Tale: the motel's marbled brown, white spaced capitals (typeset), Jennifer and young Jenny
+std('the-tale-2018', ('grad', [(0, (150, 120, 80)), (.6, (80, 60, 36)), (1, (24, 18, 10))]), WHT,
+    [T('THE', 'herb', 34, WHT, track=.3), T('TALE', 'herb', 100, WHT, track=.2)], tgap=6,
+    photo=ph(.5, .72, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['LAURA DERN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(80, 60, 36), fcol=(230, 220, 204), fin=MINT)
+
+# Tully: Marlo's tired face, the pink script with its sticker stars (typeset)
+std('tully-2018', ('grad', [(0, (200, 170, 150)), (.6, (130, 100, 90)), (1, (50, 36, 30))]), (240, 100, 160),
+    T('Tully', 'cho', 150, (244, 110, 170), outline=(WHT, 1.4)),
+    photo=ph(.4, .55, .5, 1.0), pb=(244, 110, 170), lg=WHT, lw=.6, order='LPTCF', credit=['CHARLIZE THERON'], ccol=WHT,
+    ft='a', vbox=(244, 110, 170), fcol=WHT, fin=MINT)
+
+# Black Panther: Wakanda's night teal, the silver-blue capitals (typeset), T'Challa at the head
+std('black-panther-2018', ('grad', [(0, (40, 90, 120)), (.6, (14, 30, 44)), (1, (4, 8, 14))]), (190, 200, 230),
+    [T('BLACK', 'adv', 44, (196, 206, 236), track=.2, bold=.4), T('PANTHER', 'adv', 96, (196, 206, 236), track=.06, bold=.6, grad=[(0, (230, 236, 250)), (1, (120, 140, 200))])], tgap=6,
+    photo=ph(.5, .12, .35, 1.0), pb=(196, 206, 236), lg=WHT, lw=.6, order='LPTCF', credit=['CHADWICK BOSEMAN'], ccol=WHT,
+    ft='a', vbox=(196, 206, 236), vink=(14, 30, 44), fcol=(190, 200, 210), fin=SLIP)
+
+# Blade Runner 2049: the orange haze and the blue neon, the orange stencil capitals (typeset), K
+std('blade-runner-2049-2017', ('grad', [(0, (50, 70, 90)), (.5, (180, 80, 30)), (1, (30, 14, 6))]), (246, 140, 40),
+    [T('BLADE RUNNER', 'intbki', 84, (248, 146, 44), squeeze=.84, grad=[(0, (250, 200, 80)), (1, (230, 70, 30))]), T('2049', 'intbki', 50, (250, 190, 60))], tgap=8,
+    photo=ph(.35, .15, .45, 1.0), pb=(248, 146, 44), lg=WHT, lw=.6, order='LPTCF', credit=['RYAN GOSLING', 'HARRISON FORD'], ccol=WHT,
+    ft='a', vbox=(248, 146, 44), vink=(30, 14, 6), fcol=(220, 206, 200), fin=SLIP)
+
+# American Animals: the poster's flat orange, cream heavy condensed capitals (typeset), the four in their animal masks
+std('american-animals-2018', ('solid', (220, 80, 40)), (250, 236, 210),
+    T('AMERICAN ANIMALS', 'hcnb', 90, (252, 238, 212), squeeze=.74, bold=.8),
+    photo=ph(.45, .7, .5, 1.0), pb=(252, 238, 212), lg=WHT, lw=.6, order='LPTCF', credit=['A BART LAYTON', 'FILM'], ccol=(252, 238, 212),
+    ft='a', vbox=(252, 238, 212), vink=(220, 80, 40), fcol=(252, 238, 212), fin=MINT)
+
+# Eighth Grade: the phone-glow pink, the yellow heavy capitals (typeset), Kayla
+std('eighth-grade-2018', ('grad', [(0, (240, 210, 210)), (.6, (210, 150, 150)), (1, (120, 60, 60))]), (246, 230, 30),
+    T('EIGHTH GRADE', 'intbk', 84, (248, 232, 34), outline=((120, 60, 60), 1.4)),
+    photo=ph(.7, .2, .45, 1.0), pb=(248, 232, 34), lg=WHT, lw=.6, order='LPTCF', credit=['A BO BURNHAM', 'FILM'], ccol=(60, 30, 30),
+    ft='a', vbox=(248, 232, 34), vink=(120, 60, 60), fcol=WHT, fin=MINT)
+
+# BlacKkKlansman: the flag's black and white stripes, the black italic capitals (typeset), Ron in his coat
+std('blackkklansman-2018', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (150, 150, 146))]), (20, 20, 20),
+    TT([('BLAC', (20, 20, 20)), ('K', (200, 30, 30)), ('K', (20, 20, 20)), ('LANSMAN', (20, 20, 20))], 'intbki', 76, sp=0, squeeze=.84),
+    photo=ph(.5, .4, .45, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=MINT, under=[frame((200, 30, 30), 8, 2.0)])
+
+# Incredibles 2: a Pixar clamshell.  Supersuit red, the poster's white INCREDIBLES 2 cut off it, Elastigirl in the diamond
+disney('incredibles-2-2018', ('grad', [(0, (220, 50, 30)), (.5, (160, 26, 18)), (1, (60, 10, 8))]), fin=dict(CLAM, vivid=.25),
+       title=LC([(0.22, 0.85, 0.78, 0.95)], 140, cuts=[key_cut(lambda a: (_lum(a) > .75) & (_sat(a) < .3))]),
+       face=ph(.37, .44, .18, 1.4), lcol=WHT)
+
+# Bao (a short): a Pixar clamshell.  Steamer-paper cream, the poster's black brush bao lifted off it, the dumpling in the diamond
+disney('bao-2018', ('grad', [(0, (244, 236, 220)), (.6, (234, 222, 200)), (1, (210, 190, 160))]), fin=dict(CLAM, vivid=.15),
+       title=L((0.1, 0.04, 0.82, 0.2), 140, (24, 22, 20), mode='dark', speck=.01),
+       face=ph(.56, .69, .22, 1.4), lcol=(24, 22, 20), ink=(24, 22, 20))
+
+
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
         im = build(SPECS[k])
