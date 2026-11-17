@@ -825,11 +825,11 @@ std('the-assessment-2025', ('bands', [(0, .025, (200, 40, 36)), (.025, .05, (232
     L([(0.44, 0.152, 0.56, 0.197), (0.13, 0.203, 0.87, 0.255)], 60, WHT, mode='light', speck=.01, grow=.1, gapf=.7),
     photo=ph(.5, .42, .45, 1.0), pb=WHT, lg=WHT, lw=.4, order='gLPTF', ft='b', fcol=(190, 194, 204), fin=MINT, top=40)
 
-# Tombstone (1993): sun-bleached parchment, black wood-type capitals, the four of them walking out
-std('tombstone-1993', ('grad', [(0, (238, 222, 176)), (.6, (222, 196, 140)), (1, (150, 110, 64))]), (26, 20, 16),
-    T('TOMBSTONE', 'bonb', 118, (26, 20, 16), track=.08, rough=.3),
-    photo=ph(.5, .4, .84, .7), pb=(26, 20, 16), lg=(26, 20, 16), lw=.6, order='LPTCSF', credit=['KURT RUSSELL', 'VAL KILMER'], ccol=(140, 30, 20),
-    stick=BAR('27 06135', top='WESTERN', fill=(244, 236, 214)), ft='b', fcol=(40, 30, 22), fin=RENTAL, seed=1993)
+# Tombstone (1993): sun-bleached parchment, a dark spine for its white, red-shadowed title logo (Ian's image), the four of them walking out
+std('tombstone-1993', ('grad', [(0, (60, 30, 22)), (.6, (26, 14, 10)), (1, (8, 5, 4))]), (236, 226, 210),
+    Pic('logos/tombstone-1993-title.png', 110),
+    photo=ph(.5, .4, .84, .7), pb=(200, 70, 50), lg=(236, 226, 210), lw=.6, order='LPTCSF', credit=['KURT RUSSELL', 'VAL KILMER'], ccol=(140, 30, 20),
+    stick=BAR('27 06135', top='WESTERN', fill=(244, 236, 214)), ft='b', fcol=(220, 206, 186), fin=RENTAL, seed=1993)
 
 # Hot Summer Nights: synthwave sunset, a hot-pink italic title with a neon glow (typeset: the poster's gradient lettering won't lift)
 std('hot-summer-nights-2018', ('grad', [(0, (30, 22, 70)), (.5, (110, 30, 100)), (1, (40, 10, 40))]), (250, 120, 200),
@@ -946,9 +946,9 @@ std('the-teachers-lounge-2023', ('grad', [(0, (34, 92, 118)), (.6, (18, 52, 70))
     photo=ph(.5, .52, .5, 1.0), pb=(226, 190, 150), lg=WHT, lw=.5, order='LPTCF', credit=['EIN FILM VON', 'İLKER ÇATAK'], ccol=(226, 190, 150),
     ft='b', fcol=(200, 214, 220), fin=MINT)
 
-# Snake Eyes (1998): casino purple, the poster's green SNAKE and white EYES (typeset, roughed up), Cage staring out
+# Snake Eyes (1998): casino purple, the scratched white SNAKE EYES title logo (Ian's image), Cage staring out
 std('snake-eyes-1998', ('grad', [(0, (120, 70, 190)), (.5, (70, 40, 120)), (1, (20, 12, 36))]), WHT,
-    TT([('SNAKE', (90, 220, 70)), ('EYES', WHT)], 'hcnb', 116, sp=.18, squeeze=.86, track=-.01),
+    Pic('logos/snake-eyes-1998-title.png', 116),
     photo=ph(.5, .12, .5, .8), pb=(90, 220, 70), lg=WHT, lw=.5, order='LPTCSF', credit=['NICOLAS CAGE', 'GARY SINISE'], ccol=(90, 220, 70),
     stick=BAR('32 08688', top='THRILLER'), ft='b', fcol=(200, 190, 220), fin=RENTAL, seed=1998)
 
@@ -978,9 +978,9 @@ std('night-stalker-the-hunt-for-a-serial-killer-2021', ('solid', (10, 10, 12)), 
     photo=ph(.45, .3, .6, 1.0), pb=(200, 40, 40), lg=WHT, lw=.8, order='LPTCF', tgap=12, credit=['THE COMPLETE', 'DOCUSERIES'], ccol=(200, 196, 190),
     ft='b', fcol=(170, 170, 170), fin=SLIP)
 
-# Spider-Man: Across the Spider-Verse: comic-book magenta and violet, red outlined capitals, Miles up top
+# Spider-Man: Across the Spider-Verse: comic-book magenta and violet, the film's own title logo (Ian's image), Miles up top
 std('spider-man-across-the-spider-verse-2023', ('grad', [(0, (240, 80, 150)), (.4, (120, 40, 150)), (1, (20, 12, 50))]), (232, 30, 40),
-    [T('SPIDER-MAN', 'intbki', 96, (232, 30, 40), outline=((10, 10, 30), 2.5), track=-.01), T('ACROSS THE SPIDER-VERSE', 'advb', 24, WHT, track=.24)],
+    Pic('logos/spider-man-across-the-spider-verse-2023-title.png', 130),
     photo=ph(.4, .35, .5, 1.0), pb=(250, 220, 60), lg=WHT, lw=.7, order='LPTF', tgap=14, ft='a', vbox=(232, 30, 40), fcol=WHT,
     fin=dict(SLIP, gloss=.09), dotst=(['ANIMATED'], (250, 220, 60), (20, 12, 50)))
 
@@ -1118,9 +1118,9 @@ std('saltburn-2023', ('grad', [(0, (120, 22, 26)), (.6, (64, 10, 14)), (1, (18, 
     photo=ph(.5, .32, .9, .8), pb=(244, 224, 40), lg=WHT, lw=.8, order='LPTCF', credit=['AN EMERALD FENNELL', 'FILM'], ccol=(244, 224, 40),
     ft='a', vbox=(244, 224, 40), vink=(64, 10, 14), fcol=(230, 210, 200), fin=dict(SLIP, gloss=.09))
 
-# Wonka: chocolate-shop plum, a gold script (typeset: the poster's swashes tangle with the sweets)
+# Wonka: chocolate-shop plum, the gold Wonka script logo (Ian's image)
 std('wonka-2023', ('grad', [(0, (130, 24, 64)), (.6, (70, 12, 40)), (1, (24, 6, 16))]), (244, 196, 70),
-    T('Wonka', 'cho', 150, (246, 200, 76), outline=((90, 20, 30), 2.2)),
+    Pic('logos/wonka-2023-title.png', 170),
     photo=ph(.6, .2, .5, 1.0), pb=(244, 196, 70), lg=None, lw=.36, order='LPTCF', credit=['TIMOTHÉE', 'CHALAMET'], ccol=(250, 220, 160),
     ft='a', vbox=(244, 196, 70), vink=(70, 12, 40), fcol=(240, 214, 200), fin=SLIP, dotst=(['FAMILY'], (244, 196, 70), (70, 12, 40)))
 
@@ -1172,9 +1172,9 @@ std('ricky-stanicky-2024', ('solid', (246, 244, 240)), (246, 130, 30),
     photo=ph(.5, .62, 1.0, .5), pb=(246, 132, 32), lg=(30, 30, 34), lw=.7, order='LPTCF', credit=['A PETER FARRELLY', 'FILM'], ccol=(30, 30, 34),
     ft='a', vbox=(246, 132, 32), fcol=(30, 30, 34), fin=MINT, dotst=(['COMEDY'], (40, 120, 200)))
 
-# Road House: a Keys bar after dark, a neon-cyan script (typeset with a glow: the tubes won't lift off the bar)
+# Road House: a Keys bar after dark, the neon Road House script logo (Ian's image)
 std('road-house-2024', ('grad', [(0, (30, 44, 50)), (.6, (16, 22, 26)), (1, (6, 8, 10))]), (120, 236, 246),
-    T('Road House', 'cho', 130, (190, 250, 252), soft=((40, 210, 240), 9, .9), outline=((30, 170, 200), 1.2)),
+    Pic('logos/road-house-title.png', 150),
     photo=ph(.5, .42, .5, 1.0), pb=(120, 236, 246), lg=WHT, lw=.4, order='LPTCF', credit=['JAKE GYLLENHAAL'], ccol=(120, 236, 246),
     ft='a', vbox=(120, 236, 246), vink=(16, 22, 26), fcol=(196, 210, 214), fin=SLIP)
 
@@ -1184,9 +1184,9 @@ std('argylle-2024', ('grad', [(0, (40, 52, 120)), (.6, (22, 28, 70)), (1, (8, 10
     photo=ph(.5, .42, 1.0, .6), pb=(226, 186, 96), lg=WHT, lw=.5, order='LPTCF', credit=['A MATTHEW VAUGHN', 'FILM'], ccol=(226, 186, 96),
     ft='a', vbox=(226, 186, 96), vink=(22, 28, 70), fcol=(200, 206, 230), fin=SLIP, under=[frame((226, 186, 96), 8, 1.2)])
 
-# Snack Shack: summer-pool blue, a fat yellow slab with a red keyline (typeset: the poster's sits on a tilted banner)
+# Snack Shack: summer-pool blue, the yellow-and-red title logo (Ian's image)
 std('snack-shack-2024', ('grad', [(0, (70, 180, 214)), (.6, (34, 120, 160)), (1, (14, 50, 70))]), (252, 220, 50),
-    T('Snack Shack', 'bonb', 110, (252, 222, 54), outline=((200, 30, 30), 3), shadow=((90, 10, 10), 3, 3)),
+    Pic('logos/snack-shack-2024-title.png', 100),
     photo=ph(.5, .12, 1.0, .45), pb=WHT, lg=WHT, lw=.8, order='LPTCSF', credit=['AN ADAM REHMEIER', 'FILM'], ccol=WHT,
     stick=RWD(fill=(252, 222, 54)), ft='a', vbox=(200, 30, 30), fcol=WHT, fin=WORN)
 
@@ -1348,9 +1348,9 @@ std('sexy-beast-2001', ('bands', [(0, .06, (40, 170, 210)), (.06, 1, (246, 246, 
     photo=ph(.5, .88, .6, .5), pb=(40, 170, 210), lg=(40, 40, 44), lw=.4, order='LPTCSF', credit=['RAY WINSTONE', 'BEN KINGSLEY'], ccol=(40, 40, 44),
     stick=PRC(['NEW', 'RELEASE', '$3.99']), ft='b', fcol=(40, 40, 44), fin=RENTAL, seed=2001)
 
-# Hot Fuzz (2007): an explosion behind black, chrome capitals with a police-badge feel (typeset: lettering over flames)
+# Hot Fuzz (2007): an explosion behind black, the chrome HOT FUZZ badge logo (Ian's image)
 std('hot-fuzz-2007', ('grad', [(0, (240, 140, 40)), (.3, (120, 40, 10)), (1, (12, 8, 6))]), (214, 218, 226),
-    T('HOT FUZZ', 'intbk', 112, (214, 218, 226), grad=[(0, (246, 248, 252)), (.5, (150, 160, 176)), (.55, (90, 100, 116)), (1, (220, 226, 236))], outline=((20, 20, 24), 2), track=.02),
+    Pic('logos/hot-fuzz-2007-title.png', 170),
     photo=ph(.6, .2, .7, .8), pb=(240, 140, 40), lg=WHT, lw=.6, order='LPTCSF', credit=['SIMON PEGG', 'NICK FROST'], ccol=(240, 180, 90),
     stick=BAR('48 04638', top='COMEDY'), ft='a', vbox=(240, 140, 40), vink=(12, 8, 6), fcol=(200, 196, 190), fin=RENTAL, seed=2007)
 
@@ -1366,9 +1366,9 @@ std('babes-2024', ('solid', (250, 214, 228)), (236, 20, 140),
     photo=ph(.5, .6, 1.0, .6), pb=(236, 20, 140), lg=(30, 30, 34), lw=.7, order='LPTCF', credit=['ILANA GLAZER', 'MICHELLE BUTEAU'], ccol=(30, 30, 34),
     ft='a', vbox=(236, 20, 140), fcol=(30, 30, 34), fin=MINT)
 
-# Beverly Hills Cop: Axel F: palm-tree sky blue (like the 1987 tape next door a year on), chrome capitals and the red script F
+# Beverly Hills Cop: Axel F: palm-tree sky blue (like the 1987 tape next door a year on), the film's title logo (Ian's image)
 std('beverly-hills-cop-axel-f-2024', ('grad', [(0, (60, 160, 230)), (.6, (40, 110, 190)), (1, (14, 40, 80))]), WHT,
-    [T('BEVERLY HILLS COP', 'intbk', 54, WHT, outline=((14, 50, 110), 2), track=-.02), T('Axel F', 'herbi', 88, (226, 30, 40), outline=((70, 10, 14), 2))],
+    Pic('logos/beverly-hills-cop-axel-f-2024-title.png', 150),
     photo=ph(.6, .5, .6, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', tgap=10, credit=['EDDIE MURPHY'], ccol=WHT,
     ft='a', vbox=(226, 30, 40), fcol=WHT, fin=SLIP)
 
@@ -2759,9 +2759,9 @@ std('free-guy-2021', ('grad', [(0, (120, 170, 220)), (.5, (60, 100, 160)), (1, (
     photo=ph(.45, .3, .3, 1.0), pb=(40, 170, 240), lg=WHT, lw=.7, order='LPTCF', credit=['RYAN REYNOLDS'], ccol=WHT,
     ft='a', vbox=(40, 170, 240), fcol=(210, 226, 240), fin=MINT)
 
-# Road House (1989): a real rental, the Double Deuce's dark, the cyan neon script (typeset), Dalton at the head
+# Road House (1989): a real rental, the Double Deuce's dark, the neon script logo (Ian's image, shared with the 2024 remake), Dalton at the head
 std('road-house-1989', ('grad', [(0, (70, 74, 90)), (.5, (24, 26, 34)), (1, (60, 14, 16))]), (90, 230, 250),
-    T('Road House', 'cho', 110, (150, 246, 255), soft=((40, 200, 250), 8, .8)),
+    Pic('logos/road-house-title.png', 140),
     photo=ph(.42, .15, .4, 1.0), pb=(150, 246, 255), lg=WHT, lw=.6, order='LPTCSF', credit=['PATRICK SWAYZE'], ccol=(150, 246, 255),
     stick=PRC(['2 NIGHTS', '$1.99']), ft='a', vbox=(150, 246, 255), vink=(24, 26, 34), fcol=(200, 206, 214), fin=RENTAL, seed=1989)
 
