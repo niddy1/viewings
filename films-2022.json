@@ -6,490 +6,1064 @@
       "rating": 3.5,
       "watched": "2022-01-07",
       "imdb": "tt11286314",
-      "poster": "",
+      "poster": "posters/don-t-look-up-2021.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 686339
+      "imdbVotes": 686339,
+      "year": 2021,
+      "tmdb": 646380,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Adam McKay",
+      "genres": [
+        "Comedy",
+        "Science Fiction",
+        "Drama"
+      ],
+      "studio": "Hyperobject Industries",
+      "logo": "logos/125055.png"
     },
     {
       "title": "The Batman",
       "rating": 3.5,
       "watched": "2022-04-25",
       "imdb": "tt1877830",
-      "poster": "",
+      "poster": "posters/the-batman-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.8,
-      "imdbVotes": 958551
+      "imdbVotes": 958551,
+      "year": 2022,
+      "tmdb": 414906,
+      "tmdbKind": "movie",
+      "runtime": 177,
+      "director": "Matt Reeves",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "6th & Idaho Motion Picture Company",
+      "logo": "logos/101405.png"
     },
     {
       "title": "Ambulance",
       "rating": 3,
       "watched": "2022-04-25",
       "imdb": "tt4998632",
-      "poster": "",
+      "poster": "posters/ambulance-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 115761
+      "imdbVotes": 115761,
+      "year": 2022,
+      "tmdb": 763285,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Michael Bay",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Bay Films",
+      "logo": "logos/6734.png"
     },
     {
       "title": "The Alpinist",
       "rating": 4,
       "watched": "2022-05-07",
       "imdb": "tt11790780",
-      "poster": "",
+      "poster": "posters/the-alpinist-2021.jpg",
       "rating10": 8,
       "imdbRating": 7.9,
-      "imdbVotes": 17636
+      "imdbVotes": 17636,
+      "year": 2021,
+      "tmdb": 682587,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Nick Rosen",
+      "genres": [
+        "Documentary",
+        "Adventure"
+      ],
+      "studio": "Roadside Attractions",
+      "logo": "logos/911.png"
     },
     {
       "title": "Perfume: The Story of a Murderer",
       "rating": 4,
       "watched": "2022-05-07",
       "imdb": "tt0396171",
-      "poster": "",
+      "poster": "posters/perfume-the-story-of-a-murderer-2006.jpg",
       "rating10": 7.5,
       "imdbRating": 7.5,
-      "imdbVotes": 282101
+      "imdbVotes": 282101,
+      "year": 2006,
+      "tmdb": 1427,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Tom Tykwer",
+      "genres": [
+        "Crime",
+        "Fantasy",
+        "Drama"
+      ],
+      "studio": "Constantin Film",
+      "logo": "logos/47.png"
     },
     {
       "title": "Spider-Man: No Way Home",
       "rating": 3.5,
       "watched": "2022-05-07",
       "imdb": "tt10872600",
-      "poster": "",
+      "poster": "posters/spider-man-no-way-home-2021.jpg",
       "rating10": 7,
       "imdbRating": 8.1,
-      "imdbVotes": 1089141
+      "imdbVotes": 1089141,
+      "year": 2021,
+      "tmdb": 634649,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Jon Watts",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "The Outfit",
       "rating": 3.5,
       "watched": "2022-05-12",
       "imdb": "tt14114802",
-      "poster": "",
+      "poster": "posters/the-outfit-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 7.2,
-      "imdbVotes": 89042
+      "imdbVotes": 89042,
+      "year": 2022,
+      "tmdb": 799876,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Graham Moore",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Mikey and Nicky",
       "rating": 3.5,
       "watched": "2022-06-14",
       "imdb": "tt0074901",
-      "poster": "",
+      "poster": "posters/mikey-and-nicky-1976.jpg",
       "rating10": 7,
       "imdbRating": 7.3,
-      "imdbVotes": 9848
+      "imdbVotes": 9848,
+      "year": 1976,
+      "tmdb": 59143,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Elaine May",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "All About My Mother",
       "rating": 3.5,
       "watched": "2022-06-14",
       "imdb": "tt0185125",
-      "poster": "",
+      "poster": "posters/all-about-my-mother-1999.jpg",
       "rating10": 7,
       "imdbRating": 7.8,
-      "imdbVotes": 111171
+      "imdbVotes": 111171,
+      "year": 1999,
+      "tmdb": 99,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Pedro Almodóvar",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "Hustle",
       "rating": 3.5,
       "watched": "2022-06-14",
       "imdb": "tt8009428",
-      "poster": "",
+      "poster": "posters/hustle-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 7.3,
-      "imdbVotes": 168612
+      "imdbVotes": 168612,
+      "year": 2022,
+      "tmdb": 705861,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Jeremiah Zagar",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Roth-Kirschenbaum Films",
+      "logo": "logos/105052.png"
     },
     {
       "title": "Turning Red",
       "rating": 3.5,
       "watched": "2022-06-16",
       "imdb": "tt8097030",
-      "poster": "",
+      "poster": "posters/turning-red-2022.jpg",
       "rating10": 7,
       "imdbRating": 6.9,
-      "imdbVotes": 178676
+      "imdbVotes": 178676,
+      "year": 2022,
+      "tmdb": 508947,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Domee Shi",
+      "genres": [
+        "Animation",
+        "Family",
+        "Comedy",
+        "Fantasy"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Doctor Strange in the Multiverse of Madness",
       "rating": 3.5,
       "watched": "2022-06-27",
       "imdb": "tt9419884",
-      "poster": "",
+      "poster": "posters/doctor-strange-in-the-multiverse-of-madness-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 6.8,
-      "imdbVotes": 567471
+      "imdbVotes": 567471,
+      "year": 2022,
+      "tmdb": 453395,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Sam Raimi",
+      "genres": [
+        "Fantasy",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "The Worst Person in the World",
       "rating": 3.5,
       "watched": "2022-06-28",
       "imdb": "tt10370710",
-      "poster": "",
+      "poster": "posters/the-worst-person-in-the-world-2021.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 134471
+      "imdbVotes": 134471,
+      "year": 2021,
+      "tmdb": 660120,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Joachim Trier",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Oslo Pictures",
+      "logo": "logos/113596.png"
     },
     {
       "title": "Lightyear",
       "rating": 3,
       "watched": "2022-07-15",
       "imdb": "tt10298810",
-      "poster": "",
+      "poster": "posters/lightyear-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 139915
+      "imdbVotes": 139915,
+      "year": 2022,
+      "tmdb": 718789,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Angus MacLane",
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Family",
+        "Adventure"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
-      "title": "To Return",
+      "title": "Volver",
       "rating": 4,
       "watched": "2022-07-24",
       "imdb": "tt0441909",
-      "poster": "",
+      "poster": "posters/volver-2006.jpg",
       "rating10": 7.5,
       "imdbRating": 7.6,
-      "imdbVotes": 114129
+      "imdbVotes": 114129,
+      "year": 2006,
+      "tmdb": 219,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Pedro Almodóvar",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "The Heist of the Century",
       "rating": 3.5,
       "watched": "2022-07-24",
       "imdb": "tt10948718",
-      "poster": "",
+      "poster": "posters/the-heist-of-the-century-2020.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 12738
+      "imdbVotes": 12738,
+      "year": 2020,
+      "tmdb": 609242,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Ariel Winograd",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Telefe",
+      "logo": "logos/8046.png"
     },
     {
       "title": "Everything Everywhere All at Once",
       "rating": 3.5,
       "watched": "2022-08-04",
       "imdb": "tt6710474",
-      "poster": "",
+      "poster": "posters/everything-everywhere-all-at-once-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 666674
+      "imdbVotes": 666674,
+      "year": 2022,
+      "tmdb": 545611,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Daniel Scheinert",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "IAC Films",
+      "logo": "logos/93105.png"
     },
     {
-      "title": "The Kids",
+      "title": "We Were Once Kids",
       "rating": 4,
       "watched": "2022-08-15",
       "imdb": "tt14502642",
-      "poster": "",
+      "poster": "posters/we-were-once-kids-2021.jpg",
       "rating10": 7.5,
       "imdbRating": 7.2,
-      "imdbVotes": 730
+      "imdbVotes": 730,
+      "year": 2021,
+      "tmdb": 821433,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Eddie Martin",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "Resolution Media",
+      "logo": "logos/99789.png"
     },
     {
       "title": "Val",
       "rating": 3.5,
       "watched": "2022-08-27",
       "imdb": "tt14731254",
-      "poster": "",
+      "poster": "posters/val-2021.jpg",
       "rating10": 6.5,
       "imdbRating": 7.6,
-      "imdbVotes": 16504
+      "imdbVotes": 16504,
+      "year": 2021,
+      "tmdb": 834027,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Leo Scott",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Open Your Eyes",
       "rating": 3.5,
       "watched": "2022-09-04",
       "imdb": "tt0125659",
-      "poster": "",
+      "poster": "posters/open-your-eyes-1997.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 76873
+      "imdbVotes": 76873,
+      "year": 1997,
+      "tmdb": 1902,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Alejandro Amenábar",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "studio": "Sogetel",
+      "logo": "logos/15469.png"
     },
     {
       "title": "Pinocchio",
       "rating": 3,
       "watched": "2022-09-11",
       "imdb": "tt4593060",
-      "poster": "",
+      "poster": "posters/pinocchio-2022.jpg",
       "rating10": 6,
       "imdbRating": 5.1,
-      "imdbVotes": 47482
+      "imdbVotes": 47482,
+      "year": 2022,
+      "tmdb": 532639,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Robert Zemeckis",
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Family"
+      ],
+      "studio": "Walt Disney Pictures",
+      "logo": "logos/2.png"
     },
     {
       "title": "Thor: Love and Thunder",
       "rating": 3,
       "watched": "2022-09-14",
       "imdb": "tt10648342",
-      "poster": "",
+      "poster": "posters/thor-love-and-thunder-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 480248
+      "imdbVotes": 480248,
+      "year": 2022,
+      "tmdb": 616037,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Taika Waititi",
+      "genres": [
+        "Fantasy",
+        "Action",
+        "Comedy"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Perfect Blue",
       "rating": 4,
       "watched": "2022-09-16",
       "imdb": "tt0156887",
-      "poster": "",
+      "poster": "posters/perfect-blue-1998.jpg",
       "rating10": 8,
-      "imdbRating": 8.0,
-      "imdbVotes": 129430
+      "imdbRating": 8,
+      "imdbVotes": 129430,
+      "year": 1998,
+      "tmdb": 10494,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Satoshi Kon",
+      "genres": [
+        "Animation",
+        "Thriller"
+      ],
+      "studio": "Madhouse",
+      "logo": "logos/3464.png"
     },
     {
       "title": "Kiki's Delivery Service",
       "rating": 4,
       "watched": "2022-09-16",
       "imdb": "tt0097814",
-      "poster": "",
+      "poster": "posters/kiki-s-delivery-service-1989.jpg",
       "rating10": 7.5,
       "imdbRating": 7.8,
-      "imdbVotes": 193801
+      "imdbVotes": 193801,
+      "year": 1989,
+      "tmdb": 16859,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Hayao Miyazaki",
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Studio Ghibli",
+      "logo": "logos/10342.png"
     },
     {
       "title": "Vengeance",
       "rating": 3.5,
       "watched": "2022-09-16",
       "imdb": "tt11976532",
-      "poster": "",
+      "poster": "posters/vengeance-2022.jpg",
       "rating10": 7,
       "imdbRating": 6.8,
-      "imdbVotes": 42374
+      "imdbVotes": 42374,
+      "year": 2022,
+      "tmdb": 683340,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "B.J. Novak",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Blumhouse Productions",
+      "logo": "logos/3172.png"
     },
     {
       "title": "Emily the Criminal",
       "rating": 3,
       "watched": "2022-09-16",
       "imdb": "tt15255876",
-      "poster": "",
+      "poster": "posters/emily-the-criminal-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.7,
-      "imdbVotes": 68502
+      "imdbVotes": 68502,
+      "year": 2022,
+      "tmdb": 862965,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "John Patton Ford",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Low Spark Films",
+      "logo": "logos/28286.png"
     },
     {
       "title": "Legend of the Guardians: The Owls of Ga'Hoole",
       "rating": 3.5,
       "watched": "2022-09-20",
       "imdb": "tt1219342",
-      "poster": "",
+      "poster": "posters/legend-of-the-guardians-the-owls-of-ga-hoole-2010.jpg",
       "rating10": 6.5,
       "imdbRating": 6.9,
-      "imdbVotes": 92981
+      "imdbVotes": 92981,
+      "year": 2010,
+      "tmdb": 41216,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Zack Snyder",
+      "genres": [
+        "Animation",
+        "Adventure",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The Skin I Live In",
       "rating": 4,
       "watched": "2022-09-21",
       "imdb": "tt1189073",
-      "poster": "",
+      "poster": "posters/the-skin-i-live-in-2011.jpg",
       "rating10": 8,
       "imdbRating": 7.6,
-      "imdbVotes": 183359
+      "imdbVotes": 183359,
+      "year": 2011,
+      "tmdb": 63311,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Pedro Almodóvar",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "El Deseo",
+      "logo": "logos/49.png"
     },
     {
       "title": "Boiling Point",
       "rating": 4,
       "watched": "2022-09-22",
       "imdb": "tt11127680",
-      "poster": "",
+      "poster": "posters/boiling-point-2021.jpg",
       "rating10": 8,
       "imdbRating": 7.5,
-      "imdbVotes": 59055
+      "imdbVotes": 59055,
+      "year": 2021,
+      "tmdb": 807196,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Philip Barantini",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Ascendant Films",
+      "logo": "logos/124707.png"
     },
     {
       "title": "Funny Pages",
       "rating": 3.5,
       "watched": "2022-09-22",
       "imdb": "tt8174412",
-      "poster": "",
+      "poster": "posters/funny-pages-2022.jpg",
       "rating10": 7,
       "imdbRating": 6.2,
-      "imdbVotes": 4602
+      "imdbVotes": 4602,
+      "year": 2022,
+      "tmdb": 583095,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Owen Kline",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Bully",
       "rating": 1,
       "watched": "2022-09-24",
       "imdb": "tt0242193",
-      "poster": "",
+      "poster": "posters/bully-2001.jpg",
       "rating10": 2,
       "imdbRating": 6.9,
-      "imdbVotes": 42677
+      "imdbVotes": 42677,
+      "year": 2001,
+      "tmdb": 9517,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Larry Clark",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "StudioCanal",
+      "logo": "logos/694.png"
     },
     {
       "title": "Nine Queens",
       "rating": 4,
       "watched": "2022-09-25",
       "imdb": "tt0247586",
-      "poster": "",
+      "poster": "posters/nine-queens-2000.jpg",
       "rating10": 8,
       "imdbRating": 7.9,
-      "imdbVotes": 64390
+      "imdbVotes": 64390,
+      "year": 2000,
+      "tmdb": 18079,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Fabián Bielinsky",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Patagonik",
+      "logo": "logos/2562.png"
     },
     {
       "title": "The Voyeurs",
       "rating": 3,
       "watched": "2022-09-27",
       "imdb": "tt11235772",
-      "poster": "",
+      "poster": "posters/the-voyeurs-2021.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 54135
+      "imdbVotes": 54135,
+      "year": 2021,
+      "tmdb": 645710,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Michael Mohan",
+      "genres": [
+        "Thriller"
+      ],
+      "studio": "Divide / Conquer",
+      "logo": "logos/89115.png"
     },
     {
       "title": "A Perfect Murder",
       "rating": 3,
       "watched": "2022-09-28",
       "imdb": "tt0120787",
-      "poster": "",
+      "poster": "posters/a-perfect-murder-1998.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 100198
+      "imdbVotes": 100198,
+      "year": 1998,
+      "tmdb": 1965,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Andrew Davis",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "To Die For",
       "rating": 3.5,
       "watched": "2022-09-29",
       "imdb": "tt0114681",
-      "poster": "",
+      "poster": "posters/to-die-for-1995.jpg",
       "rating10": 6.5,
       "imdbRating": 6.8,
-      "imdbVotes": 61686
+      "imdbVotes": 61686,
+      "year": 1995,
+      "tmdb": 577,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Gus Van Sant",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Bodies Bodies Bodies",
       "rating": 3,
       "watched": "2022-10-05",
       "imdb": "tt8110652",
-      "poster": "",
+      "poster": "posters/bodies-bodies-bodies-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.1,
-      "imdbVotes": 92833
+      "imdbVotes": 92833,
+      "year": 2022,
+      "tmdb": 520023,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Halina Reijn",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Horror"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Watcher",
       "rating": 3.5,
       "watched": "2022-10-06",
       "imdb": "tt12004038",
-      "poster": "",
+      "poster": "posters/watcher-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 6.3,
-      "imdbVotes": 63258
+      "imdbVotes": 63258,
+      "year": 2022,
+      "tmdb": 807356,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Chloe Okuno",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Image Nation Studios",
+      "logo": "logos/6736.png"
     },
     {
       "title": "Presumed Innocent",
       "rating": 3,
       "watched": "2022-10-06",
       "imdb": "tt0100404",
-      "poster": "",
+      "poster": "posters/presumed-innocent-1990.jpg",
       "rating10": 6,
       "imdbRating": 6.9,
-      "imdbVotes": 53944
+      "imdbVotes": 53944,
+      "year": 1990,
+      "tmdb": 11092,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Alan J. Pakula",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Mirage Enterprises",
+      "logo": "logos/932.png"
     },
     {
       "title": "Dressed to Kill",
       "rating": 3.5,
       "watched": "2022-10-07",
       "imdb": "tt0080661",
-      "poster": "",
+      "poster": "posters/dressed-to-kill-1980.jpg",
       "rating10": 6.5,
-      "imdbRating": 7.0,
-      "imdbVotes": 57390
+      "imdbRating": 7,
+      "imdbVotes": 57390,
+      "year": 1980,
+      "tmdb": 11033,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Brian De Palma",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Horror"
+      ],
+      "studio": "Filmways Pictures",
+      "logo": "logos/1138.png"
     },
     {
       "title": "Luckiest Girl Alive",
       "rating": 3.5,
       "watched": "2022-10-08",
       "imdb": "tt4595186",
-      "poster": "",
+      "poster": "posters/luckiest-girl-alive-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 6.4,
-      "imdbVotes": 61204
+      "imdbVotes": 61204,
+      "year": 2022,
+      "tmdb": 799546,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Mike Barker",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Made Up Stories",
+      "logo": "logos/100610.png"
     },
     {
       "title": "Bullet Train",
       "rating": 3,
       "watched": "2022-10-08",
       "imdb": "tt12593682",
-      "poster": "",
+      "poster": "posters/bullet-train-2022.jpg",
       "rating10": 5.5,
       "imdbRating": 7.3,
-      "imdbVotes": 552910
+      "imdbVotes": 552910,
+      "year": 2022,
+      "tmdb": 718930,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "David Leitch",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "87North Productions",
+      "logo": "logos/121470.png"
     },
     {
       "title": "Clerks III",
       "rating": 1,
       "watched": "2022-10-16",
       "imdb": "tt11128440",
-      "poster": "",
+      "poster": "posters/clerks-iii-2022.jpg",
       "rating10": 2,
       "imdbRating": 6.2,
-      "imdbVotes": 22650
+      "imdbVotes": 22650,
+      "year": 2022,
+      "tmdb": 635891,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "View Askew Productions",
+      "logo": "logos/16934.png"
     },
     {
       "title": "The Piano Teacher",
       "rating": 1.5,
       "watched": "2022-10-19",
       "imdb": "tt0254686",
-      "poster": "",
+      "poster": "posters/the-piano-teacher-2001.jpg",
       "rating10": 3,
       "imdbRating": 7.5,
-      "imdbVotes": 83826
+      "imdbVotes": 83826,
+      "year": 2001,
+      "tmdb": 1791,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Michael Haneke",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Wega Film",
+      "logo": "logos/224.png"
     },
     {
       "title": "Top Gun: Maverick",
       "rating": 3,
       "watched": "2022-10-24",
       "imdb": "tt1745960",
-      "poster": "",
+      "poster": "posters/top-gun-maverick-2022.jpg",
       "rating10": 6,
       "imdbRating": 8.2,
-      "imdbVotes": 913781
+      "imdbVotes": 913781,
+      "year": 2022,
+      "tmdb": 361743,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Joseph Kosinski",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "studio": "Skydance Media",
+      "logo": "logos/82819.png"
     },
     {
       "title": "Hocus Pocus 2",
       "rating": 2,
       "watched": "2022-10-24",
       "imdb": "tt11909878",
-      "poster": "",
+      "poster": "posters/hocus-pocus-2-2022.jpg",
       "rating10": 4,
-      "imdbRating": 6.0,
-      "imdbVotes": 61504
+      "imdbRating": 6,
+      "imdbVotes": 61504,
+      "year": 2022,
+      "tmdb": 642885,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Anne Fletcher",
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "studio": "Walt Disney Pictures",
+      "logo": "logos/2.png"
     },
     {
       "title": "Poker Face",
       "rating": 2.5,
       "watched": "2022-11-22",
       "imdb": "tt14714980",
-      "poster": "",
+      "poster": "posters/poker-face-2022.jpg",
       "rating10": 5,
       "imdbRating": 5.3,
-      "imdbVotes": 16538
+      "imdbVotes": 16538,
+      "year": 2022,
+      "tmdb": 842934,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Russell Crowe",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Screen Media Films",
+      "logo": "logos/6353.png"
     },
     {
       "title": "A Christmas Story Christmas",
       "rating": 2.5,
       "watched": "2022-12-22",
       "imdb": "tt17220704",
-      "poster": "",
+      "poster": "posters/a-christmas-story-christmas-2022.jpg",
       "rating10": 5,
       "imdbRating": 6.7,
-      "imdbVotes": 21922
+      "imdbVotes": 21922,
+      "year": 2022,
+      "tmdb": 929340,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Clay Kaytis",
+      "genres": [
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Legendary Pictures",
+      "logo": "logos/923.png"
     },
     {
       "title": "Bandit",
       "rating": 3.5,
       "watched": "2022-12-27",
       "imdb": "tt9853500",
-      "poster": "",
+      "poster": "posters/bandit-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 6.5,
-      "imdbVotes": 18768
+      "imdbVotes": 18768,
+      "year": 2022,
+      "tmdb": 842942,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Allan Ungar",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Yale Productions",
+      "logo": "logos/75355.png"
     },
     {
       "title": "Glass Onion: A Knives Out Mystery",
       "rating": 3,
       "watched": "2022-12-27",
       "imdb": "tt11564570",
-      "poster": "",
+      "poster": "posters/glass-onion-a-knives-out-mystery-2022.jpg",
       "rating10": 6,
       "imdbRating": 7.1,
-      "imdbVotes": 537703
+      "imdbVotes": 537703,
+      "year": 2022,
+      "tmdb": 661374,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Rian Johnson",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "T-Street",
+      "logo": "logos/37871.png"
     }
   ]
 }

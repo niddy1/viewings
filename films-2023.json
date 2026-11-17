@@ -6,660 +6,1401 @@
       "rating": 3.5,
       "watched": "2023-01-09",
       "imdb": "tt9764362",
-      "poster": "",
+      "poster": "posters/the-menu-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 523780
+      "imdbVotes": 523780,
+      "year": 2022,
+      "tmdb": 593643,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Mark Mylod",
+      "genres": [
+        "Comedy",
+        "Horror"
+      ],
+      "studio": "Hyperobject Industries",
+      "logo": "logos/125055.png"
     },
     {
       "title": "Double Jeopardy",
       "rating": 3,
       "watched": "2023-01-17",
       "imdb": "tt0150377",
-      "poster": "",
+      "poster": "posters/double-jeopardy-1999.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 107690
+      "imdbVotes": 107690,
+      "year": 1999,
+      "tmdb": 10398,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Bruce Beresford",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Banshees of Inisherin",
       "rating": 3.5,
       "watched": "2023-01-21",
       "imdb": "tt11813216",
-      "poster": "",
+      "poster": "posters/the-banshees-of-inisherin-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.6,
-      "imdbVotes": 303276
+      "imdbVotes": 303276,
+      "year": 2022,
+      "tmdb": 674324,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Martin McDonagh",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Searchlight Pictures",
+      "logo": "logos/127929.png"
     },
     {
-      "title": "Louis CK: Back to the Garden",
+      "title": "Louis C.K.: Back to the Garden",
       "rating": 3,
       "watched": "2023-01-31",
       "imdb": "tt26598133",
-      "poster": "",
+      "poster": "posters/louis-c-k-back-to-the-garden-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 7.5,
-      "imdbVotes": 1506
+      "imdbVotes": 1506,
+      "year": 2023,
+      "tmdb": 1595885,
+      "tmdbKind": "movie",
+      "runtime": 70,
+      "director": "Louis C.K.",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Black Panther: Wakanda Forever",
       "rating": 3,
       "watched": "2023-02-02",
       "imdb": "tt9114286",
-      "poster": "",
+      "poster": "posters/black-panther-wakanda-forever-2022.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 406881
+      "imdbVotes": 406881,
+      "year": 2022,
+      "tmdb": 505642,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "Ryan Coogler",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Nothing Lasts Forever",
       "rating": 3.5,
       "watched": "2023-02-13",
       "imdb": "tt16317380",
-      "poster": "",
+      "poster": "posters/nothing-lasts-forever-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 7.1,
-      "imdbVotes": 1188
+      "imdbVotes": 1188,
+      "year": 2022,
+      "tmdb": 916392,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Jason Kohn",
+      "genres": [
+        "Documentary",
+        "Crime"
+      ],
+      "studio": "Showtime Documentary Films",
+      "logo": "logos/66479.png"
     },
     {
       "title": "The Whale",
       "rating": 4,
       "watched": "2023-02-22",
       "imdb": "tt13833688",
-      "poster": "",
+      "poster": "posters/the-whale-2022.jpg",
       "rating10": 7.5,
       "imdbRating": 7.6,
-      "imdbVotes": 313142
+      "imdbVotes": 313142,
+      "year": 2022,
+      "tmdb": 785084,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Darren Aronofsky",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "A24",
+      "logo": "logos/41077.png"
     },
     {
       "title": "Identity",
       "rating": 3,
       "watched": "2023-02-22",
       "imdb": "tt0309698",
-      "poster": "",
+      "poster": "posters/identity-2003.jpg",
       "rating10": 6,
       "imdbRating": 7.3,
-      "imdbVotes": 300284
+      "imdbVotes": 300284,
+      "year": 2003,
+      "tmdb": 2832,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "James Mangold",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Gully",
       "rating": 3.5,
       "watched": "2023-02-23",
       "imdb": "tt5013984",
-      "poster": "",
+      "poster": "posters/gully-2021.jpg",
       "rating10": 6.5,
       "imdbRating": 2.7,
-      "imdbVotes": 23981
+      "imdbVotes": 23981,
+      "year": 2021,
+      "tmdb": 514995,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Nabil Elderkin",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Romulus Entertainment",
+      "logo": "logos/101339.png"
     },
     {
       "title": "The Black Phone",
       "rating": 3.5,
       "watched": "2023-02-27",
       "imdb": "tt7144666",
-      "poster": "",
+      "poster": "posters/the-black-phone-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 6.9,
-      "imdbVotes": 275674
+      "imdbVotes": 275674,
+      "year": 2022,
+      "tmdb": 756999,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Scott Derrickson",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "studio": "Blumhouse Productions",
+      "logo": "logos/3172.png"
     },
     {
       "title": "Missing",
       "rating": 4,
       "watched": "2023-03-08",
       "imdb": "tt10855768",
-      "poster": "",
+      "poster": "posters/missing-2023.jpg",
       "rating10": 8,
       "imdbRating": 7.1,
-      "imdbVotes": 73595
+      "imdbVotes": 73595,
+      "year": 2023,
+      "tmdb": 768362,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Will Merrick",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Stage 6 Films",
+      "logo": "logos/11341.png"
     },
     {
       "title": "Triangle of Sadness",
       "rating": 4,
       "watched": "2023-03-13",
       "imdb": "tt7322224",
-      "poster": "",
+      "poster": "posters/triangle-of-sadness-2022.jpg",
       "rating10": 8,
       "imdbRating": 7.2,
-      "imdbVotes": 222188
+      "imdbVotes": 222188,
+      "year": 2022,
+      "tmdb": 497828,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Ruben Östlund",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "30WEST",
+      "logo": "logos/104363.png"
     },
     {
-      "title": "Tár",
+      "title": "TÁR",
       "rating": 3.5,
       "watched": "2023-03-13",
       "imdb": "tt14444726",
-      "poster": "",
+      "poster": "posters/tar-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.4,
-      "imdbVotes": 111739
+      "imdbVotes": 111739,
+      "year": 2022,
+      "tmdb": 817758,
+      "tmdbKind": "movie",
+      "runtime": 158,
+      "director": "Todd Field",
+      "genres": [
+        "Music",
+        "Drama"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Chris Rock: Selective Outrage",
       "rating": 3,
       "watched": "2023-03-13",
       "imdb": "tt23571908",
-      "poster": "",
+      "poster": "posters/chris-rock-selective-outrage-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 6.8,
-      "imdbVotes": 12371
+      "imdbVotes": 12371,
+      "year": 2023,
+      "tmdb": 1065890,
+      "tmdbKind": "movie",
+      "runtime": 69,
+      "director": "Joel Gallen",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Fabelmans",
       "rating": 3.5,
       "watched": "2023-03-14",
       "imdb": "tt14208870",
-      "poster": "",
+      "poster": "posters/the-fabelmans-2022.jpg",
       "rating10": 6.5,
       "imdbRating": 7.5,
-      "imdbVotes": 138059
+      "imdbVotes": 138059,
+      "year": 2022,
+      "tmdb": 804095,
+      "tmdbKind": "movie",
+      "runtime": 151,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Amblin Entertainment",
+      "logo": "logos/56.png"
     },
     {
       "title": "Reality",
       "rating": 3,
       "watched": "2023-06-03",
       "imdb": "tt24068064",
-      "poster": "",
+      "poster": "posters/reality-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.7,
-      "imdbVotes": 31757
+      "imdbVotes": 31757,
+      "year": 2023,
+      "tmdb": 985617,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Tina Satter",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Fit Via Vi",
+      "logo": "logos/169960.png"
     },
     {
       "title": "John Wick: Chapter 4",
       "rating": 2.5,
       "watched": "2023-06-05",
       "imdb": "tt10366206",
-      "poster": "",
+      "poster": "posters/john-wick-chapter-4-2023.jpg",
       "rating10": 5,
       "imdbRating": 7.6,
-      "imdbVotes": 423266
+      "imdbVotes": 423266,
+      "year": 2023,
+      "tmdb": 603692,
+      "tmdbKind": "movie",
+      "runtime": 170,
+      "director": "Chad Stahelski",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Thunder Road",
+      "logo": "logos/3528.png"
     },
     {
       "title": "I Like Movies",
       "rating": 3.5,
       "watched": "2023-06-10",
       "imdb": "tt14913282",
-      "poster": "",
+      "poster": "posters/i-like-movies-2023.jpg",
       "rating10": 7,
       "imdbRating": 6.8,
-      "imdbVotes": 5752
+      "imdbVotes": 5752,
+      "year": 2023,
+      "tmdb": 980996,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Chandler Levack",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Tom Segura: Sledgehammer",
       "rating": 3,
       "watched": "2023-07-05",
       "imdb": "tt11987416",
-      "poster": "",
+      "poster": "posters/tom-segura-sledgehammer-2023.jpg",
       "rating10": 6,
       "imdbRating": 7.1,
-      "imdbVotes": 3397
+      "imdbVotes": 3397,
+      "year": 2023,
+      "tmdb": 1139984,
+      "tmdbKind": "movie",
+      "runtime": 61,
+      "director": "Ryan Polito",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Guardians of the Galaxy Vol. 3",
       "rating": 3,
       "watched": "2023-07-06",
       "imdb": "tt6791350",
-      "poster": "",
+      "poster": "posters/guardians-of-the-galaxy-vol-3-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 7.9,
-      "imdbVotes": 494399
+      "imdbVotes": 494399,
+      "year": 2023,
+      "tmdb": 447365,
+      "tmdbKind": "movie",
+      "runtime": 150,
+      "director": "James Gunn",
+      "genres": [
+        "Science Fiction",
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Reptile",
       "rating": 3.5,
       "watched": "2023-10-01",
       "imdb": "tt13274016",
-      "poster": "",
+      "poster": "posters/reptile-2023.jpg",
       "rating10": 6.5,
       "imdbRating": 6.8,
-      "imdbVotes": 113308
+      "imdbVotes": 113308,
+      "year": 2023,
+      "tmdb": 866463,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Grant Singer",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Black Label Media",
+      "logo": "logos/33681.png"
     },
     {
       "title": "Falling Down",
       "rating": 3.5,
       "watched": "2023-10-05",
       "imdb": "tt0106856",
-      "poster": "",
+      "poster": "posters/falling-down-1993.jpg",
       "rating10": 7,
       "imdbRating": 7.5,
-      "imdbVotes": 231064
+      "imdbVotes": 231064,
+      "year": 1993,
+      "tmdb": 37094,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Joel Schumacher",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Le Studio Canal+",
+      "logo": "logos/183.png"
     },
     {
       "title": "The Equalizer 3",
       "rating": 3,
       "watched": "2023-10-05",
       "imdb": "tt17024450",
-      "poster": "",
+      "poster": "posters/the-equalizer-3-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.8,
-      "imdbVotes": 167802
+      "imdbVotes": 167802,
+      "year": 2023,
+      "tmdb": 926393,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Antoine Fuqua",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
-      "title": "Heist 88.",
+      "title": "Heist 88",
       "rating": 3,
       "watched": "2023-10-05",
       "imdb": "tt7718100",
-      "poster": "",
+      "poster": "posters/heist-88-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 5.3,
-      "imdbVotes": 2752
+      "imdbVotes": 2752,
+      "year": 2023,
+      "tmdb": 1170944,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Menhaj Huda",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "MTV Entertainment Studios",
+      "logo": "logos/6329.png"
     },
     {
       "title": "Retribution",
       "rating": 2.5,
       "watched": "2023-10-05",
       "imdb": "tt6906292",
-      "poster": "",
+      "poster": "posters/retribution-2023.jpg",
       "rating10": 4.5,
       "imdbRating": 5.4,
-      "imdbVotes": 29577
+      "imdbVotes": 29577,
+      "year": 2023,
+      "tmdb": 762430,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Nimród Antal",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "The Picture Company",
+      "logo": "logos/99132.png"
     },
     {
       "title": "Fair Play",
       "rating": 3.5,
       "watched": "2023-10-07",
       "imdb": "tt16304446",
-      "poster": "",
+      "poster": "posters/fair-play-2023.jpg",
       "rating10": 6.5,
       "imdbRating": 6.4,
-      "imdbVotes": 48213
+      "imdbVotes": 48213,
+      "year": 2023,
+      "tmdb": 910571,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Chloe Domont",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Romance"
+      ],
+      "studio": "Star Thrower Entertainment",
+      "logo": "logos/27497.png"
     },
     {
       "title": "Sound of Freedom",
       "rating": 3,
       "watched": "2023-10-07",
       "imdb": "tt7599146",
-      "poster": "",
+      "poster": "posters/sound-of-freedom-2023.jpg",
       "rating10": 5.5,
       "imdbRating": 7.6,
-      "imdbVotes": 140661
+      "imdbVotes": 140661,
+      "year": 2023,
+      "tmdb": 678512,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Alejandro Monteverde",
+      "genres": [
+        "Action",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Old Dads",
       "rating": 2.5,
       "watched": "2023-10-25",
       "imdb": "tt18394190",
-      "poster": "",
+      "poster": "posters/old-dads-2023.jpg",
       "rating10": 5,
       "imdbRating": 6.2,
-      "imdbVotes": 48389
+      "imdbVotes": 48389,
+      "year": 2023,
+      "tmdb": 987917,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Bill Burr",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "All Things Comedy",
+      "logo": "logos/109715.png"
     },
     {
       "title": "Oppenheimer",
       "rating": 4,
       "watched": "2023-11-08",
       "imdb": "tt15398776",
-      "poster": "",
+      "poster": "posters/oppenheimer-2023.jpg",
       "rating10": 8,
       "imdbRating": 8.2,
-      "imdbVotes": 1113128
+      "imdbVotes": 1113128,
+      "year": 2023,
+      "tmdb": 872585,
+      "tmdbKind": "movie",
+      "runtime": 181,
+      "director": "Christopher Nolan",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "Syncopy",
+      "logo": "logos/9996.png"
     },
     {
       "title": "Quiz Lady",
       "rating": 3,
       "watched": "2023-11-09",
       "imdb": "tt13405810",
-      "poster": "",
+      "poster": "posters/quiz-lady-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.7,
-      "imdbVotes": 25923
+      "imdbVotes": 25923,
+      "year": 2023,
+      "tmdb": 787781,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Jessica Yu",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "20th Century Studios",
+      "logo": "logos/127928.png"
     },
     {
       "title": "The Foot Fist Way",
       "rating": 3,
       "watched": "2023-11-09",
       "imdb": "tt0492619",
-      "poster": "",
+      "poster": "posters/the-foot-fist-way-2008.jpg",
       "rating10": 5.5,
       "imdbRating": 6.2,
-      "imdbVotes": 14521
+      "imdbVotes": 14521,
+      "year": 2008,
+      "tmdb": 13484,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Jody Hill",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Mechanic",
       "rating": 3,
       "watched": "2023-11-09",
       "imdb": "tt0472399",
-      "poster": "",
+      "poster": "posters/the-mechanic-2011.jpg",
       "rating10": 5.5,
       "imdbRating": 6.5,
-      "imdbVotes": 185345
+      "imdbVotes": 185345,
+      "year": 2011,
+      "tmdb": 27582,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Simon West",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "CBS Films",
+      "logo": "logos/5490.png"
     },
     {
       "title": "The Killer",
       "rating": 4,
       "watched": "2023-11-15",
       "imdb": "tt1136617",
-      "poster": "",
+      "poster": "posters/the-killer-2023.jpg",
       "rating10": 7.5,
       "imdbRating": 6.7,
-      "imdbVotes": 229709
+      "imdbVotes": 229709,
+      "year": 2023,
+      "tmdb": 800158,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "David Fincher",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Netflix",
+      "logo": "logos/178464.png"
     },
     {
       "title": "Your Lucky Day",
       "rating": 3.5,
       "watched": "2023-11-18",
       "imdb": "tt16424988",
-      "poster": "",
+      "poster": "posters/your-lucky-day-2023.jpg",
       "rating10": 6.5,
       "imdbRating": 5.9,
-      "imdbVotes": 4546
+      "imdbVotes": 4546,
+      "year": 2023,
+      "tmdb": 923993,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Dan Brown",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Action"
+      ],
+      "studio": "Cine+ OCS",
+      "logo": "logos/234479.png"
     },
     {
       "title": "The Art of Self-Defense",
       "rating": 4,
       "watched": "2023-11-22",
       "imdb": "tt7339248",
-      "poster": "",
+      "poster": "posters/the-art-of-self-defense-2019.jpg",
       "rating10": 7.5,
       "imdbRating": 6.6,
-      "imdbVotes": 44611
+      "imdbVotes": 44611,
+      "year": 2019,
+      "tmdb": 480001,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Riley Stearns",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "End Cue",
+      "logo": "logos/65906.png"
     },
     {
       "title": "Shaun of the Dead",
       "rating": 3.5,
       "watched": "2023-11-23",
       "imdb": "tt0365748",
-      "poster": "",
+      "poster": "posters/shaun-of-the-dead-2004.jpg",
       "rating10": 7,
       "imdbRating": 7.8,
-      "imdbVotes": 648512
+      "imdbVotes": 648512,
+      "year": 2004,
+      "tmdb": 747,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Edgar Wright",
+      "genres": [
+        "Horror",
+        "Comedy"
+      ],
+      "studio": "Big Talk Studios",
+      "logo": "logos/443.png"
     },
     {
       "title": "Kingpin",
       "rating": 3.5,
       "watched": "2023-11-23",
       "imdb": "tt0116778",
-      "poster": "",
+      "poster": "posters/kingpin-1996.jpg",
       "rating10": 7,
       "imdbRating": 6.9,
-      "imdbVotes": 98032
+      "imdbVotes": 98032,
+      "year": 1996,
+      "tmdb": 11543,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Bobby Farrelly",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Motion Picture Corporation of America",
+      "logo": "logos/2090.png"
     },
     {
       "title": "The Last Seduction",
       "rating": 3.5,
       "watched": "2023-11-23",
       "imdb": "tt0110308",
-      "poster": "",
+      "poster": "posters/the-last-seduction-1994.jpg",
       "rating10": 6.5,
-      "imdbRating": 7.0,
-      "imdbVotes": 29428
+      "imdbRating": 7,
+      "imdbVotes": 29428,
+      "year": 1994,
+      "tmdb": 25284,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "John Dahl",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "ITC Entertainment",
+      "logo": "logos/1155.png"
     },
     {
       "title": "Badlands",
       "rating": 3.5,
       "watched": "2023-11-25",
       "imdb": "tt0069762",
-      "poster": "",
+      "poster": "posters/badlands-1973.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 86078
+      "imdbVotes": 86078,
+      "year": 1973,
+      "tmdb": 3133,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Terrence Malick",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Midnight Run",
       "rating": 3.5,
       "watched": "2023-11-25",
       "imdb": "tt0095631",
-      "poster": "",
+      "poster": "posters/midnight-run-1988.jpg",
       "rating10": 7,
       "imdbRating": 7.5,
-      "imdbVotes": 105998
+      "imdbVotes": 105998,
+      "year": 1988,
+      "tmdb": 9013,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Martin Brest",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Things to Do in Denver When You're Dead",
       "rating": 2.5,
       "watched": "2023-11-25",
       "imdb": "tt0114660",
-      "poster": "",
+      "poster": "posters/things-to-do-in-denver-when-you-re-dead-1995.jpg",
       "rating10": 5,
       "imdbRating": 6.7,
-      "imdbVotes": 32445
+      "imdbVotes": 32445,
+      "year": 1995,
+      "tmdb": 400,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Gary Fleder",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "Sleuth",
       "rating": 4,
       "watched": "2023-11-27",
       "imdb": "tt0069281",
-      "poster": "",
+      "poster": "posters/sleuth-1972.jpg",
       "rating10": 7.5,
       "imdbRating": 7.9,
-      "imdbVotes": 53532
+      "imdbVotes": 53532,
+      "year": 1972,
+      "tmdb": 993,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Joseph L. Mankiewicz",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Barbie",
       "rating": 3.5,
       "watched": "2023-11-27",
       "imdb": "tt1517268",
-      "poster": "",
+      "poster": "posters/barbie-2023.jpg",
       "rating10": 7,
       "imdbRating": 6.8,
-      "imdbVotes": 711230
+      "imdbVotes": 711230,
+      "year": 2023,
+      "tmdb": 346698,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Greta Gerwig",
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Fantasy"
+      ],
+      "studio": "LuckyChap Entertainment",
+      "logo": "logos/82968.png"
     },
     {
       "title": "Bye Bye Barry",
       "rating": 3.5,
       "watched": "2023-11-27",
       "imdb": "tt29720239",
-      "poster": "",
+      "poster": "posters/bye-bye-barry-2023.jpg",
       "rating10": 7,
       "imdbRating": 7.7,
-      "imdbVotes": 2429
+      "imdbVotes": 2429,
+      "year": 2023,
+      "tmdb": 1180248,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Micaela Powers",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "NFL Films",
+      "logo": "logos/3232.png"
     },
     {
       "title": "Unknown",
       "rating": 2.5,
       "watched": "2023-11-28",
       "imdb": "tt1401152",
-      "poster": "",
+      "poster": "posters/unknown-2011.jpg",
       "rating10": 4.5,
       "imdbRating": 6.8,
-      "imdbVotes": 278461
+      "imdbVotes": 278461,
+      "year": 2011,
+      "tmdb": 48138,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Jaume Collet-Serra",
+      "genres": [
+        "Action",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Dark Castle Entertainment",
+      "logo": "logos/1786.png"
     },
     {
       "title": "American Movie",
       "rating": 4,
       "watched": "2023-11-29",
       "imdb": "tt0181288",
-      "poster": "",
+      "poster": "posters/american-movie-1999.jpg",
       "rating10": 8,
       "imdbRating": 7.8,
-      "imdbVotes": 21403
+      "imdbVotes": 21403,
+      "year": 1999,
+      "tmdb": 14242,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Chris Smith",
+      "genres": [
+        "Documentary",
+        "Comedy"
+      ],
+      "studio": "Library Films",
+      "logo": "logos/113634.png"
     },
     {
       "title": "Sick of Myself",
       "rating": 3.5,
       "watched": "2023-11-29",
       "imdb": "tt18816518",
-      "poster": "",
+      "poster": "posters/sick-of-myself-2022.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 24946
+      "imdbVotes": 24946,
+      "year": 2022,
+      "tmdb": 788734,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Kristoffer Borgli",
+      "genres": [
+        "Comedy",
+        "Horror"
+      ],
+      "studio": "Oslo Pictures",
+      "logo": "logos/113596.png"
     },
     {
       "title": "Carlito's Way",
       "rating": 3.5,
       "watched": "2023-11-29",
       "imdb": "tt0106519",
-      "poster": "",
+      "poster": "posters/carlito-s-way-1993.jpg",
       "rating10": 6.5,
       "imdbRating": 7.9,
-      "imdbVotes": 252550
+      "imdbVotes": 252550,
+      "year": 1993,
+      "tmdb": 6075,
+      "tmdbKind": "movie",
+      "runtime": 144,
+      "director": "Brian De Palma",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "A Bronx Tale",
       "rating": 3.5,
       "watched": "2023-12-01",
       "imdb": "tt0106489",
-      "poster": "",
+      "poster": "posters/a-bronx-tale-1993.jpg",
       "rating10": 6.5,
       "imdbRating": 7.8,
-      "imdbVotes": 192535
+      "imdbVotes": 192535,
+      "year": 1993,
+      "tmdb": 1607,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Robert De Niro",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Tribeca Productions",
+      "logo": "logos/11391.png"
     },
     {
       "title": "Dogtooth",
       "rating": 3.5,
       "watched": "2023-12-03",
       "imdb": "tt1379182",
-      "poster": "",
+      "poster": "posters/dogtooth-2009.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 125897
+      "imdbVotes": 125897,
+      "year": 2009,
+      "tmdb": 38810,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Yorgos Lanthimos",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Greek Film Centre",
+      "logo": "logos/7254.png"
     },
     {
       "title": "In the Land of Saints and Sinners",
       "rating": 3.5,
       "watched": "2023-12-04",
       "imdb": "tt15782690",
-      "poster": "",
+      "poster": "posters/in-the-land-of-saints-and-sinners-2023.jpg",
       "rating10": 6.5,
       "imdbRating": 6.4,
-      "imdbVotes": 33506
+      "imdbVotes": 33506,
+      "year": 2023,
+      "tmdb": 1027073,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Robert Lorenz",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Jumpy Cow Pictures",
+      "logo": "logos/210312.png"
     },
     {
       "title": "Killers of the Flower Moon",
       "rating": 3.5,
       "watched": "2023-12-06",
       "imdb": "tt5537002",
-      "poster": "",
+      "poster": "posters/killers-of-the-flower-moon-2023.jpg",
       "rating10": 7,
       "imdbRating": 7.5,
-      "imdbVotes": 316812
+      "imdbVotes": 316812,
+      "year": 2023,
+      "tmdb": 466420,
+      "tmdbKind": "movie",
+      "runtime": 206,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Crime",
+        "History",
+        "Drama"
+      ],
+      "studio": "Apple Studios",
+      "logo": "logos/194232.png"
     },
     {
       "title": "Cat Person",
       "rating": 2.5,
       "watched": "2023-12-09",
       "imdb": "tt14647404",
-      "poster": "",
+      "poster": "posters/cat-person-2023.jpg",
       "rating10": 5,
-      "imdbRating": 6.0,
-      "imdbVotes": 8796
+      "imdbRating": 6,
+      "imdbVotes": 8796,
+      "year": 2023,
+      "tmdb": 843394,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Susanna Fogel",
+      "genres": [
+        "Thriller",
+        "Comedy"
+      ],
+      "studio": "StudioCanal",
+      "logo": "logos/694.png"
     },
     {
       "title": "Anatomy of a Fall",
       "rating": 4,
       "watched": "2023-12-14",
       "imdb": "tt17009710",
-      "poster": "",
+      "poster": "posters/anatomy-of-a-fall-2023.jpg",
       "rating10": 7.5,
       "imdbRating": 7.6,
-      "imdbVotes": 240437
+      "imdbVotes": 240437,
+      "year": 2023,
+      "tmdb": 915935,
+      "tmdbKind": "movie",
+      "runtime": 151,
+      "director": "Justine Triet",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "Les Films de Pierre",
+      "logo": "logos/58568.png"
     },
     {
       "title": "Leave the World Behind",
       "rating": 3.5,
       "watched": "2023-12-14",
       "imdb": "tt12747748",
-      "poster": "",
+      "poster": "posters/leave-the-world-behind-2023.jpg",
       "rating10": 7,
       "imdbRating": 6.4,
-      "imdbVotes": 249967
+      "imdbVotes": 249967,
+      "year": 2023,
+      "tmdb": 726209,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Sam Esmail",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Esmail Corp",
+      "logo": "logos/105356.png"
     },
     {
       "title": "Fast Charlie",
       "rating": 3.5,
       "watched": "2023-12-14",
       "imdb": "tt6722400",
-      "poster": "",
+      "poster": "posters/fast-charlie-2023.jpg",
       "rating10": 6.5,
-      "imdbRating": 6.0,
-      "imdbVotes": 31384
+      "imdbRating": 6,
+      "imdbVotes": 31384,
+      "year": 2023,
+      "tmdb": 945937,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Phillip Noyce",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Ashland Hill Media Finance",
+      "logo": "logos/189103.png"
     },
     {
       "title": "Alcarràs",
       "rating": 4,
       "watched": "2023-12-26",
       "imdb": "tt11930126",
-      "poster": "",
+      "poster": "posters/alcarras-2022.jpg",
       "rating10": 8,
-      "imdbRating": 7.0,
-      "imdbVotes": 9687
+      "imdbRating": 7,
+      "imdbVotes": 9687,
+      "year": 2022,
+      "tmdb": 804251,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Carla Simón",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Avalon",
+      "logo": "logos/26174.png"
     },
     {
       "title": "The Holdovers",
       "rating": 4.5,
       "watched": "2023-12-28",
       "imdb": "tt14849194",
-      "poster": "",
+      "poster": "posters/the-holdovers-2023.jpg",
       "rating10": 8.5,
       "imdbRating": 7.9,
-      "imdbVotes": 276552
+      "imdbVotes": 276552,
+      "year": 2023,
+      "tmdb": 840430,
+      "tmdbKind": "movie",
+      "runtime": 133,
+      "director": "Alexander Payne",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "Killer Joe",
       "rating": 3.5,
       "watched": "2023-12-28",
       "imdb": "tt1726669",
-      "poster": "",
+      "poster": "posters/killer-joe-2012.jpg",
       "rating10": 7,
       "imdbRating": 6.6,
-      "imdbVotes": 90225
+      "imdbVotes": 90225,
+      "year": 2012,
+      "tmdb": 73567,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "William Friedkin",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Worldview Entertainment",
+      "logo": "logos/9015.png"
     },
     {
       "title": "Ricky Gervais: Armageddon",
       "rating": 3.5,
       "watched": "2023-12-28",
       "imdb": "tt30088797",
-      "poster": "",
+      "poster": "posters/ricky-gervais-armageddon-2023.jpg",
       "rating10": 7,
       "imdbRating": 7.1,
-      "imdbVotes": 17522
+      "imdbVotes": 17522,
+      "year": 2023,
+      "tmdb": 1208476,
+      "tmdbKind": "movie",
+      "runtime": 63,
+      "director": "John L. Spencer",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "How to Have Sex",
       "rating": 3.5,
       "watched": "2023-12-30",
       "imdb": "tt22890246",
-      "poster": "",
+      "poster": "posters/how-to-have-sex-2023.jpg",
       "rating10": 7,
       "imdbRating": 6.4,
-      "imdbVotes": 23978
+      "imdbVotes": 23978,
+      "year": 2023,
+      "tmdb": 1075175,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Molly Manning Walker",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Film4 Productions",
+      "logo": "logos/6705.png"
     },
     {
       "title": "Heavenly Creatures",
       "rating": 3.5,
       "watched": "2023-12-30",
       "imdb": "tt0110005",
-      "poster": "",
+      "poster": "posters/heavenly-creatures-1994.jpg",
       "rating10": 7,
       "imdbRating": 7.2,
-      "imdbVotes": 70582
+      "imdbVotes": 70582,
+      "year": 1994,
+      "tmdb": 1024,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Peter Jackson",
+      "genres": [
+        "Drama",
+        "Fantasy"
+      ],
+      "studio": "WingNut Films",
+      "logo": "logos/11.png"
     },
     {
       "title": "Sleeping with the Enemy",
       "rating": 3.5,
       "watched": "2023-12-30",
       "imdb": "tt0102945",
-      "poster": "",
+      "poster": "posters/sleeping-with-the-enemy-1991.jpg",
       "rating10": 6.5,
       "imdbRating": 6.3,
-      "imdbVotes": 73045
+      "imdbVotes": 73045,
+      "year": 1991,
+      "tmdb": 7442,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Joseph Ruben",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "The Chaser",
       "rating": 4,
       "watched": "2023-12-31",
       "imdb": "tt1190539",
-      "poster": "",
+      "poster": "posters/the-chaser-2008.jpg",
       "rating10": 8,
       "imdbRating": 7.8,
-      "imdbVotes": 83550
+      "imdbVotes": 83550,
+      "year": 2008,
+      "tmdb": 13855,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Na Hong-jin",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Action"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "To Catch a Killer",
       "rating": 3,
       "watched": "2023-12-31",
       "imdb": "tt10275534",
-      "poster": "",
+      "poster": "posters/to-catch-a-killer-2023.jpg",
       "rating10": 6,
       "imdbRating": 6.6,
-      "imdbVotes": 58729
+      "imdbVotes": 58729,
+      "year": 2023,
+      "tmdb": 605886,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Damián Szifron",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "FilmNation Entertainment",
+      "logo": "logos/7493.png"
     },
     {
       "title": "Dave Chappelle: The Dreamer",
       "rating": 3,
       "watched": "2023-12-31",
       "imdb": "tt18278698",
-      "poster": "",
+      "poster": "posters/dave-chappelle-the-dreamer-2023.jpg",
       "rating10": 6,
-      "imdbRating": 7.0,
-      "imdbVotes": 9137
+      "imdbRating": 7,
+      "imdbVotes": 9137,
+      "year": 2023,
+      "tmdb": 1215439,
+      "tmdbKind": "movie",
+      "runtime": 57,
+      "director": "Stan Lathan",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     }
   ]
 }
