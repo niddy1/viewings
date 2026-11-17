@@ -2566,6 +2566,255 @@ std('glass-onion-a-knives-out-mystery-2022', ('grad', [(0, (40, 110, 200)), (.6,
     ft='a', vbox=(248, 210, 44), vink=(20, 60, 120), fcol=(200, 214, 236), fin=MINT)
 
 
+# =====================================================================================
+# the 2021 shelf (films-2021.json).  Same approach as 2022-2025: lettering boxes given here,
+# checked over the posters first; typeset where the lift wouldn't come clean (comments say so).
+# Credits and typed labels checked on IMDb (17 Nov 2026).  Soul (Pixar) and Cruella (Disney) are clamshells.
+# =====================================================================================
+
+# The Kid Detective: the poster's crime-scene yellow, the red condensed capitals, Abe at the head
+std('the-kid-detective-2020', ('grad', [(0, (250, 200, 40)), (.55, (240, 160, 30)), (1, (150, 70, 20))]), (190, 24, 24),
+    TT([('THE', (196, 26, 26)), ('KID DETECTIVE', (196, 26, 26))], 'hcnb', 92, sp=.25, squeeze=.74, bold=1.6, rough=.3),  # typeset: the lift kept losing the E's bars
+    photo=ph(.62, .2, .55, 1.0), pb=(196, 26, 26), lg=(30, 26, 22), lw=.6, order='LPTCF', credit=['ADAM BRODY'], ccol=(30, 26, 22),
+    ft='a', vbox=(196, 26, 26), fcol=(30, 26, 22), fin=SLIP)
+
+# The Little Things: night-time teal, the white lower-case serif, Rami Malek in the middle frame
+std('the-little-things-2021', ('grad', [(0, (30, 70, 80)), (.6, (10, 26, 32)), (1, (60, 10, 14))]), WHT,
+    L((0.05, 0.885, 0.97, 0.965), 66, WHT, mode='light', speck=.005),
+    photo=ph(.55, .45, .6, 1.0), pb=(214, 40, 40), lg=WHT, lw=.7, order='LPTCF', credit=['DENZEL WASHINGTON', 'RAMI MALEK'], ccol=(214, 220, 222),
+    ft='a', vbox=(214, 40, 40), fcol=(190, 200, 204), fin=MINT)
+
+# Black Bear: the kaleidoscope's teal and red, the white spaced capitals, Aubrey Plaza at the centre
+std('black-bear-2020', ('grad', [(0, (40, 80, 84)), (.6, (16, 30, 32)), (1, (110, 20, 24))]), WHT,
+    L((0.12, 0.81, 0.89, 0.915), 84, WHT, mode='light', speck=.01),
+    photo=ph(.5, .55, .45, 1.0), pb=(200, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['AUBREY PLAZA'], ccol=WHT,
+    ft='a', vbox=(200, 40, 40), fcol=(200, 210, 210), fin=MINT)
+
+# Never Rarely Sometimes Always: the poster's putty panel, the grey condensed capitals, Autumn's face
+std('never-rarely-sometimes-always-2020', ('solid', (232, 228, 214)), (90, 86, 80),
+    [T('NEVER RARELY', 'hcn', 64, (92, 88, 82), squeeze=.72), T('SOMETIMES ALWAYS', 'hcn', 64, (92, 88, 82), squeeze=.72)], tgap=10,  # typeset: the thin condensed letters broke up
+    photo=ph(.62, .55, .55, 1.0), pb=(92, 88, 82), lg=(92, 88, 82), lw=.7, order='LPTCF', credit=['AN ELIZA HITTMAN', 'FILM'], ccol=(92, 88, 82),
+    ft='a', vbox=(92, 88, 82), fcol=(92, 88, 82), fin=MINT)
+
+# Promising Young Woman: white with the hot-pink condensed capitals, Cassie at the head
+std('promising-young-woman-2020', ('grad', [(0, (250, 250, 248)), (.6, (240, 238, 236)), (1, (214, 206, 208))]), (222, 40, 96),
+    L([(0.11, 0.47, 0.89, 0.58), (0.11, 0.575, 0.89, 0.66)], 84, (224, 42, 98), mode='key', key=(220, 40, 90), t=(70, 150), speck=.01),
+    photo=ph(.5, .19, .24, 1.0), pb=(224, 42, 98), lg=(30, 30, 34), lw=.7, order='LPTCF', credit=['CAREY MULLIGAN'], ccol=(30, 30, 34),
+    ft='a', vbox=(224, 42, 98), fcol=(30, 30, 34), fin=MINT)
+
+# Nomadland: the Badlands at dusk, the orange heavy capitals off the sky, Fern in her camp chair (no logo file: the label in type)
+std('nomadland-2021', ('grad', [(0, (226, 186, 150)), (.4, (180, 150, 120)), (.75, (110, 100, 70)), (1, (50, 44, 30))]), (236, 110, 30),
+    L((0.05, 0.075, 0.95, 0.16), 96, (236, 112, 32), mode='key', key=(240, 120, 30), t=(70, 150), speck=.01, grow=.04),
+    photo=ph(.55, .55, .5, 1.0), pb=(236, 112, 32), studio=['SEARCHLIGHT', 'PICTURES'], scol=(40, 34, 26), order='lPTCF', credit=['FRANCES', 'McDORMAND'], ccol=(40, 34, 26),
+    ft='a', vbox=(236, 112, 32), fcol=(40, 34, 26), fin=MINT)
+
+# Judas and the Black Messiah: protest-poster red, the white condensed capitals, Kaluuya at the head
+std('judas-and-the-black-messiah-2021', ('grad', [(0, (200, 36, 30)), (.6, (120, 16, 14)), (1, (30, 6, 6))]), WHT,
+    TT([('JUDAS', WHT), ('AND THE', WHT), ('BLACK MESSIAH', WHT)], 'hcnb', 84, sp=.25, squeeze=.82, bold=.6),  # typeset: the lift broke on the photo behind
+    photo=ph(.62, .22, .55, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DANIEL KALUUYA', 'LAKEITH STANFIELD'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(120, 16, 14), fcol=(240, 210, 206), fin=MINT)
+
+# Shiva Baby: midnight violet, the pink neon script (typeset: the glow wouldn't lift), Danielle with her bagel
+std('shiva-baby-2021', ('grad', [(0, (60, 40, 90)), (.6, (26, 18, 44)), (1, (10, 6, 16))]), (250, 150, 220),
+    T('Shiva Baby', 'cho', 120, (252, 170, 230), soft=((240, 80, 200), 7, .7)),
+    photo=ph(.46, .34, .34, 1.0), pb=(252, 170, 230), lg=WHT, lw=.6, order='LPTCF', credit=['RACHEL SENNOTT'], ccol=(252, 170, 230),
+    ft='a', vbox=(252, 170, 230), vink=(26, 18, 44), fcol=(210, 200, 226), fin=MINT)
+
+# Sound of Metal: black, the fat white capitals, Ruben behind the kit
+std('sound-of-metal-2020', ('grad', [(0, (60, 30, 28)), (.6, (22, 12, 12)), (1, (6, 4, 4))]), WHT,
+    L([(0.18, 0.09, 0.8, 0.17), (0.06, 0.175, 0.95, 0.265)], 88, WHT, mode='light', speck=.01),
+    photo=ph(.53, .45, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RIZ AHMED'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(22, 12, 12), fcol=(210, 200, 198), fin=MINT, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
+
+# Another Round: Copenhagen sky blue, the white ANOTHER over the heavy ROUND, Martin and the bottle
+std('another-round-2020', ('grad', [(0, (90, 150, 196)), (.6, (40, 80, 120)), (1, (14, 24, 36))]), WHT,
+    [T('ANOTHER', 'adv', 40, WHT, track=.08), L((0.14, 0.135, 0.86, 0.24), 96, WHT, mode='light', speck=.01)], tgap=8,
+    photo=ph(.4, .5, .5, 1.0), pb=WHT, lg=WHT, lw=.7, order='LPTCF', credit=['MADS MIKKELSEN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(40, 80, 120), fcol=(210, 222, 234), fin=MINT)
+
+# Mank: black and white, the white brush script (typeset: it runs over the crowd), Mank in the middle (no logo file: the label in type)
+std('mank-2020', ('grad', [(0, (120, 120, 120)), (.5, (50, 50, 50)), (1, (10, 10, 10))]), WHT,
+    T('Mank', 'cho', 150, WHT, shadow=((0, 0, 0), 3, 3)),
+    photo=ph(.48, .2, .5, 1.0), pb=WHT, studio=['NETFLIX'], scol=WHT, order='lPTCF', credit=['A DAVID FINCHER', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(50, 50, 50), fcol=(200, 200, 200), fin=MINT)
+
+# I Care a Lot: the poster's flat teal, the cream italic capitals (typeset: they overlap her hair), Marla in her shades
+std('i-care-a-lot-2021', ('solid', (98, 146, 146)), (250, 222, 196),
+    T('I CARE A LOT.', 'intbki', 92, (250, 222, 196), squeeze=.86),
+    photo=ph(.7, .5, .3, 1.0), pb=(226, 52, 44), lg=WHT, lw=.6, order='LPTCF', credit=['ROSAMUND PIKE'], ccol=(250, 222, 196),
+    ft='a', vbox=(226, 52, 44), fcol=(250, 222, 196), fin=MINT)
+
+# The Father: the flat's lamplight brown, the white spaced capitals, Anthony at the head
+std('the-father-2020', ('grad', [(0, (120, 84, 50)), (.6, (50, 34, 20)), (1, (14, 10, 6))]), WHT,
+    [L((0.44, 0.045, 0.56, 0.075), 22, WHT, mode='light', speck=.002), L((0.06, 0.08, 0.94, 0.155), 70, WHT, mode='light', speck=.005)], tgap=8,
+    photo=ph(.77, .42, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ANTHONY HOPKINS', 'OLIVIA COLMAN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(50, 34, 20), fcol=(220, 206, 190), fin=MINT)
+
+# Nobody: black with the bloody knuckles, the grungy white stencil (typeset: the lift came off as scratches), Hutch at the head
+std('nobody-2021', ('grad', [(0, (50, 46, 44)), (.6, (18, 16, 16)), (1, (60, 10, 10))]), WHT,
+    T('NOBODY', 'intbki', 120, (240, 238, 234), squeeze=.8, rough=.8),
+    photo=ph(.45, .26, .5, 1.0), pb=(190, 30, 30), lg=WHT, lw=.7, order='LPTCF', credit=['BOB ODENKIRK'], ccol=WHT,
+    ft='a', vbox=(190, 30, 30), fcol=(200, 196, 194), fin=SLIP)
+
+# Minari: Arkansas sky and grass, the olive serif capitals, the family in the field
+std('minari-2020', ('grad', [(0, (200, 226, 222)), (.45, (230, 220, 180)), (.75, (150, 170, 80)), (1, (60, 80, 30))]), (110, 96, 40),
+    L((0.1, 0.14, 0.9, 0.28), 96, (112, 98, 40), mode='dark', speck=.01),
+    photo=ph(.5, .66, .9, .6), pb=(112, 98, 40), lg=(60, 56, 30), lw=.6, order='LPTCF', credit=['A LEE ISAAC CHUNG', 'FILM'], ccol=(60, 56, 30),
+    ft='a', vbox=(112, 98, 40), fcol=(40, 40, 20), fin=MINT)
+
+# Three Daughters (1961): an old art-house tape, the poster's magenta, its white hand-drawn title, one of the three faces (no logo file: Ray's company in type)
+std('three-daughters-1961', ('solid', (196, 30, 150)), WHT,
+    L([(0.04, 0.59, 0.62, 0.72), (0.03, 0.72, 0.97, 0.86)], 76, (248, 244, 246), mode='light', speck=.01, gapf=.35),
+    photo=ph(.78, .46, .34, 1.0), pb=WHT, studio=['SATYAJIT RAY', 'PRODUCTIONS'], scol=WHT, order='lPTCSF', credit=['A SATYAJIT RAY', 'FILM'], ccol=WHT,
+    stick=PRC(['$3.99', 'CLASSIC']), ft='e', fcol=WHT, fin=OLD, seed=1961)
+
+# Soul: a Pixar clamshell.  Night-city blue, the poster's blue SOUL cut off it, Joe in his hat on the stair
+disney('soul-2020', ('grad', [(0, (40, 90, 190)), (.5, (24, 50, 120)), (1, (10, 20, 56))]), fin=dict(CLAM, vivid=.25),
+       title=TT([('S', (60, 150, 245)), ('O', (250, 206, 70)), ('UL', (60, 150, 245))], 'popb', 150, sp=0, shadow=((10, 20, 60), 3, 3)),  # typeset: the logo's blues run into the sky; Ian could supply it
+       face=ph(.37, .2, .2, 1.4), lcol=WHT)
+
+# Friends: The Reunion: Central Perk's dark brick, F.R.I.E.N.D.S with its coloured dots and the yellow-brush THE REUNION (typeset), the six on the stoop
+std('friends-the-reunion-2021', ('grad', [(0, (60, 54, 44)), (.6, (26, 22, 18)), (1, (8, 6, 6))]), WHT,
+    [TT([('F', WHT), ('.', (220, 40, 40)), ('R', WHT), ('.', (40, 140, 220)), ('I', WHT), ('.', (250, 210, 40)), ('E', WHT), ('.', (220, 40, 40)),
+         ('N', WHT), ('.', (250, 210, 40)), ('D', WHT), ('.', (40, 140, 220)), ('S', WHT)], 'ter', 92, sp=.02),
+     T('THE REUNION', 'herbi', 34, (30, 26, 20), box=((250, 220, 50), 8, 4), track=.25)], tgap=10,
+    photo=ph(.5, .42, .8, .6), pb=(250, 220, 50), lg=WHT, lw=.7, order='LPTF',
+    ft='a', vbox=(250, 220, 50), vink=(26, 22, 18), fcol=(210, 204, 196), fin=MINT)
+
+# Wrath of Man: tailor's charcoal, the pale grey serif capitals, H at the head
+std('wrath-of-man-2021', ('grad', [(0, (70, 70, 70)), (.6, (30, 30, 30)), (1, (8, 8, 8))]), (210, 206, 198),
+    L([(0.09, 0.74, 0.76, 0.82), (0.76, 0.765, 0.92, 0.805), (0.28, 0.82, 0.92, 0.89)], 76, (214, 210, 202), mode='light', speck=.01),
+    photo=ph(.48, .18, .4, 1.0), pb=(214, 210, 202), lg=WHT, lw=.6, order='LPTCF', credit=['JASON STATHAM'], ccol=(214, 210, 202),
+    ft='a', vbox=(214, 210, 202), vink=(30, 30, 30), fcol=(180, 178, 174), fin=SLIP)
+
+# Cruella: a Disney clamshell.  Black and white, the poster's red brush CRUELLA cut off it, Estella in the diamond
+disney('cruella-2021', ('grad', [(0, (60, 60, 62)), (.5, (24, 24, 26)), (1, (8, 8, 8))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.09, 0.49, 0.93, 0.84)], 150, cuts=[key_cut(lambda a: (a[..., 0] > .42) & (a[..., 0] > a[..., 1] + .25) & (a[..., 0] > a[..., 2] + .2), soft=1.0)]),
+       face=ph(.52, .2, .2, 1.4), lcol=WHT)
+
+# False Positive: hospital black, the thin white condensed capitals with the red I (typeset), Lucy at the centre
+std('false-positive-2021', ('grad', [(0, (50, 50, 54)), (.6, (18, 18, 20)), (1, (6, 6, 6))]), WHT,
+    TT([('FALSE POS', WHT), ('I', (220, 40, 40)), ('T', WHT), ('I', (220, 40, 40)), ('VE', WHT)], 'hcn', 84, squeeze=.6, sp=0),
+    photo=ph(.42, .37, .4, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['ILANA GLAZER', 'JUSTIN THEROUX'], ccol=WHT,
+    ft='a', vbox=(220, 40, 40), fcol=(200, 200, 204), fin=MINT)
+
+# Point Break (1991): a real rental, the big-wave blue, the white heavy capitals, Johnny and Bodhi
+std('point-break-1991', ('grad', [(0, (40, 110, 160)), (.6, (14, 44, 70)), (1, (4, 14, 24))]), WHT,
+    L((0.08, 0.585, 0.94, 0.69), 92, WHT, mode='light', speck=.01),
+    photo=ph(.47, .2, .94, .6), pb=WHT, lg=WHT, lw=.7, order='LPTCSF', credit=['PATRICK SWAYZE', 'KEANU REEVES'], ccol=WHT,
+    stick=BAR('15 01991', top='ACTION', fill=(232, 236, 240), ink=(30, 40, 60)), ft='a', vbox=WHT, vink=(14, 44, 70), fcol=(190, 210, 224), fin=RENTAL, seed=1991)
+
+# Zola: the poster's peach-and-pink haze, the lilac @zola (typeset: a gradient), Zola at the head
+std('zola-2021', ('grad', [(0, (250, 200, 190)), (.5, (236, 150, 170)), (1, (150, 80, 150))]), (130, 90, 200),
+    T('@zola', 'popb', 120, (140, 100, 210), grad=[(0, (180, 160, 240)), (1, (110, 70, 190))]),
+    photo=ph(.3, .35, .4, 1.0), pb=(140, 100, 210), lg=(60, 30, 70), lw=.6, order='LPTCF', credit=['TAYLOUR PAIGE', 'RILEY KEOUGH'], ccol=(60, 30, 70),
+    ft='a', vbox=(140, 100, 210), fcol=(60, 30, 70), fin=MINT)
+
+# Space Jam: A New Legacy: the poster's orange-to-violet, a chrome-blue SPACE JAM (typeset: it sits behind the Tunes), LeBron at the head
+std('space-jam-a-new-legacy-2021', ('grad', [(0, (250, 140, 30)), (.5, (226, 60, 90)), (1, (110, 40, 190))]), (40, 90, 220),
+    [T('SPACE JAM', 'intbk', 92, (60, 110, 230), squeeze=.84, grad=[(0, (130, 190, 255)), (.5, (40, 90, 220)), (1, (20, 40, 140))], outline=((14, 20, 60), 2.2)),
+     T('A NEW LEGACY', 'intbk', 36, (250, 160, 30), track=.08, outline=((60, 20, 40), 1.4))], tgap=8,
+    photo=ph(.53, .3, .22, 1.0), pb=WHT, lg=WHT, lw=.7, order='LPTCF', credit=['LeBRON JAMES'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(226, 60, 90), fcol=WHT, fin=MINT)
+
+# Woodstock 99: Peace, Love, and Rage: the poster's burnt orange, the white heavy capitals and subtitle (typeset: they sit in a ruled box), the stage and the crowd
+std('woodstock-99-peace-love-and-rage-2021', ('grad', [(0, (226, 100, 40)), (.6, (170, 80, 40)), (1, (60, 40, 20))]), WHT,
+    [T('WOODSTOCK 99', 'intbk', 70, WHT, squeeze=.86), T('PEACE, LOVE, AND RAGE', 'herb', 28, WHT, track=.1)], tgap=8,
+    photo=ph(.5, .55, .9, .6), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(170, 80, 40), fcol=(250, 230, 210), fin=MINT)
+
+# Those Who Wish Me Dead: wildfire orange and black, the yellow condensed capitals (typeset: stacked five high), Hannah at the head
+std('those-who-wish-me-dead-2021', ('grad', [(0, (180, 70, 20)), (.5, (80, 24, 10)), (1, (12, 6, 4))]), (240, 196, 40),
+    T('THOSE WHO WISH ME DEAD', 'hcnb', 80, (242, 198, 44), squeeze=.78, bold=.8),
+    photo=ph(.86, .09, .28, 1.0), pb=(242, 198, 44), lg=WHT, lw=.6, order='LPTCF', credit=['ANGELINA JOLIE'], ccol=(242, 198, 44),
+    ft='a', vbox=(242, 198, 44), vink=(80, 24, 10), fcol=(230, 210, 190), fin=MINT)
+
+# The Suicide Squad: the poster's cream, red and black comic capitals (typeset), the whole squad at the head
+std('the-suicide-squad-2021', ('grad', [(0, (238, 230, 214)), (.6, (226, 214, 190)), (1, (170, 150, 120))]), (210, 30, 30),
+    [T('THE', 'intbk', 40, (214, 32, 32), outline=((20, 18, 18), 1.6)), T('SUICIDE SQUAD', 'intbk', 84, (214, 32, 32), squeeze=.82, outline=((20, 18, 18), 2.4), shadow=((20, 18, 18), 3, 3))], tgap=8,
+    photo=ph(.5, .33, .8, .8), pb=(20, 18, 18), lg=(20, 18, 18), lw=.5, order='LPTCF', credit=['A JAMES GUNN', 'FILM'], ccol=(20, 18, 18),
+    ft='a', vbox=(214, 32, 32), fcol=(20, 18, 18), fin=SLIP)
+
+# Pig: near-black and plum, the thin spaced serif P I G, Rob's eye
+std('pig-2021', ('grad', [(0, (60, 40, 44)), (.6, (24, 16, 18)), (1, (6, 4, 4))]), (220, 210, 206),
+    L((0.25, 0.81, 0.76, 0.91), 90, (226, 216, 212), mode='light', speck=.003),
+    photo=ph(.6, .33, .5, 1.0), pb=(226, 216, 212), lg=WHT, lw=.6, order='LPTCF', credit=['NICOLAS CAGE'], ccol=(226, 216, 212),
+    ft='a', vbox=(226, 216, 212), vink=(24, 16, 18), fcol=(190, 180, 180), fin=MINT, dotst=(['STAFF', 'PICK'], (150, 40, 60)))
+
+# Black Widow: the poster's red hourglass on black, white italic capitals (typeset: brushed and small), Natasha at the head
+std('black-widow-2021', ('grad', [(0, (180, 20, 24)), (.5, (70, 8, 10)), (1, (8, 4, 4))]), WHT,
+    TT([('BLACK', WHT), ('WIDOW', WHT)], 'intbki', 84, sp=.3, squeeze=.84, rough=.3),
+    photo=ph(.5, .12, .3, 1.0), pb=(214, 30, 34), lg=WHT, lw=.7, order='LPTCF', credit=['SCARLETT JOHANSSON'], ccol=WHT,
+    ft='a', vbox=(214, 30, 34), fcol=(220, 200, 200), fin=SLIP)
+
+# Kate: Tokyo neon, a hollow cyan KATE like the sign (typeset), Kate at the head
+std('kate-2021', ('grad', [(0, (40, 30, 70)), (.5, (100, 20, 70)), (1, (20, 6, 20))]), (60, 230, 240),
+    T('KATE', 'adv', 130, (40, 30, 70), track=.08, outline=((80, 240, 250), 2.6), soft=((60, 220, 240), 8, .6)),
+    photo=ph(.63, .1, .35, 1.0), pb=(80, 240, 250), lg=WHT, lw=.6, order='LPTCF', credit=['MARY ELIZABETH', 'WINSTEAD'], ccol=(250, 120, 200),
+    ft='a', vbox=(250, 80, 180), fcol=(210, 200, 230), fin=MINT)
+
+# Free Guy: Free City's sky, white FREE and blue GUY (typeset: over the explosions), Guy and his coffee
+std('free-guy-2021', ('grad', [(0, (120, 170, 220)), (.5, (60, 100, 160)), (1, (20, 30, 60))]), WHT,
+    TT([('FREE', WHT), ('GUY', (40, 170, 240))], 'intbk', 100, sp=.25, squeeze=.9),
+    photo=ph(.45, .3, .3, 1.0), pb=(40, 170, 240), lg=WHT, lw=.7, order='LPTCF', credit=['RYAN REYNOLDS'], ccol=WHT,
+    ft='a', vbox=(40, 170, 240), fcol=(210, 226, 240), fin=MINT)
+
+# Road House (1989): a real rental, the Double Deuce's dark, the cyan neon script (typeset), Dalton at the head
+std('road-house-1989', ('grad', [(0, (70, 74, 90)), (.5, (24, 26, 34)), (1, (60, 14, 16))]), (90, 230, 250),
+    T('Road House', 'cho', 110, (150, 246, 255), soft=((40, 200, 250), 8, .8)),
+    photo=ph(.42, .15, .4, 1.0), pb=(150, 246, 255), lg=WHT, lw=.6, order='LPTCSF', credit=['PATRICK SWAYZE'], ccol=(150, 246, 255),
+    stick=PRC(['2 NIGHTS', '$1.99']), ft='a', vbox=(150, 246, 255), vink=(24, 26, 34), fcol=(200, 206, 214), fin=RENTAL, seed=1989)
+
+# Man Push Cart (2006): a Manhattan night, the white wide-spaced capitals (typeset: three stepped lines), Ahmad's cart
+std('man-push-cart-2006', ('grad', [(0, (40, 54, 60)), (.6, (14, 20, 24)), (1, (4, 6, 8))]), WHT,
+    T('MAN PUSH CART', 'her', 64, WHT, track=.35),
+    photo=ph(.5, .55, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A RAMIN BAHRANI', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(14, 20, 24), fcol=(190, 200, 204), fin=WORN, seed=2006)
+
+# Deep Cover (1992): a real rental, the poster's blood red and black, the white condensed capitals (typeset), John's face
+std('deep-cover-1992', ('grad', [(0, (160, 20, 20)), (.5, (70, 8, 8)), (1, (8, 2, 2))]), WHT,
+    T('DEEP COVER', 'hcnb', 96, WHT, squeeze=.74, bold=1.2),  # typeset: the lift broke on the red
+    photo=ph(.62, .25, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['LAURENCE FISHBURNE', 'JEFF GOLDBLUM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(70, 8, 8), fcol=(220, 196, 196), fin=RENTAL, seed=1992, over=[dot(262, ['NEW', 'JACK'], (250, 210, 40), (30, 20, 10), x=.72, d=62)])
+
+# The Card Counter: casino-card white and red, the thin spaced capitals (typeset), William at the head
+std('the-card-counter-2021', ('grad', [(0, (240, 234, 226)), (.6, (210, 200, 190)), (1, (90, 70, 60))]), (40, 36, 34),
+    [T('THE', 'her', 28, (40, 36, 34), track=.6), T('CARD COUNTER', 'her', 56, (40, 36, 34), track=.4)], tgap=8,
+    photo=ph(.5, .22, .35, 1.0), pb=(200, 40, 40), lg=(40, 36, 34), lw=.6, order='LPTCF', credit=['OSCAR ISAAC'], ccol=(200, 40, 40),
+    ft='a', vbox=(200, 40, 40), fcol=(40, 36, 34), fin=MINT)
+
+# The Guilty: the dispatch room's black, the red condensed capitals, the face made of 911 calls
+std('the-guilty-2021', ('grad', [(0, (60, 30, 26)), (.6, (22, 12, 10)), (1, (6, 4, 4))]), (210, 30, 30),
+    L((0.24, 0.825, 0.77, 0.915), 100, (214, 32, 32), mode='key', key=(200, 30, 30), t=(70, 150), speck=.01),
+    photo=ph(.5, .4, .6, 1.0), pb=(214, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['JAKE GYLLENHAAL'], ccol=(214, 32, 32),
+    ft='a', vbox=(214, 32, 32), fcol=(200, 190, 186), fin=MINT)
+
+# Venom: Let There Be Carnage: symbiote blue-black, silver VENOM and the scratchy subtitle (typeset), Venom at the head
+std('venom-let-there-be-carnage-2021', ('grad', [(0, (30, 70, 130)), (.5, (12, 26, 50)), (1, (4, 6, 12))]), (220, 224, 230),
+    [T('VENOM', 'ter', 100, (226, 230, 236), track=.04, grad=[(0, (250, 250, 255)), (.5, (160, 170, 186)), (1, (230, 234, 240))], outline=((10, 10, 16), 1.6)),
+     T('LET THERE BE CARNAGE', 'herbi', 30, (220, 40, 40), track=.12)], tgap=8,
+    photo=ph(.72, .23, .3, 1.0), pb=(220, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['TOM HARDY'], ccol=WHT,
+    ft='a', vbox=(220, 40, 40), fcol=(190, 200, 214), fin=SLIP)
+
+# Dune: Arrakis haze, the poster's spaced glyph lettering set in wide capitals (typeset), Paul at the head
+std('dune-2021', ('grad', [(0, (150, 186, 190)), (.5, (110, 130, 130)), (.8, (190, 140, 90)), (1, (90, 60, 34))]), (30, 28, 26),
+    T('DUNE', 'adv', 110, (34, 32, 30), track=.7),
+    photo=ph(.52, .1, .3, 1.0), pb=(34, 32, 30), lg=(34, 32, 30), lw=.6, order='LPTCF', credit=['A DENIS VILLENEUVE', 'FILM'], ccol=(34, 32, 30),
+    ft='a', vbox=(34, 32, 30), fcol=(34, 32, 30), fin=MINT)
+
+# No Time to Die: the gun-barrel black and white, the gold stencil capitals (typeset: stacked), Bond at the head
+std('no-time-to-die-2021', ('grad', [(0, (236, 236, 236)), (.35, (40, 40, 40)), (1, (6, 6, 6))]), (200, 160, 70),
+    [T('NO TIME TO DIE', 'hcnb', 80, (204, 164, 74), squeeze=.8, grad=[(0, (226, 190, 100)), (1, (170, 130, 50))]), T('007', 'herbi', 30, (220, 220, 220))], tgap=8,
+    photo=ph(.4, .16, .35, 1.0), pb=(204, 164, 74), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['DANIEL CRAIG'], ccol=(204, 164, 74),
+    ft='a', vbox=(204, 164, 74), vink=(20, 20, 20), fcol=(200, 196, 190), fin=SLIP)
+
+# The Unforgivable: prison grey-green, the white heavy capitals (typeset), Ruth's face
+std('the-unforgivable-2021', ('grad', [(0, (90, 96, 90)), (.6, (40, 42, 40)), (1, (12, 12, 12))]), WHT,
+    TT([('THE', WHT), ('UNFORGIVABLE', WHT)], 'hcnb', 84, sp=.25, squeeze=.74, bold=1.2),  # typeset: the lift broke on her shoulder
+    photo=ph(.55, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['SANDRA BULLOCK'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(40, 42, 40), fcol=(200, 204, 200), fin=MINT)
+
+
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
         im = build(SPECS[k])
