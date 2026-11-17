@@ -4099,75 +4099,75 @@ std('the-kid-1921', ('grad', [(0, (110, 110, 108)), (.6, (50, 50, 48)), (1, (14,
     photo=ph(.25, .45, .4, 1.0), pb=WHT, studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['CHARLES CHAPLIN', 'JACKIE COOGAN'], ccol=WHT,
     ft='e', fcol=(210, 210, 206), fin=OLD, seed=1921)
 
-# The Circus (1928): an old tape, the poster's circus orange, the red and navy capitals (typeset), the Tramp and the lion (no logo file: Chaplin's company in type)
+# The Circus (1928): an old tape, the poster's circus cream, its blue CIRCUS cut off it (its small thE is too faint to cut, so THE is typeset), the Tramp and the lion
 std('the-circus-1928', ('grad', [(0, (240, 180, 60)), (.6, (210, 110, 40)), (1, (110, 40, 20))]), (190, 30, 30),
-    TT([('THE', (30, 40, 120)), ('CIRCUS', (196, 32, 32))], 'bonb', 92, sp=.2),
+    [T('THE', 'bonb', 40, (30, 40, 120)), LC([(0.44, 0.145, 0.92, 0.215)], 92, cuts=[key_cut(lambda a: (a[..., 2] > a[..., 0] + .12) & (_lum(a) < .55))])],
     photo=ph(.6, .55, .5, 1.0), pb=(30, 40, 120), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=(30, 40, 120), order='lPTCSF', credit=['CHARLES CHAPLIN'], ccol=(30, 40, 120),
     stick=flow(dot, 70, ['SILENT'], (30, 40, 120), d=62), ft='e', fcol=(40, 20, 10), fin=OLD, seed=1928)
 
-# The General (1926): an old tape, the poster's sky blue, the red art-deco capitals (typeset), Buster on his engine (no logo file: Keaton's company in type)
+# The General (1926): an old tape, the poster's pale sky, its black script The and red GENERAL cut off it, Buster on the engine
 std('the-general-1926', ('grad', [(0, (190, 214, 220)), (.6, (150, 180, 190)), (1, (70, 90, 100))]), (210, 40, 50),
-    [T('The', 'cho', 50, (20, 20, 30)), T('GENERAL', 'adv', 92, (214, 42, 52), track=.06, bold=.5)], tgap=4,
+    LC([(0.117, 0.6, 0.924, 0.895)], 150, cuts=[key_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .35)) | (_lum(a) < .25))]), tgap=4,
     photo=ph(.4, .3, .5, 1.0), pb=(214, 42, 52), studio=['BUSTER KEATON', 'PRODUCTIONS'], scol=(20, 20, 30), order='lPTCF', credit=['BUSTER KEATON'], ccol=(20, 20, 30),
     ft='e', fcol=(20, 20, 30), fin=OLD, seed=1926)
 
-# Rang De Basanti (2006): monsoon sky, the white-and-saffron script (typeset), the friends leaping
+# Rang De Basanti: the sky's blue and white, the poster's saffron Basanti cut off it (its white Rang De is lost in the clouds, so it is typeset), the friends leaping
 std('rang-de-basanti-2006', ('grad', [(0, (150, 180, 210)), (.6, (90, 110, 120)), (1, (20, 30, 20))]), WHT,
-    TT([('Rang De', WHT), ('Basanti', (246, 170, 40))], 'cho', 92, sp=.15, outline=((40, 40, 60), 1.4)),
+    [T('Rang De', 'cho', 60, WHT, outline=((40, 40, 60), 1.4)), LC([(0.095, 0.1, 0.954, 0.204)], 120, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .45) & (a[..., 2] < .4))])],
     photo=ph(.5, .65, .7, .7), pb=(246, 170, 40), lg=WHT, lw=.6, order='LPTCF', credit=['AAMIR KHAN'], ccol=WHT,
     ft='a', vbox=(246, 170, 40), vink=(90, 110, 120), fcol=WHT, fin=WORN, seed=2006)
 
-# Hamilton: the poster's gold, black wide serif capitals (typeset), Hamilton on the star
-std('hamilton-2025', ('grad', [(0, (236, 180, 60)), (.6, (210, 150, 40)), (1, (120, 80, 20))]), (20, 18, 16),
-    T('HAMILTON', 'ter', 80, (20, 18, 16), track=.25),
+# Hamilton: the poster's gold, its white wide serif HAMILTON lifted (black keyline added: the poster sets it across the star), Hamilton on the star
+std('hamilton-2025', ('grad', [(0, (236, 180, 60)), (.6, (210, 150, 40)), (1, (120, 80, 20))]), WHT,
+    L((0.032, 0.546, 0.967, 0.616), 80, WHT, mode='light', outline=((20, 18, 16), 1.6)),
     photo=ph(.5, .27, .3, 1.0), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['LIN-MANUEL MIRANDA'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=MINT)
 
-# Ben-Hur (1959): an old 2-tape box (212 minutes), the poster's gold, the stone block capitals (typeset), the chariots
+# Ben-Hur (1959): an old 2-tape box, the poster's ochre, carved stone capitals (typeset: the poster's BEN-HUR is a carved monument in perspective, lit like the temple and chariots around it, so a cut takes them too), the chariot race
 std('ben-hur-1959', ('grad', [(0, (240, 190, 70)), (.6, (210, 150, 40)), (1, (110, 70, 20))]), (60, 56, 56),
     T('BEN-HUR', 'bonb', 160, (230, 226, 220), outline=((50, 40, 30), 2.4), shadow=((60, 40, 20), 5, 5)),
     photo=ph(.5, .72, .8, .4), pb=(50, 40, 30), lg=(50, 40, 30), lw=.5, order='LPTCSF', tgap=10, credit=['CHARLTON HESTON'], ccol=(50, 40, 30),
     stick=TWOST((50, 40, 30), (240, 190, 70)), ft='c', vbox=(50, 40, 30), fcol=(50, 40, 30), fin=OLD, seed=1959, **TWO)
 
-# Dangal: the Haryana lane's dust, white heavy capitals (typeset), Mahavir and his daughters
+# Dangal: the Haryana dust, the poster's white weathered DANGAL lifted, Mahavir and his girls
 std('dangal-2016', ('grad', [(0, (190, 160, 120)), (.6, (110, 80, 50)), (1, (30, 20, 12))]), WHT,
-    T('DANGAL', 'intbk', 110, WHT, rough=.4),
+    L((0.05, 0.78, 0.94, 0.94), 110, WHT, mode='key', key=(238, 232, 215), t=(30, 70)),
     photo=ph(.5, .35, .8, .8), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AAMIR KHAN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 80, 50), fcol=(240, 226, 210), fin=SLIP)
 
-# Grindhouse (2007): a 2-tape double bill (191 minutes), the poster's torn red and cream, the red stencil capitals (typeset), the two features
+# Grindhouse (2007): a 2-tape box, the poster's torn cream, its red GRINDHOUSE lifted (the two titles typeset under it: they are small and tilted on the poster), the double bill
 std('grindhouse-2007', ('grad', [(0, (230, 220, 190)), (.6, (200, 180, 150)), (1, (120, 90, 60))]), (190, 30, 30),
-    [T('GRINDHOUSE', 'hcnb', 150, (196, 32, 32), squeeze=.76, bold=.8, rough=.6), T('PLANET TERROR  ·  DEATH PROOF', 'hcnb', 40, (20, 18, 16), track=.08)],
+    [L((0.073, 0.078, 0.922, 0.173), 150, (196, 32, 32), mode='key', key=(200, 30, 30), t=(70, 150)), T('PLANET TERROR  ·  DEATH PROOF', 'hcnb', 40, (20, 18, 16), track=.08)],
     photo=ph(.5, .5, .9, .4), pb=(196, 32, 32), lg=(20, 18, 16), lw=.5, order='LPTCSF', tgap=10, credit=['QUENTIN TARANTINO', 'ROBERT RODRIGUEZ'], ccol=(20, 18, 16),
     stick=TWOST((196, 32, 32), WHT), ft='c', vbox=(196, 32, 32), fcol=(20, 18, 16), fin=RENTAL, seed=2007, **TWO)
 
-# Witness (1985): a real rental, black, the red heavy capitals (typeset), John Book
+# Witness (1985): a real rental, black, the poster's red heavy WITNESS lifted, John Book
 std('witness-1985', ('grad', [(0, (60, 40, 30)), (.6, (20, 14, 10)), (1, (4, 4, 4))]), (220, 50, 30),
-    T('WITNESS', 'intbk', 100, (224, 54, 32)),
+    L((0.081, 0.793, 0.924, 0.908), 100, (224, 54, 32), mode='key', key=(230, 45, 20), t=(70, 150)),
     photo=ph(.5, .2, .45, 1.0), pb=(224, 54, 32), lg=WHT, lw=.6, order='LPTCF', credit=['HARRISON FORD'], ccol=WHT,
     ft='a', vbox=(224, 54, 32), fcol=(210, 200, 196), fin=RENTAL, seed=1985)
 
-# Anand (1971): an old tape, the poster's orange, the blue ornamented serif (typeset), Anand smiling in the flowers (no logo file: its company in type)
+# Anand (1971): the poster's orange, its blue curly Anand with the white keyline cut off it, Rajesh Khanna smiling
 std('anand-1971', ('solid', (240, 90, 20)), (30, 50, 170),
-    T('Anand', 'pagb', 120, (30, 50, 176), outline=((250, 230, 200), 1.6)),
+    LC([(0.101, 0.092, 0.926, 0.254)], 120, cuts=[key_cut(lambda a: ((a[..., 2] > .45) & (a[..., 0] < .35)) | (_lum(a) > .85))]),
     photo=ph(.5, .62, .5, 1.0), pb=(30, 50, 176), studio=['RUPAM CHITRA'], scol=(30, 50, 176), order='lPTCF', credit=['RAJESH KHANNA', 'AMITABH BACHCHAN'], ccol=(30, 30, 40),
     ft='e', fcol=(30, 30, 40), fin=OLD, seed=1971)
 
-# Hachi: A Dog's Tale (2009): the garden's green, white serif (typeset), Hachi
+# Hachi: A Dog's Tale: the garden's green, the white HACHI / A DOG'S TALE lifted off the poster, Parker and Hachi
 std('hachi-a-dog-s-tale-2009', ('grad', [(0, (90, 130, 70)), (.6, (40, 60, 30)), (1, (10, 16, 8))]), WHT,
-    [T('HACHI', 'ter', 90, WHT, track=.1), T("A DOG'S TALE", 'ter', 40, WHT, track=.06)], tgap=6,
+    L((0.33, 0.315, 0.96, 0.4), 110, WHT, mode='key', key=(250, 250, 250), t=(25, 60)), tgap=6,
     photo=ph(.68, .55, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RICHARD GERE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 60, 30), fcol=(220, 230, 210), fin=SLIP, seed=2009)
 
-# Come and See (1985): an old tape, the poster's sky blue and khaki, the pale stencil capitals (typeset), Flyora's face
+# Come and See (1985): an old tape, the marsh's grey-green, the poster's pale blue COME AND SEE lifted, Flyora's face
 std('come-and-see-1985', ('grad', [(0, (150, 190, 210)), (.5, (80, 90, 70)), (1, (20, 24, 18))]), (190, 214, 214),
-    T('COME AND SEE', 'hcnb', 84, (196, 220, 220), squeeze=.86, rough=.6, outline=((30, 40, 40), 1.2)),
+    L((0.133, 0.874, 0.86, 0.918), 84, (196, 220, 220), mode='key', key=(150, 190, 200), t=(50, 110), outline=((30, 40, 40), 1.2)),
     photo=ph(.5, .32, .5, 1.0), pb=(196, 220, 220), lg=WHT, lw=.6, order='LPTCSF', credit=['AN ELEM KLIMOV', 'FILM'], ccol=WHT,
     stick=BAR('15 01985', top='WAR', fill=(240, 230, 200), ink=(60, 40, 20)), ft='e', fcol=(220, 226, 220), fin=OLD, seed=1985)
 
-# The Bandit (1996): Istanbul night black, white spaced capitals (typeset), Baran (no logo file: its company in type)
+# The Bandit (1996): the night's black and the fireworks, the white spaced THE BANDIT lifted off the poster, Baran
 std('the-bandit-1996', ('grad', [(0, (60, 40, 30)), (.6, (20, 14, 10)), (1, (4, 4, 4))]), WHT,
-    [T('THE', 'her', 30, WHT, track=.6), T('BANDIT', 'her', 76, WHT, track=.5)], tgap=8,
+    [L((0.398, 0.753, 0.597, 0.784), 30, WHT, mode='light', speck=0), L((0.148, 0.809, 0.851, 0.856), 76, WHT, mode='light')], tgap=8,
     photo=ph(.5, .38, .45, 1.0), pb=WHT, studio=['ARTCAM', 'INTERNATIONAL'], scol=WHT, order='lPTCF', credit=['ŞENER ŞEN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 14, 10), fcol=(210, 200, 196), fin=WORN, seed=1996)
 
