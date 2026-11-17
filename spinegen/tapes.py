@@ -4667,6 +4667,389 @@ disney('bao-2018', ('grad', [(0, (244, 236, 220)), (.6, (234, 222, 200)), (1, (2
        face=ph(.56, .69, .22, 1.4), lcol=(24, 22, 20), ink=(24, 22, 20))
 
 
+# =====================================================================================
+# the 2016 shelf (films-2016.json).  Same approach as 2017 and 2018.  Zootopia (Disney Animation) and
+# The Jungle Book (Walt Disney Pictures) are clamshells; the Star Wars films (Lucasfilm) are slipcases.
+# The Hateful Eight (188 min) is a 2-tape box and O.J.: Made in America (467 min) a box set.
+# =====================================================================================
+
+# Sicario: the poster's desert cream, black stencil capitals (typeset), Kate's double exposure
+std('sicario-2015', ('grad', [(0, (236, 226, 206)), (.6, (210, 196, 170)), (1, (120, 100, 76))]), (24, 22, 20),
+    T('SICARIO', 'intbk', 110, (24, 22, 20), squeeze=.9),
+    photo=ph(.55, .3, .55, 1.0), pb=(24, 22, 20), lg=(24, 22, 20), lw=.6, order='LPTCF', credit=['EMILY BLUNT', 'JOSH BROLIN'], ccol=(24, 22, 20),
+    ft='a', vbox=(24, 22, 20), fcol=(24, 22, 20), fin=SLIP)
+
+# Goodnight Mommy: black, white and red art-deco capitals (typeset), the bandaged head
+std('goodnight-mommy-2015', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (4, 4, 4))]), WHT,
+    TT([('GOODNIGHT', WHT), ('MOMMY', (220, 40, 40))], 'adv', 76, sp=.25, track=.04, bold=.5),
+    photo=ph(.5, .52, .5, 1.0), pb=(220, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['FIALA & FRANZ'], ccol=WHT,
+    ft='a', vbox=(220, 40, 40), fcol=(200, 200, 200), fin=SLIP)
+
+# The Lobster: the poster's cream, black heavy capitals (typeset), David's head over the empty embrace
+std('the-lobster-2015', ('solid', (240, 236, 226)), (20, 18, 18),
+    T('THE LOBSTER', 'intbk', 90, (20, 18, 18)),
+    photo=ph(.5, .25, .5, 1.0), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['A YORGOS LANTHIMOS', 'FILM'], ccol=(20, 18, 18),
+    ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP, dotst=(['STAFF', 'PICK'], (200, 40, 40)))
+
+# 20 Feet from Stardom (2013): the stage's black and glitter, magenta and white serif (typeset), the singer
+std('20-feet-from-stardom-2013', ('grad', [(0, (60, 30, 50)), (.6, (20, 10, 18)), (1, (4, 2, 4))]), (230, 40, 160),
+    TT([('20 FEET FROM', (234, 44, 164)), ('STARDOM', WHT)], 'ter', 74, sp=.25),
+    photo=ph(.5, .2, .5, 1.0), pb=(234, 44, 164), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(234, 44, 164), fcol=(210, 200, 210), fin=SLIP)
+
+# Chef (2014): the poster's taco-truck yellow, the red block capitals (typeset), the crew at the window
+std('chef-2014', ('solid', (248, 196, 30)), (214, 40, 30),
+    T('CHEF', 'bonb', 140, (218, 44, 32)),
+    photo=ph(.6, .5, .5, 1.0), pb=(218, 44, 32), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['JON FAVREAU'], ccol=(40, 30, 20),
+    ft='a', vbox=(218, 44, 32), fcol=(40, 30, 20), fin=SLIP)
+
+# Room (2015): the overcast sky, the yellow keyline ROOM (typeset), Ma and Jack
+std('room-2015', ('grad', [(0, (130, 150, 170)), (.6, (70, 80, 90)), (1, (30, 34, 30))]), (246, 220, 40),
+    T('ROOM', 'ter', 100, (248, 222, 44), track=.2, box=((30, 34, 40), 10, 6)),
+    photo=ph(.6, .45, .55, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['BRIE LARSON', 'JACOB TREMBLAY'], ccol=WHT,
+    ft='a', vbox=(248, 222, 44), vink=(30, 34, 40), fcol=(210, 214, 220), fin=SLIP)
+
+# The Danish Girl: the teal of the paintings, the cream spaced serif capitals (typeset), Lili
+std('the-danish-girl-2015', ('grad', [(0, (40, 90, 100)), (.6, (16, 36, 40)), (1, (4, 10, 12))]), (236, 226, 206),
+    T('THE DANISH GIRL', 'ter', 64, (238, 228, 208), track=.2),
+    photo=ph(.7, .3, .45, 1.0), pb=(238, 228, 208), lg=WHT, lw=.6, order='LPTCF', credit=['EDDIE REDMAYNE', 'ALICIA VIKANDER'], ccol=(238, 228, 208),
+    ft='a', vbox=(238, 228, 208), vink=(16, 36, 40), fcol=(200, 210, 206), fin=SLIP)
+
+# The Big Short: white, gold THE and SHORT round the black BIG (typeset), the four in their frames
+std('the-big-short-2015', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (150, 140, 120))]), (20, 18, 18),
+    TT([('THE', (170, 140, 70)), ('BIG', (20, 18, 18)), ('SHORT', (170, 140, 70))], 'terb', 96, sp=.2),
+    photo=ph(.5, .3, .8, .7), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['CHRISTIAN BALE', 'STEVE CARELL'], ccol=(20, 18, 18),
+    ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP)
+
+# Spotlight: the newsroom's grey-white, the gold serif capitals (typeset), the Globe team
+std('spotlight-2015', ('grad', [(0, (70, 74, 76)), (.6, (30, 32, 34)), (1, (8, 8, 10))]), (200, 160, 50),
+    T('SPOTLIGHT', 'terb', 86, (206, 166, 54)),
+    photo=ph(.6, .45, .6, 1.0), pb=(206, 166, 54), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['MARK RUFFALO', 'MICHAEL KEATON'], ccol=WHT,
+    ft='a', vbox=(206, 166, 54), vink=(30, 30, 30), fcol=WHT, fin=SLIP)
+
+# Brooklyn (2015): the harbour sky, cream spaced capitals (typeset), Eilis at the rail
+std('brooklyn-2015', ('grad', [(0, (110, 150, 170)), (.6, (50, 70, 80)), (1, (16, 24, 30))]), (240, 232, 214),
+    T('BROOKLYN', 'her', 76, (242, 234, 216), track=.3),
+    photo=ph(.55, .4, .45, 1.0), pb=(242, 234, 216), lg=WHT, lw=.6, order='LPTCF', credit=['SAOIRSE RONAN'], ccol=(242, 234, 216),
+    ft='a', vbox=(242, 234, 216), vink=(50, 70, 80), fcol=(210, 220, 224), fin=SLIP)
+
+# Anomalisa: the poster's misty grey, the black handwriting (typeset), Michael
+std('anomalisa-2015', ('grad', [(0, (210, 210, 208)), (.6, (170, 170, 168)), (1, (80, 80, 78))]), (30, 30, 30),
+    T('Anomalisa', 'cho', 110, (30, 30, 30)),
+    photo=ph(.4, .55, .5, 1.0), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['CHARLIE KAUFMAN', '& DUKE JOHNSON'], ccol=(30, 30, 30),
+    ft='a', vbox=(30, 30, 30), fcol=WHT, fin=SLIP)
+
+# Whiplash (2014): black, the red wide capitals (typeset), Andrew at the kit
+std('whiplash-2014', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), (220, 30, 30),
+    T('WHIPLASH', 'herb', 90, (224, 32, 32), track=.06),
+    photo=ph(.5, .6, .5, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['MILES TELLER', 'J.K. SIMMONS'], ccol=WHT,
+    ft='a', vbox=(224, 32, 32), fcol=(200, 200, 204), fin=SLIP)
+
+# Steve Jobs: white, black lower case (typeset), Steve with his hand at his chin
+std('steve-jobs-2015', ('grad', [(0, (246, 246, 246)), (.6, (226, 226, 226)), (1, (150, 150, 150))]), (20, 20, 20),
+    T('steve jobs', 'her', 100, (20, 20, 20)),
+    photo=ph(.4, .3, .5, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['MICHAEL FASSBENDER'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
+
+# The Hateful Eight: a 2-tape box (188 minutes), the blizzard white, the red and black slab capitals (typeset), the stagecoach party in the snow
+std('the-hateful-eight-2015', ('grad', [(0, (236, 236, 236)), (.6, (210, 210, 210)), (1, (130, 130, 130))]), (190, 30, 30),
+    [TT([('THE', (194, 32, 32)), ('HATEFUL', (20, 18, 18))], 'bonb', 190, sp=.2), T('EIGHT', 'bonb', 190, (194, 32, 32))],
+    photo=ph(.5, .3, .8, .45), pb=(20, 18, 18), lg=(20, 18, 18), lw=.5, order='LPTCSF', tgap=10, credit=['A QUENTIN TARANTINO', 'FILM'], ccol=(20, 18, 18),
+    stick=TWOST((194, 32, 32), WHT), ft='c', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP, **TWO)
+
+# The Revenant: frozen forest blue, the pale spaced capitals (typeset), Glass's eye
+std('the-revenant-2015', ('grad', [(0, (100, 130, 150)), (.6, (40, 54, 64)), (1, (10, 14, 18))]), (210, 226, 236),
+    T('THE REVENANT', 'herb', 64, (214, 230, 240), track=.3),
+    photo=ph(.55, .38, .5, 1.0), pb=(214, 230, 240), lg=WHT, lw=.6, order='LPTCF', credit=['LEONARDO DiCAPRIO', 'TOM HARDY'], ccol=WHT,
+    ft='a', vbox=(214, 230, 240), vink=(40, 54, 64), fcol=(200, 210, 216), fin=SLIP)
+
+# Barbershop: The Next Cut: the shop's white tiles, red BARBERSHOP and black script (typeset), the crew
+std('barbershop-the-next-cut-2016', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 220)), (1, (150, 150, 150))]), (200, 30, 40),
+    [T('BARBERSHOP', 'ter', 80, (204, 32, 42), track=.02, bold=.4), T('THE NEXT CUT', 'herbi', 30, (20, 20, 30), track=.12)], tgap=6,
+    photo=ph(.5, .5, .8, .6), pb=(204, 32, 42), lg=(20, 20, 30), lw=.6, order='LPTCF', credit=['ICE CUBE', 'REGINA HALL'], ccol=(20, 20, 30),
+    ft='a', vbox=(204, 32, 42), fcol=(20, 20, 30), fin=MINT)
+
+# The Jungle Book (2016): a Disney clamshell.  Jungle green, a gold storybook title (typeset), Bagheera in the diamond
+disney('the-jungle-book-2016', ('grad', [(0, (40, 90, 60)), (.5, (20, 50, 30)), (1, (6, 20, 10))]), fin=dict(CLAM, vivid=.25),
+       title=[T('The', 'pagb', 50, (236, 206, 90)), T('JUNGLE BOOK', 'pagb', 96, (236, 206, 90), grad=[(0, (250, 230, 130)), (1, (200, 150, 50))], shadow=((10, 20, 10), 3, 3))],  # typeset: the gold logo wouldn't cut off the jungle; Ian could supply it
+       face=ph(.6, .58, .13, 1.4), lcol=WHT)
+
+# Champs: the ring's black, silver heavy capitals (typeset), the fighter's gloves (no logo file: its company in type)
+std('champs-2015', ('grad', [(0, (60, 40, 40)), (.6, (20, 14, 14)), (1, (4, 4, 4))]), (220, 220, 220),
+    T('CHAMPS', 'intbk', 110, WHT, grad=[(0, (250, 250, 250)), (.5, (150, 150, 156)), (1, (230, 230, 236))]),
+    photo=ph(.5, .3, .6, 1.0), pb=(200, 40, 40), studio=['BERT MARCUS', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(200, 40, 40), fcol=(200, 196, 196), fin=SLIP)
+
+# Iverson: black, the gold condensed capitals (typeset), the cornrows (no logo file: its company in type)
+std('iverson-2014', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), (220, 170, 70),
+    T('IVERSON', 'hcnb', 100, (224, 174, 74), squeeze=.86),
+    photo=ph(.5, .65, .6, 1.0), pb=(224, 174, 74), studio=['214 FILMS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
+    ft='a', vbox=(224, 174, 74), vink=(16, 16, 16), fcol=(200, 200, 200), fin=SLIP)
+
+# Star Wars: The Force Awakens (Lucasfilm, a slipcase): space black, the yellow outline STAR WARS (typeset), Rey with the saber
+std('star-wars-the-force-awakens-2015', ('grad', [(0, (30, 30, 50)), (.6, (10, 10, 18)), (1, (4, 4, 6))]), (246, 220, 40),
+    [T('STAR WARS', 'intbk', 84, (10, 10, 18), outline=((248, 222, 44), 2.4)), T('THE FORCE AWAKENS', 'herb', 28, (248, 222, 44), track=.25)], tgap=8,
+    photo=ph(.5, .3, .4, 1.0), pb=(248, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['DAISY RIDLEY', 'JOHN BOYEGA'], ccol=WHT,
+    ft='a', vbox=(248, 222, 44), vink=(10, 10, 18), fcol=(200, 200, 210), fin=SLIP)
+
+# Spring, Summer, Fall, Winter... and Spring (2003): white, black serif (typeset), the temple on the lake
+std('spring-summer-fall-winter-and-spring-2003', ('grad', [(0, (244, 244, 240)), (.6, (222, 224, 218)), (1, (150, 160, 150))]), (20, 20, 20),
+    T('SPRING, SUMMER, FALL, WINTER... AND SPRING', 'ter', 44, (20, 20, 20)),
+    photo=ph(.5, .63, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A KIM KI-DUK', 'FILM'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=WORN, seed=2003)
+
+# Trumbo: Hollywood night blue, the white spaced capitals (typeset), Dalton in his white suit
+std('trumbo-2015', ('grad', [(0, (40, 60, 90)), (.6, (14, 22, 34)), (1, (4, 6, 10))]), WHT,
+    T('TRUMBO', 'her', 80, WHT, track=.5),
+    photo=ph(.55, .45, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['BRYAN CRANSTON'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(14, 22, 34), fcol=(200, 206, 220), fin=SLIP)
+
+# Four Weddings and a Funeral (1994): a real rental, confetti white, the red serif (typeset), Charles and Carrie
+std('four-weddings-and-a-funeral-1994', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 220)), (1, (170, 160, 150))]), (170, 30, 40),
+    T('FOUR WEDDINGS AND A FUNERAL', 'ter', 56, (174, 32, 42), bold=.3),
+    photo=ph(.35, .55, .5, 1.0), pb=(174, 32, 42), lg=(30, 30, 30), lw=.6, order='LPTCSF', credit=['HUGH GRANT', 'ANDIE MacDOWELL'], ccol=(30, 30, 30),
+    stick=PRC(['$1.99', 'ROM-COM']), ft='a', vbox=(174, 32, 42), fcol=(30, 30, 30), fin=RENTAL, seed=1994)
+
+# Post Tenebras Lux (2012): the poster's flat red and teal, the pink rounded lettering (typeset), the red figure
+std('post-tenebras-lux-2012', ('grad', [(0, (40, 30, 90)), (.5, (60, 150, 200)), (1, (200, 50, 40))]), (240, 120, 160),
+    T('Post Tenebras Lux', 'popm', 76, (244, 126, 166)),
+    photo=ph(.5, .3, .4, 1.0), pb=(244, 126, 166), lg=WHT, lw=.6, order='LPTCF', credit=['A CARLOS REYGADAS', 'FILM'], ccol=WHT,
+    ft='a', vbox=(244, 126, 166), vink=(40, 30, 90), fcol=WHT, fin=SLIP)
+
+# Only God Forgives: Bangkok neon pink and blue, the white condensed capitals (typeset), Julian
+std('only-god-forgives-2013', ('grad', [(0, (220, 40, 120)), (.5, (110, 40, 160)), (1, (20, 20, 60))]), WHT,
+    T('ONLY GOD FORGIVES', 'hcnb', 80, WHT, squeeze=.74, bold=.4),
+    photo=ph(.5, .2, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RYAN GOSLING'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(110, 40, 160), fcol=(230, 210, 230), fin=SLIP)
+
+# Deadpool (2016): white, the red stencil capitals (typeset), Deadpool's mask
+std('deadpool-2016', ('grad', [(0, (244, 244, 244)), (.6, (220, 220, 220)), (1, (140, 140, 140))]), (170, 20, 30),
+    T('DEADPOOL', 'hcnb', 100, (174, 22, 32), squeeze=.8, bold=1.0, rough=.4),
+    photo=ph(.5, .32, .3, 1.0), pb=(174, 22, 32), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['RYAN REYNOLDS'], ccol=(20, 20, 20),
+    ft='a', vbox=(174, 22, 32), fcol=(20, 20, 20), fin=SLIP)
+
+# The Great Beauty: black, the yellow condensed capitals (typeset), Jep under the statue
+std('the-great-beauty-2013', ('grad', [(0, (50, 46, 40)), (.6, (16, 14, 12)), (1, (4, 4, 4))]), (246, 230, 40),
+    T('THE GREAT BEAUTY', 'hcnb', 80, (248, 232, 44), squeeze=.8, bold=.4),
+    photo=ph(.5, .5, .55, 1.0), pb=(248, 232, 44), lg=WHT, lw=.6, order='LPTCF', credit=['TONI SERVILLO'], ccol=(248, 232, 44),
+    ft='a', vbox=(248, 232, 44), vink=(16, 14, 12), fcol=(200, 196, 190), fin=SLIP, dotst=(['STAFF', 'PICK'], (200, 160, 40), (16, 14, 12)))
+
+# Zootopia (2016): a Disney clamshell.  The city's blue sky, ZOOTOPIA in the street-sign green (typeset; Ian could supply the logo), Clawhauser in the diamond
+disney('zootopia-2016', ('grad', [(0, (90, 170, 230)), (.5, (40, 100, 170)), (1, (14, 40, 80))]), fin=dict(CLAM, vivid=.25),
+       title=T('ZOOTOPIA', 'popb', 110, WHT, box=((40, 130, 70), 12, 8)),
+       face=ph(.82, .77, .17, 1.4), lcol=WHT)
+
+# Spring Breakers: the poster's neon pink and violet, the scrawled neon lettering (typeset), the girls
+std('spring-breakers-2013', ('grad', [(0, (200, 60, 160)), (.5, (100, 30, 110)), (1, (30, 10, 40))]), WHT,
+    T('SPRING BREAKERS', 'cho', 84, WHT, soft=((250, 120, 220), 7, .7)),
+    photo=ph(.5, .3, .6, 1.0), pb=(250, 140, 220), lg=WHT, lw=.6, order='LPTCF', credit=['A HARMONY KORINE', 'FILM'], ccol=WHT,
+    ft='a', vbox=(250, 140, 220), vink=(100, 30, 110), fcol=WHT, fin=SLIP)
+
+# The Deep Blue Sea (2011): dim grey-blue, white condensed capitals (typeset), Hester and Freddie
+std('the-deep-blue-sea-2011', ('grad', [(0, (60, 70, 80)), (.6, (20, 24, 28)), (1, (4, 6, 8))]), WHT,
+    T('THE DEEP BLUE SEA', 'hcn', 84, WHT, squeeze=.7),
+    photo=ph(.5, .3, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['RACHEL WEISZ', 'TOM HIDDLESTON'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(20, 24, 28), fcol=(196, 200, 206), fin=SLIP)
+
+# Skyfall: white, the black spaced capitals and 007 (typeset), Bond with his gun
+std('skyfall-2012', ('grad', [(0, (246, 246, 246)), (.6, (224, 224, 224)), (1, (150, 150, 150))]), (20, 20, 20),
+    [T('SKYFALL', 'her', 76, (20, 20, 20), track=.4), T('007', 'intbki', 40, (20, 20, 20))], tgap=8,
+    photo=ph(.1, .87, .2, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['DANIEL CRAIG'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
+
+# The Cabin in the Woods: fog grey, the black serif (typeset), the cabin folding in on itself
+std('the-cabin-in-the-woods-2012', ('grad', [(0, (210, 210, 206)), (.6, (150, 150, 146)), (1, (50, 50, 48))]), (20, 20, 20),
+    [T('THE CABIN', 'ter', 76, (20, 20, 20)), T('IN THE WOODS', 'ter', 40, (20, 20, 20), track=.1)], tgap=6,
+    photo=ph(.5, .4, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A DREW GODDARD', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(20, 20, 20), fcol=WHT, fin=SLIP)
+
+# Zero Dark Thirty: night-vision dark, white condensed capitals (typeset), Maya
+std('zero-dark-thirty-2012', ('grad', [(0, (70, 74, 70)), (.6, (24, 26, 24)), (1, (6, 6, 6))]), WHT,
+    T('ZERO DARK THIRTY', 'hcnb', 84, WHT, squeeze=.74, bold=.6),
+    photo=ph(.4, .3, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JESSICA CHASTAIN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(24, 26, 24), fcol=(200, 204, 200), fin=SLIP)
+
+# Star Wars: Episode III (Lucasfilm, a slipcase): Mustafar fire and black, the gold engraved capitals (typeset), Anakin
+std('star-wars-episode-iii-revenge-of-the-sith-2005', ('grad', [(0, (200, 80, 20)), (.5, (80, 26, 10)), (1, (10, 4, 2))]), (230, 190, 100),
+    [T('STAR WARS  EPISODE III', 'ter', 50, (234, 196, 106), track=.06), T('REVENGE OF THE SITH', 'ter', 34, (234, 196, 106), track=.2)], tgap=8,
+    photo=ph(.5, .1, .35, 1.0), pb=(234, 196, 106), lg=WHT, lw=.6, order='LPTCF', credit=['HAYDEN CHRISTENSEN', 'EWAN McGREGOR'], ccol=WHT,
+    ft='a', vbox=(234, 196, 106), vink=(80, 26, 10), fcol=(220, 200, 180), fin=WORN, seed=2005)
+
+# Mission: Impossible - Ghost Protocol (2011): Dubai dust gold, red and white italic capitals (typeset), Ethan
+std('mission-impossible-ghost-protocol-2011', ('grad', [(0, (230, 170, 80)), (.5, (120, 70, 30)), (1, (20, 12, 6))]), (220, 30, 30),
+    [T('MISSION: IMPOSSIBLE', 'hcnb', 54, (224, 32, 32), squeeze=.8, bold=.4), T('GHOST PROTOCOL', 'hcnb', 70, WHT, squeeze=.8, bold=.6)], tgap=8,
+    photo=ph(.5, .25, .4, 1.0), pb=(224, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['TOM CRUISE'], ccol=WHT,
+    ft='a', vbox=(224, 32, 32), fcol=(240, 220, 200), fin=SLIP, seed=2011)
+
+# Woman in the Dunes (1964): an old tape, white, the black brush lettering (typeset), the ink-wash figure
+std('woman-in-the-dunes-1964', ('grad', [(0, (244, 242, 236)), (.6, (226, 222, 212)), (1, (160, 150, 130))]), (20, 18, 16),
+    T('Woman in the Dunes', 'cho', 90, (20, 18, 16)),
+    photo=ph(.5, .65, .7, .8), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCSF', credit=['A HIROSHI TESHIGAHARA', 'FILM'], ccol=(20, 18, 16),
+    stick=flow(dot, 70, ['FOREIGN'], (200, 60, 40), d=62), ft='e', fcol=(20, 18, 16), fin=OLD, seed=1964)
+
+# Tokyo Story (1953): an old tape, the grey of the harbour, white spaced capitals (typeset), the old couple
+std('tokyo-story-1953', ('grad', [(0, (150, 150, 150)), (.6, (70, 70, 70)), (1, (16, 16, 16))]), WHT,
+    T('TOKYO STORY', 'her', 70, WHT, track=.45),
+    photo=ph(.4, .4, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A YASUJIRŌ OZU', 'FILM'], ccol=WHT,
+    stick=PRC(['$2.99', 'CLASSIC']), ft='e', fcol=(220, 220, 220), fin=OLD, seed=1953)
+
+# O.J.: Made in America: a box set (467 minutes), the poster's newsprint grey, black condensed capitals (typeset), the flag-painted hand
+std('o-j-made-in-america-2016', ('grad', [(0, (220, 220, 218)), (.6, (180, 180, 178)), (1, (90, 90, 88))]), (20, 20, 20),
+    [T('O.J.:', 'hcnb', 150, (190, 30, 40), squeeze=.76, bold=.8), T('MADE IN AMERICA', 'hcnb', 150, (20, 20, 20), squeeze=.76, bold=.8)],
+    photo=ph(.5, .3, .6, .5), pb=(190, 30, 40), lg=(20, 20, 20), lw=.5, order='LPTCSF', tgap=10, credit=['THE COMPLETE DOCUSERIES', 'AN EZRA EDELMAN FILM'], ccol=(20, 20, 20),
+    stick=flow(dot, 112, ['BOX', 'SET'], (190, 30, 40), WHT, d=104), ft='c', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=MINT, **TWO)
+
+# 10 Cloverfield Lane: the storm sky's green-black, white heavy condensed capitals (typeset), Michelle
+std('10-cloverfield-lane-2016', ('grad', [(0, (60, 80, 70)), (.6, (18, 24, 20)), (1, (4, 6, 4))]), WHT,
+    [T('10', 'intbk', 60, WHT), T('CLOVERFIELD LANE', 'hcnb', 80, WHT, squeeze=.78, bold=.6)], tgap=8,
+    photo=ph(.75, .72, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JOHN GOODMAN', 'MARY ELIZABETH WINSTEAD'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(18, 24, 20), fcol=(196, 206, 200), fin=SLIP)
+
+# Punch-Drunk Love (2002): black and the colour wash, white tall serif (typeset), the kiss in the doorway
+std('punch-drunk-love-2002', ('grad', [(0, (30, 30, 50)), (.5, (20, 20, 30)), (1, (40, 80, 160))]), WHT,
+    T('PUNCH-DRUNK LOVE', 'adv', 70, WHT, track=.04),
+    photo=ph(.5, .4, .5, 1.0), pb=(120, 170, 240), lg=WHT, lw=.6, order='LPTCF', credit=['ADAM SANDLER', 'EMILY WATSON'], ccol=WHT,
+    ft='a', vbox=(120, 170, 240), vink=(20, 20, 30), fcol=(200, 200, 220), fin=WORN, seed=2002, dotst=(['STAFF', 'PICK'], (40, 80, 160)))
+
+# These Birds Walk: the dusty sky's peach, the pale ochre capitals (typeset), the boy mid-leap
+std('these-birds-walk-2012', ('grad', [(0, (236, 222, 196)), (.6, (220, 190, 150)), (1, (160, 120, 80))]), (190, 140, 60),
+    T('THESE BIRDS WALK', 'her', 66, (160, 110, 40), track=.1, bold=.4),
+    photo=ph(.5, .82, .6, 1.0), pb=(160, 110, 40), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(40, 30, 20),
+    ft='a', vbox=(160, 110, 40), fcol=(40, 30, 20), fin=SLIP)
+
+# Doubt (2008): black, white blackletter D and spaced OUBT (typeset), Sister Aloysius
+std('doubt-2008', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), WHT,
+    T('DOUBT', 'ter', 100, WHT, track=.3),
+    photo=ph(.2, .17, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['MERYL STREEP', 'PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(14, 14, 16), fcol=(200, 200, 204), fin=WORN, seed=2008)
+
+# A Girl Walks Home Alone at Night: the poster's red and black, white and red condensed capitals (typeset), the girl in her chador
+std('a-girl-walks-home-alone-at-night-2014', ('solid', (226, 20, 20)), (20, 18, 18),
+    TT([('A', WHT), ('GIRL', WHT), ('WALKS HOME ALONE AT NIGHT', (20, 18, 18))], 'hcnb', 70, sp=.2, squeeze=.74, bold=.6),
+    photo=ph(.5, .2, .4, 1.0), pb=(20, 18, 18), lg=WHT, lw=.6, order='LPTCF', credit=['AN ANA LILY AMIRPOUR', 'FILM'], ccol=(20, 18, 18),
+    ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=SLIP)
+
+# Before the Devil Knows You're Dead (2007): black, white heavy capitals (typeset), Andy and Hank
+std('before-the-devil-knows-you-re-dead-2007', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
+    [T("BEFORE THE DEVIL", 'intbk', 60, WHT, squeeze=.84), T("KNOWS YOU'RE DEAD", 'intbk', 60, WHT, squeeze=.84)], tgap=8,
+    photo=ph(.75, .15, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['PHILIP SEYMOUR HOFFMAN', 'ETHAN HAWKE'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(16, 16, 16), fcol=(200, 200, 200), fin=WORN, seed=2007)
+
+# The Savages (2007): the poster's winter blue-grey, the white SAVAGES on red (typeset), Wendy and Jon on the bench
+std('the-savages-2007', ('grad', [(0, (200, 214, 222)), (.6, (170, 186, 196)), (1, (110, 120, 130))]), WHT,
+    T('THE SAVAGES', 'intbk', 80, WHT, box=((220, 30, 60), 10, 6)),
+    photo=ph(.5, .45, .5, .8), pb=(220, 30, 60), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['LAURA LINNEY', 'PHILIP SEYMOUR HOFFMAN'], ccol=(30, 30, 30),
+    ft='a', vbox=(220, 30, 60), fcol=(30, 30, 30), fin=WORN, seed=2007)
+
+# Clouds of Sils Maria: the Maloja snake's mist, white spaced capitals (typeset), Maria and Valentine
+std('clouds-of-sils-maria-2014', ('grad', [(0, (180, 214, 220)), (.6, (100, 140, 150)), (1, (30, 50, 56))]), WHT,
+    T('CLOUDS OF SILS MARIA', 'her', 58, WHT, track=.3),
+    photo=ph(.55, .3, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JULIETTE BINOCHE', 'KRISTEN STEWART'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(100, 140, 150), fcol=WHT, fin=SLIP)
+
+# Bridesmaids (2011): the brick wall's red-brown, white heavy capitals (typeset), the bridal party in pink
+std('bridesmaids-2011', ('grad', [(0, (140, 70, 60)), (.6, (70, 34, 30)), (1, (20, 10, 8))]), WHT,
+    T('BRIDESMAIDS', 'intbk', 92, WHT, squeeze=.86),
+    photo=ph(.5, .62, .8, .6), pb=(240, 80, 160), lg=WHT, lw=.6, order='LPTCF', credit=['KRISTEN WIIG', 'MAYA RUDOLPH'], ccol=WHT,
+    ft='a', vbox=(240, 80, 160), vink=(70, 34, 30), fcol=(230, 210, 206), fin=SLIP, seed=2011)
+
+# King Jack: the hazy violet, the white thin capitals with the drawn crown (typeset), Jack
+std('king-jack-2015', ('grad', [(0, (150, 130, 160)), (.6, (80, 66, 90)), (1, (20, 16, 24))]), WHT,
+    T('KING JACK', 'her', 90, WHT, track=.06),
+    photo=ph(.5, .35, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['CHARLIE PLUMMER'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(80, 66, 90), fcol=(220, 210, 226), fin=SLIP)
+
+# Tamasha: Corsica's golden haze, the red-gold carnival capitals (typeset), Ved and Tara
+std('tamasha-2015', ('grad', [(0, (230, 180, 80)), (.5, (160, 100, 40)), (1, (40, 24, 10))]), (220, 50, 30),
+    T('TAMASHA', 'intbk', 100, (224, 54, 32), outline=((250, 230, 150), 2.0)),
+    photo=ph(.5, .55, .7, .8), pb=(224, 54, 32), lg=WHT, lw=.6, order='LPTCF', credit=['RANBIR KAPOOR', 'DEEPIKA PADUKONE'], ccol=WHT,
+    ft='a', vbox=(224, 54, 32), vink=(40, 24, 10), fcol=WHT, fin=SLIP)
+
+# The Nice Guys: the poster's seventies orange rings, the outlined white lower case (typeset), March and Healy
+std('the-nice-guys-2016', ('grad', [(0, (240, 230, 200)), (.4, (240, 150, 50)), (.8, (200, 70, 30)), (1, (60, 20, 10))]), WHT,
+    T('the nice guys', 'popb', 92, (60, 50, 140), outline=(WHT, 2.4)),
+    photo=ph(.5, .3, .6, 1.0), pb=(60, 50, 140), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['RUSSELL CROWE', 'RYAN GOSLING'], ccol=WHT,
+    ft='a', vbox=(60, 50, 140), fcol=WHT, fin=MINT)
+
+# Howl's Moving Castle (2004): a Ghibli tape (a slipcase), the hills' green and the castle, the gold serif capitals (typeset)
+std('howl-s-moving-castle-2004', ('grad', [(0, (50, 70, 80)), (.5, (30, 44, 26)), (1, (10, 14, 8))]), (230, 200, 110),
+    T("HOWL'S MOVING CASTLE", 'terb', 66, (246, 220, 130), track=.04, shadow=((20, 16, 10), 3, 3)),
+    photo=ph(.4, .3, .6, 1.0), pb=(234, 206, 116), lg=WHT, lw=.6, order='LPTCSF', credit=['A HAYAO MIYAZAKI', 'FILM'], ccol=WHT,
+    stick=flow(dot, 70, ['ANIME'], (220, 60, 100), d=60), ft='a', vbox=(234, 206, 116), vink=(60, 80, 50), fcol=(220, 220, 210), fin=WORN, seed=2004)
+
+# Scarface (1983): an old 2-hour-50 rental, the poster's black and white split, the red condensed capitals (typeset), Tony
+std('scarface-1983', ('grad', [(0, (244, 244, 244)), (.5, (220, 220, 220)), (1, (30, 30, 30))]), (200, 20, 30),
+    T('SCARFACE', 'hcnb', 110, (204, 22, 32), squeeze=.7, bold=.8),
+    photo=ph(.6, .2, .45, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCSF', credit=['AL PACINO'], ccol=(20, 20, 20),
+    stick=BAR('15 01983', top='CRIME', fill=(220, 236, 250), ink=(20, 40, 80)), ft='a', vbox=(204, 22, 32), fcol=WHT, fin=RENTAL, seed=1983)
+
+# The In-Laws (1979): an old tape, the sky blue and wedding-cake white, the pink outlined lower case (typeset), Vince and Sheldon on top of the cake
+std('the-in-laws-1979', ('grad', [(0, (140, 200, 230)), (.6, (200, 226, 236)), (1, (220, 220, 220))]), (230, 100, 170),
+    T('the in-laws', 'popb', 100, (236, 110, 180), outline=(WHT, 2.4)),
+    photo=ph(.5, .15, .5, 1.0), pb=(236, 110, 180), lg=(30, 30, 40), lw=.6, order='LPTCSF', credit=['PETER FALK', 'ALAN ARKIN'], ccol=(30, 30, 40),
+    stick=PRC(['$0.99', 'COMEDY']), ft='e', fcol=(30, 30, 40), fin=OLD, seed=1979)
+
+# About Elly (2009): the Caspian grey-green, white condensed capitals (typeset), Sepideh (no logo file: its company in type)
+std('about-elly-2009', ('grad', [(0, (130, 150, 140)), (.6, (60, 70, 66)), (1, (16, 20, 18))]), WHT,
+    T('ABOUT ELLY', 'hcnb', 92, WHT, squeeze=.8),
+    photo=ph(.25, .45, .4, 1.0), pb=WHT, studio=['SIMAYE MEHR'], scol=WHT, order='lPTCF', credit=['AN ASGHAR FARHADI', 'FILM'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(60, 70, 66), fcol=(220, 226, 222), fin=WORN, seed=2009)
+
+# Manhattan (1979): an old tape, white, the black skyline capitals (typeset), the couple on the bench under the bridge
+std('manhattan-1979', ('grad', [(0, (244, 244, 244)), (.6, (222, 222, 222)), (1, (140, 140, 140))]), (20, 20, 20),
+    T('MANHATTAN', 'hcnb', 100, (20, 20, 20), squeeze=.7, bold=1.0),
+    photo=ph(.5, .2, .7, .7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['WOODY ALLEN', 'DIANE KEATON'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1979)
+
+# Trainspotting (1996): a real rental, the poster's orange and white, the white heavy lower case on orange (typeset), Renton
+std('trainspotting-1996', ('solid', (230, 90, 20)), WHT,
+    T('Trainspotting', 'herb', 84, WHT),
+    photo=ph(.75, .25, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['EWAN McGREGOR'], ccol=WHT,
+    stick=RWD(), ft='a', vbox=WHT, vink=(230, 90, 20), fcol=WHT, fin=RENTAL, seed=1996)
+
+# Blade Runner (1982): an old tape, the poster's night and neon, the red stencil capitals (typeset), Deckard
+std('blade-runner-1982', ('grad', [(0, (40, 30, 30)), (.5, (16, 14, 20)), (1, (60, 20, 10))]), (226, 40, 30),
+    T('BLADE RUNNER', 'intbki', 80, (230, 44, 32), squeeze=.84),
+    photo=ph(.4, .15, .45, 1.0), pb=(230, 44, 32), lg=WHT, lw=.6, order='LPTCSF', credit=['HARRISON FORD'], ccol=WHT,
+    stick=flow(dot, 70, ['SCI-FI'], (40, 160, 200), d=60), ft='e', fcol=(200, 196, 196), fin=OLD, seed=1982)
+
+# Dawg Fight: white, black wide-spaced capitals (typeset), the backyard fighters
+std('dawg-fight-2015', ('grad', [(0, (244, 244, 244)), (.6, (220, 220, 220)), (1, (140, 140, 140))]), (20, 20, 20),
+    T('DAWG FIGHT', 'herb', 70, (20, 20, 20), track=.5),
+    photo=ph(.6, .85, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A BILLY CORBEN', 'FILM'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
+
+# Parched: the Rajasthan dusk orange, the gold serif capitals (typeset), Rani dancing
+std('parched-2015', ('grad', [(0, (220, 140, 70)), (.5, (130, 70, 30)), (1, (30, 14, 6))]), (236, 216, 150),
+    T('PARCHED', 'ter', 96, (240, 220, 154), track=.06),
+    photo=ph(.6, .25, .5, 1.0), pb=(240, 220, 154), lg=WHT, lw=.6, order='LPTCF', credit=['A LEENA YADAV', 'FILM'], ccol=WHT,
+    ft='a', vbox=(240, 220, 154), vink=(130, 70, 30), fcol=WHT, fin=SLIP)
+
+# The Handmaiden: black with the gold keyline, cream spaced capitals (typeset), Sook-hee and Lady Hideko
+std('the-handmaiden-2016', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), (230, 220, 190),
+    [T('THE', 'her', 28, (232, 222, 192), track=.4), T('HANDMAIDEN', 'her', 70, (232, 222, 192), track=.2)], tgap=6,
+    photo=ph(.5, .6, .45, 1.0), pb=(200, 170, 90), lg=WHT, lw=.6, order='LPTCF', credit=['A PARK CHAN-WOOK', 'FILM'], ccol=(232, 222, 192),
+    ft='a', vbox=(200, 170, 90), vink=(14, 12, 10), fcol=(200, 196, 186), fin=MINT, under=[frame((200, 170, 90), 8, 1.4)])
+
+# The Scavengers (1992): the poster is Boca de Lixo's, so the spine is too: white, black serif (typeset), the balloons and the vulture
+std('the-scavengers-1992', ('grad', [(0, (246, 246, 244)), (.6, (224, 224, 220)), (1, (150, 150, 146))]), (20, 20, 20),
+    [T('BOCA DE LIXO', 'terb', 76, (20, 20, 20)), T('THE SCAVENGERS', 'her', 26, (20, 20, 20), track=.3)], tgap=8,
+    photo=ph(.5, .3, .6, 1.0), pb=(20, 20, 20), order='PTCF', credit=['AN EDUARDO COUTINHO', 'FILM'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1992)
+
+# Pink (2016): the courtroom's dark, the hot-pink heavy capitals (typeset), Deepak (no logo file: its company in type)
+std('pink-2016', ('grad', [(0, (50, 40, 40)), (.6, (18, 14, 14)), (1, (4, 4, 4))]), (240, 30, 150),
+    T('PINK', 'intbk', 130, (244, 34, 156)),
+    photo=ph(.5, .2, .5, 1.0), pb=(244, 34, 156), studio=['NH STUDIOZ'], scol=WHT, order='lPTCF', credit=['AMITABH BACHCHAN', 'TAAPSEE PANNU'], ccol=WHT,
+    ft='a', vbox=(244, 34, 156), fcol=(200, 196, 196), fin=SLIP)
+
+# Salaam Bombay! (1988): an old tape, black, white and grey serif capitals (typeset), Krishna at the window
+std('salaam-bombay-1988', ('grad', [(0, (50, 40, 30)), (.6, (16, 12, 10)), (1, (4, 4, 4))]), WHT,
+    TT([('SALAAM', WHT), ('BOMBAY!', (190, 190, 190))], 'ter', 76, sp=.25),
+    photo=ph(.3, .55, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A MIRA NAIR', 'FILM'], ccol=WHT,
+    stick=PRC(['$1.99', 'FOREIGN']), ft='e', fcol=(210, 200, 190), fin=OLD, seed=1988)
+
+
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
         im = build(SPECS[k])
