@@ -3347,43 +3347,43 @@ std('cinemania-2003', ('grad', [(0, (40, 36, 34)), (.6, (14, 12, 12)), (1, (4, 4
 TWO = dict(W=2 * w_for(115), notch_w=1.5 * w_for(115))
 TWOST = lambda fill, ink: flow(dot, 112, ['2-TAPE', 'SET'], fill, ink, d=104)
 
-# Last Year at Marienbad (1961): an old art-house tape, the hotel's silvered greys, the black engraved capitals on their white panel (typeset), the garden
+# Last Year at Marienbad (1961): an old art-house tape, the hotel's silvered greys, the poster's black engraved capitals lifted off their white panel and set back on one, the garden
 std('last-year-at-marienbad-1961', ('grad', [(0, (160, 160, 158)), (.6, (80, 80, 78)), (1, (20, 20, 20))]), (20, 20, 20),
-    T('LAST YEAR AT MARIENBAD', 'schb', 54, (20, 20, 20), track=.04, box=((244, 242, 236), 10, 6)),
+    L((0.29, 0.28, 0.715, 0.375), 120, (20, 20, 20), mode='dark', plate=((244, 242, 236), 10, 6)),
     photo=ph(.5, .6, .5, 1.0), pb=(244, 242, 236), lg=WHT, lw=.6, order='LPTCF', credit=['AN ALAIN RESNAIS', 'FILM'], ccol=WHT,
     ft='e', fcol=(230, 230, 226), fin=OLD, seed=1961)
 
-# Pain and Glory: Almodóvar's red, white condensed capitals (typeset), Salvador in profile
+# Pain and Glory: Almodóvar's red, the white condensed Pain & Glory lifted off the poster, Salvador in profile
 std('pain-and-glory-2019', ('grad', [(0, (214, 30, 30)), (.6, (150, 16, 18)), (1, (50, 6, 6))]), WHT,
-    T('PAIN & GLORY', 'hcnb', 92, WHT, squeeze=.74, bold=.6),
+    L([(0.571, 0.527, 0.879, 0.648), (0.572, 0.644, 0.897, 0.786)], 92, WHT, mode='key', key=(250, 250, 250), t=(30, 70), gapf=.3),
     photo=ph(.3, .6, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ANTONIO BANDERAS'], ccol=WHT,
     ft='a', vbox=WHT, vink=(150, 16, 18), fcol=(250, 220, 220), fin=MINT)
 
-# Blue Collar (1978): an old tape, factory white, the navy heavy serif (typeset), the three of them in the car-press
+# Blue Collar (1978): an old tape, factory white, the poster's navy heavy BLUE COLLAR lifted, the three of them in the car-press
 std('blue-collar-1978', ('grad', [(0, (244, 242, 238)), (.6, (222, 220, 214)), (1, (160, 156, 150))]), (30, 40, 140),
-    T('BLUE COLLAR', 'schb', 80, (30, 40, 140), track=.02),
+    L([(0.068, 0.516, 0.414, 0.592), (0.067, 0.595, 0.62, 0.673)], 80, (30, 40, 140), mode='key', key=(30, 50, 160), t=(70, 150), gapf=.3),
     photo=ph(.5, .3, .45, 1.0), pb=(30, 40, 140), lg=(30, 40, 140), lw=.6, order='LPTCSF', credit=['RICHARD PRYOR', 'HARVEY KEITEL'], ccol=(30, 40, 140),
     stick=BAR('15 01978', top='DRAMA', fill=(250, 230, 200), ink=(80, 40, 20)), ft='e', fcol=(30, 40, 140), fin=OLD, seed=1978)
 
-# The Bridge on the River Kwai (1957): an old tape, jungle green, the khaki heavy capitals (typeset), Nicholson and Shears (no logo file: the studio in type)
+# The Bridge on the River Kwai (1957): an old tape, jungle green, the poster's khaki heavy capitals lifted, Nicholson and Shears (no logo file: the studio in type)
 std('the-bridge-on-the-river-kwai-1957', ('grad', [(0, (60, 70, 50)), (.6, (26, 30, 20)), (1, (8, 10, 6))]), (200, 180, 110),
-    [T('THE BRIDGE ON THE', 'intbk', 36, (214, 194, 124), squeeze=.86), T('RIVER KWAI', 'intbk', 84, (214, 194, 124), squeeze=.84)], tgap=8,
+    [L((0.055, 0.092, 0.938, 0.166), 36, (214, 194, 124), mode='key', key=(200, 170, 100), t=(60, 130)), L([(0.062, 0.165, 0.94, 0.319), (0.064, 0.321, 0.937, 0.496)], 84, (214, 194, 124), mode='key', key=(200, 170, 100), t=(90, 170), close=2, gapf=.25)], tgap=8,
     photo=ph(.5, .6, .45, 1.0), pb=(214, 194, 124), studio=['COLUMBIA PICTURES'], scol=(220, 210, 180), order='lPTCF', credit=['WILLIAM HOLDEN', 'ALEC GUINNESS'], ccol=(220, 210, 180),
     ft='e', fcol=(220, 210, 180), fin=OLD, seed=1957)
 
-# Bad Lieutenant (1992): a real rental, the poster's mustard yellow, the red heavy BAD and the small LIEUTENANT (typeset), the gun at you
+# Bad Lieutenant (1992): a real rental, the poster's mustard yellow, its red heavy BAD and small LIEUTENANT cut off it, the gun at you
 std('bad-lieutenant-1992', ('grad', [(0, (230, 190, 60)), (.6, (190, 140, 30)), (1, (80, 50, 10))]), (180, 30, 30),
-    TT([('BAD', (182, 30, 30)), ('LIEUTENANT', (182, 30, 30))], 'intbk', 84, sp=.25, squeeze=.86),
+    [LC([(0.062, 0.061, 0.952, 0.3)], 120, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .3))]), LC([(0.06, 0.3, 0.53, 0.365)], 40, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .3))])],
     photo=ph(.6, .55, .45, 1.0), pb=(182, 30, 30), lg=(30, 20, 10), lw=.6, order='LPTCSF', credit=['HARVEY KEITEL'], ccol=(30, 20, 10),
     stick=PRC(['$1.99', 'CRIME']), ft='a', vbox=(182, 30, 30), fcol=(30, 20, 10), fin=RENTAL, seed=1992)
 
-# Once Upon a Time in Hollywood: the painted poster's orange sunset, yellow and white capitals (typeset), Cliff, Rick and Sharon
+# Once Upon a Time in Hollywood: the painted poster's orange sunset, its yellow ONCE UPON A TIME IN... and white HOLLYWOOD cut off it, Cliff, Rick and Sharon
 std('once-upon-a-time-in-hollywood-2019', ('grad', [(0, (240, 140, 50)), (.5, (200, 70, 30)), (1, (60, 20, 10))]), (250, 220, 60),
-    TT([('ONCE UPON A TIME IN...', (250, 222, 64)), ('HOLLYWOOD', WHT)], 'hcnb', 70, sp=.25, squeeze=.8, outline=((60, 20, 10), 1.6)),
+    LC([(0.198, 0.597, 0.79, 0.726)], 150, cuts=[key_cut(lambda a: (_lum(a) > .82) | ((a[..., 0] > .8) & (a[..., 1] > .7) & (a[..., 2] < .4)))], outline=((60, 20, 10), 1.6)),
     photo=ph(.5, .15, .8, .6), pb=(250, 222, 64), lg=WHT, lw=.6, order='LPTCF', credit=['LEONARDO DiCAPRIO', 'BRAD PITT'], ccol=WHT,
     ft='a', vbox=(250, 222, 64), vink=(60, 20, 10), fcol=(250, 220, 200), fin=SLIP)
 
-# Harlem Nights (1989): a real rental, the club's red, the red and white art-deco capitals (typeset), Quick in his hat
+# Harlem Nights (1989): a real rental, the club's red, red and white art-deco capitals (typeset: on the poster HARLEM runs across and NIGHTS runs down the side, at right angles), Quick in his hat
 std('harlem-nights-1989', ('grad', [(0, (120, 20, 26)), (.6, (50, 8, 10)), (1, (10, 4, 4))]), WHT,
     TT([('HARLEM', (230, 60, 60)), ('NIGHTS', WHT)], 'adv', 84, sp=.25, track=.04, bold=.5),
     photo=ph(.6, .55, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['EDDIE MURPHY', 'RICHARD PRYOR'], ccol=WHT,
@@ -3395,33 +3395,33 @@ std('the-two-popes-2019', ('grad', [(0, (120, 130, 90)), (.6, (60, 70, 40)), (1,
     photo=ph(.5, .8, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ANTHONY HOPKINS', 'JONATHAN PRYCE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 70, 40), fcol=(220, 226, 210), fin=MINT)
 
-# The Asphalt Jungle (1950): an old tape, black, the yellow brush capitals (typeset), Angela on the sofa
+# The Asphalt Jungle (1950): an old tape, black, yellow brush capitals (typeset: the poster's are painted on a steep slant over the city), Angela on the sofa
 std('the-asphalt-jungle-1950', ('grad', [(0, (40, 36, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), (246, 220, 40),
     T('THE ASPHALT JUNGLE', 'bonb', 70, (248, 222, 44), rough=.6),
     photo=ph(.3, .7, .4, 1.0), pb=(220, 40, 120), lg=WHT, lw=.6, order='LPTCF', credit=['A JOHN HUSTON', 'PICTURE'], ccol=(248, 222, 44),
     ft='e', fcol=(220, 214, 200), fin=OLD, seed=1950)
 
-# To Catch a Thief (1955): an old tape, the Riviera teal, white capitals (typeset), John and Frances
+# To Catch a Thief (1955): an old tape, the Riviera teal, the poster's ALFRED HITCHCOCK'S and white TO CATCH A THIEF lifted, John and Frances
 std('to-catch-a-thief-1955', ('grad', [(0, (40, 120, 130)), (.6, (16, 60, 66)), (1, (4, 20, 22))]), WHT,
-    [T("ALFRED HITCHCOCK'S", 'herb', 22, (250, 220, 60), track=.12), T('TO CATCH A THIEF', 'herb', 64, WHT, track=.02)], tgap=8,
+    [L((0.255, 0.446, 0.787, 0.472), 22, (250, 220, 60), mode='light', speck=0), L((0.04, 0.474, 0.97, 0.518), 64, WHT, mode='key', key=(240, 232, 205), t=(40, 90))], tgap=8,
     photo=ph(.25, .3, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['CARY GRANT', 'GRACE KELLY'], ccol=WHT,
     stick=PRC(['$2.99', 'CLASSIC']), ft='e', fcol=(220, 230, 230), fin=OLD, seed=1955)
 
-# The Bank Job (2008): London-vault blue, the white condensed capitals (typeset), Terry at the head
+# The Bank Job (2008): London-vault blue, the poster's chrome THE BANK JOB lifted, the streak of light through it included, Terry at the head
 std('the-bank-job-2008', ('grad', [(0, (80, 110, 140)), (.6, (30, 40, 56)), (1, (8, 12, 16))]), WHT,
-    T('THE BANK JOB', 'hcnb', 92, WHT, squeeze=.7, bold=.6),
+    L((0.085, 0.685, 0.87, 0.88), 170, WHT, mode='light', cut=(.2, .5)),
     photo=ph(.25, .15, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JASON STATHAM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(30, 40, 56), fcol=(200, 210, 220), fin=SLIP, seed=2008)
 
-# Dunkirk: the beach's steel grey and smoke, white spaced capitals (typeset), the soldier on the mole
+# Dunkirk: the beach's steel grey and smoke, the white spaced DUNKIRK lifted, the soldier on the mole
 std('dunkirk-2017', ('grad', [(0, (140, 150, 156)), (.6, (60, 66, 72)), (1, (16, 18, 20))]), WHT,
-    T('DUNKIRK', 'her', 80, WHT, track=.45),
+    L((0.205, 0.84, 0.785, 0.88), 80, WHT, mode='light', cut=(.2, .5)),
     photo=ph(.6, .45, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 66, 72), fcol=(210, 214, 218), fin=SLIP)
 
-# Alanis: the room's red light, white condensed capitals (typeset), Alanis on the bed
+# Alanis: the room's red light, the white condensed ALANIS lifted off the poster, Alanis on the bed
 std('alanis-2017', ('grad', [(0, (200, 70, 80)), (.6, (120, 30, 40)), (1, (30, 8, 10))]), WHT,
-    T('ALANIS', 'hcnb', 110, WHT, squeeze=.7, bold=.4),
+    L((0.216, 0.745, 0.778, 0.952), 110, WHT, mode='key', key=(252, 252, 252), t=(30, 70)),
     photo=ph(.45, .15, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AN ANAHÍ BERNERI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(120, 30, 40), fcol=(240, 210, 214), fin=MINT)
 
