@@ -3793,9 +3793,9 @@ std('manhattan-murder-mystery-1993', ('grad', [(0, (40, 60, 180)), (.6, (20, 30,
     photo=ph(.5, .25, .9, .6), pb=(248, 232, 54), lg=WHT, lw=.6, order='LPTCSF', credit=['WOODY ALLEN', 'DIANE KEATON'], ccol=WHT,
     stick=PRC(['$1.99', 'COMEDY']), ft='a', vbox=(248, 232, 54), vink=(20, 30, 110), fcol=(210, 214, 240), fin=RENTAL, seed=1993)
 
-# Wild Tales: the poster's white panels, the red brush capitals (typeset), the bride at her wedding
+# Wild Tales: the poster's white and black, its red WILD TALES lifted, the bride at the wedding
 std('wild-tales-2014', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 216)), (1, (60, 56, 52))]), (210, 30, 30),
-    T('WILD TALES', 'bonb', 92, (214, 32, 32), rough=.6),
+    L((0.059, 0.206, 0.934, 0.36), 92, (214, 32, 32), mode='key', key=(200, 30, 30), t=(70, 150)),
     photo=ph(.6, .65, .5, 1.0), pb=(214, 32, 32), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DAMIÁN SZIFRON', 'FILM'], ccol=WHT,
     ft='a', vbox=(214, 32, 32), fcol=WHT, fin=SLIP, dotst=(['STAFF', 'PICK'], (30, 30, 30)))
 
@@ -3805,69 +3805,69 @@ std('incendies-2010', ('grad', [(0, (220, 30, 30)), (.6, (160, 16, 18)), (1, (50
     photo=ph(.5, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A DENIS VILLENEUVE', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(160, 16, 18), fcol=(250, 220, 220), fin=SLIP, seed=2010)
 
-# Tangerines: the orchard dusk, the orange capitals (typeset: they lean), Ivo
+# Tangerines: the dark orchard, the poster's orange brushed TANGERINES lifted, Ivo
 std('tangerines-2013', ('grad', [(0, (70, 70, 50)), (.6, (26, 26, 18)), (1, (6, 6, 4))]), (240, 140, 30),
-    T('TANGERINES', 'hcnb', 92, (242, 146, 36), squeeze=.78, bold=.6),
+    L((0.042, 0.039, 0.955, 0.184), 92, (242, 146, 36), mode='key', key=(235, 140, 40), t=(70, 150)),
     photo=ph(.6, .35, .45, 1.0), pb=(242, 146, 36), lg=WHT, lw=.6, order='LPTCF', credit=['LEMBIT ULFSAK'], ccol=(242, 146, 36),
     ft='a', vbox=(242, 146, 36), vink=(26, 26, 18), fcol=(200, 200, 184), fin=SLIP)
 
-# Mary and Max (2009): New York black and grey, the white hand-drawn lettering (typeset), Max at his table
+# Mary and Max (2009): the black, the white curly Mary and Max. lifted off the poster, Max at his typewriter
 std('mary-and-max-2009', ('grad', [(0, (70, 70, 70)), (.6, (24, 24, 24)), (1, (6, 6, 6))]), WHT,
-    T('Mary and Max.', 'cho', 100, WHT),
+    L((0.214, 0.082, 0.805, 0.382), 150, WHT, mode='light'),
     photo=ph(.5, .55, .6, 1.0), pb=(200, 40, 40), lg=WHT, lw=.6, order='LPTCF', credit=['TONI COLLETTE', 'PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
     ft='a', vbox=(200, 40, 40), fcol=(200, 200, 200), fin=SLIP, seed=2009)
 
-# Barry Lyndon (1975): an old 2-tape box (188 minutes), the poster's cream with the engraved border, black serif capitals (typeset), the border's figures
+# Barry Lyndon (1975): an old 2-tape box, the poster's ivory, its black BARRY LYNDON cartouche with the pistol lifted, the vines and lovers
 std('barry-lyndon-1975', ('grad', [(0, (244, 238, 222)), (.6, (226, 216, 194)), (1, (160, 146, 120))]), (20, 18, 16),
-    T('BARRY LYNDON', 'terb', 110, (20, 18, 16), track=.06),
+    L((0.295, 0.292, 0.678, 0.484), 220, (20, 18, 16), mode='dark'),
     photo=ph(.2, .2, .4, .5), pb=(20, 18, 16), lg=(20, 18, 16), lw=.5, order='LPTCSF', tgap=10, credit=['A STANLEY KUBRICK', 'FILM'], ccol=(20, 18, 16),
     stick=TWOST((20, 18, 16), (244, 238, 222)), ft='c', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=OLD, seed=1975, **TWO)
 
-# Three Colours: White (1994): the poster's white, the grey-blue heavy capitals (typeset), Dominique
+# Three Colours: White (1994): the poster's white, the grey-blue heavy capitals, Dominique
 std('three-colors-white-1994', ('solid', (246, 246, 244)), (110, 150, 160),
-    [T('THREE COLOURS', 'herb', 24, (110, 150, 160), track=.2), T('WHITE', 'hcnb', 110, (110, 152, 162), squeeze=.8, bold=.6)], tgap=8,
+    [L((0.321, 0.251, 0.678, 0.278), 24, (110, 150, 160), mode='dark', speck=0), L((0.277, 0.278, 0.72, 0.419), 110, (110, 152, 162), mode='dark')], tgap=8,
     photo=ph(.4, .72, .45, 1.0), pb=(110, 152, 162), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A FILM BY', 'KIEŚLOWSKI'], ccol=(30, 30, 30),
     ft='a', vbox=(110, 152, 162), fcol=(30, 30, 30), fin=WORN, seed=1994)
 
-# Three Colours: Red (1994): the poster's red, the pale heavy capitals (typeset), Valentine and the judge
+# Three Colours: Red (1994): the poster's red, the pale heavy capitals, Valentine and the judge
 std('three-colors-red-1994', ('grad', [(0, (210, 40, 50)), (.6, (150, 20, 30)), (1, (50, 6, 10))]), (244, 210, 210),
-    [T('THREE COLOURS', 'herb', 24, (246, 214, 214), track=.2), T('RED', 'hcnb', 120, (246, 214, 214), squeeze=.8, bold=.6)], tgap=8,
+    [L((0.255, 0.114, 0.746, 0.149), 24, (246, 214, 214), mode='light', speck=0), L((0.313, 0.146, 0.686, 0.236), 120, (246, 214, 214), mode='light')], tgap=8,
     photo=ph(.6, .6, .45, 1.0), pb=(246, 214, 214), lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'KIEŚLOWSKI'], ccol=(246, 214, 214),
     ft='a', vbox=(246, 214, 214), vink=(150, 20, 30), fcol=(246, 214, 214), fin=WORN, seed=1994)
 
-# My Father and My Son (2005): the poster's plaster cream, the cream heavy capitals (typeset), father and son at the table
+# My Father and My Son: the poster's whitewashed wall, its cream My Father (at the top) and and My Son (at the foot) lifted, father and son at the table
 std('my-father-and-my-son-2005', ('grad', [(0, (180, 150, 100)), (.6, (110, 90, 60)), (1, (30, 24, 16))]), (246, 230, 190),
-    T('My Father and My Son', 'popb', 62, (248, 232, 194)),
+    [L((0.022, 0.036, 0.638, 0.118), 62, (248, 232, 194), mode='light'), L((0.257, 0.906, 0.972, 0.988), 62, (248, 232, 194), mode='light')],
     photo=ph(.25, .66, .4, 1.0), pb=(248, 232, 194), lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'ÇAĞAN IRMAK'], ccol=(248, 232, 194),
     ft='a', vbox=(248, 232, 194), vink=(110, 90, 60), fcol=(230, 220, 200), fin=WORN, seed=2005)
 
-# Andhadhun: the poster's white and the piano's cyan, the cyan brush capitals (typeset), Akash and Sophie on the keys
+# Andhadhun: the poster's piano-key blue, cyan capitals (typeset: the poster's are a white stencil slanted down the keyboard), Akash and Sophie
 std('andhadhun-2018', ('grad', [(0, (246, 246, 244)), (.5, (120, 210, 236)), (1, (20, 120, 170))]), (30, 170, 220),
     T('ANDHADHUN', 'intbk', 92, (30, 172, 222), squeeze=.86, rough=.5, outline=((20, 40, 60), 1.4)),
     photo=ph(.6, .15, .45, 1.0), pb=(30, 172, 222), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['AYUSHMANN KHURRANA', 'TABU'], ccol=WHT,
     ft='a', vbox=(30, 172, 222), fcol=WHT, fin=SLIP)
 
-# Hotel Rwanda (2004): the poster's dusk peach, black heavy capitals (typeset), Paul at the head
+# Hotel Rwanda (2004): the poster's dusk peach, its dark red HOTEL and black RWANDA cut off it, Paul at the head
 std('hotel-rwanda-2004', ('grad', [(0, (240, 210, 170)), (.6, (210, 160, 110)), (1, (110, 70, 40))]), (20, 18, 16),
-    T('HOTEL RWANDA', 'hcnb', 92, (20, 18, 16), squeeze=.76, bold=.8),
+    LC([(0.645, 0.745, 0.94, 0.87)], 170, cuts=[key_cut(lambda a: _lum(a) < .45)]),
     photo=ph(.5, .15, .45, 1.0), pb=(20, 18, 16), lg=(20, 18, 16), lw=.6, order='LPTCF', credit=['DON CHEADLE'], ccol=(20, 18, 16),
     ft='a', vbox=(20, 18, 16), fcol=(20, 18, 16), fin=WORN, seed=2004)
 
-# Three Colours: Blue (1993): the pool's deep blue, the pale blue heavy capitals (typeset), Julie
+# Three Colours: Blue (1993): the pool's deep blue, the pale blue heavy capitals, Julie
 std('three-colors-blue-1993', ('grad', [(0, (30, 70, 140)), (.6, (12, 30, 70)), (1, (4, 10, 24))]), (90, 180, 230),
-    [T('THREE COLOURS', 'herb', 24, (220, 230, 240), track=.2), T('BLUE', 'hcnb', 120, (96, 186, 236), squeeze=.8, bold=.6)], tgap=8,
+    [L((0.255, 0.114, 0.745, 0.148), 24, (220, 230, 240), mode='light', speck=0), L((0.263, 0.146, 0.74, 0.237), 120, (96, 186, 236), mode='light')], tgap=8,
     photo=ph(.5, .55, .45, 1.0), pb=(96, 186, 236), lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'KIEŚLOWSKI'], ccol=(220, 230, 240),
     ft='a', vbox=(96, 186, 236), vink=(12, 30, 70), fcol=(200, 210, 226), fin=WORN, seed=1993)
 
-# Amadeus (1984): an old tape, black, the white engraved capitals (typeset), the masked figure
+# Amadeus (1984): an old tape, black, the white engraved capitals, the masked figure
 std('amadeus-1984', ('grad', [(0, (120, 50, 70)), (.4, (40, 16, 24)), (1, (6, 4, 4))]), WHT,
-    T('AMADEUS', 'ter', 100, WHT, track=.04),
+    L((0.073, 0.845, 0.918, 0.926), 100, WHT, mode='light'),
     photo=ph(.5, .25, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A MILOŠ FORMAN', 'FILM'], ccol=WHT,
     stick=PRC(['$2.99', 'DRAMA']), ft='e', fcol=(220, 210, 210), fin=OLD, seed=1984)
 
-# Children of Heaven (1997): the poster's sky blue with the goldfish, orange serif capitals (typeset), the fish
+# Children of Heaven (1997): the poster's sky blue with the goldfish, orange serif capitals, the fish
 std('children-of-heaven-1997', ('grad', [(0, (60, 150, 230)), (.6, (30, 100, 190)), (1, (10, 30, 50))]), (240, 130, 40),
-    T('CHILDREN OF HEAVEN', 'ter', 66, (244, 136, 44), track=.04, outline=((60, 30, 10), 1.2)),
+    L((0.287, 0.878, 0.71, 0.983), 90, (244, 136, 44), mode='key', key=(230, 120, 40), t=(70, 150)),
     photo=ph(.6, .3, .5, 1.0), pb=(244, 136, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A MAJID MAJIDI', 'FILM'], ccol=WHT,
     ft='a', vbox=(244, 136, 44), vink=(30, 100, 190), fcol=WHT, fin=WORN, seed=1997)
 
