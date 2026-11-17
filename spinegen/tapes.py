@@ -4516,75 +4516,75 @@ std('andre-the-giant-2018', ('grad', [(0, (120, 90, 50)), (.6, (50, 36, 20)), (1
     photo=ph(.5, .15, .45, 1.0), pb=(234, 214, 104), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(234, 214, 104),
     ft='a', vbox=(234, 214, 104), vink=(50, 36, 20), fcol=(220, 206, 186), fin=MINT)
 
-# The Cheshire Murders (2013): white, the black typewriter capitals (typeset), the house in the snapshot
+# The Cheshire Murders (2013): white, the black typewriter capitals, the house in the snapshot
 std('the-cheshire-murders-2013', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (150, 150, 146))]), (30, 30, 30),
-    [T('THE', 'monob', 28, (30, 30, 30)), T('CHESHIRE MURDERS', 'monob', 56, (30, 30, 30))], tgap=6,
+    [L((0.345, 0.682, 0.46, 0.714), 28, (30, 30, 30), mode='dark', speck=0), L([(0.2, 0.712, 0.74, 0.768), (0.255, 0.767, 0.79, 0.82)], 56, (30, 30, 30), mode='dark')], tgap=6,
     photo=ph(.5, .33, .55, 1.0), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(30, 30, 30),
     ft='a', vbox=(30, 30, 30), fcol=(30, 30, 30), fin=SLIP)
 
-# Mercury 13: the poster's night navy, the rocket and the orange smoke, the black serif on cream (typeset)
+# Mercury 13: the poster's night navy, the rocket and the orange smoke, the black serif on cream
 std('mercury-13-2018', ('grad', [(0, (20, 24, 70)), (.6, (10, 12, 40)), (1, (4, 4, 16))]), (240, 236, 220),
-    T('MERCURY 13', 'terb', 80, (20, 20, 24), box=((242, 238, 224), 10, 6)),
+    L((0.1, 0.885, 0.9, 0.965), 80, (20, 20, 24), mode='dark', plate=((242, 238, 224), 10, 6)),
     photo=ph(.5, .4, .55, 1.0), pb=(240, 120, 50), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(240, 120, 50), vink=(10, 12, 40), fcol=(200, 200, 220), fin=MINT)
 
-# Before Sunrise (1995): a real rental, the poster's cream, the gold spaced serif capitals (typeset), Jesse and Céline
+# Before Sunrise (1995): a real rental, the poster's cream, the gold spaced serif capitals, Jesse and Céline
 std('before-sunrise-1995', ('grad', [(0, (244, 236, 214)), (.6, (230, 220, 194)), (1, (170, 150, 120))]), (190, 150, 70),
-    T('BEFORE SUNRISE', 'terb', 66, (150, 110, 40), track=.25),
+    L([(0.27, 0.2, 0.75, 0.255), (0.27, 0.255, 0.75, 0.31)], 66, (150, 110, 40), mode='key', key=(170, 130, 60), t=(60, 120)),
     photo=ph(.5, .72, .6, 1.0), pb=(192, 152, 72), lg=(60, 50, 40), lw=.6, order='LPTCSF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=(60, 50, 40),
     stick=flow(dot, 70, ['ROMANCE'], (200, 60, 80), d=62), ft='a', vbox=(192, 152, 72), fcol=(60, 50, 40), fin=RENTAL, seed=1995)
 
-# Before Midnight (2013): the Peloponnese sky, white and gold serif capitals (typeset), Jesse and Céline walking
+# Before Midnight (2013): the Peloponnese sky, the white and gold serif capitals cut off the poster in their own colours, Jesse and Céline walking
 std('before-midnight-2013', ('grad', [(0, (60, 120, 160)), (.6, (40, 70, 60)), (1, (14, 20, 14))]), WHT,
-    TT([('BEFORE', WHT), ('MIDNIGHT', (240, 200, 60))], 'terb', 76, sp=.25, track=.04),
+    LC([(0.17, 0.11, 0.83, 0.195), (0.09, 0.193, 0.91, 0.28)], 76, gapf=.25, cuts=[key_cut(lambda a: (_lum(a) > .82) & (_sat(a) < .2)), key_cut(lambda a: (_sat(a) > .45) & (a[..., 0] > .65) & (a[..., 2] < .45))]),
     photo=ph(.5, .6, .55, 1.0), pb=(240, 200, 60), lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=WHT,
     ft='a', vbox=(240, 200, 60), vink=(40, 70, 60), fcol=(210, 220, 210), fin=SLIP)
 
-# Before Sunset (2004): the Seine at sunset, gold serif (typeset), Jesse and Céline by the river
+# Before Sunset (2004): the Seine at sunset, gold serif, Jesse and Céline by the river
 std('before-sunset-2004', ('grad', [(0, (40, 30, 20)), (.5, (110, 70, 20)), (1, (14, 10, 6))]), (240, 200, 60),
-    T('Before Sunset', 'terb', 84, (242, 202, 64)),
+    L((0.22, 0.135, 0.78, 0.275), 140, (242, 202, 64), mode='light'),
     photo=ph(.5, .52, .7, .7), pb=(242, 202, 64), lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'JULIE DELPY'], ccol=(242, 202, 64),
     ft='a', vbox=(242, 202, 64), vink=(40, 30, 20), fcol=(220, 206, 180), fin=WORN, seed=2004)
 
-# The Rachel Divide: the silhouette's black and white, the red condensed capitals (typeset) (no logo file: the label in type)
+# The Rachel Divide: the silhouette's black and white, the red condensed capitals (no logo file: the label in type)
 std('the-rachel-divide-2018', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (4, 4, 4))]), (200, 40, 40),
-    [T('THE', 'hcnb', 40, (204, 44, 44), squeeze=.8), T('RACHEL DIVIDE', 'hcnb', 90, (204, 44, 44), squeeze=.78, bold=.6)], tgap=6,
+    [L((0.26, 0.195, 0.4, 0.23), 40, (204, 44, 44), mode='light', speck=0), L((0.09, 0.23, 0.56, 0.345), 90, (204, 44, 44), mode='key', key=(190, 40, 40), t=(70, 150))], tgap=6,
     photo=ph(.45, .7, .5, 1.0), pb=WHT, studio=['NETFLIX'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(204, 44, 44), fcol=(200, 200, 200), fin=MINT)
 
-# Malcolm X (1992): an old 2-tape box (202 minutes), the poster's red X on grey, white thin capitals (typeset), Malcolm
+# Malcolm X (1992): an old 2-tape box (202 minutes), the poster's red X on grey, white thin capitals, Malcolm
 std('malcolm-x-1992', ('grad', [(0, (200, 30, 30)), (.6, (120, 16, 16)), (1, (30, 4, 4))]), WHT,
-    T('MALCOLM X', 'her', 150, WHT),
+    L((0.01, 0.15, 1.0, 0.25), 150, WHT, mode='key', key=(250, 250, 250), t=(25, 60)),
     photo=ph(.5, .6, .8, .5), pb=WHT, lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['DENZEL WASHINGTON', 'A SPIKE LEE JOINT'], ccol=WHT,
     stick=TWOST(WHT, (120, 16, 16)), ft='c', vbox=WHT, vink=(120, 16, 16), fcol=(240, 210, 206), fin=RENTAL, seed=1992, **TWO)
 
-# Star Wars: The Last Jedi (Lucasfilm, a slipcase): the poster's red, the black outlined STAR WARS (typeset), Luke in his hood
+# Star Wars: The Last Jedi (Lucasfilm, a slipcase): the poster's red, the black STAR WARS logo cut off it (THE LAST JEDI typeset: its thin red line is lost against the red), Luke
 std('star-wars-the-last-jedi-2017', ('grad', [(0, (200, 30, 30)), (.6, (110, 14, 14)), (1, (20, 4, 4))]), (20, 18, 18),
-    [T('STAR WARS', 'intbk', 84, (20, 18, 18), outline=(WHT, 2.2)), T('THE LAST JEDI', 'herb', 30, WHT, track=.25)], tgap=8,
+    [LC([(0.26, 0.64, 0.72, 0.81)], 150), T('THE LAST JEDI', 'herb', 30, WHT, track=.25)], tgap=8,
     photo=ph(.5, .12, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DAISY RIDLEY', 'MARK HAMILL'], ccol=WHT,
     ft='a', vbox=WHT, vink=(110, 14, 14), fcol=(240, 210, 206), fin=SLIP)
 
-# A Fantastic Woman: the poster's pink-to-blue light, white condensed capitals (typeset), Marina
+# A Fantastic Woman: the poster's pink-to-blue light, white condensed capitals, Marina
 std('a-fantastic-woman-2017', ('grad', [(0, (60, 70, 200)), (.5, (220, 70, 120)), (1, (240, 130, 70))]), WHT,
-    T('A FANTASTIC WOMAN', 'hcn', 76, WHT, squeeze=.74),
+    L((0.08, 0.85, 0.92, 0.93), 76, WHT, mode='key', key=(250, 250, 250), t=(25, 60)),
     photo=ph(.6, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['DANIELA VEGA'], ccol=WHT,
     ft='a', vbox=WHT, vink=(220, 70, 120), fcol=WHT, fin=MINT)
 
-# Everybody Wants Some!! (2016): the 1980 front lawn, the orange and cream script (typeset), the team piled up
+# Everybody Wants Some!! (2016): the 1980 front lawn, the cream-and-orange script cut off the poster in its own colours, the team piled up
 std('everybody-wants-some-2016', ('grad', [(0, (150, 180, 200)), (.5, (110, 100, 70)), (1, (40, 30, 20))]), (246, 140, 40),
-    T('Everybody Wants Some!!', 'popb', 66, (248, 146, 44), outline=((250, 240, 220), 2.0)),
+    LC([(0.08, 0.78, 0.93, 0.945)], 130, cuts=[key_cut(lambda a: ((_sat(a) > .5) & (a[..., 0] > .7)) | ((_lum(a) > .88) & (_sat(a) < .15)))]),
     photo=ph(.5, .55, .7, .7), pb=(248, 146, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A RICHARD LINKLATER', 'FILM'], ccol=WHT,
     ft='a', vbox=(248, 146, 44), vink=(40, 30, 20), fcol=WHT, fin=SLIP)
 
-# The Purge (2013): black and violet, the white distressed capitals (typeset), the grinning mask
+# The Purge (2013): black and violet, the white distressed capitals, the grinning mask
 std('the-purge-2013', ('grad', [(0, (60, 40, 80)), (.6, (20, 12, 28)), (1, (4, 2, 6))]), WHT,
-    [T('THE', 'intbk', 40, WHT), T('PURGE', 'intbk', 110, WHT, rough=.8)], tgap=6,
+    [L((0.13, 0.035, 0.87, 0.09), 40, WHT, mode='light'), L((0.14, 0.095, 0.9, 0.215), 110, WHT, mode='light')], tgap=6,
     photo=ph(.6, .6, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['ETHAN HAWKE', 'LENA HEADEY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 12, 28), fcol=(200, 196, 210), fin=SLIP)
 
-# Bloodsport (1988): a real rental, the Kumite's black, the red brush script (typeset), Frank in his fighting stance
+# Bloodsport (1988): a real rental, the Kumite's black, the red brush script, Frank in his fighting stance
 std('bloodsport-1988', ('grad', [(0, (50, 30, 26)), (.6, (18, 10, 8)), (1, (4, 2, 2))]), (220, 50, 40),
-    T('Bloodsport', 'cho', 110, (224, 54, 42)),
+    L((0.04, 0.1, 0.96, 0.245), 110, (224, 54, 42), mode='key', key=(210, 50, 40), t=(70, 150)),
     photo=ph(.45, .35, .5, 1.0), pb=(224, 54, 42), lg=WHT, lw=.6, order='LPTCSF', credit=['JEAN-CLAUDE VAN DAMME'], ccol=WHT,
     stick=BAR('15 01988', top='ACTION', fill=(250, 220, 200), ink=(80, 30, 20)), ft='a', vbox=(224, 54, 42), fcol=(200, 190, 186), fin=RENTAL, seed=1988)
 

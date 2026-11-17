@@ -229,7 +229,7 @@ class L:
     or a list of boxes that are joined into one line (scaled together, so a small "THE" stays small).
     size = height of the lettering on the spine (px in the 1100 image).  color may be a list, one per box.
     grad = vertical stops through the letters; hgrad = stops along the line."""
-    def __init__(s, box, size, color, mode='auto', grow=0.0, grad=None, hgrad=None, shadow=None, outline=None, gapf=0.28, valign='base', **mk):
+    def __init__(s, box, size, color, mode='auto', grow=0.0, grad=None, hgrad=None, shadow=None, outline=None, gapf=0.28, valign='base', plate=None, **mk):
         s.__dict__.update(locals()); del s.__dict__['s']
 
     def render(s, k=1.0, seed=0):
@@ -245,7 +245,7 @@ class L:
             a = cv2.GaussianBlur(np.asarray(m).astype(np.float32) / 255, (0, 0), max(0.5, th / 160))
             out.append(Image.fromarray((np.clip((a - 0.5 + s.grow) * 5 + 0.5, 0, 1) * 255).astype(np.uint8)))
         gap = int(th * s.gapf)
-        pad = int(8 * S) + (int(s.outline[1] * S) if s.outline else 0)
+        pad = int(8 * S) + (int(s.outline[1] * S) if s.outline else 0) + (int(max(s.plate[1], s.plate[2]) * S) if s.plate else 0)
         Wd = sum(m.width for m in out) + gap * (len(out) - 1)
         mm = Image.new('L', (Wd + 2 * pad, th + 2 * pad), 0)
         cnv = Image.new('RGBA', mm.size, (0, 0, 0, 0))
@@ -260,6 +260,10 @@ class L:
             ink = vgrad(mm, s.grad)
         if s.hgrad:
             ink = vgrad(mm.rotate(90, expand=True), s.hgrad).rotate(-90, expand=True)
+        if s.plate:  # the poster's own panel behind the lettering: (colour, pad x, pad y)
+            bb = mm.point(lambda v: 255 if v > 90 else 0).getbbox()
+            if bb:
+                ImageDraw.Draw(cnv).rectangle([bb[0] - s.plate[1] * S, bb[1] - s.plate[2] * S, bb[2] + s.plate[1] * S, bb[3] + s.plate[2] * S], fill=tuple(s.plate[0]) + (255,))
         if s.shadow:
             col, ox, oy = s.shadow
             cnv.alpha_composite(colorize(ImageChops.offset(mm, int(ox * S), int(oy * S)), col))
