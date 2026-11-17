@@ -4588,87 +4588,87 @@ std('bloodsport-1988', ('grad', [(0, (50, 30, 26)), (.6, (18, 10, 8)), (1, (4, 2
     photo=ph(.45, .35, .5, 1.0), pb=(224, 54, 42), lg=WHT, lw=.6, order='LPTCSF', credit=['JEAN-CLAUDE VAN DAMME'], ccol=WHT,
     stick=BAR('15 01988', top='ACTION', fill=(250, 220, 200), ink=(80, 30, 20)), ft='a', vbox=(224, 54, 42), fcol=(200, 190, 186), fin=RENTAL, seed=1988)
 
-# Good Time: Queens night, the neon green and red GOOD TIME (typeset), Connie in the jar
+# Good Time: Queens night, the poster's scan-lined neon GOOD TIME cut off it in its own red and white, Connie in the jar
 std('good-time-2017', ('grad', [(0, (60, 20, 50)), (.6, (20, 8, 20)), (1, (4, 2, 4))]), (120, 240, 90),
-    TT([('GOOD', (220, 40, 60)), ('TIME', (130, 246, 100))], 'intbk', 100, sp=.2, soft=((120, 240, 90), 6, .5)),
+    LC([(0.08, 0.835, 0.91, 0.93)], 100, cuts=[key_cut(lambda a: ((_sat(a) > .5) & (a[..., 0] > .6)) | (_lum(a) > .78))]),
     photo=ph(.5, .2, .4, 1.0), pb=(130, 246, 100), lg=WHT, lw=.6, order='LPTCF', credit=['ROBERT PATTINSON'], ccol=WHT,
     ft='a', vbox=(130, 246, 100), vink=(20, 8, 20), fcol=(200, 190, 200), fin=MINT)
 
-# Playtime (1967): an old tape, the poster's grey-white grid, the green deco PlayTime (typeset), Hulot in the lobby
+# Playtime (1967): an old tape, the poster's grey-white grid, the green deco PlayTime, Hulot in the lobby
 std('playtime-1967', ('grad', [(0, (236, 234, 226)), (.6, (216, 214, 204)), (1, (150, 146, 136))]), (40, 140, 110),
-    T('PlayTime', 'adv', 100, (42, 144, 112), track=.04),
+    L((0.19, 0.815, 0.77, 0.935), 100, (42, 144, 112), mode='key', key=(40, 150, 120), t=(60, 130)),
     photo=ph(.85, .72, .35, 1.0), pb=(42, 144, 112), lg=(40, 40, 40), lw=.6, order='LPTCSF', credit=['A JACQUES TATI', 'FILM'], ccol=(40, 40, 40),
     stick=PRC(['$2.99', 'COMEDY']), ft='e', fcol=(40, 40, 40), fin=OLD, seed=1967)
 
-# Red Sparrow: the poster's red, white spaced condensed capitals (typeset), Dominika
+# Red Sparrow: the poster's red, white spaced condensed capitals (typeset: on the poster they climb at an angle across her coat), Dominika
 std('red-sparrow-2018', ('grad', [(0, (200, 30, 30)), (.6, (100, 12, 12)), (1, (20, 4, 4))]), WHT,
     T('RED SPARROW', 'hcnb', 84, WHT, squeeze=.74, track=.2),
     photo=ph(.55, .15, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JENNIFER LAWRENCE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(100, 12, 12), fcol=(240, 210, 206), fin=MINT)
 
-# Thoroughbreds: the lawn's cream, black spaced serif capitals (typeset), Lily and Amanda
+# Thoroughbreds: the lawn's cream, black spaced serif capitals, Lily and Amanda
 std('thoroughbreds-2018', ('grad', [(0, (240, 230, 216)), (.6, (220, 206, 190)), (1, (110, 140, 90))]), (30, 30, 30),
-    T('THOROUGHBREDS', 'ter', 64, (30, 30, 30), track=.2),
+    L((0.04, 0.07, 0.95, 0.13), 64, (30, 30, 30), mode='dark'),
     photo=ph(.6, .3, .45, 1.0), pb=(200, 40, 40), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['OLIVIA COOKE', 'ANYA TAYLOR-JOY'], ccol=(30, 30, 30),
     ft='a', vbox=(200, 40, 40), fcol=(30, 30, 30), fin=MINT)
 
-# Ready Player One: the OASIS's electric blue, the outlined white capitals (typeset), the crowd
+# Ready Player One: the OASIS's electric blue, the outlined white capitals (typeset: the chrome logo sits in the crowd's glare and a cut loses letters), the crowd
 std('ready-player-one-2018', ('grad', [(0, (40, 60, 150)), (.5, (90, 60, 170)), (1, (14, 16, 40))]), WHT,
     T('READY PLAYER ONE', 'popb', 66, (40, 60, 150), outline=(WHT, 2.4), soft=((120, 160, 255), 6, .5)),
     photo=ph(.5, .25, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 60, 150), fcol=(200, 206, 230), fin=SLIP)
 
-# Isle of Dogs: the poster's white, the red slab capitals (typeset), Atari and the dogs in their cage
+# Isle of Dogs: the poster's white, the red slab capitals, Atari and the dogs in their cage
 std('isle-of-dogs-2018', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (150, 140, 130))]), (190, 40, 40),
-    T('ISLE OF DOGS', 'schb', 80, (194, 42, 42)),
+    L((0.14, 0.765, 0.86, 0.86), 80, (194, 42, 42), mode='key', key=(190, 50, 40), t=(70, 150)),
     photo=ph(.4, .3, .55, 1.0), pb=(194, 42, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['A WES ANDERSON', 'FILM'], ccol=(30, 30, 30),
     ft='a', vbox=(194, 42, 42), fcol=(30, 30, 30), fin=MINT, dotst=(['STAFF', 'PICK'], (30, 30, 30)))
 
-# Super Troopers 2: the orange sunset, gold outlined capitals (typeset), the troopers and the flag
+# Super Troopers 2: the orange sunset, the gold badge logo cut off the poster in its own colours, the troopers and the flag
 std('super-troopers-2-2018', ('grad', [(0, (240, 150, 40)), (.5, (180, 80, 20)), (1, (50, 20, 6))]), (240, 200, 80),
-    T('SUPER TROOPERS 2', 'intbki', 76, (244, 206, 86), outline=((60, 30, 10), 1.8)),
+    LC([(0.1, 0.45, 0.9, 0.81)], 150),
     photo=ph(.6, .2, .6, 1.0), pb=(244, 206, 86), lg=WHT, lw=.6, order='LPTCF', credit=['JAY CHANDRASEKHAR', 'KEVIN HEFFERNAN'], ccol=WHT,
     ft='a', vbox=(244, 206, 86), vink=(180, 80, 20), fcol=WHT, fin=MINT)
 
-# The Tale: the motel's marbled brown, white spaced capitals (typeset), Jennifer and young Jenny
+# The Tale: the motel's marbled brown, white spaced capitals, Jennifer and young Jenny
 std('the-tale-2018', ('grad', [(0, (150, 120, 80)), (.6, (80, 60, 36)), (1, (24, 18, 10))]), WHT,
-    [T('THE', 'herb', 34, WHT, track=.3), T('TALE', 'herb', 100, WHT, track=.2)], tgap=6,
+    [L((0.49, 0.06, 0.69, 0.105), 34, WHT, mode='light'), L((0.49, 0.11, 0.9, 0.19), 100, WHT, mode='light')], tgap=6,
     photo=ph(.5, .72, .6, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['LAURA DERN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 60, 36), fcol=(230, 220, 204), fin=MINT)
 
-# Tully: Marlo's tired face, the pink script with its sticker stars (typeset)
+# Tully: Marlo's tired face, the pink script with its sticker stars (typeset: the script is pink on her pink skin and tilted; every lift lost letters)
 std('tully-2018', ('grad', [(0, (200, 170, 150)), (.6, (130, 100, 90)), (1, (50, 36, 30))]), (240, 100, 160),
     T('Tully', 'cho', 150, (244, 110, 170), outline=(WHT, 1.4)),
     photo=ph(.4, .55, .5, 1.0), pb=(244, 110, 170), lg=WHT, lw=.6, order='LPTCF', credit=['CHARLIZE THERON'], ccol=WHT,
     ft='a', vbox=(244, 110, 170), fcol=WHT, fin=MINT)
 
-# Black Panther: Wakanda's night teal, the silver-blue capitals (typeset), T'Challa at the head
+# Black Panther: Wakanda's night teal, the silver-blue BLACK PANTHER cut off the poster in its own colours, T'Challa at the head
 std('black-panther-2018', ('grad', [(0, (40, 90, 120)), (.6, (14, 30, 44)), (1, (4, 8, 14))]), (190, 200, 230),
-    [T('BLACK', 'adv', 44, (196, 206, 236), track=.2, bold=.4), T('PANTHER', 'adv', 96, (196, 206, 236), track=.06, bold=.6, grad=[(0, (230, 236, 250)), (1, (120, 140, 200))])], tgap=6,
+    LC([(0.27, 0.73, 0.7, 0.8), (0.18, 0.79, 0.82, 0.91)], 100, gapf=.2),
     photo=ph(.5, .12, .35, 1.0), pb=(196, 206, 236), lg=WHT, lw=.6, order='LPTCF', credit=['CHADWICK BOSEMAN'], ccol=WHT,
     ft='a', vbox=(196, 206, 236), vink=(14, 30, 44), fcol=(190, 200, 210), fin=SLIP)
 
-# Blade Runner 2049: the orange haze and the blue neon, the orange stencil capitals (typeset), K
+# Blade Runner 2049: the orange haze and the blue neon, the fiery BLADE RUNNER 2049 cut off the poster in its own colours, K
 std('blade-runner-2049-2017', ('grad', [(0, (50, 70, 90)), (.5, (180, 80, 30)), (1, (30, 14, 6))]), (246, 140, 40),
-    [T('BLADE RUNNER', 'intbki', 84, (248, 146, 44), squeeze=.84, grad=[(0, (250, 200, 80)), (1, (230, 70, 30))]), T('2049', 'intbki', 50, (250, 190, 60))], tgap=8,
+    LC([(0.15, 0.73, 0.85, 0.96)], 150),
     photo=ph(.35, .15, .45, 1.0), pb=(248, 146, 44), lg=WHT, lw=.6, order='LPTCF', credit=['RYAN GOSLING', 'HARRISON FORD'], ccol=WHT,
     ft='a', vbox=(248, 146, 44), vink=(30, 14, 6), fcol=(220, 206, 200), fin=SLIP)
 
-# American Animals: the poster's flat orange, cream heavy condensed capitals (typeset), the four in their animal masks
+# American Animals: the poster's flat orange, cream heavy condensed capitals, the four in their animal masks
 std('american-animals-2018', ('solid', (220, 80, 40)), (250, 236, 210),
-    T('AMERICAN ANIMALS', 'hcnb', 90, (252, 238, 212), squeeze=.74, bold=.8),
+    [L((0.07, 0.15, 0.94, 0.3), 90, (252, 238, 212), mode='key', key=(250, 242, 222), t=(40, 90)), L((0.07, 0.3, 0.94, 0.446), 90, (252, 238, 212), mode='key', key=(250, 242, 222), t=(40, 90))],
     photo=ph(.45, .7, .5, 1.0), pb=(252, 238, 212), lg=WHT, lw=.6, order='LPTCF', credit=['A BART LAYTON', 'FILM'], ccol=(252, 238, 212),
     ft='a', vbox=(252, 238, 212), vink=(220, 80, 40), fcol=(252, 238, 212), fin=MINT)
 
-# Eighth Grade: the phone-glow pink, the yellow heavy capitals (typeset), Kayla
+# Eighth Grade: the phone-glow pink, the yellow heavy capitals, Kayla
 std('eighth-grade-2018', ('grad', [(0, (240, 210, 210)), (.6, (210, 150, 150)), (1, (120, 60, 60))]), (246, 230, 30),
-    T('EIGHTH GRADE', 'intbk', 84, (248, 232, 34), outline=((120, 60, 60), 1.4)),
+    [L((0.05, 0.415, 0.93, 0.55), 84, (248, 232, 34), mode='key', key=(248, 232, 30), t=(60, 130), outline=((120, 60, 60), 1.4)), L((0.05, 0.55, 0.93, 0.685), 84, (248, 232, 34), mode='key', key=(248, 232, 30), t=(60, 130), outline=((120, 60, 60), 1.4))],
     photo=ph(.7, .2, .45, 1.0), pb=(248, 232, 34), lg=WHT, lw=.6, order='LPTCF', credit=['A BO BURNHAM', 'FILM'], ccol=(60, 30, 30),
     ft='a', vbox=(248, 232, 34), vink=(120, 60, 60), fcol=WHT, fin=MINT)
 
-# BlacKkKlansman: the flag's black and white stripes, the black italic capitals (typeset), Ron in his coat
+# BlacKkKlansman: the flag's black and white stripes, the black italic capitals, Ron in his coat
 std('blackkklansman-2018', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (150, 150, 146))]), (20, 20, 20),
-    TT([('BLAC', (20, 20, 20)), ('K', (200, 30, 30)), ('K', (20, 20, 20)), ('LANSMAN', (20, 20, 20))], 'intbki', 76, sp=0, squeeze=.84),
+    L((0.07, 0.03, 0.96, 0.105), 76, (20, 20, 20), mode='dark'),
     photo=ph(.5, .4, .45, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=(20, 20, 20),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=MINT, under=[frame((200, 30, 30), 8, 2.0)])
 
