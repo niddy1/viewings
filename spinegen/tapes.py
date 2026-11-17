@@ -3569,73 +3569,73 @@ std('the-weight-of-gold-2020', ('grad', [(0, (50, 50, 50)), (.6, (18, 18, 18)), 
     photo=ph(.65, .3, .45, 1.0), pb=(214, 180, 90), lg=WHT, lw=.6, order='LPTCF', credit=['A DOCUMENTARY'], ccol=(214, 180, 90),
     ft='a', vbox=(214, 180, 90), vink=(18, 18, 18), fcol=(190, 190, 190), fin=MINT)
 
-# The Count of Monte Cristo (2002): Château d'If torch-red, the white script and caps (typeset), Edmond and Mercédès
+# The Count of Monte Cristo (2002): Château d'If torch-red, the white script and caps lifted off the poster, Edmond and Mercédès
 std('the-count-of-monte-cristo-2002', ('grad', [(0, (170, 50, 20)), (.6, (70, 20, 8)), (1, (10, 4, 2))]), WHT,
-    [T('The Count of', 'ter', 32, WHT, track=.1), T('Monte Cristo', 'cho', 96, WHT)], tgap=6,
+    L((0.04, 0.742, 0.76, 0.962), 170, WHT, mode='key', key=(245, 245, 245), t=(40, 90), speck=0), tgap=6,
     photo=ph(.55, .45, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JIM CAVIEZEL', 'GUY PEARCE'], ccol=WHT,
     ft='a', vbox=WHT, vink=(70, 20, 8), fcol=(230, 200, 190), fin=WORN, seed=2002)
 
-# Unbelievable: the poster's mist teal, white spaced condensed capitals (typeset), Marie in her red jacket
+# Unbelievable: the poster's mist teal, the white spaced brushed capitals lifted, Marie in her red jacket
 std('unbelievable-2019', ('grad', [(0, (150, 180, 180)), (.6, (90, 110, 110)), (1, (40, 30, 26))]), WHT,
-    T('UNBELIEVABLE', 'hcnb', 70, WHT, squeeze=.8, track=.3),
+    L((0.103, 0.388, 0.899, 0.458), 70, WHT, mode='key', key=(250, 250, 250), t=(30, 70)),
     photo=ph(.4, .6, .45, 1.0), pb=(200, 60, 40), lg=WHT, lw=.6, order='LPTCF', credit=['KAITLYN DEVER', 'TONI COLLETTE'], ccol=WHT,
     ft='a', vbox=(200, 60, 40), fcol=WHT, fin=MINT)
 
-# Defending Jacob: dim kitchen green-black, white spaced capitals with the bold JACOB (typeset), Jacob between his parents
+# Defending Jacob: dim kitchen green-black, the white spaced DEFENDING JACOB lifted off the poster, Jacob between his parents
 std('defending-jacob-2020', ('grad', [(0, (60, 70, 60)), (.6, (22, 26, 22)), (1, (6, 8, 6))]), WHT,
-    TT([('DEFENDING', (220, 220, 214)), ('JACOB', WHT)], 'her', 62, sp=.3, track=.25),
+    L((0.037, 0.858, 0.958, 0.904), 62, WHT, mode='light'),
     photo=ph(.6, .35, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['CHRIS EVANS', 'MICHELLE DOCKERY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(22, 26, 22), fcol=(190, 196, 190), fin=MINT)
 
-# The Irishman: a 2-tape box (209 minutes), slate blue-grey, the red serif capitals (typeset), Frank, Russell and Jimmy
+# The Irishman: a 2-tape box (209 minutes), slate blue-grey, the poster's red serif THE IRISHMAN cut off it, Frank, Russell and Jimmy
 std('the-irishman-2019', ('grad', [(0, (70, 80, 90)), (.6, (30, 34, 40)), (1, (8, 10, 12))]), (200, 30, 30),
-    [T('THE', 'terb', 50, (214, 40, 40), track=.2), T('IRISHMAN', 'terb', 150, (214, 40, 40), track=.04)],
+    LC([(0.43, 0.147, 0.931, 0.237)], 150, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .3))]),
     photo=ph(.55, .42, .6, .5), pb=(204, 34, 34), lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=WHT,
     stick=TWOST((204, 34, 34), WHT), ft='c', vbox=WHT, vink=(30, 34, 40), fcol=(200, 206, 214), fin=MINT, **TWO)
 
-# El Camino: A Breaking Bad Movie: the poster's red, white condensed capitals in the keyline box (typeset), Jesse
+# El Camino: A Breaking Bad Movie: the poster's red, the white condensed EL CAMINO in its keyline box and the subtitle lifted, Jesse
 std('el-camino-a-breaking-bad-movie-2019', ('grad', [(0, (180, 30, 24)), (.6, (100, 14, 10)), (1, (24, 4, 2))]), WHT,
-    [T('EL CAMINO', 'hcnb', 92, WHT, squeeze=.78, bold=.6), T('A BREAKING BAD MOVIE', 'herb', 22, WHT, track=.3)], tgap=8,
+    [L((0.19, 0.703, 0.81, 0.845), 110, WHT, mode='light', speck=0), L((0.19, 0.85, 0.81, 0.893), 22, WHT, mode='light', speck=0)], tgap=8,
     photo=ph(.52, .2, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AARON PAUL'], ccol=WHT,
     ft='a', vbox=WHT, vink=(100, 14, 10), fcol=(240, 210, 206), fin=MINT)
 
-# Class Action Park: storm grey, the sign's rainbow capitals (typeset), the park's sign (no logo file: the label in type)
+# Class Action Park: storm grey, the sign's rainbow capitals (typeset: on the poster they are 3-D blocks standing out from a tilted sign, so a cut brings the sign with them), the park's sign (no logo file: the label in type)
 std('class-action-park-2020', ('grad', [(0, (110, 116, 120)), (.6, (60, 66, 70)), (1, (30, 40, 30))]), WHT,
     TT([('CLASS', (240, 70, 140)), ('ACTION', (250, 200, 40)), ('PARK', (60, 180, 240))], 'popb', 76, sp=.2, outline=((20, 20, 30), 1.8)),
     photo=ph(.4, .32, .5, 1.0), pb=WHT, studio=['HBO MAX'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 66, 70), fcol=WHT, fin=MINT)
 
-# Basic Instinct (1992): a real rental, the poster's blue-white, red BASIC and black INSTINCT (typeset), Nick and Catherine
+# Basic Instinct (1992): a real rental, the poster's blue-white, its red BASIC and black INSTINCT (the ice pick for its I) cut off it, Nick and Catherine
 std('basic-instinct-1992', ('grad', [(0, (200, 214, 230)), (.6, (150, 170, 196)), (1, (40, 54, 80))]), (200, 30, 30),
-    TT([('BASIC', (204, 30, 30)), ('INSTINCT', (20, 20, 24))], 'hcnb', 92, sp=.2, squeeze=.72, bold=.8),
+    LC([(0.099, 0.722, 0.914, 0.922)], 170, cuts=[key_cut(lambda a: (_lum(a) < .25) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
     photo=ph(.5, .4, .6, 1.0), pb=(204, 30, 30), lg=(20, 20, 24), lw=.6, order='LPTCSF', credit=['MICHAEL DOUGLAS', 'SHARON STONE'], ccol=WHT,
     stick=PRC(['$2.49', 'THRILLER']), ft='a', vbox=(204, 30, 30), fcol=WHT, fin=RENTAL, seed=1992)
 
-# A Simple Favor: the poster's pink and teal blocks, thin grey capitals (typeset), Emily with her martini
+# A Simple Favor: the poster's pink and teal blocks, the thin grey A Simple Favor lifted, Emily with her martini
 std('a-simple-favor-2018', ('grad', [(0, (244, 190, 190)), (.5, (200, 214, 214)), (1, (40, 180, 190))]), (70, 70, 74),
-    T('A Simple Favor', 'her', 70, (72, 72, 76)),
+    L([(0.13, 0.335, 0.205, 0.385), (0.035, 0.38, 0.342, 0.432), (0.09, 0.432, 0.342, 0.487)], 76, (50, 50, 54), mode='dark', speck=0, gapf=.35, grow=.06),
     photo=ph(.55, .2, .35, 1.0), pb=(72, 72, 76), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['ANNA KENDRICK', 'BLAKE LIVELY'], ccol=(30, 30, 30),
     ft='a', vbox=(72, 72, 76), fcol=(30, 30, 30), fin=MINT)
 
-# Don't F**k with Cats: screen black, the yellow block capitals (typeset), the cat on the video
+# Don't F**k with Cats: screen black, the poster's yellow block capitals lifted, the cat on the video
 std('don-t-f-k-with-cats-hunting-an-internet-killer-2019', ('grad', [(0, (30, 40, 50)), (.6, (12, 16, 20)), (1, (4, 4, 6))]), (246, 214, 40),
-    [T("DON'T F**K WITH CATS", 'hcnb', 70, (248, 216, 44), squeeze=.84, bold=.6), T('HUNTING AN INTERNET KILLER', 'hcnb', 26, (248, 216, 44), track=.12)], tgap=8,
+    [L((0.046, 0.851, 0.959, 0.905), 70, (248, 216, 44), mode='key', key=(240, 210, 50), t=(70, 150)), L((0.046, 0.907, 0.958, 0.941), 26, (248, 216, 44), mode='key', key=(240, 210, 50), t=(70, 150))], tgap=8,
     photo=ph(.6, .4, .5, 1.0), pb=(248, 216, 44), lg=WHT, lw=.6, order='LPTCF', credit=['THE COMPLETE', 'DOCUSERIES'], ccol=(248, 216, 44),
     ft='a', vbox=(248, 216, 44), vink=(12, 16, 20), fcol=(190, 196, 206), fin=MINT)
 
-# Fatal Attraction (1987): a real rental, black and the torn red, the red script and white capitals (typeset), Dan and Alex
+# Fatal Attraction (1987): a real rental, black and the torn red, the poster's red script Fatal and white ATTRACTION cut off it, Dan and Alex
 std('fatal-attraction-1987', ('grad', [(0, (40, 40, 60)), (.6, (14, 14, 22)), (1, (4, 4, 6))]), WHT,
-    [T('Fatal', 'cho', 100, (226, 30, 40)), T('ATTRACTION', 'ter', 52, WHT, track=.06)], tgap=6,
+    LC([(0.148, 0.745, 0.933, 0.918)], 150, cuts=[key_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .7) & (a[..., 1] < .25)))]), tgap=6,
     photo=ph(.4, .3, .6, 1.0), pb=(226, 30, 40), lg=WHT, lw=.6, order='LPTCSF', credit=['MICHAEL DOUGLAS', 'GLENN CLOSE'], ccol=WHT,
     stick=flow(dot, 70, ['THRILLER'], (226, 30, 40), d=62), ft='a', vbox=(226, 30, 40), fcol=(200, 200, 210), fin=RENTAL, seed=1987)
 
-# A Time to Kill (1996): a real rental, Canton night black, the red condensed capitals (typeset), Ellen at the head
+# A Time to Kill (1996): a real rental, Canton night black, the poster's red condensed A TIME TO KILL cut off it in its two lines, Ellen at the head
 std('a-time-to-kill-1996', ('grad', [(0, (40, 30, 30)), (.6, (14, 10, 10)), (1, (4, 4, 4))]), (210, 30, 30),
-    T('A TIME TO KILL', 'hcnb', 94, (214, 32, 32), squeeze=.7, bold=.6),
+    LC([(0.085, 0.267, 0.514, 0.443), (0.085, 0.445, 0.537, 0.622)], 94, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3))] * 2),
     photo=ph(.6, .2, .35, 1.0), pb=(214, 32, 32), lg=WHT, lw=.6, order='LPTCSF', credit=['MATTHEW McCONAUGHEY', 'SANDRA BULLOCK'], ccol=WHT,
     stick=PRC(['3 NIGHTS', '$2.99']), ft='a', vbox=(214, 32, 32), fcol=(200, 196, 196), fin=RENTAL, seed=1996)
 
-# Sorry, Wrong Number (1948): an old tape, the poster's lemon yellow, the red slab capitals (typeset), Leona at the telephone
+# Sorry, Wrong Number (1948): an old tape, the poster's lemon yellow, red slab capitals (typeset: the poster's climb in a diagonal stair over Leona and the phone cord), Leona at the telephone
 std('sorry-wrong-number-1948', ('grad', [(0, (246, 226, 70)), (.6, (230, 200, 50)), (1, (140, 110, 20))]), (200, 40, 40),
     T('SORRY, WRONG NUMBER', 'bonb', 64, (204, 42, 42)),
     photo=ph(.2, .72, .4, 1.0), pb=(204, 42, 42), lg=(30, 26, 20), lw=.6, order='LPTCF', credit=['BARBARA STANWYCK', 'BURT LANCASTER'], ccol=(30, 26, 20),
