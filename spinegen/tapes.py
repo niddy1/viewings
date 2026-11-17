@@ -1839,6 +1839,36 @@ def key_cut(test, soft=1.4):
     return fn
 
 
+def outline_cut(test, soft=1.2, close=2):
+    """an LC cut for lettering drawn with a continuous coloured outline over a busy picture (The In-Laws):
+    keeps the outline and everything it encloses, in their own colours"""
+    def fn(rgb):
+        a = rgb.astype(np.float32) / 255
+        ol = test(a).astype(np.uint8)
+        if close: ol = cv2.morphologyEx(ol, cv2.MORPH_CLOSE, np.ones((2 * close + 1, 2 * close + 1), np.uint8))
+        pad = cv2.copyMakeBorder(1 - ol, 2, 2, 2, 2, cv2.BORDER_CONSTANT, value=1)
+        cv2.floodFill(pad, np.zeros((pad.shape[0] + 2, pad.shape[1] + 2), np.uint8), (0, 0), 2)
+        m = (pad[2:-2, 2:-2] != 2).astype(np.float32)
+        n, lab, st, _ = cv2.connectedComponentsWithStats((m > .5).astype(np.uint8))
+        if n > 1:
+            big = st[1:, cv2.CC_STAT_AREA].max(); keep = np.zeros(n, bool); keep[1:] = st[1:, cv2.CC_STAT_AREA] > big * .03
+            m = m * keep[lab]
+        return rgb, _soft(m, soft)
+    return fn
+
+
+def or_cut(*fns):
+    """an LC cut that keeps what any of the given cuts keeps"""
+    def fn(rgb):
+        return rgb, np.max(np.stack([f(rgb)[1] for f in fns]), 0)
+    return fn
+
+
+def _left(a, f):
+    """mask of the left fraction f of a crop (for cuts that only apply to part of a box)"""
+    return np.broadcast_to(np.arange(a.shape[1])[None, :] < a.shape[1] * f, a.shape[:2])
+
+
 def fill_cut(ground=(0, 0, 0), tol=40, soft=1.2):
     """an LC cut for outlined lettering filled with pictures on a flat ground (The Bad Kids): keeps everything
     an outline encloses, in its own colours, and opens the counters that show the ground through them"""
@@ -4975,75 +5005,75 @@ std('king-jack-2015', ('grad', [(0, (150, 130, 160)), (.6, (80, 66, 90)), (1, (2
     photo=ph(.5, .35, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['CHARLIE PLUMMER'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 66, 90), fcol=(220, 210, 226), fin=SLIP)
 
-# Tamasha: Corsica's golden haze, the red-gold carnival capitals (typeset), Ved and Tara
+# Tamasha: the poster's carnival colours, the red-and-gold TAMASHA cut off it in its own colours, Ved and Tara laughing
 std('tamasha-2015', ('grad', [(0, (230, 180, 80)), (.5, (160, 100, 40)), (1, (40, 24, 10))]), (220, 50, 30),
-    T('TAMASHA', 'intbk', 100, (224, 54, 32), outline=((250, 230, 150), 2.0)),
+    LC([(0.02, 0.765, 0.98, 0.94)], 110),
     photo=ph(.5, .55, .7, .8), pb=(224, 54, 32), lg=WHT, lw=.6, order='LPTCF', credit=['RANBIR KAPOOR', 'DEEPIKA PADUKONE'], ccol=WHT,
     ft='a', vbox=(224, 54, 32), vink=(40, 24, 10), fcol=WHT, fin=SLIP)
 
-# The Nice Guys: the poster's seventies orange rings, the outlined white lower case (typeset), March and Healy
+# The Nice Guys: the poster's 70s orange frames, the striped disco the nice guys cut off it, Healy and March
 std('the-nice-guys-2016', ('grad', [(0, (240, 230, 200)), (.4, (240, 150, 50)), (.8, (200, 70, 30)), (1, (60, 20, 10))]), WHT,
-    T('the nice guys', 'popb', 92, (60, 50, 140), outline=(WHT, 2.4)),
+    LC([(0.23, 0.375, 0.46, 0.448), (0.23, 0.445, 0.74, 0.535), (0.37, 0.53, 0.74, 0.605)], 80, gapf=.2, valign='base', margin=0, outline=((60, 50, 140), 1.4), cuts=[key_cut(lambda a: _lum(a) > .85)] * 3),
     photo=ph(.5, .3, .6, 1.0), pb=(60, 50, 140), lg=(40, 30, 20), lw=.6, order='LPTCF', credit=['RUSSELL CROWE', 'RYAN GOSLING'], ccol=WHT,
     ft='a', vbox=(60, 50, 140), fcol=WHT, fin=MINT)
 
-# Howl's Moving Castle (2004): a Ghibli tape (a slipcase), the hills' green and the castle, the gold serif capitals (typeset)
+# Howl's Moving Castle (2004): a Ghibli tape (a slipcase), the hills' green and the castle, the gold serif capitals
 std('howl-s-moving-castle-2004', ('grad', [(0, (50, 70, 80)), (.5, (30, 44, 26)), (1, (10, 14, 8))]), (230, 200, 110),
-    T("HOWL'S MOVING CASTLE", 'terb', 66, (246, 220, 130), track=.04, shadow=((20, 16, 10), 3, 3)),
+    L((0.1, 0.845, 0.9, 0.953), 90, (226, 196, 110), mode='key', key=(200, 170, 80), t=(60, 130)),
     photo=ph(.4, .3, .6, 1.0), pb=(234, 206, 116), lg=WHT, lw=.6, order='LPTCSF', credit=['A HAYAO MIYAZAKI', 'FILM'], ccol=WHT,
     stick=flow(dot, 70, ['ANIME'], (220, 60, 100), d=60), ft='a', vbox=(234, 206, 116), vink=(60, 80, 50), fcol=(220, 220, 210), fin=WORN, seed=2004)
 
-# Scarface (1983): an old 2-hour-50 rental, the poster's black and white split, the red condensed capitals (typeset), Tony
+# Scarface (1983): an old 2-hour-50 rental, the poster's black and white split, the red condensed capitals, Tony
 std('scarface-1983', ('grad', [(0, (244, 244, 244)), (.5, (220, 220, 220)), (1, (30, 30, 30))]), (200, 20, 30),
-    T('SCARFACE', 'hcnb', 110, (204, 22, 32), squeeze=.7, bold=.8),
+    L((0.115, 0.43, 0.89, 0.632), 120, (210, 30, 30), mode='key', key=(200, 30, 30), t=(70, 150)),
     photo=ph(.6, .2, .45, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCSF', credit=['AL PACINO'], ccol=(20, 20, 20),
     stick=BAR('15 01983', top='CRIME', fill=(220, 236, 250), ink=(20, 40, 80)), ft='a', vbox=(204, 22, 32), fcol=WHT, fin=RENTAL, seed=1983)
 
-# The In-Laws (1979): an old tape, the sky blue and wedding-cake white, the pink outlined lower case (typeset), Vince and Sheldon on top of the cake
+# The In-Laws (1979): an old tape, the wedding-cake blue, the poster's white-and-pink the in-laws cut off it in its own colours, the two of them on the cake
 std('the-in-laws-1979', ('grad', [(0, (140, 200, 230)), (.6, (200, 226, 236)), (1, (220, 220, 220))]), (230, 100, 170),
-    T('the in-laws', 'popb', 100, (236, 110, 180), outline=(WHT, 2.4)),
+    LC([(0.04, 0.52, 0.965, 0.665)], 120, cuts=[or_cut(outline_cut(lambda a: (_sat(a) > .25) & (a[..., 0] > .6) & (a[..., 2] > .45) & (a[..., 1] < a[..., 0] - .15), close=0), key_cut(lambda a: ((((_sat(a) > .25) & (a[..., 0] > .6) & (a[..., 2] > .45) & (a[..., 1] < a[..., 0] - .15))) | ((_lum(a) > .93) & (_sat(a) < .08))) & _left(a, .24) & (np.arange(a.shape[0])[:, None] < a.shape[0] * .62)))]),
     photo=ph(.5, .15, .5, 1.0), pb=(236, 110, 180), lg=(30, 30, 40), lw=.6, order='LPTCSF', credit=['PETER FALK', 'ALAN ARKIN'], ccol=(30, 30, 40),
     stick=PRC(['$0.99', 'COMEDY']), ft='e', fcol=(30, 30, 40), fin=OLD, seed=1979)
 
-# About Elly (2009): the Caspian grey-green, white condensed capitals (typeset), Sepideh (no logo file: its company in type)
+# About Elly (2009): the Caspian grey-green, white condensed capitals, Sepideh (no logo file: its company in type)
 std('about-elly-2009', ('grad', [(0, (130, 150, 140)), (.6, (60, 70, 66)), (1, (16, 20, 18))]), WHT,
-    T('ABOUT ELLY', 'hcnb', 92, WHT, squeeze=.8),
+    L((0.435, 0.432, 0.962, 0.512), 90, WHT, mode='key', key=(210, 230, 234), t=(30, 70)),
     photo=ph(.25, .45, .4, 1.0), pb=WHT, studio=['SIMAYE MEHR'], scol=WHT, order='lPTCF', credit=['AN ASGHAR FARHADI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 70, 66), fcol=(220, 226, 222), fin=WORN, seed=2009)
 
-# Manhattan (1979): an old tape, white, the black skyline capitals (typeset), the couple on the bench under the bridge
+# Manhattan (1979): an old tape, white, the black skyline capitals, the couple on the bench under the bridge
 std('manhattan-1979', ('grad', [(0, (244, 244, 244)), (.6, (222, 222, 222)), (1, (140, 140, 140))]), (20, 20, 20),
-    T('MANHATTAN', 'hcnb', 100, (20, 20, 20), squeeze=.7, bold=1.0),
+    L((0.18, 0.638, 0.82, 0.825), 130, (20, 20, 20), mode='dark'),
     photo=ph(.5, .2, .7, .7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['WOODY ALLEN', 'DIANE KEATON'], ccol=(20, 20, 20),
     ft='e', fcol=(20, 20, 20), fin=OLD, seed=1979)
 
-# Trainspotting (1996): a real rental, the poster's orange and white, the white heavy lower case on orange (typeset), Renton
+# Trainspotting (1996): a real rental, the poster's orange and white, the white heavy lower case on orange, Renton
 std('trainspotting-1996', ('solid', (230, 90, 20)), WHT,
-    T('Trainspotting', 'herb', 84, WHT),
+    L((0.045, 0.878, 0.94, 0.983), 90, WHT, mode='key', key=(250, 250, 250), t=(30, 80)),
     photo=ph(.75, .25, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['EWAN McGREGOR'], ccol=WHT,
     stick=RWD(), ft='a', vbox=WHT, vink=(230, 90, 20), fcol=WHT, fin=RENTAL, seed=1996)
 
-# Blade Runner (1982): an old tape, the poster's night and neon, the red stencil capitals (typeset), Deckard
+# Blade Runner (1982): an old tape, the poster's night and neon, the red stencil capitals, Deckard
 std('blade-runner-1982', ('grad', [(0, (40, 30, 30)), (.5, (16, 14, 20)), (1, (60, 20, 10))]), (226, 40, 30),
-    T('BLADE RUNNER', 'intbki', 80, (230, 44, 32), squeeze=.84),
+    L((0.045, 0.885, 0.96, 0.942), 90, (220, 40, 40), mode='key', key=(220, 50, 40), t=(70, 150)),
     photo=ph(.4, .15, .45, 1.0), pb=(230, 44, 32), lg=WHT, lw=.6, order='LPTCSF', credit=['HARRISON FORD'], ccol=WHT,
     stick=flow(dot, 70, ['SCI-FI'], (40, 160, 200), d=60), ft='e', fcol=(200, 196, 196), fin=OLD, seed=1982)
 
-# Dawg Fight: white, black wide-spaced capitals (typeset), the backyard fighters
+# Dawg Fight: white, black wide-spaced capitals, the backyard fighters
 std('dawg-fight-2015', ('grad', [(0, (244, 244, 244)), (.6, (220, 220, 220)), (1, (140, 140, 140))]), (20, 20, 20),
-    T('DAWG FIGHT', 'herb', 70, (20, 20, 20), track=.5),
+    L((0.055, 0.21, 0.95, 0.26), 64, (20, 20, 20), mode='dark'),
     photo=ph(.6, .85, .6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['A BILLY CORBEN', 'FILM'], ccol=(20, 20, 20),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=SLIP)
 
-# Parched: the Rajasthan dusk orange, the gold serif capitals (typeset), Rani dancing
+# Parched: the Rajasthan dusk orange, the gold serif capitals, Rani dancing
 std('parched-2015', ('grad', [(0, (220, 140, 70)), (.5, (130, 70, 30)), (1, (30, 14, 6))]), (236, 216, 150),
-    T('PARCHED', 'ter', 96, (240, 220, 154), track=.06),
+    L((0.03, 0.815, 0.97, 0.918), 90, (226, 196, 110), mode='key', key=(210, 180, 100), t=(60, 130)),
     photo=ph(.6, .25, .5, 1.0), pb=(240, 220, 154), lg=WHT, lw=.6, order='LPTCF', credit=['A LEENA YADAV', 'FILM'], ccol=WHT,
     ft='a', vbox=(240, 220, 154), vink=(130, 70, 30), fcol=WHT, fin=SLIP)
 
-# The Handmaiden: black with the gold keyline, cream spaced capitals (typeset), Sook-hee and Lady Hideko
+# The Handmaiden: black with the gold keyline, cream spaced capitals, Sook-hee and Lady Hideko
 std('the-handmaiden-2016', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), (230, 220, 190),
-    [T('THE', 'her', 28, (232, 222, 192), track=.4), T('HANDMAIDEN', 'her', 70, (232, 222, 192), track=.2)], tgap=6,
+    [L((0.43, 0.06, 0.57, 0.088), 30, (226, 216, 196), mode='light'), L((0.05, 0.088, 0.95, 0.15), 76, (226, 216, 196), mode='light')], tgap=6,
     photo=ph(.5, .6, .45, 1.0), pb=(200, 170, 90), lg=WHT, lw=.6, order='LPTCF', credit=['A PARK CHAN-WOOK', 'FILM'], ccol=(232, 222, 192),
     ft='a', vbox=(200, 170, 90), vink=(14, 12, 10), fcol=(200, 196, 186), fin=MINT, under=[frame((200, 170, 90), 8, 1.4)])
 
