@@ -3871,75 +3871,75 @@ std('children-of-heaven-1997', ('grad', [(0, (60, 150, 230)), (.6, (30, 100, 190
     photo=ph(.6, .3, .5, 1.0), pb=(244, 136, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A MAJID MAJIDI', 'FILM'], ccol=WHT,
     ft='a', vbox=(244, 136, 44), vink=(30, 100, 190), fcol=WHT, fin=WORN, seed=1997)
 
-# Alone in the Wilderness: Part II: Twin Lakes green, the white serif lettering (typeset), Dick by the water (no logo file: its company in type)
+# Alone in the Wilderness Part II: Twin Lakes' blue and green, the white serif lettering and PART II lifted off the poster, Dick by the lake
 std('alone-in-the-wilderness-part-ii-2011', ('grad', [(0, (90, 140, 150)), (.5, (60, 90, 50)), (1, (20, 30, 14))]), WHT,
-    [T('Alone in the Wilderness', 'ter', 56, WHT), T('PART II', 'ter', 26, WHT, track=.2)], tgap=6,
+    L([(0.072, 0.063, 0.863, 0.22), (0.281, 0.224, 0.837, 0.255)], 90, WHT, mode='key', key=(250, 250, 250), t=(25, 60), gapf=.3), tgap=6,
     photo=ph(.6, .62, .45, 1.0), pb=WHT, studio=['BOB SWERER', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=WHT, vink=(60, 90, 50), fcol=(220, 230, 214), fin=SLIP)
 
-# Gangs of Wasseypur - Part 1: dusty teal and rickshaw paint, the red slab capitals (typeset), the fight (no logo file: its company in type)
+# Gangs of Wasseypur - Part 1: the faded Bollywood-print colours, red hand-painted capitals (typeset: the poster's arch over a collage of painted signs the same red, and a cut brings the signs too), Sardar
 std('gangs-of-wasseypur-part-1-2012', ('grad', [(0, (180, 170, 140)), (.5, (70, 90, 90)), (1, (20, 24, 24))]), (190, 30, 30),
     [T('GANGS OF WASSEYPUR', 'bonb', 62, (196, 34, 34), outline=((250, 240, 220), 1.4)), T('PART 1', 'herb', 26, WHT, track=.2)], tgap=8,
     photo=ph(.4, .45, .5, 1.0), pb=(196, 34, 34), studio=['JAR PICTURES'], scol=(30, 30, 30), order='lPTCF', credit=['AN ANURAG KASHYAP', 'FILM'], ccol=WHT,
     ft='a', vbox=(196, 34, 34), fcol=WHT, fin=SLIP)
 
-# X-Men: Days of Future Past: the burning future's amber, silver capitals (typeset), Logan
+# X-Men: Days of Future Past: the burning sky, the silver X-MEN and subtitle lifted off the poster, the two casts
 std('x-men-days-of-future-past-2014', ('grad', [(0, (170, 130, 80)), (.5, (70, 50, 40)), (1, (14, 10, 8))]), (220, 224, 230),
-    [T('X-MEN', 'intbk', 92, WHT, grad=[(0, (250, 250, 255)), (.5, (150, 160, 176)), (1, (230, 234, 240))]), T('DAYS OF FUTURE PAST', 'herb', 24, (220, 224, 230), track=.2)], tgap=8,
+    [L((0.14, 0.828, 0.865, 0.898), 92, WHT, mode='light'), L((0.14, 0.902, 0.865, 0.927), 26, WHT, mode='light', speck=0)], tgap=8,
     photo=ph(.68, .14, .3, 1.0), pb=(220, 224, 230), lg=WHT, lw=.6, order='LPTCF', credit=['PATRICK STEWART', 'HUGH JACKMAN'], ccol=WHT,
     ft='a', vbox=(220, 224, 230), vink=(70, 50, 40), fcol=(220, 210, 200), fin=SLIP)
 
-# Your Name. (2016): the comet sky's blue, the white handwritten title (typeset), Mitsuha on the hill
+# Your Name: Makoto Shinkai's summer sky, the white handwritten your name. lifted off the poster, Taki and Mitsuha
 std('your-name-2016', ('grad', [(0, (80, 150, 230)), (.6, (40, 100, 200)), (1, (20, 50, 100))]), WHT,
-    T('your name.', 'cho', 110, WHT),
+    L((0.112, 0.245, 0.887, 0.364), 130, WHT, mode='key', key=(250, 250, 250), t=(20, 50)),
     photo=ph(.75, .75, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A MAKOTO SHINKAI', 'FILM'], ccol=WHT,
     stick=flow(dot, 70, ['ANIME'], (220, 60, 100), d=60), ft='a', vbox=WHT, vink=(40, 100, 200), fcol=WHT, fin=SLIP)
 
-# Capernaum: Beirut sky blue, white spaced capitals (typeset), Zain on the road
+# Capernaum: Beirut sky blue, white spaced capitals, Zain on the road
 std('capernaum-2018', ('grad', [(0, (60, 160, 200)), (.6, (40, 90, 110)), (1, (30, 24, 20))]), WHT,
-    T('CAPERNAUM', 'her', 72, WHT, track=.3),
+    L((0.094, 0.135, 0.904, 0.19), 72, WHT, mode='light'),
     photo=ph(.45, .55, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A NADINE LABAKI', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 90, 110), fcol=(220, 226, 230), fin=MINT)
 
-# Metropolis (1927): an old tape, silver-black, the yellow art-deco capitals (typeset), Maria the machine
+# Metropolis (1927): an old tape, the robot's silver-black, the poster's yellow deco METROPOLIS lifted, Maria the machine
 std('metropolis-1927', ('grad', [(0, (70, 70, 72)), (.6, (24, 24, 26)), (1, (6, 6, 6))]), (230, 220, 60),
-    T('METROPOLIS', 'adv', 84, (232, 222, 64), track=.1, bold=.4),
+    L((0.282, 0.812, 0.715, 0.955), 140, (232, 222, 64), mode='key', key=(230, 210, 70), t=(70, 150)),
     photo=ph(.45, .35, .5, 1.0), pb=(232, 222, 64), lg=WHT, lw=.6, order='LPTCSF', credit=['A FRITZ LANG', 'FILM'], ccol=(232, 222, 64),
     stick=PRC(['$1.99', 'SILENT']), ft='e', fcol=(210, 210, 200), fin=OLD, seed=1927)
 
-# Drishyam (2015): Goa monsoon green, white stencil capitals (typeset), Vijay at the head
+# Drishyam: the monsoon green-grey, the poster's scratched white DRISHYAM lifted, Vijay and his family
 std('drishyam-2015', ('grad', [(0, (70, 90, 60)), (.6, (28, 36, 24)), (1, (8, 10, 6))]), WHT,
-    T('DRISHYAM', 'intbk', 92, WHT, rough=.5),
+    L((0.222, 0.403, 0.87, 0.482), 92, WHT, mode='light'),
     photo=ph(.5, .12, .4, 1.0), pb=(220, 180, 60), lg=WHT, lw=.6, order='LPTCF', credit=['AJAY DEVGN', 'TABU'], ccol=WHT,
     ft='a', vbox=(220, 180, 60), vink=(28, 36, 24), fcol=(210, 216, 200), fin=SLIP)
 
-# Elite Squad (2007): the poster's red, white heavy capitals (typeset), the BOPE squad
+# Elite Squad (2007): the poster's BOPE red, the white slab ELITE SQUAD lifted, Nascimento with his gun
 std('elite-squad-2007', ('grad', [(0, (200, 30, 30)), (.6, (130, 16, 16)), (1, (30, 6, 6))]), WHT,
-    T('ELITE SQUAD', 'intbk', 84, WHT, squeeze=.86),
+    L([(0.417, 0.422, 0.97, 0.511), (0.294, 0.516, 0.972, 0.604)], 84, WHT, mode='light', gapf=.3),
     photo=ph(.27, .75, .35, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['WAGNER MOURA'], ccol=WHT,
     ft='a', vbox=WHT, vink=(130, 16, 16), fcol=(240, 210, 206), fin=WORN, seed=2007)
 
-# M (1931): an old tape, black, the red chalked M (typeset), the marked hand
+# M (1931): an old tape, black, the red M chalked on the poster's hand cut off it, the hand
 std('m-1931', ('grad', [(0, (40, 36, 34)), (.6, (14, 12, 12)), (1, (4, 4, 4))]), (200, 40, 40),
-    T('M', 'bonb', 200, (204, 44, 44), rough=.6),
+    LC([(0.25, 0.48, 0.75, 0.72)], 200, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .3) & (a[..., 2] < .3))]),
     photo=ph(.5, .5, .6, 1.0), pb=(204, 44, 44), lg=WHT, lw=.6, order='LPTCF', credit=['PETER LORRE', 'A FRITZ LANG FILM'], ccol=(220, 214, 204),
     ft='e', fcol=(220, 214, 204), fin=OLD, seed=1931)
 
-# Talk to Her (2002): the poster's blue-and-red split, red talk, white to and blue her (typeset), Alicia and Lydia
-std('talk-to-her-2002', ('grad', [(0, (120, 150, 180)), (.5, (180, 40, 40)), (1, (40, 8, 8))]), WHT,
+# Talk to Her: the poster's black and red, red talk, white to and blue her (typeset: on the poster the red talk and to sit on Lydia's red half, the same red, so a cut takes the background with them), Alicia and Lydia
+std('talk-to-her-2002', ('grad', [(0, (40, 40, 50)), (.6, (16, 16, 22)), (1, (60, 10, 14))]), WHT,
     TT([('talk', (220, 40, 40)), ('to', WHT), ('her', (60, 170, 230))], 'schb', 100, sp=.15, outline=((20, 20, 30), 1.4)),
     photo=ph(.3, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'ALMODÓVAR'], ccol=WHT,
     ft='a', vbox=WHT, vink=(180, 40, 40), fcol=(230, 220, 220), fin=WORN, seed=2002)
 
-# Ray (2004): stage black and spotlight blue, the white script (typeset), Ray at the piano
+# Ray (2004): stage black and the spotlight, the white script Ray lifted off the poster, Ray at the piano
 std('ray-2004', ('grad', [(0, (60, 80, 110)), (.6, (16, 22, 32)), (1, (4, 6, 8))]), WHT,
-    T('Ray', 'cho', 180, WHT),
+    L((0.254, 0.745, 0.867, 0.93), 180, WHT, mode='light'),
     photo=ph(.4, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JAMIE FOXX'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 22, 32), fcol=(190, 200, 214), fin=WORN, seed=2004)
 
-# Shutter Island (2010): storm black and the match's glow, the red stencil capitals (typeset), Teddy's eyes
+# Shutter Island (2010): the storm's grey-black, the poster's red SHUTTER ISLAND lifted, Teddy and the match
 std('shutter-island-2010', ('grad', [(0, (50, 56, 60)), (.6, (16, 18, 20)), (1, (4, 4, 4))]), (210, 30, 30),
-    T('SHUTTER ISLAND', 'hcnb', 84, (214, 32, 32), squeeze=.76, bold=.8, rough=.4),
+    L([(0.283, 0.745, 0.686, 0.796), (0.316, 0.789, 0.659, 0.852)], 84, (214, 32, 32), mode='key', key=(200, 30, 30), t=(70, 150), gapf=.3),
     photo=ph(.5, .15, .5, 1.0), pb=(214, 32, 32), lg=WHT, lw=.6, order='LPTCF', credit=['LEONARDO DiCAPRIO'], ccol=WHT,
     ft='a', vbox=(214, 32, 32), fcol=(200, 200, 204), fin=SLIP, seed=2010)
 
