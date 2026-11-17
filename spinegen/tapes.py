@@ -4171,61 +4171,61 @@ std('the-bandit-1996', ('grad', [(0, (60, 40, 30)), (.6, (20, 14, 10)), (1, (4, 
     photo=ph(.5, .38, .45, 1.0), pb=WHT, studio=['ARTCAM', 'INTERNATIONAL'], scol=WHT, order='lPTCF', credit=['ŞENER ŞEN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(20, 14, 10), fcol=(210, 200, 196), fin=WORN, seed=1996)
 
-# Shithouse: the poster's orange, the cream fat capitals with the grawlix (typeset), Alex and Maggie (no logo file: its company in type)
+# Shithouse: the poster's red-orange, its cream heavy S#!% HOUSE lifted, Alex and Maggie
 std('shithouse-2020', ('grad', [(0, (230, 100, 50)), (.6, (190, 60, 40)), (1, (80, 20, 14))]), (250, 232, 200),
-    T('S#!%HOUSE', 'intbk', 92, (252, 234, 204), squeeze=.86),
+    L([(0.035, 0.061, 0.963, 0.304), (0.035, 0.318, 0.959, 0.522)], 92, (252, 234, 204), mode='key', key=(250, 235, 210), t=(40, 90), gapf=.25),
     photo=ph(.55, .7, .55, 1.0), pb=(252, 234, 204), studio=['CMR PRODUCTIONS'], scol=(252, 234, 204), order='lPTCF', credit=['A COOPER RAIFF', 'FILM'], ccol=(252, 234, 204),
     ft='a', vbox=(252, 234, 204), vink=(190, 60, 40), fcol=(252, 234, 204), fin=MINT)
 
-# Dangerous Days: Making Blade Runner: a 2-tape box (214 minutes), Los Angeles 2019 black and the refinery fire, white serif capitals (typeset)
+# Dangerous Days: Making Blade Runner (2007): a 2-tape box, black, the white serif DANGEROUS DAYS and its subtitle lifted off the poster, the crew on set
 std('dangerous-days-making-blade-runner-2007', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), WHT,
-    [T('DANGEROUS DAYS', 'ter', 110, WHT, track=.04), T('MAKING BLADE RUNNER', 'ter', 40, (230, 160, 70), track=.3)],
+    [L((0.118, 0.41, 0.879, 0.458), 110, WHT, mode='light'), L((0.189, 0.465, 0.81, 0.488), 40, (230, 160, 70), mode='light', speck=0)],
     photo=ph(.5, .16, .9, .3), pb=(230, 160, 70), lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['A DOCUMENTARY'], ccol=WHT,
     stick=TWOST((230, 160, 70), (14, 12, 10)), ft='c', vbox=WHT, vink=(14, 12, 10), fcol=(200, 196, 190), fin=SLIP, seed=2007, **TWO)
 
-# The Mole: Undercover in North Korea: the red-and-blue split, yellow heavy capitals (typeset), Ulrich
+# The Mole: Undercover in North Korea: the flag's red and blue, the poster's yellow THE MOLE and its subtitle lifted, Ulrich's face
 std('the-mole-undercover-in-north-korea-2020', ('grad', [(0, (200, 40, 50)), (.5, (60, 90, 150)), (1, (16, 24, 50))]), (250, 220, 40),
-    [T('THE MOLE', 'intbk', 92, (250, 222, 44), squeeze=.86), T('UNDERCOVER IN NORTH KOREA', 'herb', 22, (250, 222, 44), track=.08)], tgap=8,
+    [L((0.091, 0.735, 0.909, 0.826), 92, (250, 222, 44), mode='key', key=(245, 215, 50), t=(70, 150)), L((0.092, 0.827, 0.904, 0.863), 22, (250, 222, 44), mode='key', key=(245, 215, 50), t=(70, 150), speck=0)], tgap=8,
     photo=ph(.5, .18, .5, 1.0), pb=(250, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A MADS BRÜGGER', 'FILM'], ccol=WHT,
     ft='a', vbox=(250, 222, 44), vink=(60, 90, 150), fcol=WHT, fin=MINT)
 
-# Kajillionaire: the poster's blush pink, black wide capitals (typeset), Old Dolio
+# Kajillionaire: the poster's pale pink, its black spaced KAJILLIONAIRE lifted, Old Dolio in the collage
 std('kajillionaire-2020', ('grad', [(0, (246, 220, 214)), (.6, (236, 200, 196)), (1, (190, 150, 146))]), (30, 28, 28),
-    T('KAJILLIONAIRE', 'intbk', 70, (30, 28, 28), track=.06),
+    L((0.104, 0.06, 0.902, 0.121), 70, (30, 28, 28), mode='dark'),
     photo=ph(.5, .45, .45, 1.0), pb=(30, 28, 28), lg=(30, 28, 28), lw=.6, order='LPTCF', credit=['EVAN RACHEL WOOD'], ccol=(30, 28, 28),
     ft='a', vbox=(30, 28, 28), fcol=(30, 28, 28), fin=MINT)
 
-# The Firm (1993): a real rental, black, white serif capitals (typeset), Mitch's face
+# The Firm (1993): a real rental, black, the white serif THE FIRM lifted off the poster, Mitch's face
 std('the-firm-1993', ('grad', [(0, (60, 60, 70)), (.6, (18, 18, 22)), (1, (4, 4, 6))]), WHT,
-    [T('THE', 'ter', 40, WHT, track=.2), T('FIRM', 'ter', 120, WHT)], tgap=6,
+    [L((0.136, 0.655, 0.351, 0.71), 40, WHT, mode='light'), L((0.067, 0.709, 0.418, 0.796), 120, WHT, mode='light')], tgap=6,
     photo=ph(.55, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['TOM CRUISE', 'GENE HACKMAN'], ccol=WHT,
     stick=PRC(['3 NIGHTS', '$2.49']), ft='a', vbox=WHT, vink=(18, 18, 22), fcol=(200, 200, 206), fin=RENTAL, seed=1993)
 
-# Borat Subsequent Moviefilm: White House lawn green, the yellow Cyrillic-style capitals (typeset), Borat and Tutar (no logo file: the studio in type)
+# Borat Subsequent Moviefilm: the White House lawn, the poster's yellow Cyrillic-style BORAT SUBSEQUENT MOVIEFILM lifted, Borat and Tutar
 std('borat-subsequent-moviefilm-delivery-of-prodigious-bribe-to-american-regime-for-make-benefit-once-glorious-nation-of-kazakhstan-2020', ('grad', [(0, (120, 170, 200)), (.5, (80, 130, 60)), (1, (20, 40, 14))]), (240, 200, 30),
-    [T('BORAT', 'intbk', 100, (242, 204, 34), outline=((60, 50, 10), 1.6)), T('SUBSEQUENT MOVIEFILM', 'intbk', 30, (242, 204, 34), outline=((60, 50, 10), 1.0))], tgap=8,
+    [L((0.168, 0.645, 0.87, 0.812), 140, (242, 204, 34), mode='key', key=(220, 190, 40), t=(60, 130), outline=((60, 50, 10), 1.6)), L((0.205, 0.81, 0.76, 0.915), 70, (242, 204, 34), mode='key', key=(220, 190, 40), t=(60, 130), outline=((60, 50, 10), 1.6))], tgap=8,
     photo=ph(.38, .3, .45, 1.0), pb=(242, 204, 34), studio=['AMAZON STUDIOS'], scol=WHT, order='lPTCF', credit=['SACHA BARON COHEN', 'MARIA BAKALOVA'], ccol=WHT,
     ft='a', vbox=(242, 204, 34), vink=(20, 40, 14), fcol=WHT, fin=MINT)
 
-# Holiday: the Riviera's pale sea, the magenta wide capitals (typeset), Sascha on the bow
+# Holiday (2018): the sea's pale teal, the poster's magenta spaced HOLIDAY lifted, Sascha on the yacht
 std('holiday-2018', ('grad', [(0, (220, 240, 236)), (.6, (150, 210, 210)), (1, (60, 120, 130))]), (220, 30, 190),
-    T('HOLIDAY', 'intbk', 90, (224, 34, 196), track=.3),
+    L((0.057, 0.051, 0.942, 0.138), 90, (224, 34, 196), mode='key', key=(225, 30, 200), t=(70, 150)),
     photo=ph(.5, .62, .45, 1.0), pb=(224, 34, 196), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['AN ISABELLA EKLÖF', 'FILM'], ccol=(30, 30, 30),
     ft='a', vbox=(224, 34, 196), fcol=(30, 30, 30), fin=MINT)
 
-# Quiz: the falling-cash confetti teal, the yellow heavy capitals (typeset), Charles with his head in his hands
+# Quiz: the studio's confetti dark, yellow heavy capitals (typeset: on the poster the I runs into a bright patch of shirt and confetti, and every lift lost it), Charles with his head in his hands
 std('quiz-2020', ('grad', [(0, (40, 90, 110)), (.6, (16, 34, 44)), (1, (4, 10, 14))]), (246, 200, 40),
     T('QUIZ', 'intbk', 130, (248, 204, 44)),
     photo=ph(.55, .35, .55, 1.0), pb=(248, 204, 44), lg=WHT, lw=.6, order='LPTCF', credit=['THE COMPLETE', 'SERIES'], ccol=(248, 204, 44),
     ft='a', vbox=(248, 204, 44), vink=(16, 34, 44), fcol=(196, 210, 214), fin=MINT)
 
-# You Were Never Really Here: the bokeh red-gold, white spaced capitals (typeset), Joe with the hammer
+# You Were Never Really Here: the bokeh's amber, white spaced capitals (typeset: on the poster the lettering glows into the lit dress behind it, and the E's of NEVER are lost in a lift), Joe and Nina
 std('you-were-never-really-here-2017', ('grad', [(0, (180, 80, 30)), (.5, (80, 40, 20)), (1, (20, 30, 20))]), WHT,
     T('YOU WERE NEVER REALLY HERE', 'hcnb', 60, WHT, track=.25),
     photo=ph(.5, .2, .45, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['JOAQUIN PHOENIX'], ccol=WHT,
     ft='a', vbox=WHT, vink=(80, 40, 20), fcol=(230, 210, 196), fin=SLIP)
 
-# The Fresh Prince of Bel-Air Reunion: grey with the poster's neon green and pink graffiti lettering (typeset), the cast
+# The Fresh Prince of Bel-Air Reunion: the poster's cream, green capitals with the pink graffiti glow (typeset: the poster's logo is a tall stacked block whose words overlap, so it shrinks to a smudge across a spine and can't be split into lines)
 std('the-fresh-prince-of-bel-air-reunion-2020', ('grad', [(0, (200, 196, 190)), (.6, (120, 116, 110)), (1, (30, 28, 26))]), (120, 240, 60),
     [TT([('Fresh', (130, 246, 70)), ('Prince', (130, 246, 70))], 'intbki', 76, sp=.15, outline=((240, 80, 200), 2.4)), T('of Bel-Air  REUNION', 'herbi', 34, (40, 220, 220), outline=((40, 20, 60), 1.2))], tgap=8,
     photo=ph(.5, .8, .9, .6), pb=(240, 80, 200), lg=(30, 28, 26), lw=.6, order='LPTCF', credit=['WILL SMITH'], ccol=WHT,
