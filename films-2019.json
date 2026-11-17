@@ -1,0 +1,795 @@
+{
+  "year": 2019,
+  "films": [
+    {
+      "title": "Boy Erased",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-01-22",
+      "imdb": "tt7008872",
+      "poster": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 46770
+    },
+    {
+      "title": "The Favourite",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-02-19",
+      "imdb": "tt5083738",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 262668
+    },
+    {
+      "title": "Cold War",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-02-19",
+      "imdb": "tt6543652",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 66454
+    },
+    {
+      "title": "Green Book",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-21",
+      "imdb": "tt6966692",
+      "poster": "",
+      "imdbRating": 8.2,
+      "imdbVotes": 712243
+    },
+    {
+      "title": "Shoplifters",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-02-22",
+      "imdb": "tt8075192",
+      "poster": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 97376
+    },
+    {
+      "title": "Border",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-02-22",
+      "imdb": "tt5501104",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 38041
+    },
+    {
+      "title": "The Ballad of Buster Scruggs",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2019-02-23",
+      "imdb": "tt6412452",
+      "poster": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 188424
+    },
+    {
+      "title": "Minding the Gap",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-02-23",
+      "imdb": "tt7476236",
+      "poster": "",
+      "imdbRating": 8,
+      "imdbVotes": 11247
+    },
+    {
+      "title": "A Star Is Born",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-23",
+      "imdb": "tt1517451",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 454939
+    },
+    {
+      "title": "Free Solo",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-23",
+      "imdb": "tt7775622",
+      "poster": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 89385
+    },
+    {
+      "title": "Roma",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2019-02-24",
+      "imdb": "tt6155172",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 180464
+    },
+    {
+      "title": "Spider-Man: Into the Spider-Verse",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-02-24",
+      "imdb": "tt4633694",
+      "poster": "",
+      "imdbRating": 8.4,
+      "imdbVotes": 825162
+    },
+    {
+      "title": "Can You Ever Forgive Me?",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-24",
+      "imdb": "tt4595882",
+      "poster": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 59360
+    },
+    {
+      "title": "Mid90s",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-26",
+      "imdb": "tt5613484",
+      "poster": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 90381
+    },
+    {
+      "title": "Bohemian Rhapsody",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-02-26",
+      "imdb": "tt1727824",
+      "poster": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 657815
+    },
+    {
+      "title": "Triple Frontier",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-03-17",
+      "imdb": "tt1488606",
+      "poster": "",
+      "imdbRating": 6.5,
+      "imdbVotes": 164701
+    },
+    {
+      "title": "Guava Island",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-04-15",
+      "imdb": "tt8858104",
+      "poster": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 12299
+    },
+    {
+      "title": "The Boy Band Con: The Lou Pearlman Story",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-05-03",
+      "imdb": "tt9617710",
+      "poster": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 744
+    },
+    {
+      "title": "Extremely Wicked, Shockingly Evil and Vile",
+      "rating": 3.0,
+      "rating10": 5.5,
+      "watched": "2019-05-07",
+      "imdb": "tt2481498",
+      "poster": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 114282
+    },
+    {
+      "title": "Unicorn Store",
+      "rating": 2.0,
+      "rating10": 4,
+      "watched": "2019-05-07",
+      "imdb": "tt2338454",
+      "poster": "",
+      "imdbRating": 5.6,
+      "imdbVotes": 21726
+    },
+    {
+      "title": "Dolemite Is My Name",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-10-27",
+      "imdb": "tt8526872",
+      "poster": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 68852
+    },
+    {
+      "title": "Greenberg",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-11-02",
+      "imdb": "tt1234654",
+      "poster": "",
+      "imdbRating": 6.1,
+      "imdbVotes": 40522
+    },
+    {
+      "title": "Good Boys",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-02",
+      "imdb": "tt6977338",
+      "poster": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 91508
+    },
+    {
+      "title": "Twinsters",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-19",
+      "imdb": "tt2980626",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 4983
+    },
+    {
+      "title": "Booksmart",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-20",
+      "imdb": "tt1489887",
+      "poster": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 142764
+    },
+    {
+      "title": "Three Identical Strangers",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-11-23",
+      "imdb": "tt7664504",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 45598
+    },
+    {
+      "title": "Stop Making Sense",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-11-23",
+      "imdb": "tt0088178",
+      "poster": "",
+      "imdbRating": 8.7,
+      "imdbVotes": 24784
+    },
+    {
+      "title": "Over the Garden Wall",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-11-23",
+      "imdb": "tt3718778",
+      "poster": "",
+      "imdbRating": 8.7,
+      "imdbVotes": 94832
+    },
+    {
+      "title": "I Love You, Now Die: The Commonwealth Vs. Michelle Carter",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-11-23",
+      "imdb": "tt9614090",
+      "poster": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 9257
+    },
+    {
+      "title": "The Lunchbox",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-11-23",
+      "imdb": "tt2350496",
+      "poster": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 70673
+    },
+    {
+      "title": "Mommy Dead and Dearest",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-11-23",
+      "imdb": "tt6442978",
+      "poster": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 13880
+    },
+    {
+      "title": "Titus",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt0120866",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 22440
+    },
+    {
+      "title": "Leaving Neverland",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt9573980",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 33117
+    },
+    {
+      "title": "The Big Sick",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt5462602",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 152228
+    },
+    {
+      "title": "Sleepers",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt0117665",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 260828
+    },
+    {
+      "title": "English Vinglish",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt2181931",
+      "poster": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 45987
+    },
+    {
+      "title": "Living Dolls",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt2950434",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 85
+    },
+    {
+      "title": "All the Money in the World",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt5294550",
+      "poster": "",
+      "imdbRating": 6.8,
+      "imdbVotes": 97713
+    },
+    {
+      "title": "Shot Caller",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt4633690",
+      "poster": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 116502
+    },
+    {
+      "title": "The Problem with Apu",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt7588752",
+      "poster": "",
+      "imdbRating": 3.7,
+      "imdbVotes": 3234
+    },
+    {
+      "title": "Police Story",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-11-23",
+      "imdb": "tt0089374",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 47686
+    },
+    {
+      "title": "The Wife",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt3750872",
+      "poster": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 45514
+    },
+    {
+      "title": "The Old Man & the Gun",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt2837574",
+      "poster": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 53241
+    },
+    {
+      "title": "A Serious Man",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt1019452",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 160643
+    },
+    {
+      "title": "Taking Lives",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt0364045",
+      "poster": "",
+      "imdbRating": 6.2,
+      "imdbVotes": 102449
+    },
+    {
+      "title": "One Hour Photo",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt0265459",
+      "poster": "",
+      "imdbRating": 6.8,
+      "imdbVotes": 142030
+    },
+    {
+      "title": "We Live in Public",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt0498329",
+      "poster": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 2097
+    },
+    {
+      "title": "Mike Tyson: Undisputed Truth",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt3009336",
+      "poster": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 3381
+    },
+    {
+      "title": "Perfect Bid: The Contestant Who Knew Too Much",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt6854248",
+      "poster": "",
+      "imdbRating": 6.5,
+      "imdbVotes": 3362
+    },
+    {
+      "title": "McCabe & Mrs. Miller",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-23",
+      "imdb": "tt0067411",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 30977
+    },
+    {
+      "title": "Miami Vice",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-11-23",
+      "imdb": "tt0430357",
+      "poster": "",
+      "imdbRating": 6.1,
+      "imdbVotes": 134741
+    },
+    {
+      "title": "Small Town Crime",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-11-23",
+      "imdb": "tt5751998",
+      "poster": "",
+      "imdbRating": 6.6,
+      "imdbVotes": 13506
+    },
+    {
+      "title": "Criminal Squad",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-11-23",
+      "imdb": "tt1259528",
+      "poster": "",
+      "imdbRating": 7,
+      "imdbVotes": 156747
+    },
+    {
+      "title": "The Bits of Yesterday",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-11-23",
+      "imdb": "tt7116478",
+      "poster": "",
+      "imdbRating": 5.6,
+      "imdbVotes": 166
+    },
+    {
+      "title": "The Equalizer 2",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-11-23",
+      "imdb": "tt3766354",
+      "poster": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 235401
+    },
+    {
+      "title": "The Magnificent Seven",
+      "rating": 3.0,
+      "rating10": 5.5,
+      "watched": "2019-11-23",
+      "imdb": "tt2404435",
+      "poster": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 250752
+    },
+    {
+      "title": "Blood In, Blood Out",
+      "rating": 3.0,
+      "rating10": 5.5,
+      "watched": "2019-11-23",
+      "imdb": "tt0106469",
+      "poster": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 38620
+    },
+    {
+      "title": "The Act of Killing",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2019-11-27",
+      "imdb": "tt2375605",
+      "poster": "",
+      "imdbRating": 8.2,
+      "imdbVotes": 45090
+    },
+    {
+      "title": "At the Heart of Gold: Inside the USA Gymnastics Scandal",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2019-11-27",
+      "imdb": "tt8299654",
+      "poster": "",
+      "imdbRating": 8,
+      "imdbVotes": 3748
+    },
+    {
+      "title": "Camp Hollywood",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-11-27",
+      "imdb": "tt0439489",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 608
+    },
+    {
+      "title": "Parasite",
+      "rating": 5.0,
+      "rating10": 9.5,
+      "watched": "2019-12-06",
+      "imdb": "tt6751668",
+      "poster": "",
+      "imdbRating": 8.5,
+      "imdbVotes": 1209661
+    },
+    {
+      "title": "Once Upon a Time in America",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-12-08",
+      "imdb": "tt0087843",
+      "poster": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 414394
+    },
+    {
+      "title": "Under the Skin",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-12-09",
+      "imdb": "tt1441395",
+      "poster": "",
+      "imdbRating": 6.3,
+      "imdbVotes": 174822
+    },
+    {
+      "title": "A Separation",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-12-10",
+      "imdb": "tt1832382",
+      "poster": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 281794
+    },
+    {
+      "title": "Marriage Story",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-12-12",
+      "imdb": "tt7653254",
+      "poster": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 377401
+    },
+    {
+      "title": "Dheepan",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-12-12",
+      "imdb": "tt4082068",
+      "poster": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 18175
+    },
+    {
+      "title": "Apollo 11",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-24",
+      "imdb": "tt8760684",
+      "poster": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 29201
+    },
+    {
+      "title": "Eyes Wide Shut",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2019-12-26",
+      "imdb": "tt0120663",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 445532
+    },
+    {
+      "title": "Love Actually",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-27",
+      "imdb": "tt0314331",
+      "poster": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 586796
+    },
+    {
+      "title": "The Celebration",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-27",
+      "imdb": "tt0154420",
+      "poster": "",
+      "imdbRating": 8,
+      "imdbVotes": 101369
+    },
+    {
+      "title": "Klaus",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-27",
+      "imdb": "tt4729430",
+      "poster": "",
+      "imdbRating": 8.2,
+      "imdbVotes": 245194
+    },
+    {
+      "title": "48 Hours",
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2019-12-27",
+      "imdb": "tt0083511",
+      "poster": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 94923
+    },
+    {
+      "title": "Hustlers",
+      "rating": 3.0,
+      "rating10": 6,
+      "watched": "2019-12-27",
+      "imdb": "tt5503686",
+      "poster": "",
+      "imdbRating": 6.3,
+      "imdbVotes": 114363
+    },
+    {
+      "title": "Joker",
+      "rating": 4.0,
+      "rating10": 8,
+      "watched": "2019-12-29",
+      "imdb": "tt7286456",
+      "poster": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 1737659
+    },
+    {
+      "title": "Shirkers",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-12-29",
+      "imdb": "tt7472352",
+      "poster": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 6063
+    },
+    {
+      "title": "True Grit",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-12-30",
+      "imdb": "tt1403865",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 380700
+    },
+    {
+      "title": "Inside Llewyn Davis",
+      "rating": 4.0,
+      "rating10": 7.5,
+      "watched": "2019-12-30",
+      "imdb": "tt2042568",
+      "poster": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 173912
+    },
+    {
+      "title": "Toy Story 4",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-30",
+      "imdb": "tt1979376",
+      "poster": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 333734
+    },
+    {
+      "title": "Cinemania",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2019-12-31",
+      "imdb": "tt0281724",
+      "poster": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 2463
+    }
+  ]
+}

@@ -26,7 +26,7 @@
 
   /* ---------- which year's shelf: ?shelf=2025 (no param = the newest) ---------- */
   // One data file and one ticket image per year. Add a year here (and its watched-<year>.png) to add a shelf.
-  const SHELVES = { 2022: 'films-2022.json', 2023: 'films-2023.json', 2024: 'films-2024.json', 2025: 'films-2025.json', 2026: 'films.json' };
+  const SHELVES = { 2019: 'films-2019.json', 2020: 'films-2020.json', 2021: 'films-2021.json', 2022: 'films-2022.json', 2023: 'films-2023.json', 2024: 'films-2024.json', 2025: 'films-2025.json', 2026: 'films.json' };
   const YEARS = Object.keys(SHELVES).map(Number).sort((a, b) => a - b);
   const NEWEST = YEARS[YEARS.length - 1];
   const SHELF = (() => { const y = Number(new URLSearchParams(location.search).get('shelf')); return SHELVES[y] ? y : NEWEST; })();

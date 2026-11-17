@@ -4,4 +4,5 @@ node_modules/
 diary.csv
 needs_review.txt
 ratings*.csv
+!data/ratings.csv
 __pycache__/
