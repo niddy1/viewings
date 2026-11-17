@@ -3109,69 +3109,69 @@ std('police-story-1985', ('grad', [(0, (90, 96, 90)), (.6, (40, 44, 40)), (1, (1
     photo=ph(.4, .15, .45, 1.0), pb=(246, 222, 40), lg=WHT, lw=.6, order='LPTCSF', credit=['JACKIE CHAN'], ccol=(246, 222, 40),
     stick=PRC(['$1.49', 'ACTION']), ft='a', vbox=(246, 222, 40), vink=(20, 18, 16), fcol=(200, 200, 190), fin=RENTAL, seed=1985)
 
-# The Wife: Stockholm night and pink blossom, thin spaced white capitals (typeset), Joan
+# The Wife: Stockholm night and pink blossom, thin spaced white capitals, Joan
 std('the-wife-2017', ('grad', [(0, (60, 50, 70)), (.6, (22, 18, 26)), (1, (60, 20, 40))]), WHT,
-    [T('THE', 'ter', 26, WHT, track=.4), T('WIFE', 'ter', 90, WHT, track=.5)], tgap=8,
+    [L((0.44, 0.718, 0.58, 0.746), 26, WHT, mode='light', speck=0), L((0.278, 0.744, 0.73, 0.805), 90, WHT, mode='light')], tgap=8,
     photo=ph(.3, .3, .4, 1.0), pb=(220, 120, 160), lg=WHT, lw=.6, order='LPTCF', credit=['GLENN CLOSE', 'JONATHAN PRYCE'], ccol=WHT,
     ft='a', vbox=(220, 120, 160), fcol=(220, 210, 220), fin=MINT)
 
-# The Old Man & the Gun: the poster's cream, the red serif capitals (typeset: stacked), Forrest tipping his hat
+# The Old Man & the Gun: the poster's cream, its red serif lettering lifted (stacked there, one line here), Forrest tipping his hat
 std('the-old-man-the-gun-2018', ('solid', (240, 232, 214)), (180, 50, 40),
-    TT([('the', (182, 52, 42)), ('OLD MAN', (182, 52, 42)), ('& the', (182, 52, 42)), ('GUN', (182, 52, 42))], 'schb', 76, sp=.2),
+    L([(0.114, 0.117, 0.384, 0.22), (0.178, 0.216, 0.445, 0.295), (0.104, 0.292, 0.447, 0.4)], 76, (182, 52, 42), mode='key', key=(180, 50, 40), t=(70, 150), gapf=.3),
     photo=ph(.65, .28, .4, 1.0), pb=(182, 52, 42), lg=(40, 50, 70), lw=.6, order='LPTCF', credit=['ROBERT REDFORD', 'CASEY AFFLECK'], ccol=(40, 50, 70),
     ft='a', vbox=(182, 52, 42), fcol=(40, 50, 70), fin=MINT)
 
-# A Serious Man (2009): Minnesota sky, the white and bronze serif capitals (typeset), Larry on the roof
+# A Serious Man (2009): Minnesota sky, the poster's white and bronze serif capitals cut off it, Larry on the roof
 std('a-serious-man-2009', ('grad', [(0, (120, 150, 170)), (.6, (170, 190, 200)), (1, (90, 90, 90))]), WHT,
-    TT([('A', (150, 100, 40)), ('SERIOUS', WHT), ('MAN', (150, 100, 40))], 'ter', 80, sp=.25),
+    LC([(0.448, 0.117, 0.583, 0.2), (0.086, 0.212, 0.945, 0.314), (0.292, 0.327, 0.741, 0.41)], 80, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .2)))] * 3),
     photo=ph(.75, .65, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT,
     ft='a', vbox=WHT, vink=(90, 90, 90), fcol=WHT, fin=SLIP, seed=2009)
 
-# Taking Lives (2004): murky green-black, the scratchy cream serif (typeset), Illeana's face
+# Taking Lives (2004): murky green-black, the scratchy cream serif, Illeana's face
 std('taking-lives-2004', ('grad', [(0, (60, 70, 50)), (.6, (20, 24, 16)), (1, (6, 6, 4))]), (230, 220, 190),
-    T('TAKING LIVES', 'ter', 74, (232, 222, 192), track=.12, rough=.7),
+    L((0.18, 0.13, 0.89, 0.197), 74, (232, 222, 192), mode='light'),
     photo=ph(.6, .4, .45, 1.0), pb=(232, 222, 192), lg=WHT, lw=.6, order='LPTCF', credit=['ANGELINA JOLIE', 'ETHAN HAWKE'], ccol=(232, 222, 192),
     ft='a', vbox=(232, 222, 192), vink=(20, 24, 16), fcol=(190, 190, 170), fin=WORN, seed=2004)
 
-# One Hour Photo (2002): a real rental, the photo lab's white, the navy rounded capitals (typeset), Sy and the negatives
+# One Hour Photo (2002): a real rental, the photo lab's white, the navy rounded capitals, Sy and the negatives
 std('one-hour-photo-2002', ('grad', [(0, (246, 246, 246)), (.6, (222, 222, 224)), (1, (160, 160, 170))]), (30, 50, 100),
-    T('One Hour Photo', 'popm', 70, (30, 52, 104)),
+    L([(0.053, 0.188, 0.647, 0.272), (0.055, 0.274, 0.429, 0.358)], 70, (30, 52, 104), mode='dark', gapf=.3),
     photo=ph(.58, .65, .4, 1.0), pb=(30, 52, 104), lg=(30, 52, 104), lw=.6, order='LPTCSF', credit=['ROBIN WILLIAMS'], ccol=(30, 52, 104),
     stick=RWD(), ft='a', vbox=(30, 52, 104), fcol=(30, 52, 104), fin=RENTAL, seed=2002)
 
-# We Live in Public: black, the white rounded capitals (typeset), the wall of pods
+# We Live in Public: black, the white rounded capitals, the wall of pods
 std('we-live-in-public-2009', ('grad', [(0, (40, 40, 44)), (.6, (14, 14, 16)), (1, (4, 4, 4))]), WHT,
-    T('WE LIVE IN PUBLIC', 'popb', 60, WHT, track=.04),
+    L((0.02, 0.142, 0.98, 0.199), 60, WHT, mode='light'),
     photo=ph(.5, .55, .8, .8), pb=(240, 130, 40), lg=WHT, lw=.6, order='LPTCF', credit=['AN ONDI TIMONER', 'FILM'], ccol=WHT,
     ft='a', vbox=(240, 130, 40), fcol=(200, 200, 204), fin=SLIP, seed=2009)
 
-# Mike Tyson: Undisputed Truth: black, the white and red heavy capitals (typeset), the tattooed head
+# Mike Tyson: Undisputed Truth: black, the poster's white MIKE TYSON and red UNDISPUTED TRUTH cut off it, the tattooed head
 std('mike-tyson-undisputed-truth-2013', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (4, 4, 4))]), WHT,
-    TT([('MIKE TYSON', WHT), ('UNDISPUTED TRUTH', (214, 30, 30))], 'intbk', 60, sp=.25, squeeze=.84),
+    [LC([(0.224, 0.562, 0.904, 0.678), (0.224, 0.68, 0.782, 0.767)], 60, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .55) & (a[..., 1] < .3)))] * 2), LC([(0.224, 0.771, 0.936, 0.822), (0.224, 0.822, 0.782, 0.912)], 60, gapf=.25, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .55) & (a[..., 1] < .3)))] * 2)],
     photo=ph(.65, .25, .5, 1.0), pb=(214, 30, 30), lg=WHT, lw=.6, order='LPTCF', credit=['MIKE TYSON'], ccol=WHT,
     ft='a', vbox=(214, 30, 30), fcol=(200, 200, 200), fin=SLIP)
 
-# Perfect Bid: the game show's navy, the yellow blocky capitals (typeset), Ted at his podium (no logo file: its company in type)
+# Perfect Bid: the game show's navy, the poster's yellow blocky PERFECT BID and its subtitle cut off it, Ted at his podium (no logo file: its company in type)
 std('perfect-bid-the-contestant-who-knew-too-much-2017', ('grad', [(0, (30, 40, 120)), (.6, (14, 18, 60)), (1, (6, 8, 26))]), (250, 220, 40),
-    [T('PERFECT BID', 'intbk', 80, (250, 222, 44), squeeze=.86), T('THE CONTESTANT WHO KNEW TOO MUCH', 'herb', 18, (250, 222, 44), track=.08)], tgap=8,
+    LC([(0.017, 0.014, 0.984, 0.196)], 100, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .65) & (a[..., 2] < .45))]), tgap=8,
     photo=ph(.35, .33, .35, 1.0), pb=(250, 222, 44), studio=['FORTYFPS', 'PRODUCTIONS'], scol=(250, 222, 44), order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
     ft='a', vbox=(250, 222, 44), vink=(14, 18, 60), fcol=(200, 206, 230), fin=MINT)
 
-# McCabe & Mrs. Miller (1971): an old tape, Presbyterian Church mud and rain, cream circus-poster serif (typeset), McCabe in his fur coat
+# McCabe & Mrs. Miller (1971): an old tape, Presbyterian Church mud and rain, the poster's cream circus-poster lettering lifted, McCabe in his fur coat
 std('mccabe-mrs-miller-1971', ('grad', [(0, (150, 140, 120)), (.6, (90, 76, 60)), (1, (30, 24, 18))]), (240, 230, 210),
-    T('McCABE & MRS. MILLER', 'ter', 66, (242, 232, 212), track=.04, outline=((60, 40, 30), 1.8)),
+    L((0.045, 0.415, 0.982, 0.78), 150, (242, 232, 212), mode='light', outline=((60, 40, 30), 1.8)),
     photo=ph(.45, .2, .4, 1.0), pb=(242, 232, 212), lg=WHT, lw=.6, order='LPTCSF', credit=['WARREN BEATTY', 'JULIE CHRISTIE'], ccol=(242, 232, 212),
     stick=PRC(['$2.99', 'WESTERN']), ft='e', fcol=(230, 220, 200), fin=OLD, seed=1971)
 
-# Miami Vice (2006): ocean-night blue, the white capitals reversed out of the blue box (typeset), Crockett in his shades
+# Miami Vice (2006): ocean-night blue, the poster's white MIAMI VICE in its blue box cut off it, Crockett in his shades
 std('miami-vice-2006', ('grad', [(0, (40, 60, 110)), (.6, (16, 24, 50)), (1, (4, 6, 14))]), WHT,
-    T('MIAMI VICE', 'her', 70, WHT, box=((40, 70, 170), 10, 6)),
+    LC([(0.245, 0.845, 0.805, 0.955)], 130),
     photo=ph(.3, .48, .4, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['COLIN FARRELL', 'JAMIE FOXX'], ccol=WHT,
     ft='a', vbox=WHT, vink=(16, 24, 50), fcol=(190, 200, 220), fin=WORN, seed=2006)
 
-# Small Town Crime: the poster's off-white, red and blue stacked capitals (typeset), Mike in his suit
+# Small Town Crime: the poster's off-white, its red SMALL TOWN (skull for the O) and blue CRIME cut off it, stacked there and in one line here, Mike in his suit
 std('small-town-crime-2018', ('grad', [(0, (238, 236, 230)), (.6, (214, 210, 204)), (1, (150, 146, 140))]), (180, 40, 40),
-    TT([('SMALL', (182, 42, 42)), ('TOWN', (182, 42, 42)), ('CRIME', (40, 80, 130))], 'hcnb', 84, sp=.25, squeeze=.8),
+    LC([(0.058, 0.586, 0.313, 0.654), (0.058, 0.654, 0.313, 0.716), (0.058, 0.716, 0.313, 0.785)], 84, gapf=.3, valign='base', margin=0, cuts=[key_cut(lambda a: (_sat(a) > .25) & (_lum(a) < .65) & (a[..., 0] > a[..., 2]))] * 2 + [key_cut(lambda a: (a[..., 2] > a[..., 0] + .08) & (_lum(a) < .6))]),
     photo=ph(.55, .12, .3, 1.0), pb=(182, 42, 42), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['JOHN HAWKES'], ccol=(30, 30, 30),
     ft='a', vbox=(182, 42, 42), fcol=(30, 30, 30), fin=MINT)
 
@@ -3181,7 +3181,7 @@ std('den-of-thieves-2018', ('grad', [(0, (90, 110, 130)), (.6, (34, 42, 50)), (1
     photo=ph(.6, .75, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['GERARD BUTLER'], ccol=WHT,
     ft='a', vbox=(220, 30, 30), fcol=(200, 206, 214), fin=MINT)
 
-# The Bits of Yesterday: the retro-game neon on green, the magenta and pink capitals (typeset) (no logo file: its company in type)
+# The Bits of Yesterday: the retro-game neon on green, magenta and pink capitals (typeset: the poster is a small, soft image and its title runs into the green artwork, so cuts come out ragged and lose THE and OF) (no logo file: its company in type)
 std('the-bits-of-yesterday-2018', ('grad', [(0, (40, 160, 90)), (.5, (30, 60, 80)), (1, (20, 10, 40))]), (250, 60, 200),
     [T('THE BITS OF', 'intbki', 36, (250, 120, 220)), T('YESTERDAY', 'intbki', 84, (250, 60, 200), outline=((30, 10, 40), 1.8))], tgap=8,
     photo=ph(.5, .45, .5, 1.0), pb=(250, 60, 200), studio=['DREAM CASE', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY'], ccol=WHT,
