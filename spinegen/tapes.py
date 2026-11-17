@@ -4027,73 +4027,73 @@ std('cinema-paradiso-1988', ('grad', [(0, (60, 40, 20)), (.6, (20, 14, 8)), (1, 
     photo=ph(.6, .22, .5, 1.0), pb=(244, 218, 134), lg=WHT, lw=.6, order='LPTCSF', credit=['A GIUSEPPE TORNATORE', 'FILM'], ccol=(244, 218, 134),
     stick=RWD(fill=(250, 240, 220)), ft='a', vbox=(244, 218, 134), vink=(20, 14, 8), fcol=(210, 200, 180), fin=RENTAL, seed=1988)
 
-# Sherlock Jr. (1924): an old tape, the sepia-white, dark condensed capitals (typeset), Buster with his book
+# Sherlock, Jr. (1924): an old tape, the poster's ink-wash grey, its painted SHERLOCK, JR. lifted, Buster with the magnifying glass
 std('sherlock-jr-1924', ('grad', [(0, (226, 222, 214)), (.6, (190, 184, 172)), (1, (100, 94, 84))]), (40, 40, 40),
-    T('SHERLOCK, JR.', 'hcnb', 80, (40, 40, 40), squeeze=.8, bold=.4),
+    L((0.042, 0.157, 0.961, 0.253), 80, (40, 40, 40), mode='dark'),
     photo=ph(.5, .45, .5, 1.0), pb=(40, 40, 40), lg=(40, 40, 40), lw=.6, order='LPTCF', credit=['BUSTER KEATON'], ccol=(40, 40, 40),
     ft='e', fcol=(40, 40, 40), fin=OLD, seed=1924)
 
-# Andrei Rublev (1966): an old tape, the poster's white, thin spaced capitals (typeset), Rublev with his halo
+# Andrei Rublev (1966): an old tape (183 minutes, one tape), the poster's white wash, thin spaced capitals (typeset: the poster's run across the monk's dark robe, so the middle letters vanish into it), the monk under the halo
 std('andrei-rublev-1966', ('grad', [(0, (240, 238, 232)), (.6, (216, 212, 204)), (1, (140, 134, 124))]), (30, 30, 30),
     T('ANDREI RUBLEV', 'her', 60, (30, 30, 30), track=.4),
     photo=ph(.48, .2, .4, 1.0), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LPTCF', credit=['AN ANDREI TARKOVSKY', 'FILM'], ccol=(30, 30, 30),
     ft='e', fcol=(30, 30, 30), fin=OLD, seed=1966)
 
-# Cinderella Man (2005): the fight-night green, the cream serif (typeset), Jim and Mae
+# Cinderella Man (2005): the arena's dark, the cream serif Cinderella Man lifted off the poster, Jim and Mae
 std('cinderella-man-2005', ('grad', [(0, (40, 70, 60)), (.6, (14, 26, 22)), (1, (4, 8, 6))]), (240, 230, 210),
-    T('Cinderella Man', 'ter', 84, (242, 232, 212)),
+    L((0.072, 0.799, 0.937, 0.869), 84, (242, 232, 212), mode='light'),
     photo=ph(.4, .2, .5, 1.0), pb=(242, 232, 212), lg=WHT, lw=.6, order='LPTCF', credit=['RUSSELL CROWE', 'RENÉE ZELLWEGER'], ccol=(242, 232, 212),
     ft='a', vbox=(242, 232, 212), vink=(14, 26, 22), fcol=(200, 210, 204), fin=WORN, seed=2005)
 
-# The Invisible Guest: the lake's grey-blue, thin spaced capitals (typeset), Adrián on the water
+# The Invisible Guest: the flooded lake's grey-blue, the thin spaced THE INVISIBLE GUEST lifted, the man standing on the water
 std('the-invisible-guest-2017', ('grad', [(0, (200, 212, 222)), (.6, (160, 176, 190)), (1, (90, 104, 118))]), (40, 50, 60),
-    T('THE INVISIBLE GUEST', 'her', 56, (40, 50, 60), track=.25),
+    L((0.091, 0.094, 0.909, 0.137), 56, (40, 50, 60), mode='dark', speck=0),
     photo=ph(.5, .32, .4, 1.0), pb=(40, 50, 60), lg=(40, 50, 60), lw=.6, order='LPTCF', credit=['AN ORIOL PAULO', 'FILM'], ccol=WHT,
     ft='a', vbox=WHT, vink=(40, 50, 60), fcol=WHT, fin=SLIP)
 
-# The Elephant Man (1980): an old tape, black, the white Victorian wood-type (typeset), John in his hood
+# The Elephant Man (1980): an old tape, black, the white circus lettering THE ELEPHANT MAN lifted off the poster, John in his hood
 std('the-elephant-man-1980', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (4, 4, 4))]), WHT,
-    T('THE ELEPHANT MAN', 'bonb', 76, WHT, rough=.4),
+    L((0.194, 0.709, 0.8, 0.92), 140, WHT, mode='light'),
     photo=ph(.4, .3, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A DAVID LYNCH', 'FILM'], ccol=WHT,
     stick=BAR('15 01980', top='DRAMA', fill=(226, 220, 240), ink=(40, 30, 70)), ft='e', fcol=(200, 200, 200), fin=OLD, seed=1980)
 
-# Midnight Cowboy (1969): an old tape, the poster's sunrise circles, the gold slab capitals (typeset), Ratso and Joe
+# Midnight Cowboy (1969): an old tape, the poster's colour-wheel circles, its pale orange MIDNIGHT COWBOY lifted, Joe and Ratso walking
 std('midnight-cowboy-1969', ('grad', [(0, (240, 80, 120)), (.4, (200, 60, 140)), (.75, (60, 180, 160)), (1, (20, 40, 40))]), (250, 220, 120),
-    T('MIDNIGHT COWBOY', 'bonb', 70, (252, 224, 124), outline=((60, 20, 30), 1.6)),
+    L((0.125, 0.128, 0.875, 0.17), 70, (252, 224, 200), mode='key', key=(245, 225, 205), t=(30, 70), outline=((60, 20, 30), 1.6)),
     photo=ph(.5, .65, .6, 1.0), pb=(252, 224, 124), lg=WHT, lw=.6, order='LPTCSF', credit=['DUSTIN HOFFMAN', 'JON VOIGHT'], ccol=WHT,
     stick=PRC(['$2.49', 'DRAMA']), ft='e', fcol=WHT, fin=OLD, seed=1969)
 
-# Bound (1996): a real rental, black and white, the black heavy capitals (typeset), Violet and Corky
+# Bound (1996): the poster's white, its black heavy BOUND lifted, Violet and Corky tied together
 std('bound-1996', ('grad', [(0, (246, 244, 240)), (.6, (220, 216, 210)), (1, (140, 136, 130))]), (20, 18, 18),
-    T('BOUND', 'intbk', 120, (20, 18, 18)),
+    L((0.062, 0.745, 0.942, 0.93), 120, (20, 18, 18), mode='dark'),
     photo=ph(.5, .3, .6, 1.0), pb=(20, 18, 18), lg=(20, 18, 18), lw=.6, order='LPTCF', credit=['JENNIFER TILLY', 'GINA GERSHON'], ccol=(20, 18, 18),
     ft='a', vbox=(20, 18, 18), fcol=(20, 18, 18), fin=RENTAL, seed=1996)
 
-# Stalker (1979): an old tape, the Zone's sick green-grey, white heavy capitals (typeset), the three in the room
+# Stalker (1979): an old tape, the Zone's grey-green dunes, the white heavy STALKER lifted off the poster, the Stalker in the Room
 std('stalker-1979', ('grad', [(0, (150, 170, 150)), (.6, (80, 96, 80)), (1, (20, 26, 20))]), WHT,
-    T('STALKER', 'intbk', 100, WHT),
+    L((0.177, 0.111, 0.837, 0.196), 100, WHT, mode='light'),
     photo=ph(.45, .4, .5, 1.0), pb=WHT, lg=WHT, lw=.6, order='LPTCF', credit=['AN ANDREI TARKOVSKY', 'FILM'], ccol=WHT,
     ft='e', fcol=(220, 226, 220), fin=OLD, seed=1979)
 
-# The Gold Rush (1925): an old tape, the cabin's sepia, the yellow slab capitals (typeset), the Tramp (no logo file: Chaplin's company in type)
+# The Gold Rush (1925): an old tape, the cabin's brown gloom, the gold THE GOLD RUSH lifted off the poster, the Tramp in his hut
 std('the-gold-rush-1925', ('grad', [(0, (130, 100, 50)), (.6, (70, 50, 24)), (1, (20, 14, 6))]), (246, 206, 60),
-    T('THE GOLD RUSH', 'bonb', 80, (248, 210, 64)),
+    L([(0.585, 0.304, 0.808, 0.362), (0.49, 0.361, 0.896, 0.441), (0.5, 0.443, 0.891, 0.52)], 80, (248, 210, 64), mode='key', key=(245, 200, 70), t=(70, 150), gapf=.3),
     photo=ph(.25, .35, .4, 1.0), pb=(248, 210, 64), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=(248, 210, 64), order='lPTCF', credit=['CHARLES CHAPLIN'], ccol=WHT,
     ft='e', fcol=(230, 210, 180), fin=OLD, seed=1925)
 
-# Modern Times (1936): an old tape, white, the black art-deco capitals (typeset), the Tramp's cogwheel eyes
+# Modern Times (1936): an old tape, the poster's white, its black MODERN TIMES lifted, the Tramp with the cogs for eyes
 std('modern-times-1936', ('grad', [(0, (246, 246, 244)), (.6, (222, 220, 216)), (1, (150, 146, 140))]), (20, 18, 18),
-    T('MODERN TIMES', 'adv', 76, (20, 18, 18), track=.12, bold=.6),
+    L((0.258, 0.929, 0.74, 0.962), 76, (20, 18, 18), mode='dark'),
     photo=ph(.5, .5, .55, 1.0), pb=(20, 18, 18), studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=(20, 18, 18), order='lPTCSF', credit=['CHARLES CHAPLIN'], ccol=(20, 18, 18),
     stick=PRC(['$1.99', 'COMEDY']), ft='e', fcol=(20, 18, 18), fin=OLD, seed=1936)
 
-# The Passion of Joan of Arc (1928): an old tape, black, the pale stencil capitals (typeset), Joan's upturned face (no logo file: its company in type)
+# The Passion of Joan of Arc (1928): an old tape, the poster's grey, its spaced THE PASSION OF JOAN OF ARC lifted, Joan in her crown of rope
 std('the-passion-of-joan-of-arc-1928', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (4, 4, 4))]), (220, 216, 206),
-    [T('THE PASSION OF', 'monob', 36, (222, 218, 208), track=.2), T('JOAN OF ARC', 'monob', 70, (222, 218, 208), track=.12)], tgap=8,
+    [L((0.1, 0.84, 0.9, 0.888), 36, (190, 188, 182), mode='key', key=(130, 130, 130), t=(30, 70), speck=0), L((0.18, 0.888, 0.82, 0.95), 70, (222, 218, 208), mode='light')], tgap=8,
     photo=ph(.55, .3, .5, 1.0), pb=(222, 218, 208), studio=['SOCIÉTÉ GÉNÉRALE', 'DES FILMS'], scol=(222, 218, 208), order='lPTCF', credit=['A CARL TH. DREYER', 'FILM'], ccol=(222, 218, 208),
     ft='e', fcol=(200, 196, 190), fin=OLD, seed=1928)
 
-# The Kid (1921): an old tape, the brick-wall grey, the white painted capitals (typeset), the Tramp and the Kid (no logo file: Chaplin's company in type)
+# The Kid (1921): an old tape, the slum wall's grey, white brushed capitals (typeset: on the poster THE KID is painted letter above letter down the wall, so a lift would come out stacked sideways), the Tramp and the Kid
 std('the-kid-1921', ('grad', [(0, (110, 110, 108)), (.6, (50, 50, 48)), (1, (14, 14, 14))]), WHT,
     T('THE KID', 'bonb', 120, WHT, rough=.8),
     photo=ph(.25, .45, .4, 1.0), pb=WHT, studio=['CHARLES CHAPLIN', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['CHARLES CHAPLIN', 'JACKIE COOGAN'], ccol=WHT,
