@@ -3205,3 +3205,75 @@ std('wag-the-dog-1997', ('grad', [(0, (30, 30, 40)), (.6, (10, 10, 14)), (1, (2,
 disney('a-bug-s-life-1998', ('grad', [(0, (120, 190, 60)), (.5, (80, 160, 40)), (1, (30, 80, 20))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.28, 0.14, 0.73, 0.34)], 150, outline=((60, 40, 10), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .45), minf=.01, close=2)]),
        face=ph(.32, .46, .22, 1.4), lcol=WHT)
+
+# American History X (1998): the poster's red, the white strip with its black AMERICAN HISTORY and red X cut off it (it already runs down the poster) and turned to read along the spine, Edward Norton's face
+std('american-history-x-1998', ('grad', [(0, (210, 50, 30)), (.5, (130, 24, 14)), (1, (20, 4, 2))]), WHT,
+    LC([(0.742, 0.06, 0.995, 0.93)], 120, cuts=[comp_cut(lambda a: (_lum(a) < .22) | ((a[..., 0] > .6) & (a[..., 1] < .3)), keep=lambda cx, cy: cx > .06, minf=.01, rot=90)]),
+    photo=ph(0.3, 0.4, 0.6, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EDWARD NORTON'], ccol=WHT,
+    ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1998)
+
+# Antz (1998): the poster's sky, its black ANTZ with the green edge cut off it, Z and the ants on the picnic below
+std('antz-1998', ('grad', [(0, (90, 180, 240)), (.5, (60, 150, 220)), (1, (20, 70, 30))]), (20, 30, 20),
+    LC([(0.07, 0.09, 0.97, 0.505)], 140, outline=((120, 200, 60), 2.4), cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.15, fillh=True)]),
+    photo=ph(0.5, 0.65, 0.86, 0.8), pb=(20, 30, 20), lg=WHT, lw=.5, order='LPTSF', stick=BAR('98 1002', top='ANIMATION', fill=(236, 240, 226)),
+    ft='a', vbox=(20, 30, 20), fcol=(220, 236, 220), fin=RENTAL, seed=1998)
+
+# Cats (1998): black, the poster's white hand-lettered CATS cut off it, the yellow cat's eyes, and the company in costume under the title (PolyGram logo; director from IMDb)
+std('cats-1998', ('grad', [(0, (30, 30, 40)), (.6, (8, 8, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.24, 0.245, 0.76, 0.44)], 130, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.05)]),
+    photo=ph(0.5, 0.7, 0.86, 0.75), pb=(250, 220, 40), lg=WHT, lw=.5, order='LTPF', dotst=('MUSICAL', (250, 220, 40), (20, 20, 20)),
+    ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1998)
+
+# Central Station (1998): the poster's dusty ochre, its black stencilled CENTRAL / STATION cut off it into one line, Dora and Josué at the fence
+std('central-station-1998', ('grad', [(0, (230, 170, 90)), (.5, (200, 140, 70)), (1, (90, 60, 30))]), (30, 20, 14),
+    LC([(0.065, 0.14, 0.49, 0.2), (0.065, 0.202, 0.465, 0.255)], 90, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: _lum(a) < .3)] * 2),
+    photo=ph(0.5, 0.6, 0.9, 0.85), pb=(30, 20, 14), lg=(30, 20, 14), lw=.55, order='LPTCF', credit=['UM FILME DE', 'WALTER SALLES'], ccol=(30, 20, 14),
+    ft='c', fcol=(30, 20, 14), fin=RENTAL, seed=1998)
+
+# Fear and Loathing in Las Vegas (1998): the poster's yellow desert, its red hand-lettered Fear and Loathing in LAS VEGAS cut off it, Johnny Depp's Raoul Duke in the shades and hat
+std('fear-and-loathing-in-las-vegas-1998', ('grad', [(0, (250, 220, 90)), (.5, (240, 170, 50)), (1, (120, 60, 20))]), (200, 30, 30),
+    LC([(0.36, 0.585, 0.91, 0.84)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.01)]),
+    photo=ph(0.5, 0.2, 0.9, 0.6), pb=(200, 30, 30), lg=(60, 30, 14), lw=.55, order='LPTCF', credit=['JOHNNY DEPP', 'BENICIO DEL TORO'], ccol=(60, 30, 14),
+    ft='d', fcol=(60, 30, 14), fin=RENTAL, seed=1998)
+
+# Half Baked (1998): the field's green, the poster's blue and yellow Half Baked cut off it in its own colours, Thurgood and friends by the KEEP OFF THE GRASS sign (director from IMDb)
+std('half-baked-1998', ('grad', [(0, (120, 190, 240)), (.5, (80, 170, 60)), (1, (20, 60, 14))]), (30, 70, 200),
+    LC([(0.07, 0.84, 0.93, 0.94)], 120, cuts=[comp_cut(lambda a: ((a[..., 2] > .45) & (a[..., 0] < .45)) | ((a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .45)), minf=.02, close=2)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
+    ft='b', fcol=(230, 240, 220), fin=RENTAL, seed=1998)
+
+# Happiness (1998): the poster's orange into yellow, its white HAPPINESS lifted, the drawn cast in a crowd (Good Machine logo; director from IMDb)
+std('happiness-1998', ('grad', [(0, (220, 80, 50)), (.5, (240, 160, 50)), (1, (240, 200, 60))]), WHT,
+    L((0.105, 0.09, 0.895, 0.19), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.86, 0.9, 0.35), pb=(30, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'TODD SOLONDZ'], ccol=(60, 30, 14),
+    ft='a', vbox=(30, 30, 30), fcol=(60, 30, 14), fin=OLD, seed=1998)
+
+# He Got Game (1998): black, the poster's white distressed HE GOT GAME lifted, Denzel Washington's eyes over his steepled hands
+std('he-got-game-1998', ('grad', [(0, (60, 40, 26)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), WHT,
+    L((0.085, 0.782, 0.902, 0.842), 90, WHT, mode='light'),
+    photo=ph(0.5, 0.42, 0.86, 0.75), pb=(220, 120, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=WHT,
+    ft='e', fcol=(220, 200, 186), fin=RENTAL, seed=1998)
+
+# Lock, Stock and Two Smoking Barrels (1998): black, the poster's white LOCK STOCK and yellow & Two Smoking Barrels cut off it into one line, the four silhouettes on the red bars
+std('lock-stock-and-two-smoking-barrels-1998', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), WHT,
+    LC([(0.135, 0.775, 0.865, 0.87), (0.13, 0.872, 0.85, 0.916)], 110, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.02), comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02)]),
+    photo=ph(0.5, 0.2, 0.62, 0.62), pb=(220, 40, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'GUY RITCHIE'], ccol=WHT,
+    ft='c', vbox=(220, 40, 30), fcol=(210, 200, 196), fin=RENTAL, seed=1998)
+
+# Mulan (1998): Disney clamshell; the poster's red, its white brushed MULAN cut off its plate, Mulan's face in the diamond
+disney('mulan-1998', ('grad', [(0, (200, 30, 30)), (.5, (150, 20, 20)), (1, (60, 8, 8))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.335, 0.758, 0.66, 0.83)], 130, outline=((60, 10, 10), 1.8), cuts=[comp_cut(lambda a: _lum(a) > .72, minf=.02)]),
+       face=ph(.67, .37, .14, 1.4), lcol=WHT)
+
+# Out of Sight (1998): the poster's red and yellow, its red outlined "OUT OF SIGHT" cut off it, Jennifer Lopez with the shotgun
+std('out-of-sight-1998', ('grad', [(0, (230, 40, 30)), (.5, (240, 180, 40)), (1, (20, 6, 4))]), (220, 30, 30),
+    LC([(0.0, 0.835, 0.99, 0.918)], 120, outline=(WHT, 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .2), minf=.02, fillh=True)]),
+    photo=ph(0.6, 0.45, 0.8, 1.0), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SODERBERGH', 'FILM'], ccol=WHT,
+    ft='b', vbox=(220, 30, 30), fcol=(240, 220, 200), fin=RENTAL, seed=1998)
+
+# Ronin (1998): the Paris grey, the poster's yellow RONIN cut off it, De Niro aiming down the street
+std('ronin-1998', ('grad', [(0, (150, 150, 146)), (.6, (50, 50, 48)), (1, (6, 6, 6))]), (250, 210, 40),
+    LC([(0.09, 0.575, 0.925, 0.75)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .4), minf=.1)]),
+    photo=ph(0.6, 0.25, 0.8, 0.6), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTCF', credit=['ROBERT DE NIRO', 'JEAN RENO'], ccol=WHT,
+    ft='d', fcol=(220, 220, 214), fin=RENTAL, seed=1998)
