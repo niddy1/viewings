@@ -25,6 +25,90 @@ def comp_cut(test, keep=None, top=None, soft=1.4):
     return fn
 
 
+def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4):
+    """an LC cut that keeps the letters whose centres lie within r (fraction of the poster width) of pts
+    (poster fractions, read off the poster with the comps tool), so a word can be taken out of lettering
+    that interlocks with its neighbours.  flat=True drops each letter onto one baseline (lettering that
+    climbs the poster in steps, as At the Opera's); rot turns the cut word by that many degrees (lettering
+    set on a slant).  box and margin must be the LC's own."""
+    def fn(rgb):
+        cw, ch = Image.open(CUR['cover']).size
+        k = rgb.shape[1] / ((int(box[2] * cw) + margin) - max(0, int(box[0] * cw) - margin))
+        ox, oy = max(0, int(box[0] * cw) - margin), max(0, int(box[1] * ch) - margin)
+        a = rgb.astype(np.float32) / 255
+        m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        n, lab, st, cen = cv2.connectedComponentsWithStats(m)
+        P = lambda j: ((ox + cen[j][0] / k) / cw, (oy + cen[j][1] / k) / ch)
+        keep = {j for j in range(1, n) if st[j, 4] > 30 and any((P(j)[0] - px) ** 2 + ((P(j)[1] - py) * ch / cw) ** 2 < r * r for px, py in pts)}
+        for px, py in pts:  # a point inside a piece's outline box picks that piece (letters that join up when enlarged)
+            qx, qy = (px * cw - ox) * k, (py * ch - oy) * k
+            inb = [j for j in range(1, n) if st[j, 4] > 30 and st[j, 0] <= qx <= st[j, 0] + st[j, 2] and st[j, 1] <= qy <= st[j, 1] + st[j, 3]]
+            if inb: keep.add(min(inb, key=lambda j: (cen[j][0] - qx) ** 2 + (cen[j][1] - qy) ** 2))
+        keep = sorted(keep)
+        al = _soft(np.isin(lab, keep).astype(np.float32), soft)
+        if flat and keep:  # every letter onto one baseline, keeping their spacing across
+            pad = 4; rise = max(st[j, 3] for j in keep) + 2 * pad; hh = rise + 2
+            nr = np.zeros((hh, rgb.shape[1], 3), np.uint8); na = np.zeros((hh, rgb.shape[1]), np.float32)
+            for j in keep:
+                x, y, w, h = st[j, :4]
+                x0, x1 = max(0, x - pad), min(rgb.shape[1], x + w + pad); y0, y1 = max(0, y - pad), min(rgb.shape[0], y + h + pad)
+                ty0 = (hh - 1 - pad) - ((y + h) - y0)          # the letter's bottom lands on row hh-1-pad
+                if ty0 < 0: y0 -= ty0; ty0 = 0
+                pa = _soft((lab[y0:y1, x0:x1] == j).astype(np.float32), soft)
+                ty1 = min(hh, ty0 + (y1 - y0)); pa = pa[:ty1 - ty0]
+                sub = na[ty0:ty1, x0:x1]; mm = pa > sub
+                nr[ty0:ty1, x0:x1][mm] = rgb[y0:y0 + (ty1 - ty0), x0:x1][mm]; na[ty0:ty1, x0:x1] = np.maximum(sub, pa)
+            rgb, al = nr, na
+        if rot:
+            hgt, wid = al.shape; M = cv2.getRotationMatrix2D((wid / 2, hgt / 2), rot, 1)
+            c_, s_ = abs(M[0, 0]), abs(M[0, 1]); nw, nh = int(hgt * s_ + wid * c_), int(hgt * c_ + wid * s_)
+            M[0, 2] += nw / 2 - wid / 2; M[1, 2] += nh / 2 - hgt / 2
+            rgb = cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC); al = cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
+        return rgb, al
+    return fn
+
+
+def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None):
+    """an LC cut that rebuilds a word from the poster's own letters: pts are the letters' centres in reading
+    order (poster fractions; None for a word space).  Each letter is turned level along the line through its
+    neighbours (lettering set on an arc, as Grand Illusion's) and the letters are laid on one baseline.
+    turn: optional list of per-letter angles (degrees) instead of the ones worked out from the arc."""
+    def fn(rgb):
+        cw, ch = Image.open(CUR['cover']).size
+        ox, oy = max(0, int(box[0] * cw) - margin), max(0, int(box[1] * ch) - margin)
+        k = rgb.shape[1] / ((int(box[2] * cw) + margin) - ox)
+        a = rgb.astype(np.float32) / 255
+        m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        n, lab, st, cen = cv2.connectedComponentsWithStats(m)
+        Q = [None if p_ is None else ((p_[0] * cw - ox) * k, (p_[1] * ch - oy) * k) for p_ in pts]
+        real = [q for q in Q if q is not None]
+        letters = []; ri = 0
+        for q in Q:
+            if q is None: letters.append(None); continue
+            j = min(range(1, n), key=lambda j: (cen[j][0] - q[0]) ** 2 + (cen[j][1] - q[1]) ** 2)
+            prv, nxt = real[max(0, ri - 1)], real[min(len(real) - 1, ri + 1)]
+            ang = np.degrees(np.arctan2(nxt[1] - prv[1], nxt[0] - prv[0])) if turn is None else turn[ri]
+            x, y, w, h = st[j, :4]; pd = int(max(w, h) * .3) + 4
+            x0, y0, x1, y1 = max(0, x - pd), max(0, y - pd), min(rgb.shape[1], x + w + pd), min(rgb.shape[0], y + h + pd)
+            al = _soft((lab[y0:y1, x0:x1] == j).astype(np.float32), soft); col = rgb[y0:y1, x0:x1]
+            M = cv2.getRotationMatrix2D(((x1 - x0) / 2, (y1 - y0) / 2), ang, 1)
+            al = cv2.warpAffine(al, M, (x1 - x0, y1 - y0)); col = cv2.warpAffine(col, M, (x1 - x0, y1 - y0), flags=cv2.INTER_CUBIC)
+            ys, xs = np.where(al > .3)
+            letters.append((col[ys.min():ys.max() + 1, xs.min():xs.max() + 1], al[ys.min():ys.max() + 1, xs.min():xs.max() + 1]))
+            ri += 1
+        hs = sorted(l[1].shape[0] for l in letters if l); H_ = hs[len(hs) // 2]; top = max(hs)
+        g = int(H_ * gapf); sp = int(H_ * space)
+        W_ = sum((l[1].shape[1] + g) if l else sp for l in letters) + 8
+        out_c = np.zeros((top + 8, W_, 3), np.uint8); out_a = np.zeros((top + 8, W_), np.float32); x = 4
+        for l in letters:
+            if not l: x += sp; continue
+            c_, a_ = l; hh, ww = a_.shape; y0 = top + 4 - hh
+            sub = out_a[y0:y0 + hh, x:x + ww]; mm = a_ > sub
+            out_c[y0:y0 + hh, x:x + ww][mm] = c_[mm]; out_a[y0:y0 + hh, x:x + ww] = np.maximum(sub, a_); x += ww + g
+        return out_c, out_a
+    return fn
+
+
 CC_YEL = lambda a: (a[..., 0] > .78) & (a[..., 1] > .62) & (a[..., 2] < .5)   # Charlie Chan poster yellow
 
 # =====================================================================================
@@ -113,3 +197,92 @@ std('charlie-chan-at-the-circus-1936', ('grad', [(0, (30, 70, 72)), (.6, (12, 34
         cuts=[comp_cut(CC_YEL, keep=lambda x, y: x < .9 and not (x < .15 and y < .15)), comp_cut(CC_YEL, keep=lambda x, y: y > .3)])],
     tgap=8, photo=ph(0.68, 0.475, 0.56, 1.1), pb=(250, 212, 84), studio=['20TH CENTURY-FOX'], scol=(250, 212, 84), order='lPTF',
     ft='c', vbox=(250, 212, 84), vink=(12, 34, 36), fcol=(200, 214, 210), fin=OLD, seed=1936)
+
+# Charlie Chan at the Opera (1936): night black, the yellow Charlie CHAN and AT THE OPERA cut off it letter by letter and set on one baseline (on the poster they climb in steps), Karloff and Chan from the top of the poster
+CCOP = lambda a: (a[..., 0] > .78) & (a[..., 1] > .55) & (a[..., 2] < .5)
+std('charlie-chan-at-the-opera-1936', ('grad', [(0, (40, 34, 60)), (.6, (14, 12, 24)), (1, (4, 4, 8))]), (250, 200, 90),
+    [LC([(0.0, 0.38, 0.72, 0.62)], 74, cuts=[pick_cut(CCOP, (0.0, 0.38, 0.72, 0.62), [(0.071, 0.553), (0.251, 0.535), (0.381, 0.49), (0.467, 0.474), (0.551, 0.464), (0.63, 0.442)], flat=True)]),
+     LC([(0.05, 0.37, 1.0, 0.75)], 74, cuts=[pick_cut(CCOP, (0.05, 0.37, 1.0, 0.75), [(0.114, 0.686), (0.183, 0.655), (0.292, 0.636), (0.378, 0.623), (0.463, 0.611), (0.595, 0.587), (0.686, 0.559), (0.767, 0.552), (0.851, 0.535), (0.935, 0.527)], flat=True)])],
+    tgap=8, photo=ph(0.5, 0.16, 1.0, 0.5), pb=(250, 200, 90), lg=(250, 200, 90), lw=.55, order='LPTCF', credit=['WARNER OLAND', 'BORIS KARLOFF'],
+    ccol=(230, 220, 200), ft='b', fcol=(200, 196, 210), fin=OLD, seed=1936)
+
+# Charlie Chan at the Race Track (1936): the poster's ink black, its yellow italic capitals keyed off it (the small stacked at the kept in line), the two binocular views of the race
+std('charlie-chan-at-the-race-track-1936', ('grad', [(0, (30, 40, 70)), (.6, (10, 14, 26)), (1, (2, 4, 8))]), (252, 226, 40),
+    [L((0.005, 0.632, 0.995, 0.756), 70, (252, 228, 40), mode='key', key=(250, 225, 40), t=(70, 150)),
+     L([(0.005, 0.764, 0.18, 0.889), (0.19, 0.764, 1.0, 0.889)], 70, (252, 228, 40), mode='key', key=(250, 225, 40), t=(70, 150), gapf=.18)],
+    tgap=8, photo=ph(0.5, 0.45, 1.0, 0.42), pb=(252, 228, 40), order='TPCF', credit=['A H. BRUCE HUMBERSTONE', 'PRODUCTION'],
+    ccol=(252, 228, 40), ft='d', vbox=(252, 228, 40), vink=(10, 14, 26), fcol=(200, 204, 214), fin=OLD, seed=1936)
+
+# Charlie Chan's Secret (1936): black, the orange-yellow CHARLIE and CHAN'S straightened off their rise and SECRET set on one line from its arc, Chan's face from the foot of the poster
+CCSE = lambda a: (a[..., 0] > .8) & (a[..., 1] > .45) & (a[..., 2] < .4)
+std('charlie-chan-s-secret-1936', ('grad', [(0, (36, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (250, 170, 40),
+    [LC([(0.05, 0.0, 0.89, 0.2)], 62, cuts=[pick_cut(CCSE, (0.05, 0.0, 0.89, 0.2), [(0.112, 0.149), (0.24, 0.134), (0.378, 0.119), (0.505, 0.098), (0.616, 0.087), (0.713, 0.069), (0.813, 0.055)], rot=-11)]),
+     LC([(0.05, 0.14, 0.75, 0.33), (0.43, 0.26, 1.0, 0.49)], 62, gapf=.2, cuts=[pick_cut(CCSE, (0.05, 0.14, 0.75, 0.33), [(0.113, 0.278), (0.243, 0.261), (0.38, 0.246), (0.514, 0.225), (0.587, 0.173), (0.673, 0.2)], rot=-11),
+                                                           pick_cut(CCSE, (0.43, 0.26, 1.0, 0.49), [(0.49, 0.447), (0.545, 0.389), (0.621, 0.345), (0.724, 0.314), (0.847, 0.304), (0.953, 0.311)], flat=True)])],
+    tgap=8, photo=ph(0.68, 0.72, 0.62, 1.25), pb=(250, 172, 44), lg=(250, 172, 44), lw=.55, order='LPTSF', stick=flow(dot, 74, ['CRIME'], (250, 172, 44), (12, 10, 8)),
+    ft='e', fcol=(210, 200, 190), fin=OLD, seed=1936)
+
+# Charlie Chan on Broadway (1937): black, the yellow CHARLIE CHAN ON BROADWAY cut off it word by word and turned level (the poster sets it on a 21-degree rise), Chan's face from the poster's right
+CCBW = lambda a: (a[..., 0] > .78) & (a[..., 1] > .62) & (a[..., 2] < .45)
+std('charlie-chan-on-broadway-1937', ('grad', [(0, (60, 70, 100)), (.6, (16, 18, 30)), (1, (4, 4, 8))]), (252, 236, 30),
+    [LC([(0.02, 0.12, 0.4, 0.26), (0.04, 0.17, 0.43, 0.38)], 64, gapf=.2, cuts=[
+        pick_cut(CCBW, (0.02, 0.12, 0.4, 0.26), [(0.061, 0.225), (0.121, 0.207), (0.176, 0.193), (0.224, 0.179), (0.271, 0.171), (0.303, 0.162), (0.339, 0.153)], rot=-21, r=.02),
+        pick_cut(CCBW, (0.04, 0.17, 0.43, 0.38), [(0.099, 0.301), (0.188, 0.281), (0.28, 0.261), (0.363, 0.234)], rot=-21, r=.02)]),
+     LC([(0.24, 0.29, 0.35, 0.35), (0.0, 0.29, 0.62, 0.51)], 64, gapf=.2, cuts=[
+        pick_cut(CCBW, (0.24, 0.29, 0.35, 0.35), [(0.272, 0.326), (0.314, 0.318)], rot=-21, r=.02),
+        pick_cut(CCBW, (0.0, 0.29, 0.62, 0.51), [(0.047, 0.454), (0.127, 0.437), (0.196, 0.412), (0.266, 0.403), (0.329, 0.378), (0.419, 0.357), (0.502, 0.352), (0.555, 0.32)], rot=-21, r=.02)])],
+    tgap=10, photo=ph(0.75, 0.2, 0.5, 1.2), pb=(252, 236, 30), studio=['20TH CENTURY-FOX'], scol=(252, 236, 30), order='lPTF',
+    ft='a', vbox=(252, 236, 30), vink=(16, 18, 30), fcol=(200, 200, 210), fin=OLD, seed=1937)
+
+# Sabotage (1936): Piccadilly at night, the red white-edged SABOTAGE cut off its sign in its own colours, the lit circus under the title (director from IMDb)
+std('sabotage-1936', ('grad', [(0, (60, 50, 90)), (.6, (24, 18, 40)), (1, (6, 4, 12))]), (214, 30, 36),
+    LC([(0.095, 0.138, 0.9, 0.276)], 100, margin=0, cuts=[comp_cut(lambda a: ((a[..., 0] > .55) & (a[..., 1] < .3) & (a[..., 2] < .35)) | ((_lum(a) > .85) & (_sat(a) < .15)), keep=lambda x, y: .03 < x < .99)]),
+    photo=ph(0.52, 0.665, 0.7, 1.3), pb=(238, 230, 214), order='TPCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(238, 230, 214),
+    ft='e', vbox=(214, 30, 36), fcol=(210, 200, 214), fin=OLD, seed=1936)
+
+# The Case of the Black Cat (1936): the poster's sepia, its speckled ochre THE CASE OF THE and the big BLACK CAT lifted (keyed on the black round them, specks filled) and re-inked cream, the two faces under the title
+std('the-case-of-the-black-cat-1936', ('grad', [(0, (150, 104, 56)), (.6, (82, 54, 28)), (1, (24, 14, 6))]), (244, 226, 180),
+    [L([(0.04, 0.132, 0.15, 0.162), (0.0, 0.162, 0.41, 0.222)], 34, (244, 226, 180), mode='nkey', key=(24, 16, 10), t=(60, 140), gapf=.25, close=2),
+     L([(0.0, 0.224, 1.0, 0.382), (0.3, 0.378, 0.95, 0.514)], 78, (244, 226, 180), mode='nkey', key=(24, 16, 10), t=(60, 140), gapf=.25, close=3)],
+    tgap=8, photo=ph(0.5, 0.77, 0.82, 0.9), pb=(244, 226, 180), lw=.5, order='LTPSF', stick=PRC(['$2.49', 'MYSTERY']),
+    ft='b', fcol=(230, 214, 180), fin=RENTAL, seed=1936)
+
+# The Lower Depths (1936): the photograph's greys, the white the lower depths lifted in its own mixed weights, Gabin and Junie Astor under it
+std('the-lower-depths-1936', ('grad', [(0, (110, 110, 108)), (.6, (50, 50, 50)), (1, (12, 12, 12))]), WHT,
+    L((0.0, 0.505, 0.85, 0.572), 64, WHT, mode='light'),
+    photo=ph(0.5, 0.8, 1.0, 0.6), pb=WHT, order='TPCF', credit=['UN FILM DE', 'JEAN RENOIR'], ccol=WHT,
+    ft='b', fcol=(210, 210, 210), fin=OLD, seed=1936)
+
+# Charlie Chan at Monte Carlo (1937): the poster's white, its dark ink-blue CHARLIE (set on one baseline from its climb), CHAN and the small stacked at MONTE CARLO cut off it in their own colours and run in one line, Chan's face
+CCMC = lambda a: (a[..., 2] > a[..., 0] + .1) & (_lum(a) < .45)
+std('charlie-chan-at-monte-carlo-1937', ('grad', [(0, (246, 246, 242)), (.6, (226, 228, 228)), (1, (150, 160, 168))]), (30, 60, 90),
+    LC([(0.0, 0.63, 0.6, 0.89), (0.62, 0.68, 1.0, 0.93), (0.15, 0.83, 0.65, 0.98)], 150, gapf=.12, valign='base', cuts=[
+        pick_cut(CCMC, (0.0, 0.63, 0.6, 0.89), [(0.054, 0.761), (0.162, 0.777), (0.253, 0.777), (0.343, 0.749), (0.422, 0.759), (0.49, 0.738), (0.549, 0.729)], flat=True),
+        pick_cut(CCMC, (0.62, 0.68, 1.0, 0.93), [(0.671, 0.805), (0.776, 0.825), (0.868, 0.817), (0.953, 0.793)], flat=True),
+        pick_cut(CCMC, (0.15, 0.83, 0.65, 0.98), [(0.182, 0.919), (0.254, 0.906), (0.322, 0.89), (0.386, 0.879), (0.439, 0.862), (0.482, 0.862), (0.404, 0.945), (0.461, 0.942), (0.509, 0.927), (0.549, 0.926), (0.605, 0.91)])]),
+    tgap=6, photo=ph(0.24, 0.29, 0.44, 1.15), pb=(30, 60, 90), order='LPTF', ft='a', vbox=(30, 60, 90), fcol=(30, 60, 90), fin=OLD, seed=1937)
+
+# Charlie Chan at the Olympics (1937): the poster's blue panel, its pink lettering in navy keyline cut off it in its own colours and turned level (the panel is tipped 7-8 degrees), Chan's face under the title
+CCOL = lambda a: (a[..., 0] > .82) & (a[..., 1] > .66) & (a[..., 2] > .55) & (a[..., 0] > a[..., 2] + .05)
+std('charlie-chan-at-the-olympics-1937', ('grad', [(0, (40, 110, 150)), (.6, (20, 66, 96)), (1, (6, 22, 36))]), (246, 204, 196),
+    [LC([(0.22, 0.52, 0.73, 0.64), (0.22, 0.59, 0.72, 0.72)], 66, gapf=.2, outline=((20, 30, 60), 2.2), cuts=[
+        pick_cut(CCOL, (0.22, 0.52, 0.73, 0.64), [(0.314, 0.56), (0.39, 0.57), (0.463, 0.582), (0.528, 0.586), (0.583, 0.598), (0.635, 0.6), (0.68, 0.604)], rot=7, r=.02),
+        pick_cut(CCOL, (0.22, 0.59, 0.72, 0.72), [(0.285, 0.632), (0.406, 0.648), (0.522, 0.663), (0.642, 0.674)], rot=7, r=.02)]),
+     LC([(0.13, 0.66, 0.25, 0.745), (0.24, 0.68, 0.8, 0.81)], 66, gapf=.15, outline=((20, 30, 60), 2.2), cuts=[
+        pick_cut(CCOL, (0.13, 0.66, 0.25, 0.745), [(0.174, 0.685), (0.212, 0.685), (0.153, 0.713), (0.185, 0.72), (0.218, 0.724)], rot=7, r=.015),
+        pick_cut(CCOL, (0.24, 0.68, 0.8, 0.81), [(0.296, 0.717), (0.356, 0.728), (0.42, 0.726), (0.504, 0.741), (0.588, 0.746), (0.637, 0.757), (0.686, 0.763), (0.761, 0.773)], rot=8, r=.02)])],
+    tgap=10, photo=ph(0.7, 0.3, 0.52, 1.0), pb=(246, 204, 196), lg=(246, 204, 196), lw=.55, order='LTPF',
+    ft='c', vbox=(246, 204, 196), vink=(20, 66, 96), fcol=(214, 226, 236), fin=OLD, seed=1937)
+
+# Grand Illusion (1937): the poster's red sky into black, its cream GRAND ILLUSION rebuilt letter by letter off the arc it curves round, Gabin's face (top-billed cast from IMDb)
+std('grand-illusion-1937', ('grad', [(0, (226, 70, 24)), (.35, (90, 26, 10)), (.7, (14, 6, 4)), (1, (2, 2, 2))]), (248, 238, 200),
+    LC([(0.05, 0.46, 0.95, 0.94)], 60, cuts=[seq_cut(lambda a: (_lum(a) > .78) & (a[..., 2] < a[..., 0]), (0.05, 0.46, 0.95, 0.94),
+        [(0.116, 0.521), (0.258, 0.524), (0.399, 0.534), (0.49, 0.555), None, (0.599, 0.585), (0.634, 0.621), (0.686, 0.652), (0.747, 0.693), (0.797, 0.741), (0.826, 0.776), (0.855, 0.824), (0.881, 0.894)])]),
+    photo=ph(0.52, 0.27, 0.62, 1.15), pb=(248, 238, 200), order='PTCF', credit=['JEAN GABIN', 'PIERRE FRESNAY'], ccol=(248, 238, 200),
+    dotst=('WAR', (248, 238, 200), (40, 20, 10)), ft='d', vbox=(248, 238, 200), vink=(14, 6, 4), fcol=(220, 200, 190), fin=OLD, seed=1937)
+
+# Pépé le Moko (1937): black and the poster's yellow, the yellow PÉPÉ (accents and all) and LE MOKO keyed off it, Gabin under his hat in the yellow band (no logo file: Paris Film, from IMDb's company credits)
+std('pepe-le-moko-1937', ('grad', [(0, (30, 28, 20)), (.6, (10, 10, 6)), (1, (2, 2, 2))]), (250, 226, 30),
+    L([(0.245, 0.665, 0.765, 0.784), (0.08, 0.788, 0.925, 0.888)], 84, (250, 228, 30), mode='key', key=(245, 225, 40), t=(70, 150), gapf=.3, speck=0),
+    photo=ph(0.6, 0.3, 0.74, 1.1), pb=(250, 228, 30), studio=['PARIS FILM'], scol=(250, 228, 30), order='lPTF',
+    ft='e', vbox=(250, 228, 30), vink=(10, 10, 6), fcol=(220, 214, 180), fin=OLD, seed=1937)
