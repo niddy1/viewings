@@ -408,7 +408,7 @@ std('the-rules-of-the-game-1939', ('grad', [(0, (244, 242, 232)), (.6, (226, 222
 
 # The Wizard of Oz (1939): the poster's pale sky, its arched golden THE WIZARD and big OF OZ (Toto in the O) cut off it in their own colours, the four on the yellow brick road
 std('the-wizard-of-oz-1939', ('grad', [(0, (226, 236, 240)), (.6, (200, 216, 224)), (1, (110, 140, 150))]), (40, 60, 150),
-    LC([(0.16, 0.045, 0.71, 0.215), (0.22, 0.212, 0.8, 0.444)], 150, gapf=.1, cuts=[key_cut(lambda a: _sat(a) > .35)] * 2),
+    LC([(0.16, 0.045, 0.71, 0.215), (0.22, 0.212, 0.8, 0.444)], 150, gapf=.1, cuts=[key_cut(lambda a: (_sat(a) > .2) | (_lum(a) < .45))] * 2),
     photo=ph(0.5, 0.68, 1.0, 0.85), pb=(240, 200, 40), lg=None, lw=.55, order='LPTF', dotst=('FAMILY', (40, 120, 60), WHT),
     ft='a', vbox=(40, 60, 150), fcol=(40, 60, 150), fin=OLD, seed=1939)
 
@@ -2487,3 +2487,75 @@ disney('the-little-mermaid-1989', ('grad', [(0, (40, 160, 220)), (.5, (30, 110, 
        title=LC([(0.395, 0.757, 0.588, 0.791), (0.21, 0.79, 0.77, 0.86)], 110, valign='base', margin=0, gapf=.25, outline=((60, 40, 10), 1.6),
                 cuts=[key_cut(lambda a: (_lum(a) > .55) & (a[..., 0] > a[..., 2] + .06)), comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 0] > a[..., 2] + .15) & (a[..., 1] > .4), minf=.02, close=2)]),
        face=ph(.47, .3, .13, 1.4), lcol=WHT)
+
+
+# ---------------------------------------------------------------- the 1990s
+# Dick Tracy (1990): Touchstone, a slipcase; black, the poster's red DICK TRACY with its yellow surround cut off it whole, Tracy's hat and profile in the red ring
+std('dick-tracy-1990', ('grad', [(0, (30, 26, 26)), (.6, (10, 8, 8)), (1, (2, 2, 2))]), (250, 220, 40),
+    LC([(0.2, 0.09, 0.8, 0.25)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 2] < .35), top=1, close=2)]),
+    photo=ph(0.5, 0.6, 0.9, 0.95), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['WARREN BEATTY', 'MADONNA'], ccol=WHT,
+    ft='b', vbox=(170, 20, 20), fcol=(230, 210, 120), fin=RENTAL, seed=1990)
+
+# Die Hard 2 (1990): the poster's dusk blue, its white DIE HARD 2 with the red rule and DIE HARDER cut off it, McClane with the pistol
+std('die-hard-2-1990', ('grad', [(0, (60, 90, 140)), (.6, (18, 26, 44)), (1, (60, 20, 6))]), WHT,
+    LC([(0.1, 0.055, 0.915, 0.168)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .72) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.005)]),
+    photo=ph(0.4, 0.4, 0.8, 1.0), pb=(220, 40, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('90 0703', top='ACTION', fill=(228, 226, 216)),
+    ft='a', vbox=(200, 30, 30), fcol=(210, 214, 226), fin=RENTAL, seed=1990)
+
+# Edward Scissorhands (1990): the poster's white, its black edward / SCISSORHANDS between the rules cut off it into one line, Edward's blades and the butterfly under the title
+std('edward-scissorhands-1990', ('grad', [(0, (246, 246, 246)), (.6, (226, 228, 232)), (1, (120, 124, 140))]), (20, 20, 24),
+    LC([(0.42, 0.122, 0.735, 0.168), (0.24, 0.168, 0.9, 0.256)], 100, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: _lum(a) < .35)] * 2),
+    photo=ph(0.55, 0.6, 0.86, 0.85), pb=(20, 20, 24), lg=(20, 20, 24), lw=.55, order='LTPF',
+    ft='c', fcol=(20, 20, 24), fin=RENTAL, seed=1990)
+
+# GoodFellas (1990): black, the poster's white GoodFellas lifted, De Niro between Liotta and Pesci
+std('goodfellas-1990', ('grad', [(0, (40, 38, 38)), (.6, (12, 10, 10)), (1, (2, 2, 2))]), WHT,
+    L((0.195, 0.53, 0.805, 0.632), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.18, 0.9, 0.55), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=WHT,
+    ft='e', vbox=(200, 30, 30), fcol=(200, 196, 196), fin=RENTAL, seed=1990)
+
+# Home Alone (1990): the poster's navy, its yellow HOME ALONE with the red house in the gap cut off it, Kevin's scream
+std('home-alone-1990', ('grad', [(0, (30, 60, 130)), (.6, (12, 24, 60)), (1, (2, 6, 20))]), (250, 230, 60),
+    LC([(0.035, 0.058, 0.962, 0.14)], 120, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .45)) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01)]),
+    photo=ph(0.5, 0.5, 0.7, 1.0), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='d', fcol=(220, 226, 246), fin=RENTAL, seed=1990)
+
+# Kindergarten Cop (1990): the poster's white, its crayon-coloured Kindergarten and blue COP cut off it in their own colours into one line, Arnold with the children
+std('kindergarten-cop-1990', ('grad', [(0, (246, 246, 244)), (.6, (228, 230, 236)), (1, (120, 130, 160))]), (20, 40, 140),
+    LC([(0.085, 0.705, 0.915, 0.8), (0.215, 0.805, 0.79, 0.95)], 100, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: (_sat(a) > .2) | (_lum(a) < .45))] * 2),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(20, 40, 140), lg=(20, 40, 140), lw=.55, order='LPTF',
+    ft='a', vbox=(20, 40, 140), fcol=(20, 30, 60), fin=RENTAL, seed=1990)
+
+# Miller's Crossing (1990): the woods' browns, the poster's gold MILLER'S / CROSSING cut off it into one line, the hat-and-coat figure in the trees (no logo file: Circle Films, from IMDb's company credits)
+std('miller-s-crossing-1990', ('grad', [(0, (90, 80, 50)), (.6, (34, 30, 18)), (1, (6, 6, 4))]), (240, 180, 40),
+    LC([(0.05, 0.76, 0.755, 0.826), (0.16, 0.828, 0.84, 0.908)], 90, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 0] > .65) & (a[..., 1] > .45) & (a[..., 2] < .35) | (_lum(a) < .12), minf=.02)] * 2),
+    photo=ph(0.45, 0.45, 0.8, 1.1), pb=(240, 180, 40), studio=['CIRCLE FILMS'], scol=(240, 200, 120), order='lPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(240, 200, 120),
+    ft='b', fcol=(220, 200, 160), fin=OLD, seed=1990)
+
+# Teenage Mutant Ninja Turtles (1990): the city night's teal, TEENAGE MUTANT NINJA TURTLES typeset in heavy condensed capitals in the logo's green with a pale keyline (parked for Ian's logo, see data/logos-wanted.md: the green lettering sits on teal clouds of nearly its own colour, so two cuts lost NINJA and TURTLES), the four turtles peering out of the manhole
+std('teenage-mutant-ninja-turtles-1990', ('grad', [(0, (20, 70, 80)), (.6, (6, 24, 30)), (1, (2, 6, 8))]), (80, 200, 80),
+    T('TEENAGE MUTANT NINJA TURTLES', 'intbk', 80, (40, 160, 70), outline=((200, 240, 150), 2.2)),
+    photo=ph(0.5, 0.86, 0.9, 0.35), pb=(80, 200, 80), lg=WHT, lw=.5, order='LPTF', dotst=('ACTION', (250, 140, 30), (20, 20, 20)),
+    ft='e', fcol=(170, 220, 210), fin=RENTAL, seed=1990)
+
+# The Rescuers Down Under (1990): Disney clamshell; the outback sky, the poster's gold The RESCUERS and its DOWN UNDER plate cut off it in their own colours, Cody's face in the diamond
+disney('the-rescuers-down-under-1990', ('grad', [(0, (90, 170, 230)), (.5, (60, 140, 210)), (1, (20, 60, 120))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.155, 0.045, 0.835, 0.225)], 140, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .45) & (a[..., 2] < .45)) | ((a[..., 0] > .55) & (a[..., 1] < .3)) | (_lum(a) < .2), minf=.003, close=2)]),
+       face=ph(.58, .505, .13, 1.4), lcol=WHT)
+
+# The Witches (1990): the poster's white, its white-on-black stencilled the / Witches... cut off it into one line, the Grand High Witch in her purple cloak
+std('the-witches-1990', ('grad', [(0, (90, 40, 110)), (.6, (30, 12, 40)), (1, (4, 2, 8))]), WHT,
+    LC([(0.155, 0.56, 0.36, 0.6), (0.215, 0.592, 0.815, 0.697)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) > .82)] * 2),
+    photo=ph(0.4, 0.28, 0.8, 0.9), pb=(200, 120, 220), lg=WHT, lw=.5, order='LPTCF', credit=['ANJELICA HUSTON'], ccol=WHT,
+    ft='c', fcol=(220, 200, 230), fin=RENTAL, seed=1990)
+
+# Barton Fink (1991): the poster's sepia, its white slab-serif BARTON / FINK lifted into one line, John Turturro's startled face
+std('barton-fink-1991', ('grad', [(0, (180, 130, 80)), (.6, (90, 60, 30)), (1, (20, 12, 6))]), WHT,
+    L([(0.095, 0.762, 0.955, 0.826), (0.095, 0.822, 0.943, 0.94)], 96, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT,
+    ft='d', fcol=(240, 220, 200), fin=OLD, seed=1991)
+
+# Beauty and the Beast (1991): Disney clamshell; the ballroom's blue, Beauty and the Beast typeset in a gold serif like the logo's with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: Lumiere overlaps the poster's oval title plate, so the plate cut lost Beast, and the gold letters' shading broke a colour cut), Belle's face in the diamond
+disney('beauty-and-the-beast-1991', ('grad', [(0, (30, 60, 150)), (.5, (50, 90, 190)), (1, (14, 30, 90))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('Beauty', (240, 200, 110)), ('and the', (240, 200, 110)), ('Beast', (240, 200, 110))], 'pagb', 96, sp=.3, outline=((40, 30, 80), 2)),
+       face=ph(.255, .3, .12, 1.4), lcol=WHT)

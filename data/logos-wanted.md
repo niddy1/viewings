@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Teenage Mutant Ninja Turtles (1990) | Vault 1990s | `logos/teenage-mutant-ninja-turtles-1990-title.png` | typeset; green letters on teal clouds of nearly the same colour |
+| Beauty and the Beast (1991) | Vault 1990s | `logos/beauty-and-the-beast-1991-title.png` | typeset (Disney clamshell); Lumiere overlaps the title plate and the gold shading broke a colour cut |
 | Indiana Jones and the Last Crusade (1989) | Vault 1980s | `logos/indiana-jones-and-the-last-crusade-1989-title.png` | typeset; the lettering's oranges are the parchment's own, so cuts left holes |
 | The Little Mermaid (1989) | Vault 1980s | `logos/the-little-mermaid-1989-title.png` | cut, but the small THE LITTLE comes out faint |
 | Raising Arizona (1987) | Vault 1980s | `logos/raising-arizona-1987-title.png` | cut, but the safety-pin A in RAISING is lost (reads R ISING) |
