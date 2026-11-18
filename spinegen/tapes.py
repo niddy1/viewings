@@ -19,9 +19,9 @@ WHT, BLK, CRM = (246, 243, 234), (20, 19, 19), (240, 233, 212)
 VRED = (200, 32, 38)
 
 import glob, os
-# every shelf: films.json (newest year) and films-<year>.json (older ones)
+# every shelf: films.json (newest year), films-<year>.json (older ones) and vault-<decade>.json (the Vault)
 FILMS = {f['poster'].split('/')[-1][:-4]: f
-         for p in [REPO + 'films.json'] + sorted(glob.glob(REPO + 'films-*.json'))
+         for p in [REPO + 'films.json'] + sorted(glob.glob(REPO + 'films-*.json')) + sorted(glob.glob(REPO + 'vault-*.json'))
          for f in json.load(open(p, encoding='utf8'))['films'] if f.get('poster')}
 SPECS = {}
 

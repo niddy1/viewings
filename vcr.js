@@ -219,6 +219,7 @@
       const loading = status('Reading the shelf…');
       const data = await loadShelf();
       loading.remove();
+      if (data.vault) { status('The Vault holds the bulk-rated years (2007-2015) and takes no new ratings. Open a year shelf to record new ones.', 'ok'); return; }
       const year = String(data.year || new Date().getFullYear());
 
       // one entry per film for this year: the latest rating wins

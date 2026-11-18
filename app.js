@@ -24,22 +24,33 @@
   const $ = (id) => document.getElementById(id);
   const shelves = $('shelves');
 
-  /* ---------- which year's shelf: ?shelf=2025 (no param = the newest) ---------- */
+  /* ---------- which shelf: ?shelf=2025, or ?shelf=1990s for the Vault (no param = the newest year) ---------- */
   // One data file and one ticket image per year. Add a year here (and its watched-<year>.png) to add a shelf.
   const SHELVES = { 2016: 'films-2016.json', 2017: 'films-2017.json', 2018: 'films-2018.json', 2019: 'films-2019.json', 2020: 'films-2020.json', 2021: 'films-2021.json', 2022: 'films-2022.json', 2023: 'films-2023.json', 2024: 'films-2024.json', 2025: 'films-2025.json', 2026: 'films.json' };
-  const YEARS = Object.keys(SHELVES).map(Number).sort((a, b) => a - b);
+  // The Vault: films from the years that were rated in bulk (2007-2015), one shelf per decade of release.
+  const VAULT = ['1930s', '1940s', '1950s', '1960s', '1970s', '1980s', '1990s', '2000s', '2010s'];
+  VAULT.forEach((d) => { SHELVES[d] = `vault-${d}.json`; });
+  const YEARS = [...VAULT, ...Object.keys(SHELVES).filter((k) => !VAULT.includes(k)).map(Number).sort((a, b) => a - b)];
   const NEWEST = YEARS[YEARS.length - 1];
-  const SHELF = (() => { const y = Number(new URLSearchParams(location.search).get('shelf')); return SHELVES[y] ? y : NEWEST; })();
+  const SHELF = (() => { const p = new URLSearchParams(location.search).get('shelf') || ''; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : NEWEST; })();
+  const IN_VAULT = VAULT.includes(SHELF);
   const DATA_FILE = SHELVES[SHELF];
+  const shelfName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
   (function shelfHeader() {
-    const img = document.querySelector('h1.ticket img');
-    if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
-    $('year').textContent = SHELF;
-    if (SHELF !== NEWEST) document.title = `Viewings ${SHELF}`;
+    const h1 = document.querySelector('h1.ticket'), img = h1 && h1.querySelector('img');
+    if (img && IN_VAULT) { // no ticket for the Vault: a plate in the shelf's lettering instead
+      img.remove();
+      const plate = document.createElement('span'); plate.className = 'vault-plate'; plate.setAttribute('aria-hidden', 'true');
+      plate.innerHTML = `<span class="v1">The Vault</span><span class="v2">${SHELF}</span>`;
+      h1.prepend(plate); h1.classList.add('vault');
+    } else if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
+    $('year').textContent = IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
+    if (SHELF !== NEWEST) document.title = IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
     // arrows either side of the ticket: older shelf on the left, newer on the right
     const link = (y) => {
       const q = new URLSearchParams(location.search);
-      q.delete('genre'); // genres differ from year to year
+      q.delete('genre'); // genres differ from shelf to shelf
+      if (VAULT.includes(y) !== IN_VAULT) q.delete('sort'); // the Vault and the year shelves sort differently by default
       if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
       const qs = q.toString();
       return location.pathname + (qs ? '?' + qs : '');
@@ -50,8 +61,8 @@
       if (!a) return;
       if (y == null) { a.hidden = true; return; }
       a.href = link(y);
-      a.querySelector('.yr').textContent = y;
-      a.setAttribute('aria-label', `${y} shelf`);
+      a.querySelector('.yr').textContent = shelfName(y);
+      a.setAttribute('aria-label', `${shelfName(y)} shelf`);
       a.hidden = false;
     });
   })();
@@ -59,7 +70,8 @@
   let spineEls = [];
   let current = -1;
   let order = [];      // indices into films, in shelf order, after sorting and the genre filter
-  const view = { sort: 'watched', dir: 1, genres: new Set() };
+  const VIEW_DEFAULT = IN_VAULT ? { sort: 'year', dir: 1 } : { sort: 'watched', dir: 1 };
+  const view = { ...VIEW_DEFAULT, genres: new Set() };
 
   const hash = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
 
@@ -762,7 +774,7 @@
 
   function saveView() { // in the address bar, so a sorted/filtered shelf can be shared or bookmarked
     const q = new URLSearchParams(location.search);
-    const def = view.sort === 'watched' && view.dir === 1;
+    const def = view.sort === VIEW_DEFAULT.sort && view.dir === VIEW_DEFAULT.dir;
     if (def) q.delete('sort'); else q.set('sort', view.sort + (view.dir === SORT_DEFAULT_DIR[view.sort] ? '' : '-rev'));
     if (view.genres.size) q.set('genre', [...view.genres].join(',')); else q.delete('genre');
     const qs = q.toString();
@@ -927,7 +939,8 @@
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
-    shelf: SHELF,        // the year on show
+    shelf: SHELF,        // the year on show, or the Vault's decade ('1990s')
+    vault: IN_VAULT,
     dataFile: DATA_FILE, // films.json for the newest year, films-<year>.json for older ones (vcr.js reads and commits this)
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },
