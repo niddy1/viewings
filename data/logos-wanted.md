@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Austin Powers: International Man of Mystery (1997) | Vault 1990s | `logos/austin-powers-international-man-of-mystery-1997-title.png` | typeset; outlined letters on the flag's pinks and whites |
 | Matilda (1996) | Vault 1990s | `logos/matilda-1996-title.png` | typeset in the rainbow colours; each letter is shaded light to dark |
 | James and the Giant Peach (1996) | Vault 1990s | `logos/james-and-the-giant-peach-1996-title.png` | typeset (Disney clamshell); white letters on the peach's pale highlight |
 | Se7en (1995) | Vault 1990s | `logos/se7en-1995-title.png` | cut, but the dim red 7 reads as a slash |

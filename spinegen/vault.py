@@ -3062,3 +3062,75 @@ std('the-cable-guy-1996', ('grad', [(0, (30, 60, 170)), (.6, (10, 20, 70)), (1, 
 disney('the-hunchback-of-notre-dame-1996', ('grad', [(0, (180, 60, 40)), (.5, (110, 30, 24)), (1, (30, 8, 8))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.2, 0.815, 0.83, 0.948)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.01)]),
        face=ph(.53, .62, .14, 1.4), lcol=WHT)
+
+# When We Were Kings (1996): the poster's cream, its black WHEN WE WERE / KINGS cut off it into one line, MUHAMMAD ALI under it in the poster's rust, Ali in the painted Africa (no logo file: Das Films, from IMDb's company credits; director from IMDb)
+std('when-we-were-kings-1996', ('grad', [(0, (246, 240, 226)), (.6, (230, 220, 200)), (1, (140, 120, 90))]), (20, 20, 20),
+    LC([(0.245, 0.817, 0.755, 0.858), (0.245, 0.858, 0.755, 0.97)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) < .3)] * 2),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(170, 80, 50), studio=['DAS FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['MUHAMMAD ALI'], ccol=(180, 90, 60),
+    ft='b', fcol=(40, 30, 20), fin=OLD, seed=1996)
+
+# As Good as It Gets (1997): the poster's sky, its red small-caps AS GOOD AS IT GETS keyed off it, Jack Nicholson with the dog
+std('as-good-as-it-gets-1997', ('grad', [(0, (200, 226, 246)), (.5, (150, 200, 240)), (1, (60, 100, 150))]), (190, 30, 40),
+    L((0.05, 0.158, 0.95, 0.224), 76, (190, 30, 40), mode='key', key=(190, 40, 50), t=(70, 160)),
+    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(190, 30, 40), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['JACK NICHOLSON', 'HELEN HUNT'], ccol=(30, 40, 70),
+    ft='a', vbox=(190, 30, 40), fcol=(30, 40, 70), fin=RENTAL, seed=1997)
+
+# Austin Powers: International Man of Mystery (1997): the Union Jack pink, AUSTIN POWERS and INTERNATIONAL MAN OF MYSTERY typeset in heavy capitals in the logo's yellow with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the outlined letters sit on the flag's pinks and whites, and the cut came out a jumble), Austin and Vanessa
+std('austin-powers-international-man-of-mystery-1997', ('grad', [(0, (240, 60, 160)), (.5, (160, 40, 140)), (1, (30, 20, 80))]), (250, 230, 60),
+    [T('AUSTIN POWERS', 'intbk', 90, WHT, outline=((20, 20, 20), 2.2)), T('INTERNATIONAL MAN OF MYSTERY', 'intbk', 50, (250, 230, 60), outline=((20, 20, 20), 1.8))], tgap=8,
+    photo=ph(0.5, 0.18, 0.7, 0.75), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
+    ft='e', fcol=(250, 220, 240), fin=RENTAL, seed=1997)
+
+# Batman & Robin (1997): the night's blue, the poster's white chrome BATMAN & ROBIN lifted into one line, Freeze over the others
+std('batman-robin-1997', ('grad', [(0, (30, 60, 140)), (.6, (8, 16, 50)), (1, (0, 2, 12))]), WHT,
+    L([(0.21, 0.458, 0.81, 0.5), (0.365, 0.503, 0.8, 0.556)], 96, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.2, 0.7, 0.7), pb=(120, 200, 250), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(180, 200, 240), fin=RENTAL, seed=1997)
+
+# Boogie Nights (1997): black, the poster's red outlined BOOGIE NIGHTS cut off it, the star of faces
+std('boogie-nights-1997', ('grad', [(0, (60, 20, 30)), (.6, (16, 6, 8)), (1, (2, 2, 2))]), (220, 50, 50),
+    LC([(0.095, 0.745, 0.92, 0.815)], 100, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .35), minf=.03, close=2, fillh=True)]),
+    photo=ph(0.5, 0.32, 0.86, 0.85), pb=(250, 200, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'PAUL THOMAS ANDERSON'], ccol=WHT,
+    ft='d', vbox=(220, 50, 50), fcol=(220, 196, 196), fin=RENTAL, seed=1997)
+
+# Chasing Amy (1997): the poster's white, its black serif chasing and red AMY cut off it into one line, Holden, Alyssa and the gang (View Askew logo)
+std('chasing-amy-1997', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (2, 2, 2))]), WHT,
+    LC([(0.19, 0.775, 0.895, 0.845), (0.1, 0.84, 0.89, 0.9)], 100, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: _lum(a) > .92, minf=.03), key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3))]),
+    photo=ph(0.6, 0.35, 0.8, 0.8), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('ROMANCE', (200, 30, 30), WHT),
+    ft='b', fcol=(210, 210, 210), fin=RENTAL, seed=1997)
+
+# Donnie Brasco (1997): the poster's amber, its white slanted DONNIE BRASCO cut off it and levelled, Pacino and Depp walking
+std('donnie-brasco-1997', ('grad', [(0, (220, 150, 50)), (.5, (140, 80, 30)), (1, (20, 10, 4))]), WHT,
+    LC([(0.0, 0.44, 0.99, 0.605)], 120, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03, rot=-9)]),
+    photo=ph(0.5, 0.2, 0.9, 0.4), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AL PACINO', 'JOHNNY DEPP'], ccol=WHT,
+    ft='a', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
+
+# Funny Games (1997): black, the poster's red stencilled FUNNY / GAMES keyed off it into one line, the boy in the white mask's hood (Wega Film logo)
+std('funny-games-1997', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), (210, 30, 30),
+    L([(0.115, 0.565, 0.885, 0.69), (0.115, 0.685, 0.885, 0.805)], 110, (210, 30, 30), mode='key', key=(200, 30, 30), t=(70, 160), valign='base'),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EIN FILM VON', 'MICHAEL HANEKE'], ccol=WHT,
+    ft='e', fcol=(200, 196, 196), fin=OLD, seed=1997)
+
+# Good Will Hunting (1997): the autumn gold, the poster's white serif GOOD WILL HUNTING lifted, Matt Damon and Robin Williams on the bench
+std('good-will-hunting-1997', ('grad', [(0, (200, 150, 50)), (.5, (110, 80, 30)), (1, (16, 12, 4))]), WHT,
+    L((0.11, 0.872, 0.892, 0.918), 76, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.5, 0.86, 0.8), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['MATT DAMON', 'ROBIN WILLIAMS'], ccol=WHT,
+    ft='b', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
+
+# Hercules (1997): Disney clamshell; the Greek sky, the poster's gold Greek-key HERCULES cut off it in its own colours, Hercules's face in the diamond
+disney('hercules-1997', ('grad', [(0, (30, 90, 180)), (.5, (60, 140, 220)), (1, (20, 60, 130))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.03, 0.055, 0.97, 0.19)], 140, outline=((30, 20, 60), 2), cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .45) & (a[..., 2] < .45)) | ((a[..., 0] > .6) & (a[..., 1] < .3) & (a[..., 2] < .3)), minf=.01, close=2)]),
+       face=ph(.42, .42, .55, 1.4), lcol=WHT)
+
+# Home Alone 3 (1997): the poster's navy, its white HOME ALONE with the red house and gold 3 cut off it, Alex with his binoculars and the crooks at the door
+std('home-alone-3-1997', ('grad', [(0, (30, 50, 120)), (.6, (10, 18, 50)), (1, (2, 4, 14))]), WHT,
+    LC([(0.04, 0.085, 0.955, 0.165)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .82) | ((a[..., 0] > .6) & (a[..., 1] < .3)) | ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4)), minf=.005)]),
+    photo=ph(0.6, 0.55, 0.8, 0.95), pb=(250, 200, 50), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='d', fcol=(200, 210, 236), fin=RENTAL, seed=1997)
+
+# Jackie Brown (1997): black, the poster's gold script Jackie / Brown cut off it into one line, Pam Grier aiming the pistol
+std('jackie-brown-1997', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (250, 200, 50),
+    LC([(0.235, 0.775, 0.675, 0.842), (0.275, 0.837, 0.73, 0.905)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .4) & (a[..., 2] < .45), minf=.02, close=2)] * 2),
+    photo=ph(0.6, 0.35, 0.8, 0.9), pb=(250, 200, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A QUENTIN TARANTINO', 'FILM'], ccol=(250, 220, 140),
+    ft='c', fcol=(220, 210, 190), fin=RENTAL, seed=1997)
