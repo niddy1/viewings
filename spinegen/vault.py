@@ -1507,3 +1507,79 @@ std('marnie-1964', ('grad', [(0, (246, 244, 246)), (.6, (226, 220, 228)), (1, (1
 disney('mary-poppins-1964', ('grad', [(0, (20, 90, 180)), (.5, (30, 120, 210)), (1, (10, 50, 120))]), fin=dict(CLAM, vivid=.2),
        title=TT([('MARY', WHT), ('POPPINS', WHT)], 'intbk', 90, sp=.35, outline=((20, 60, 140), 2.4)),
        face=ph(.605, .415, .085, 1.4), lcol=WHT)
+
+# The Killers (1964): the poster's red, The Killers typeset in heavy rounded capitals in its cream with a dark keyline (typeset: Angie Dickinson's head is printed over the poster's ll, so a lift leaves a hole; two tried), Angie Dickinson in the black dress (director from IMDb)
+std('the-killers-1964', ('grad', [(0, (240, 40, 30)), (.6, (190, 20, 16)), (1, (70, 6, 4))]), (246, 236, 210),
+    TT([('The', (248, 238, 212)), ('Killers', (248, 238, 212))], 'popb', 100, sp=.25, outline=((40, 16, 12), 2.4)),
+    photo=ph(0.48, 0.66, 0.6, 1.1), pb=(246, 236, 210), lg=(246, 236, 210), lw=.55, order='LPTCF', credit=['A DON SIEGEL', 'FILM'], ccol=(246, 236, 210),
+    ft='a', vbox=(246, 236, 210), vink=(190, 20, 16), fcol=(250, 220, 210), fin=OLD, seed=1964)
+
+# The Naked Kiss (1964): the poster's yellow, its violet bouncing The Naked Kiss cut off it line by line, Kelly with the suitcase (no logo file: Allied Artists, from IMDb's company credits)
+std('the-naked-kiss-1964', ('grad', [(0, (250, 230, 110)), (.6, (240, 210, 70)), (1, (160, 130, 30))]), (110, 90, 170),
+    LC([(0.14, 0.34, 0.48, 0.49), (0.06, 0.45, 0.69, 0.68), (0.17, 0.66, 0.62, 0.875)], 120, gapf=.15, valign='base', cuts=[
+        pick_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), (0.14, 0.34, 0.48, 0.49), [(0.217, 0.409), (0.32, 0.418), (0.424, 0.424)], r=.02),
+        comp_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), keep=lambda x, y: y > .2, minf=.05), comp_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), keep=lambda x, y: y > .08, minf=.05)]),
+    photo=ph(0.5, 0.13, 0.8, 0.55), pb=(110, 90, 170), studio=['ALLIED ARTISTS'], scol=(60, 50, 100), order='lPTCSF', credit=['WRITTEN & DIRECTED BY', 'SAMUEL FULLER'],
+    ccol=(60, 50, 100), stick=RWD(), ft='e', fcol=(60, 50, 100), fin=RENTAL, seed=1964)
+
+# The Tomb of Ligeia (1964): the poster's white, its yellow THE TOMB OF LIGEIA cut off the black cat, the cat's eyes (no logo file: Alta Vista Productions, from IMDb's company credits)
+std('the-tomb-of-ligeia-1964', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (2, 2, 2))]), (250, 210, 50),
+    LC([(0.33, 0.2, 0.69, 0.375)], 110, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .45))]),
+    photo=ph(0.5, 0.5, 0.86, 0.45), pb=(250, 210, 50), studio=['ALTA VISTA', 'PRODUCTIONS'], scol=(250, 210, 50), order='lPTCSF', credit=['VINCENT PRICE'],
+    ccol=(250, 210, 50), stick=flow(dot, 74, ['HORROR'], (250, 210, 50), (10, 10, 10)), ft='c', fcol=(200, 200, 196), fin=RENTAL, seed=1964)
+
+# Alphaville (1965): the poster's white, its grey ALPHAVILLE lifted, Anna Karina in the blue star (no logo file: André Michelin Productions, from IMDb's company credits; director from IMDb)
+std('alphaville-1965', ('grad', [(0, (246, 248, 250)), (.6, (222, 228, 234)), (1, (90, 130, 160))]), (60, 66, 72),
+    L((0.2, 0.846, 0.81, 0.912), 80, (60, 66, 72), mode='dark'),
+    photo=ph(0.4, 0.4, 0.8, 1.0), pb=(110, 190, 220), studio=['ANDRÉ MICHELIN', 'PRODUCTIONS'], scol=(60, 66, 72), order='lPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'],
+    ccol=(60, 66, 72), ft='b', fcol=(60, 66, 72), fin=OLD, seed=1965)
+
+# Doctor Zhivago (1965): a 2-tape box; the poster's white, its maroon serif DOCTOR ZHIVAGO with the swash under it lifted, Julie Christie and Omar Sharif
+std('doctor-zhivago-1965', ('grad', [(0, (246, 244, 242)), (.6, (226, 220, 216)), (1, (130, 100, 100))]), (90, 30, 40),
+    L([(0.178, 0.466, 0.866, 0.558), (0.062, 0.556, 0.926, 0.705)], 90, (92, 32, 42), mode='dark', gapf=.25),
+    photo=ph(0.5, 0.2, 0.86, 0.75), pb=(92, 32, 42), lg=(92, 32, 42), lw=.5, order='LPTCSF', credit=['A DAVID LEAN', 'FILM'], ccol=(92, 32, 42),
+    stick=TWOST((92, 32, 42), WHT), ft='d', vbox=(92, 32, 42), fcol=(92, 32, 42), fin=OLD, seed=1965, **TWO)
+
+# For a Few Dollars More (1965): the poster's white, its black distressed FOR, the small A, FEW, the rust DOLLARS and MORE cut off it in their own colours and run in one line, Eastwood under the hat
+FDK = lambda a: _lum(a) < .72
+std('for-a-few-dollars-more-1965', ('grad', [(0, (246, 242, 236)), (.6, (226, 216, 200)), (1, (150, 110, 70))]), (24, 20, 18),
+    LC([(0.605, 0.37, 0.995, 0.54), (0.603, 0.62, 0.64, 0.69), (0.64, 0.54, 0.995, 0.685), (0.6, 0.683, 0.995, 0.762), (0.6, 0.76, 0.995, 0.87)], 90, gapf=.15, valign='base', margin=0,
+       cuts=[comp_cut(FDK, minf=.1)] * 5),
+    photo=ph(0.3, 0.27, 0.6, 1.0), pb=(24, 20, 18), lg=(24, 20, 18), lw=.55, order='LPTCF', credit=['CLINT EASTWOOD', 'LEE VAN CLEEF'], ccol=(24, 20, 18),
+    ft='b', fcol=(24, 20, 18), fin=OLD, seed=1965)
+
+# Juliet of the Spirits (1965): black, the poster's green circle with its black JULIET OF THE SPIRITS cut off it whole, Giulietta Masina in blue (no logo file: Rizzoli Film, from IMDb's company credits)
+std('juliet-of-the-spirits-1965', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (130, 180, 80),
+    LC([(0.2, 0.695, 0.8, 0.915)], 160, cuts=[plate_cut(lambda a: (a[..., 1] > .5) & (a[..., 1] > a[..., 2] + .15))]),
+    photo=ph(0.5, 0.42, 0.66, 1.15), pb=(130, 180, 80), studio=['RIZZOLI FILM'], scol=(130, 180, 80), order='lPTCF', credit=['UN FILM DI', 'FEDERICO FELLINI'],
+    ccol=(130, 180, 80), ft='c', fcol=(200, 200, 196), fin=OLD, seed=1965)
+
+# Story of a Prostitute (1965): the poster's sepia, STORY OF A PROSTITUTE typeset in heavy condensed capitals in its rust (typeset: the poster's lettering is printed half-faded over the photograph and breaks into specks in every lift; two tried), the lovers (director from IMDb)
+std('story-of-a-prostitute-1965', ('grad', [(0, (190, 170, 150)), (.6, (110, 96, 80)), (1, (30, 24, 20))]), (160, 86, 54),
+    TT([('STORY OF A', (166, 90, 56)), ('PROSTITUTE', (166, 90, 56))], 'intbk', 70, sp=.3, outline=((40, 26, 20), 1.4)),
+    photo=ph(0.6, 0.7, 0.8, 1.1), pb=(160, 86, 54), lg=(240, 230, 220), lw=.55, order='LPTCF', credit=['A FILM BY', 'SEIJUN SUZUKI'], ccol=(240, 230, 220),
+    ft='a', vbox=(160, 86, 54), fcol=(220, 210, 200), fin=OLD, seed=1965)
+
+# Death of a Salesman (1966): the poster's night blue, its pale DEATH OF A SALESMAN cut off it in its own shading, the salesman dissolving (made for CBS television: the network logo at the head)
+std('death-of-a-salesman-1966', ('grad', [(0, (30, 34, 50)), (.6, (12, 14, 22)), (1, (2, 2, 4))]), (210, 206, 230),
+    LC([(0.16, 0.078, 0.86, 0.208), (0.38, 0.2, 0.62, 0.255), (0.03, 0.258, 0.975, 0.385)], 76, gapf=.2, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) > .5, minf=.1)] * 3),
+    photo=ph(0.67, 0.66, 0.5, 1.2), pb=(180, 180, 220), lg=WHT, lw=.5, order='LPTCF', credit=['BY ARTHUR MILLER'], ccol=(210, 206, 230),
+    ft='e', fcol=(190, 190, 210), fin=OLD, seed=1966)
+
+# Hotel Paradiso (1966): the poster's white, its red Hotel Paradiso lifted, the farce through the hotel doors
+std('hotel-paradiso-1966', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (140, 130, 120))]), (210, 40, 30),
+    L((0.672, 0.822, 0.942, 0.93), 100, (214, 42, 32), mode='key', key=(210, 50, 40), t=(70, 150)),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(214, 42, 32), lg=(214, 42, 32), lw=.5, order='LPTCF', credit=['ALEC GUINNESS', 'GINA LOLLOBRIGIDA'], ccol=(60, 40, 30),
+    ft='b', fcol=(60, 40, 30), fin=OLD, seed=1966)
+
+# Masculin Féminin (1966): the poster's white, its black masculin and pink féminin cut off it in their own colours, Léaud in the black triangle (director from IMDb)
+std('masculin-feminin-1966', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (140, 140, 140))]), (20, 20, 20),
+    LC([(0.15, 0.68, 0.71, 0.768), (0.34, 0.768, 0.785, 0.845)], 90, gapf=.2, valign='base', cuts=[key_cut(lambda a: _lum(a) < .2), key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .35))]),
+    photo=ph(0.5, 0.28, 0.86, 0.75), pb=(230, 30, 120), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'], ccol=(20, 20, 20),
+    dotst=('FOREIGN', (230, 30, 120), WHT), ft='d', fcol=(20, 20, 20), fin=OLD, seed=1966)
+
+# Persona (1966): the poster's white, its black thin PERSONA lifted, the two faces in shadow (director from IMDb)
+std('persona-1966', ('grad', [(0, (248, 248, 248)), (.6, (226, 226, 226)), (1, (120, 120, 120))]), (20, 20, 20),
+    L((0.17, 0.715, 0.865, 0.8), 80, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.27, 1.0, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['EN FILM AV', 'INGMAR BERGMAN'], ccol=(20, 20, 20),
+    ft='c', fcol=(20, 20, 20), fin=OLD, seed=1966)
