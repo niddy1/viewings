@@ -1357,3 +1357,82 @@ std('knife-in-the-water-1962', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 2
     L((0.135, 0.172, 0.965, 0.225), 66, (20, 20, 20), mode='dark'),
     photo=ph(0.55, 0.6, 0.86, 0.95), pb=(20, 20, 20), studio=['ZESPÓŁ FILMOWY', '"KAMERA"'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'ROMAN POLANSKI'],
     ccol=(20, 20, 20), ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1962)
+
+# Lawrence of Arabia (1962): a 2-tape box; the poster's desert yellow, its black serif LAWRENCE OF ARABIA lifted, Lawrence's shadowed face in the white keffiyeh (no logo file: Horizon Pictures, from IMDb's company credits)
+std('lawrence-of-arabia-1962', ('grad', [(0, (250, 210, 50)), (.6, (240, 170, 40)), (1, (160, 90, 20))]), (24, 20, 16),
+    L((0.05, 0.112, 0.958, 0.188), 80, (24, 20, 16), mode='dark'),
+    photo=ph(0.5, 0.5, 0.9, 0.8), pb=(24, 20, 16), studio=['HORIZON PICTURES'], scol=(24, 20, 16), order='lPTCSF', credit=['A DAVID LEAN', 'FILM'], ccol=(24, 20, 16),
+    stick=TWOST((24, 20, 16), (250, 210, 50)), ft='a', vbox=(24, 20, 16), fcol=(40, 30, 20), fin=OLD, seed=1962, **TWO)
+
+# Lolita (1962): the poster's pink-white, its white LOLITA lifted and edged pink, the heart-shaped glasses and the lollipop
+std('lolita-1962', ('grad', [(0, (250, 230, 230)), (.6, (236, 200, 200)), (1, (170, 110, 110)) ]), WHT,
+    L((0.49, 0.218, 0.85, 0.286), 90, WHT, mode='light', outline=((220, 60, 80), 2)),
+    photo=ph(0.48, 0.55, 0.9, 0.85), pb=(220, 40, 60), lg=(200, 40, 60), lw=.55, order='LPTCF', credit=['A STANLEY KUBRICK', 'FILM'], ccol=(170, 40, 60),
+    ft='e', vbox=(220, 40, 60), fcol=(150, 50, 60), fin=OLD, seed=1962)
+
+# Sanjuro (1962): the smoky gold, the poster's white SANJURO lifted, Mifune from the top of the poster (director from IMDb)
+std('sanjuro-1962', ('grad', [(0, (130, 100, 50)), (.6, (50, 40, 22)), (1, (8, 6, 4))]), WHT,
+    L((0.255, 0.605, 0.763, 0.677), 80, WHT, mode='light'),
+    photo=ph(0.5, 0.2, 0.8, 0.85), pb=(230, 170, 60), lg=WHT, lw=.55, order='LPTF', ft='b', fcol=(220, 210, 190), fin=OLD, seed=1962)
+
+# The Trial (1962): the poster's paper and black spiral, its red tall THE and TRIAL cut off it above and below the red band of eyes they run into (no logo file: Paris-Europa Productions, from IMDb's company credits; director from IMDb)
+TRR = lambda a: (a[..., 0] > .55) & (a[..., 1] < .35) & (a[..., 2] < .35)
+std('the-trial-1962', ('grad', [(0, (230, 222, 206)), (.6, (210, 196, 176)), (1, (120, 100, 80))]), (210, 30, 30),
+    LC([(0.035, 0.11, 0.405, 0.355), (0.385, 0.578, 0.958, 0.825)], 150, gapf=.15, valign='base', margin=0, cuts=[key_cut(TRR)] * 2),
+    photo=ph(0.5, 0.46, 1.0, 0.42), pb=(20, 20, 20), studio=['PARIS-EUROPA', 'PRODUCTIONS'], scol=(20, 20, 20), order='lTPCF', credit=['AN ORSON WELLES', 'FILM'],
+    ccol=(20, 20, 20), ft='d', fcol=(20, 20, 20), fin=OLD, seed=1962)
+
+# To Kill a Mockingbird (1962): the poster's yellow, its cream TO KILL A Mockingbird cut off the book cover word by word and levelled, the children and Atticus over the book (top-billed cast from IMDb)
+TKC = lambda a: (a[..., 0] > .85) & (a[..., 1] > .8) & (a[..., 2] < .6)
+std('to-kill-a-mockingbird-1962', ('grad', [(0, (250, 230, 120)), (.6, (240, 210, 80)), (1, (160, 130, 30))]), (40, 40, 60),
+    LC([(0.52, 0.4, 0.95, 0.62), (0.67, 0.59, 0.79, 0.69), (0.52, 0.62, 0.96, 0.89)], 90, gapf=.18, valign='base', outline=((40, 40, 60), 2.4), cuts=[
+        pick_cut(TKC, (0.52, 0.4, 0.95, 0.62), [(0.575, 0.549), (0.645, 0.539), (0.734, 0.508), (0.793, 0.489), (0.831, 0.483), (0.892, 0.462)], rot=-22, r=.02),
+        pick_cut(TKC, (0.67, 0.59, 0.79, 0.69), [(0.724, 0.637)], r=.02),
+        pick_cut(TKC, (0.52, 0.62, 0.96, 0.89), [(0.559, 0.804), (0.609, 0.801), (0.645, 0.791), (0.681, 0.768), (0.716, 0.765), (0.746, 0.757), (0.786, 0.757), (0.822, 0.72), (0.854, 0.719), (0.877, 0.706), (0.923, 0.686)], rot=-26, r=.015)]),
+    photo=ph(0.55, 0.15, 0.6, 0.8), pb=(40, 40, 60), lg=(40, 40, 60), lw=.55, order='LPTCF', credit=['GREGORY PECK'], ccol=(40, 40, 60),
+    ft='c', fcol=(40, 40, 60), fin=OLD, seed=1962)
+
+# Billy Liar (1963): the poster's sky blue, its white BILLY LIAR cut off it, Tom Courtenay under the yellow crown (no logo file: Vic Films, from IMDb's company credits)
+std('billy-liar-1963', ('grad', [(0, (70, 180, 200)), (.6, (40, 130, 150)), (1, (14, 50, 60))]), WHT,
+    LC([(0.03, 0.02, 0.62, 0.14), (0.45, 0.12, 0.98, 0.26)], 90, gapf=.2, valign='base', cuts=[comp_cut(lambda a: (_lum(a) > .9) & (_sat(a) < .15), minf=.1, rot=-4)] * 2),
+    photo=ph(0.55, 0.62, 0.8, 0.9), pb=(250, 190, 30), studio=['VIC FILMS'], scol=WHT, order='lPTSF', stick=flow(dot, 74, ['COMEDY'], (250, 190, 30), (20, 50, 60)),
+    ft='a', vbox=WHT, vink=(40, 130, 150), fcol=(220, 240, 244), fin=OLD, seed=1963)
+
+# Charade (1963): black, the poster's many-coloured CHARADE cut off it in its own colours, Cary Grant and Audrey Hepburn in the red spiral
+std('charade-1963', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (2, 2, 2))]), (240, 200, 40),
+    LC([(0.07, 0.7, 0.93, 0.912)], 110, cuts=[key_cut(lambda a: _sat(a) > .45)]),
+    photo=ph(0.5, 0.3, 0.86, 0.95), pb=(220, 40, 30), lg=WHT, lw=.55, order='LPTCF', credit=['CARY GRANT', 'AUDREY HEPBURN'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=OLD, seed=1963)
+
+# Contempt (1963): the poster's white, its dark-maroon CONTEMPT lifted, Bardot in the maroon frame (no logo file: Rome Paris Films, from IMDb's company credits; director from IMDb)
+std('contempt-1963', ('grad', [(0, (246, 244, 242)), (.6, (226, 222, 218)), (1, (130, 100, 100))]), (70, 20, 24),
+    L((0.088, 0.695, 0.926, 0.83), 90, (70, 20, 24), mode='dark', speck=.03),
+    photo=ph(0.5, 0.35, 0.8, 1.2), pb=(130, 40, 40), studio=['ROME PARIS FILMS'], scol=(70, 20, 24), order='lPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'], ccol=(70, 20, 24),
+    ft='a', vbox=(70, 20, 24), fcol=(70, 20, 24), fin=OLD, seed=1963)
+
+# High and Low (1963): black, the poster's yellow HIGH, the sideways AND and LOW cut off it in their own colours, the men round the telephone (director from IMDb)
+HLY = lambda a: (a[..., 0] > .8) & (a[..., 1] > .7) & (a[..., 2] < .4)
+std('high-and-low-1963', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (250, 220, 50),
+    LC([(0.085, 0.085, 0.915, 0.255), (0.085, 0.255, 0.17, 0.425), (0.17, 0.252, 0.915, 0.425)], 100, gapf=.15, valign='base', cuts=[comp_cut(HLY), comp_cut(HLY, rot=-90), comp_cut(HLY)]),
+    photo=ph(0.5, 0.72, 1.0, 0.75), pb=(250, 220, 50), lg=WHT, lw=.55, order='LTPCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=OLD, seed=1963)
+
+# It's a Mad, Mad, Mad, Mad World (1963): the poster's white, its red "IT'S A MAD, MAD, MAD, MAD WORLD" cut off it line by line into one, the crowd on the globe
+MMR = lambda a: (a[..., 0] > .7) & (a[..., 1] < .35)
+std('it-s-a-mad-mad-mad-mad-world-1963', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 224)), (1, (140, 140, 136))]), (210, 30, 30),
+    LC([(0.175, 0.668, 0.39, 0.724), (0.135, 0.726, 0.305, 0.782), (0.03, 0.784, 0.4, 0.843), (0.205, 0.844, 0.36, 0.899), (0.155, 0.901, 0.42, 0.958)], 60, gapf=.15, valign='base', margin=0,
+       cuts=[comp_cut(MMR, minf=.03)] * 5),
+    photo=ph(0.48, 0.3, 0.86, 0.9), pb=(210, 30, 30), lg=(210, 30, 30), lw=.55, order='LPTCSF', credit=['SPENCER TRACY'], ccol=(30, 30, 30),
+    stick=PRC(['$2.99', 'COMEDY']), ft='d', fcol=(30, 30, 30), fin=RENTAL, seed=1963)
+
+# Lord of the Flies (1963): the poster's grey, its red italic LORD OF THE FLIES keyed off it, the boys' faces in the strip (no logo file: Allen-Hodgdon Productions, from IMDb's company credits)
+std('lord-of-the-flies-1963', ('grad', [(0, (226, 226, 226)), (.6, (200, 200, 200)), (1, (110, 110, 110))]), (210, 50, 40),
+    L([(0.395, 0.414, 0.895, 0.54), (0.378, 0.547, 0.9, 0.672)], 90, (214, 52, 42), mode='key', key=(210, 60, 50), t=(70, 150), gapf=.25),
+    photo=ph(0.14, 0.5, 0.26, 1.9), pb=(30, 30, 30), studio=['ALLEN-HODGDON', 'PRODUCTIONS'], scol=(30, 30, 30), order='lPTCF', credit=['A FILM BY', 'PETER BROOK'],
+    ccol=(30, 30, 30), ft='b', fcol=(30, 30, 30), fin=OLD, seed=1963)
+
+# Shock Corridor (1963): the poster's white, its black SHOCK CORRIDOR lifted, the screaming patient and the crowd (no logo file: F & F Productions, from IMDb's company credits; director from IMDb)
+std('shock-corridor-1963', ('grad', [(0, (248, 248, 248)), (.6, (228, 228, 228)), (1, (140, 140, 140))]), (20, 20, 20),
+    L((0.39, 0.641, 0.82, 0.778), 90, (20, 20, 20), mode='dark'),
+    photo=ph(0.6, 0.5, 0.86, 0.6), pb=(240, 220, 60), studio=['F & F PRODUCTIONS'], scol=(20, 20, 20), order='lPTCF', credit=['WRITTEN & DIRECTED BY', 'SAMUEL FULLER'],
+    ccol=(20, 20, 20), ft='c', fcol=(20, 20, 20), fin=OLD, seed=1963)
