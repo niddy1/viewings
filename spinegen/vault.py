@@ -2631,3 +2631,76 @@ std('batman-returns-1992', ('grad', [(0, (30, 40, 70)), (.6, (8, 10, 20)), (1, (
     L([(0.198, 0.75, 0.8, 0.818), (0.128, 0.83, 0.874, 0.868)], 96, WHT, mode='light', valign='base', gapf=.2, speck=.05),
     photo=ph(0.5, 0.35, 0.6, 1.4), pb=(160, 190, 240), lg=WHT, lw=.5, order='LPTF',
     ft='d', fcol=(190, 200, 230), fin=RENTAL, seed=1992)
+
+# Hard Boiled (1992): the poster's cream, its black HARD BOILED and red brushed 辣手神探 cut off it in their own colours into one line, Chow Yun-fat with the shotgun (no logo file: Golden Princess, from IMDb's company credits)
+std('hard-boiled-1992', ('grad', [(0, (242, 236, 222)), (.6, (226, 214, 190)), (1, (130, 110, 80))]), (20, 20, 20),
+    LC([(0.07, 0.765, 0.93, 0.85), (0.4, 0.85, 0.94, 0.93)], 100, valign='base', margin=0, gapf=.25,
+       cuts=[key_cut(lambda a: _lum(a) < .3), key_cut(lambda a: (a[..., 0] > a[..., 1] + .2) & (a[..., 0] > .4))]),
+    photo=ph(0.45, 0.33, 0.8, 1.0), pb=(190, 40, 30), studio=['GOLDEN PRINCESS'], scol=(20, 20, 20), order='lPTCF', credit=['A JOHN WOO', 'FILM'], ccol=(20, 20, 20),
+    ft='c', fcol=(30, 26, 20), fin=RENTAL, seed=1992)
+
+# Home Alone 2: Lost in New York (1992): the skyline's black band, the poster's white HOME ALONE 2 with the red house and the gold 2 and its yellow LOST IN NEW YORK cut off it, Kevin with the newspaper before the Empire State
+std('home-alone-2-lost-in-new-york-1992', ('grad', [(0, (20, 20, 24)), (.4, (40, 90, 180)), (1, (10, 30, 80))]), WHT,
+    LC([(0.06, 0.09, 0.93, 0.2)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)) | ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4)), minf=.005)]),
+    photo=ph(0.5, 0.52, 0.7, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(210, 220, 240), fin=RENTAL, seed=1992)
+
+# Man Bites Dog (1992): black, the poster's red MAN BITES DOG keyed off it, Benoît Poelvoorde with the gun under the title (no logo file: Les Artistes Anonymes, from IMDb's company credits)
+std('man-bites-dog-1992', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (2, 2, 2))]), (200, 30, 30),
+    L((0.52, 0.138, 0.988, 0.177), 70, (200, 30, 30), mode='key', key=(200, 30, 30), t=(70, 160)),
+    photo=ph(0.55, 0.5, 0.8, 1.2), pb=(200, 30, 30), studio=['LES ARTISTES', 'ANONYMES'], scol=WHT, order='lTPCF', credit=["C'EST ARRIVÉ", 'PRÈS DE CHEZ VOUS'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=OLD, seed=1992)
+
+# Reservoir Dogs (1992): the poster's black, its red condensed RESERVOIR / DOGS keyed off it into one line, the men in black suits walking
+std('reservoir-dogs-1992', ('grad', [(0, (60, 40, 30)), (.6, (14, 10, 8)), (1, (2, 2, 2))]), (214, 30, 30),
+    L([(0.03, 0.545, 0.755, 0.672), (0.03, 0.668, 0.385, 0.795)], 110, (214, 30, 30), mode='key', key=(214, 30, 30), t=(70, 160), valign='base'),
+    photo=ph(0.6, 0.27, 0.8, 0.8), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='a', vbox=(214, 30, 30), fcol=(210, 200, 196), fin=RENTAL, seed=1992)
+
+# The Mighty Ducks (1992): Disney, a live-action film, so a slipcase; the rink's white, the poster's yellow outlined THE MIGHTY / DUCKS cut off it into one line, Coach Bombay and his team
+std('the-mighty-ducks-1992', ('grad', [(0, (30, 90, 60)), (.6, (12, 40, 26)), (1, (2, 10, 6))]), (250, 220, 40),
+    LC([(0.05, 0.74, 0.65, 0.814), (0.05, 0.818, 0.655, 0.932)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: ((a[..., 0] > .65) & (a[..., 1] > .55) & (a[..., 2] < .45)) | (_lum(a) < .3), minf=.01)] * 2),
+    photo=ph(0.5, 0.3, 0.9, 0.75), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SPORTS', (250, 220, 40), (20, 30, 20)),
+    ft='b', fcol=(200, 220, 206), fin=RENTAL, seed=1992)
+
+# The Player (1992): the sunset sky, the poster's white serif The / Player lifted into one line, Tim Robbins hanging in the noose of film
+std('the-player-1992', ('grad', [(0, (20, 40, 120)), (.5, (220, 120, 60)), (1, (20, 10, 10))]), WHT,
+    LC([(0.555, 0.12, 0.71, 0.25), (0.575, 0.245, 0.89, 0.51)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .94, minf=.05)] * 2),
+    photo=ph(0.35, 0.62, 0.6, 1.1), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A ROBERT ALTMAN', 'FILM'], ccol=WHT,
+    ft='d', fcol=(230, 210, 200), fin=RENTAL, seed=1992)
+
+# Unforgiven (1992): black, the poster's dim orange UNFORGIVEN keyed off it, Eastwood with the rifle in the dark
+std('unforgiven-1992', ('grad', [(0, (50, 30, 14)), (.6, (14, 8, 4)), (1, (2, 2, 2))]), (220, 120, 40),
+    LC([(0.3, 0.878, 0.7, 0.94)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 2] < .3))]),
+    photo=ph(0.6, 0.4, 0.8, 1.2), pb=(220, 120, 40), lg=WHT, lw=.5, order='LPTCF', credit=['CLINT EASTWOOD', 'GENE HACKMAN'], ccol=(230, 190, 150),
+    ft='e', fcol=(210, 190, 170), fin=RENTAL, seed=1992)
+
+# Dazed and Confused (1993): the poster's sky blue, its red swirling DAZED AND CONFUSED with the smiley in the O cut off it whole, the kids leaning in
+std('dazed-and-confused-1993', ('grad', [(0, (40, 170, 230)), (.5, (30, 130, 200)), (1, (10, 50, 100))]), (220, 40, 50),
+    LC([(0.08, 0.29, 0.93, 0.615)], 150, cuts=[comp_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .35)) | ((a[..., 0] > .8) & (a[..., 1] > .7) & (a[..., 2] < .4)) | (_lum(a) > .92), minf=.01, close=3, fillh=True)]),
+    photo=ph(0.5, 0.82, 0.9, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'RICHARD LINKLATER'], ccol=WHT,
+    ft='a', vbox=(220, 40, 50), fcol=(220, 236, 250), fin=RENTAL, seed=1993)
+
+# Fearless (1993): the poster's sky, FEARLESS typeset in heavy capitals in its blue (parked for Ian's logo, see data/logos-wanted.md: the poster's letters are see-through, with sky and cloud showing in them, so both cuts came out holed), Jeff Bridges with his arms out on the building's edge
+std('fearless-1993', ('grad', [(0, (200, 226, 240)), (.5, (120, 180, 220)), (1, (20, 60, 100))]), (20, 90, 150),
+    T('FEARLESS', 'intbk', 110, (24, 100, 170)),
+    photo=ph(0.4, 0.3, 0.6, 1.0), pb=(20, 90, 150), lg=(20, 50, 90), lw=.55, order='LPTF',
+    ft='c', fcol=(20, 40, 70), fin=RENTAL, seed=1993)
+
+# Groundhog Day (1993): the dawn sky, GROUNDHOG DAY typeset in heavy capitals in white with the logo's red keyline (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on a pale sky, so a cut lost their insides twice), Bill Murray in the alarm clock
+std('groundhog-day-1993', ('grad', [(0, (90, 160, 220)), (.5, (240, 190, 140)), (1, (90, 70, 50))]), WHT,
+    T('GROUNDHOG DAY', 'intbk', 90, WHT, outline=((200, 30, 40), 2.6)),
+    photo=ph(0.45, 0.52, 0.7, 0.8), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('93 0212', top='COMEDY', fill=(236, 230, 214)),
+    ft='d', fcol=(240, 230, 220), fin=RENTAL, seed=1993)
+
+# In the Name of the Father (1993): black, the poster's red condensed IN THE NAME / OF THE FATHER keyed off it into one line, Daniel Day-Lewis's face
+std('in-the-name-of-the-father-1993', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (200, 30, 40),
+    L([(0.155, 0.035, 0.838, 0.166), (0.105, 0.166, 0.892, 0.295)], 96, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160), valign='base'),
+    photo=ph(0.5, 0.6, 0.8, 0.9), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL DAY-LEWIS'], ccol=WHT,
+    ft='b', fcol=(210, 200, 196), fin=RENTAL, seed=1993)
+
+# Jurassic Park (1993): Amblin and Universal, a slipcase; black, the logo's yellow-framed JURASSIC PARK bar cut off the poster as it is, the T. rex skeleton in the red disc above
+std('jurassic-park-1993', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (250, 190, 40),
+    LC([(0.085, 0.36, 0.915, 0.465)], 150, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.5, 0.23, 0.62, 0.55), pb=(250, 190, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=(250, 210, 120),
+    ft='a', vbox=(220, 30, 30), fcol=(220, 200, 170), fin=RENTAL, seed=1993)

@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Player (1992) | Vault 1990s | `logos/the-player-1992-title.png` | cut, but the spotlight beam runs into the P, so the lettering had to be thinned and reads faint |
+| Groundhog Day (1993) | Vault 1990s | `logos/groundhog-day-1993-title.png` | typeset; white letters on a pale sky lost their insides |
+| Fearless (1993) | Vault 1990s | `logos/fearless-1993-title.png` | typeset; the poster's letters are see-through (sky shows in them) |
 | Teenage Mutant Ninja Turtles (1990) | Vault 1990s | `logos/teenage-mutant-ninja-turtles-1990-title.png` | typeset; green letters on teal clouds of nearly the same colour |
 | Beauty and the Beast (1991) | Vault 1990s | `logos/beauty-and-the-beast-1991-title.png` | typeset (Disney clamshell); Lumiere overlaps the title plate and the gold shading broke a colour cut |
 | Indiana Jones and the Last Crusade (1989) | Vault 1980s | `logos/indiana-jones-and-the-last-crusade-1989-title.png` | typeset; the lettering's oranges are the parchment's own, so cuts left holes |
