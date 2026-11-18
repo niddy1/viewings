@@ -2341,3 +2341,78 @@ std('full-metal-jacket-1987', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 22
     LC([(0.405, 0.642, 0.615, 0.706), (0.36, 0.705, 0.66, 0.767), (0.325, 0.765, 0.68, 0.828)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .32)] * 3),
     photo=ph(0.5, 0.35, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
     ft='a', fcol=(20, 20, 20), fin=OLD, seed=1987)
+
+# Raising Arizona (1987): the poster's white, its striped red, white and blue RAISING / ARIZONA (its A a safety pin) cut off it in its own colours into one line, H.I., Ed and the baby on their loungers (no logo file: Circle Films, from IMDb's company credits)
+std('raising-arizona-1987', ('grad', [(0, (246, 246, 244)), (.5, (220, 230, 244)), (1, (110, 130, 170))]), (200, 40, 50),
+    LC([(0.295, 0.67, 0.71, 0.742), (0.29, 0.742, 0.715, 0.81)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (_sat(a) > .14) | (_lum(a) < .8))] * 2),
+    photo=ph(0.4, 0.4, 0.6, 0.8), pb=(60, 80, 160), studio=['CIRCLE FILMS'], scol=(40, 50, 100), order='lPTCSF', credit=['NICOLAS CAGE', 'HOLLY HUNTER'], ccol=(40, 50, 100), stick=RWD(fill=(250, 226, 60)),
+    ft='c', fcol=(40, 50, 100), fin=RENTAL, seed=1987)
+
+# RoboCop (1987): the night street, the poster's white ROBOCOP with its red shadow cut off it in its own colours, RoboCop stepping out of the cruiser
+std('robocop-1987', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, (2, 2, 6))]), WHT,
+    LC([(0.09, 0.826, 0.91, 0.928)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .7) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)]),
+    photo=ph(0.4, 0.35, 0.7, 1.2), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('87 0717', top='ACTION', fill=(226, 228, 236)),
+    ft='a', vbox=(200, 30, 30), fcol=(200, 206, 220), fin=RENTAL, seed=1987)
+
+# The Princess Bride (1987): dusk, its gold THE PRINCESS BRIDE cut off it word by word into one line, Westley and Buttercup's kiss under the title
+std('the-princess-bride-1987', ('grad', [(0, (50, 50, 70)), (.5, (90, 70, 50)), (1, (24, 16, 8))]), (240, 210, 90),
+    LC([(0.385, 0.152, 0.55, 0.193), (0.09, 0.175, 0.87, 0.33), (0.24, 0.275, 0.69, 0.36)], 100, valign='base', margin=0, gapf=.3, outline=((50, 30, 10), 1.6),
+       cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 0] > a[..., 2] + .25) & (_lum(a) > .45), minf=.05, keep=lambda cx, cy: cy > .2),
+             comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 0] > a[..., 2] + .25) & (_lum(a) > .45), minf=.05, keep=lambda cx, cy: .1 < cy < .7),
+             comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 0] > a[..., 2] + .25) & (_lum(a) > .45), minf=.05, keep=lambda cx, cy: cy > .3)]),
+    photo=ph(0.47, 0.6, 0.6, 1.2), pb=(240, 210, 90), lg=WHT, lw=.5, order='LTPCF', credit=['A ROB REINER', 'FILM'], ccol=(250, 230, 160),
+    ft='e', fcol=(240, 220, 180), fin=RENTAL, seed=1987)
+
+# The Untouchables (1987): the dark of the suit, the poster's gold THE UNTOUCHABLES cut off it, Kevin Costner with the badge
+std('the-untouchables-1987', ('grad', [(0, (60, 60, 64)), (.6, (18, 18, 20)), (1, (2, 2, 2))]), (220, 180, 110),
+    LC([(0.095, 0.362, 0.905, 0.436)], 100, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .15) & (_lum(a) > .35))]),
+    photo=ph(0.55, 0.15, 0.8, 0.5), pb=(220, 180, 110), lg=WHT, lw=.5, order='LPTCF', credit=['A BRIAN DE PALMA', 'FILM'], ccol=(220, 190, 140),
+    ft='b', fcol=(200, 196, 190), fin=OLD, seed=1987)
+
+# Beetlejuice (1988): the poster's purple dusk, its yellow BEETLEJUICE keyed off it, Beetlejuice on the model town with Lydia and the Maitlands
+std('beetlejuice-1988', ('grad', [(0, (60, 40, 110)), (.5, (110, 60, 120)), (1, (14, 10, 30))]), (250, 220, 60),
+    L((0.083, 0.112, 0.918, 0.198), 96, (250, 220, 60), mode='key', key=(240, 210, 60), t=(70, 160)),
+    photo=ph(0.5, 0.45, 0.8, 1.1), pb=(250, 220, 60), lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', (130, 200, 80), (20, 20, 20)),
+    ft='d', fcol=(220, 210, 230), fin=RENTAL, seed=1988)
+
+# Bull Durham (1988): the evening sky, the poster's white BULL / DURHAM lifted into one line, Costner and Sarandon with the bat
+std('bull-durham-1988', ('grad', [(0, (70, 80, 110)), (.6, (24, 26, 40)), (1, (4, 4, 8))]), WHT,
+    L([(0.568, 0.76, 0.867, 0.832), (0.463, 0.831, 0.967, 0.9)], 90, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.33, 0.86, 0.95), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(210, 210, 220), fin=RENTAL, seed=1988)
+
+# Dead Ringers (1988): black, the poster's thin red DEAD / RINGERS cut off it into one line, the twin faces of Jeremy Irons merging
+std('dead-ringers-1988', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (210, 30, 40),
+    LC([(0.185, 0.771, 0.8, 0.843), (0.182, 0.852, 0.8, 0.928)], 100, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .25))] * 2),
+    photo=ph(0.5, 0.25, 0.9, 0.7), pb=(210, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG', 'FILM'], ccol=(230, 200, 200),
+    ft='e', fcol=(200, 190, 190), fin=OLD, seed=1988)
+
+# Die Hard (1988): black, the poster's red DIE HARD keyed off it, John McClane's face beside the burning tower
+std('die-hard-1988', ('grad', [(0, (50, 40, 34)), (.6, (14, 10, 8)), (1, (2, 2, 2))]), (220, 30, 30),
+    L((0.072, 0.844, 0.928, 0.925), 96, (220, 30, 30), mode='key', key=(220, 30, 30), t=(70, 160)),
+    photo=ph(0.6, 0.38, 0.8, 1.0), pb=(250, 150, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['BRUCE WILLIS'], ccol=WHT, stick=PRC(['$2.49', 'ACTION']),
+    ft='b', vbox=(220, 30, 30), fcol=(210, 200, 196), fin=RENTAL, seed=1988)
+
+# Grave of the Fireflies (1988): Studio Ghibli, a slipcase; black, the poster's white GRAVE of the / FIREFLIES lifted into one line, Seita carrying Setsuko under the umbrella
+std('grave-of-the-fireflies-1988', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), WHT,
+    L([(0.06, 0.548, 0.535, 0.605), (0.06, 0.603, 0.465, 0.66)], 90, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.7, 0.62, 0.55, 1.4), pb=(240, 180, 90), lg=WHT, lw=.5, order='LTPF',
+    ft='a', vbox=(240, 180, 90), vink=(30, 20, 10), fcol=(220, 210, 190), fin=OLD, seed=1988)
+
+# Oliver & Company (1988): Disney clamshell; the New York sky blue, the poster's yellow OLIVER & Company cut off it in its own colours, Oliver's face in the diamond
+disney('oliver-company-1988', ('grad', [(0, (60, 130, 220)), (.5, (90, 160, 230)), (1, (30, 70, 140))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.055, 0.088, 0.605, 0.18), (0.09, 0.18, 0.588, 0.262)], 110, valign='base', margin=0, gapf=.25,
+                cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45)) | ((a[..., 0] > .6) & (a[..., 1] < .35)), minf=.01, close=2)] * 2),
+       face=ph(.49, .462, .13, 1.4), lcol=WHT)
+
+# Rain Man (1988): the poster's park greens, its white serif RAIN MAN lifted, Raymond and Charlie walking
+std('rain-man-1988', ('grad', [(0, (120, 130, 100)), (.6, (50, 56, 40)), (1, (10, 12, 8))]), WHT,
+    L((0.07, 0.83, 0.922, 0.917), 90, WHT, mode='light'),
+    photo=ph(0.48, 0.4, 0.7, 1.15), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['DUSTIN HOFFMAN', 'TOM CRUISE'], ccol=WHT,
+    ft='d', fcol=(220, 226, 210), fin=RENTAL, seed=1988)
+
+# The Land Before Time (1988): Amblin and Universal, a slipcase; the valley's greens, the poster's whole gold-framed THE LAND BEFORE TIME panel cut off it as it is, Littlefoot and the others
+std('the-land-before-time-1988', ('grad', [(0, (120, 190, 230)), (.5, (110, 170, 90)), (1, (40, 70, 30))]), WHT,
+    LC([(0.095, 0.03, 0.905, 0.332)], 140, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.6, 0.66, 0.8, 0.95), pb=(250, 210, 60), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(240, 240, 230), fin=RENTAL, seed=1988)
