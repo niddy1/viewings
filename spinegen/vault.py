@@ -567,3 +567,94 @@ std('ivan-the-terrible-part-i-1944', ('grad', [(0, (226, 200, 170)), (.6, (190, 
     L([(0.03, 0.038, 0.97, 0.153), (0.38, 0.165, 0.62, 0.2)], 76, (194, 32, 32), mode='key', key=(190, 40, 40), t=(70, 150), gapf=.25),
     photo=ph(0.5, 0.6, 0.6, 1.8), pb=(194, 32, 32), lg=(80, 40, 30), lw=.5, order='LPTCF', credit=['SERGEI EISENSTEIN'], ccol=(80, 40, 30),
     ft='c', fcol=(80, 50, 40), fin=OLD, seed=1944)
+
+# Laura (1944): the poster's white, its red swash script Laura keyed off it, Gene Tierney and Dana Andrews
+std('laura-1944', ('grad', [(0, (246, 244, 238)), (.6, (226, 222, 214)), (1, (140, 150, 140))]), (214, 36, 40),
+    L((0.0, 0.47, 0.84, 0.832), 165, (216, 38, 42), mode='key', key=(210, 40, 40), t=(70, 150), speck=.04),
+    photo=ph(0.4, 0.2, 0.8, 0.75), pb=(30, 120, 110), lg=(30, 30, 30), lw=.55, order='LPTF', ft='e', vbox=(216, 38, 42),
+    fcol=(40, 40, 40), fin=OLD, seed=1944)
+
+# And Then There Were None (1945): the poster's yellow panel, its red AND THEN THERE / WERE NONE cut off it word by word and turned level (it is set at 10 degrees), the ten guests' faces (20th Century-Fox in type)
+ATR = lambda a: (a[..., 0] > .6) & (a[..., 1] < .45) & (a[..., 2] < .3)
+std('and-then-there-were-none-1945', ('grad', [(0, (250, 220, 70)), (.6, (240, 196, 40)), (1, (170, 120, 20))]), (210, 50, 30),
+    [LC([(0.0, 0.1, 0.36, 0.22), (0.0, 0.2, 0.39, 0.34), (0.0, 0.3, 0.45, 0.45)], 64, gapf=.2, valign='base', cuts=[
+        pick_cut(ATR, (0.0, 0.1, 0.36, 0.22), [(0.063, 0.178), (0.164, 0.16), (0.275, 0.148)], rot=-10, r=.02),
+        pick_cut(ATR, (0.0, 0.2, 0.39, 0.34), [(0.041, 0.276), (0.128, 0.278), (0.215, 0.265), (0.313, 0.254)], rot=-10, r=.02),
+        pick_cut(ATR, (0.0, 0.3, 0.45, 0.45), [(0.034, 0.388), (0.112, 0.385), (0.204, 0.375), (0.298, 0.358), (0.383, 0.354)], rot=-10, r=.02)]),
+     LC([(0.0, 0.41, 0.45, 0.54), (0.0, 0.52, 0.46, 0.67)], 64, gapf=.2, valign='base', cuts=[
+        pick_cut(ATR, (0.0, 0.41, 0.45, 0.54), [(0.082, 0.496), (0.177, 0.491), (0.272, 0.471), (0.377, 0.465)], rot=-10, r=.02),
+        pick_cut(ATR, (0.0, 0.52, 0.46, 0.67), [(0.072, 0.607), (0.188, 0.592), (0.306, 0.58), (0.395, 0.571)], rot=-10, r=.02)])],
+    tgap=10, photo=ph(0.75, 0.24, 0.5, 1.2), pb=(30, 30, 30), studio=['20TH CENTURY-FOX'], scol=(60, 30, 20), order='lPTCF',
+    credit=['DIRECTED BY', 'RENÉ CLAIR'], ccol=(60, 30, 20), ft='b', fcol=(60, 30, 20), fin=OLD, seed=1945)
+
+# Brief Encounter (1945): the poster's yellow and night blue, its red brush Brief and encounter cut off it in their own colours and turned level (they climb 19 degrees), Celia Johnson and Trevor Howard (no logo file: Cineguild, from IMDb's company credits)
+BER = lambda a: (a[..., 0] > .6) & (a[..., 1] < .35) & (a[..., 2] < .3)
+std('brief-encounter-1945', ('grad', [(0, (30, 50, 90)), (.5, (20, 30, 56)), (1, (6, 8, 16))]), (226, 50, 40),
+    LC([(0.09, 0.47, 0.62, 0.79), (0.09, 0.68, 0.97, 0.96)], 130, gapf=.18, valign='base', cuts=[
+        pick_cut(BER, (0.09, 0.47, 0.62, 0.79), [(0.184, 0.676), (0.313, 0.698), (0.353, 0.628), (0.388, 0.691), (0.462, 0.675), (0.54, 0.6)], rot=-14, r=.02),
+        pick_cut(BER, (0.09, 0.68, 0.97, 0.96), [(0.14, 0.911), (0.245, 0.885), (0.346, 0.863), (0.455, 0.842), (0.563, 0.822), (0.658, 0.794), (0.713, 0.737), (0.816, 0.762), (0.911, 0.732)], rot=-19, r=.02)]),
+    photo=ph(0.55, 0.22, 0.86, 0.85), pb=(250, 214, 60), studio=['CINEGUILD'], scol=(250, 214, 60), order='lPTF',
+    ft='c', vbox=(250, 214, 60), vink=(20, 30, 56), fcol=(200, 206, 220), fin=OLD, seed=1945)
+
+# Spellbound (1945): the poster's snow white, its black script Spellbound lifted, Gregory Peck's face upside down from the top of the poster (no logo file: Selznick International, from IMDb's company credits)
+std('spellbound-1945', ('grad', [(0, (246, 248, 250)), (.6, (222, 230, 238)), (1, (140, 160, 180))]), (24, 24, 30),
+    L((0.14, 0.61, 0.94, 0.812), 104, (24, 24, 30), mode='dark'),
+    photo=ph(0.74, 0.18, 0.5, 1.0), pb=(24, 24, 30), studio=['SELZNICK', 'INTERNATIONAL'], scol=(24, 24, 30), order='PTlF',
+    ft='d', fcol=(24, 24, 30), fin=OLD, seed=1945)
+
+# The Lost Weekend (1945): the poster's paper white, its red THE LOST / WEEK-END cut off it word by word and turned level (it leans 14 degrees), Ray Milland's face
+LWR = lambda a: (a[..., 0] > .55) & (a[..., 1] < .4) & (a[..., 2] < .35)
+std('the-lost-weekend-1945', ('grad', [(0, (238, 240, 240)), (.6, (210, 220, 226)), (1, (100, 120, 140))]), (226, 50, 40),
+    [LC([(0.08, 0.1, 0.36, 0.22), (0.08, 0.19, 0.41, 0.33)], 76, gapf=.2, valign='base', cuts=[
+        pick_cut(LWR, (0.08, 0.1, 0.36, 0.22), [(0.145, 0.179), (0.223, 0.168), (0.291, 0.154)], rot=-14, r=.02),
+        pick_cut(LWR, (0.08, 0.19, 0.41, 0.33), [(0.136, 0.295), (0.212, 0.273), (0.295, 0.255), (0.361, 0.233)], rot=-14, r=.02)]),
+     LC([(0.08, 0.27, 0.5, 0.43), (0.15, 0.37, 0.5, 0.53)], 76, gapf=.12, valign='base', cuts=[
+        pick_cut(LWR, (0.08, 0.27, 0.5, 0.43), [(0.162, 0.38), (0.246, 0.361), (0.324, 0.346), (0.407, 0.336), (0.455, 0.31)], rot=-14, r=.02),
+        pick_cut(LWR, (0.15, 0.37, 0.5, 0.53), [(0.233, 0.47), (0.311, 0.459), (0.377, 0.444), (0.417, 0.437)], rot=-14, r=.02)])],
+    tgap=10, photo=ph(0.73, 0.42, 0.5, 1.0), pb=(226, 50, 40), lg=(30, 40, 50), lw=.5, order='LPTCF', credit=['RAY MILLAND', 'JANE WYMAN'],
+    ccol=(30, 40, 50), ft='a', vbox=(226, 50, 40), fcol=(30, 40, 50), fin=OLD, seed=1945)
+
+# To Have and Have Not (1945): the poster's cream, its black serif TO HAVE AND HAVE NOT lifted with its red drop shadow put back, Bogart and Bacall
+std('to-have-and-have-not-1945', ('grad', [(0, (246, 238, 222)), (.6, (232, 218, 196)), (1, (170, 140, 110))]), (24, 20, 18),
+    L((0.06, 0.758, 0.92, 0.806), 58, (24, 20, 18), mode='dark', shadow=((210, 60, 40), 3, 2.5)),
+    photo=ph(0.5, 0.39, 0.58, 0.85), pb=(204, 42, 36), lg=None, lw=.55, order='LPTCSF', credit=['HUMPHREY BOGART'], ccol=(80, 40, 30),
+    stick=flow(dot, 74, ['WAR'], (40, 80, 140), WHT), ft='c', fcol=(80, 50, 40), fin=OLD, seed=1945)
+
+# Beauty and the Beast (1946): the photograph's greys, its white hairline script Beauty and the Beast lifted, Belle in her gown in the corridor (director from IMDb)
+std('beauty-and-the-beast-1946', ('grad', [(0, (150, 152, 150)), (.6, (70, 72, 72)), (1, (12, 12, 12))]), WHT,
+    L((0.55, 0.53, 0.985, 0.61), 70, WHT, mode='light', speck=0),
+    photo=ph(0.38, 0.62, 0.62, 1.7), pb=WHT, order='TPCF', credit=['UN FILM DE', 'JEAN COCTEAU'], ccol=WHT,
+    ft='b', fcol=(220, 220, 220), fin=OLD, seed=1946)
+
+# Gilda (1946): black, the poster's red script Gilda keyed off it, Rita Hayworth in the strapless gown (tall picture)
+std('gilda-1946', ('grad', [(0, (24, 30, 50)), (.6, (8, 10, 16)), (1, (2, 2, 4))]), (220, 40, 50),
+    L((0.5, 0.57, 0.87, 0.68), 120, (222, 42, 52), mode='key', key=(210, 45, 55), t=(70, 150)),
+    photo=ph(0.26, 0.5, 0.4, 1.95), pb=(222, 42, 52), lg=WHT, lw=.6, order='LPTF', ft='a', vbox=(222, 42, 52), fcol=(200, 200, 210), fin=OLD, seed=1946)
+
+# Green for Danger (1946): the poster's cream, its green serif GREEN, FOR and DANGER cut off it in their own colours and turned level, Alastair Sim (no logo file: Individual Pictures, from IMDb's company credits)
+GFG = lambda a: (a[..., 1] > a[..., 0] + .1) & (a[..., 1] > a[..., 2]) & (_lum(a) < .5)
+std('green-for-danger-1946', ('grad', [(0, (244, 238, 222)), (.6, (226, 216, 192)), (1, (150, 130, 100))]), (30, 120, 70),
+    LC([(0.42, 0.52, 0.84, 0.64), (0.53, 0.62, 0.83, 0.72), (0.43, 0.69, 0.97, 0.83)], 84, gapf=.18, valign='base', cuts=[
+        pick_cut(GFG, (0.42, 0.52, 0.84, 0.64), [(0.474, 0.598), (0.557, 0.587), (0.632, 0.579), (0.703, 0.571), (0.776, 0.561)], rot=-5, r=.02),
+        pick_cut(GFG, (0.53, 0.62, 0.83, 0.72), [(0.591, 0.671), (0.673, 0.668), (0.758, 0.659)], rot=-5, r=.02),
+        pick_cut(GFG, (0.43, 0.69, 0.97, 0.83), [(0.499, 0.78), (0.582, 0.773), (0.654, 0.762), (0.74, 0.756), (0.82, 0.745), (0.902, 0.737)], rot=-5, r=.02)]),
+    photo=ph(0.4, 0.2, 0.7, 0.9), pb=(30, 120, 70), studio=['INDIVIDUAL PICTURES'], scol=(30, 120, 70), order='lPTSF', stick=PRC(['$1.49', 'MYSTERY']),
+    ft='e', vbox=(30, 120, 70), fcol=(40, 60, 44), fin=RENTAL, seed=1946)
+
+# It's a Wonderful Life (1946): the poster's white, its red IT'S A WONDERFUL LIFE cut off it in its own colours and turned level (it climbs 20 degrees), George and Mary (no logo file: Liberty Films, from IMDb's company credits)
+IWR = lambda a: (a[..., 0] > .6) & (a[..., 1] < .3) & (a[..., 2] < .3)
+std('it-s-a-wonderful-life-1946', ('grad', [(0, (246, 246, 244)), (.6, (226, 228, 228)), (1, (140, 150, 160))]), (200, 30, 40),
+    LC([(0.02, 0.55, 0.98, 0.88)], 64, cuts=[pick_cut(IWR, (0.02, 0.55, 0.98, 0.88), [(0.052, 0.825), (0.095, 0.818), (0.155, 0.815), (0.234, 0.804), (0.314, 0.782), (0.387, 0.77), (0.441, 0.751), (0.495, 0.735), (0.54, 0.715), (0.602, 0.696), (0.642, 0.676), (0.686, 0.661), (0.738, 0.645), (0.802, 0.625), (0.849, 0.616), (0.88, 0.604), (0.932, 0.613)], rot=-20, r=.015)]),
+    photo=ph(0.55, 0.3, 0.86, 1.05), pb=(30, 60, 110), studio=['LIBERTY FILMS'], scol=(30, 60, 110), order='lPTCF',
+    credit=['JAMES STEWART', 'DONNA REED'], ccol=(30, 60, 110), dotst=(['HOLIDAY', 'CLASSIC'], (200, 30, 40), WHT),
+    ft='d', fcol=(30, 60, 110), fin=OLD, seed=1946)
+
+# Notorious (1946): the poster's white, its yellow script Notorious in black keyline cut off it in its own colours, Grant and Bergman's kiss
+std('notorious-1946', ('grad', [(0, (244, 244, 240)), (.6, (222, 226, 226)), (1, (120, 140, 150))]), (30, 30, 30),
+    LC([(0.21, 0.745, 0.865, 0.84)], 100, cuts=[comp_cut(lambda a: ((a[..., 0] > .85) & (a[..., 1] > .8) & (a[..., 2] < .5)) | (_lum(a) < .2))]),
+    photo=ph(0.45, 0.28, 0.9, 0.8), pb=(30, 90, 130), lg=(30, 30, 30), lw=.5, order='LPTF', ft='b', fcol=(30, 30, 30), fin=OLD, seed=1946)
+
+# The Big Sleep (1946): black, the poster's white serif "THE BIG SLEEP" (quotes and all) lifted, Bogart and Bacall
+std('the-big-sleep-1946', ('grad', [(0, (40, 34, 28)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.045, 0.028, 0.955, 0.124), 76, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.6, 1.0, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 196, 190), fin=OLD, seed=1946)
