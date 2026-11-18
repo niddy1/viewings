@@ -101,7 +101,8 @@ def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None, h
         letters = []; ri = 0
         for q in Q:
             if q is None: letters.append(None); continue
-            j = min(range(1, n), key=lambda j: (cen[j][0] - q[0]) ** 2 + (cen[j][1] - q[1]) ** 2)
+            big_ = st[1:, cv2.CC_STAT_AREA].max()
+            j = min([j for j in range(1, n) if st[j, cv2.CC_STAT_AREA] > big_ * .03], key=lambda j: (cen[j][0] - q[0]) ** 2 + (cen[j][1] - q[1]) ** 2)
             prv, nxt = real[max(0, ri - 1)], real[min(len(real) - 1, ri + 1)]
             ang = np.degrees(np.arctan2(nxt[1] - prv[1], nxt[0] - prv[0])) if turn is None else turn[ri]
             x, y, w, h = st[j, :4]; pd = int(max(w, h) * .3) + 4
@@ -490,3 +491,79 @@ std('sullivan-s-travels-1941', ('grad', [(0, (40, 34, 26)), (.6, (14, 12, 8)), (
      LC([(0.23, 0.16, 0.82, 0.31)], 70, outline=((14, 12, 8), 2), cuts=[pick_cut(SVT, (0.23, 0.16, 0.82, 0.31), [(0.271, 0.25), (0.354, 0.253), (0.453, 0.247), (0.538, 0.231), (0.617, 0.226), (0.691, 0.222), (0.768, 0.208)], rot=-6, r=.02)])],
     tgap=8, photo=ph(0.5, 0.48, 1.0, 0.6), pb=(226, 196, 120), lg=WHT, lw=.5, order='LTPCF', credit=['WRITTEN & DIRECTED BY', 'PRESTON STURGES'],
     ccol=(226, 196, 120), ft='a', vbox=(226, 196, 120), vink=(14, 12, 8), fcol=(200, 196, 186), fin=OLD, seed=1941)
+
+# Suspicion (1941): the poster's white, its red brush Suspicion keyed off it, Cary Grant and Joan Fontaine in the blue
+std('suspicion-1941', ('grad', [(0, (244, 244, 242)), (.6, (226, 228, 228)), (1, (150, 160, 166))]), (190, 20, 34),
+    L((0.02, 0.698, 0.975, 0.856), 96, (194, 22, 36), mode='key', key=(180, 25, 40), t=(70, 150)),
+    photo=ph(0.4, 0.22, 0.8, 0.85), pb=(30, 90, 110), lg=(30, 30, 30), lw=.5, order='LPTF', ft='c', fcol=(40, 40, 44), fin=OLD, seed=1941)
+
+# The Lady Eve (1941): the poster's apple red, its yellow THE Lady and Eve in their black keyline cut off it in their own colours, Stanwyck and Fonda in the apple
+LEY = lambda a: (a[..., 0] > .85) & (a[..., 1] > .75) & (a[..., 2] < .5)
+std('the-lady-eve-1941', ('grad', [(0, (236, 80, 60)), (.6, (190, 40, 34)), (1, (80, 14, 12))]), (252, 226, 70),
+    LC([(0.45, 0.35, 0.94, 0.66), (0.53, 0.59, 0.86, 0.76)], 150, gapf=.16, valign='base', outline=((24, 18, 14), 2.4), cuts=[
+        pick_cut(LEY, (0.45, 0.35, 0.94, 0.66), [(0.58, 0.47), (0.766, 0.559)], r=.03), pick_cut(LEY, (0.53, 0.59, 0.86, 0.76), [(0.68, 0.691)], r=.03)]),
+    photo=ph(0.34, 0.19, 0.6, 0.8), pb=(252, 226, 70), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(252, 236, 120)),
+    ft='e', vbox=(252, 226, 70), vink=(190, 40, 34), fcol=(250, 220, 200), fin=OLD, seed=1941)
+
+# The Maltese Falcon (1941): the poster's white with its blue scribble, its red THE, Maltese and Falcon cut off it in their own colours and turned level (they climb 14 degrees), Bogart with the gun
+MFR = lambda a: (a[..., 0] > .6) & (a[..., 1] < .3) & (a[..., 2] < .3)
+std('the-maltese-falcon-1941', ('grad', [(0, (244, 246, 248)), (.6, (210, 220, 232)), (1, (70, 100, 150))]), (220, 40, 40),
+    LC([(0.6, 0.58, 0.74, 0.64), (0.33, 0.58, 0.9, 0.79), (0.43, 0.7, 0.95, 0.87)], 100, gapf=.14, valign='base', cuts=[
+        pick_cut(MFR, (0.6, 0.58, 0.74, 0.64), [(0.64, 0.611), (0.676, 0.609), (0.708, 0.603)], rot=-14, r=.015),
+        pick_cut(MFR, (0.33, 0.58, 0.9, 0.79), [(0.404, 0.721), (0.529, 0.699), (0.619, 0.679), (0.723, 0.669), (0.835, 0.648)], rot=-14, r=.02),
+        pick_cut(MFR, (0.43, 0.7, 0.95, 0.87), [(0.501, 0.795), (0.622, 0.789), (0.807, 0.76)], rot=-14, r=.02)]),
+    photo=ph(0.6, 0.15, 0.7, 0.95), pb=(30, 60, 130), lg=(30, 60, 130), lw=.55, order='LPTCF', credit=['HUMPHREY BOGART'], ccol=(30, 60, 130),
+    ft='b', fcol=(30, 60, 130), fin=OLD, seed=1941)
+
+# Bambi (1942): Disney, the white clamshell; the poster's forest russet, its peach serif Bambi (set reading down the poster) cut off it in its own colours, Bambi's face in the red diamond
+disney('bambi-1942', ('grad', [(0, (120, 50, 30)), (.5, (180, 90, 40)), (1, (60, 90, 50))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.105, 0.225, 0.305, 0.705)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .6) & (a[..., 2] > .4) & (a[..., 2] < .7), rot=90)]),
+       face=ph(.53, .4, .4, 1.4), lcol=WHT)
+
+# Cat People (1942): black, the poster's teal shaggy CAT PEOPLE rebuilt letter by letter off the curve it climbs, edged in black, Simone Simon in red
+std('cat-people-1942', ('grad', [(0, (30, 50, 56)), (.6, (10, 18, 20)), (1, (2, 4, 4))]), (90, 200, 214),
+    LC([(0.03, 0.12, 0.97, 0.37)], 100, outline=((8, 14, 16), 2), cuts=[seq_cut(lambda a: (a[..., 1] > .4) & (a[..., 2] > .4) & (a[..., 0] < .6), (0.03, 0.12, 0.97, 0.37),
+        [(0.107, 0.325), (0.206, 0.278), (0.291, 0.235), None, (0.416, 0.197), (0.522, 0.204), (0.627, 0.19), (0.731, 0.177), (0.823, 0.187), (0.908, 0.184)], gapf=.08)]),
+    photo=ph(0.47, 0.465, 0.4, 1.0), pb=(214, 40, 50), lg=(90, 200, 214), lw=.5, order='LPTSF', stick=flow(dot, 74, ['HORROR'], (214, 40, 50), WHT),
+    ft='d', vbox=(90, 200, 214), vink=(10, 18, 20), fcol=(190, 210, 214), fin=RENTAL, seed=1942)
+
+# Saboteur (1942): the poster's white, its orange-red brush Saboteur keyed off it, the burning factory and the running man under the title
+std('saboteur-1942', ('grad', [(0, (244, 244, 240)), (.6, (222, 224, 222)), (1, (120, 126, 128))]), (226, 70, 30),
+    L((0.055, 0.436, 0.93, 0.622), 100, (230, 74, 32), mode='key', key=(225, 70, 30), t=(70, 150)),
+    photo=ph(0.6, 0.78, 0.66, 0.85), pb=(30, 30, 30), lg=(30, 30, 30), lw=.6, order='LTPF', ft='a', vbox=(230, 74, 32), fcol=(30, 30, 30), fin=OLD, seed=1942)
+
+# Casablanca (1943): black, the poster's tall serif CASABLANCA cut off it in its own white-to-blue shading, Bogart and Bergman
+std('casablanca-1943', ('grad', [(0, (30, 34, 40)), (.6, (10, 10, 12)), (1, (2, 2, 2))]), (190, 214, 236),
+    LC([(0.13, 0.11, 0.87, 0.325)], 120, cuts=[key_cut(lambda a: _lum(a) > .55)]),
+    photo=ph(0.5, 0.74, 1.0, 0.62), pb=(220, 228, 236), lg=WHT, lw=.55, order='LPTCF', credit=['HUMPHREY BOGART', 'INGRID BERGMAN'],
+    ccol=(200, 214, 230), ft='c', fcol=(190, 196, 206), fin=OLD, seed=1943)
+
+# Le Corbeau (1943): the poster's white, its ragged black brush Le Corbeau lifted (the crow's tail runs down into the b, as on the poster), the crow's black shape from the top of the poster (director from IMDb)
+std('le-corbeau-1943', ('grad', [(0, (246, 246, 244)), (.6, (228, 228, 224)), (1, (150, 150, 146))]), (20, 20, 20),
+    L((0.05, 0.6, 0.962, 0.782), 100, (20, 20, 20), mode='dark'),
+    photo=ph(0.42, 0.25, 0.8, 0.85), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['UN FILM DE', 'H.-G. CLOUZOT'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1943)
+
+# Shadow of a Doubt (1943): the poster's white, its orange-red SHADOW of a DOUBT with the black extrusion cut off it in their own colours, Teresa Wright and Joseph Cotten
+std('shadow-of-a-doubt-1943', ('grad', [(0, (246, 242, 236)), (.6, (230, 222, 212)), (1, (150, 130, 116))]), (230, 80, 34),
+    LC([(0.0, 0.47, 1.0, 0.618)], 96, cuts=[comp_cut(lambda a: ((a[..., 0] > .75) & (a[..., 1] < .45) & (a[..., 2] < .3)) | (_lum(a) < .18))]),
+    photo=ph(0.3, 0.2, 0.6, 1.0), pb=(230, 80, 34), lg=(30, 30, 30), lw=.6, order='LPTSF', stick=BAR('23 1150', top='SUSPENSE', fill=(236, 226, 200)),
+    ft='b', fcol=(40, 34, 30), fin=RENTAL, seed=1943)
+
+# Double Indemnity (1944): black, the poster's white DOUBLE INDEMNITY with its grey extrusion cut off it in its own colours, Barbara Stanwyck with the cigarette (director from IMDb)
+std('double-indemnity-1944', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    [LC([(0.04, 0.178, 0.965, 0.32)], 80, cuts=[key_cut(lambda a: _lum(a) > .5)]), LC([(0.04, 0.355, 0.915, 0.5)], 80, cuts=[key_cut(lambda a: _lum(a) > .5)])],
+    tgap=10, photo=ph(0.6, 0.745, 0.6, 1.15), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['DIRECTED BY', 'BILLY WILDER'],
+    ccol=WHT, ft='d', fcol=(200, 200, 200), fin=OLD, seed=1944)
+
+# Gaslight (1944): the poster's sepia brown, its yellow Gaslight keyed off it, Boyer and Bergman under the lamp
+std('gaslight-1944', ('grad', [(0, (110, 80, 50)), (.6, (54, 36, 22)), (1, (14, 8, 4))]), (250, 214, 40),
+    L((0.115, 0.75, 0.89, 0.925), 100, (252, 216, 40), mode='key', key=(245, 210, 40), t=(70, 150)),
+    photo=ph(0.56, 0.36, 0.7, 1.2), pb=(252, 216, 40), lg=(252, 216, 40), lw=.55, order='LPTF', ft='a', vbox=(252, 216, 40), vink=(54, 36, 22),
+    fcol=(220, 200, 170), fin=OLD, seed=1944)
+
+# Ivan the Terrible, Part I (1944): the poster's sepia, its red Slavonic IVAN the TERRIBLE and PART I keyed off it, the tsar in his robes
+std('ivan-the-terrible-part-i-1944', ('grad', [(0, (226, 200, 170)), (.6, (190, 160, 126)), (1, (100, 76, 56))]), (190, 30, 30),
+    L([(0.03, 0.038, 0.97, 0.153), (0.38, 0.165, 0.62, 0.2)], 76, (194, 32, 32), mode='key', key=(190, 40, 40), t=(70, 150), gapf=.25),
+    photo=ph(0.5, 0.6, 0.6, 1.8), pb=(194, 32, 32), lg=(80, 40, 30), lw=.5, order='LPTCF', credit=['SERGEI EISENSTEIN'], ccol=(80, 40, 30),
+    ft='c', fcol=(80, 50, 40), fin=OLD, seed=1944)
