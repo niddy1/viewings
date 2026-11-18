@@ -13,7 +13,7 @@ def _turn(rgb, al, rot):
     return cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC), cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
 
 
-def comp_cut(test, keep=None, top=None, soft=1.4, rot=0):
+def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015):
     """an LC cut that keeps whole letters: the connected pieces passing test (rgb 0..1), filtered by
     keep(cx, cy) (the piece's centre, as fractions of the cut-out crop) and/or only the `top` biggest.
     For lettering that interlocks on the poster (arched, stacked or overlapping words), where a straight
@@ -25,7 +25,7 @@ def comp_cut(test, keep=None, top=None, soft=1.4, rot=0):
         h, w = m.shape; ok = np.zeros(n, bool)
         big = st[1:, cv2.CC_STAT_AREA].max() if n > 1 else 0
         for j in range(1, n):
-            ok[j] = st[j, cv2.CC_STAT_AREA] > big * .015 and (keep is None or keep(cen[j][0] / w, cen[j][1] / h))
+            ok[j] = st[j, cv2.CC_STAT_AREA] > big * minf and (keep is None or keep(cen[j][0] / w, cen[j][1] / h))
         if top:
             idx = [j for j in range(1, n) if ok[j]]; idx.sort(key=lambda j: -st[j, cv2.CC_STAT_AREA])
             ok[:] = False; ok[idx[:top]] = True
@@ -143,8 +143,14 @@ def plate_cut(test, rot=0, soft=1.2):
         ff = cv2.copyMakeBorder(1 - p, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=1)
         cv2.floodFill(ff, np.zeros((ff.shape[0] + 2, ff.shape[1] + 2), np.uint8), (0, 0), 2)
         p = (ff[1:-1, 1:-1] != 2).astype(np.float32)
+        if rot == 'auto':  # level the panel: the angle of its long edge (minAreaRect), within +-45 degrees
+            (_, _), (rw, rh), ang = cv2.minAreaRect(cv2.findNonZero(p.astype(np.uint8)))
+            if rw < rh: ang -= 90
+            rot_ = ang
+        else: rot_ = rot
         al = _soft(p, soft)
-        return _turn(rgb, al, rot) if rot else (rgb, al)
+        if rot_: return _turn(rgb, al, rot_)
+        return rgb, al
     return fn
 
 
@@ -752,3 +758,85 @@ std('thieves-highway-1949', ('grad', [(0, (40, 34, 24)), (.6, (12, 10, 6)), (1, 
     L((0.035, 0.75, 0.965, 0.834), 70, (242, 222, 62), mode='key', key=(235, 215, 70), t=(70, 150)),
     photo=ph(0.6, 0.32, 0.5, 1.4), pb=(242, 222, 62), lg=(242, 222, 62), lw=.55, order='LTPF', ft='a', vbox=(242, 222, 62), vink=(12, 10, 6),
     fcol=(200, 200, 190), fin=OLD, seed=1949)
+
+
+# =====================================================================================
+# 1950s (vault-1950s.json, 74 tapes)
+# =====================================================================================
+
+# All About Eve (1950): the poster's white, its three printed blocks (yellow all on black, black about on red, blue eve on grey) cut off it whole in their own colours, the cast walking the arrows
+std('all-about-eve-1950', ('grad', [(0, (248, 246, 240)), (.6, (232, 228, 220)), (1, (150, 146, 136))]), (20, 20, 20),
+    LC([(0.035, 0.505, 0.705, 0.685)], 170, cuts=[key_cut(lambda a: _lum(a) < .9)]),
+    photo=ph(0.8, 0.81, 0.4, 1.3), pb=(200, 30, 30), lg=(20, 20, 20), lw=.5, order='LPTF', ft='b', fcol=(20, 20, 20), fin=OLD, seed=1950)
+
+# Cinderella (1950): Disney, the white clamshell; the poster's night blue, its white script Cinderella with the gold C cut off the oval, Cinderella's face in the red diamond
+disney('cinderella-1950', ('grad', [(0, (20, 40, 110)), (.5, (40, 90, 180)), (1, (14, 30, 80))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.16, 0.495, 0.875, 0.6)], 120, cuts=[key_cut(lambda a: (_lum(a) > .6) & (a[..., 2] < a[..., 0] + .08))]),
+       face=ph(.63, .27, .2, 1.4), lcol=WHT)
+
+# Night and the City (1950): the poster's dark oils, NIGHT AND THE CITY typeset in heavy italic capitals in the poster's cream with its red shadow (typeset: NIGHT and CITY lift, but the small AND THE between them is painted over the boxers' fists and came apart in three cuts, and the title has to read whole), Widmark's face (top-billed cast from IMDb)
+std('night-and-the-city-1950', ('grad', [(0, (70, 56, 40)), (.6, (26, 20, 14)), (1, (6, 4, 2))]), (240, 222, 160),
+    TT([('NIGHT ', (240, 222, 160)), ('AND THE ', (214, 70, 40)), ('CITY', (240, 222, 160))], 'herbi', 74, sp=.1),
+    photo=ph(0.45, 0.7, 0.8, 0.85), pb=(240, 222, 160), lg=(240, 222, 160), lw=.55, order='LPTCF', credit=['RICHARD WIDMARK', 'GENE TIERNEY'],
+    ccol=(230, 214, 170), ft='c', vbox=(240, 222, 160), vink=(26, 20, 14), fcol=(210, 200, 180), fin=OLD, seed=1950)
+
+# Rashomon (1950): the woods' dark gold, the poster's white wide RASHOMON lifted, Mifune from the top of the poster (director from IMDb)
+std('rashomon-1950', ('grad', [(0, (90, 80, 40)), (.6, (34, 30, 14)), (1, (6, 6, 2))]), WHT,
+    L((0.16, 0.615, 0.84, 0.69), 86, WHT, mode='key', key=(250, 250, 250), t=(60, 150)),
+    photo=ph(0.45, 0.22, 0.9, 0.85), pb=(240, 200, 60), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
+    ft='d', fcol=(210, 206, 190), fin=OLD, seed=1950)
+
+# Stage Fright (1950): the poster's yellow, its white extruded STAGE FRIGHT lifted and edged in its black shadow, Dietrich and Jane Wyman in the chevron
+std('stage-fright-1950', ('grad', [(0, (252, 206, 30)), (.6, (240, 180, 10)), (1, (170, 110, 0))]), WHT,
+    L([(0.02, 0.64, 0.58, 0.716), (0.22, 0.718, 0.955, 0.818)], 92, WHT, mode='key', key=(252, 252, 252), t=(50, 140), gapf=.2, outline=((20, 16, 12), 3)),
+    photo=ph(0.56, 0.3, 0.6, 1.45), pb=(20, 16, 12), lg=(20, 16, 12), lw=.55, order='LPTSF', stick=RWD(fill=(250, 246, 230)),
+    ft='e', vbox=(20, 16, 12), fcol=(30, 24, 16), fin=RENTAL, seed=1950)
+
+# Sunset Boulevard (1950): the poster's red, SUNSET BOULEVARD typeset in condensed capitals in the poster's yellow with its black keyline (typeset: on the poster each letter rides the curling film strip at its own angle, half-hidden by the sprocket holes; two cuts, by word and by letter, came out in pieces), Gloria Swanson's face
+std('sunset-boulevard-1950', ('grad', [(0, (226, 50, 40)), (.6, (170, 30, 24)), (1, (60, 10, 8))]), (250, 226, 80),
+    T('SUNSET BOULEVARD', 'hcnb', 70, (250, 228, 84), track=.06, outline=((20, 16, 14), 2.6)),
+    photo=ph(0.58, 0.17, 0.72, 0.72), pb=(250, 226, 80), lg=WHT, lw=.55, order='LPTF', ft='a', vbox=(250, 226, 80), vink=(170, 30, 24),
+    fcol=(250, 220, 210), fin=OLD, seed=1950)
+
+# A Streetcar Named Desire (1951): the poster's grey paper, its red serif "A Streetcar Named Desire" keyed off it, Brando and Vivien Leigh in the yellow frame
+std('a-streetcar-named-desire-1951', ('grad', [(0, (236, 234, 228)), (.6, (216, 212, 204)), (1, (130, 126, 118))]), (200, 40, 40),
+    L([(0.155, 0.675, 0.85, 0.74), (0.085, 0.742, 0.92, 0.828)], 70, (204, 42, 42), mode='key', key=(200, 50, 50), t=(70, 150), gapf=.25),
+    photo=ph(0.48, 0.3, 0.86, 0.95), pb=(240, 210, 40), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['VIVIEN LEIGH', 'MARLON BRANDO'], ccol=(40, 40, 40),
+    ft='b', fcol=(40, 40, 40), fin=OLD, seed=1951)
+
+# Ace in the Hole (1951): the cave's dark, the poster's white condensed ACE IN THE HOLE lifted in its two lines, Kirk Douglas's face (director from IMDb)
+std('ace-in-the-hole-1951', ('grad', [(0, (80, 66, 50)), (.6, (30, 24, 18)), (1, (6, 4, 2))]), WHT,
+    [LC([(0.09, 0.6, 0.63, 0.792)], 80, margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .62) & (_sat(a) < .3), keep=lambda x, y: x > .1, minf=.2)]),
+     LC([(0.25, 0.79, 0.38, 0.88), (0.17, 0.885, 0.38, 0.958), (0.37, 0.765, 0.935, 0.958)], 80, gapf=.15, valign='base', cuts=[
+        pick_cut(lambda a: _lum(a) > .62, (0.25, 0.79, 0.38, 0.88), [(0.282, 0.835), (0.335, 0.835)], r=.015),
+        pick_cut(lambda a: _lum(a) > .5, (0.17, 0.885, 0.38, 0.958), [(0.214, 0.915), (0.281, 0.918), (0.34, 0.917)], r=.02),
+        comp_cut(lambda a: _lum(a) > .5, keep=lambda x, y: x > .08 and y > .2, minf=.2)])],
+    tgap=8, photo=ph(0.52, 0.27, 0.7, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A BILLY WILDER', 'FILM'], ccol=WHT,
+    ft='c', fcol=(210, 200, 190), fin=OLD, seed=1951)
+
+# Alice in Wonderland (1951): Disney, the white clamshell; the mad tea party's black and pink, the poster's cream ALICE in WONDERLAND cut off it in its own colours, Alice's face in the red diamond
+disney('alice-in-wonderland-1951', ('grad', [(0, (40, 30, 50)), (.5, (110, 40, 80)), (1, (20, 14, 26))]), fin=dict(CLAM, vivid=.2),
+       title=[LC([(0.11, 0.7, 0.845, 0.85)], 90, cuts=[key_cut(lambda a: (_lum(a) > .78) & (a[..., 2] < a[..., 0]))]),
+              LC([(0.07, 0.852, 0.93, 0.918)], 52, cuts=[key_cut(lambda a: (_lum(a) > .78) & (a[..., 2] < a[..., 0]))])],
+       face=ph(.55, .19, .2, 1.4), lcol=WHT)
+
+# Strangers on a Train (1951): the poster's orange and white, its three printed blocks (blue "strangers", lilac on a, red train") cut off it whole and levelled, Farley Granger smoking
+std('strangers-on-a-train-1951', ('grad', [(0, (240, 100, 40)), (.5, (230, 70, 30)), (.55, (246, 246, 242)), (1, (200, 200, 196))]), (20, 30, 120),
+    LC([(0.18, 0.07, 0.96, 0.22), (0.6, 0.34, 0.93, 0.47), (0.41, 0.47, 0.97, 0.65)], 90, gapf=.1, valign='mid', margin=0, cuts=[
+        plate_cut(lambda a: (a[..., 2] > .45) & (a[..., 0] < .25), rot='auto'),
+        plate_cut(lambda a: (a[..., 0] > .55) & (a[..., 2] > .6) & (a[..., 1] < .65), rot='auto'),
+        plate_cut(lambda a: (a[..., 0] > .75) & (a[..., 1] < .2) & (a[..., 2] < .25), rot='auto')]),
+    photo=ph(0.52, 0.36, 0.6, 1.0), pb=(20, 30, 120), lg=(20, 30, 120), lw=.55, order='LPTF', dotst=('THRILLER', (20, 30, 120), WHT),
+    ft='d', vbox=(220, 30, 30), fcol=(40, 40, 60), fin=OLD, seed=1951)
+
+# The Day the Earth Stood Still (1951): black and fire, the poster's white THE DAY THE EARTH / STOOD STILL lifted, Gort carrying the woman
+std('the-day-the-earth-stood-still-1951', ('grad', [(0, (40, 60, 110)), (.5, (16, 22, 44)), (1, (4, 4, 8))]), WHT,
+    [LC([(0.15, 0.832, 0.85, 0.879)], 56, margin=0, cuts=[key_cut(lambda a: (_lum(a) > .4) & (_sat(a) < .2))]), LC([(0.15, 0.881, 0.85, 0.945)], 56, margin=0, cuts=[key_cut(lambda a: (_lum(a) > .4) & (_sat(a) < .2))])],
+    tgap=8, photo=ph(0.42, 0.27, 0.66, 1.25), pb=(240, 140, 40), lg=WHT, lw=.55, order='LPTSF', stick=BAR('47 1951', top='SCI-FI', fill=(220, 226, 236)),
+    ft='a', vbox=(240, 140, 40), vink=(16, 22, 44), fcol=(200, 206, 220), fin=RENTAL, seed=1951)
+
+# The Lavender Hill Mob (1951): the poster's sky blue, its navy THE LAVENDER and HILL MOB lifted, the chase along the London skyline
+std('the-lavender-hill-mob-1951', ('grad', [(0, (150, 200, 210)), (.6, (100, 160, 176)), (1, (40, 80, 96))]), (20, 40, 70),
+    [L((0.24, 0.552, 0.755, 0.78), 76, (20, 40, 70), mode='dark'), L((0.24, 0.78, 0.755, 0.912), 76, (20, 40, 70), mode='dark')],
+    tgap=8, photo=ph(0.5, 0.42, 1.0, 0.42), pb=(20, 40, 70), lg=(20, 40, 70), lw=.55, order='LPTCF', credit=['ALEC GUINNESS'], ccol=(20, 40, 70),
+    ft='e', fcol=(20, 40, 70), fin=OLD, seed=1951)
