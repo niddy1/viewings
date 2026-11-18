@@ -3349,3 +3349,75 @@ std('american-beauty-1999', ('grad', [(0, (240, 200, 160)), (.6, (220, 150, 100)
     LC([(0.085, 0.055, 0.91, 0.11)], 90, cuts=[key_cut(lambda a: _lum(a) < .28)]),
     photo=ph(0.65, 0.6, 0.7, 1.1), pb=(190, 20, 30), lg=(40, 20, 10), lw=.55, order='LPTF',
     ft='a', vbox=(190, 20, 30), fcol=(40, 20, 10), fin=RENTAL, seed=1999)
+
+# American Pie (1999): the poster's white with the red border, its red stamped AMERICAN / PIE cut off it whole, the cast round the pie
+std('american-pie-1999', ('grad', [(0, (246, 244, 244)), (.6, (230, 226, 226)), (1, (130, 120, 120))]), (210, 30, 30),
+    LC([(0.085, 0.035, 0.915, 0.285)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35), minf=.02, close=2)]),
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(210, 30, 30), lg=(40, 20, 20), lw=.55, order='LPTSF', stick=BAR('99 0709', top='COMEDY', fill=(240, 236, 226)),
+    ft='b', fcol=(40, 20, 20), fin=RENTAL, seed=1999)
+
+# Austin Powers: The Spy Who Shagged Me (1999): the poster's sky blue, its orange outlined AUSTIN POWERS / THE SPY WHO SHAGGED ME cut off it whole, Austin and Felicity
+std('austin-powers-the-spy-who-shagged-me-1999', ('grad', [(0, (40, 180, 230)), (.5, (220, 40, 50)), (1, (120, 200, 60))]), (250, 160, 30),
+    LC([(0.04, 0.115, 0.52, 0.385)], 150, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .4) & (a[..., 2] < .35)) | (_lum(a) < .15), minf=.01, close=2)]),
+    photo=ph(0.65, 0.45, 0.6, 1.2), pb=(250, 160, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('COMEDY', (250, 160, 30), (20, 20, 20)),
+    ft='e', fcol=(240, 240, 250), fin=RENTAL, seed=1999)
+
+# Being John Malkovich (1999): black, the poster's white spaced BEING JOHN MALKOVICH lifted, the crowd of Malkovich heads
+std('being-john-malkovich-1999', ('grad', [(0, (60, 50, 40)), (.6, (16, 12, 10)), (1, (2, 2, 2))]), WHT,
+    L((0.02, 0.89, 0.98, 0.935), 70, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.35, 0.9, 0.75), pb=(200, 40, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE JONZE', 'FILM'], ccol=WHT,
+    ft='c', fcol=(210, 200, 190), fin=RENTAL, seed=1999)
+
+# Big Daddy (1999): the brownstone's pale steps, the poster's red BIG DADDY keyed off it, Sonny and Julian at the door
+std('big-daddy-1999', ('grad', [(0, (236, 230, 220)), (.6, (210, 200, 186)), (1, (110, 100, 86))]), (210, 40, 40),
+    L((0.11, 0.83, 0.885, 0.928), 96, (210, 40, 40), mode='key', key=(210, 50, 40), t=(70, 160)),
+    photo=ph(0.55, 0.35, 0.86, 0.85), pb=(210, 40, 40), lg=(40, 30, 20), lw=.55, order='LPTF',
+    ft='a', vbox=(210, 40, 40), fcol=(40, 30, 20), fin=RENTAL, seed=1999)
+
+# Dogma (1999): the poster's black, its red DOGMA with the cross in the O cut off it, the cast in the holy light
+std('dogma-1999', ('grad', [(0, (200, 80, 30)), (.4, (60, 20, 10)), (1, (2, 2, 2))]), (220, 30, 30),
+    LC([(0.105, 0.655, 0.89, 0.765)], 120, outline=(WHT, 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.03, fillh=True)]),
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=WHT,
+    ft='d', fcol=(220, 200, 190), fin=RENTAL, seed=1999)
+
+# Fight Club (1999): the poster's sickly green, FIGHT CLUB typeset in heavy capitals in the soap's pink (parked for Ian's logo, see data/logos-wanted.md: the title is pressed into a tilted pink soap bar held in a hand, and the bar wouldn't cut cleanly), Brad Pitt and Edward Norton
+std('fight-club-1999', ('grad', [(0, (120, 160, 80)), (.5, (60, 90, 40)), (1, (10, 20, 8))]), (240, 110, 180),
+    T('FIGHT CLUB', 'intbk', 110, (240, 120, 190), outline=((90, 20, 60), 2)),
+    photo=ph(0.6, 0.62, 0.8, 0.85), pb=(240, 110, 180), lg=WHT, lw=.5, order='LPTCF', credit=['BRAD PITT', 'EDWARD NORTON'], ccol=WHT,
+    ft='b', fcol=(220, 230, 210), fin=RENTAL, seed=1999)
+
+# Ghost Dog: The Way of the Samurai (1999): the poster's blue-grey, its white chalked GHOST DOG and THE WAY OF THE SAMURAI cut off it into one line, Forest Whitaker in the hood (JVC logo)
+std('ghost-dog-the-way-of-the-samurai-1999', ('grad', [(0, (60, 80, 110)), (.6, (20, 28, 40)), (1, (2, 4, 8))]), WHT,
+    LC([(0.025, 0.215, 0.48, 0.43), (0.06, 0.445, 0.43, 0.67)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) > .68, minf=.01, opn=1)] * 2),
+    photo=ph(0.7, 0.4, 0.6, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
+    ft='e', fcol=(200, 210, 220), fin=OLD, seed=1999)
+
+# Magnolia (1999): a 2-tape box (189 minutes); black, the poster's white serif magnolia lifted, the flower full of the cast's faces
+std('magnolia-1999', ('grad', [(0, (40, 30, 20)), (.6, (12, 10, 6)), (1, (2, 2, 2))]), WHT,
+    L((0.17, 0.735, 0.845, 0.795), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.38, 0.9, 0.75), pb=(240, 210, 160), lg=WHT, lw=.5, order='LPTCSF', credit=['A PAUL THOMAS', 'ANDERSON FILM'], ccol=WHT, stick=TWOST((240, 210, 160), (20, 16, 10)),
+    ft='a', fcol=(220, 210, 200), fin=RENTAL, seed=1999, **TWO)
+
+# Man on the Moon (1999): the curtain's red, the poster's white MAN ON THE MOON lifted, Jim Carrey as Andy Kaufman in the spotlight (Mutual Film logo)
+std('man-on-the-moon-1999', ('grad', [(0, (180, 30, 30)), (.6, (90, 12, 12)), (1, (14, 2, 2))]), WHT,
+    L((0.1, 0.145, 0.805, 0.19), 80, WHT, mode='light'),
+    photo=ph(0.3, 0.55, 0.6, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['JIM CARREY'], ccol=WHT,
+    ft='c', fcol=(240, 210, 200), fin=RENTAL, seed=1999)
+
+# Office Space (1999): the poster's white, its red OfficeSpace cut off it, the man covered head to foot in yellow sticky notes
+std('office-space-1999', ('grad', [(0, (246, 246, 240)), (.6, (236, 232, 210)), (1, (140, 130, 90))]), (200, 30, 30),
+    LC([(0.055, 0.058, 0.945, 0.178)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.55, 0.6, 1.4), pb=(250, 220, 60), lg=(40, 30, 20), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
+    ft='d', fcol=(40, 30, 20), fin=RENTAL, seed=1999)
+
+# She's All That (1999): the poster's purple and orange, its black-and-orange she's all that plate cut off it as it is, Zack and Laney
+std('she-s-all-that-1999', ('grad', [(0, (120, 60, 160)), (.5, (240, 140, 40)), (1, (60, 20, 50))]), (250, 160, 40),
+    LC([(0.105, 0.775, 0.875, 0.858)], 130, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(250, 160, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(246, 230, 220), fin=RENTAL, seed=1999)
+
+# Sleepy Hollow (1999): the poster's black, its red script Sleepy Hollow cut off it, Johnny Depp and Christina Ricci in the fog
+std('sleepy-hollow-1999', ('grad', [(0, (40, 50, 60)), (.6, (10, 12, 16)), (1, (2, 2, 2))]), (200, 30, 30),
+    LC([(0.09, 0.085, 0.93, 0.195)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .25), minf=.01)]),
+    photo=ph(0.5, 0.5, 0.9, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
+    ft='e', vbox=(200, 30, 30), fcol=(200, 206, 210), fin=RENTAL, seed=1999)

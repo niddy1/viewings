@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Fight Club (1999) | Vault 1990s | `logos/fight-club-1999-title.png` | typeset; the title is pressed into a tilted soap bar held in a hand |
 | Taste of Cherry (1997) | Vault 1990s | `logos/taste-of-cherry-1997-title.png` | typeset; the pale title is barely lighter than the ochre |
 | Liar Liar (1997) | Vault 1990s | `logos/liar-liar-1997-title.png` | typeset; Jim Carrey's hair cuts through the second LIAR |
 | Austin Powers: International Man of Mystery (1997) | Vault 1990s | `logos/austin-powers-international-man-of-mystery-1997-title.png` | typeset; outlined letters on the flag's pinks and whites |
