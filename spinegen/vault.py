@@ -234,10 +234,10 @@ std('charlie-chan-on-broadway-1937', ('grad', [(0, (60, 70, 100)), (.6, (16, 18,
     tgap=10, photo=ph(0.75, 0.2, 0.5, 1.2), pb=(252, 236, 30), studio=['20TH CENTURY-FOX'], scol=(252, 236, 30), order='lPTF',
     ft='a', vbox=(252, 236, 30), vink=(16, 18, 30), fcol=(200, 200, 210), fin=OLD, seed=1937)
 
-# Sabotage (1936): Piccadilly at night, the red white-edged SABOTAGE cut off its sign in its own colours, the lit circus under the title (director from IMDb)
+# Sabotage (1936): Piccadilly at night, the lit circus, the red white-edged SABOTAGE cut off its sign in its own colours (director from IMDb)
 std('sabotage-1936', ('grad', [(0, (60, 50, 90)), (.6, (24, 18, 40)), (1, (6, 4, 12))]), (214, 30, 36),
     LC([(0.095, 0.138, 0.9, 0.276)], 100, margin=0, cuts=[comp_cut(lambda a: ((a[..., 0] > .55) & (a[..., 1] < .3) & (a[..., 2] < .35)) | ((_lum(a) > .85) & (_sat(a) < .15)), keep=lambda x, y: .03 < x < .99)]),
-    photo=ph(0.52, 0.665, 0.7, 1.3), pb=(238, 230, 214), order='TPCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(238, 230, 214),
+    photo=ph(0.52, 0.665, 0.7, 1.3), pb=(238, 230, 214), order='PTCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(238, 230, 214),
     ft='e', vbox=(214, 30, 36), fcol=(210, 200, 214), fin=OLD, seed=1936)
 
 # The Case of the Black Cat (1936): the poster's sepia, its speckled ochre THE CASE OF THE and the big BLACK CAT lifted (keyed on the black round them, specks filled) and re-inked cream, the two faces under the title
@@ -262,7 +262,7 @@ std('charlie-chan-at-monte-carlo-1937', ('grad', [(0, (246, 246, 242)), (.6, (22
         pick_cut(CCMC, (0.15, 0.83, 0.65, 0.98), [(0.182, 0.919), (0.254, 0.906), (0.322, 0.89), (0.386, 0.879), (0.439, 0.862), (0.482, 0.862), (0.404, 0.945), (0.461, 0.942), (0.509, 0.927), (0.549, 0.926), (0.605, 0.91)])]),
     tgap=6, photo=ph(0.24, 0.29, 0.44, 1.15), pb=(30, 60, 90), order='LPTF', ft='a', vbox=(30, 60, 90), fcol=(30, 60, 90), fin=OLD, seed=1937)
 
-# Charlie Chan at the Olympics (1937): the poster's blue panel, its pink lettering in navy keyline cut off it in its own colours and turned level (the panel is tipped 7-8 degrees), Chan's face under the title
+# Charlie Chan at the Olympics (1937): the poster's blue panel, its pink lettering in navy keyline cut off it in its own colours and turned level (the panel is tipped 7-8 degrees), Chan's face
 CCOL = lambda a: (a[..., 0] > .82) & (a[..., 1] > .66) & (a[..., 2] > .55) & (a[..., 0] > a[..., 2] + .05)
 std('charlie-chan-at-the-olympics-1937', ('grad', [(0, (40, 110, 150)), (.6, (20, 66, 96)), (1, (6, 22, 36))]), (246, 204, 196),
     [LC([(0.22, 0.52, 0.73, 0.64), (0.22, 0.59, 0.72, 0.72)], 66, gapf=.2, outline=((20, 30, 60), 2.2), cuts=[
@@ -271,7 +271,7 @@ std('charlie-chan-at-the-olympics-1937', ('grad', [(0, (40, 110, 150)), (.6, (20
      LC([(0.13, 0.66, 0.25, 0.745), (0.24, 0.68, 0.8, 0.81)], 66, gapf=.15, outline=((20, 30, 60), 2.2), cuts=[
         pick_cut(CCOL, (0.13, 0.66, 0.25, 0.745), [(0.174, 0.685), (0.212, 0.685), (0.153, 0.713), (0.185, 0.72), (0.218, 0.724)], rot=7, r=.015),
         pick_cut(CCOL, (0.24, 0.68, 0.8, 0.81), [(0.296, 0.717), (0.356, 0.728), (0.42, 0.726), (0.504, 0.741), (0.588, 0.746), (0.637, 0.757), (0.686, 0.763), (0.761, 0.773)], rot=8, r=.02)])],
-    tgap=10, photo=ph(0.7, 0.3, 0.52, 1.0), pb=(246, 204, 196), lg=(246, 204, 196), lw=.55, order='LTPF',
+    tgap=10, photo=ph(0.7, 0.3, 0.52, 1.0), pb=(246, 204, 196), lg=(246, 204, 196), lw=.55, order='LPTF',
     ft='c', vbox=(246, 204, 196), vink=(20, 66, 96), fcol=(214, 226, 236), fin=OLD, seed=1937)
 
 # Grand Illusion (1937): the poster's red sky into black, its cream GRAND ILLUSION rebuilt letter by letter off the arc it curves round, Gabin's face (top-billed cast from IMDb)
@@ -286,3 +286,76 @@ std('pepe-le-moko-1937', ('grad', [(0, (30, 28, 20)), (.6, (10, 10, 6)), (1, (2,
     L([(0.245, 0.665, 0.765, 0.784), (0.08, 0.788, 0.925, 0.888)], 84, (250, 228, 30), mode='key', key=(245, 225, 40), t=(70, 150), gapf=.3, speck=0),
     photo=ph(0.6, 0.3, 0.74, 1.1), pb=(250, 228, 30), studio=['PARIS FILM'], scol=(250, 228, 30), order='lPTF',
     ft='e', vbox=(250, 228, 30), vink=(10, 10, 6), fcol=(220, 214, 180), fin=OLD, seed=1937)
+
+# Bringing Up Baby (1938): the poster's white band, its maroon serif Bringing Up Baby lifted, Hepburn on the telephone
+std('bringing-up-baby-1938', ('grad', [(0, (248, 244, 236)), (.6, (234, 226, 214)), (1, (170, 150, 130))]), (92, 26, 30),
+    L((0.025, 0.415, 0.97, 0.515), 78, (92, 26, 30), mode='dark'),
+    photo=ph(0.62, 0.8, 0.6, 1.08), pb=(92, 26, 30), lg=(92, 26, 30), lw=.5, order='LPTF',
+    ft='b', fcol=(92, 26, 30), fin=OLD, seed=1938)
+
+# La Bête Humaine (1938): black, the poster's red LA, BÊTE (circumflex and all) and HUMAINE keyed off it, Gabin and Simone Simon (director from IMDb, credited the French way)
+std('la-bete-humaine-1938', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), (226, 24, 36),
+    L([(0.255, 0.552, 0.405, 0.622), (0.155, 0.624, 0.482, 0.766), (0.1, 0.771, 0.897, 0.935)], 92, (228, 26, 38), mode='key', key=(220, 30, 40), t=(70, 150), gapf=.18, speck=0),
+    photo=ph(0.56, 0.2, 0.86, 0.72), pb=(228, 26, 38), order='PTCF', credit=['RÉALISATION', 'JEAN RENOIR'], ccol=(230, 220, 214),
+    ft='a', vbox=(228, 26, 38), fcol=(200, 196, 196), fin=OLD, seed=1938)
+
+# Port of Shadows (1938): black and fog, the poster's metallic PORT OF SHADOWS cut off it with its own white-to-grey shading, the lovers' silhouettes (no logo file: Ciné-Alliance, from IMDb's company credits)
+std('port-of-shadows-1938', ('grad', [(0, (200, 200, 200)), (.25, (90, 90, 90)), (.6, (20, 20, 20)), (1, (2, 2, 2))]), WHT,
+    LC([(0.05, 0.77, 0.95, 0.872), (0.05, 0.865, 0.95, 0.967)], 76, gapf=.2, margin=0, cuts=[key_cut(lambda a: _lum(a) > .5)] * 2),
+    photo=ph(0.62, 0.36, 0.66, 1.55), pb=(230, 230, 230), studio=['CINÉ-ALLIANCE'], scol=(30, 30, 30), order='lPTF',
+    ft='c', fcol=(200, 200, 200), fin=OLD, seed=1938)
+
+# Snow White and the Seven Dwarfs (1938): Disney, so the white clamshell; the poster's sky blue, its cream Snow White and and the Seven Dwarfs cut off the blue oval, Snow White's face in the red diamond
+disney('snow-white-and-the-seven-dwarfs-1938', ('grad', [(0, (60, 170, 214)), (.5, (30, 140, 190)), (1, (14, 90, 140))]), fin=dict(CLAM, vivid=.2),
+       title=[LC([(0.17, 0.728, 0.87, 0.806)], 96, cuts=[key_cut(lambda a: (_lum(a) > .85) & (a[..., 2] < a[..., 0]))]),
+              LC([(0.26, 0.8, 0.73, 0.84)], 44, cuts=[key_cut(lambda a: (_lum(a) > .85) & (a[..., 2] < a[..., 0]))])],
+       face=ph(.52, .355, .16, 1.4), lcol=WHT)
+
+# The Adventures of Robin Hood (1938): the poster's shield red, its script The Adventures of and the white ROBIN HOOD edged in blue lifted, Flynn's grin under the feathered cap
+std('the-adventures-of-robin-hood-1938', ('grad', [(0, (226, 40, 44)), (.6, (160, 20, 26)), (1, (60, 6, 10))]), WHT,
+    [L((0.165, 0.538, 0.705, 0.575), 40, WHT, mode='key', key=(250, 250, 250), t=(70, 160)),
+     L([(0.14, 0.588, 0.705, 0.692), (0.12, 0.705, 0.668, 0.815)], 90, WHT, mode='key', key=(250, 250, 250), t=(70, 160), gapf=.25, speck=.02, outline=((30, 50, 120), 2.6))],
+    tgap=6, photo=ph(0.6, 0.14, 0.6, 1.2), pb=(250, 214, 60), lw=.55, order='LPTF',
+    ft='d', vbox=(250, 214, 60), vink=(160, 20, 26), fcol=(240, 220, 210), fin=OLD, seed=1938)
+
+# The Lady Vanishes (1938): the poster's red-orange, its black script the and the tall yellow Lady Vanishes cut off it letter by letter in their own colours (the letters fade into the red at their feet, as on the poster), edged in black for the poster's shadow, the night train (no logo file: Gainsborough Pictures, from IMDb's company credits)
+LVY = lambda a: (a[..., 0] > .9) & (a[..., 1] > .3) & (a[..., 2] < .3)
+std('the-lady-vanishes-1938', ('grad', [(0, (222, 84, 40)), (.6, (176, 52, 30)), (1, (60, 16, 8))]), (250, 196, 60),
+    LC([(0.128, 0.082, 0.3, 0.14), (0.05, 0.1, 0.47, 0.45), (0.05, 0.36, 0.92, 0.6)], 150, gapf=.12, valign='base', outline=((18, 12, 10), 1.8), cuts=[
+        comp_cut(lambda a: _lum(a) < .16, keep=lambda x, y: x > .06 and .1 < y < .9),
+        pick_cut(LVY, (0.05, 0.1, 0.47, 0.45), [(0.078, 0.258), (0.19, 0.292), (0.302, 0.261), (0.418, 0.305)], r=.02),
+        pick_cut(LVY, (0.05, 0.36, 0.92, 0.6), [(0.074, 0.454), (0.13, 0.452), (0.234, 0.487), (0.341, 0.491), (0.438, 0.496), (0.517, 0.488), (0.623, 0.463), (0.75, 0.494), (0.856, 0.482)], r=.02)]),
+    photo=ph(0.5, 0.75, 1.0, 0.45), pb=(250, 200, 60), studio=['GAINSBOROUGH', 'PICTURES'], scol=(250, 210, 140), order='lTPSF',
+    stick=BAR('16 4402', top='THRILLER', fill=(226, 214, 186)), ft='b', fcol=(240, 210, 180), fin=RENTAL, seed=1938)
+
+# Charlie Chan at Treasure Island (1939): black, the poster's sea-green lettering cut off it word by word and turned level (it climbs 10 degrees), the medium and the faces from the top of the poster (director from IMDb)
+CCTI = lambda a: (a[..., 1] > .55) & (a[..., 1] > a[..., 0] + .2) & (a[..., 2] > .35)
+std('charlie-chan-at-treasure-island-1939', ('grad', [(0, (30, 40, 40)), (.6, (10, 14, 14)), (1, (2, 2, 2))]), (40, 220, 170),
+    [LC([(0.0, 0.5, 0.47, 0.64), (0.02, 0.6, 0.49, 0.75)], 64, gapf=.2, cuts=[
+        pick_cut(CCTI, (0.0, 0.5, 0.47, 0.64), [(0.08, 0.587), (0.188, 0.579), (0.254, 0.566), (0.318, 0.563), (0.368, 0.552), (0.417, 0.546)], rot=-10, r=.02),
+        pick_cut(CCTI, (0.02, 0.6, 0.49, 0.75), [(0.083, 0.691), (0.192, 0.678), (0.306, 0.67), (0.415, 0.651)], rot=-10, r=.02)]),
+     LC([(0.0, 0.76, 0.15, 0.87), (0.12, 0.64, 1.0, 0.85)], 64, gapf=.15, cuts=[
+        pick_cut(CCTI, (0.0, 0.76, 0.15, 0.87), [(0.052, 0.827), (0.105, 0.812)], rot=-10, r=.02),
+        pick_cut(CCTI, (0.12, 0.64, 1.0, 0.85), [(0.173, 0.786), (0.239, 0.785), (0.304, 0.777), (0.367, 0.773), (0.424, 0.76), (0.489, 0.754), (0.561, 0.744), (0.619, 0.737), (0.695, 0.727), (0.742, 0.721), (0.79, 0.716), (0.85, 0.71), (0.905, 0.7), (0.965, 0.692)], rot=-10, r=.015)])],
+    tgap=10, photo=ph(0.48, 0.24, 1.0, 0.75), pb=(40, 220, 170), order='PTCF', credit=['A NORMAN FOSTER', 'FILM'], ccol=(40, 220, 170),
+    ft='e', fcol=(190, 210, 204), fin=OLD, seed=1939)
+
+# Mr. Smith Goes to Washington (1939): the poster's cream, its navy italic FRANK CAPRA'S and the red condensed MR. SMITH GOES TO WASHINGTON keyed off it, Stewart and Jean Arthur from the top of the poster
+std('mr-smith-goes-to-washington-1939', ('grad', [(0, (244, 232, 206)), (.6, (230, 212, 178)), (1, (160, 130, 96))]), (196, 28, 34),
+    [L((0.19, 0.355, 0.8, 0.418), 36, (30, 30, 90), mode='key', key=(28, 24, 80), t=(70, 150)),
+     L([(0.185, 0.458, 0.81, 0.577), (0.092, 0.591, 0.888, 0.71)], 60, (200, 30, 36), mode='key', key=(200, 40, 40), t=(70, 150), gapf=.25, speck=.03),
+     L((0.033, 0.725, 0.949, 0.844), 60, (200, 30, 36), mode='key', key=(200, 40, 40), t=(70, 150), speck=.03)],
+    tgap=8, photo=ph(0.55, 0.16, 0.9, 0.62), pb=(200, 30, 36), lg=(60, 40, 30), lw=.6, order='LPTF',
+    ft='e', fcol=(70, 50, 40), fin=OLD, seed=1939)
+
+# The Rules of the Game (1939): the drawing's paper white, its navy THE, RULES, OF THE and GAME lifted into one line, the hunt and the house party from the drawing (the French title in type)
+std('the-rules-of-the-game-1939', ('grad', [(0, (244, 242, 232)), (.6, (226, 222, 206)), (1, (150, 146, 126))]), (24, 34, 70),
+    L([(0.18, 0.268, 0.32, 0.306), (0.022, 0.302, 0.47, 0.376), (0.145, 0.378, 0.325, 0.407), (0.026, 0.41, 0.46, 0.482)], 84, (24, 34, 70), mode='dark', gapf=.2),
+    photo=ph(0.66, 0.66, 0.68, 1.5), pb=(24, 34, 70), order='PTCSF', credit=['LA RÈGLE DU JEU'], ccol=(24, 34, 70), stick=RWD(),
+    ft='d', fcol=(24, 34, 70), fin=OLD, seed=1939)
+
+# The Wizard of Oz (1939): the poster's pale sky, its arched golden THE WIZARD and big OF OZ (Toto in the O) cut off it in their own colours, the four on the yellow brick road
+std('the-wizard-of-oz-1939', ('grad', [(0, (226, 236, 240)), (.6, (200, 216, 224)), (1, (110, 140, 150))]), (40, 60, 150),
+    LC([(0.16, 0.045, 0.71, 0.215), (0.22, 0.212, 0.8, 0.444)], 150, gapf=.1, cuts=[key_cut(lambda a: _sat(a) > .35)] * 2),
+    photo=ph(0.5, 0.68, 1.0, 0.85), pb=(240, 200, 40), lg=None, lw=.55, order='LPTF', dotst=('FAMILY', (40, 120, 60), WHT),
+    ft='a', vbox=(40, 60, 150), fcol=(40, 60, 150), fin=OLD, seed=1939)
