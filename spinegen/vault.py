@@ -3277,3 +3277,75 @@ std('ronin-1998', ('grad', [(0, (150, 150, 146)), (.6, (50, 50, 48)), (1, (6, 6,
     LC([(0.09, 0.575, 0.925, 0.75)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .4), minf=.1)]),
     photo=ph(0.6, 0.25, 0.8, 0.6), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTCF', credit=['ROBERT DE NIRO', 'JEAN RENO'], ccol=WHT,
     ft='d', fcol=(220, 220, 214), fin=RENTAL, seed=1998)
+
+# Rounders (1998): black, the poster's white serif ROUNDERS with the spade in the O lifted, the players round the table
+std('rounders-1998', ('grad', [(0, (60, 40, 30)), (.6, (16, 10, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.068, 0.848, 0.94, 0.934), 90, WHT, mode='light'),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['MATT DAMON', 'EDWARD NORTON'], ccol=WHT,
+    ft='e', fcol=(210, 200, 196), fin=RENTAL, seed=1998)
+
+# Rush Hour (1998): the night street's blue, the poster's red slanted RUSH / HOUR cut off it whole, Jackie Chan and Chris Tucker
+std('rush-hour-1998', ('grad', [(0, (30, 70, 140)), (.6, (10, 24, 50)), (1, (2, 4, 12))]), (220, 30, 30),
+    LC([(0.17, 0.68, 0.835, 0.905)], 140, outline=(WHT, 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.32, 0.9, 0.7), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('98 0918', top='ACTION', fill=(230, 232, 240)),
+    ft='a', vbox=(220, 30, 30), fcol=(200, 210, 236), fin=RENTAL, seed=1998)
+
+# Rushmore (1998): Touchstone, a slipcase; the poster's striped pale wallpaper, its red-and-yellow tiled RUSHMORE cut off it whole, Max in the go-kart under the title
+std('rushmore-1998', ('grad', [(0, (236, 236, 220)), (.6, (220, 220, 200)), (1, (120, 120, 100))]), (190, 30, 30),
+    LC([(0.05, 0.125, 0.95, 0.205)], 110, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.5, 0.58, 0.6, 0.75), pb=(190, 30, 30), lg=(60, 30, 20), lw=.55, order='LTPCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(60, 30, 20),
+    ft='b', fcol=(60, 30, 20), fin=RENTAL, seed=1998)
+
+# Saving Private Ryan (1998): a 2-tape box would not quite be needed at 169 minutes, so one tape; the battlefield's grey, the poster's white saving private ryan lifted, the soldiers' faces
+std('saving-private-ryan-1998', ('grad', [(0, (120, 130, 130)), (.6, (34, 38, 38)), (1, (4, 4, 4))]), WHT,
+    L((0.085, 0.78, 0.92, 0.838), 84, WHT, mode='light'),
+    photo=ph(0.5, 0.33, 0.9, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=WHT,
+    ft='c', fcol=(206, 210, 210), fin=RENTAL, seed=1998)
+
+# The Big Lebowski (1998): black, the poster's white serif THE BIG LEBOWSKI lifted, the Dude's bowling-alley sunglasses
+std('the-big-lebowski-1998', ('grad', [(0, (40, 30, 40)), (.6, (12, 8, 12)), (1, (2, 2, 2))]), WHT,
+    L([(0.43, 0.105, 0.57, 0.13), (0.05, 0.135, 0.95, 0.176)], 90, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.48, 0.86, 0.75), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT, dotst=('COMEDY', (220, 40, 40), WHT),
+    ft='d', fcol=(210, 200, 210), fin=RENTAL, seed=1998)
+
+# The Cruise (1998): the poster's grey city, its yellow-and-black THE CRUISE cut off it, Speed Levitch on the bus (no logo file: Charter Films, from IMDb's company credits)
+std('the-cruise-1998', ('grad', [(0, (200, 200, 200)), (.6, (120, 120, 120)), (1, (20, 20, 20))]), (20, 20, 20),
+    LC([(0.25, 0.168, 0.935, 0.228)], 100, cuts=[comp_cut(lambda a: (_lum(a) < .25) | ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45)), minf=.02)]),
+    photo=ph(0.6, 0.6, 0.86, 0.85), pb=(250, 220, 40), studio=['CHARTER FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['A DOCUMENTARY BY', 'BENNETT MILLER'], ccol=WHT,
+    ft='e', fcol=(220, 220, 220), fin=OLD, seed=1998)
+
+# The Parent Trap (1998): Disney, a live-action film, so a slipcase; the poster's white, its black serif the PARENT TRAP cut off it into one line, the twins
+std('the-parent-trap-1998', ('grad', [(0, (246, 244, 240)), (.6, (228, 224, 218)), (1, (120, 114, 104))]), (20, 20, 20),
+    LC([(0.07, 0.36, 0.3, 0.42), (0.07, 0.4, 0.94, 0.48), (0.38, 0.715, 0.95, 0.86)], 100, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) < .18, minf=.02)] * 3),
+    photo=ph(0.5, 0.18, 0.9, 0.5), pb=(200, 40, 40), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'FAMILY']),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=RENTAL, seed=1998)
+
+# The Rugrats Movie (1998): the poster's purple, its white starburst with THE RUGRATS MOVIE cut off it whole, the babies with Reptar (Klasky-Csupo logo; directors from IMDb)
+std('the-rugrats-movie-1998', ('grad', [(0, (110, 50, 170)), (.5, (200, 90, 100)), (1, (60, 120, 40))]), WHT,
+    LC([(0.35, 0.05, 0.86, 0.23)], 140, cuts=[plate_cut(lambda a: _lum(a) > .85)]),
+    photo=ph(0.5, 0.55, 0.9, 0.85), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(240, 220, 236), fin=RENTAL, seed=1998)
+
+# The Truman Show (1998): the mosaic's blue, the poster's white The Truman Show lifted, Truman's face made of the show's stills
+std('the-truman-show-1998', ('grad', [(0, (60, 120, 200)), (.6, (20, 50, 100)), (1, (4, 10, 24))]), WHT,
+    LC([(0.03, 0.03, 0.97, 0.29)], 140, cuts=[comp_cut(lambda a: _lum(a) > .9, minf=.03)]),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A PETER WEIR', 'FILM'], ccol=WHT,
+    ft='b', fcol=(200, 216, 240), fin=RENTAL, seed=1998)
+
+# There's Something About Mary (1998): the poster's white, its purple there's something about and pink mary cut off it into one line, Cameron Diaz with the dog
+std('there-s-something-about-mary-1998', ('grad', [(0, (246, 246, 246)), (.6, (234, 226, 236)), (1, (130, 110, 130))]), (230, 40, 150),
+    LC([(0.07, 0.215, 0.47, 0.33), (0.02, 0.33, 0.545, 0.45)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _sat(a) > .35)] * 2),
+    photo=ph(0.72, 0.62, 0.5, 1.3), pb=(230, 40, 150), lg=(60, 20, 60), lw=.55, order='LPTF',
+    ft='d', fcol=(60, 20, 60), fin=RENTAL, seed=1998)
+
+# 10 Things I Hate About You (1999): Touchstone, a slipcase; the poster's green panel with its pink 10 things and white I hate about you cut off it whole, the cast in a row
+std('10-things-i-hate-about-you-1999', ('grad', [(0, (120, 190, 60)), (.5, (80, 150, 40)), (1, (20, 50, 10))]), WHT,
+    LC([(0.155, 0.02, 0.845, 0.43)], 150, cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .6) & (a[..., 1] < .35) & (a[..., 2] > .3)), minf=.01)]),
+    photo=ph(0.5, 0.7, 0.9, 0.6), pb=(220, 40, 120), lg=WHT, lw=.5, order='LPTCSF', credit=['HEATH LEDGER', 'JULIA STILES'], ccol=WHT, stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='e', fcol=(230, 246, 220), fin=RENTAL, seed=1999)
+
+# American Beauty (1999): DreamWorks, the poster's skin and rose, its black spaced AMERICAN BEAUTY cut off it, the rose against the belly
+std('american-beauty-1999', ('grad', [(0, (240, 200, 160)), (.6, (220, 150, 100)), (1, (110, 60, 30))]), (20, 14, 10),
+    LC([(0.085, 0.055, 0.91, 0.11)], 90, cuts=[key_cut(lambda a: _lum(a) < .28)]),
+    photo=ph(0.65, 0.6, 0.7, 1.1), pb=(190, 20, 30), lg=(40, 20, 10), lw=.55, order='LPTF',
+    ft='a', vbox=(190, 20, 30), fcol=(40, 20, 10), fin=RENTAL, seed=1999)
