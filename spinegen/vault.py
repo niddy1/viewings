@@ -1436,3 +1436,74 @@ std('shock-corridor-1963', ('grad', [(0, (248, 248, 248)), (.6, (228, 228, 228))
     L((0.39, 0.641, 0.82, 0.778), 90, (20, 20, 20), mode='dark'),
     photo=ph(0.6, 0.5, 0.86, 0.6), pb=(240, 220, 60), studio=['F & F PRODUCTIONS'], scol=(20, 20, 20), order='lPTCF', credit=['WRITTEN & DIRECTED BY', 'SAMUEL FULLER'],
     ccol=(20, 20, 20), ft='c', fcol=(20, 20, 20), fin=OLD, seed=1963)
+
+# The Birds (1963): the poster's sky blue, its white serif The Birds lifted, Tippi Hedren and the gulls (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
+std('the-birds-1963', ('grad', [(0, (60, 140, 200)), (.6, (30, 80, 140)), (1, (8, 24, 50))]), WHT,
+    L((0.335, 0.108, 0.94, 0.226), 100, WHT, mode='light'),
+    photo=ph(0.6, 0.5, 0.8, 1.1), pb=(20, 20, 20), studio=['ALFRED J. HITCHCOCK', 'PRODUCTIONS'], scol=WHT, order='lPTSF', stick=flow(dot, 74, ['THRILLER'], (20, 20, 20), WHT),
+    ft='b', fcol=(210, 220, 236), fin=RENTAL, seed=1963)
+
+# The Fiancés (1963): the poster's newsprint white, its black THE FIANCÉS (the tall swash F and the accent kept) cut off it letter by letter, ERMANNO OLMI'S in type, the couple's faces
+std('the-fiances-1963', ('grad', [(0, (236, 234, 228)), (.6, (216, 214, 206)), (1, (120, 118, 110))]), (24, 24, 24),
+    LC([(0.25, 0.74, 0.86, 0.93)], 100, cuts=[pick_cut(lambda a: _lum(a) < .3, (0.25, 0.74, 0.86, 0.93), [(0.282, 0.874), (0.337, 0.875), (0.39, 0.874), (0.488, 0.827), (0.528, 0.888), (0.53, 0.841), (0.578, 0.878), (0.647, 0.875), (0.711, 0.875), (0.765, 0.876), (0.82, 0.873)], r=.015)]),
+    photo=ph(0.5, 0.47, 0.9, 0.75), pb=(24, 24, 24), lg=(24, 24, 24), lw=.55, order='LPTCF', credit=["ERMANNO OLMI'S"], ccol=(24, 24, 24),
+    ft='d', fcol=(24, 24, 24), fin=OLD, seed=1963)
+
+# The Great Escape (1963): the poster's white, its outlined grey THE GREAT ESCAPE in the barbed wire cut off it, McQueen and the men running (a 2-tape box)
+std('the-great-escape-1963', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (60, 60, 60),
+    LC([(0.14, 0.74, 0.86, 0.96)], 130, cuts=[comp_cut(lambda a: _lum(a) < .7, minf=.01, close=3)]),
+    photo=ph(0.5, 0.33, 0.9, 0.85), pb=(40, 50, 70), lg=(40, 50, 70), lw=.5, order='LPTCSF', credit=['STEVE McQUEEN', 'JAMES GARNER'], ccol=(40, 50, 70),
+    stick=TWOST((40, 50, 70), WHT), ft='a', vbox=(40, 50, 70), fcol=(40, 50, 70), fin=OLD, seed=1963, **TWO)
+
+# The Pink Panther (1963): the poster's white, its small red THE PINK PANTHER label cut off it whole, the gang round the bed and the Panther (director from IMDb)
+std('the-pink-panther-1963', ('grad', [(0, (250, 236, 240)), (.6, (240, 210, 220)), (1, (180, 120, 140))]), (220, 40, 60),
+    LC([(0.385, 0.805, 0.615, 0.89)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .45))]),
+    photo=ph(0.55, 0.47, 0.9, 1.05), pb=(220, 40, 60), lg=(220, 40, 60), lw=.55, order='LPTCF', credit=['A BLAKE EDWARDS', 'FILM'], ccol=(150, 40, 60),
+    ft='e', fcol=(150, 40, 60), fin=OLD, seed=1963)
+
+# The Sword in the Stone (1963): Disney, the white clamshell; the poster's blue glow, its white THE SWORD IN THE STONE cut off it, Arthur's face in the red diamond
+disney('the-sword-in-the-stone-1963', ('grad', [(0, (20, 50, 130)), (.5, (40, 100, 200)), (1, (10, 30, 80))]), fin=dict(CLAM, vivid=.2), studio=False,
+       title=LC([(0.05, 0.44, 0.95, 0.6)], 100, cuts=[comp_cut(lambda a: (_lum(a) > .85) & (_sat(a) < .3), keep=lambda x, y: not (.4 < x < .62 and y < .35), minf=.01)]),
+       face=ph(.63, .22, .2, 1.4), lcol=WHT)
+
+# Youth of the Beast (1963): the poster's white, YOUTH OF THE BEAST typeset in heavy condensed capitals in its black (typeset: the T of BEAST is part of the gunman's black coat on the poster, so a cut reads BEAS; three tried), Jō Shishido with the gun (director from IMDb)
+std('youth-of-the-beast-1963', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (130, 130, 130))]), (20, 20, 20),
+    TT([('YOUTH', (20, 20, 20)), ('OF', (20, 20, 20)), ('THE', (20, 20, 20)), ('BEAST', (20, 20, 20))], 'intbk', 80, sp=.3),
+    photo=ph(0.82, 0.22, 0.36, 1.2), pb=(220, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'SEIJUN SUZUKI'], ccol=(20, 20, 20),
+    ft='c', vbox=(220, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1963)
+
+# A Fistful of Dollars (1964): the poster's blood red, its white A FISTFUL OF DOLLARS cut off it letter by letter, Clint Eastwood in the poncho (director from IMDb)
+std('a-fistful-of-dollars-1964', ('grad', [(0, (180, 30, 24)), (.6, (110, 14, 10)), (1, (40, 4, 2))]), WHT,
+    LC([(0.06, 0.42, 0.82, 0.535), (0.06, 0.53, 0.85, 0.64)], 90, gapf=.25, valign='base', cuts=[
+        pick_cut(lambda a: _lum(a) > .8, (0.06, 0.42, 0.82, 0.535), [(0.111, 0.498), (0.252, 0.481), (0.359, 0.475), (0.422, 0.492), (0.424, 0.442), (0.486, 0.481), (0.557, 0.476), (0.617, 0.479), (0.692, 0.48), (0.762, 0.487)], r=.015),
+        pick_cut(lambda a: _lum(a) > .8, (0.06, 0.53, 0.85, 0.64), [(0.132, 0.572), (0.201, 0.566), (0.261, 0.579), (0.354, 0.586), (0.437, 0.582), (0.506, 0.586), (0.562, 0.587), (0.636, 0.585), (0.72, 0.582), (0.796, 0.582)], r=.015)]),
+    photo=ph(0.5, 0.2, 0.8, 0.6), pb=WHT, lg=WHT, lw=.55, order='LPTCSF', credit=['CLINT EASTWOOD'], ccol=WHT,
+    stick=BAR('64 1105', top='WESTERN', fill=(232, 220, 196)), ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1964)
+
+# Band of Outsiders (1964): the poster's white, its black BAND OF and OUTSIDERS cut off it (the poster's black frame trimmed away), Anna Karina and the boys (no logo file: Columbia Films, from IMDb's company credits; director from IMDb)
+std('band-of-outsiders-1964', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (130, 130, 130))]), (20, 20, 20),
+    LC([(0.205, 0.234, 0.905, 0.336), (0.0, 0.345, 0.985, 0.452)], 80, gapf=.25, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.2), key_cut(lambda a: _lum(a) < .2)]),
+    photo=ph(0.5, 0.67, 0.86, 0.75), pb=(20, 20, 20), studio=['COLUMBIA FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'],
+    ccol=(20, 20, 20), ft='e', fcol=(20, 20, 20), fin=OLD, seed=1964)
+
+# Diary of a Chambermaid (1964): the poster's painted blues and reds, its dark script Diary of a Chambermaid lifted, Jeanne Moreau's face (no logo file: Ciné-Alliance, from IMDb's company credits)
+std('diary-of-a-chambermaid-1964', ('grad', [(0, (120, 180, 220)), (.5, (220, 100, 70)), (1, (60, 30, 20))]), (30, 40, 60),
+    L((0.05, 0.645, 0.99, 0.885), 120, (30, 40, 60), mode='key', key=(40, 50, 70), t=(70, 150)),
+    photo=ph(0.5, 0.33, 0.8, 0.95), pb=(30, 40, 60), studio=['CINÉ-ALLIANCE'], scol=(30, 40, 60), order='lPTCF', credit=['JEANNE MOREAU'], ccol=(30, 40, 60),
+    ft='a', vbox=(30, 40, 60), fcol=(30, 40, 60), fin=OLD, seed=1964)
+
+# Dr. Strangelove (1964): the sky's grey, the poster's white column of DR. STRANGELOVE OR HOW I LEARNED TO STOP WORRYING AND LOVE THE BOMB cut off it and turned to run down the spine, the B-52 (director from IMDb)
+std('dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964', ('grad', [(0, (180, 180, 178)), (.6, (110, 110, 108)), (1, (30, 30, 30))]), WHT,
+    LC([(0.38, 0.38, 0.66, 0.93)], 120, cuts=[comp_cut(lambda a: _lum(a) > .88, rot=90, minf=.003)]),
+    photo=ph(0.55, 0.13, 1.0, 0.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A STANLEY KUBRICK', 'PRODUCTION'], ccol=WHT,
+    dotst=('COMEDY', WHT, (60, 60, 60)), ft='d', fcol=(210, 210, 210), fin=OLD, seed=1964)
+
+# Marnie (1964): the poster's white, its purple "MARNIE" keyed off it, Sean Connery and Tippi Hedren
+std('marnie-1964', ('grad', [(0, (246, 244, 246)), (.6, (226, 220, 228)), (1, (120, 90, 130))]), (120, 40, 120),
+    L((0.045, 0.492, 0.955, 0.598), 90, (124, 42, 124), mode='key', key=(120, 40, 120), t=(70, 150)),
+    photo=ph(0.5, 0.2, 0.9, 0.85), pb=(124, 42, 124), lg=(40, 30, 40), lw=.55, order='LPTF', ft='c', fcol=(40, 30, 40), fin=OLD, seed=1964)
+
+# Mary Poppins (1964): Disney, the white clamshell; the poster's sky blue, MARY POPPINS typeset in heavy capitals in the poster's white with a dotted look from its blue keyline (typeset: the poster's title is built of separate white dots among flowers, and every cut either breaks the letters into dots or swallows the flowers; three tried), Mary's face in the red diamond
+disney('mary-poppins-1964', ('grad', [(0, (20, 90, 180)), (.5, (30, 120, 210)), (1, (10, 50, 120))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('MARY', WHT), ('POPPINS', WHT)], 'intbk', 90, sp=.35, outline=((20, 60, 140), 2.4)),
+       face=ph(.605, .415, .085, 1.4), lcol=WHT)
