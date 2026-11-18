@@ -1583,3 +1583,78 @@ std('persona-1966', ('grad', [(0, (248, 248, 248)), (.6, (226, 226, 226)), (1, (
     L((0.17, 0.715, 0.865, 0.8), 80, (20, 20, 20), mode='dark'),
     photo=ph(0.5, 0.27, 1.0, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['EN FILM AV', 'INGMAR BERGMAN'], ccol=(20, 20, 20),
     ft='c', fcol=(20, 20, 20), fin=OLD, seed=1966)
+
+# The Battle of Algiers (1966): the poster's white, its red stencil THE BATTLE OF ALGIERS keyed off it, the paratroop colonel in his dark glasses (no logo file in type: Casbah Film; director from IMDb)
+std('the-battle-of-algiers-1966', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (200, 30, 40),
+    L([(0.03, 0.055, 0.975, 0.17), (0.02, 0.168, 0.98, 0.282)], 80, (204, 32, 42), mode='key', key=(200, 40, 50), t=(70, 150), gapf=.25),
+    photo=ph(0.6, 0.62, 0.66, 1.1), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'GILLO PONTECORVO'], ccol=(20, 20, 20),
+    ft='b', vbox=(204, 32, 42), fcol=(20, 20, 20), fin=OLD, seed=1966)
+
+# The Black Cat (1966): black, the poster's red slab-serif THE BLACK CAT keyed off it, the cat's red eyes (no logo file: Falcon International, from IMDb's company credits)
+std('the-black-cat-1966', ('grad', [(0, (30, 20, 20)), (.6, (10, 6, 6)), (1, (2, 2, 2))]), (220, 30, 40),
+    L([(0.455, 0.022, 0.82, 0.138), (0.155, 0.135, 0.815, 0.264), (0.155, 0.264, 0.815, 0.48)], 90, (224, 32, 42), mode='key', key=(210, 30, 40), t=(70, 150), gapf=.2),
+    photo=ph(0.55, 0.72, 0.86, 0.6), pb=(224, 32, 42), studio=['FALCON', 'INTERNATIONAL'], scol=(224, 32, 42), order='lPTSF', stick=PRC(['$0.99', 'HORROR']),
+    ft='d', fcol=(200, 190, 190), fin=RENTAL, seed=1966)
+
+# The Good, the Bad and the Ugly (1966): the desert's dust, the poster's white distressed GOOD, BAD and UGLY with their small sideways THE, THE and AND THE cut off it in their own colours and run in one line, Eastwood under the hat
+GBW = lambda a: (_lum(a) > .78) & (_sat(a) < .3)
+std('the-good-the-bad-and-the-ugly-1966', ('grad', [(0, (190, 170, 140)), (.6, (120, 90, 60)), (1, (40, 26, 14))]), WHT,
+    [LC([(0.278, 0.364, 0.326, 0.436), (0.33, 0.268, 0.795, 0.452), (0.395, 0.554, 0.444, 0.628), (0.444, 0.449, 0.795, 0.626)], 90,
+        gapf=.12, valign='base', cuts=[comp_cut(GBW, rot=-90, minf=.1), comp_cut(GBW, minf=.1, close=3), comp_cut(GBW, rot=-90, minf=.1), comp_cut(GBW, minf=.1, close=3)]),
+     LC([(0.345, 0.645, 0.398, 0.795), (0.399, 0.62, 0.8, 0.81)], 90, gapf=.12, valign='base', cuts=[comp_cut(GBW, rot=-90, minf=.05), comp_cut(GBW, minf=.1, close=3)])],
+    tgap=6,
+    photo=ph(0.5, 0.1, 0.6, 0.6), pb=(240, 200, 140), lg=WHT, lw=.5, order='LPTCSF', credit=['CLINT EASTWOOD'], ccol=WHT,
+    stick=BAR('66 7310', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 200, 140), vink=(40, 26, 14), fcol=(240, 220, 200), fin=RENTAL, seed=1966)
+
+# The Pornographers (1966): black, the poster's white condensed THE PORNOGRAPHERS lifted, the face behind the film camera (director from IMDb)
+std('the-pornographers-1966', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    L((0.01, 0.276, 0.66, 0.35), 70, WHT, mode='light'),
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(160, 210, 60), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'SHŌHEI IMAMURA'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=OLD, seed=1966)
+
+# The Sword of Doom (1966): the poster's fiery orange fog, its white THE SWORD OF DOOM lifted, the swordsman in the forest (top-billed cast from IMDb)
+std('the-sword-of-doom-1966', ('grad', [(0, (240, 140, 20)), (.6, (170, 80, 10)), (1, (40, 16, 4))]), WHT,
+    L((0.115, 0.75, 0.885, 0.827), 70, WHT, mode='light'),
+    photo=ph(0.45, 0.34, 0.6, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPCF', credit=['TATSUYA NAKADAI'], ccol=WHT,
+    ft='c', fcol=(250, 230, 200), fin=OLD, seed=1966)
+
+# Tokyo Drifter (1966): black, the poster's pink thin T O K Y stacked down its edge and its last O (the pink ring with the teal DRIFTER inside) cut off it in their own colours and run in one line, the yellow-suited gunman (director from IMDb)
+TDP = lambda a: (a[..., 0] > .55) & (a[..., 2] > .35) & (a[..., 1] < .7) & (_lum(a) > .35)
+std('tokyo-drifter-1966', ('grad', [(0, (30, 26, 34)), (.6, (10, 8, 12)), (1, (2, 2, 2))]), (240, 130, 170),
+    LC([(0.76, 0.1, 0.93, 0.545), (0.772, 0.548, 0.925, 0.652)], 110, gapf=.2, valign='mid', cuts=[
+        seq_cut(TDP, (0.76, 0.1, 0.93, 0.545), [(0.847, 0.156), (0.847, 0.277), (0.841, 0.385), (0.847, 0.485)], turn=[0] * 4, gapf=.18),
+        key_cut(lambda a: _lum(a) > .3)]),
+    photo=ph(0.4, 0.42, 0.6, 1.3), pb=(240, 200, 40), lg=(240, 130, 170), lw=.55, order='LPTCF', credit=['A FILM BY', 'SEIJUN SUZUKI'], ccol=(240, 130, 170),
+    dotst=('ACTION', (240, 200, 40), (10, 8, 12)), ft='b', fcol=(200, 196, 200), fin=OLD, seed=1966)
+
+# Torn Curtain (1966): the poster's dark red, its yellow 'TORN CURTAIN' keyed off it, Paul Newman and Julie Andrews torn apart by the knife
+std('torn-curtain-1966', ('grad', [(0, (180, 20, 20)), (.6, (120, 10, 10)), (1, (40, 2, 2))]), (250, 230, 50),
+    L([(0.3, 0.733, 0.59, 0.81), (0.325, 0.808, 0.78, 0.888)], 80, (252, 232, 52), mode='key', key=(250, 230, 60), t=(70, 150), gapf=.25),
+    photo=ph(0.5, 0.33, 0.9, 0.7), pb=(250, 230, 50), lg=WHT, lw=.55, order='LPTF', ft='e', fcol=(240, 210, 200), fin=OLD, seed=1966)
+
+# Bonnie and Clyde (1967): the poster's pale sky, its black condensed BONNIE AND CLYDE lifted, Beatty and Dunaway with their guns
+std('bonnie-and-clyde-1967', ('grad', [(0, (226, 232, 236)), (.6, (190, 200, 206)), (1, (90, 100, 106))]), (20, 20, 20),
+    L((0.115, 0.04, 0.915, 0.15), 80, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['WARREN BEATTY', 'FAYE DUNAWAY'], ccol=(20, 20, 20),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1967)
+
+# Cool Hand Luke (1967): the poster's white, its black COOL HAND LUKE with the chain lifted, Paul Newman's face in the yellow-orange zigzag
+std('cool-hand-luke-1967', ('grad', [(0, (250, 230, 120)), (.6, (240, 160, 60)), (1, (160, 70, 20))]), (20, 20, 20),
+    L((0.022, 0.83, 0.978, 0.884), 70, (20, 20, 20), mode='dark'),
+    photo=ph(0.72, 0.42, 0.56, 1.25), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=RWD(fill=(250, 246, 230)),
+    ft='d', fcol=(30, 20, 14), fin=RENTAL, seed=1967)
+
+# Le Samouraï (1967): the poster's grey, its black thin LE SAMOURAÏ lifted (diaeresis and all), Delon tipping his hat (no logo file: CICC, from IMDb's company credits; director from IMDb, as on the poster)
+std('le-samourai-1967', ('grad', [(0, (200, 204, 200)), (.6, (160, 164, 160)), (1, (60, 64, 60))]), (20, 20, 20),
+    L((0.19, 0.058, 0.975, 0.13), 76, (20, 20, 20), mode='dark', speck=0),
+    photo=ph(0.4, 0.45, 0.8, 1.0), pb=(20, 20, 20), studio=['CICC'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'JEAN-PIERRE MELVILLE'], ccol=(20, 20, 20),
+    ft='c', fcol=(20, 20, 20), fin=OLD, seed=1967)
+
+# Samurai Rebellion (1967): black, the poster's red SAMURAI and REBELLION rebuilt letter by letter off the diagonals they step down, Mifune's face (director from IMDb)
+SRR = lambda a: (a[..., 0] > .7) & (a[..., 1] < .3)
+std('samurai-rebellion-1967', ('grad', [(0, (40, 30, 34)), (.6, (12, 10, 12)), (1, (2, 2, 2))]), (230, 30, 40),
+    LC([(0.28, 0.02, 0.55, 0.44), (0.4, 0.06, 0.75, 0.6)], 84, gapf=.25, valign='base', cuts=[
+        seq_cut(SRR, (0.28, 0.02, 0.55, 0.44), [(0.329, 0.059), (0.359, 0.118), (0.388, 0.174), (0.419, 0.234), (0.443, 0.289), (0.479, 0.349), (0.508, 0.405)], turn=[0] * 7, gapf=.1),
+        seq_cut(SRR, (0.4, 0.06, 0.75, 0.6), [(0.452, 0.096), (0.483, 0.155), (0.514, 0.212), (0.543, 0.27), (0.57, 0.335), (0.6, 0.393), (0.636, 0.443), (0.666, 0.5), (0.696, 0.558)], turn=[0] * 9, gapf=.1)]),
+    photo=ph(0.25, 0.68, 0.46, 1.1), pb=(230, 30, 40), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'MASAKI KOBAYASHI'], ccol=WHT,
+    ft='a', vbox=(230, 30, 40), fcol=(200, 196, 196), fin=OLD, seed=1967)
