@@ -991,3 +991,84 @@ std('samurai-ii-duel-at-ichijoji-temple-1955', ('grad', [(0, (230, 70, 40)), (.6
     LC([(0.0, 0.872, 1.0, 0.962)], 70, margin=0, cuts=[plate_cut(lambda a: _lum(a) < .2)]),
     photo=ph(0.45, 0.32, 0.8, 0.9), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCSF', credit=['SAMURAI II'], ccol=WHT, stick=BAR('59 0612', top='SAMURAI', fill=(236, 226, 206)),
     ft='a', vbox=(20, 20, 20), fcol=(240, 220, 210), fin=RENTAL, seed=1955)
+
+# The Ladykillers (1955): the poster's pale blue-white, its red The Ladykillers with its grey shadow keyed off it, the gang in the parlour
+std('the-ladykillers-1955', ('grad', [(0, (236, 242, 244)), (.6, (210, 222, 228)), (1, (120, 140, 150))]), (200, 30, 40),
+    L((0.135, 0.722, 0.855, 0.95), 120, (204, 32, 42), mode='key', key=(200, 40, 50), t=(70, 150), shadow=((120, 130, 136), 3, 3)),
+    photo=ph(0.5, 0.35, 0.9, 0.8), pb=(40, 60, 70), lg=(40, 60, 70), lw=.55, order='LPTF', ft='a', vbox=(204, 32, 42), fcol=(40, 60, 70), fin=OLD, seed=1955)
+
+# The Night of the Hunter (1955): black, the poster's white serif THE NIGHT / OF THE HUNTER lifted, Mitchum and Shelley Winters (top-billed cast from IMDb)
+std('the-night-of-the-hunter-1955', ('grad', [(0, (40, 40, 42)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    [L([(0.72, 0.597, 0.96, 0.68), (0.66, 0.685, 0.962, 0.768)], 66, WHT, mode='light', gapf=.3),
+     L([(0.605, 0.773, 0.96, 0.856), (0.545, 0.862, 0.962, 0.945)], 66, WHT, mode='light', gapf=.3)],
+    tgap=8, photo=ph(0.35, 0.3, 0.6, 1.1), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['ROBERT MITCHUM', 'SHELLEY WINTERS'], ccol=WHT,
+    ft='c', fcol=(200, 200, 200), fin=OLD, seed=1955)
+
+# The Trouble with Harry (1955): the poster's white, its red serif THE TROUBLE / WITH HARRY keyed off it, the man in the autumn woods (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
+std('the-trouble-with-harry-1955', ('grad', [(0, (246, 242, 234)), (.6, (230, 220, 200)), (1, (150, 110, 70))]), (200, 40, 34),
+    [L([(0.175, 0.433, 0.36, 0.487), (0.095, 0.492, 0.458, 0.545)], 64, (204, 42, 36), mode='key', key=(200, 50, 40), t=(70, 150), gapf=.3),
+     L([(0.16, 0.552, 0.387, 0.601), (0.122, 0.61, 0.428, 0.655)], 64, (204, 42, 36), mode='key', key=(200, 50, 40), t=(70, 150), gapf=.3)],
+    tgap=8, photo=ph(0.72, 0.52, 0.5, 1.7), pb=(204, 42, 36), studio=['ALFRED J. HITCHCOCK', 'PRODUCTIONS'], scol=(60, 40, 30), order='lPTSF',
+    stick=PRC(['$1.49', 'COMEDY']), ft='e', fcol=(60, 40, 30), fin=RENTAL, seed=1955)
+
+# And God Created Woman (1956): black, the poster's white serif "...and God created woman" lifted, Bardot (no logo file: Cocinor, from IMDb's company credits)
+std('and-god-created-woman-1956', ('grad', [(0, (60, 20, 14)), (.6, (18, 6, 4)), (1, (2, 2, 2))]), WHT,
+    L((0.335, 0.85, 0.9, 0.882), 50, WHT, mode='light', speck=0),
+    photo=ph(0.55, 0.42, 0.8, 1.15), pb=(240, 160, 50), studio=['COCINOR'], scol=(240, 160, 50), order='lPTCF', credit=['BRIGITTE BARDOT'], ccol=WHT,
+    ft='b', fcol=(210, 200, 190), fin=OLD, seed=1956)
+
+# Bob le Flambeur (1956): black, the poster's white ornate BOB, LE and FLAMBEUR from the playing card lifted into one line, Bob's profile in the spade (no logo file: O.G.C., from IMDb's company credits; director from IMDb)
+std('bob-le-flambeur-1956', ('grad', [(0, (24, 44, 44)), (.6, (8, 14, 14)), (1, (2, 2, 2))]), WHT,
+    L([(0.285, 0.1, 0.715, 0.19), (0.39, 0.775, 0.61, 0.832), (0.225, 0.855, 0.775, 0.906)], 80, WHT, mode='light', gapf=.25, speck=0),
+    photo=ph(0.5, 0.48, 0.66, 0.9), pb=WHT, studio=['O.G.C.'], scol=WHT, order='lPTCF', credit=['UN FILM DE', 'JEAN-PIERRE MELVILLE'], ccol=WHT,
+    ft='d', fcol=(190, 210, 206), fin=OLD, seed=1956)
+
+# Night and Fog (1956): black, the poster's thin grey NIGHT AND FOG lifted, the barbed wire (director from IMDb)
+std('night-and-fog-1956', ('grad', [(0, (40, 36, 30)), (.6, (14, 12, 10)), (1, (2, 2, 2))]), (190, 190, 186),
+    L((0.11, 0.49, 0.9, 0.55), 60, (200, 200, 196), mode='light'),
+    photo=ph(0.5, 0.2, 1.0, 0.4), pb=(150, 130, 100), lg=(200, 200, 196), lw=.55, order='LPTCF', credit=['A DOCUMENTARY BY', 'ALAIN RESNAIS'], ccol=(200, 200, 196),
+    ft='a', fcol=(170, 170, 166), fin=OLD, seed=1956)
+
+# Samurai III: Duel at Ganryu Island (1956): the poster's red sun, its black band with the white DUEL AT GANRYU ISLAND cut off it whole (SAMURAI III in type under it), Musashi in the boat
+std('samurai-iii-duel-at-ganryu-island-1956', ('grad', [(0, (222, 64, 40)), (.6, (166, 34, 22)), (1, (60, 10, 6))]), WHT,
+    LC([(0.0, 0.872, 1.0, 0.962)], 70, margin=0, cuts=[plate_cut(lambda a: _lum(a) < .2)]),
+    photo=ph(0.42, 0.48, 0.86, 1.05), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['SAMURAI III'], ccol=WHT,
+    ft='e', fcol=(240, 220, 210), fin=OLD, seed=1956)
+
+# The Harder They Fall (1956): the ring's blue, the poster's red THE HARDER THEY FALL cut word by word off the newspaper page into one line, edged in its black shadow, the boxing gloves
+std('the-harder-they-fall-1956', ('grad', [(0, (40, 150, 210)), (.6, (20, 90, 140)), (1, (6, 30, 50))]), (214, 40, 40),
+    LC([(0.35, 0.618, 0.49, 0.685), (0.34, 0.728, 0.69, 0.812), (0.34, 0.812, 0.48, 0.9), (0.515, 0.852, 0.69, 0.945)], 80, gapf=.18, valign='base', outline=((20, 16, 14), 2),
+       cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4), minf=.05)] * 4),
+    photo=ph(0.45, 0.43, 0.8, 0.6), pb=(240, 236, 226), lg=WHT, lw=.55, order='LPTCF', credit=['HUMPHREY BOGART'], ccol=WHT,
+    ft='b', fcol=(210, 226, 236), fin=OLD, seed=1956)
+
+# The Killing (1956): the poster's blue and black, its white THE KILLING lifted, Sterling Hayden with the rifle (director from IMDb)
+std('the-killing-1956', ('grad', [(0, (40, 140, 180)), (.6, (16, 60, 80)), (1, (4, 16, 20))]), WHT,
+    L([(0.395, 0.118, 0.545, 0.192), (0.395, 0.148, 0.955, 0.35)], 150, WHT, mode='key', key=(250, 250, 250), t=(60, 150), gapf=.2, speck=.02),
+    photo=ph(0.3, 0.64, 0.56, 1.3), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['A STANLEY KUBRICK', 'FILM'], ccol=WHT,
+    ft='c', fcol=(200, 220, 226), fin=OLD, seed=1956)
+
+# The Man Who Knew Too Much (1956): the poster's white, its navy THE MAN WHO / KNEW TOO MUCH lifted in two lines, Stewart and Doris Day
+MWB = dict(mode='key', key=(50, 70, 120), t=(70, 150), gapf=.25)
+std('the-man-who-knew-too-much-1956', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 224)), (1, (150, 40, 50))]), (40, 60, 110),
+    [L([(0.11, 0.634, 0.245, 0.672), (0.13, 0.674, 0.316, 0.717), (0.145, 0.718, 0.372, 0.764)], 60, (44, 64, 116), **MWB),
+     L([(0.16, 0.766, 0.552, 0.831), (0.18, 0.83, 0.468, 0.895), (0.21, 0.895, 0.597, 0.96)], 60, (44, 64, 116), **MWB)],
+    tgap=8, photo=ph(0.4, 0.17, 0.8, 0.7), pb=(200, 30, 40), lg=(40, 60, 110), lw=.55, order='LPTF', dotst=('THRILLER', (200, 30, 40), WHT),
+    ft='d', fcol=(40, 60, 110), fin=OLD, seed=1956)
+
+# The Searchers (1956): Monument Valley's red into dark, the poster's white italic THE SEARCHERS lifted, John Wayne under the hat
+std('the-searchers-1956', ('grad', [(0, (60, 40, 30)), (.5, (180, 90, 40)), (1, (60, 24, 10))]), WHT,
+    L((0.05, 0.088, 0.95, 0.146), 70, WHT, mode='light'),
+    photo=ph(0.5, 0.52, 0.9, 0.9), pb=(240, 180, 90), lg=WHT, lw=.55, order='LPTCSF', credit=['JOHN WAYNE'], ccol=WHT,
+    stick=BAR('71 4420', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 180, 90), vink=(60, 24, 10), fcol=(240, 220, 200), fin=RENTAL, seed=1956)
+
+# The Swan (1956): the poster's pale gold, THE SWAN typeset in a serif like the poster's, its grey-green with the S in its tan (typeset: the poster's tall S is a faint tan on cream and drops out of every key, the rest picks up the hair behind it; three tried), Grace Kelly's face
+std('the-swan-1956', ('grad', [(0, (236, 228, 200)), (.6, (220, 206, 170)), (1, (140, 120, 80))]), (110, 120, 100),
+    TT([('THE ', (100, 116, 100)), ('S', (170, 140, 90)), ('WAN', (100, 116, 100))], 'terb', 84),
+    photo=ph(0.45, 0.42, 0.66, 1.05), pb=(200, 150, 60), lg=(110, 100, 80), lw=.55, order='LPTF', ft='e', fcol=(100, 90, 70), fin=OLD, seed=1956)
+
+# The Wrong Man (1956): the poster's white, The WRONG MAN typeset in heavy italic capitals in the poster's red (typeset: the poster's W is half-hidden by black smoke, so a cut reads RONG; two cuts tried), Henry Fonda under the hat (director from IMDb)
+std('the-wrong-man-1956', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1, (110, 70, 50))]), (220, 60, 60),
+    TT([('The', (226, 70, 70)), ('WRONG MAN', (226, 70, 70))], 'intbki', 76, sp=.3, outline=((40, 20, 20), 1.6)),
+    photo=ph(0.4, 0.25, 0.6, 1.1), pb=(220, 60, 60), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(40, 30, 26),
+    ft='b', fcol=(40, 30, 26), fin=OLD, seed=1956)
