@@ -421,7 +421,7 @@ std('foreign-correspondent-1940', ('grad', [(0, (236, 226, 200)), (.6, (216, 200
 # His Girl Friday (1940): the poster's white, its black HIS GIRL and red FRIDAY cut off it in their own colours, Cary Grant and Rosalind Russell
 std('his-girl-friday-1940', ('grad', [(0, (248, 248, 246)), (.6, (232, 232, 228)), (1, (160, 158, 150))]), (20, 20, 20),
     LC([(0.03, 0.795, 0.965, 0.884)], 84, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
-    photo=ph(0.55, 0.3, 0.92, 0.95), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTSF', stick=flow(dot, 74, ['COMEDY'], (214, 30, 40), WHT),
+    photo=ph(0.52, 0.3, 1.0, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTSF', stick=flow(dot, 74, ['COMEDY'], (214, 30, 40), WHT),
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1940)
 
 # Pinocchio (1940): Disney, the white clamshell; the poster's starry blue, its gold script Pinocchio cut off the red plaque in its own colours, Pinocchio's face in the red diamond
@@ -432,7 +432,7 @@ disney('pinocchio-1940', ('grad', [(0, (20, 40, 120)), (.5, (40, 90, 180)), (1, 
 # Rebecca (1940): black, the poster's green script Rebecca keyed off it, Olivier and Joan Fontaine with Manderley behind
 std('rebecca-1940', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (110, 200, 120),
     L((0.105, 0.712, 0.888, 0.888), 100, (112, 204, 124), mode='key', key=(100, 190, 110), t=(70, 150)),
-    photo=ph(0.4, 0.3, 0.8, 1.05), pb=(112, 204, 124), order='PTF', ft='c', fcol=(200, 200, 196), fin=OLD, seed=1940)
+    photo=ph(0.45, 0.3, 1.0, 0.75), pb=(112, 204, 124), order='PTF', ft='c', fcol=(200, 200, 196), fin=OLD, seed=1940)
 
 # The Bank Dick (1940): the poster's yellow sun, its black THE, Bank and Dick lifted word by word and turned level (they climb 17 degrees), W.C. Fields from the cartoon at the top
 BDK = lambda a: _lum(a) < .25
@@ -547,7 +547,7 @@ std('le-corbeau-1943', ('grad', [(0, (246, 246, 244)), (.6, (228, 228, 224)), (1
 # Shadow of a Doubt (1943): the poster's white, its orange-red SHADOW of a DOUBT with the black extrusion cut off it in their own colours, Teresa Wright and Joseph Cotten
 std('shadow-of-a-doubt-1943', ('grad', [(0, (246, 242, 236)), (.6, (230, 222, 212)), (1, (150, 130, 116))]), (230, 80, 34),
     LC([(0.0, 0.47, 1.0, 0.618)], 96, cuts=[comp_cut(lambda a: ((a[..., 0] > .75) & (a[..., 1] < .45) & (a[..., 2] < .3)) | (_lum(a) < .18))]),
-    photo=ph(0.3, 0.2, 0.6, 1.0), pb=(230, 80, 34), lg=(30, 30, 30), lw=.6, order='LPTSF', stick=BAR('23 1150', top='SUSPENSE', fill=(236, 226, 200)),
+    photo=ph(0.4, 0.2, 0.8, 0.72), pb=(230, 80, 34), lg=(30, 30, 30), lw=.6, order='LPTSF', stick=BAR('23 1150', top='SUSPENSE', fill=(236, 226, 200)),
     ft='b', fcol=(40, 34, 30), fin=RENTAL, seed=1943)
 
 # Double Indemnity (1944): black, the poster's white DOUBLE INDEMNITY with its grey extrusion cut off it in its own colours, Barbara Stanwyck with the cigarette (director from IMDb)
@@ -559,7 +559,7 @@ std('double-indemnity-1944', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1
 # Gaslight (1944): the poster's sepia brown, its yellow Gaslight keyed off it, Boyer and Bergman under the lamp
 std('gaslight-1944', ('grad', [(0, (110, 80, 50)), (.6, (54, 36, 22)), (1, (14, 8, 4))]), (250, 214, 40),
     L((0.115, 0.75, 0.89, 0.925), 100, (252, 216, 40), mode='key', key=(245, 210, 40), t=(70, 150)),
-    photo=ph(0.56, 0.36, 0.7, 1.2), pb=(252, 216, 40), lg=(252, 216, 40), lw=.55, order='LPTF', ft='a', vbox=(252, 216, 40), vink=(54, 36, 22),
+    photo=ph(0.56, 0.36, 0.8, 0.9), pb=(252, 216, 40), lg=(252, 216, 40), lw=.55, order='LTPSF', stick=PRC(['$2.49', 'THRILLER']), ft='a', vbox=(252, 216, 40), vink=(54, 36, 22),
     fcol=(220, 200, 170), fin=OLD, seed=1944)
 
 # Ivan the Terrible, Part I (1944): the poster's sepia, its red Slavonic IVAN the TERRIBLE and PART I keyed off it, the tsar in his robes
@@ -658,3 +658,97 @@ std('notorious-1946', ('grad', [(0, (244, 244, 240)), (.6, (222, 226, 226)), (1,
 std('the-big-sleep-1946', ('grad', [(0, (40, 34, 28)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
     L((0.045, 0.028, 0.955, 0.124), 76, WHT, mode='light', speck=0),
     photo=ph(0.5, 0.6, 1.0, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 196, 190), fin=OLD, seed=1946)
+
+# The Killers (1946): black, the poster's white outlined THE Killers cut off it and turned level (it climbs 9 degrees), Burt Lancaster and Ava Gardner
+std('the-killers-1946', ('grad', [(0, (34, 40, 46)), (.6, (12, 14, 16)), (1, (2, 2, 2))]), WHT,
+    LC([(0.19, 0.09, 0.85, 0.26)], 120, cuts=[comp_cut(lambda a: _lum(a) > .75, rot=-9)]),
+    photo=ph(0.5, 0.42, 1.0, 0.68), pb=WHT, lg=WHT, lw=.6, order='LPTF', dotst=('CRIME', (200, 30, 40), WHT), ft='a', fcol=(200, 204, 210), fin=OLD, seed=1946)
+
+# Brute Force (1947): the poster's white, its black distressed BRUTE FORCE keyed off it (the scratches filled), Burt Lancaster behind the bars
+std('brute-force-1947', ('grad', [(0, (236, 236, 234)), (.6, (210, 210, 206)), (1, (110, 110, 106))]), (20, 20, 20),
+    L([(0.03, 0.632, 0.99, 0.773), (0.03, 0.773, 0.99, 0.92)], 84, (20, 20, 20), mode='key', key=(10, 8, 8), t=(60, 140), close=2, gapf=.25),
+    photo=ph(0.55, 0.28, 1.0, 0.8), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCSF', credit=['DIRECTED BY', 'JULES DASSIN'], ccol=(20, 20, 20),
+    stick=RWD(fill=(240, 236, 210)), ft='e', fcol=(20, 20, 20), fin=RENTAL, seed=1947)
+
+# Dark Passage (1947): the poster's cream, its red serif italic DARK PASSAGE keyed off it, Bogart and Bacall in the dark blue brush stroke
+std('dark-passage-1947', ('grad', [(0, (244, 238, 222)), (.6, (228, 218, 196)), (1, (150, 130, 104))]), (210, 30, 40),
+    L([(0.52, 0.686, 0.905, 0.78), (0.395, 0.778, 0.95, 0.876)], 76, (212, 32, 42), mode='key', key=(205, 35, 45), t=(70, 150), gapf=.25),
+    photo=ph(0.34, 0.43, 0.46, 1.4), pb=(20, 70, 90), lg=(20, 70, 90), lw=.55, order='LPTF', ft='d', vbox=(212, 32, 42), fcol=(40, 40, 40), fin=OLD, seed=1947)
+
+# Jenny Lamour (1947): black, the poster's yellow condensed JENNY LAMOUR keyed off it, Jouvet's face over the spotlight (no logo file: Majestic Films; the French title, Quai des Orfèvres, in type)
+std('jenny-lamour-1947', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (250, 210, 40),
+    L((0.05, 0.72, 0.95, 0.832), 84, (252, 212, 42), mode='key', key=(245, 205, 45), t=(70, 150)),
+    photo=ph(0.6, 0.2, 0.62, 1.2), pb=(226, 70, 30), studio=['MAJESTIC FILMS'], scol=(250, 210, 40), order='lPTCF', credit=['QUAI DES ORFÈVRES'],
+    ccol=(226, 200, 150), ft='c', vbox=(250, 210, 40), vink=(12, 8, 6), fcol=(210, 200, 180), fin=OLD, seed=1947)
+
+# The Lady from Shanghai (1947): the poster's deep blue, its gold LADY and SHANGHAI and the small pale-gold THE and FROM cut off it in their own colours, Rita Hayworth's face
+std('the-lady-from-shanghai-1947', ('grad', [(0, (30, 60, 130)), (.6, (14, 26, 64)), (1, (4, 8, 20))]), (240, 196, 60),
+    LC([(0.18, 0.775, 0.305, 0.825), (0.3, 0.735, 0.73, 0.842), (0.045, 0.89, 0.165, 0.94), (0.16, 0.83, 0.962, 0.962)], 150, gapf=.12, valign='base',
+       cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .62) & (a[..., 0] > a[..., 2] + .25))] * 4),
+    photo=ph(0.3, 0.27, 0.6, 1.2), pb=(240, 196, 60), lg=WHT, lw=.6, order='LPTF', ft='b', fcol=(210, 214, 230), fin=OLD, seed=1947)
+
+# Bicycle Thieves (1948): the poster's watercolour cream, its slate-navy condensed BICYCLE THIEVES lifted (keyed on the cream, as the letters fade at their feet), Antonio and Bruno on the kerb (director from IMDb, credited in Italian)
+std('bicycle-thieves-1948', ('grad', [(0, (246, 242, 232)), (.6, (230, 222, 206)), (1, (150, 140, 120))]), (40, 40, 80),
+    L((0.12, 0.084, 0.85, 0.2), 76, (40, 40, 80), mode='nkey', key=(248, 246, 228), t=(40, 110)),
+    photo=ph(0.55, 0.57, 0.66, 1.1), pb=(40, 40, 80), order='TPCF', credit=['UN FILM DI', 'VITTORIO DE SICA'], ccol=(40, 40, 80),
+    ft='a', vbox=(40, 40, 80), fcol=(40, 40, 80), fin=OLD, seed=1948)
+
+# Key Largo (1948): the poster's sunset into black, its orange KEY LARGO and the swoosh under it cut off it in their own colours, edged black and turned level, Bogart and Bacall
+std('key-largo-1948', ('grad', [(0, (150, 90, 140)), (.35, (230, 140, 60)), (.7, (40, 24, 20)), (1, (4, 2, 2))]), (250, 150, 40),
+    LC([(0.17, 0.64, 0.995, 0.91)], 130, outline=((10, 6, 4), 2.2), cuts=[comp_cut(lambda a: (a[..., 0] > .68) & (a[..., 1] > .2) & (a[..., 2] < .3) & (_lum(a) > .3), rot=-15)]),
+    photo=ph(0.6, 0.3, 0.9, 0.8), pb=(250, 150, 40), lg=WHT, lw=.55, order='LPTCF', credit=['HUMPHREY BOGART', 'LAUREN BACALL'], ccol=(250, 200, 140),
+    ft='c', vbox=(250, 150, 40), vink=(10, 6, 4), fcol=(210, 196, 180), fin=OLD, seed=1948)
+
+# Oliver Twist (1948): the poster's dark oils, its white serif OLIVER TWIST lifted, Fagin and Oliver (director from IMDb)
+std('oliver-twist-1948', ('grad', [(0, (80, 50, 34)), (.6, (34, 20, 14)), (1, (8, 4, 2))]), WHT,
+    L([(0.27, 0.724, 0.955, 0.836), (0.25, 0.85, 0.9, 0.96)], 80, WHT, mode='light', gapf=.28),
+    photo=ph(0.32, 0.3, 0.62, 1.25), pb=(200, 40, 30), order='PTCF', credit=['A DAVID LEAN', 'FILM'], ccol=(230, 220, 210),
+    ft='e', fcol=(210, 200, 190), fin=OLD, seed=1948)
+
+# Rope (1948): the night skyline, the poster's red serif ROPE with the rope through its O keyed off it, James Stewart (no logo file: Transatlantic Pictures, from IMDb's company credits)
+std('rope-1948', ('grad', [(0, (30, 50, 90)), (.6, (12, 18, 36)), (1, (2, 4, 10))]), (220, 50, 50),
+    L((0.045, 0.64, 0.935, 0.82), 120, (222, 52, 52), mode='key', key=(215, 55, 55), t=(70, 150)),
+    photo=ph(0.78, 0.22, 0.44, 1.5), pb=(222, 52, 52), studio=['TRANSATLANTIC', 'PICTURES'], scol=(220, 214, 220), order='lPTF',
+    dotst=('THRILLER', (222, 52, 52), WHT), ft='b', fcol=(200, 204, 220), fin=OLD, seed=1948)
+
+# The Naked City (1948): the poster's cream, its yellow-to-orange NAKED CITY (the skyline printed in CITY) cut off it in its own colours and edged in the extrusion's blue, the city and the faces under it (Universal-International in type)
+std('the-naked-city-1948', ('grad', [(0, (246, 230, 200)), (.6, (232, 206, 164)), (1, (160, 120, 80))]), (230, 100, 30),
+    LC([(0.2, 0.2, 0.96, 0.39), (0.29, 0.42, 0.88, 0.61)], 110, gapf=.2, valign='base', outline=((40, 60, 110), 2.6), cuts=[
+        comp_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .35) & (a[..., 2] < .45) & (a[..., 0] > a[..., 2] + .4), keep=lambda x, y: y > .12),
+        comp_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .35) & (a[..., 2] < .45) & (a[..., 0] > a[..., 2] + .4))]),
+    photo=ph(0.26, 0.76, 0.52, 1.3), pb=(40, 60, 90), studio=['UNIVERSAL-INTERNATIONAL'], scol=(40, 60, 90), order='lTPCF',
+    credit=['DIRECTED BY', 'JULES DASSIN'], ccol=(40, 60, 90), ft='d', fcol=(40, 60, 90), fin=OLD, seed=1948)
+
+# The Treasure of the Sierra Madre (1948): the poster's fire red, its white THE TREASURE OF THE SIERRA MADRE lifted with the red keyline, Bogart under the hat
+std('the-treasure-of-the-sierra-madre-1948', ('grad', [(0, (236, 70, 30)), (.6, (170, 40, 20)), (1, (60, 14, 6))]), WHT,
+    [L((0.43, 0.15, 0.575, 0.2), 34, WHT, mode='light'),
+     L((0.16, 0.198, 0.845, 0.29), 72, WHT, mode='light', outline=((140, 20, 14), 2)),
+     L((0.14, 0.298, 0.865, 0.386), 72, WHT, mode='light', outline=((140, 20, 14), 2))],
+    tgap=6, photo=ph(0.55, 0.72, 0.8, 0.9), pb=WHT, lg=WHT, lw=.55, order='LPTSF', stick=BAR('47 0098', top='WESTERN', fill=(230, 220, 196)),
+    ft='a', vbox=WHT, vink=(170, 40, 20), fcol=(240, 220, 210), fin=RENTAL, seed=1948)
+
+# Kind Hearts and Coronets (1949): the poster's cream paper, its cream Kind Hearts (off the green panel) and its dark-green & Coronets cut off it in their own colours and edged in the panel's green, the eight d'Ascoynes (all Alec Guinness) in their frames
+std('kind-hearts-and-coronets-1949', ('grad', [(0, (236, 228, 212)), (.6, (222, 212, 192)), (1, (150, 140, 120))]), (60, 110, 94),
+    LC([(0.34, 0.72, 0.93, 0.822), (0.37, 0.785, 0.98, 0.925)], 120, gapf=.14, valign='base', cuts=[
+        pick_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .82) & (a[..., 2] > .7), (0.34, 0.72, 0.93, 0.822), [(0.381, 0.773), (0.435, 0.781), (0.468, 0.779), (0.5, 0.786), (0.528, 0.785), (0.558, 0.774), (0.635, 0.771), (0.698, 0.78), (0.756, 0.786), (0.804, 0.775), (0.848, 0.776), (0.897, 0.784)], r=.012),
+        comp_cut(lambda a: (a[..., 1] > a[..., 0] + .06) & (a[..., 1] < .57) & (_lum(a) < .5))], outline=((50, 96, 80), 2.6)),
+    photo=ph(0.65, 0.38, 0.62, 1.05), pb=(70, 120, 100), lg=(60, 110, 94), lw=.55, order='LPTCF', credit=['A ROBERT HAMER', 'FILM'],
+    ccol=(60, 110, 94), ft='c', fcol=(60, 90, 80), fin=OLD, seed=1949)
+
+# Stray Dog (1949): the poster's grey paper, its dark-red STRAY DOG (set reading down the poster) cut off it in its own colours, Mifune with the gun (director from IMDb)
+std('stray-dog-1949', ('grad', [(0, (214, 210, 204)), (.6, (186, 182, 176)), (1, (90, 86, 80))]), (130, 30, 30),
+    LC([(0.125, 0.172, 0.262, 0.56)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .35) & (a[..., 1] < .25) & (a[..., 2] < .25) & (a[..., 0] > a[..., 1] + .15), keep=lambda x, y: x > .25, rot=90)]),
+    photo=ph(0.72, 0.3, 0.56, 1.25), pb=(130, 30, 30), lg=(130, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=(60, 40, 36),
+    ft='d', fcol=(60, 40, 36), fin=OLD, seed=1949)
+
+# The Third Man (1949): night blue, the poster's orange script The and THIRD MAN cut off it in their own colours and turned level (it climbs 12 degrees), Harry Lime's shadow under the arch (no logo file: London Film Productions, from IMDb's company credits)
+std('the-third-man-1949', ('grad', [(0, (20, 40, 70)), (.6, (8, 16, 30)), (1, (2, 4, 8))]), (250, 120, 40),
+    LC([(0.04, 0.03, 0.9, 0.26)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .8) & (a[..., 1] > .25) & (a[..., 1] < .65) & (a[..., 2] < .3), rot=-12)]),
+    photo=ph(0.5, 0.58, 0.7, 1.35), pb=(80, 200, 200), studio=['LONDON FILM', 'PRODUCTIONS'], scol=(250, 140, 60), order='lPTCF', credit=['ORSON WELLES', 'JOSEPH COTTEN'],
+    ccol=(200, 214, 230), ft='e', fcol=(190, 200, 214), fin=OLD, seed=1949)
+
+# Thieves' Highway (1949): black, the poster's yellow condensed THIEVES' HIGHWAY keyed off it, Richard Conte and Valentina Cortese in the lamp-light
+std('thieves-highway-1949', ('grad', [(0, (40, 34, 24)), (.6, (12, 10, 6)), (1, (2, 2, 2))]), (240, 220, 60),
+    L((0.035, 0.75, 0.965, 0.834), 70, (242, 222, 62), mode='key', key=(235, 215, 70), t=(70, 150)),
+    photo=ph(0.6, 0.32, 0.5, 1.4), pb=(242, 222, 62), lg=(242, 222, 62), lw=.55, order='LTPF', ft='a', vbox=(242, 222, 62), vink=(12, 10, 6),
+    fcol=(200, 200, 190), fin=OLD, seed=1949)
