@@ -1,0 +1,1627 @@
+{
+  "vault": "1960s",
+  "decade": 1960,
+  "films": [
+    {
+      "title": "Breathless",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2007-01-14",
+      "imdb": "tt0053472",
+      "poster": "posters/breathless-1960.jpg",
+      "year": 1960,
+      "tmdb": 269,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "La Dolce Vita",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0053779",
+      "poster": "posters/la-dolce-vita-1960.jpg",
+      "year": 1960,
+      "tmdb": 439,
+      "tmdbKind": "movie",
+      "runtime": 174,
+      "director": "Federico Fellini",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Cinecittà Studios",
+      "logo": "logos/1042.png"
+    },
+    {
+      "title": "Le Trou",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0054407",
+      "poster": "posters/le-trou-1960.jpg",
+      "year": 1960,
+      "tmdb": 29259,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Jacques Becker",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
+    },
+    {
+      "title": "Our Man in Havana",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-18",
+      "imdb": "tt0054152",
+      "poster": "posters/our-man-in-havana-1960.jpg",
+      "year": 1960,
+      "tmdb": 25495,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Carol Reed",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Peeping Tom",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2014-02-14",
+      "imdb": "tt0054167",
+      "poster": "posters/peeping-tom-1960.jpg",
+      "imdbRating": 7.6,
+      "imdbVotes": 44815,
+      "year": 1960,
+      "tmdb": 11167,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Michael Powell",
+      "genres": [
+        "Thriller",
+        "Horror"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Psycho",
+      "rating": 5,
+      "rating10": 10,
+      "watched": "2007-01-13",
+      "imdb": "tt0054215",
+      "poster": "posters/psycho-1960.jpg",
+      "year": 1960,
+      "tmdb": 539,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Horror",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Shoot the Piano Player",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0054389",
+      "poster": "posters/shoot-the-piano-player-1960.jpg",
+      "year": 1960,
+      "tmdb": 1818,
+      "tmdbKind": "movie",
+      "runtime": 85,
+      "director": "François Truffaut",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Spartacus",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-18",
+      "imdb": "tt0054331",
+      "poster": "posters/spartacus-1960.jpg",
+      "year": 1960,
+      "tmdb": 967,
+      "tmdbKind": "movie",
+      "runtime": 197,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "History",
+        "Drama",
+        "Adventure"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "The Apartment",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-18",
+      "imdb": "tt0053604",
+      "poster": "posters/the-apartment-1960.jpg",
+      "year": 1960,
+      "tmdb": 284,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Billy Wilder",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Bad Sleep Well",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0054460",
+      "poster": "posters/the-bad-sleep-well-1960.jpg",
+      "year": 1960,
+      "tmdb": 31589,
+      "tmdbKind": "movie",
+      "runtime": 150,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "Tunes of Glory",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0054412",
+      "poster": "posters/tunes-of-glory-1960.jpg",
+      "year": 1960,
+      "tmdb": 43048,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Ronald Neame",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Breakfast at Tiffany's",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2007-01-14",
+      "imdb": "tt0054698",
+      "poster": "posters/breakfast-at-tiffany-s-1961.jpg",
+      "year": 1961,
+      "tmdb": 164,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Blake Edwards",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
+    },
+    {
+      "title": "Il Posto",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-28",
+      "imdb": "tt0055320",
+      "poster": "posters/il-posto-1961.jpg",
+      "year": 1961,
+      "tmdb": 31742,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Ermanno Olmi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
+    },
+    {
+      "title": "One Hundred and One Dalmatians",
+      "rating": 5,
+      "rating10": 10,
+      "watched": "2007-01-14",
+      "imdb": "tt0055254",
+      "poster": "posters/one-hundred-and-one-dalmatians-1961.jpg",
+      "year": 1961,
+      "tmdb": 12230,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Hamilton Luske",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Walt Disney Productions",
+      "logo": "logos/3166.png"
+    },
+    {
+      "title": "The Human Condition III: A Soldier's Prayer",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-08-05",
+      "imdb": "tt0055233",
+      "poster": "posters/the-human-condition-iii-a-soldier-s-prayer-1961.jpg",
+      "year": 1961,
+      "tmdb": 34530,
+      "tmdbKind": "movie",
+      "runtime": 190,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "War",
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Hustler",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0054997",
+      "poster": "posters/the-hustler-1961.jpg",
+      "year": 1961,
+      "tmdb": 990,
+      "tmdbKind": "movie",
+      "runtime": 134,
+      "director": "Robert Rossen",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
+    },
+    {
+      "title": "The Shadow of the Cat",
+      "rating": 2.5,
+      "rating10": 5,
+      "watched": "2014-04-21",
+      "imdb": "tt0055438",
+      "poster": "posters/the-shadow-of-the-cat-1961.jpg",
+      "imdbRating": 6.3,
+      "imdbVotes": 1919,
+      "year": 1961,
+      "tmdb": 28720,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "John Gilling",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "studio": "Hammer Film Productions",
+      "logo": "logos/1314.png"
+    },
+    {
+      "title": "Viridiana",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-28",
+      "imdb": "tt0055601",
+      "poster": "posters/viridiana-1961.jpg",
+      "year": 1961,
+      "tmdb": 4497,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Luis Buñuel",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Films 59",
+      "logo": "logos/37802.png"
+    },
+    {
+      "title": "West Side Story",
+      "rating": 2.5,
+      "rating10": 5,
+      "watched": "2014-04-18",
+      "imdb": "tt0055614",
+      "poster": "posters/west-side-story-1961.jpg",
+      "imdbRating": 7.6,
+      "imdbVotes": 129277,
+      "year": 1961,
+      "tmdb": 1725,
+      "tmdbKind": "movie",
+      "runtime": 153,
+      "director": "Jerome Robbins",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Seven Arts Productions",
+      "logo": "logos/516.png"
+    },
+    {
+      "title": "Yojimbo",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0055630",
+      "poster": "posters/yojimbo-1961.jpg",
+      "year": 1961,
+      "tmdb": 11878,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "Carnival of Souls",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0055830",
+      "poster": "posters/carnival-of-souls-1962.jpg",
+      "year": 1962,
+      "tmdb": 16093,
+      "tmdbKind": "movie",
+      "runtime": 78,
+      "director": "Herk Harvey",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Harakiri",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0056058",
+      "poster": "posters/harakiri-1962.jpg",
+      "year": 1962,
+      "tmdb": 14537,
+      "tmdbKind": "movie",
+      "runtime": 135,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "Action",
+        "Drama",
+        "History"
+      ],
+      "studio": "Shochiku",
+      "logo": "logos/192.png"
+    },
+    {
+      "title": "Jules and Jim",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0055032",
+      "poster": "posters/jules-and-jim-1962.jpg",
+      "year": 1962,
+      "tmdb": 1628,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "François Truffaut",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Les Films du Carrosse",
+      "logo": "logos/53.png"
+    },
+    {
+      "title": "Knife in the Water",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0056291",
+      "poster": "posters/knife-in-the-water-1962.jpg",
+      "year": 1962,
+      "tmdb": 11502,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Roman Polanski",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Lawrence of Arabia",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0056172",
+      "poster": "posters/lawrence-of-arabia-1962.jpg",
+      "year": 1962,
+      "tmdb": 947,
+      "tmdbKind": "movie",
+      "runtime": 228,
+      "director": "David Lean",
+      "genres": [
+        "Adventure",
+        "History",
+        "War"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Lolita",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2014-04-18",
+      "imdb": "tt0056193",
+      "poster": "posters/lolita-1962.jpg",
+      "imdbRating": 7.5,
+      "imdbVotes": 117908,
+      "year": 1962,
+      "tmdb": 802,
+      "tmdbKind": "movie",
+      "runtime": 154,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Seven Arts Productions",
+      "logo": "logos/516.png"
+    },
+    {
+      "title": "Sanjuro",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0056443",
+      "poster": "posters/sanjuro-1962.jpg",
+      "year": 1962,
+      "tmdb": 11712,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Drama",
+        "Action",
+        "Comedy"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "The Trial",
+      "rating": 4.5,
+      "rating10": 8.5,
+      "watched": "2014-04-18",
+      "imdb": "tt0057427",
+      "poster": "posters/the-trial-1962.jpg",
+      "imdbRating": 7.6,
+      "imdbVotes": 27511,
+      "year": 1962,
+      "tmdb": 3009,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Orson Welles",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0056592",
+      "poster": "posters/to-kill-a-mockingbird-1962.jpg",
+      "year": 1962,
+      "tmdb": 595,
+      "tmdbKind": "movie",
+      "runtime": 129,
+      "director": "Robert Mulligan",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "Billy Liar",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0056868",
+      "poster": "posters/billy-liar-1963.jpg",
+      "year": 1963,
+      "tmdb": 26535,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "John Schlesinger",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Charade",
+      "rating": 5,
+      "rating10": 10,
+      "watched": "2007-01-14",
+      "imdb": "tt0056923",
+      "poster": "posters/charade-1963.jpg",
+      "year": 1963,
+      "tmdb": 4808,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Stanley Donen",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Romance"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "Contempt",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-28",
+      "imdb": "tt0057345",
+      "poster": "posters/contempt-1963.jpg",
+      "year": 1963,
+      "tmdb": 266,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "High and Low",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2015-01-17",
+      "imdb": "tt0057565",
+      "poster": "posters/high-and-low-1963.jpg",
+      "imdbRating": 8.4,
+      "imdbVotes": 74592,
+      "year": 1963,
+      "tmdb": 12493,
+      "tmdbKind": "movie",
+      "runtime": 142,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "It's a Mad, Mad, Mad, Mad World",
+      "rating": 4,
+      "rating10": 7.5,
+      "watched": "2015-04-16",
+      "imdb": "tt0057193",
+      "poster": "posters/it-s-a-mad-mad-mad-mad-world-1963.jpg",
+      "imdbRating": 7.4,
+      "imdbVotes": 52036,
+      "year": 1963,
+      "tmdb": 11576,
+      "tmdbKind": "movie",
+      "runtime": 192,
+      "director": "Stanley Kramer",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
+    },
+    {
+      "title": "Lord of the Flies",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0057261",
+      "poster": "posters/lord-of-the-flies-1963.jpg",
+      "year": 1963,
+      "tmdb": 9960,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Peter Brook",
+      "genres": [
+        "Drama",
+        "Adventure",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Shock Corridor",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0057495",
+      "poster": "posters/shock-corridor-1963.jpg",
+      "year": 1963,
+      "tmdb": 25504,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Samuel Fuller",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Birds",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2007-01-14",
+      "imdb": "tt0056869",
+      "poster": "posters/the-birds-1963.jpg",
+      "year": 1963,
+      "tmdb": 571,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Horror",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Fiancés",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0055981",
+      "poster": "posters/the-fiances-1963.jpg",
+      "year": 1963,
+      "tmdb": 66180,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Ermanno Olmi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
+    },
+    {
+      "title": "The Great Escape",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0057115",
+      "poster": "posters/the-great-escape-1963.jpg",
+      "year": 1963,
+      "tmdb": 5925,
+      "tmdbKind": "movie",
+      "runtime": 173,
+      "director": "John Sturges",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "War"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
+    },
+    {
+      "title": "The Pink Panther",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0057413",
+      "poster": "posters/the-pink-panther-1963.jpg",
+      "year": 1963,
+      "tmdb": 936,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Blake Edwards",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
+    },
+    {
+      "title": "The Sword in the Stone",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2014-04-18",
+      "imdb": "tt0057546",
+      "poster": "posters/the-sword-in-the-stone-1963.jpg",
+      "imdbRating": 7.1,
+      "imdbVotes": 116425,
+      "year": 1963,
+      "tmdb": 9078,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Wolfgang Reitherman",
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Walt Disney Productions",
+      "logo": "logos/3166.png"
+    },
+    {
+      "title": "Youth of the Beast",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0057697",
+      "poster": "posters/youth-of-the-beast-1963.jpg",
+      "year": 1963,
+      "tmdb": 37939,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Action",
+        "Mystery"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
+    },
+    {
+      "title": "A Fistful of Dollars",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2014-04-18",
+      "imdb": "tt0058461",
+      "poster": "posters/a-fistful-of-dollars-1964.jpg",
+      "imdbRating": 7.9,
+      "imdbVotes": 258138,
+      "year": 1964,
+      "tmdb": 391,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Sergio Leone",
+      "genres": [
+        "Western"
+      ],
+      "studio": "Constantin Film",
+      "logo": "logos/47.png"
+    },
+    {
+      "title": "Band of Outsiders",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0057869",
+      "poster": "posters/band-of-outsiders-1964.jpg",
+      "year": 1964,
+      "tmdb": 8073,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Diary of a Chambermaid",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2008-07-28",
+      "imdb": "tt0058249",
+      "poster": "posters/diary-of-a-chambermaid-1964.jpg",
+      "year": 1964,
+      "tmdb": 36245,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Luis Buñuel",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0057012",
+      "poster": "posters/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964.jpg",
+      "year": 1964,
+      "tmdb": 935,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Comedy",
+        "War"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
+    },
+    {
+      "title": "Marnie",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2007-01-14",
+      "imdb": "tt0058329",
+      "poster": "posters/marnie-1964.jpg",
+      "year": 1964,
+      "tmdb": 506,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Romance"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "Mary Poppins",
+      "rating": 2.5,
+      "rating10": 5,
+      "watched": "2014-04-18",
+      "imdb": "tt0058331",
+      "poster": "posters/mary-poppins-1964.jpg",
+      "imdbRating": 7.8,
+      "imdbVotes": 201439,
+      "year": 1964,
+      "tmdb": 433,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Robert Stevenson",
+      "genres": [
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Walt Disney Productions",
+      "logo": "logos/3166.png"
+    },
+    {
+      "title": "The Killers",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0058262",
+      "poster": "posters/the-killers-1964.jpg",
+      "year": 1964,
+      "tmdb": 24229,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Don Siegel",
+      "genres": [
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "The Naked Kiss",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-28",
+      "imdb": "tt0058390",
+      "poster": "posters/the-naked-kiss-1964.jpg",
+      "year": 1964,
+      "tmdb": 26031,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Samuel Fuller",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Tomb of Ligeia",
+      "rating": 3,
+      "rating10": 5.5,
+      "watched": "2014-04-21",
+      "imdb": "tt0059821",
+      "poster": "posters/the-tomb-of-ligeia-1964.jpg",
+      "imdbRating": 6.4,
+      "imdbVotes": 7879,
+      "year": 1964,
+      "tmdb": 29030,
+      "tmdbKind": "movie",
+      "runtime": 81,
+      "director": "Roger Corman",
+      "genres": [
+        "Horror",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Alphaville",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-28",
+      "imdb": "tt0058898",
+      "poster": "posters/alphaville-1965.jpg",
+      "year": 1965,
+      "tmdb": 8072,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Doctor Zhivago",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0059113",
+      "poster": "posters/doctor-zhivago-1965.jpg",
+      "year": 1965,
+      "tmdb": 907,
+      "tmdbKind": "movie",
+      "runtime": 200,
+      "director": "David Lean",
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
+    },
+    {
+      "title": "For a Few Dollars More",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0059578",
+      "poster": "posters/for-a-few-dollars-more-1965.jpg",
+      "year": 1965,
+      "tmdb": 938,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Sergio Leone",
+      "genres": [
+        "Western"
+      ],
+      "studio": "PEA",
+      "logo": "logos/7508.png"
+    },
+    {
+      "title": "Juliet of the Spirits",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-28",
+      "imdb": "tt0059229",
+      "poster": "posters/juliet-of-the-spirits-1965.jpg",
+      "year": 1965,
+      "tmdb": 19120,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Federico Fellini",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Story of a Prostitute",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0059715",
+      "poster": "posters/story-of-a-prostitute-1965.jpg",
+      "year": 1965,
+      "tmdb": 39506,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
+    },
+    {
+      "title": "Death of a Salesman",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-28",
+      "imdb": "tt0187806",
+      "poster": "posters/death-of-a-salesman-1966.jpg",
+      "year": 1966,
+      "tmdb": 241568,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Alex Segal",
+      "genres": [
+        "Drama",
+        "TV Movie"
+      ],
+      "studio": "CBS",
+      "logo": "logos/4898.png"
+    },
+    {
+      "title": "Hotel Paradiso",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-18",
+      "imdb": "tt0060520",
+      "poster": "posters/hotel-paradiso-1966.jpg",
+      "year": 1966,
+      "tmdb": 117360,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Peter Glenville",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Metro-Goldwyn-Mayer British Studios",
+      "logo": "logos/5579.png"
+    },
+    {
+      "title": "Masculin Féminin",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0060675",
+      "poster": "posters/masculin-feminin-1966.jpg",
+      "year": 1966,
+      "tmdb": 4710,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
+    },
+    {
+      "title": "Persona",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2012-01-25",
+      "imdb": "tt0060827",
+      "poster": "posters/persona-1966.jpg",
+      "imdbRating": 8,
+      "imdbVotes": 143018,
+      "year": 1966,
+      "tmdb": 797,
+      "tmdbKind": "movie",
+      "runtime": 85,
+      "director": "Ingmar Bergman",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
+    },
+    {
+      "title": "The Battle of Algiers",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2012-01-25",
+      "imdb": "tt0058946",
+      "poster": "posters/the-battle-of-algiers-1966.jpg",
+      "imdbRating": 8.1,
+      "imdbVotes": 77673,
+      "year": 1966,
+      "tmdb": 17295,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Gillo Pontecorvo",
+      "genres": [
+        "Drama",
+        "War",
+        "History"
+      ],
+      "studio": "Casbah Film",
+      "logo": "logos/10207.png"
+    },
+    {
+      "title": "The Black Cat",
+      "rating": 3,
+      "rating10": 5.5,
+      "watched": "2014-04-21",
+      "imdb": "tt0060171",
+      "poster": "posters/the-black-cat-1966.jpg",
+      "imdbRating": 5.5,
+      "imdbVotes": 599,
+      "year": 1966,
+      "tmdb": 93888,
+      "tmdbKind": "movie",
+      "runtime": 73,
+      "director": "Harold Hoffman",
+      "genres": [
+        "Horror"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "The Good, the Bad and the Ugly",
+      "rating": 5,
+      "rating10": 10,
+      "watched": "2007-01-13",
+      "imdb": "tt0060196",
+      "poster": "posters/the-good-the-bad-and-the-ugly-1966.jpg",
+      "year": 1966,
+      "tmdb": 429,
+      "tmdbKind": "movie",
+      "runtime": 161,
+      "director": "Sergio Leone",
+      "genres": [
+        "Western"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
+    },
+    {
+      "title": "The Pornographers",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-28",
+      "imdb": "tt0060560",
+      "poster": "posters/the-pornographers-1966.jpg",
+      "year": 1966,
+      "tmdb": 42718,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Shōhei Imamura",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
+    },
+    {
+      "title": "The Sword of Doom",
+      "rating": 5,
+      "rating10": 9.5,
+      "watched": "2007-01-14",
+      "imdb": "tt0060277",
+      "poster": "posters/the-sword-of-doom-1966.jpg",
+      "year": 1966,
+      "tmdb": 19884,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Kihachi Okamoto",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Action"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "Tokyo Drifter",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-28",
+      "imdb": "tt0061101",
+      "poster": "posters/tokyo-drifter-1966.jpg",
+      "year": 1966,
+      "tmdb": 45706,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Action"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
+    },
+    {
+      "title": "Torn Curtain",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-18",
+      "imdb": "tt0061107",
+      "poster": "posters/torn-curtain-1966.jpg",
+      "year": 1966,
+      "tmdb": 5780,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
+    },
+    {
+      "title": "Bonnie and Clyde",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0061418",
+      "poster": "posters/bonnie-and-clyde-1967.jpg",
+      "year": 1967,
+      "tmdb": 475,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Arthur Penn",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Warner Bros.-Seven Arts",
+      "logo": "logos/4051.png"
+    },
+    {
+      "title": "Cool Hand Luke",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0061512",
+      "poster": "posters/cool-hand-luke-1967.jpg",
+      "year": 1967,
+      "tmdb": 903,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Stuart Rosenberg",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Warner Bros.-Seven Arts",
+      "logo": "logos/4051.png"
+    },
+    {
+      "title": "Le Samouraï",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-28",
+      "imdb": "tt0062229",
+      "poster": "posters/le-samourai-1967.jpg",
+      "year": 1967,
+      "tmdb": 5511,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Jean-Pierre Melville",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Samurai Rebellion",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "imdb": "tt0061847",
+      "poster": "posters/samurai-rebellion-1967.jpg",
+      "year": 1967,
+      "tmdb": 27031,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
+    },
+    {
+      "title": "The Firemen's Ball",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0061781",
+      "poster": "posters/the-firemen-s-ball-1967.jpg",
+      "year": 1967,
+      "tmdb": 38442,
+      "tmdbKind": "movie",
+      "runtime": 73,
+      "director": "Miloš Forman",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Filmové studio Barrandov",
+      "logo": "logos/1931.png"
+    },
+    {
+      "title": "The Graduate",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0061722",
+      "poster": "posters/the-graduate-1967.jpg",
+      "year": 1967,
+      "tmdb": 37247,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Mike Nichols",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "AVCO Embassy Pictures",
+      "logo": "logos/494.png"
+    },
+    {
+      "title": "The Jungle Book",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2014-04-18",
+      "imdb": "tt0061852",
+      "poster": "posters/the-jungle-book-1967.jpg",
+      "imdbRating": 7.6,
+      "imdbVotes": 216766,
+      "year": 1967,
+      "tmdb": 9325,
+      "tmdbKind": "movie",
+      "runtime": 78,
+      "director": "Wolfgang Reitherman",
+      "genres": [
+        "Family",
+        "Animation",
+        "Adventure"
+      ],
+      "studio": "Walt Disney Productions",
+      "logo": "logos/3166.png"
+    },
+    {
+      "title": "2001: A Space Odyssey",
+      "rating": 5,
+      "rating10": 10,
+      "watched": "2007-01-13",
+      "imdb": "tt0062622",
+      "poster": "posters/2001-a-space-odyssey-1968.jpg",
+      "year": 1968,
+      "tmdb": 62,
+      "tmdbKind": "movie",
+      "runtime": 149,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Science Fiction",
+        "Mystery",
+        "Adventure"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
+    },
+    {
+      "title": "Rosemary's Baby",
+      "rating": 4,
+      "rating10": 8,
+      "watched": "2007-01-14",
+      "imdb": "tt0063522",
+      "poster": "posters/rosemary-s-baby-1968.jpg",
+      "year": 1968,
+      "tmdb": 805,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Roman Polanski",
+      "genres": [
+        "Drama",
+        "Horror",
+        "Thriller"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
+    },
+    {
+      "title": "Stolen Kisses",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0062695",
+      "poster": "posters/stolen-kisses-1968.jpg",
+      "year": 1968,
+      "tmdb": 255,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "François Truffaut",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Les Films du Carrosse",
+      "logo": "logos/53.png"
+    },
+    {
+      "title": "The Party",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2014-11-30",
+      "imdb": "tt0063415",
+      "poster": "posters/the-party-1968.jpg",
+      "imdbRating": 7.4,
+      "imdbVotes": 47790,
+      "year": 1968,
+      "tmdb": 10794,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Blake Edwards",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
+    },
+    {
+      "title": "Army of Shadows",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-28",
+      "imdb": "tt0064040",
+      "poster": "posters/army-of-shadows-1969.jpg",
+      "year": 1969,
+      "tmdb": 15383,
+      "tmdbKind": "movie",
+      "runtime": 145,
+      "director": "Jean-Pierre Melville",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
+    },
+    {
+      "title": "Butch Cassidy and the Sundance Kid",
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2007-01-14",
+      "imdb": "tt0064115",
+      "poster": "posters/butch-cassidy-and-the-sundance-kid-1969.jpg",
+      "year": 1969,
+      "tmdb": 642,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "George Roy Hill",
+      "genres": [
+        "Western",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
+    },
+    {
+      "title": "Double Suicide",
+      "rating": 3,
+      "rating10": 6,
+      "watched": "2008-07-28",
+      "imdb": "tt0064975",
+      "poster": "posters/double-suicide-1969.jpg",
+      "year": 1969,
+      "tmdb": 45713,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Masahiro Shinoda",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "hyogensha",
+      "logo": "logos/21728.png"
+    },
+    {
+      "title": "Salesman",
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2008-07-28",
+      "imdb": "tt0064921",
+      "poster": "posters/salesman-1969.jpg",
+      "year": 1969,
+      "tmdb": 27375,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "David Maysles",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
+    }
+  ]
+}

@@ -19,9 +19,9 @@ WHT, BLK, CRM = (246, 243, 234), (20, 19, 19), (240, 233, 212)
 VRED = (200, 32, 38)
 
 import glob, os
-# every shelf: films.json (newest year) and films-<year>.json (older ones)
+# every shelf: films.json (newest year), films-<year>.json (older ones) and vault-<decade>.json (the Vault)
 FILMS = {f['poster'].split('/')[-1][:-4]: f
-         for p in [REPO + 'films.json'] + sorted(glob.glob(REPO + 'films-*.json'))
+         for p in [REPO + 'films.json'] + sorted(glob.glob(REPO + 'films-*.json')) + sorted(glob.glob(REPO + 'vault-*.json'))
          for f in json.load(open(p, encoding='utf8'))['films'] if f.get('poster')}
 SPECS = {}
 
@@ -5157,6 +5157,10 @@ std('salaam-bombay-1988', ('grad', [(0, (50, 40, 30)), (.6, (16, 12, 10)), (1, (
     L([(0.08, 0.1, 0.59, 0.17), (0.365, 0.168, 0.91, 0.235)], 76, [WHT, (190, 190, 190)], mode='light', gapf=.35),
     photo=ph(0.5, 0.52, 1.0, 0.85), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A FILM BY', 'MIRA NAIR'], ccol=WHT,
     stick=PRC(['$1.99', 'FOREIGN']), ft='b', fcol=(210, 200, 190), fin=OLD, seed=1988)
+
+
+# the Vault (vault-<decade>.json): its specs live in vault.py, in this same namespace
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vault.py'), encoding='utf8').read(), 'vault.py', 'exec'))
 
 
 if __name__ == '__main__':

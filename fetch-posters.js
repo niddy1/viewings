@@ -76,11 +76,14 @@ async function tmdb(endpoint, params = {}) {
   const col = (n) => head.indexOf(n);
   const ptp = ['Title', 'Rating10', 'WatchedDate', 'ImdbID'].every((n) => head.includes(n));
   const byFilm = new Map();
+  // data/excluded.json: IMDb ids kept off every shelf (the Looney Tunes shorts)
+  let excluded = {};
+  try { excluded = JSON.parse(fs.readFileSync(path.join(__dirname, 'data', 'excluded.json'), 'utf8')); } catch {}
   if (ptp) { // PassThePopcorn: rated out of 10, matched on IMDb id. Stars round to the nearest half (8.5 -> 4.5).
     const iT = col('Title'), iR = col('Rating10'), iW = col('WatchedDate'), iI = col('ImdbID');
     for (const r of rows) {
       const watched = (r[iW] || '').trim().slice(0, 10), imdb = (r[iI] || '').trim();
-      if (!watched.startsWith(YEAR) || !/^tt\d+$/.test(imdb)) continue;
+      if (!watched.startsWith(YEAR) || !/^tt\d+$/.test(imdb) || excluded[imdb]) continue;
       const r10 = Number(r[iR]) || 0, prev = byFilm.get(imdb);
       if (!prev || watched > prev.watched) byFilm.set(imdb, { title: englishTitle(r[iT]), imdb, rating: Math.round(r10) / 2, rating10: r10, watched });
     }
