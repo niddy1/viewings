@@ -1763,8 +1763,7 @@ std('walkabout-1971', ('grad', [(0, (60, 70, 100)), (.6, (40, 34, 40)), (1, (10,
 # Willy Wonka & the Chocolate Factory (1971): the candy colours, the poster's gold WILLY WONKA & THE CHOCOLATE FACTORY cut off the sky in its own colours, Gene Wilder in the top hat (no logo file: Wolper Pictures, from IMDb's company credits)
 std('willy-wonka-the-chocolate-factory-1971', ('grad', [(0, (120, 60, 140)), (.6, (70, 30, 90)), (1, (20, 8, 30))]), (250, 220, 60),
     LC([(0.04, 0.035, 0.8, 0.255)], 130, outline=((60, 30, 10), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .6) & (a[..., 0] > a[..., 2] + .25), minf=.02, close=3)]),
-    photo=ph(0.7, 0.6, 0.6, 1.3), pb=(250, 220, 60), studio=['WOLPER PICTURES'], scol=(250, 220, 60), order='lPTCF', credit=['GENE WILDER'], ccol=(250, 220, 60),
-    dotst=('FAMILY', (250, 220, 60), (70, 30, 90)), ft='a', vbox=(250, 220, 60), vink=(70, 30, 90), fcol=(220, 200, 230), fin=OLD, seed=1971)
+    photo=ph(0.7, 0.6, 0.6, 1.3), pb=(250, 220, 60), studio=['WOLPER PICTURES'], scol=(250, 220, 60), order='lPTF', dotst=('FAMILY', (250, 220, 60), (70, 30, 90)), ft='a', vbox=(250, 220, 60), vink=(70, 30, 90), fcol=(220, 200, 230), fin=OLD, seed=1971)
 
 # The Crimes of the Black Cat (1972): the poster's orange, its yellow The Crimes of the Black Cat cut off it in its own colours, the black cat over the torn photographs (no logo file: Compagnia Cinematografica Champion, from IMDb's company credits)
 std('the-crimes-of-the-black-cat-1972', ('grad', [(0, (250, 180, 30)), (.6, (230, 130, 10)), (1, (120, 50, 0))]), (250, 230, 60),
@@ -1787,14 +1786,12 @@ std('the-godfather-1972', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)), (1, (2,
 # The Harder They Come (1972): the poster's sunset colours, THE HARDER THEY COME typeset in heavy rounded capitals in its rainbow, line by line (typeset: the poster's title is a 3-D rainbow block whose letters run into each other and break into stripes in every cut; two tried), Jimmy Cliff with the guns (no logo file: International Films, from IMDb's company credits)
 std('the-harder-they-come-1972', ('grad', [(0, (250, 230, 60)), (.5, (240, 120, 40)), (1, (120, 30, 60))]), (40, 30, 90),
     TT([('THE', (220, 40, 40)), ('HARDER', (240, 140, 20)), ('THEY', (60, 150, 60)), ('COME', (60, 60, 170))], 'popb', 80, sp=.3, outline=((30, 20, 40), 2)),
-    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(40, 30, 90), studio=['INTERNATIONAL FILMS'], scol=(40, 30, 90), order='lPTCF', credit=['JIMMY CLIFF'], ccol=(40, 30, 90),
-    dotst=('REGGAE', (40, 140, 60), WHT), ft='e', fcol=(40, 30, 90), fin=OLD, seed=1972)
+    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(40, 30, 90), studio=['INTERNATIONAL FILMS'], scol=(40, 30, 90), order='lPTF', ft='e', fcol=(40, 30, 90), fin=OLD, seed=1972)
 
 # The Ruling Class (1972): the poster's dark leaves, its white script The Ruling Class lifted, Peter O'Toole under the top hat (no logo file: Keep Films, from IMDb's company credits)
 std('the-ruling-class-1972', ('grad', [(0, (30, 50, 40)), (.6, (10, 18, 14)), (1, (2, 4, 2))]), WHT,
     LC([(0.05, 0.715, 0.27, 0.835), (0.06, 0.845, 0.94, 0.948)], 110, gapf=.2, valign='base', cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.02)] * 2),
-    photo=ph(0.5, 0.4, 0.8, 1.0), pb=WHT, studio=['KEEP FILMS'], scol=WHT, order='lPTCF', credit=["PETER O'TOOLE", 'ALASTAIR SIM'], ccol=WHT,
-    ft='d', fcol=(200, 210, 204), fin=OLD, seed=1972)
+    photo=ph(0.5, 0.4, 0.8, 1.0), pb=WHT, studio=['KEEP FILMS'], scol=WHT, order='lPTF', ft='d', fcol=(200, 210, 204), fin=OLD, seed=1972)
 
 # Amarcord (1973): the poster's painted blues and reds, its white AMARCORD on the black sign cut off it whole, the townsfolk at the tobacconist's (no logo file: F.C. Produzioni, from IMDb's company credits)
 std('amarcord-1973', ('grad', [(0, (60, 140, 200)), (.6, (150, 40, 40)), (1, (50, 12, 12))]), WHT,
@@ -1822,14 +1819,12 @@ std('mean-streets-1973', ('grad', [(0, (240, 50, 30)), (.6, (190, 30, 20)), (1, 
 # Paper Moon (1973): the poster's navy, its white PAPER MOON lifted, Tatum and Ryan O'Neal on the paper moon
 std('paper-moon-1973', ('grad', [(0, (20, 30, 100)), (.6, (10, 14, 60)), (1, (2, 4, 20))]), WHT,
     LC([(0.1, 0.083, 0.9, 0.158)], 80, cuts=[key_cut(lambda a: _lum(a) > .8)]),
-    photo=ph(0.45, 0.58, 0.5, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPCF', credit=["RYAN O'NEAL", "TATUM O'NEAL"], ccol=WHT,
-    ft='e', fcol=(200, 206, 230), fin=OLD, seed=1973)
+    photo=ph(0.45, 0.58, 0.5, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPF', ft='e', fcol=(200, 206, 230), fin=OLD, seed=1973)
 
 # Papillon (1973): the poster's white, its blue PAPILLON keyed off it, McQueen and Hoffman in chains (no logo file: Les Films Corona, from IMDb's company credits)
 std('papillon-1973', ('grad', [(0, (246, 248, 250)), (.6, (220, 230, 240)), (1, (120, 140, 160))]), (20, 110, 200),
     L((0.15, 0.144, 0.85, 0.255), 90, (22, 112, 204), mode='key', key=(20, 110, 200), t=(70, 150)),
-    photo=ph(0.6, 0.55, 0.8, 0.9), pb=(22, 112, 204), studio=['LES FILMS CORONA'], scol=(30, 40, 60), order='lPTCF', credit=['STEVE McQUEEN', 'DUSTIN HOFFMAN'],
-    ccol=(30, 40, 60), ft='a', vbox=(22, 112, 204), fcol=(30, 40, 60), fin=OLD, seed=1973)
+    photo=ph(0.6, 0.55, 0.8, 0.9), pb=(22, 112, 204), studio=['LES FILMS CORONA'], scol=(30, 40, 60), order='lTPF', ft='a', vbox=(22, 112, 204), fcol=(30, 40, 60), fin=OLD, seed=1973)
 
 # Robin Hood (1973): Disney, the white clamshell; the forest green, the poster's green ROBIN HOOD with its gold keyline cut off the banner in its own colours, Robin's face in the red diamond
 disney('robin-hood-1973', ('grad', [(0, (40, 110, 60)), (.5, (70, 150, 80)), (1, (20, 60, 30))]), fin=dict(CLAM, vivid=.2),
@@ -1839,8 +1834,7 @@ disney('robin-hood-1973', ('grad', [(0, (40, 110, 60)), (.5, (70, 150, 80)), (1,
 # The Cat Creature (1973): the poster's dark, its gold condensed THE CAT CREATURE cut off it in its own colours, the woman with the gold cat medallion (no logo file: Douglas S. Cramer Company, from IMDb's company credits)
 std('the-cat-creature-1973', ('grad', [(0, (60, 40, 20)), (.6, (20, 14, 8)), (1, (2, 2, 2))]), (220, 170, 90),
     LC([(0.0, 0.73, 1.0, 0.93)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .35) & (a[..., 0] > a[..., 2] + .1), minf=.05, close=3)]),
-    photo=ph(0.5, 0.35, 0.7, 1.15), pb=(220, 170, 90), studio=['DOUGLAS S. CRAMER', 'COMPANY'], scol=(220, 170, 90), order='lPTSF', stick=RWD(),
-    ft='d', fcol=(200, 190, 170), fin=RENTAL, seed=1973)
+    photo=ph(0.5, 0.35, 0.7, 1.15), pb=(220, 170, 90), studio=['DOUGLAS S. CRAMER', 'COMPANY'], scol=(220, 170, 90), order='lPTF', ft='d', fcol=(200, 190, 170), fin=RENTAL, seed=1973)
 
 # The Sting (1973): the poster's white, its maroon THE STING keyed off it, Newman and Redford in the frame (director from IMDb)
 std('the-sting-1973', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1, (140, 120, 100))]), (140, 40, 40),
@@ -1851,14 +1845,12 @@ std('the-sting-1973', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1,
 # Blood for Dracula (1974): black, the poster's white thin BLOOD for DRACVLA lifted, the red hands and the face (no logo file: Champion, from IMDb's company credits)
 std('blood-for-dracula-1974', ('grad', [(0, (60, 14, 14)), (.6, (18, 4, 4)), (1, (2, 2, 2))]), WHT,
     L((0.035, 0.858, 0.978, 0.944), 76, WHT, mode='light', speck=0),
-    photo=ph(0.5, 0.3, 0.9, 1.0), pb=(220, 30, 30), studio=['CHAMPION'], scol=WHT, order='lPTCF', credit=['UDO KIER', 'JOE DALLESANDRO'], ccol=WHT,
-    ft='e', fcol=(200, 190, 190), fin=OLD, seed=1974)
+    photo=ph(0.5, 0.3, 0.9, 1.0), pb=(220, 30, 30), studio=['CHAMPION'], scol=WHT, order='lPTF', ft='e', fcol=(200, 190, 190), fin=OLD, seed=1974)
 
 # Bring Me the Head of Alfredo Garcia (1974): black, the poster's white serif "BRING ME THE HEAD OF ALFREDO GARCIA" lifted line by line into one, the gold watch and crossed swords (director from IMDb)
 std('bring-me-the-head-of-alfredo-garcia-1974', ('grad', [(0, (60, 40, 20)), (.6, (18, 12, 6)), (1, (2, 2, 2))]), WHT,
     LC([(0.65, 0.622, 0.925, 0.664), (0.578, 0.662, 0.94, 0.702), (0.545, 0.7, 0.96, 0.741), (0.554, 0.74, 0.975, 0.78), (0.56, 0.778, 0.963, 0.82)], 60, gapf=.2, valign='base', margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .82) & (_sat(a) < .2), minf=.12)] * 5),
-    photo=ph(0.37, 0.785, 0.36, 0.95), pb=(220, 180, 80), lg=WHT, lw=.5, order='LPTCF', credit=['A SAM PECKINPAH', 'FILM'], ccol=WHT,
-    ft='b', fcol=(210, 200, 186), fin=OLD, seed=1974)
+    photo=ph(0.37, 0.785, 0.36, 0.95), pb=(220, 180, 80), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(210, 200, 186), fin=OLD, seed=1974)
 
 # Chinatown (1974): the poster's yellow, its crimson script Chinatown keyed off it, Faye Dunaway's face in the smoke
 std('chinatown-1974', ('grad', [(0, (252, 220, 70)), (.6, (240, 190, 40)), (1, (160, 110, 10))]), (180, 20, 40),
@@ -1875,8 +1867,7 @@ std('murder-on-the-orient-express-1974', ('grad', [(0, (226, 236, 240)), (.6, (1
 # The Conversation (1974): the poster's grey band, its dark-red "THE CONVERSATION" lifted, Gene Hackman with the headphones (no logo file: The Directors Company, from IMDb's company credits)
 std('the-conversation-1974', ('grad', [(0, (110, 40, 30)), (.6, (50, 16, 12)), (1, (10, 4, 2))]), (226, 220, 210),
     LC([(0.095, 0.885, 0.905, 0.932)], 64, cuts=[key_cut(lambda a: _lum(a) < .5)], outline=((226, 220, 210), 3)),
-    photo=ph(0.5, 0.3, 0.86, 0.9), pb=(226, 220, 210), studio=['THE DIRECTORS', 'COMPANY'], scol=(226, 220, 210), order='lPTCF', credit=['A FRANCIS FORD', 'COPPOLA FILM'],
-    ccol=(226, 220, 210), ft='d', fcol=(220, 200, 190), fin=OLD, seed=1974)
+    photo=ph(0.5, 0.3, 0.86, 0.9), pb=(226, 220, 210), studio=['THE DIRECTORS', 'COMPANY'], scol=(226, 220, 210), order='lPTF', ft='d', fcol=(220, 200, 190), fin=OLD, seed=1974)
 
 # The Godfather Part II (1974): a 2-tape box; black, the poster's white The Godfather Part II with the puppeteer's hand lifted, Pacino in the chair
 std('the-godfather-part-ii-1974', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)), (1, (2, 2, 2))]), WHT,
@@ -1887,8 +1878,7 @@ std('the-godfather-part-ii-1974', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)),
 # Dog Day Afternoon (1975): the poster's white, its red DOG DAY AFTERNOON keyed off it, Pacino's drawn face (no logo file: Warner Bros., from IMDb's company credits)
 std('dog-day-afternoon-1975', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (210, 30, 30),
     L([(0.32, 0.456, 0.965, 0.52), (0.035, 0.516, 0.958, 0.578)], 76, (214, 32, 32), mode='key', key=(210, 40, 40), t=(70, 150), gapf=.25),
-    photo=ph(0.5, 0.25, 0.86, 0.75), pb=(20, 20, 20), studio=['WARNER BROS.'], scol=(20, 20, 20), order='lPTCF', credit=['AL PACINO'], ccol=(20, 20, 20),
-    ft='a', vbox=(214, 32, 32), fcol=(20, 20, 20), fin=OLD, seed=1975)
+    photo=ph(0.5, 0.25, 0.86, 0.75), pb=(20, 20, 20), studio=['WARNER BROS.'], scol=(20, 20, 20), order='lPTF', ft='a', vbox=(214, 32, 32), fcol=(20, 20, 20), fin=OLD, seed=1975)
 
 # Jaws (1975): the poster's white into the sea, its red JAWS keyed off it, the shark rising to the swimmer under the title
 std('jaws-1975', ('grad', [(0, (246, 246, 246)), (.35, (90, 170, 210)), (1, (10, 50, 90))]), (210, 40, 50),
@@ -1905,20 +1895,17 @@ std('monty-python-and-the-holy-grail-1975', ('grad', [(0, (246, 240, 224)), (.6,
 # One Flew Over the Cuckoo's Nest (1975): the poster's white, its black ONE FLEW OVER / THE CUCKOO'S NEST (the red O of CUCKOO'S kept) cut off it, Nicholson grinning in the beanie (no logo file: Fantasy Films, from IMDb's company credits)
 std('one-flew-over-the-cuckoo-s-nest-1975', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (20, 20, 20),
     [LC([(0.13, 0.074, 0.9, 0.14)], 64, margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)]), LC([(0.02, 0.138, 0.98, 0.204)], 64, margin=0, cuts=[key_cut(lambda a: (_lum(a) < .35) | ((a[..., 0] > .6) & (a[..., 1] < .3)))])],
-    tgap=8, photo=ph(0.48, 0.78, 0.8, 0.85), pb=(200, 30, 30), studio=['FANTASY FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['JACK NICHOLSON'], ccol=(20, 20, 20),
-    ft='c', fcol=(20, 20, 20), fin=OLD, seed=1975)
+    tgap=8, photo=ph(0.48, 0.78, 0.8, 0.85), pb=(200, 30, 30), studio=['FANTASY FILMS'], scol=(20, 20, 20), order='lTPF', ft='c', fcol=(20, 20, 20), fin=OLD, seed=1975)
 
 # Marathon Man (1976): black, MARATHON MAN typeset in heavy condensed capitals in white (typeset: the poster prints its title three times over, overlapping, with Hoffman's face cut through it, so no clean line can be lifted; two tried), Dustin Hoffman's face behind the gun
 std('marathon-man-1976', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
     T('MARATHON MAN', 'intbk', 80, WHT),
-    photo=ph(0.6, 0.415, 0.42, 0.6), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['DUSTIN HOFFMAN', 'LAURENCE OLIVIER'], ccol=WHT,
-    ft='d', fcol=(200, 200, 200), fin=OLD, seed=1976)
+    photo=ph(0.6, 0.415, 0.42, 0.6), pb=WHT, lg=WHT, lw=.55, order='LPTF', ft='d', fcol=(200, 200, 200), fin=OLD, seed=1976)
 
 # Murder by Death (1976): black, the poster's yellow Murder by Death keyed off it, the detectives at the gate of the house
 std('murder-by-death-1976', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (250, 220, 40),
     L((0.03, 0.83, 0.98, 0.932), 100, (252, 222, 42), mode='key', key=(245, 215, 50), t=(70, 150)),
-    photo=ph(0.5, 0.45, 1.0, 0.6), pb=(250, 220, 40), lg=WHT, lw=.55, order='LPTCF', credit=['PETER FALK', 'ALEC GUINNESS'], ccol=WHT,
-    dotst=('COMEDY', (250, 220, 40), (12, 10, 8)), ft='a', vbox=(250, 220, 40), vink=(12, 10, 8), fcol=(200, 196, 190), fin=OLD, seed=1976)
+    photo=ph(0.5, 0.45, 1.0, 0.6), pb=(250, 220, 40), lg=WHT, lw=.55, order='LPTF', dotst=('COMEDY', (250, 220, 40), (12, 10, 8)), ft='a', vbox=(250, 220, 40), vink=(12, 10, 8), fcol=(200, 196, 190), fin=OLD, seed=1976)
 
 # Network (1976): the poster's white, its black italic NETWORK cut off it, the television set with the lightning bolt
 std('network-1976', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (20, 20, 20),
@@ -1935,14 +1922,12 @@ std('rocky-1976', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (12
 # Taxi Driver (1976): the poster's yellow cab, its red TAXI DRIVER keyed off the yellow band, De Niro walking past the cab
 std('taxi-driver-1976', ('grad', [(0, (252, 214, 30)), (.55, (236, 190, 20)), (1, (120, 90, 6))]), (190, 30, 30),
     L((0.125, 0.872, 0.88, 0.935), 84, (190, 30, 30), mode='key', key=(190, 40, 40), t=(70, 150)),
-    photo=ph(0.5, 0.32, 0.5, 1.4), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['ROBERT DE NIRO'], ccol=(20, 20, 20),
-    ft='a', vbox=(190, 30, 30), fcol=(20, 20, 20), fin=OLD, seed=1976)
+    photo=ph(0.5, 0.32, 0.5, 1.4), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF', ft='a', vbox=(190, 30, 30), fcol=(20, 20, 20), fin=OLD, seed=1976)
 
 # The Man Who Fell to Earth (1976): black, the poster's white THE MAN WHO FELL TO EARTH lifted into one line, Bowie in the circle (no logo file: British Lion, from IMDb's company credits)
 std('the-man-who-fell-to-earth-1976', ('grad', [(0, (40, 70, 110)), (.6, (12, 20, 34)), (1, (2, 2, 4))]), WHT,
     L([(0.425, 0.741, 0.572, 0.771), (0.047, 0.775, 0.958, 0.819), (0.2, 0.823, 0.795, 0.868)], 74, WHT, mode='light', valign='base', speck=0),
-    photo=ph(0.5, 0.3, 0.52, 1.0), pb=(110, 180, 230), studio=['BRITISH LION'], scol=WHT, order='lPTCF', credit=['DAVID BOWIE'], ccol=WHT,
-    ft='c', fcol=(200, 210, 220), fin=OLD, seed=1976)
+    photo=ph(0.5, 0.3, 0.52, 1.0), pb=(110, 180, 230), studio=['BRITISH LION'], scol=WHT, order='lPTF', ft='c', fcol=(200, 210, 220), fin=OLD, seed=1976)
 
 # The Tenant (1976): the poster's pale grey, its crimson stacked THE / TENANT (the falling man cut through the E) keyed off it, the gilt mirror (no logo file: Marianne Productions, from IMDb's company credits)
 std('the-tenant-1976', ('grad', [(0, (232, 232, 230)), (.6, (210, 210, 206)), (1, (110, 110, 106))]), (128, 0, 50),
@@ -1991,3 +1976,70 @@ disney('the-many-adventures-of-winnie-the-pooh-1977', ('grad', [(0, (70, 130, 60
        title=[LC([(0.16, 0.2, 0.84, 0.283), (0.185, 0.282, 0.84, 0.355)], 110, valign='base', margin=0, outline=((62, 42, 20), 3), cuts=[key_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .35))] * 2),
               LC([(0.155, 0.15, 0.855, 0.195)], 40, margin=0, outline=((62, 42, 20), 3), cuts=[key_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .35))])],
        face=ph(.44, .585, .17, 1.4), lcol=WHT)
+
+# The Rescuers (1977): Disney clamshell; the night-blue of the poster, its yellow The RESCUERS cut off it in its own colours, Miss Bianca's face in the diamond
+disney('the-rescuers-1977', ('grad', [(0, (20, 60, 140)), (.5, (40, 110, 200)), (1, (10, 40, 100))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.15, 0.045, 0.82, 0.205)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .45), minf=.03, close=3)], outline=((120, 30, 90), 2.4)),
+       face=ph(.43, .35, .17, 1.4), lcol=WHT)
+
+# National Lampoon's Animal House (1978): the poster's white, its red outlined ANIMAL HOUSE keyed off it, the Delta house in uproar
+std('animal-house-1978', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (214, 30, 30),
+    L((0.205, 0.798, 0.795, 0.84), 84, (214, 30, 30), mode='key', key=(214, 40, 40), t=(70, 160)),
+    photo=ph(0.5, 0.42, 0.86, 1.2), pb=(214, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF', ft='a', vbox=(214, 30, 30), fcol=(30, 30, 30), fin=RENTAL, seed=1978)
+
+# Autumn Sonata (1978): the poster's painted ochre, its dark serif Autumn / Sonata cut off it into one line, the piano in the sunlit room (no logo file: Personafilm, from IMDb's company credits)
+std('autumn-sonata-1978', ('grad', [(0, (220, 180, 120)), (.6, (190, 140, 80)), (1, (90, 60, 30))]), (40, 30, 20),
+    LC([(0.232, 0.686, 0.775, 0.75), (0.283, 0.772, 0.732, 0.836)], 84, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .32)] * 2),
+    photo=ph(0.55, 0.25, 0.86, 0.75), pb=(60, 40, 20), studio=['PERSONAFILM'], scol=(40, 30, 20), order='lPTCF', credit=['EN FILM AV', 'INGMAR', 'BERGMAN'], ccol=(40, 30, 20),
+    ft='b', fcol=(40, 30, 20), fin=OLD, seed=1978)
+
+# The Brink's Job (1978): the bank-note green, THE BRINK'S JOB typeset in heavy capitals in steel grey (typeset: the poster's riveted chrome letters stand in a pile of silver bank notes of the same tone, so no colour or brightness test parts them), the gang under the falling money
+std('the-brink-s-job-1978', ('grad', [(0, (40, 70, 50)), (.6, (16, 30, 20)), (1, (4, 8, 6))]), (210, 214, 220),
+    T("THE BRINK'S JOB", 'intbk', 74, (214, 218, 224), outline=((40, 44, 50), 2)),
+    photo=ph(0.5, 0.25, 0.9, 0.62), pb=(200, 204, 210), lg=WHT, lw=.55, order='LPTF',
+    ft='c', fcol=(200, 210, 200), fin=OLD, seed=1978)
+
+# The Cheap Detective (1978): the poster's navy, its white "THE CHEAP DETECTIVE" with the red shadow lifted, Peter Falk through the magnifying glass
+std('the-cheap-detective-1978', ('grad', [(0, (30, 40, 110)), (.6, (12, 16, 50)), (1, (2, 4, 14))]), WHT,
+    LC([(0.255, 0.655, 0.42, 0.746), (0.12, 0.744, 0.9, 0.862)], 84, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) > .55) | ((a[..., 0] > .55) & (a[..., 2] < .35)))] * 2),
+    photo=ph(0.5, 0.33, 0.62, 1.0), pb=(200, 30, 30), lg=WHT, lw=.55, order='LPTF', ft='e', fcol=(200, 206, 230), fin=OLD, seed=1978)
+
+# The Deer Hunter (1978): a 2-tape box; black, the poster's white THE DEER HUNTER lifted, De Niro's face under the red headband
+std('the-deer-hunter-1978', ('grad', [(0, (40, 38, 36)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    L((0.078, 0.828, 0.917, 0.886), 80, WHT, mode='light'),
+    photo=ph(0.55, 0.3, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((200, 30, 30), WHT),
+    ft='d', fcol=(200, 196, 190), fin=OLD, seed=1978, **TWO)
+
+# Watership Down (1978): the dusk sky, the poster's white script Watership Down lifted, Hazel's silhouette with the moonlit eye under the title (no logo file: Nepenthe Productions, from IMDb's company credits)
+std('watership-down-1978', ('grad', [(0, (120, 130, 160)), (.5, (60, 70, 100)), (1, (14, 20, 30))]), WHT,
+    L((0.28, 0.185, 0.96, 0.27), 90, WHT, mode='light', speck=0),
+    photo=ph(0.42, 0.55, 0.6, 1.3), pb=(220, 200, 150), studio=['NEPENTHE', 'PRODUCTIONS'], scol=WHT, order='lTPF',
+    ft='b', fcol=(220, 220, 230), fin=OLD, seed=1978)
+
+# Alien (1979): black, the poster's spaced white A L I E N lifted, the egg splitting with green light
+std('alien-1979', ('grad', [(0, (20, 30, 20)), (.6, (6, 8, 6)), (1, (0, 0, 0))]), WHT,
+    L((0.08, 0.112, 0.92, 0.145), 60, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.45, 0.55, 1.2), pb=(150, 220, 80), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(190, 200, 190), fin=RENTAL, seed=1979)
+
+# Apocalypse Now (1979): the poster's red sky, its white brushed Apocalypse Now cut off it, the sun setting on the river and the helicopters
+std('apocalypse-now-1979', ('grad', [(0, (200, 60, 30)), (.5, (120, 20, 10)), (1, (20, 4, 2))]), WHT,
+    LC([(0.095, 0.098, 0.932, 0.283)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .82) & (_sat(a) < .18), minf=.01)]),
+    photo=ph(0.5, 0.42, 0.9, 0.6), pb=(250, 180, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FRANCIS FORD', 'COPPOLA FILM'], ccol=WHT,
+    ft='a', vbox=(250, 180, 60), vink=(30, 10, 6), fcol=(240, 210, 190), fin=OLD, seed=1979)
+
+# Kramer vs. Kramer (1979): the poster's white, its brown serif Kramer / vs. / Kramer cut off it into one line, the family photo under the title
+std('kramer-vs-kramer-1979', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 218)), (1, (130, 124, 112))]), (80, 40, 20),
+    LC([(0.195, 0.735, 0.79, 0.815), (0.41, 0.812, 0.61, 0.869), (0.195, 0.845, 0.79, 0.935)], 80, valign='base', margin=0, gapf=.3, cuts=[comp_cut(lambda a: _lum(a) < .35, keep=lambda cx, cy: .2 < cy < .9, minf=.05)] * 3),
+    photo=ph(0.5, 0.42, 0.7, 1.1), pb=(80, 40, 20), lg=(80, 40, 20), lw=.55, order='LTPF',
+    ft='c', fcol=(60, 40, 30), fin=OLD, seed=1979)
+
+# The Warriors (1979): the night, the poster's red THE Warriors cut off it whole, the gangs of the city
+std('the-warriors-1979', ('grad', [(0, (50, 30, 30)), (.6, (14, 8, 8)), (1, (2, 2, 2))]), (226, 30, 30),
+    LC([(0.12, 0.13, 0.88, 0.335)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3) & (a[..., 2] < .35), minf=.03, close=3)]),
+    photo=ph(0.5, 0.65, 0.9, 0.85), pb=(226, 30, 30), lg=WHT, lw=.5, order='LPTF', dotst=('ACTION', (226, 30, 30), WHT),
+    ft='b', fcol=(210, 196, 190), fin=OLD, seed=1979)
+
+# Vengeance Is Mine (1979): the poster's skin and shadow, its white brushed Vengeance is Mine cut off it, Ken Ogata's face above
+std('vengeance-is-mine-1979', ('grad', [(0, (160, 110, 80)), (.6, (70, 40, 30)), (1, (14, 8, 6))]), WHT,
+    LC([(0.08, 0.418, 0.92, 0.498)], 96, cuts=[comp_cut(lambda a: (_lum(a) > .86) & (_sat(a) < .14), minf=.02)]),
+    photo=ph(0.6, 0.2, 0.62, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(230, 210, 200), fin=OLD, seed=1979)
