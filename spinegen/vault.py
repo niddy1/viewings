@@ -2517,13 +2517,13 @@ std('goodfellas-1990', ('grad', [(0, (40, 38, 38)), (.6, (12, 10, 10)), (1, (2, 
 # Home Alone (1990): the poster's navy, its yellow HOME ALONE with the red house in the gap cut off it, Kevin's scream
 std('home-alone-1990', ('grad', [(0, (30, 60, 130)), (.6, (12, 24, 60)), (1, (2, 6, 20))]), (250, 230, 60),
     LC([(0.035, 0.058, 0.962, 0.14)], 120, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .45)) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01)]),
-    photo=ph(0.5, 0.5, 0.7, 1.0), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    photo=ph(0.5, 0.5, 0.55, 1.5), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
     ft='d', fcol=(220, 226, 246), fin=RENTAL, seed=1990)
 
 # Kindergarten Cop (1990): the poster's white, its crayon-coloured Kindergarten and blue COP cut off it in their own colours into one line, Arnold with the children
 std('kindergarten-cop-1990', ('grad', [(0, (246, 246, 244)), (.6, (228, 230, 236)), (1, (120, 130, 160))]), (20, 40, 140),
     LC([(0.085, 0.705, 0.915, 0.8), (0.215, 0.805, 0.79, 0.95)], 100, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: (_sat(a) > .2) | (_lum(a) < .45))] * 2),
-    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(20, 40, 140), lg=(20, 40, 140), lw=.55, order='LPTF',
+    photo=ph(0.5, 0.32, 0.6, 1.3), pb=(20, 40, 140), lg=(20, 40, 140), lw=.55, order='LTPF',
     ft='a', vbox=(20, 40, 140), fcol=(20, 30, 60), fin=RENTAL, seed=1990)
 
 # Miller's Crossing (1990): the woods' browns, the poster's gold MILLER'S / CROSSING cut off it into one line, the hat-and-coat figure in the trees (no logo file: Circle Films, from IMDb's company credits)
@@ -2546,14 +2546,12 @@ disney('the-rescuers-down-under-1990', ('grad', [(0, (90, 170, 230)), (.5, (60, 
 # The Witches (1990): the poster's white, its white-on-black stencilled the / Witches... cut off it into one line, the Grand High Witch in her purple cloak
 std('the-witches-1990', ('grad', [(0, (90, 40, 110)), (.6, (30, 12, 40)), (1, (4, 2, 8))]), WHT,
     LC([(0.155, 0.56, 0.36, 0.6), (0.215, 0.592, 0.815, 0.697)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) > .82)] * 2),
-    photo=ph(0.4, 0.28, 0.8, 0.9), pb=(200, 120, 220), lg=WHT, lw=.5, order='LPTCF', credit=['ANJELICA HUSTON'], ccol=WHT,
-    ft='c', fcol=(220, 200, 230), fin=RENTAL, seed=1990)
+    photo=ph(0.4, 0.28, 0.5, 1.3), pb=(200, 120, 220), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(220, 200, 230), fin=RENTAL, seed=1990)
 
 # Barton Fink (1991): the poster's sepia, its white slab-serif BARTON / FINK lifted into one line, John Turturro's startled face
 std('barton-fink-1991', ('grad', [(0, (180, 130, 80)), (.6, (90, 60, 30)), (1, (20, 12, 6))]), WHT,
     L([(0.095, 0.762, 0.955, 0.826), (0.095, 0.822, 0.943, 0.94)], 96, WHT, mode='light', valign='base'),
-    photo=ph(0.5, 0.33, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT,
-    ft='d', fcol=(240, 220, 200), fin=OLD, seed=1991)
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(240, 220, 200), fin=OLD, seed=1991)
 
 # Beauty and the Beast (1991): Disney clamshell; the ballroom's blue, Beauty and the Beast typeset in a gold serif like the logo's with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: Lumiere overlaps the poster's oval title plate, so the plate cut lost Beast, and the gold letters' shading broke a colour cut), Belle's face in the diamond
 disney('beauty-and-the-beast-1991', ('grad', [(0, (30, 60, 150)), (.5, (50, 90, 190)), (1, (14, 30, 90))]), fin=dict(CLAM, vivid=.2),
@@ -2581,20 +2579,18 @@ std('delicatessen-1991', ('grad', [(0, (40, 34, 20)), (.6, (12, 10, 6)), (1, (2,
 # Hook (1991): Amblin, a slipcase; the treasure map's parchment, the poster's red swash Hook cut off it, Hook and Peter face to face
 std('hook-1991', ('grad', [(0, (230, 200, 140)), (.5, (200, 160, 90)), (1, (90, 60, 30))]), (180, 20, 30),
     LC([(0.3, 0.6, 0.86, 0.82)], 150, cuts=[comp_cut(lambda a: ((a[..., 0] > .45) & (a[..., 1] < .25)) | (_lum(a) < .15), minf=.05, close=2)]),
-    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(140, 20, 30), lg=(60, 30, 14), lw=.55, order='LPTCSF', credit=['DUSTIN HOFFMAN', 'ROBIN WILLIAMS'], ccol=(60, 30, 14), stick=BAR('91 1211', top='ADVENTURE', fill=(240, 232, 210)),
-    ft='b', fcol=(60, 30, 14), fin=RENTAL, seed=1991)
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(140, 20, 30), lg=(60, 30, 14), lw=.55, order='LPTF', ft='b', fcol=(60, 30, 14), fin=RENTAL, seed=1991)
 
 # Night on Earth (1991): the cab's black, the poster's tilted yellow band with its black NIGHT ON EARTH cut off it whole and levelled, Winona Ryder at the wheel (JVC logo)
 std('night-on-earth-1991', ('grad', [(0, (30, 30, 40)), (.6, (10, 10, 14)), (1, (2, 2, 4))]), (250, 200, 30),
     LC([(0.0, 0.39, 1.0, 0.61)], 120, cuts=[plate_cut(lambda a: (a[..., 0] > .75) & (a[..., 1] > .6) & (a[..., 2] < .35), rot='auto')]),
-    photo=ph(0.6, 0.18, 0.8, 0.6), pb=(250, 200, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=(250, 220, 120),
-    ft='d', fcol=(210, 206, 196), fin=OLD, seed=1991)
+    photo=ph(0.6, 0.18, 0.8, 0.6), pb=(250, 200, 30), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(210, 206, 196), fin=OLD, seed=1991)
 
 # Terminator 2: Judgment Day (1991): the night's steel blue, the poster's white TERMINATOR 2 and red-shadowed JUDGMENT DAY cut off it into one line, Arnold on the Harley with the shotgun
 std('terminator-2-judgment-day-1991', ('grad', [(0, (40, 60, 90)), (.6, (10, 16, 26)), (1, (2, 2, 6))]), WHT,
     LC([(0.01, 0.832, 0.955, 0.898), (0.045, 0.898, 0.955, 0.962)], 110, valign='base', margin=0, gapf=.2,
        cuts=[comp_cut(lambda a: (_lum(a) > .7) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)] * 2),
-    photo=ph(0.58, 0.35, 0.86, 1.1), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.58, 0.35, 0.86, 1.1), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPF',
     ft='a', vbox=(200, 30, 30), fcol=(200, 210, 226), fin=RENTAL, seed=1991)
 
 # The Fisher King (1991): black, the poster's white brushed THE / FISHER / KING cut off it whole, Jack and Parry in the doorway's light under the title
@@ -2618,8 +2614,7 @@ std('3-ninjas-1992', ('grad', [(0, (250, 60, 170)), (.5, (240, 120, 120)), (1, (
 # A Few Good Men (1992): the dark of the poster, its gold A FEW GOOD MEN keyed off it, Cruise, Nicholson and Moore in uniform
 std('a-few-good-men-1992', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, (2, 2, 6))]), (230, 190, 90),
     L((0.124, 0.752, 0.892, 0.812), 84, (230, 190, 90), mode='key', key=(220, 180, 70), t=(70, 160)),
-    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE', 'JACK NICHOLSON'], ccol=WHT,
-    ft='b', fcol=(210, 210, 220), fin=RENTAL, seed=1992)
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(210, 210, 220), fin=RENTAL, seed=1992)
 
 # Aladdin (1992): Disney clamshell; the Genie's blue night, the poster's gold script Aladdin cut off it, Aladdin's face in the diamond
 disney('aladdin-1992', ('grad', [(0, (40, 60, 160)), (.5, (60, 110, 210)), (1, (90, 40, 140))]), fin=dict(CLAM, vivid=.2),
@@ -2629,7 +2624,7 @@ disney('aladdin-1992', ('grad', [(0, (40, 60, 160)), (.5, (60, 110, 210)), (1, (
 # Batman Returns (1992): the night, the poster's white serif BATMAN / RETURNS lifted into one line, Batman, Catwoman and the Penguin stacked in the dark
 std('batman-returns-1992', ('grad', [(0, (30, 40, 70)), (.6, (8, 10, 20)), (1, (0, 0, 2))]), WHT,
     L([(0.198, 0.75, 0.8, 0.818), (0.128, 0.83, 0.874, 0.868)], 96, WHT, mode='light', valign='base', gapf=.2, speck=.05),
-    photo=ph(0.5, 0.35, 0.6, 1.4), pb=(160, 190, 240), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.35, 0.6, 1.4), pb=(160, 190, 240), lg=WHT, lw=.5, order='LTPF',
     ft='d', fcol=(190, 200, 230), fin=RENTAL, seed=1992)
 
 # Hard Boiled (1992): the poster's cream, its black HARD BOILED and red brushed 辣手神探 cut off it in their own colours into one line, Chow Yun-fat with the shotgun (no logo file: Golden Princess, from IMDb's company credits)
@@ -2642,7 +2637,7 @@ std('hard-boiled-1992', ('grad', [(0, (242, 236, 222)), (.6, (226, 214, 190)), (
 # Home Alone 2: Lost in New York (1992): the skyline's black band, the poster's white HOME ALONE 2 with the red house and the gold 2 and its yellow LOST IN NEW YORK cut off it, Kevin with the newspaper before the Empire State
 std('home-alone-2-lost-in-new-york-1992', ('grad', [(0, (20, 20, 24)), (.4, (40, 90, 180)), (1, (10, 30, 80))]), WHT,
     LC([(0.06, 0.09, 0.93, 0.2)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)) | ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4)), minf=.005)]),
-    photo=ph(0.5, 0.52, 0.7, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.52, 0.7, 1.0), pb=WHT, lg=WHT, lw=.5, order='LTPF',
     ft='e', fcol=(210, 220, 240), fin=RENTAL, seed=1992)
 
 # Man Bites Dog (1992): black, the poster's red MAN BITES DOG keyed off it, Benoît Poelvoorde with the gun under the title (no logo file: Les Artistes Anonymes, from IMDb's company credits)
@@ -2684,7 +2679,7 @@ std('dazed-and-confused-1993', ('grad', [(0, (40, 170, 230)), (.5, (30, 130, 200
 # Fearless (1993): the poster's sky, FEARLESS typeset in heavy capitals in its blue (parked for Ian's logo, see data/logos-wanted.md: the poster's letters are see-through, with sky and cloud showing in them, so both cuts came out holed), Jeff Bridges with his arms out on the building's edge
 std('fearless-1993', ('grad', [(0, (200, 226, 240)), (.5, (120, 180, 220)), (1, (20, 60, 100))]), (20, 90, 150),
     T('FEARLESS', 'intbk', 110, (24, 100, 170)),
-    photo=ph(0.4, 0.3, 0.6, 1.0), pb=(20, 90, 150), lg=(20, 50, 90), lw=.55, order='LPTF',
+    photo=ph(0.4, 0.3, 0.6, 1.0), pb=(20, 90, 150), lg=(20, 50, 90), lw=.55, order='LTPF',
     ft='c', fcol=(20, 40, 70), fin=RENTAL, seed=1993)
 
 # Groundhog Day (1993): the dawn sky, GROUNDHOG DAY typeset in heavy capitals in white with the logo's red keyline (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on a pale sky, so a cut lost their insides twice), Bill Murray in the alarm clock
@@ -2696,14 +2691,12 @@ std('groundhog-day-1993', ('grad', [(0, (90, 160, 220)), (.5, (240, 190, 140)), 
 # In the Name of the Father (1993): black, the poster's red condensed IN THE NAME / OF THE FATHER keyed off it into one line, Daniel Day-Lewis's face
 std('in-the-name-of-the-father-1993', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (200, 30, 40),
     L([(0.155, 0.035, 0.838, 0.166), (0.105, 0.166, 0.892, 0.295)], 96, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160), valign='base'),
-    photo=ph(0.5, 0.6, 0.8, 0.9), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL DAY-LEWIS'], ccol=WHT,
-    ft='b', fcol=(210, 200, 196), fin=RENTAL, seed=1993)
+    photo=ph(0.5, 0.6, 0.8, 0.9), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(210, 200, 196), fin=RENTAL, seed=1993)
 
 # Jurassic Park (1993): Amblin and Universal, a slipcase; black, the logo's yellow-framed JURASSIC PARK bar cut off the poster as it is, the T. rex skeleton in the red disc above
 std('jurassic-park-1993', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (250, 190, 40),
     LC([(0.085, 0.36, 0.915, 0.465)], 150, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
-    photo=ph(0.5, 0.23, 0.62, 0.55), pb=(250, 190, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=(250, 210, 120),
-    ft='a', vbox=(220, 30, 30), fcol=(220, 200, 170), fin=RENTAL, seed=1993)
+    photo=ph(0.5, 0.23, 0.62, 0.55), pb=(250, 190, 40), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(220, 30, 30), fcol=(220, 200, 170), fin=RENTAL, seed=1993)
 
 # Naked (1993): black, the poster's thin lilac naked lifted, David Thewlis's face between the fishnet legs (Channel Four Films logo)
 std('naked-1993', ('grad', [(0, (40, 30, 50)), (.6, (12, 10, 16)), (1, (2, 2, 4))]), (210, 200, 240),
@@ -2720,7 +2713,7 @@ std('schindler-s-list-1993', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1
 # Short Cuts (1993): a 2-tape box; the poster's orange ground, SHORT CUTS typeset in heavy capitals in the shadows' near-black (parked for Ian's logo, see data/logos-wanted.md: the title is spelled by the long shadows of the people, slanting and joined to them, and a cut came out as a tangle), the walkers casting them
 std('short-cuts-1993', ('grad', [(0, (230, 130, 70)), (.5, (200, 100, 50)), (1, (90, 40, 16))]), (40, 20, 10),
     T('SHORT CUTS', 'intbk', 110, (40, 20, 10)),
-    photo=ph(0.5, 0.13, 0.9, 0.35), pb=(40, 20, 10), lg=(40, 20, 10), lw=.55, order='LPTCSF', credit=['A ROBERT ALTMAN', 'FILM'], ccol=(40, 20, 10), stick=TWOST((40, 20, 10), (240, 160, 100)),
+    photo=ph(0.5, 0.13, 0.9, 0.35), pb=(40, 20, 10), lg=(40, 20, 10), lw=.55, order='LPTSF', stick=TWOST((40, 20, 10), (240, 160, 100)),
     ft='a', vbox=(40, 20, 10), vink=(240, 160, 100), fcol=(40, 20, 10), fin=RENTAL, seed=1993, **TWO)
 
 # The Nightmare Before Christmas (1993): Touchstone, so a slipcase; Halloween Town's black, the poster's gold THE / NIGHTMARE / BEFORE / CHRISTMAS cut off it into one line, Jack on the spiral hill before the moon
@@ -2733,14 +2726,13 @@ std('the-nightmare-before-christmas-1993', ('grad', [(0, (30, 30, 60)), (.6, (8,
 # The Sandlot (1993): the summer sky, the poster's yellow THE SANDLOT cut off it, the boys before the fence
 std('the-sandlot-1993', ('grad', [(0, (40, 140, 220)), (.5, (30, 100, 180)), (1, (10, 40, 80))]), (250, 220, 40),
     LC([(0.055, 0.036, 0.94, 0.205)], 130, outline=((20, 40, 100), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.01, close=2)]),
-    photo=ph(0.5, 0.55, 0.86, 0.95), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('93 0407', top='FAMILY', fill=(240, 236, 220)),
+    photo=ph(0.5, 0.55, 0.6, 1.4), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('93 0407', top='FAMILY', fill=(240, 236, 220)),
     ft='b', fcol=(220, 230, 246), fin=RENTAL, seed=1993)
 
 # True Romance (1993): the poster's white, its purple photo-filled TRUE / ROMANCE cut off it in its own colours into one line, Alabama by the Cadillac
 std('true-romance-1993', ('grad', [(0, (246, 244, 248)), (.6, (226, 220, 236)), (1, (120, 100, 140))]), (150, 40, 160),
     LC([(0.03, 0.05, 0.52, 0.233), (0.03, 0.23, 0.97, 0.405)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: (a[..., 0] > a[..., 1] + .15) & (a[..., 2] > a[..., 1] + .15))] * 2),
-    photo=ph(0.5, 0.66, 0.9, 0.5), pb=(150, 40, 160), lg=(60, 20, 70), lw=.55, order='LPTCF', credit=['CHRISTIAN SLATER', 'PATRICIA ARQUETTE'], ccol=(60, 20, 70),
-    ft='d', fcol=(60, 20, 70), fin=RENTAL, seed=1993)
+    photo=ph(0.5, 0.66, 0.9, 0.5), pb=(150, 40, 160), lg=(60, 20, 70), lw=.55, order='LPTF', ft='d', fcol=(60, 20, 70), fin=RENTAL, seed=1993)
 
 # What's Eating Gilbert Grape (1993): the poster's gold haze, its white WHAT'S / EATING / GILBERT / GRaPE lifted into one line, Johnny Depp's face
 std('what-s-eating-gilbert-grape-1993', ('grad', [(0, (230, 180, 70)), (.5, (180, 120, 40)), (1, (60, 36, 10))]), WHT,
@@ -2758,7 +2750,7 @@ std('ace-ventura-pet-detective-1994', ('grad', [(0, (60, 60, 160)), (.5, (30, 30
 # Chungking Express (1994): the poster's blurred green and blue, its thin black CHUNGKING / EXPRESS cut off it into one line, Faye in the blur (Jet Tone logo)
 std('chungking-express-1994', ('grad', [(0, (220, 236, 190)), (.5, (170, 210, 190)), (1, (110, 160, 160))]), (20, 30, 30),
     LC([(0.04, 0.045, 0.965, 0.152), (0.37, 0.148, 0.965, 0.235)], 100, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) < .28)] * 2),
-    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(20, 30, 30), lg=(20, 30, 30), lw=.55, order='LPTF',
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(20, 30, 30), lg=(20, 30, 30), lw=.55, order='LTPF',
     ft='c', fcol=(20, 30, 30), fin=RENTAL, seed=1994)
 
 # Clerks (1994): the poster's white, its ransom-note cLeRKS cut off it in its own colours, Dante, Randal and the regulars (View Askew logo)
@@ -2770,20 +2762,18 @@ std('clerks-1994', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (1
 # D2: The Mighty Ducks (1994): Disney, a live-action film, so a slipcase; the poster's blue, its red D2 and THE MIGHTY DUCKS cut off it in its own colours into one line, the team in their helmets
 std('d2-the-mighty-ducks-1994', ('grad', [(0, (60, 70, 170)), (.5, (30, 40, 110)), (1, (8, 10, 40))]), (220, 30, 40),
     LC([(0.13, 0.12, 0.85, 0.24), (0.1, 0.245, 0.895, 0.298)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: ((a[..., 0] > .55) & (a[..., 1] < .3)) | (_lum(a) > .85), minf=.01)] * 2),
-    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(220, 30, 40), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(220, 30, 40), lg=WHT, lw=.5, order='LTPF',
     ft='e', vbox=(220, 30, 40), fcol=(210, 210, 236), fin=RENTAL, seed=1994)
 
 # Dumb and Dumber (1994): the poster's white, its blue DUMB AND DUMBER with the red AND cut off it in its own colours, Lloyd and Harry
 std('dumb-and-dumber-1994', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (20, 70, 160),
     LC([(0.06, 0.045, 0.942, 0.158)], 120, cuts=[comp_cut(lambda a: ((a[..., 2] > .4) & (a[..., 0] < .35)) | ((a[..., 0] > .6) & (a[..., 1] < .35)) | ((_lum(a) > .85) & (_lum(a) < .97)), minf=.01, fillh=True)]),
-    photo=ph(0.5, 0.55, 0.86, 0.9), pb=(20, 70, 160), lg=(20, 70, 160), lw=.55, order='LPTCSF', credit=['JIM CARREY', 'JEFF DANIELS'], ccol=(20, 40, 90), stick=RWD(),
-    ft='d', fcol=(20, 40, 90), fin=RENTAL, seed=1994)
+    photo=ph(0.5, 0.55, 0.86, 0.9), pb=(20, 70, 160), lg=(20, 70, 160), lw=.55, order='LPTF', ft='d', fcol=(20, 40, 90), fin=RENTAL, seed=1994)
 
 # Ed Wood (1994): Touchstone, a slipcase; black, ED WOOD typeset in heavy capitals in white with a grey keyline (parked for Ian's logo, see data/logos-wanted.md: the poster's chrome letters are tipped back in perspective and their shading broke both cuts), Ed in the director's chair
 std('ed-wood-1994', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
     T('ED WOOD', 'intbk', 120, WHT, outline=((110, 110, 120), 2)),
-    photo=ph(0.5, 0.33, 0.8, 1.1), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
-    ft='c', fcol=(200, 200, 206), fin=RENTAL, seed=1994)
+    photo=ph(0.5, 0.33, 0.8, 1.1), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(200, 200, 206), fin=RENTAL, seed=1994)
 
 # Forrest Gump (1994): the poster's sky blue, its navy serif Forrest / Gump cut off it into one line, Forrest on the bench
 std('forrest-gump-1994', ('grad', [(0, (220, 236, 250)), (.5, (170, 206, 240)), (1, (60, 100, 150))]), (20, 30, 70),
@@ -2818,14 +2808,12 @@ std('pulp-fiction-1994', ('grad', [(0, (190, 30, 30)), (.6, (90, 12, 12)), (1, (
 # Quiz Show (1994): black, the poster's red serif QUIZ SHOW keyed off it, the contestant in his booth's headphones
 std('quiz-show-1994', ('grad', [(0, (30, 34, 50)), (.6, (8, 10, 16)), (1, (2, 2, 4))]), (200, 30, 40),
     L((0.16, 0.744, 0.84, 0.812), 84, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160)),
-    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A ROBERT REDFORD', 'FILM'], ccol=WHT,
-    ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1994)
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1994)
 
 # The Hudsucker Proxy (1994): the boardroom's red glow, the poster's chrome HUDSUCKER and its spaced gold P R O X Y cut off it into one line, the man leaping from the window
 std('the-hudsucker-proxy-1994', ('grad', [(0, (120, 30, 20)), (.5, (60, 14, 8)), (1, (10, 2, 2))]), (220, 220, 230),
     LC([(0.115, 0.752, 0.875, 0.872), (0.125, 0.885, 0.875, 0.902)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.02)] * 2),
-    photo=ph(0.5, 0.22, 0.86, 0.7), pb=(230, 200, 140), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(230, 220, 200),
-    ft='b', fcol=(220, 200, 190), fin=RENTAL, seed=1994)
+    photo=ph(0.5, 0.22, 0.86, 0.7), pb=(230, 200, 140), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 200, 190), fin=RENTAL, seed=1994)
 
 # The Lion King (1994): Disney clamshell; the Pride Lands' red-orange sunset, the poster's white THE LION KING cut off it (its Disney mark left out, it is on the spine already), Simba's face in the diamond
 disney('the-lion-king-1994', ('grad', [(0, (150, 40, 20)), (.5, (190, 80, 30)), (1, (90, 20, 14))]), fin=dict(CLAM, vivid=.2),
@@ -2859,8 +2847,7 @@ std('ace-ventura-when-nature-calls-1995', ('grad', [(0, (40, 140, 90)), (.5, (20
 # Bad Boys (1995): the poster's orange haze, its black stencilled BAD BOYS between the rules cut off it, the three of them walking out with the Porsche
 std('bad-boys-1995', ('grad', [(0, (250, 200, 80)), (.5, (240, 160, 50)), (1, (130, 70, 20))]), (20, 16, 10),
     LC([(0.07, 0.115, 0.93, 0.248)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
-    photo=ph(0.5, 0.6, 0.9, 0.85), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['WILL SMITH', 'MARTIN LAWRENCE'], ccol=(20, 16, 10),
-    ft='a', vbox=(20, 16, 10), vink=(250, 200, 80), fcol=(30, 20, 10), fin=RENTAL, seed=1995)
+    photo=ph(0.5, 0.6, 0.9, 0.85), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTF', ft='a', vbox=(20, 16, 10), vink=(250, 200, 80), fcol=(30, 20, 10), fin=RENTAL, seed=1995)
 
 # Batman Forever (1995): the night's blue, the poster's white BATMAN / FOREVER lifted into one line, Batman, Robin and the villains crowded below
 std('batman-forever-1995', ('grad', [(0, (30, 50, 110)), (.6, (8, 14, 36)), (1, (0, 2, 8))]), WHT,
@@ -2871,19 +2858,17 @@ std('batman-forever-1995', ('grad', [(0, (30, 50, 110)), (.6, (8, 14, 36)), (1, 
 # Braveheart (1995): the poster's fire orange, its white serif BRAVEHEART lifted, Wallace with the sword
 std('braveheart-1995', ('grad', [(0, (230, 120, 40)), (.5, (120, 50, 20)), (1, (20, 8, 4))]), WHT,
     L((0.045, 0.865, 0.952, 0.937), 90, WHT, mode='light'),
-    photo=ph(0.55, 0.35, 0.7, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['MEL GIBSON'], ccol=WHT,
-    ft='d', fcol=(240, 210, 190), fin=RENTAL, seed=1995)
+    photo=ph(0.55, 0.35, 0.7, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(240, 210, 190), fin=RENTAL, seed=1995)
 
 # Casino (1995): black, the poster's gold CASINO and the red dice cut off it, De Niro, Stone and Pesci
 std('casino-1995', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (230, 160, 60),
     LC([(0.1, 0.718, 0.897, 0.825)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 2] < .4) & (a[..., 0] > a[..., 2] + .2), minf=.02)]),
-    photo=ph(0.5, 0.33, 0.9, 0.8), pb=(230, 160, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=(240, 200, 140),
-    ft='b', fcol=(220, 200, 170), fin=RENTAL, seed=1995)
+    photo=ph(0.5, 0.33, 0.9, 0.8), pb=(230, 160, 60), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 200, 170), fin=RENTAL, seed=1995)
 
 # Clueless (1995): the poster's white, its black oval with the white Clueless cut off it whole, Cher, Dionne and Tai on the stairs
 std('clueless-1995', ('grad', [(0, (250, 240, 246)), (.6, (240, 220, 230)), (1, (150, 110, 130))]), (20, 20, 20),
     LC([(0.13, 0.835, 0.865, 0.99)], 130, cuts=[plate_cut(lambda a: _lum(a) < .3)]),
-    photo=ph(0.48, 0.35, 0.86, 0.9), pb=(220, 30, 60), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
+    photo=ph(0.48, 0.35, 0.6, 1.4), pb=(220, 30, 60), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
     ft='e', fcol=(30, 20, 26), fin=RENTAL, seed=1995)
 
 # Dead Man (1995): the poster's grey, its white brushed DEAD / MAN lifted into one line, the riders in the ferns (Pandora logo)
@@ -2901,14 +2886,12 @@ std('die-hard-with-a-vengeance-1995', ('grad', [(0, (200, 100, 40)), (.5, (110, 
 # Friday (1995): the poster's blue, its white Friday with the red shadow cut off it, Craig and Smokey on the porch
 std('friday-1995', ('grad', [(0, (30, 70, 160)), (.6, (10, 26, 70)), (1, (2, 6, 20))]), WHT,
     LC([(0.14, 0.05, 0.86, 0.235)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .78) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)]),
-    photo=ph(0.5, 0.55, 0.9, 0.8), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['ICE CUBE', 'CHRIS TUCKER'], ccol=WHT, stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
-    ft='c', fcol=(200, 210, 240), fin=RENTAL, seed=1995)
+    photo=ph(0.5, 0.55, 0.9, 0.8), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(200, 210, 240), fin=RENTAL, seed=1995)
 
 # GoldenEye (1995): the poster's midnight blue, its silver GOLDENEYE cut off it (parked for Ian's logo, see data/logos-wanted.md: the gold 007 and gun barrel sit on Bond's sleeve and wouldn't cut, and the silver E's shine breaks up), Bond's kiss
 std('goldeneye-1995', ('grad', [(0, (30, 50, 90)), (.6, (8, 14, 30)), (1, (2, 2, 6))]), (220, 220, 230),
     LC([(0.045, 0.495, 0.955, 0.59)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .8) & (_sat(a) < .15), minf=.05)]),
-    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['PIERCE BROSNAN'], ccol=WHT,
-    ft='a', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1995)
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1995)
 
 # Heat (1995): the night's blue, the poster's spaced blue chrome H E A T cut off it, Pacino and De Niro
 std('heat-1995', ('grad', [(0, (20, 40, 80)), (.6, (6, 12, 26)), (1, (0, 2, 6))]), (120, 180, 240),
@@ -2925,8 +2908,7 @@ std('jumanji-1995', ('grad', [(0, (40, 120, 40)), (.5, (20, 70, 24)), (1, (6, 24
 # Kids (1995): black, the poster's white brushed KIDS lifted, the tinted faces of the kids (Independent Pictures logo; director from IMDb)
 std('kids-1995', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
     LC([(0.1, 0.405, 0.9, 0.585)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
-    photo=ph(0.5, 0.75, 0.9, 0.5), pb=(220, 70, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'LARRY CLARK'], ccol=WHT,
-    ft='b', fcol=(200, 200, 200), fin=OLD, seed=1995)
+    photo=ph(0.5, 0.75, 0.9, 0.5), pb=(220, 70, 60), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(200, 200, 200), fin=OLD, seed=1995)
 
 # La Haine (1995): black, the poster's white distressed LA HAINE lifted, Vinz, Saïd and Hubert in black and white
 std('la-haine-1995', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), WHT,
@@ -2937,13 +2919,13 @@ std('la-haine-1995', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2,
 # Mallrats (1995): the poster's sky blue, its green spiky Mallrats cut off it whole and levelled, T.S. and Brodie
 std('mallrats-1995', ('grad', [(0, (60, 170, 230)), (.5, (30, 120, 200)), (1, (8, 40, 90))]), (140, 210, 70),
     LC([(0.02, 0.06, 0.94, 0.33)], 140, cuts=[comp_cut(lambda a: ((a[..., 1] > .5) & (a[..., 1] > a[..., 2] + .1) & (a[..., 0] < .85)) | (_lum(a) < .2), top=1, close=3, rot=14)]),
-    photo=ph(0.55, 0.5, 0.86, 0.8), pb=(140, 210, 70), lg=WHT, lw=.5, order='LPTCSF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=WHT, stick=PRC(['$1.99', 'COMEDY']),
+    photo=ph(0.55, 0.5, 0.86, 0.8), pb=(140, 210, 70), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
     ft='d', fcol=(220, 236, 250), fin=RENTAL, seed=1995)
 
 # Mortal Kombat (1995): black, the poster's red serif MORTAL / KOMBAT keyed off it into one line, the gold dragon emblem
 std('mortal-kombat-1995', ('grad', [(0, (60, 20, 10)), (.6, (16, 6, 4)), (1, (2, 2, 2))]), (210, 30, 30),
     L([(0.228, 0.054, 0.782, 0.154), (0.228, 0.16, 0.784, 0.262)], 100, (210, 30, 30), mode='key', key=(200, 30, 30), t=(70, 160), valign='base'),
-    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 170, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (230, 170, 60), (20, 10, 4)),
+    photo=ph(0.5, 0.55, 0.6, 1.3), pb=(230, 170, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (230, 170, 60), (20, 10, 4)),
     ft='a', vbox=(210, 30, 30), fcol=(220, 190, 170), fin=RENTAL, seed=1995)
 
 # Pocahontas (1995): Disney clamshell; the sunset's orange, the poster's white brushed POCAHONTAS cut off it, Pocahontas's face in the diamond
@@ -2954,7 +2936,7 @@ disney('pocahontas-1995', ('grad', [(0, (200, 60, 30)), (.5, (230, 130, 40)), (1
 # Se7en (1995): the dark, the poster's scratched grey SE7EN with its red 7 cut off it in its own colours, Pitt and Freeman
 std('se7en-1995', ('grad', [(0, (60, 56, 46)), (.6, (16, 14, 12)), (1, (2, 2, 2))]), (200, 200, 200),
     LC([(0.1, 0.81, 0.9, 0.935)], 110, cuts=[comp_cut(lambda a: ((_lum(a) > .3) & (_sat(a) < .25)) | ((a[..., 0] > .5) & (a[..., 1] < .25)), minf=.05, close=4, fillh=True)]),
-    photo=ph(0.5, 0.35, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.35, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(190, 186, 176), fin=RENTAL, seed=1995)
 
 # The Usual Suspects (1995): black, the poster's white the / Usual / Suspects cut off it whole, the five in the line-up
@@ -2971,8 +2953,7 @@ disney('toy-story-1995', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .6)
 # Twelve Monkeys (1995): black, the poster's red brushed 12 MONKEYS keyed off it, Bruce Willis in the half-light with the red circle
 std('twelve-monkeys-1995', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), (210, 30, 30),
     L((0.055, 0.838, 0.94, 0.968), 110, (210, 30, 30), mode='key', key=(210, 30, 30), t=(70, 160)),
-    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TERRY GILLIAM', 'FILM'], ccol=WHT,
-    ft='e', vbox=(210, 30, 30), fcol=(200, 196, 196), fin=RENTAL, seed=1995)
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF', ft='e', vbox=(210, 30, 30), fcol=(200, 196, 196), fin=RENTAL, seed=1995)
 
 # Beavis and Butt-Head Do America (1996): the desert road, the poster's red BEAVIS AND BUTT-HEAD DO AMERICA cut off it word by word into one line, Beavis and Butt-Head's faces
 std('beavis-and-butt-head-do-america-1996', ('grad', [(0, (120, 190, 240)), (.5, (200, 210, 230)), (1, (60, 60, 90))]), (210, 30, 30),
@@ -2996,8 +2977,7 @@ std('box-of-moonlight-1996', ('grad', [(0, (246, 248, 250)), (.6, (226, 232, 240
 # Eraser (1996): the poster's steel greys, its green spaced E R A S E R cut off it, Arnold in the leather jacket
 std('eraser-1996', ('grad', [(0, (90, 100, 90)), (.6, (24, 28, 24)), (1, (2, 4, 2))]), (150, 220, 90),
     LC([(0.05, 0.81, 0.94, 0.885)], 90, cuts=[comp_cut(lambda a: (a[..., 1] > .45) & (a[..., 1] > a[..., 2] + .12), minf=.05)]),
-    photo=ph(0.7, 0.3, 0.6, 1.3), pb=(150, 220, 90), lg=WHT, lw=.5, order='LPTCSF', credit=['ARNOLD SCHWARZENEGGER'], ccol=WHT, stick=RWD(),
-    ft='a', vbox=(150, 220, 90), vink=(10, 20, 10), fcol=(200, 210, 200), fin=RENTAL, seed=1996)
+    photo=ph(0.7, 0.3, 0.6, 1.3), pb=(150, 220, 90), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(150, 220, 90), vink=(10, 20, 10), fcol=(200, 210, 200), fin=RENTAL, seed=1996)
 
 # Fargo (1996): the poster's cross-stitch white, its red script Fargo cut off it, the stitched body in the snow (PolyGram logo)
 std('fargo-1996', ('grad', [(0, (244, 240, 236)), (.6, (226, 220, 214)), (1, (130, 120, 110))]), (190, 30, 30),
@@ -3025,8 +3005,7 @@ std('la-promesse-1996', ('grad', [(0, (226, 226, 220)), (.6, (200, 200, 194)), (
 # Mars Attacks! (1996): the burning city's red, the poster's red slanted MARS ATTACKS! cut off it whole and levelled, the Martian with the ray gun
 std('mars-attacks-1996', ('grad', [(0, (60, 70, 140)), (.5, (140, 40, 30)), (1, (14, 4, 2))]), (220, 30, 30),
     LC([(0.06, 0.785, 0.95, 0.915)], 130, outline=((250, 240, 200), 2.2), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.02, rot=-8)]),
-    photo=ph(0.55, 0.35, 0.86, 0.9), pb=(140, 230, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
-    ft='c', fcol=(220, 200, 200), fin=RENTAL, seed=1996)
+    photo=ph(0.55, 0.35, 0.86, 0.9), pb=(140, 230, 90), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(220, 200, 200), fin=RENTAL, seed=1996)
 
 # Matilda (1996): the night's starry blue, Matilda typeset letter by letter in the logo's rainbow colours (parked for Ian's logo, see data/logos-wanted.md: each letter is shaded from light to dark, so two colour cuts lost the t, i and l), Matilda with the floating orb under the title
 std('matilda-1996', ('grad', [(0, (30, 60, 140)), (.6, (10, 20, 60)), (1, (2, 4, 16))]), (250, 220, 60),
@@ -3043,8 +3022,7 @@ std('paradise-lost-the-child-murders-at-robin-hood-hills-1996', ('grad', [(0, (1
 # Primal Fear (1996): the storm's dark gold, the poster's white serif PRIMAL · FEAR lifted, Richard Gere in the coat
 std('primal-fear-1996', ('grad', [(0, (120, 110, 70)), (.6, (34, 30, 18)), (1, (4, 4, 2))]), WHT,
     L((0.052, 0.848, 0.948, 0.918), 84, WHT, mode='light'),
-    photo=ph(0.32, 0.4, 0.5, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['RICHARD GERE', 'EDWARD NORTON'], ccol=WHT,
-    ft='d', fcol=(220, 214, 196), fin=RENTAL, seed=1996)
+    photo=ph(0.32, 0.4, 0.5, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(220, 214, 196), fin=RENTAL, seed=1996)
 
 # Space Jam (1996): the space blue, the poster's green-and-orange SPACE JAM cut off it in its own colours, Michael Jordan and Bugs
 std('space-jam-1996', ('grad', [(0, (30, 40, 120)), (.6, (10, 14, 50)), (1, (2, 2, 14))]), (140, 210, 60),
@@ -3072,8 +3050,7 @@ std('when-we-were-kings-1996', ('grad', [(0, (246, 240, 226)), (.6, (230, 220, 2
 # As Good as It Gets (1997): the poster's sky, its red small-caps AS GOOD AS IT GETS keyed off it, Jack Nicholson with the dog
 std('as-good-as-it-gets-1997', ('grad', [(0, (200, 226, 246)), (.5, (150, 200, 240)), (1, (60, 100, 150))]), (190, 30, 40),
     L((0.05, 0.158, 0.95, 0.224), 76, (190, 30, 40), mode='key', key=(190, 40, 50), t=(70, 160)),
-    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(190, 30, 40), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['JACK NICHOLSON', 'HELEN HUNT'], ccol=(30, 40, 70),
-    ft='a', vbox=(190, 30, 40), fcol=(30, 40, 70), fin=RENTAL, seed=1997)
+    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(190, 30, 40), lg=(30, 40, 70), lw=.55, order='LPTF', ft='a', vbox=(190, 30, 40), fcol=(30, 40, 70), fin=RENTAL, seed=1997)
 
 # Austin Powers: International Man of Mystery (1997): the Union Jack pink, AUSTIN POWERS and INTERNATIONAL MAN OF MYSTERY typeset in heavy capitals in the logo's yellow with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the outlined letters sit on the flag's pinks and whites, and the cut came out a jumble), Austin and Vanessa
 std('austin-powers-international-man-of-mystery-1997', ('grad', [(0, (240, 60, 160)), (.5, (160, 40, 140)), (1, (30, 20, 80))]), (250, 230, 60),
@@ -3084,7 +3061,7 @@ std('austin-powers-international-man-of-mystery-1997', ('grad', [(0, (240, 60, 1
 # Batman & Robin (1997): the night's blue, the poster's white chrome BATMAN & ROBIN lifted into one line, Freeze over the others
 std('batman-robin-1997', ('grad', [(0, (30, 60, 140)), (.6, (8, 16, 50)), (1, (0, 2, 12))]), WHT,
     L([(0.21, 0.458, 0.81, 0.5), (0.365, 0.503, 0.8, 0.556)], 96, WHT, mode='light', valign='base', speck=0),
-    photo=ph(0.5, 0.2, 0.7, 0.7), pb=(120, 200, 250), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.2, 0.7, 0.7), pb=(120, 200, 250), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(180, 200, 240), fin=RENTAL, seed=1997)
 
 # Boogie Nights (1997): black, the poster's red outlined BOOGIE NIGHTS cut off it, the star of faces
@@ -3103,8 +3080,7 @@ std('chasing-amy-1997', ('grad', [(0, (60, 60, 60)), (.6, (20, 20, 20)), (1, (2,
 # Donnie Brasco (1997): the poster's amber, its white slanted DONNIE BRASCO cut off it and levelled, Pacino and Depp walking
 std('donnie-brasco-1997', ('grad', [(0, (220, 150, 50)), (.5, (140, 80, 30)), (1, (20, 10, 4))]), WHT,
     LC([(0.0, 0.44, 0.99, 0.605)], 120, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03, rot=-9)]),
-    photo=ph(0.5, 0.2, 0.9, 0.4), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AL PACINO', 'JOHNNY DEPP'], ccol=WHT,
-    ft='a', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
+    photo=ph(0.5, 0.2, 0.9, 0.4), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='a', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
 
 # Funny Games (1997): black, the poster's red stencilled FUNNY / GAMES keyed off it into one line, the boy in the white mask's hood (Wega Film logo)
 std('funny-games-1997', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), (210, 30, 30),
@@ -3115,8 +3091,7 @@ std('funny-games-1997', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2
 # Good Will Hunting (1997): the autumn gold, the poster's white serif GOOD WILL HUNTING lifted, Matt Damon and Robin Williams on the bench
 std('good-will-hunting-1997', ('grad', [(0, (200, 150, 50)), (.5, (110, 80, 30)), (1, (16, 12, 4))]), WHT,
     L((0.11, 0.872, 0.892, 0.918), 76, WHT, mode='light', speck=0),
-    photo=ph(0.5, 0.5, 0.86, 0.8), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['MATT DAMON', 'ROBIN WILLIAMS'], ccol=WHT,
-    ft='b', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
+    photo=ph(0.5, 0.5, 0.86, 0.8), pb=WHT, lg=WHT, lw=.5, order='LTPF', ft='b', fcol=(240, 220, 190), fin=RENTAL, seed=1997)
 
 # Hercules (1997): Disney clamshell; the Greek sky, the poster's gold Greek-key HERCULES cut off it in its own colours, Hercules's face in the diamond
 disney('hercules-1997', ('grad', [(0, (30, 90, 180)), (.5, (60, 140, 220)), (1, (20, 60, 130))]), fin=dict(CLAM, vivid=.2),
@@ -3144,8 +3119,7 @@ std('kiss-the-girls-1997', ('grad', [(0, (240, 240, 240)), (.5, (180, 190, 196))
 # L.A. Confidential (1997): black, the poster's red slanted L.A. Confidential cut off it whole and levelled, Kim Basinger in the hood
 std('l-a-confidential-1997', ('grad', [(0, (50, 40, 40)), (.6, (14, 10, 10)), (1, (2, 2, 2))]), (210, 30, 30),
     LC([(0.34, 0.6, 0.96, 0.86)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .3), minf=.02, rot=-20)]),
-    photo=ph(0.4, 0.2, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['KEVIN SPACEY', 'RUSSELL CROWE'], ccol=WHT,
-    ft='a', vbox=(210, 30, 30), fcol=(210, 206, 206), fin=RENTAL, seed=1997)
+    photo=ph(0.4, 0.2, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(210, 30, 30), fcol=(210, 206, 206), fin=RENTAL, seed=1997)
 
 # Liar Liar (1997): the poster's white, LIAR LIAR typeset in heavy capitals, the first in the poster's dark red and the second in black (parked for Ian's logo, see data/logos-wanted.md: Jim Carrey's hair cuts through the second LIAR), Jim Carrey's grin
 std('liar-liar-1997', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
@@ -3180,20 +3154,18 @@ std('taste-of-cherry-1997', ('grad', [(0, (220, 160, 50)), (.6, (170, 110, 30)),
 # The Game (1997): black, the poster's white serif THE / GAME lifted into one line, Michael Douglas's face coming apart in puzzle pieces
 std('the-game-1997', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
     L([(0.29, 0.742, 0.62, 0.81), (0.24, 0.805, 0.935, 0.91)], 110, WHT, mode='light', valign='base'),
-    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(200, 80, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID FINCHER', 'FILM'], ccol=WHT,
-    ft='c', fcol=(206, 200, 196), fin=RENTAL, seed=1997)
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(200, 80, 40), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(206, 200, 196), fin=RENTAL, seed=1997)
 
 # The Ice Storm (1997): the night's black and ice blue, the poster's pale blue theicestorm lifted, the families in the frozen woods
 std('the-ice-storm-1997', ('grad', [(0, (30, 50, 70)), (.6, (8, 14, 20)), (1, (2, 2, 4))]), (170, 210, 236),
     L((0.315, 0.14, 0.97, 0.2), 90, (170, 210, 236), mode='light', speck=0),
-    photo=ph(0.55, 0.5, 0.86, 0.9), pb=(170, 210, 236), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.55, 0.55, 0.6, 1.4), pb=(170, 210, 236), lg=WHT, lw=.5, order='LTPF',
     ft='e', fcol=(170, 196, 220), fin=RENTAL, seed=1997)
 
 # The Rainmaker (1997): American Zoetrope, the poster's black, its gold serif THE RAINMAKER cut off it, Matt Damon and the courtroom
 std('the-rainmaker-1997', ('grad', [(0, (60, 40, 26)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), (220, 180, 100),
     LC([(0.03, 0.06, 0.975, 0.145)], 100, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 2] < .4) & (a[..., 0] > a[..., 2] + .15))]),
-    photo=ph(0.5, 0.4, 0.86, 0.8), pb=(220, 180, 100), lg=WHT, lw=.5, order='LPTCSF', credit=['MATT DAMON'], ccol=WHT, stick=BAR('97 1121', top='DRAMA', fill=(236, 230, 214)),
-    ft='a', fcol=(220, 200, 170), fin=RENTAL, seed=1997)
+    photo=ph(0.5, 0.4, 0.86, 0.8), pb=(220, 180, 100), lg=WHT, lw=.5, order='LPTF', ft='a', fcol=(220, 200, 170), fin=RENTAL, seed=1997)
 
 # Wag the Dog (1997): black, the poster's red WAG, white THE and blue DOG cut off it in their own colours, Hoffman above and De Niro below
 std('wag-the-dog-1997', ('grad', [(0, (30, 30, 40)), (.6, (10, 10, 14)), (1, (2, 2, 4))]), WHT,
@@ -3209,13 +3181,12 @@ disney('a-bug-s-life-1998', ('grad', [(0, (120, 190, 60)), (.5, (80, 160, 40)), 
 # American History X (1998): the poster's red, the white strip with its black AMERICAN HISTORY and red X cut off it (it already runs down the poster) and turned to read along the spine, Edward Norton's face
 std('american-history-x-1998', ('grad', [(0, (210, 50, 30)), (.5, (130, 24, 14)), (1, (20, 4, 2))]), WHT,
     LC([(0.742, 0.06, 0.995, 0.93)], 120, cuts=[comp_cut(lambda a: (_lum(a) < .22) | ((a[..., 0] > .6) & (a[..., 1] < .3)), keep=lambda cx, cy: cx > .06, minf=.01, rot=90)]),
-    photo=ph(0.3, 0.4, 0.6, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EDWARD NORTON'], ccol=WHT,
-    ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1998)
+    photo=ph(0.3, 0.4, 0.6, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1998)
 
 # Antz (1998): the poster's sky, its black ANTZ with the green edge cut off it, Z and the ants on the picnic below
 std('antz-1998', ('grad', [(0, (90, 180, 240)), (.5, (60, 150, 220)), (1, (20, 70, 30))]), (20, 30, 20),
     LC([(0.07, 0.09, 0.97, 0.505)], 140, outline=((120, 200, 60), 2.4), cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.15, fillh=True)]),
-    photo=ph(0.5, 0.65, 0.86, 0.8), pb=(20, 30, 20), lg=WHT, lw=.5, order='LPTSF', stick=BAR('98 1002', top='ANIMATION', fill=(236, 240, 226)),
+    photo=ph(0.5, 0.73, 0.5, 1.4), pb=(20, 30, 20), lg=WHT, lw=.5, order='LPTSF', stick=BAR('98 1002', top='ANIMATION', fill=(236, 240, 226)),
     ft='a', vbox=(20, 30, 20), fcol=(220, 236, 220), fin=RENTAL, seed=1998)
 
 # Cats (1998): black, the poster's white hand-lettered CATS cut off it, the yellow cat's eyes, and the company in costume under the title (PolyGram logo; director from IMDb)
@@ -3251,8 +3222,7 @@ std('happiness-1998', ('grad', [(0, (220, 80, 50)), (.5, (240, 160, 50)), (1, (2
 # He Got Game (1998): black, the poster's white distressed HE GOT GAME lifted, Denzel Washington's eyes over his steepled hands
 std('he-got-game-1998', ('grad', [(0, (60, 40, 26)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), WHT,
     L((0.085, 0.782, 0.902, 0.842), 90, WHT, mode='light'),
-    photo=ph(0.5, 0.42, 0.86, 0.75), pb=(220, 120, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=WHT,
-    ft='e', fcol=(220, 200, 186), fin=RENTAL, seed=1998)
+    photo=ph(0.5, 0.42, 0.86, 0.75), pb=(220, 120, 40), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(220, 200, 186), fin=RENTAL, seed=1998)
 
 # Lock, Stock and Two Smoking Barrels (1998): black, the poster's white LOCK STOCK and yellow & Two Smoking Barrels cut off it into one line, the four silhouettes on the red bars
 std('lock-stock-and-two-smoking-barrels-1998', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), WHT,
@@ -3275,8 +3245,7 @@ std('out-of-sight-1998', ('grad', [(0, (230, 40, 30)), (.5, (240, 180, 40)), (1,
 # Ronin (1998): the Paris grey, the poster's yellow RONIN cut off it, De Niro aiming down the street
 std('ronin-1998', ('grad', [(0, (150, 150, 146)), (.6, (50, 50, 48)), (1, (6, 6, 6))]), (250, 210, 40),
     LC([(0.09, 0.575, 0.925, 0.75)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .4), minf=.1)]),
-    photo=ph(0.6, 0.25, 0.8, 0.6), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTCF', credit=['ROBERT DE NIRO', 'JEAN RENO'], ccol=WHT,
-    ft='d', fcol=(220, 220, 214), fin=RENTAL, seed=1998)
+    photo=ph(0.6, 0.25, 0.8, 0.6), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(220, 220, 214), fin=RENTAL, seed=1998)
 
 # Rounders (1998): black, the poster's white serif ROUNDERS with the spade in the O lifted, the players round the table
 std('rounders-1998', ('grad', [(0, (60, 40, 30)), (.6, (16, 10, 8)), (1, (2, 2, 2))]), WHT,
@@ -3299,14 +3268,12 @@ std('rushmore-1998', ('grad', [(0, (236, 236, 220)), (.6, (220, 220, 200)), (1, 
 # Saving Private Ryan (1998): a 2-tape box would not quite be needed at 169 minutes, so one tape; the battlefield's grey, the poster's white saving private ryan lifted, the soldiers' faces
 std('saving-private-ryan-1998', ('grad', [(0, (120, 130, 130)), (.6, (34, 38, 38)), (1, (4, 4, 4))]), WHT,
     L((0.085, 0.78, 0.92, 0.838), 84, WHT, mode='light'),
-    photo=ph(0.5, 0.33, 0.9, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=WHT,
-    ft='c', fcol=(206, 210, 210), fin=RENTAL, seed=1998)
+    photo=ph(0.5, 0.33, 0.9, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(206, 210, 210), fin=RENTAL, seed=1998)
 
 # The Big Lebowski (1998): black, the poster's white serif THE BIG LEBOWSKI lifted, the Dude's bowling-alley sunglasses
 std('the-big-lebowski-1998', ('grad', [(0, (40, 30, 40)), (.6, (12, 8, 12)), (1, (2, 2, 2))]), WHT,
     L([(0.43, 0.105, 0.57, 0.13), (0.05, 0.135, 0.95, 0.176)], 90, WHT, mode='light', valign='base', speck=0),
-    photo=ph(0.5, 0.48, 0.86, 0.75), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT, dotst=('COMEDY', (220, 40, 40), WHT),
-    ft='d', fcol=(210, 200, 210), fin=RENTAL, seed=1998)
+    photo=ph(0.5, 0.48, 0.86, 0.75), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT, ft='d', fcol=(210, 200, 210), fin=RENTAL, seed=1998)
 
 # The Cruise (1998): the poster's grey city, its yellow-and-black THE CRUISE cut off it, Speed Levitch on the bus (no logo file: Charter Films, from IMDb's company credits)
 std('the-cruise-1998', ('grad', [(0, (200, 200, 200)), (.6, (120, 120, 120)), (1, (20, 20, 20))]), (20, 20, 20),
@@ -3323,13 +3290,13 @@ std('the-parent-trap-1998', ('grad', [(0, (246, 244, 240)), (.6, (228, 224, 218)
 # The Rugrats Movie (1998): the poster's purple, its white starburst with THE RUGRATS MOVIE cut off it whole, the babies with Reptar (Klasky-Csupo logo; directors from IMDb)
 std('the-rugrats-movie-1998', ('grad', [(0, (110, 50, 170)), (.5, (200, 90, 100)), (1, (60, 120, 40))]), WHT,
     LC([(0.35, 0.05, 0.86, 0.23)], 140, cuts=[plate_cut(lambda a: _lum(a) > .85)]),
-    photo=ph(0.5, 0.55, 0.9, 0.85), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.5, 0.6, 0.6, 1.4), pb=(250, 200, 40), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(240, 220, 236), fin=RENTAL, seed=1998)
 
 # The Truman Show (1998): the mosaic's blue, the poster's white The Truman Show lifted, Truman's face made of the show's stills
 std('the-truman-show-1998', ('grad', [(0, (60, 120, 200)), (.6, (20, 50, 100)), (1, (4, 10, 24))]), WHT,
     LC([(0.03, 0.03, 0.97, 0.29)], 140, cuts=[comp_cut(lambda a: _lum(a) > .9, minf=.03)]),
-    photo=ph(0.5, 0.65, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A PETER WEIR', 'FILM'], ccol=WHT,
+    photo=ph(0.5, 0.65, 0.6, 1.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A PETER WEIR', 'FILM'], ccol=WHT,
     ft='b', fcol=(200, 216, 240), fin=RENTAL, seed=1998)
 
 # There's Something About Mary (1998): the poster's white, its purple there's something about and pink mary cut off it into one line, Cameron Diaz with the dog
@@ -3341,8 +3308,7 @@ std('there-s-something-about-mary-1998', ('grad', [(0, (246, 246, 246)), (.6, (2
 # 10 Things I Hate About You (1999): Touchstone, a slipcase; the poster's green panel with its pink 10 things and white I hate about you cut off it whole, the cast in a row
 std('10-things-i-hate-about-you-1999', ('grad', [(0, (120, 190, 60)), (.5, (80, 150, 40)), (1, (20, 50, 10))]), WHT,
     LC([(0.155, 0.02, 0.845, 0.43)], 150, cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .6) & (a[..., 1] < .35) & (a[..., 2] > .3)), minf=.01)]),
-    photo=ph(0.5, 0.7, 0.9, 0.6), pb=(220, 40, 120), lg=WHT, lw=.5, order='LPTCSF', credit=['HEATH LEDGER', 'JULIA STILES'], ccol=WHT, stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
-    ft='e', fcol=(230, 246, 220), fin=RENTAL, seed=1999)
+    photo=ph(0.5, 0.7, 0.9, 0.6), pb=(220, 40, 120), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(230, 246, 220), fin=RENTAL, seed=1999)
 
 # American Beauty (1999): DreamWorks, the poster's skin and rose, its black spaced AMERICAN BEAUTY cut off it, the rose against the belly
 std('american-beauty-1999', ('grad', [(0, (240, 200, 160)), (.6, (220, 150, 100)), (1, (110, 60, 30))]), (20, 14, 10),
@@ -3353,7 +3319,7 @@ std('american-beauty-1999', ('grad', [(0, (240, 200, 160)), (.6, (220, 150, 100)
 # American Pie (1999): the poster's white with the red border, its red stamped AMERICAN / PIE cut off it whole, the cast round the pie
 std('american-pie-1999', ('grad', [(0, (246, 244, 244)), (.6, (230, 226, 226)), (1, (130, 120, 120))]), (210, 30, 30),
     LC([(0.085, 0.035, 0.915, 0.285)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35), minf=.02, close=2)]),
-    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(210, 30, 30), lg=(40, 20, 20), lw=.55, order='LPTSF', stick=BAR('99 0709', top='COMEDY', fill=(240, 236, 226)),
+    photo=ph(0.5, 0.62, 0.6, 1.3), pb=(210, 30, 30), lg=(40, 20, 20), lw=.55, order='LPTSF', stick=BAR('99 0709', top='COMEDY', fill=(240, 236, 226)),
     ft='b', fcol=(40, 20, 20), fin=RENTAL, seed=1999)
 
 # Austin Powers: The Spy Who Shagged Me (1999): the poster's sky blue, its orange outlined AUSTIN POWERS / THE SPY WHO SHAGGED ME cut off it whole, Austin and Felicity
@@ -3371,20 +3337,18 @@ std('being-john-malkovich-1999', ('grad', [(0, (60, 50, 40)), (.6, (16, 12, 10))
 # Big Daddy (1999): the brownstone's pale steps, the poster's red BIG DADDY keyed off it, Sonny and Julian at the door
 std('big-daddy-1999', ('grad', [(0, (236, 230, 220)), (.6, (210, 200, 186)), (1, (110, 100, 86))]), (210, 40, 40),
     L((0.11, 0.83, 0.885, 0.928), 96, (210, 40, 40), mode='key', key=(210, 50, 40), t=(70, 160)),
-    photo=ph(0.55, 0.35, 0.86, 0.85), pb=(210, 40, 40), lg=(40, 30, 20), lw=.55, order='LPTF',
+    photo=ph(0.55, 0.35, 0.6, 1.4), pb=(210, 40, 40), lg=(40, 30, 20), lw=.55, order='LTPF',
     ft='a', vbox=(210, 40, 40), fcol=(40, 30, 20), fin=RENTAL, seed=1999)
 
 # Dogma (1999): the poster's black, its red DOGMA with the cross in the O cut off it, the cast in the holy light
 std('dogma-1999', ('grad', [(0, (200, 80, 30)), (.4, (60, 20, 10)), (1, (2, 2, 2))]), (220, 30, 30),
     LC([(0.105, 0.655, 0.89, 0.765)], 120, outline=(WHT, 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.03, fillh=True)]),
-    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=WHT,
-    ft='d', fcol=(220, 200, 190), fin=RENTAL, seed=1999)
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(220, 200, 190), fin=RENTAL, seed=1999)
 
 # Fight Club (1999): the poster's sickly green, FIGHT CLUB typeset in heavy capitals in the soap's pink (parked for Ian's logo, see data/logos-wanted.md: the title is pressed into a tilted pink soap bar held in a hand, and the bar wouldn't cut cleanly), Brad Pitt and Edward Norton
 std('fight-club-1999', ('grad', [(0, (120, 160, 80)), (.5, (60, 90, 40)), (1, (10, 20, 8))]), (240, 110, 180),
     T('FIGHT CLUB', 'intbk', 110, (240, 120, 190), outline=((90, 20, 60), 2)),
-    photo=ph(0.6, 0.62, 0.8, 0.85), pb=(240, 110, 180), lg=WHT, lw=.5, order='LPTCF', credit=['BRAD PITT', 'EDWARD NORTON'], ccol=WHT,
-    ft='b', fcol=(220, 230, 210), fin=RENTAL, seed=1999)
+    photo=ph(0.6, 0.62, 0.8, 0.85), pb=(240, 110, 180), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 230, 210), fin=RENTAL, seed=1999)
 
 # Ghost Dog: The Way of the Samurai (1999): the poster's blue-grey, its white chalked GHOST DOG and THE WAY OF THE SAMURAI cut off it into one line, Forest Whitaker in the hood (JVC logo)
 std('ghost-dog-the-way-of-the-samurai-1999', ('grad', [(0, (60, 80, 110)), (.6, (20, 28, 40)), (1, (2, 4, 8))]), WHT,
@@ -3419,5 +3383,76 @@ std('she-s-all-that-1999', ('grad', [(0, (120, 60, 160)), (.5, (240, 140, 40)), 
 # Sleepy Hollow (1999): the poster's black, its red script Sleepy Hollow cut off it, Johnny Depp and Christina Ricci in the fog
 std('sleepy-hollow-1999', ('grad', [(0, (40, 50, 60)), (.6, (10, 12, 16)), (1, (2, 2, 2))]), (200, 30, 30),
     LC([(0.09, 0.085, 0.93, 0.195)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .25), minf=.01)]),
-    photo=ph(0.5, 0.5, 0.9, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
-    ft='e', vbox=(200, 30, 30), fcol=(200, 206, 210), fin=RENTAL, seed=1999)
+    photo=ph(0.5, 0.5, 0.9, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF', ft='e', vbox=(200, 30, 30), fcol=(200, 206, 210), fin=RENTAL, seed=1999)
+
+# Star Wars: Episode I – The Phantom Menace (1999): Lucasfilm, a slipcase; the poster's gold and black, its silver STAR WARS / EPISODE I / THE PHANTOM MENACE cut off it into one line, Anakin with Maul's eyes above
+std('star-wars-episode-i-the-phantom-menace-1999', ('grad', [(0, (120, 70, 20)), (.5, (40, 20, 8)), (1, (4, 2, 2))]), (226, 220, 210),
+    [LC([(0.1, 0.8, 0.43, 0.83), (0.1, 0.838, 0.89, 0.883)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .65, minf=.01)] * 2),
+     LC([(0.1, 0.932, 0.89, 0.96)], 110, margin=0, cuts=[comp_cut(lambda a: _lum(a) > .65, minf=.01)])], tgap=8,
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(250, 190, 80), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (250, 190, 80), (20, 10, 4)),
+    ft='c', fcol=(220, 200, 170), fin=RENTAL, seed=1999)
+
+# Stuart Little (1999): the poster's yellow, its blue STUART LITTLE with the yellow face cut off it, Stuart on the sneaker
+std('stuart-little-1999', ('grad', [(0, (252, 220, 40)), (.5, (244, 200, 20)), (1, (150, 110, 10))]), (30, 90, 200),
+    LC([(0.06, 0.648, 0.94, 0.732)], 120, cuts=[comp_cut(lambda a: ((a[..., 2] > .55) & (a[..., 0] < .6)) | (_lum(a) < .2), minf=.02, fillh=True)]),
+    photo=ph(0.4, 0.25, 0.6, 1.0), pb=(200, 30, 30), lg=(30, 40, 80), lw=.55, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='a', vbox=(30, 90, 200), fcol=(30, 40, 80), fin=RENTAL, seed=1999)
+
+# Tarzan (1999): Disney clamshell; the jungle's greens, the poster's carved bronze TARZAN cut off it, Tarzan's face in the diamond
+disney('tarzan-1999', ('grad', [(0, (30, 110, 80)), (.5, (60, 160, 110)), (1, (20, 70, 40))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.15, 0.08, 0.85, 0.2)], 140, outline=((40, 20, 10), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 2] < .35) & (a[..., 0] > a[..., 1] + .08), minf=.02, close=2, fillh=True)]),
+       face=ph(.61, .555, .14, 1.4), lcol=WHT)
+
+# The Bone Collector (1999): the dark, the poster's pale the BONE COLLECTOR cut off it into one line, Denzel Washington and Angelina Jolie
+std('the-bone-collector-1999', ('grad', [(0, (60, 40, 26)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), (236, 226, 206),
+    LC([(0.115, 0.8, 0.52, 0.856), (0.115, 0.862, 0.91, 0.948)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .68, minf=.02)] * 2),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(236, 226, 206), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(210, 200, 186), fin=RENTAL, seed=1999)
+
+# The Boondock Saints (1999): the poster's red, its white THE BOONDOCK SAINTS cut off it into one line, the MacManus brothers with their pistols
+std('the-boondock-saints-1999', ('grad', [(0, (220, 50, 30)), (.6, (120, 20, 10)), (1, (14, 2, 2))]), WHT,
+    LC([(0.44, 0.075, 0.57, 0.103), (0.05, 0.103, 0.94, 0.19)], 96, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: (_lum(a) > .82) & (_sat(a) < .2))] * 2),
+    photo=ph(0.5, 0.45, 0.9, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.49', 'ACTION']),
+    ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1999)
+
+# The Green Mile (1999): a 2-tape box (189 minutes); the cell block's green dark, the poster's white serif THE GREEN MILE lifted, John Coffey's light in his hands
+std('the-green-mile-1999', ('grad', [(0, (50, 70, 50)), (.6, (14, 20, 14)), (1, (2, 4, 2))]), WHT,
+    L([(0.43, 0.075, 0.57, 0.1), (0.15, 0.1, 0.86, 0.19)], 96, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.48, 0.86, 0.9), pb=(240, 230, 160), lg=WHT, lw=.5, order='LPTCSF', credit=['TOM HANKS'], ccol=WHT, stick=TWOST((240, 230, 160), (20, 30, 20)),
+    ft='e', fcol=(200, 220, 200), fin=RENTAL, seed=1999, **TWO)
+
+# The Iron Giant (1999): Warner Bros. Animation, a slipcase; the evening sky, the poster's white stencilled THE IRON GIANT cut off it whole, the Giant's head and Hogarth's hand
+std('the-iron-giant-1999', ('grad', [(0, (60, 90, 120)), (.5, (40, 60, 80)), (1, (14, 20, 26))]), WHT,
+    LC([(0.0, 0.055, 0.6, 0.25)], 140, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.01)]),
+    photo=ph(0.5, 0.48, 0.9, 0.8), pb=(240, 200, 120), lg=WHT, lw=.5, order='LTPF', ft='a', vbox=(200, 40, 30), fcol=(210, 220, 230), fin=RENTAL, seed=1999)
+
+# The Matrix (1999): the code's green black, the poster's silver THE MATRIX lifted, Neo, Morpheus and Trinity in the rain of code
+std('the-matrix-1999', ('grad', [(0, (20, 60, 30)), (.6, (6, 20, 10)), (1, (0, 4, 2))]), (200, 230, 210),
+    L([(0.44, 0.835, 0.56, 0.848), (0.14, 0.846, 0.865, 0.912)], 96, (210, 236, 214), mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(80, 220, 100), lg=WHT, lw=.5, order='LPTSF', stick=BAR('99 0331', top='SCI-FI', fill=(220, 236, 220)),
+    ft='d', fcol=(170, 220, 180), fin=RENTAL, seed=1999)
+
+# The Sixth Sense (1999): black, the poster's white hand-lettered THE SIXTH SENSE lifted, Cole's face and Bruce Willis below
+std('the-sixth-sense-1999', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.13, 0.045, 0.855, 0.125), 90, WHT, mode='light', speck=0),
+    photo=ph(0.4, 0.38, 0.7, 0.75), pb=(250, 180, 80), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(210, 200, 196), fin=RENTAL, seed=1999)
+
+# The Talented Mr. Ripley (1999): the Italian dusk gold, the poster's white serif THE / TALENTED / MR. RIPLEY lifted into one line, Matt Damon, Jude Law and Gwyneth Paltrow
+std('the-talented-mr-ripley-1999', ('grad', [(0, (200, 140, 60)), (.5, (100, 60, 24)), (1, (14, 8, 4))]), WHT,
+    L([(0.41, 0.775, 0.875, 0.845), (0.44, 0.845, 0.905, 0.905)], 96, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.35, 0.9, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AN ANTHONY MINGHELLA', 'FILM'], ccol=WHT,
+    ft='b', fcol=(240, 220, 200), fin=RENTAL, seed=1999)
+
+# The World Is Not Enough (1999): the explosion's orange into midnight, the poster's white italic The World Is Not Enough lifted, Bond in the suit
+std('the-world-is-not-enough-1999', ('grad', [(0, (30, 50, 80)), (.5, (12, 18, 30)), (1, (200, 90, 30))]), WHT,
+    L((0.015, 0.423, 0.945, 0.47), 90, WHT, mode='light'),
+    photo=ph(0.5, 0.25, 0.8, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='e', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1999)
+
+# Three Kings (1999): the desert's white, THREE KINGS typeset in wide spaced capitals in the poster's blue (parked for Ian's logo, see data/logos-wanted.md: the letters fade from blue into the white sky, so both cuts lost their middles), the three soldiers walking with their gold
+std('three-kings-1999', ('grad', [(0, (230, 236, 246)), (.6, (200, 210, 226)), (1, (90, 100, 120))]), (40, 90, 160),
+    TT([('THREE', (40, 90, 170)), ('KINGS', (40, 90, 170))], 'advb', 96, sp=.4),
+    photo=ph(0.5, 0.52, 0.86, 0.8), pb=(40, 90, 160), lg=(30, 50, 90), lw=.55, order='LPTF', ft='a', fcol=(30, 50, 90), fin=RENTAL, seed=1999)
+
+# Toy Story 2 (1999): Pixar clamshell, built like the other Toy Storys; the poster's star-sky blue, its yellow TOY, red STORY plate and the 2 cut off it, Jessie's face in the diamond
+disney('toy-story-2-1999', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .6))), fin=dict(CLAM, vivid=.3),
+       title=LC([(0.27, 0.065, 0.69, 0.17), (0.25, 0.16, 0.73, 0.235), (0.37, 0.215, 0.6, 0.335)], 170, gapf=.05, cuts=[ts_letters, ts_plate(.3, .75), ts_letters]),
+       face=ph(.295, .535, .1, 1.4))

@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Three Kings (1999) | Vault 1990s | `logos/three-kings-1999-title.png` | typeset; the blue letters fade into the white sky |
 | Fight Club (1999) | Vault 1990s | `logos/fight-club-1999-title.png` | typeset; the title is pressed into a tilted soap bar held in a hand |
 | Taste of Cherry (1997) | Vault 1990s | `logos/taste-of-cherry-1997-title.png` | typeset; the pale title is barely lighter than the ochre |
 | Liar Liar (1997) | Vault 1990s | `logos/liar-liar-1997-title.png` | typeset; Jim Carrey's hair cuts through the second LIAR |
