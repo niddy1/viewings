@@ -1202,3 +1202,82 @@ std('the-human-condition-ii-road-to-eternity-1959', ('grad', [(0, (250, 226, 200
     LC([(0.06, 0.066, 0.47, 0.101), (0.06, 0.107, 0.45, 0.143), (0.06, 0.154, 0.21, 0.184)], 80, gapf=.7, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)] * 3),
     photo=ph(0.55, 0.6, 0.86, 1.15), pb=(30, 26, 24), lg=None, studio=['A MASAKI KOBAYASHI', 'FILM'], scol=(30, 26, 24), order='TPlF',
     ft='c', fcol=(30, 26, 24), fin=OLD, seed=1959)
+
+
+# =====================================================================================
+# 1960s (vault-1960s.json, 82 tapes)
+# =====================================================================================
+
+# Breathless (1960): the poster's red and teal circles, its black stencil BREATHLESS lifted, Belmondo and Seberg (no logo file: Les Films Impéria, from IMDb's company credits; director from IMDb)
+std('breathless-1960', ('grad', [(0, (230, 100, 100)), (.5, (110, 190, 180)), (1, (40, 90, 84))]), (20, 20, 20),
+    L((0.025, 0.2, 0.965, 0.296), 80, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.6, 1.0, 0.8), pb=(20, 20, 20), studio=['LES FILMS IMPÉRIA'], scol=(20, 20, 20), order='lPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'],
+    ccol=(20, 20, 20), ft='b', fcol=(20, 20, 20), fin=OLD, seed=1960)
+
+# La Dolce Vita (1960): the fountain's grey, the poster's gold serif LA DOLCE VITA keyed off it in its three lines, the kiss in the Trevi
+std('la-dolce-vita-1960', ('grad', [(0, (110, 110, 108)), (.6, (40, 40, 40)), (1, (8, 8, 8))]), (240, 200, 80),
+    L([(0.375, 0.352, 0.62, 0.438), (0.17, 0.449, 0.816, 0.537), (0.278, 0.546, 0.713, 0.632)], 76, (242, 204, 84), mode='key', key=(235, 195, 80), t=(70, 150), gapf=.3),
+    photo=ph(0.58, 0.82, 0.6, 0.85), pb=(242, 204, 84), lg=(242, 204, 84), lw=.55, order='LPTCF', credit=['MARCELLO MASTROIANNI', 'ANITA EKBERG'], ccol=(230, 220, 200),
+    ft='a', vbox=(242, 204, 84), vink=(40, 40, 40), fcol=(200, 196, 190), fin=OLD, seed=1960)
+
+# Le Trou (1960): black, the poster's yellow LE TROU with its glass-bubble O cut off it in its own colours, the two prisoners' faces (director from IMDb)
+std('le-trou-1960', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (250, 236, 20),
+    LC([(0.035, 0.632, 0.96, 0.796)], 120, cuts=[key_cut(lambda a: ((a[..., 0] > .8) & (a[..., 1] > .75) & (a[..., 2] < .45)) | ((a[..., 2] > .7) & (a[..., 0] < .5)) | (_lum(a) > .75))]),
+    photo=ph(0.5, 0.25, 1.0, 0.75), pb=(250, 236, 20), lg=(250, 236, 20), lw=.55, order='LPTCF', credit=['UN FILM DE', 'JACQUES BECKER'], ccol=(250, 236, 20),
+    ft='c', fcol=(200, 200, 196), fin=OLD, seed=1960)
+
+# Our Man in Havana (1960): the poster's blue and orange, its white stacked OUR MAN IN HAVANA lifted word by word into one line, Alec Guinness (no logo file: Kingsmead Productions, from IMDb's company credits)
+std('our-man-in-havana-1960', ('grad', [(0, (40, 110, 160)), (.6, (20, 60, 96)), (1, (6, 20, 34))]), WHT,
+    LC([(0.245, 0.08, 0.465, 0.185), (0.21, 0.186, 0.465, 0.292), (0.355, 0.293, 0.465, 0.399), (0.022, 0.4, 0.465, 0.505)], 90, gapf=.22, valign='base', margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .8) & (_sat(a) < .2), minf=.1)] * 4),
+    photo=ph(0.72, 0.75, 0.56, 1.0), pb=(250, 160, 50), studio=['KINGSMEAD', 'PRODUCTIONS'], scol=WHT, order='lPTSF', stick=RWD(fill=(250, 230, 190)),
+    ft='e', fcol=(210, 220, 230), fin=RENTAL, seed=1960)
+
+# Peeping Tom (1960): the poster's paper white, its orange-red PEEPING TOM keyed off it, the camera (no logo file: Michael Powell (Theatre), from IMDb's company credits)
+std('peeping-tom-1960', ('grad', [(0, (240, 236, 226)), (.6, (222, 216, 202)), (1, (140, 130, 110))]), (220, 80, 40),
+    L([(0.04, 0.11, 0.68, 0.172), (0.032, 0.17, 0.38, 0.232)], 80, (224, 82, 42), mode='key', key=(220, 85, 45), t=(70, 150), gapf=.3),
+    photo=ph(0.6, 0.55, 0.62, 1.0), pb=(30, 30, 30), studio=['MICHAEL POWELL', '(THEATRE)'], scol=(30, 30, 30), order='lPTCF', credit=['A MICHAEL POWELL', 'FILM'],
+    ccol=(30, 30, 30), ft='d', fcol=(30, 30, 30), fin=OLD, seed=1960)
+
+# Psycho (1960): the poster's dark blue, its yellow PSYCHO cut off it in its own colours, Janet Leigh and Anthony Perkins' hands (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
+std('psycho-1960', ('grad', [(0, (30, 44, 70)), (.6, (12, 16, 28)), (1, (2, 4, 8))]), (250, 220, 70),
+    LC([(0.05, 0.148, 0.625, 0.328)], 120, cuts=[key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .45))]),
+    photo=ph(0.8, 0.3, 0.36, 1.4), pb=(250, 220, 70), studio=['ALFRED J. HITCHCOCK', 'PRODUCTIONS'], scol=(250, 220, 70), order='lPTSF',
+    stick=flow(dot, 74, ['HORROR'], (220, 40, 40), WHT), ft='a', vbox=(250, 220, 70), vink=(12, 16, 28), fcol=(200, 204, 214), fin=RENTAL, seed=1960)
+
+# Shoot the Piano Player (1960): the poster's sepia, its red brush SHOOT THE PIANO PLAYER cut off it in its own colours, three lines into one, Aznavour at the piano (no logo file: Les Films de la Pléiade, from IMDb's company credits)
+std('shoot-the-piano-player-1960', ('grad', [(0, (230, 200, 160)), (.6, (190, 150, 110)), (1, (90, 60, 40))]), (180, 30, 30),
+    LC([(0.118, 0.562, 0.53, 0.678), (0.055, 0.68, 0.598, 0.775), (0.118, 0.782, 0.528, 0.885)], 80, gapf=.25, valign='base', cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 1] + .25) & (a[..., 0] > a[..., 2] + .2), minf=.04)] * 3),
+    photo=ph(0.45, 0.2, 0.86, 0.75), pb=(186, 32, 32), studio=['LES FILMS', 'DE LA PLÉIADE'], scol=(60, 40, 30), order='lPTCF', credit=['UN FILM DE', 'FRANÇOIS TRUFFAUT'],
+    ccol=(60, 40, 30), ft='b', fcol=(60, 40, 30), fin=OLD, seed=1960)
+
+# Spartacus (1960): the poster's red, its white jagged SPARTACUS cut off it, the gladiator with the net
+std('spartacus-1960', ('grad', [(0, (226, 30, 30)), (.6, (160, 16, 16)), (1, (60, 4, 4))]), WHT,
+    LC([(0.07, 0.115, 0.945, 0.255)], 90, cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.05)]),
+    photo=ph(0.45, 0.62, 0.8, 0.9), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['KIRK DOUGLAS'], ccol=WHT,
+    ft='d', fcol=(240, 210, 210), fin=OLD, seed=1960)
+
+# The Apartment (1960): the poster's red, its white THE APARTMENT lifted, Lemmon and MacLaine dancing (no logo file: The Mirisch Corporation, from IMDb's company credits)
+std('the-apartment-1960', ('grad', [(0, (226, 30, 24)), (.6, (170, 16, 14)), (1, (60, 4, 4))]), WHT,
+    L((0.205, 0.338, 0.955, 0.396), 70, WHT, mode='light'),
+    photo=ph(0.63, 0.15, 0.4, 1.15), pb=WHT, studio=['THE MIRISCH', 'CORPORATION'], scol=WHT, order='lPTCF', credit=['A BILLY WILDER', 'PRODUCTION'], ccol=WHT,
+    dotst=('COMEDY', WHT, (170, 16, 14)), ft='e', fcol=(240, 210, 210), fin=OLD, seed=1960)
+
+# The Bad Sleep Well (1960): black, the poster's white THE SLEEP WELL and red BAD cut off it in their own colours, the office block with the red cross (director from IMDb)
+std('the-bad-sleep-well-1960', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.018, 0.17, 0.98, 0.285)], 80, cuts=[key_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
+    photo=ph(0.5, 0.66, 1.0, 0.6), pb=(214, 30, 40), lg=WHT, lw=.55, order='LTPCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
+    ft='a', fcol=(200, 200, 200), fin=OLD, seed=1960)
+
+# Tunes of Glory (1960): the poster's cream, its black TUNES and OF GLORY cut off it letter by letter and levelled (they climb 16 degrees), Alec Guinness's face (no logo file: Knightsbridge Films, from IMDb's company credits)
+TGB = lambda a: _lum(a) < .25
+std('tunes-of-glory-1960', ('grad', [(0, (248, 240, 200)), (.6, (232, 220, 170)), (1, (150, 130, 90))]), (24, 24, 24),
+    LC([(0.02, 0.08, 0.48, 0.24), (0.08, 0.1, 0.76, 0.3)], 90, gapf=.2, valign='base', cuts=[
+        pick_cut(TGB, (0.02, 0.08, 0.48, 0.24), [(0.065, 0.187), (0.148, 0.179), (0.24, 0.159), (0.324, 0.141), (0.41, 0.124)], rot=-16, r=.02),
+        pick_cut(TGB, (0.08, 0.1, 0.76, 0.3), [(0.14, 0.244), (0.222, 0.223), (0.354, 0.202), (0.428, 0.192), (0.522, 0.167), (0.614, 0.147), (0.698, 0.126)], rot=-16, r=.02)]),
+    photo=ph(0.72, 0.5, 0.56, 1.1), pb=(24, 24, 24), studio=['KNIGHTSBRIDGE FILMS'], scol=(24, 24, 24), order='lPTCF', credit=['ALEC GUINNESS', 'JOHN MILLS'],
+    ccol=(24, 24, 24), ft='c', fcol=(24, 24, 24), fin=OLD, seed=1960)
+
+# Breakfast at Tiffany's (1961): the poster's white, its magenta BREAKFAST AT TIFFANY'S cut off it in its own colours, Audrey Hepburn in the black dress (tall picture)
+std('breakfast-at-tiffany-s-1961', ('grad', [(0, (246, 244, 242)), (.6, (226, 224, 222)), (1, (130, 170, 200))]), (210, 30, 110),
+    LC([(0.395, 0.625, 0.91, 0.704), (0.395, 0.703, 0.9, 0.782)], 80, gapf=.2, valign='base', cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .4) & (a[..., 2] > .3))] * 2),
+    photo=ph(0.24, 0.42, 0.34, 1.9), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF', ft='b', fcol=(20, 20, 20), fin=OLD, seed=1961)
