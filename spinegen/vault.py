@@ -2119,3 +2119,77 @@ std('missing-1982', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (
     L((0.432, 0.468, 0.955, 0.53), 84, (150, 30, 40), mode='key', key=(150, 30, 40), t=(70, 160), speck=0),
     photo=ph(0.6, 0.76, 0.76, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'COSTA-GAVRAS'], ccol=(30, 30, 30),
     ft='e', fcol=(30, 30, 30), fin=OLD, seed=1982)
+
+# The Secret of NIMH (1982): the poster's bramble purple and gold, its red THE SECRET of N.I.M.H keyed off the white glow into one line, Mrs. Brisby before the Great Owl
+std('the-secret-of-nimh-1982', ('grad', [(0, (60, 40, 110)), (.5, (30, 20, 60)), (1, (8, 6, 18))]), (214, 40, 36),
+    LC([(0.435, 0.65, 0.525, 0.678), (0.335, 0.678, 0.662, 0.732), (0.455, 0.731, 0.505, 0.752), (0.338, 0.743, 0.662, 0.798)], 84, valign='base', margin=0, gapf=.25,
+       outline=((250, 240, 220), 3), cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35) & (a[..., 2] < .35))] * 4),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(250, 200, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A DON BLUTH', 'FILM'], ccol=(250, 220, 150),
+    ft='b', fcol=(220, 210, 230), fin=RENTAL, seed=1982)
+
+# The Thing (1982): the poster's icy blue, its black ragged THE / THING cut off it into one line, the hooded figure blazing with light
+std('the-thing-1982', ('grad', [(0, (180, 220, 240)), (.5, (60, 140, 200)), (1, (8, 30, 60))]), (12, 16, 24),
+    LC([(0.4, 0.735, 0.62, 0.768), (0.03, 0.766, 0.94, 0.926)], 110, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.01)] * 2),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(12, 16, 24), lg=(12, 16, 24), lw=.55, order='LPTSF', dotst=('HORROR', (12, 16, 24), (180, 220, 240)),
+    ft='d', fcol=(12, 16, 24), fin=RENTAL, seed=1982)
+
+# Tootsie (1982): the poster's white, its black slab-serif Tootsie cut off it, Dorothy Michaels in red sequins before the flag
+std('tootsie-1982', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (20, 20, 20),
+    LC([(0.01, 0.835, 0.993, 0.945)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.4, 0.42, 0.5, 1.6), pb=(200, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['DUSTIN HOFFMAN'], ccol=(20, 20, 20),
+    ft='a', vbox=(200, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1982)
+
+# A Christmas Story (1983): the tree's green, the poster's red arched A CHRISTMAS STORY cut off it whole and turned level, Ralphie in his glasses
+std('a-christmas-story-1983', ('grad', [(0, (30, 80, 40)), (.5, (16, 50, 24)), (1, (4, 16, 8))]), (210, 30, 30),
+    LC([(0.12, 0.08, 0.9, 0.42)], 140, outline=((250, 236, 200), 3), cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3) & (a[..., 2] < .35), minf=.05, rot=-30)]),
+    photo=ph(0.65, 0.6, 0.6, 0.9), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='c', fcol=(210, 230, 210), fin=RENTAL, seed=1983)
+
+# Return of the Jedi (1983): Lucasfilm, a slipcase; black, the poster's whole white logo (STAR WARS over RETURN OF THE JEDI between its rules) cut off it, Luke with the lightsaber over the others
+std('return-of-the-jedi-1983', ('grad', [(0, (30, 40, 80)), (.6, (10, 12, 28)), (1, (2, 2, 6))]), WHT,
+    LC([(0.1, 0.786, 0.895, 0.908)], 130, cuts=[key_cut(lambda a: _lum(a) > .6)]),
+    photo=ph(0.45, 0.3, 0.8, 0.95), pb=(120, 180, 250), lg=WHT, lw=.5, order='LTPF',
+    ft='b', fcol=(200, 210, 230), fin=RENTAL, seed=1983)
+
+# Videodrome (1983): black, the poster's white condensed VIDEODROME lifted, James Woods reaching out of the television's blue (no logo file: Filmplan International, from IMDb's company credits)
+std('videodrome-1983', ('grad', [(0, (30, 60, 140)), (.5, (10, 20, 60)), (1, (2, 4, 14))]), WHT,
+    LC([(0.015, 0.018, 0.98, 0.186)], 120, cuts=[key_cut(lambda a: _lum(a) > .75)]),
+    photo=ph(0.75, 0.48, 0.42, 1.3), pb=(80, 160, 250), studio=['FILMPLAN', 'INTERNATIONAL'], scol=WHT, order='lPTCF', credit=['A DAVID CRONENBERG', 'FILM'], ccol=(170, 200, 250),
+    ft='e', fcol=(190, 200, 230), fin=OLD, seed=1983)
+
+# Beverly Hills Cop (1984): the poster's sky blue, its white BEVERLY HILLS and red script Cop cut off it into one line, Eddie Murphy with the pistol
+std('beverly-hills-cop-1984', ('grad', [(0, (120, 200, 240)), (.5, (40, 150, 220)), (1, (10, 60, 110))]), WHT,
+    LC([(0.1, 0.045, 0.9, 0.099), (0.285, 0.097, 0.725, 0.212)], 90, valign='base', margin=0, gapf=.2,
+       cuts=[key_cut(lambda a: _lum(a) > .85), key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3))]),
+    photo=ph(0.35, 0.5, 0.56, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='a', vbox=(220, 30, 30), fcol=(230, 240, 250), fin=RENTAL, seed=1984)
+
+# Ghostbusters (1984): the poster's green night, its white GHOSTBUSTERS with the no-ghost O cut off it in its own colours, the ghost in the red sign
+std('ghostbusters-1984', ('grad', [(0, (40, 120, 60)), (.5, (14, 50, 24)), (1, (2, 10, 4))]), WHT,
+    LC([(0.06, 0.845, 0.94, 0.925)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .72) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01)]),
+    photo=ph(0.5, 0.2, 0.86, 0.75), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCSF', credit=['BILL MURRAY', 'DAN AYKROYD'], ccol=WHT, stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
+    ft='b', fcol=(200, 220, 200), fin=RENTAL, seed=1984)
+
+# Stranger Than Paradise (1984): black, the poster's white STRANGER / THAN / PARADISE lifted into one line, Willie and Eva by the "Welcome to Florida" sign
+std('stranger-than-paradise-1984', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    L([(0.155, 0.085, 0.985, 0.186), (0.563, 0.19, 0.985, 0.288), (0.236, 0.291, 0.985, 0.393)], 84, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.75, 0.9, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
+    ft='c', fcol=(200, 200, 200), fin=OLD, seed=1984)
+
+# Streets of Fire (1984): the poster's red and black, its yellow STREETS OF FIRE plate cut off it in its own colours, Tom Cody with the rifle
+std('streets-of-fire-1984', ('grad', [(0, (200, 40, 40)), (.5, (80, 14, 14)), (1, (10, 2, 2))]), (250, 210, 60),
+    LC([(0.285, 0.862, 0.73, 0.968)], 96, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .4) & (a[..., 2] < .45), minf=.002, keep=lambda cx, cy: .02 < cy < .98)]),
+    photo=ph(0.5, 0.32, 0.8, 0.95), pb=(60, 190, 210), lg=WHT, lw=.5, order='LTPF',
+    ft='e', fcol=(240, 210, 200), fin=RENTAL, seed=1984)
+
+# The Terminator (1984): the night, the poster's chrome THE TERMINATOR cut off it, Arnold in the sunglasses with the pistol
+std('the-terminator-1984', ('grad', [(0, (40, 60, 120)), (.6, (10, 14, 34)), (1, (2, 2, 8))]), (200, 210, 240),
+    LC([(0.405, 0.787, 0.565, 0.827), (0.045, 0.827, 0.96, 0.882)], 96, valign='base', margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .42) & (a[..., 2] >= a[..., 0] - .05), minf=.02, close=2)] * 2),
+    photo=ph(0.58, 0.3, 0.6, 1.05), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('84 1026', top='SCI-FI', fill=(220, 226, 236)),
+    ft='d', fcol=(190, 200, 230), fin=RENTAL, seed=1984)
+
+# This Is Spinal Tap (1984): the poster's black, its whole gold Spinal Tap logo (THIS IS and the umlaut too) cut off it in its own colours, the band as gold statues
+std('this-is-spinal-tap-1984', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 4)), (1, (2, 2, 2))]), (240, 200, 90),
+    LC([(0.1, 0.064, 0.912, 0.322)], 130, cuts=[comp_cut(lambda a: _lum(a) > .2, minf=.005, close=2)]),
+    photo=ph(0.5, 0.65, 0.7, 1.0), pb=(240, 200, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A ROB REINER', 'FILM'], ccol=(240, 210, 140),
+    ft='a', vbox=(240, 200, 90), vink=(20, 14, 6), fcol=(220, 200, 160), fin=OLD, seed=1984)
