@@ -672,6 +672,17 @@ h1.ticket.vault { display: flex; justify-content: center; }
 }
 .vault-plate .v1 { font-size: clamp(30px, 6vw, 54px); }
 .vault-plate .v2 { font-size: clamp(22px, 4.2vw, 38px); }
+/* the Vault's asterisk and its footnote: Vault tapes were watched before 2016 and have no viewing date */
+.vault-plate { position: relative; }
+.vault-star { position: absolute; top: -26px; right: -30px; width: clamp(40px, 7vw, 58px); transform: rotate(12deg); filter: drop-shadow(3px 3px 0 #233bac) drop-shadow(0 4px 8px rgba(0,0,0,.45)); }
+.vault-star svg, .vault-note .mark svg { display: block; width: 100%; height: auto; fill: none; stroke: #f2bd0a; stroke-width: 7; stroke-linecap: round; }
+.vault-note {
+  display: flex; align-items: flex-start; justify-content: center; gap: 8px;
+  max-width: 470px; margin: 14px auto 0; text-align: left;
+  font-size: .95rem; line-height: 1.3; letter-spacing: .02em; color: rgba(239,230,210,.82);
+}
+.vault-note .mark { flex: none; width: 22px; margin-top: 1px; }
+@media (max-width: 640px) { .vault-note { font-size: .85rem; margin-top: 10px; } }
 
 /* ---------- the store directory (app.js): every shelf as a tile, a search across all of them, Surprise me ----------
    Opened by clicking the ticket / Vault plate, "Find a tape", or pressing "/". In the ticket's blue and yellow. */

@@ -54,6 +54,14 @@
       const plate = document.createElement('span'); plate.className = 'vault-plate'; plate.setAttribute('aria-hidden', 'true');
       plate.innerHTML = `<span class="v1">The Vault</span><span class="v2">${SHELF}</span>`;
       h1.prepend(plate); h1.classList.add('vault');
+      // the asterisk: Vault tapes have no viewing date, so a footnote under the plate says why
+      const ASTERISK = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5v30M7 12.5l26 15M7 27.5l26-15"/></svg>';
+      const star = document.createElement('span'); star.className = 'vault-star'; star.innerHTML = ASTERISK;
+      plate.append(star);
+      const note = document.createElement('p'); note.className = 'vault-note';
+      note.innerHTML = '<span class="mark">' + ASTERISK + '</span><span>Everything in the Vault was watched before 2016, back before I kept a diary. '
+        + 'The dates are lost to time, so these tapes are shelved by the decade they came out.</span>';
+      h1.closest('.ticket-row').after(note);
     } else if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
     $('year').textContent = IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
     if (SHELF !== NEWEST) document.title = IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
@@ -891,7 +899,8 @@
     $('v-facts').textContent = facts.join(' · ');
     $('v-rating').innerHTML = stars(f);
     $('v-imdb').textContent = f.imdbRating != null ? `IMDb ${f.imdbRating.toFixed(1)}` : '';
-    $('v-watched').textContent = `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
+    // Vault dates are when the film was rated in bulk, not watched (see the Vault note in the header)
+    $('v-watched').textContent = IN_VAULT ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
     $('v-note').textContent = f.note || '';
   }
