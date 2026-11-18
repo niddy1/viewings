@@ -2484,10 +2484,9 @@ std('how-to-get-ahead-in-advertising-1989', ('grad', [(0, (100, 200, 230)), (.5,
     photo=ph(0.5, 0.55, 0.8, 1.0), pb=(240, 120, 50), lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', (240, 120, 50), WHT),
     ft='b', fcol=(230, 240, 240), fin=OLD, seed=1989)
 
-# Indiana Jones and the Last Crusade (1989): the poster's sun-bleached parchment, its orange-to-yellow INDIANA JONES / and the / LAST CRUSADE cut off it line by line as they are, parchment and all (a colour cut left holes: the lettering's own oranges are the parchment's), Indy and his father
+# Indiana Jones and the Last Crusade (1989): the poster's sun-bleached parchment, INDIANA JONES / AND THE LAST CRUSADE typeset in heavy italic capitals in the logo's orange with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the lettering's oranges are the parchment's own, so two colour cuts left holes and a slab showed a seam), Indy and his father
 std('indiana-jones-and-the-last-crusade-1989', ('grad', [(0, (230, 200, 150)), (.5, (200, 160, 110)), (1, (90, 60, 30))]), (40, 26, 16),
-    LC([(0.21, 0.716, 0.795, 0.79), (0.4, 0.792, 0.59, 0.81), (0.28, 0.81, 0.73, 0.842)], 90, valign='base', margin=0, gapf=.1,
-       cuts=[key_cut(lambda a: _lum(a) >= 0)] * 3),
+    [T('INDIANA JONES', 'intbk', 84, (236, 120, 30), outline=((30, 16, 8), 2.2)), T('AND THE LAST CRUSADE', 'intbk', 40, (250, 200, 50), outline=((30, 16, 8), 1.6))], tgap=8,
     photo=ph(0.55, 0.42, 0.7, 0.8), pb=(60, 40, 20), lg=(60, 40, 20), lw=.55, order='LPTF',
     ft='d', fcol=(50, 34, 20), fin=RENTAL, seed=1989)
 

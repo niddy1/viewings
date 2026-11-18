@@ -84,6 +84,9 @@ One designed spine picture per tape, made in November 2026 with `spinegen/` (por
 - `spinegen/check_boxes.py`: draws a spec's title boxes and photo crops over the posters, tiled, to check them before rendering (see "2025 shelf").
 - To add a tape: add a spec to `tapes.py` (copy a similar one), pick the `photo=ph(cx, cy, w, ar)` crop so it avoids the poster's title, run the script for that key.
 
+### Troublesome titles get parked for Ian (Ian, 18 Nov 2026)
+Don't sink time into one stubborn title. **Budget: two real tries at a lift or cut (each a different approach, rendered and looked at), plus at most one small fix.** If it still isn't clean (holes, a lost letter, a seam, a faint line), stop: give the spine a tidy stand-in (typeset in the logo's colours, or the best cut if it is nearly right) and add the film to `data/logos-wanted.md` with the exact file name to save as (`logos/<poster name>-title.png`) and what went wrong. The spec's comment says it is parked. Ian finds the logos; when one lands in `logos/`, put it on with `Pic(path, size)` and take the row off the list. Mention newly parked titles when reporting a batch.
+
 ### Target mix: the 2026 shelf is the gold standard (Ian, 17 Nov 2026)
 Every shelf should look like 2026's in how its spines vary. **Variance is what matters most to Ian**: no single layout, sticker, picture shape or foot should dominate a shelf, and neighbours should differ. The numbers below were measured from the 2026 specs in `tapes.py` (71 tapes). They are rough targets for a shelf, not quotas for each tape. A shelf within a few points of them is fine.
 
