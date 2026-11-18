@@ -13,7 +13,7 @@ def _turn(rgb, al, rot):
     return cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC), cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
 
 
-def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0, opn=3):
+def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0, opn=3, fillh=False):
     """an LC cut that keeps whole letters: the connected pieces passing test (rgb 0..1), filtered by
     keep(cx, cy) (the piece's centre, as fractions of the cut-out crop) and/or only the `top` biggest.
     For lettering that interlocks on the poster (arched, stacked or overlapping words), where a straight
@@ -31,7 +31,12 @@ def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0, opn
         if top:
             idx = [j for j in range(1, n) if ok[j]]; idx.sort(key=lambda j: -st[j, cv2.CC_STAT_AREA])
             ok[:] = False; ok[idx[:top]] = True
-        al = _soft(ok[lab].astype(np.float32), soft)
+        k = ok[lab].astype(np.uint8)
+        if fillh:  # fill each kept piece's holes, so letters outlined in the test colour come with their insides
+            ff = cv2.copyMakeBorder(1 - k, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=1)
+            cv2.floodFill(ff, np.zeros((ff.shape[0] + 2, ff.shape[1] + 2), np.uint8), (0, 0), 2)
+            k = (ff[1:-1, 1:-1] != 2).astype(np.uint8)
+        al = _soft(k.astype(np.float32), soft)
         return _turn(rgb, al, rot) if rot else (rgb, al)
     return fn
 
@@ -2416,3 +2421,84 @@ std('the-land-before-time-1988', ('grad', [(0, (120, 190, 230)), (.5, (110, 170,
     LC([(0.095, 0.03, 0.905, 0.332)], 140, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
     photo=ph(0.6, 0.66, 0.8, 0.95), pb=(250, 210, 60), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(240, 240, 230), fin=RENTAL, seed=1988)
+
+# The Thin Blue Line (1988): the poster's blue-black, its blue and red THE THIN BLUE LINE (crossed by the searchlight's white band) cut off it as it is, ground and all, Randall Adams' face (documentary; director from IMDb)
+std('the-thin-blue-line-1988', ('grad', [(0, (20, 34, 60)), (.6, (6, 12, 24)), (1, (2, 2, 6))]), (120, 160, 230),
+    LC([(0.25, 0.552, 0.99, 0.646)], 110, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.3, 0.25, 0.6, 0.85), pb=(120, 160, 230), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'ERROL MORRIS'], ccol=(170, 200, 240),
+    ft='c', fcol=(170, 186, 220), fin=OLD, seed=1988)
+
+# The Unbearable Lightness of Being (1988): a 2-tape box; the poster's violet dark, its white italic THE UNBEARABLE / LIGHTNESS OF BEING lifted in two lines side by side, Juliette Binoche in the bowler hat
+std('the-unbearable-lightness-of-being-1988', ('grad', [(0, (60, 50, 100)), (.6, (18, 14, 34)), (1, (2, 2, 8))]), WHT,
+    [L([(0.428, 0.045, 0.572, 0.093), (0.228, 0.1, 0.77, 0.144)], 120, WHT, mode='light', valign='base', speck=0, gapf=.3),
+     L([(0.268, 0.151, 0.73, 0.197), (0.345, 0.203, 0.655, 0.242)], 120, WHT, mode='light', valign='base', speck=0, gapf=.3)], tgap=10,
+    photo=ph(0.42, 0.42, 0.42, 0.7), pb=(200, 190, 240), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((120, 90, 190), WHT),
+    ft='e', fcol=(200, 196, 220), fin=OLD, seed=1988, **TWO)
+
+# The Vanishing (1988): black, the poster's orange spaced THE VANISHING keyed off it, the service station's lights at night (no logo file: Argos Films, from IMDb's company credits)
+std('the-vanishing-1988', ('grad', [(0, (30, 26, 20)), (.6, (10, 8, 6)), (1, (2, 2, 2))]), (226, 120, 50),
+    L((0.17, 0.122, 0.935, 0.18), 76, (226, 120, 50), mode='key', key=(220, 120, 50), t=(70, 160)),
+    photo=ph(0.5, 0.9, 1.0, 0.3), pb=(226, 120, 50), studio=['ARGOS FILMS'], scol=(226, 120, 50), order='lTPCF', credit=['EEN FILM VAN', 'GEORGE SLUIZER'], ccol=(220, 200, 180),
+    ft='d', fcol=(200, 190, 180), fin=OLD, seed=1988)
+
+# Who Framed Roger Rabbit (1988): Amblin, a slipcase; Toontown's sky, the poster's red arched banner with its yellow Who framed ROGER RABBIT cut off it whole, Roger and Jessica over Eddie Valiant in Benny the Cab
+std('who-framed-roger-rabbit-1988', ('grad', [(0, (60, 120, 210)), (.5, (40, 80, 170)), (1, (10, 20, 60))]), (250, 220, 40),
+    LC([(0.095, 0.095, 0.955, 0.325)], 150, cuts=[plate_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3) | ((a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .4)))]),
+    photo=ph(0.5, 0.6, 0.86, 0.95), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['BOB HOSKINS'], ccol=WHT, stick=BAR('88 0622', top='ANIMATION', fill=(240, 236, 210)),
+    ft='a', vbox=(220, 30, 40), fcol=(220, 230, 246), fin=RENTAL, seed=1988)
+
+# Batman (1989): black, the poster's gold Bat-symbol over its outlined gold B A T M A N, each cut off it in its own colours
+std('batman-1989', ('grad', [(0, (30, 30, 36)), (.6, (8, 8, 10)), (1, (0, 0, 0))]), (250, 190, 60),
+    LC([(0.1, 0.74, 0.9, 0.885)], 90, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 2] < .45), minf=.05, close=2)]),
+    photo=ph(0.5, 0.31, 0.9, 0.62), pb=(250, 190, 60), lg=WHT, lw=.5, order='LPTCF', credit=['MICHAEL KEATON', 'JACK NICHOLSON'], ccol=(250, 210, 120),
+    ft='b', vbox=(250, 190, 60), vink=(10, 8, 4), fcol=(220, 200, 160), fin=RENTAL, seed=1989)
+
+# Dead Poets Society (1989): Touchstone, a slipcase; the poster's wheat gold, its dark-red ruled DEAD / POETS / SOCIETY cut off it into one line, the boys carrying Keating's pupil through the field
+std('dead-poets-society-1989', ('grad', [(0, (230, 190, 130)), (.6, (200, 150, 90)), (1, (90, 60, 30))]), (110, 30, 30),
+    LC([(0.312, 0.185, 0.693, 0.268), (0.312, 0.272, 0.693, 0.352), (0.312, 0.355, 0.693, 0.405)], 84, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .42)] * 3),
+    photo=ph(0.5, 0.67, 0.86, 0.6), pb=(110, 30, 30), lg=(80, 30, 20), lw=.55, order='LPTCF', credit=['ROBIN WILLIAMS'], ccol=(80, 30, 20),
+    ft='d', fcol=(70, 40, 20), fin=RENTAL, seed=1989)
+
+# Do the Right Thing (1989): the poster's street blue, its yellow hand-lettered DO THE / RIGHT / THING with its coloured bars cut off it into one line, Mookie with the pizza box (Universal; director from IMDb)
+std('do-the-right-thing-1989', ('grad', [(0, (40, 90, 200)), (.5, (24, 60, 160)), (1, (6, 16, 50))]), (250, 230, 60),
+    LC([(0.355, 0.21, 0.665, 0.315), (0.36, 0.33, 0.645, 0.432), (0.355, 0.442, 0.64, 0.538)], 90, valign='base', margin=0, gapf=.3,
+       cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .7) & (a[..., 2] < .5))] * 3),
+    photo=ph(0.85, 0.55, 0.3, 1.5), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTCSF', credit=['A SPIKE LEE', 'JOINT'], ccol=(250, 230, 120), stick=RWD(),
+    ft='a', vbox=(220, 30, 30), fcol=(220, 226, 246), fin=RENTAL, seed=1989)
+
+# For All Mankind (1989): black space, the poster's white FOR ALL MANKIND lifted, the astronaut on the Moon (National Geographic logo; director from IMDb)
+std('for-all-mankind-1989', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    L((0.055, 0.133, 0.958, 0.19), 70, WHT, mode='light'),
+    photo=ph(0.5, 0.55, 0.7, 1.4), pb=(200, 200, 200), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'AL REINERT'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=OLD, seed=1989)
+
+# Glory (1989): the poster's dusk blue, its white serif GLORY lifted, Washington, Freeman and Broderick in their kepis
+std('glory-1989', ('grad', [(0, (100, 120, 150)), (.5, (40, 50, 70)), (1, (8, 8, 14))]), WHT,
+    L((0.125, 0.868, 0.895, 0.952), 100, WHT, mode='light'),
+    photo=ph(0.55, 0.35, 0.86, 0.9), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['DENZEL WASHINGTON', 'MORGAN FREEMAN'], ccol=WHT,
+    ft='c', fcol=(200, 206, 220), fin=RENTAL, seed=1989)
+
+# How to Get Ahead in Advertising (1989): the poster's sky, its orange stone HOW TO GET AHEAD IN ADVERTISING monument cut off it whole, Dennis with his arms out over the fields
+std('how-to-get-ahead-in-advertising-1989', ('grad', [(0, (100, 200, 230)), (.5, (60, 160, 200)), (1, (20, 70, 60))]), (240, 120, 50),
+    LC([(0.035, 0.04, 0.975, 0.29)], 150, cuts=[comp_cut(lambda a: (a[..., 0] > a[..., 2] + .05) | (_lum(a) < .25) | ((a[..., 1] > a[..., 0] + .1) & (a[..., 2] < .5)), top=1, close=3)]),
+    photo=ph(0.5, 0.55, 0.8, 1.0), pb=(240, 120, 50), lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', (240, 120, 50), WHT),
+    ft='b', fcol=(230, 240, 240), fin=OLD, seed=1989)
+
+# Indiana Jones and the Last Crusade (1989): the poster's sun-bleached parchment, its orange-to-yellow INDIANA JONES / and the / LAST CRUSADE cut off it line by line as they are, parchment and all (a colour cut left holes: the lettering's own oranges are the parchment's), Indy and his father
+std('indiana-jones-and-the-last-crusade-1989', ('grad', [(0, (230, 200, 150)), (.5, (200, 160, 110)), (1, (90, 60, 30))]), (40, 26, 16),
+    LC([(0.21, 0.716, 0.795, 0.79), (0.4, 0.792, 0.59, 0.81), (0.28, 0.81, 0.73, 0.842)], 90, valign='base', margin=0, gapf=.1,
+       cuts=[key_cut(lambda a: _lum(a) >= 0)] * 3),
+    photo=ph(0.55, 0.42, 0.7, 0.8), pb=(60, 40, 20), lg=(60, 40, 20), lw=.55, order='LPTF',
+    ft='d', fcol=(50, 34, 20), fin=RENTAL, seed=1989)
+
+# The Killer (1989): the poster's white, its red brushed THE KILLER keyed off it, Chow Yun-fat with two pistols (no logo file: Film Workshop, from IMDb's company credits)
+std('the-killer-1989', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (220, 30, 30),
+    L((0.058, 0.858, 0.936, 0.946), 96, (220, 30, 30), mode='key', key=(220, 30, 30), t=(70, 160)),
+    photo=ph(0.55, 0.45, 0.8, 1.2), pb=(220, 30, 30), studio=['FILM WORKSHOP'], scol=(30, 30, 30), order='lPTCF', credit=['A JOHN WOO', 'FILM'], ccol=(30, 30, 30),
+    ft='a', vbox=(220, 30, 30), fcol=(30, 30, 30), fin=RENTAL, seed=1989)
+
+# The Little Mermaid (1989): Disney clamshell; the sea's blues, the poster's gold THE LITTLE / MERMAID cut off it, Ariel's face in the diamond
+disney('the-little-mermaid-1989', ('grad', [(0, (40, 160, 220)), (.5, (30, 110, 190)), (1, (10, 40, 100))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.395, 0.757, 0.588, 0.791), (0.21, 0.79, 0.77, 0.86)], 110, valign='base', margin=0, gapf=.25, outline=((60, 40, 10), 1.6),
+                cuts=[key_cut(lambda a: (_lum(a) > .55) & (a[..., 0] > a[..., 2] + .06)), comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 0] > a[..., 2] + .15) & (a[..., 1] > .4), minf=.02, close=2)]),
+       face=ph(.47, .3, .13, 1.4), lcol=WHT)
