@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| GoldenEye (1995) | Vault 1990s | `logos/goldeneye-1995-title.png` | cut, but the gold 007 with the gun barrel is left off (sits on Bond's sleeve) and the chrome E breaks up |
+| Jumanji (1995) | Vault 1990s | `logos/jumanji-1995-title.png` | typeset; carved gold letters among leaves of the same colours |
+| Die Hard with a Vengeance (1995) | Vault 1990s | `logos/die-hard-with-a-vengeance-1995-title.png` | typeset; red letters in a fireball of nearly their own colour |
 | Ed Wood (1994) | Vault 1990s | `logos/ed-wood-1994-title.png` | typeset; chrome letters tipped back in perspective |
 | Short Cuts (1993) | Vault 1990s | `logos/short-cuts-1993-title.png` | typeset; the title is spelled by people's long slanting shadows |
 | The Player (1992) | Vault 1990s | `logos/the-player-1992-title.png` | cut, but the spotlight beam runs into the P, so the lettering had to be thinned and reads faint |

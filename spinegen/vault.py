@@ -2849,3 +2849,75 @@ std('the-shawshank-redemption-1994', ('grad', [(0, (70, 50, 30)), (.6, (20, 14, 
 disney('a-goofy-movie-1995', ('grad', [(0, (120, 60, 150)), (.5, (200, 110, 120)), (1, (40, 120, 170))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.1, 0.07, 0.9, 0.31)], 130, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45)) | (_lum(a) < .18) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01, close=2)]),
        face=ph(.6, .655, .14, 1.4), lcol=WHT)
+
+# Ace Ventura: When Nature Calls (1995): the jungle's green, the poster's red ACE VENTURA and its arched WHEN NATURE CALLS cut off it whole, Ace mid-leap in the striped trousers
+std('ace-ventura-when-nature-calls-1995', ('grad', [(0, (40, 140, 90)), (.5, (20, 90, 60)), (1, (6, 40, 30))]), (230, 40, 40),
+    LC([(0.05, 0.455, 0.95, 0.65)], 140, cuts=[comp_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .35)) | ((a[..., 0] > .75) & (a[..., 1] > .6) & (a[..., 2] < .4)), minf=.005, close=2)]),
+    photo=ph(0.4, 0.18, 0.7, 1.0), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', (250, 220, 40), (20, 20, 20)),
+    ft='b', fcol=(210, 236, 220), fin=RENTAL, seed=1995)
+
+# Bad Boys (1995): the poster's orange haze, its black stencilled BAD BOYS between the rules cut off it, the three of them walking out with the Porsche
+std('bad-boys-1995', ('grad', [(0, (250, 200, 80)), (.5, (240, 160, 50)), (1, (130, 70, 20))]), (20, 16, 10),
+    LC([(0.07, 0.115, 0.93, 0.248)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.5, 0.6, 0.9, 0.85), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['WILL SMITH', 'MARTIN LAWRENCE'], ccol=(20, 16, 10),
+    ft='a', vbox=(20, 16, 10), vink=(250, 200, 80), fcol=(30, 20, 10), fin=RENTAL, seed=1995)
+
+# Batman Forever (1995): the night's blue, the poster's white BATMAN / FOREVER lifted into one line, Batman, Robin and the villains crowded below
+std('batman-forever-1995', ('grad', [(0, (30, 50, 110)), (.6, (8, 14, 36)), (1, (0, 2, 8))]), WHT,
+    L([(0.185, 0.77, 0.828, 0.83), (0.29, 0.846, 0.73, 0.886)], 96, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.38, 0.86, 0.95), pb=(100, 200, 230), lg=WHT, lw=.5, order='LPTSF', stick=BAR('95 0616', top='ACTION', fill=(226, 230, 240)),
+    ft='c', fcol=(180, 196, 230), fin=RENTAL, seed=1995)
+
+# Braveheart (1995): the poster's fire orange, its white serif BRAVEHEART lifted, Wallace with the sword
+std('braveheart-1995', ('grad', [(0, (230, 120, 40)), (.5, (120, 50, 20)), (1, (20, 8, 4))]), WHT,
+    L((0.045, 0.865, 0.952, 0.937), 90, WHT, mode='light'),
+    photo=ph(0.55, 0.35, 0.7, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['MEL GIBSON'], ccol=WHT,
+    ft='d', fcol=(240, 210, 190), fin=RENTAL, seed=1995)
+
+# Casino (1995): black, the poster's gold CASINO and the red dice cut off it, De Niro, Stone and Pesci
+std('casino-1995', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (230, 160, 60),
+    LC([(0.1, 0.718, 0.897, 0.825)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 2] < .4) & (a[..., 0] > a[..., 2] + .2), minf=.02)]),
+    photo=ph(0.5, 0.33, 0.9, 0.8), pb=(230, 160, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=(240, 200, 140),
+    ft='b', fcol=(220, 200, 170), fin=RENTAL, seed=1995)
+
+# Clueless (1995): the poster's white, its black oval with the white Clueless cut off it whole, Cher, Dionne and Tai on the stairs
+std('clueless-1995', ('grad', [(0, (250, 240, 246)), (.6, (240, 220, 230)), (1, (150, 110, 130))]), (20, 20, 20),
+    LC([(0.13, 0.835, 0.865, 0.99)], 130, cuts=[plate_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.48, 0.35, 0.86, 0.9), pb=(220, 30, 60), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
+    ft='e', fcol=(30, 20, 26), fin=RENTAL, seed=1995)
+
+# Dead Man (1995): the poster's grey, its white brushed DEAD / MAN lifted into one line, the riders in the ferns (Pandora logo)
+std('dead-man-1995', ('grad', [(0, (120, 120, 120)), (.6, (50, 50, 50)), (1, (10, 10, 10))]), WHT,
+    LC([(0.12, 0.175, 0.91, 0.38), (0.14, 0.395, 0.87, 0.575)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) > .68, minf=.02, close=2)] * 2),
+    photo=ph(0.5, 0.82, 0.9, 0.45), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
+    ft='a', fcol=(220, 220, 220), fin=OLD, seed=1995)
+
+# Die Hard with a Vengeance (1995): the fireball's orange, DIE HARD typeset in heavy capitals in the logo's red with a white keyline over WITH A VENGEANCE in white (parked for Ian's logo, see data/logos-wanted.md: the red letters sit in the fireball of nearly their own colour, so the cut broke up), McClane's bloodied face
+std('die-hard-with-a-vengeance-1995', ('grad', [(0, (200, 100, 40)), (.5, (110, 40, 14)), (1, (14, 4, 2))]), WHT,
+    [T('DIE HARD', 'intbk', 110, (210, 30, 30), outline=(WHT, 2.4)), T('WITH A VENGEANCE', 'intbk', 46, WHT)], tgap=8,
+    photo=ph(0.5, 0.33, 0.86, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='e', vbox=(200, 30, 30), fcol=(240, 210, 190), fin=RENTAL, seed=1995)
+
+# Friday (1995): the poster's blue, its white Friday with the red shadow cut off it, Craig and Smokey on the porch
+std('friday-1995', ('grad', [(0, (30, 70, 160)), (.6, (10, 26, 70)), (1, (2, 6, 20))]), WHT,
+    LC([(0.14, 0.05, 0.86, 0.235)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .78) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)]),
+    photo=ph(0.5, 0.55, 0.9, 0.8), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['ICE CUBE', 'CHRIS TUCKER'], ccol=WHT, stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='c', fcol=(200, 210, 240), fin=RENTAL, seed=1995)
+
+# GoldenEye (1995): the poster's midnight blue, its silver GOLDENEYE cut off it (parked for Ian's logo, see data/logos-wanted.md: the gold 007 and gun barrel sit on Bond's sleeve and wouldn't cut, and the silver E's shine breaks up), Bond's kiss
+std('goldeneye-1995', ('grad', [(0, (30, 50, 90)), (.6, (8, 14, 30)), (1, (2, 2, 6))]), (220, 220, 230),
+    LC([(0.045, 0.495, 0.955, 0.59)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .8) & (_sat(a) < .15), minf=.05)]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['PIERCE BROSNAN'], ccol=WHT,
+    ft='a', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1995)
+
+# Heat (1995): the night's blue, the poster's spaced blue chrome H E A T cut off it, Pacino and De Niro
+std('heat-1995', ('grad', [(0, (20, 40, 80)), (.6, (6, 12, 26)), (1, (0, 2, 6))]), (120, 180, 240),
+    LC([(0.1, 0.885, 0.89, 0.955)], 90, cuts=[comp_cut(lambda a: (a[..., 2] > .45) & (a[..., 2] > a[..., 0] + .08) | (_lum(a) > .85), minf=.05)]),
+    photo=ph(0.5, 0.3, 0.86, 0.8), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A MICHAEL MANN', 'FILM'], ccol=(170, 206, 246),
+    ft='d', fcol=(170, 190, 220), fin=RENTAL, seed=1995)
+
+# Jumanji (1995): the jungle's green, JUMANJI typeset in heavy capitals in the logo's gold with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved gold letters stand in leaves and vines of the same colours, so the cut came out in pieces), the stampede under the title
+std('jumanji-1995', ('grad', [(0, (40, 120, 40)), (.5, (20, 70, 24)), (1, (6, 24, 8))]), (250, 200, 40),
+    T('JUMANJI', 'intbk', 120, (250, 200, 40), outline=((60, 30, 10), 2.4)),
+    photo=ph(0.5, 0.68, 0.86, 0.75), pb=(250, 200, 40), lg=WHT, lw=.5, order='LTPSF', stick=BAR('95 1215', top='FAMILY', fill=(240, 232, 210)),
+    ft='b', fcol=(220, 236, 200), fin=RENTAL, seed=1995)
