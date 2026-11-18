@@ -2193,3 +2193,75 @@ std('this-is-spinal-tap-1984', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 4)), (1
     LC([(0.1, 0.064, 0.912, 0.322)], 130, cuts=[comp_cut(lambda a: _lum(a) > .2, minf=.005, close=2)]),
     photo=ph(0.5, 0.65, 0.7, 1.0), pb=(240, 200, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A ROB REINER', 'FILM'], ccol=(240, 210, 140),
     ft='a', vbox=(240, 200, 90), vink=(20, 14, 6), fcol=(220, 200, 160), fin=OLD, seed=1984)
+
+# After Hours (1985): night, the poster's red neon script After Hours cut off it, Griffin Dunne pinned by the clock's hands (company from the logo file: Geffen)
+std('after-hours-1985', ('grad', [(0, (30, 40, 90)), (.6, (10, 14, 36)), (1, (2, 2, 10))]), (240, 80, 70),
+    LC([(0.08, 0.03, 0.985, 0.2)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .6) & (a[..., 2] < .6), minf=.01, keep=lambda cx, cy: cy < .8 or cx > .35)]),
+    photo=ph(0.5, 0.65, 0.9, 0.85), pb=(240, 80, 70), lg=WHT, lw=.5, order='LTPF',
+    ft='c', fcol=(200, 200, 230), fin=RENTAL, seed=1985)
+
+# Back to the Future (1985): the night road, the poster's whole BACK TO THE FUTURE logo cut off it in its own colours, Marty checking his watch by the DeLorean
+std('back-to-the-future-1985', ('grad', [(0, (30, 50, 110)), (.5, (12, 18, 46)), (1, (60, 20, 6))]), (250, 160, 40),
+    LC([(0.055, 0.044, 0.468, 0.176)], 140, cuts=[comp_cut(lambda a: ((a[..., 0] > .55) & (a[..., 0] > a[..., 2] + .25)) | (_lum(a) > .88), minf=.005, close=2)]),
+    photo=ph(0.55, 0.52, 0.7, 1.0), pb=(250, 160, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('85 0703', top='SCI-FI', fill=(232, 228, 214)),
+    ft='a', vbox=(250, 160, 40), vink=(30, 12, 4), fcol=(220, 210, 200), fin=RENTAL, seed=1985)
+
+# Blood Simple (1985): black, the poster's neon BLOOD / SIMPLE (pink, blue and red tubes) cut off it into one line, the figure crawling in the headlights (no logo file: River Road Productions, from IMDb's company credits)
+std('blood-simple-1985', ('grad', [(0, (40, 20, 50)), (.6, (12, 6, 16)), (1, (2, 2, 4))]), (240, 120, 160),
+    LC([(0.115, 0.082, 0.886, 0.226), (0.115, 0.235, 0.878, 0.357)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (_lum(a) > .25) & (a.max(-1) > .45))] * 2),
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(120, 200, 240), studio=['RIVER ROAD', 'PRODUCTIONS'], scol=(220, 200, 230), order='lPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(220, 200, 230),
+    ft='b', fcol=(200, 190, 210), fin=OLD, seed=1985)
+
+# Brazil (1985): charcoal, so the neon reads, its pink and blue neon script Brazil cut off it, Sam flying with the wings (no logo file: Embassy International Pictures, from IMDb's company credits)
+std('brazil-1985', ('grad', [(0, (70, 70, 76)), (.5, (34, 34, 40)), (1, (6, 6, 8))]), (230, 90, 170),
+    LC([(0.195, 0.12, 0.915, 0.315)], 120, outline=((250, 120, 200), 2.2), cuts=[comp_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .55) & (a[..., 2] > .45)) | ((a[..., 2] > .6) & (a[..., 0] < .45)), minf=.01, close=3)]),
+    photo=ph(0.42, 0.55, 0.7, 1.1), pb=(220, 220, 226), studio=['EMBASSY', 'INTERNATIONAL'], scol=(220, 220, 226), order='lPTCF', credit=['A TERRY GILLIAM', 'FILM'], ccol=(220, 220, 226),
+    dotst=('SCI-FI', (230, 90, 170), WHT), ft='d', fcol=(200, 200, 206), fin=OLD, seed=1985)
+
+# Clue (1985): black, the poster's white Clue lifted, the mansion with the suspects in its windows
+std('clue-1985', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.21, 0.045, 0.79, 0.145)], 110, cuts=[key_cut(lambda a: _lum(a) > .8)]),
+    photo=ph(0.5, 0.55, 0.8, 1.2), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TIM CURRY', 'EILEEN BRENNAN'], ccol=WHT,
+    ft='e', vbox=(200, 30, 30), fcol=(200, 200, 200), fin=RENTAL, seed=1985)
+
+# Pee-wee's Big Adventure (1985): the poster's white and sky-blue swirl, its red PEE-WEE'S / BIG ADVENTURE keyed off it into one line, Pee-wee leaping off his bike
+std('pee-wee-s-big-adventure-1985', ('grad', [(0, (230, 244, 252)), (.5, (160, 214, 240)), (1, (60, 120, 170))]), (220, 30, 40),
+    L([(0.2, 0.07, 0.81, 0.172), (0.25, 0.178, 0.77, 0.227)], 84, (220, 30, 40), mode='key', key=(220, 40, 44), t=(70, 160), valign='base', speck=0),
+    photo=ph(0.55, 0.55, 0.8, 1.1), pb=(220, 30, 40), lg=(30, 30, 40), lw=.55, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='b', fcol=(30, 30, 40), fin=RENTAL, seed=1985)
+
+# Ran (1985): the poster's storm-blue sky, its red kanji and red serif RAN keyed off it, the riders on the plain below
+std('ran-1985', ('grad', [(0, (80, 140, 170)), (.5, (30, 70, 100)), (1, (6, 20, 30))]), (220, 30, 30),
+    L([(0.4, 0.16, 0.556, 0.247), (0.244, 0.255, 0.737, 0.455)], 120, (220, 30, 30), mode='key', key=(220, 30, 30), t=(70, 160), valign='mid', speck=0, gapf=.3),
+    photo=ph(0.5, 0.82, 0.9, 0.4), pb=(220, 30, 30), lg=WHT, lw=.5, order='LTPF',
+    ft='a', vbox=(220, 30, 30), fcol=(210, 220, 230), fin=OLD, seed=1985)
+
+# Tampopo (1985): the poster's yellow, its red brushed TAMPOPO (rising in an arc on the poster) cut off it whole and turned level, the noodle bowl and its eaters
+std('tampopo-1985', ('grad', [(0, (252, 230, 90)), (.5, (246, 210, 60)), (1, (160, 120, 20))]), (220, 40, 40),
+    LC([(0.03, 0.015, 0.79, 0.36)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .35) & (a[..., 2] < .4), minf=.05, rot=-22)]),
+    photo=ph(0.55, 0.62, 0.8, 0.9), pb=(220, 40, 40), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'JUZO ITAMI'], ccol=(60, 30, 20),
+    ft='c', fcol=(60, 30, 20), fin=OLD, seed=1985)
+
+# The Black Cauldron (1985): Disney clamshell; the poster's night blue, its orange THE BLACK / CAULDRON cut off it into one line, Taran's face in the diamond
+disney('the-black-cauldron-1985', ('grad', [(0, (30, 40, 90)), (.5, (50, 60, 120)), (1, (14, 18, 44))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.24, 0.698, 0.71, 0.786), (0.195, 0.785, 0.795, 0.87)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .5) & (a[..., 2] < .35), minf=.01)] * 2),
+       face=ph(.585, .41, .15, 1.4), lcol=WHT)
+
+# Aliens (1986): the hive's blue-black, the poster's spaced A L I E N S lifted, Ripley carrying Newt with the pulse rifle
+std('aliens-1986', ('grad', [(0, (30, 70, 100)), (.6, (8, 20, 34)), (1, (0, 2, 6))]), (150, 190, 230),
+    L((0.245, 0.855, 0.765, 0.945), 70, (170, 200, 240), mode='light', speck=0),
+    photo=ph(0.5, 0.3, 0.7, 1.15), pb=(150, 190, 230), lg=WHT, lw=.5, order='LPTCSF', credit=['SIGOURNEY WEAVER'], ccol=(170, 200, 240), dotst=('SCI-FI', (150, 190, 230), (10, 20, 34)),
+    ft='e', fcol=(170, 190, 220), fin=RENTAL, seed=1986)
+
+# An American Tail (1986): the poster's sky, its red AN / AMERICAN / TAIL keyed off it word by word into one line, Fievel in his blue hat (Amblin, a slipcase)
+std('an-american-tail-1986', ('grad', [(0, (120, 200, 240)), (.5, (60, 160, 220)), (1, (20, 70, 120))]), (220, 30, 40),
+    LC([(0.225, 0.028, 0.35, 0.08), (0.07, 0.05, 0.945, 0.176), (0.07, 0.178, 0.35, 0.27)], 110, valign='base', margin=0, gapf=.25, outline=(WHT, 2.4),
+       cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.05), comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), keep=lambda cx, cy: cy > .25, minf=.05), comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.05)]),
+    photo=ph(0.5, 0.48, 0.5, 1.0), pb=(220, 30, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='d', fcol=(230, 240, 250), fin=RENTAL, seed=1986)
+
+# Blue Velvet (1986): deep blue, the poster's white script Blue Velvet lifted, the lovers in the blue light
+std('blue-velvet-1986', ('grad', [(0, (30, 40, 110)), (.6, (8, 12, 40)), (1, (2, 2, 10))]), WHT,
+    L((0.06, 0.19, 0.958, 0.298), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.65, 0.9, 0.6), pb=(110, 140, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID LYNCH', 'FILM'], ccol=(170, 190, 250),
+    ft='b', fcol=(170, 180, 230), fin=OLD, seed=1986)
