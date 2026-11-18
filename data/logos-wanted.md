@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Short Cuts (1993) | Vault 1990s | `logos/short-cuts-1993-title.png` | typeset; the title is spelled by people's long slanting shadows |
 | The Player (1992) | Vault 1990s | `logos/the-player-1992-title.png` | cut, but the spotlight beam runs into the P, so the lettering had to be thinned and reads faint |
 | Groundhog Day (1993) | Vault 1990s | `logos/groundhog-day-1993-title.png` | typeset; white letters on a pale sky lost their insides |
 | Fearless (1993) | Vault 1990s | `logos/fearless-1993-title.png` | typeset; the poster's letters are see-through (sky shows in them) |
