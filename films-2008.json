@@ -7,7 +7,17 @@
       "rating10": 10,
       "watched": "2008-01-26",
       "imdb": "tt0053198",
-      "poster": ""
+      "poster": "posters/the-400-blows-1959.jpg",
+      "year": 1959,
+      "tmdb": 147,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "François Truffaut",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Les Films du Carrosse",
+      "logo": "logos/53.png"
     },
     {
       "title": "There Will Be Blood",
@@ -15,7 +25,17 @@
       "rating10": 10,
       "watched": "2008-07-18",
       "imdb": "tt0469494",
-      "poster": ""
+      "poster": "posters/there-will-be-blood-2007.jpg",
+      "year": 2007,
+      "tmdb": 7345,
+      "tmdbKind": "movie",
+      "runtime": 158,
+      "director": "Paul Thomas Anderson",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Paramount Vantage",
+      "logo": "logos/838.png"
     },
     {
       "title": "The Dark Knight",
@@ -23,7 +43,19 @@
       "rating10": 9.5,
       "watched": "2008-07-18",
       "imdb": "tt0468569",
-      "poster": ""
+      "poster": "posters/the-dark-knight-2008.jpg",
+      "year": 2008,
+      "tmdb": 155,
+      "tmdbKind": "movie",
+      "runtime": 152,
+      "director": "Christopher Nolan",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Juno",
@@ -31,7 +63,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0467406",
-      "poster": ""
+      "poster": "posters/juno-2007.jpg",
+      "year": 2007,
+      "tmdb": 7326,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Jason Reitman",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Mandate Pictures",
+      "logo": "logos/771.png"
     },
     {
       "title": "Ed Wood",
@@ -39,7 +83,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0109707",
-      "poster": ""
+      "poster": "posters/ed-wood-1994.jpg",
+      "year": 1994,
+      "tmdb": 522,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Tim Burton",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "History"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "No Country for Old Men",
@@ -47,15 +103,38 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0477348",
-      "poster": ""
+      "poster": "posters/no-country-for-old-men-2007.jpg",
+      "year": 2007,
+      "tmdb": 6977,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Joel Coen",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Western"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
-      "title": "Goodfellas",
+      "title": "GoodFellas",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0099685",
-      "poster": ""
+      "poster": "posters/goodfellas-1990.jpg",
+      "year": 1990,
+      "tmdb": 769,
+      "tmdbKind": "movie",
+      "runtime": 145,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Winkler Films",
+      "logo": "logos/8880.png"
     },
     {
       "title": "Magnolia",
@@ -63,7 +142,17 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0175880",
-      "poster": ""
+      "poster": "posters/magnolia-1999.jpg",
+      "year": 1999,
+      "tmdb": 334,
+      "tmdbKind": "movie",
+      "runtime": 189,
+      "director": "Paul Thomas Anderson",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "His Girl Friday",
@@ -71,7 +160,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0032599",
-      "poster": ""
+      "poster": "posters/his-girl-friday-1940.jpg",
+      "year": 1940,
+      "tmdb": 3085,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Howard Hawks",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Crime"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Bicycle Thieves",
@@ -79,7 +180,17 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0040522",
-      "poster": ""
+      "poster": "posters/bicycle-thieves-1948.jpg",
+      "year": 1948,
+      "tmdb": 5156,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Vittorio De Sica",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Lost Weekend",
@@ -87,15 +198,36 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0037884",
-      "poster": ""
+      "poster": "posters/the-lost-weekend-1945.jpg",
+      "year": 1945,
+      "tmdb": 28580,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Billy Wilder",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
-      "title": "The Sweet Life",
+      "title": "La Dolce Vita",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0053779",
-      "poster": ""
+      "poster": "posters/la-dolce-vita-1960.jpg",
+      "year": 1960,
+      "tmdb": 439,
+      "tmdbKind": "movie",
+      "runtime": 174,
+      "director": "Federico Fellini",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Cinecittà Studios",
+      "logo": "logos/1042.png"
     },
     {
       "title": "Mr. Smith Goes to Washington",
@@ -103,7 +235,18 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0031679",
-      "poster": ""
+      "poster": "posters/mr-smith-goes-to-washington-1939.jpg",
+      "year": 1939,
+      "tmdb": 3083,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Frank Capra",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Throne of Blood",
@@ -111,7 +254,18 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0050613",
-      "poster": ""
+      "poster": "posters/throne-of-blood-1957.jpg",
+      "year": 1957,
+      "tmdb": 3777,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Tunes of Glory",
@@ -119,7 +273,17 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0054412",
-      "poster": ""
+      "poster": "posters/tunes-of-glory-1960.jpg",
+      "year": 1960,
+      "tmdb": 43048,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Ronald Neame",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Knife in the Water",
@@ -127,7 +291,18 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0056291",
-      "poster": ""
+      "poster": "posters/knife-in-the-water-1962.jpg",
+      "year": 1962,
+      "tmdb": 11502,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Roman Polanski",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Doctor Zhivago",
@@ -135,7 +310,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0059113",
-      "poster": ""
+      "poster": "posters/doctor-zhivago-1965.jpg",
+      "year": 1965,
+      "tmdb": 907,
+      "tmdbKind": "movie",
+      "runtime": 200,
+      "director": "David Lean",
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "Witness for the Prosecution",
@@ -143,7 +330,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0051201",
-      "poster": ""
+      "poster": "posters/witness-for-the-prosecution-1957.jpg",
+      "year": 1957,
+      "tmdb": 37257,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Billy Wilder",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "For a Few Dollars More",
@@ -151,15 +350,37 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0059578",
-      "poster": ""
+      "poster": "posters/for-a-few-dollars-more-1965.jpg",
+      "year": 1965,
+      "tmdb": 938,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "Sergio Leone",
+      "genres": [
+        "Western"
+      ],
+      "studio": "PEA",
+      "logo": "logos/7508.png"
     },
     {
-      "title": "The Raven",
+      "title": "Le Corbeau",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0035753",
-      "poster": ""
+      "poster": "posters/le-corbeau-1943.jpg",
+      "year": 1943,
+      "tmdb": 29084,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Henri-Georges Clouzot",
+      "genres": [
+        "Mystery",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Continental Films",
+      "logo": "logos/13705.png"
     },
     {
       "title": "Samurai Rebellion",
@@ -167,7 +388,17 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0061847",
-      "poster": ""
+      "poster": "posters/samurai-rebellion-1967.jpg",
+      "year": 1967,
+      "tmdb": 27031,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "The Bad Sleep Well",
@@ -175,7 +406,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0054460",
-      "poster": ""
+      "poster": "posters/the-bad-sleep-well-1960.jpg",
+      "year": 1960,
+      "tmdb": 31589,
+      "tmdbKind": "movie",
+      "runtime": 150,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Jenny Lamour",
@@ -183,7 +426,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0039739",
-      "poster": ""
+      "poster": "posters/jenny-lamour-1947.jpg",
+      "year": 1947,
+      "tmdb": 49842,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Henri-Georges Clouzot",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Brute Force",
@@ -191,7 +446,19 @@
       "rating10": 9,
       "watched": "2008-07-18",
       "imdb": "tt0039224",
-      "poster": ""
+      "poster": "posters/brute-force-1947.jpg",
+      "year": 1947,
+      "tmdb": 28297,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Jules Dassin",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "WALL·E",
@@ -199,7 +466,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0910970",
-      "poster": ""
+      "poster": "posters/wall-e-2008.jpg",
+      "year": 2008,
+      "tmdb": 10681,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Andrew Stanton",
+      "genres": [
+        "Animation",
+        "Family",
+        "Science Fiction"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Paths of Glory",
@@ -207,7 +486,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0050825",
-      "poster": ""
+      "poster": "posters/paths-of-glory-1957.jpg",
+      "year": 1957,
+      "tmdb": 975,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "War",
+        "Drama"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "Full Metal Jacket",
@@ -215,7 +505,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0093058",
-      "poster": ""
+      "poster": "posters/full-metal-jacket-1987.jpg",
+      "year": 1987,
+      "tmdb": 600,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Kill Bill: Vol. 2",
@@ -223,7 +524,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0378194",
-      "poster": ""
+      "poster": "posters/kill-bill-vol-2-2004.jpg",
+      "year": 2004,
+      "tmdb": 393,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Quentin Tarantino",
+      "genres": [
+        "Action",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "Apocalypse Now",
@@ -231,7 +544,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0078788",
-      "poster": ""
+      "poster": "posters/apocalypse-now-1979.jpg",
+      "year": 1979,
+      "tmdb": 28,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Francis Ford Coppola",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "studio": "American Zoetrope",
+      "logo": "logos/70.png"
     },
     {
       "title": "Citizen Kane",
@@ -239,7 +563,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0033467",
-      "poster": ""
+      "poster": "posters/citizen-kane-1941.jpg",
+      "year": 1941,
+      "tmdb": 15,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Orson Welles",
+      "genres": [
+        "Mystery",
+        "Drama"
+      ],
+      "studio": "RKO Radio Pictures",
+      "logo": "logos/6.png"
     },
     {
       "title": "The Simpsons Movie",
@@ -247,7 +582,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0462538",
-      "poster": ""
+      "poster": "posters/the-simpsons-movie-2007.jpg",
+      "year": 2007,
+      "tmdb": 35,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "David Silverman",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Gracie Films",
+      "logo": "logos/18.png"
     },
     {
       "title": "Children of Men",
@@ -255,7 +602,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0206634",
-      "poster": ""
+      "poster": "posters/children-of-men-2006.jpg",
+      "year": 2006,
+      "tmdb": 9693,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Alfonso Cuarón",
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Action"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Bourne Ultimatum",
@@ -263,7 +622,20 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0440963",
-      "poster": ""
+      "poster": "posters/the-bourne-ultimatum-2007.jpg",
+      "year": 2007,
+      "tmdb": 2503,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Paul Greengrass",
+      "genres": [
+        "Action",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Unforgiven",
@@ -271,7 +643,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0105695",
-      "poster": ""
+      "poster": "posters/unforgiven-1992.jpg",
+      "year": 1992,
+      "tmdb": 33,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Clint Eastwood",
+      "genres": [
+        "Western"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Atonement",
@@ -279,7 +661,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0783233",
-      "poster": ""
+      "poster": "posters/atonement-2007.jpg",
+      "year": 2007,
+      "tmdb": 4347,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Joe Wright",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Network",
@@ -287,7 +680,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0074958",
-      "poster": ""
+      "poster": "posters/network-1976.jpg",
+      "year": 1976,
+      "tmdb": 10774,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Sidney Lumet",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "Umberto D.",
@@ -295,7 +698,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0045274",
-      "poster": ""
+      "poster": "posters/umberto-d-1952.jpg",
+      "year": 1952,
+      "tmdb": 833,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Vittorio De Sica",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Lavender Hill Mob",
@@ -303,7 +716,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0044829",
-      "poster": ""
+      "poster": "posters/the-lavender-hill-mob-1951.jpg",
+      "year": 1951,
+      "tmdb": 32961,
+      "tmdbKind": "movie",
+      "runtime": 78,
+      "director": "Charles Crichton",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Ealing Studios",
+      "logo": "logos/2650.png"
     },
     {
       "title": "Match Point",
@@ -311,7 +735,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0416320",
-      "poster": ""
+      "poster": "posters/match-point-2005.jpg",
+      "year": 2005,
+      "tmdb": 116,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Woody Allen",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "BBC Film",
+      "logo": "logos/288.png"
     },
     {
       "title": "The Trouble with Harry",
@@ -319,7 +755,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0048750",
-      "poster": ""
+      "poster": "posters/the-trouble-with-harry-1955.jpg",
+      "year": 1955,
+      "tmdb": 11219,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Spellbound",
@@ -327,7 +774,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0038109",
-      "poster": ""
+      "poster": "posters/spellbound-1945.jpg",
+      "year": 1945,
+      "tmdb": 4174,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The 39 Steps",
@@ -335,7 +794,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0026029",
-      "poster": ""
+      "poster": "posters/the-39-steps-1935.jpg",
+      "year": 1935,
+      "tmdb": 260,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Sullivan's Travels",
@@ -343,7 +813,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0034240",
-      "poster": ""
+      "poster": "posters/sullivan-s-travels-1941.jpg",
+      "year": 1941,
+      "tmdb": 16305,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Preston Sturges",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Adventure"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Apartment",
@@ -351,7 +833,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0053604",
-      "poster": ""
+      "poster": "posters/the-apartment-1960.jpg",
+      "year": 1960,
+      "tmdb": 284,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Billy Wilder",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Ace in the Hole",
@@ -359,7 +853,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0043338",
-      "poster": ""
+      "poster": "posters/ace-in-the-hole-1951.jpg",
+      "year": 1951,
+      "tmdb": 25364,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Billy Wilder",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Grave of the Fireflies",
@@ -367,7 +871,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0095327",
-      "poster": ""
+      "poster": "posters/grave-of-the-fireflies-1988.jpg",
+      "year": 1988,
+      "tmdb": 12477,
+      "tmdbKind": "movie",
+      "runtime": 89,
+      "director": "Isao Takahata",
+      "genres": [
+        "Animation",
+        "Drama",
+        "War"
+      ],
+      "studio": "Studio Ghibli",
+      "logo": "logos/10342.png"
     },
     {
       "title": "It's a Wonderful Life",
@@ -375,7 +891,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0038650",
-      "poster": ""
+      "poster": "posters/it-s-a-wonderful-life-1946.jpg",
+      "year": 1946,
+      "tmdb": 1585,
+      "tmdbKind": "movie",
+      "runtime": 131,
+      "director": "Frank Capra",
+      "genres": [
+        "Drama",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Ladykillers",
@@ -383,15 +911,36 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0048281",
-      "poster": ""
+      "poster": "posters/the-ladykillers-1955.jpg",
+      "year": 1955,
+      "tmdb": 5506,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Alexander Mackendrick",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Ealing Studios",
+      "logo": "logos/2650.png"
     },
     {
-      "title": "Hate",
+      "title": "La Haine",
       "rating": 4,
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0113247",
-      "poster": ""
+      "poster": "posters/la-haine-1995.jpg",
+      "year": 1995,
+      "tmdb": 406,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Mathieu Kassovitz",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "La Sept Cinéma",
+      "logo": "logos/16366.png"
     },
     {
       "title": "Oliver Twist",
@@ -399,7 +948,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0040662",
-      "poster": ""
+      "poster": "posters/oliver-twist-1948.jpg",
+      "year": 1948,
+      "tmdb": 10949,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "David Lean",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Our Man in Havana",
@@ -407,7 +966,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0054152",
-      "poster": ""
+      "poster": "posters/our-man-in-havana-1960.jpg",
+      "year": 1960,
+      "tmdb": 25495,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Carol Reed",
+      "genres": [
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Charlie Chan's Secret",
@@ -415,7 +985,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0027442",
-      "poster": ""
+      "poster": "posters/charlie-chan-s-secret-1936.jpg",
+      "year": 1936,
+      "tmdb": 33708,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Gordon Wiles",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "The Tenant",
@@ -423,7 +1005,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0074811",
-      "poster": ""
+      "poster": "posters/the-tenant-1976.jpg",
+      "year": 1976,
+      "tmdb": 11482,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Roman Polanski",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Charlie Chan in Egypt",
@@ -431,7 +1025,17 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0026197",
-      "poster": ""
+      "poster": "posters/charlie-chan-in-egypt-1935.jpg",
+      "year": 1935,
+      "tmdb": 33390,
+      "tmdbKind": "movie",
+      "runtime": 73,
+      "director": "Louis King",
+      "genres": [
+        "Mystery"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Charlie Chan at Monte Carlo",
@@ -439,7 +1043,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0028707",
-      "poster": ""
+      "poster": "posters/charlie-chan-at-monte-carlo-1937.jpg",
+      "year": 1937,
+      "tmdb": 38455,
+      "tmdbKind": "movie",
+      "runtime": 71,
+      "director": "Eugene Forde",
+      "genres": [
+        "Mystery",
+        "Comedy"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Charlie Chan at the Opera",
@@ -447,7 +1062,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0027440",
-      "poster": ""
+      "poster": "posters/charlie-chan-at-the-opera-1936.jpg",
+      "year": 1936,
+      "tmdb": 28044,
+      "tmdbKind": "movie",
+      "runtime": 68,
+      "director": "H. Bruce Humberstone",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Charlie Chan at the Race Track",
@@ -455,7 +1082,20 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0027441",
-      "poster": ""
+      "poster": "posters/charlie-chan-at-the-race-track-1936.jpg",
+      "year": 1936,
+      "tmdb": 33387,
+      "tmdbKind": "movie",
+      "runtime": 70,
+      "director": "H. Bruce Humberstone",
+      "genres": [
+        "Mystery",
+        "Comedy",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Spartacus",
@@ -463,7 +1103,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0054331",
-      "poster": ""
+      "poster": "posters/spartacus-1960.jpg",
+      "year": 1960,
+      "tmdb": 967,
+      "tmdbKind": "movie",
+      "runtime": 197,
+      "director": "Stanley Kubrick",
+      "genres": [
+        "History",
+        "Drama",
+        "Adventure"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Charlie Chan in London",
@@ -471,7 +1123,18 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0024968",
-      "poster": ""
+      "poster": "posters/charlie-chan-in-london-1934.jpg",
+      "year": 1934,
+      "tmdb": 33391,
+      "tmdbKind": "movie",
+      "runtime": 79,
+      "director": "Eugene Forde",
+      "genres": [
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Fox Film Corporation",
+      "logo": "logos/5488.png"
     },
     {
       "title": "Charlie Chan in Paris",
@@ -479,7 +1142,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0026198",
-      "poster": ""
+      "poster": "posters/charlie-chan-in-paris-1935.jpg",
+      "year": 1935,
+      "tmdb": 33393,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Hamilton MacFadden",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Fox Film Corporation",
+      "logo": "logos/5488.png"
     },
     {
       "title": "Charlie Chan in Shanghai",
@@ -487,7 +1162,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0026199",
-      "poster": ""
+      "poster": "posters/charlie-chan-in-shanghai-1935.jpg",
+      "year": 1935,
+      "tmdb": 33395,
+      "tmdbKind": "movie",
+      "runtime": 71,
+      "director": "James Tinling",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Fox Film Corporation",
+      "logo": "logos/5488.png"
     },
     {
       "title": "Charlie Chan at the Circus",
@@ -495,7 +1182,20 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0027439",
-      "poster": ""
+      "poster": "posters/charlie-chan-at-the-circus-1936.jpg",
+      "year": 1936,
+      "tmdb": 33386,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Harry Lachman",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Charlie Chan at the Olympics",
@@ -503,7 +1203,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0028708",
-      "poster": ""
+      "poster": "posters/charlie-chan-at-the-olympics-1937.jpg",
+      "year": 1937,
+      "tmdb": 25148,
+      "tmdbKind": "movie",
+      "runtime": 71,
+      "director": "H. Bruce Humberstone",
+      "genres": [
+        "Mystery",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Charlie Chan on Broadway",
@@ -511,7 +1223,19 @@
       "rating10": 8,
       "watched": "2008-07-18",
       "imdb": "tt0028709",
-      "poster": ""
+      "poster": "posters/charlie-chan-on-broadway-1937.jpg",
+      "year": 1937,
+      "tmdb": 38454,
+      "tmdbKind": "movie",
+      "runtime": 68,
+      "director": "Eugene Forde",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Donnie Darko",
@@ -519,15 +1243,39 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0246578",
-      "poster": ""
+      "poster": "posters/donnie-darko-2001.jpg",
+      "year": 2001,
+      "tmdb": 141,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Richard Kelly",
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "Flower Films",
+      "logo": "logos/19813.png"
     },
     {
-      "title": "12 Monkeys",
+      "title": "Twelve Monkeys",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0114746",
-      "poster": ""
+      "poster": "posters/twelve-monkeys-1995.jpg",
+      "year": 1995,
+      "tmdb": 63,
+      "tmdbKind": "movie",
+      "runtime": 129,
+      "director": "Terry Gilliam",
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Memento",
@@ -535,7 +1283,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0209144",
-      "poster": ""
+      "poster": "posters/memento-2000.jpg",
+      "year": 2000,
+      "tmdb": 77,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Christopher Nolan",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Newmarket Films",
+      "logo": "logos/28.png"
     },
     {
       "title": "Hancock",
@@ -543,7 +1302,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0448157",
-      "poster": ""
+      "poster": "posters/hancock-2008.jpg",
+      "year": 2008,
+      "tmdb": 8960,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Peter Berg",
+      "genres": [
+        "Fantasy",
+        "Action"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Indiana Jones and the Last Crusade",
@@ -551,7 +1321,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0097576",
-      "poster": ""
+      "poster": "posters/indiana-jones-and-the-last-crusade-1989.jpg",
+      "year": 1989,
+      "tmdb": 89,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "American Gangster",
@@ -559,7 +1340,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0765429",
-      "poster": ""
+      "poster": "posters/american-gangster-2007.jpg",
+      "year": 2007,
+      "tmdb": 4982,
+      "tmdbKind": "movie",
+      "runtime": 157,
+      "director": "Ridley Scott",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Imagine Entertainment",
+      "logo": "logos/23.png"
     },
     {
       "title": "American History X",
@@ -567,7 +1359,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0120586",
-      "poster": ""
+      "poster": "posters/american-history-x-1998.jpg",
+      "year": 1998,
+      "tmdb": 73,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Tony Kaye",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Princess Mononoke",
@@ -575,7 +1377,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0119698",
-      "poster": ""
+      "poster": "posters/princess-mononoke-1997.jpg",
+      "year": 1997,
+      "tmdb": 128,
+      "tmdbKind": "movie",
+      "runtime": 134,
+      "director": "Hayao Miyazaki",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Animation"
+      ],
+      "studio": "Studio Ghibli",
+      "logo": "logos/10342.png"
     },
     {
       "title": "The Sixth Sense",
@@ -583,7 +1397,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0167404",
-      "poster": ""
+      "poster": "posters/the-sixth-sense-1999.jpg",
+      "year": 1999,
+      "tmdb": 745,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "M. Night Shyamalan",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Spyglass Entertainment",
+      "logo": "logos/158.png"
     },
     {
       "title": "The Matrix",
@@ -591,7 +1417,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0133093",
-      "poster": ""
+      "poster": "posters/the-matrix-1999.jpg",
+      "year": 1999,
+      "tmdb": 603,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Lana Wachowski",
+      "genres": [
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Village Roadshow Pictures",
+      "logo": "logos/79.png"
     },
     {
       "title": "Ratatouille",
@@ -599,7 +1436,20 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0382932",
-      "poster": ""
+      "poster": "posters/ratatouille-2007.jpg",
+      "year": 2007,
+      "tmdb": 2062,
+      "tmdbKind": "movie",
+      "runtime": 111,
+      "director": "Brad Bird",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Fantasy"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Lost in Translation",
@@ -607,7 +1457,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0335266",
-      "poster": ""
+      "poster": "posters/lost-in-translation-2003.jpg",
+      "year": 2003,
+      "tmdb": 153,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Sofia Coppola",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "American Zoetrope",
+      "logo": "logos/70.png"
     },
     {
       "title": "The Seventh Seal",
@@ -615,7 +1477,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0050976",
-      "poster": ""
+      "poster": "posters/the-seventh-seal-1957.jpg",
+      "year": 1957,
+      "tmdb": 490,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Ingmar Bergman",
+      "genres": [
+        "Fantasy",
+        "Drama"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
     },
     {
       "title": "Beauty and the Beast",
@@ -623,7 +1496,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0038348",
-      "poster": ""
+      "poster": "posters/beauty-and-the-beast-1946.jpg",
+      "year": 1946,
+      "tmdb": 648,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Jean Cocteau",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Raiders of the Lost Ark",
@@ -631,7 +1516,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0082971",
-      "poster": ""
+      "poster": "posters/raiders-of-the-lost-ark-1981.jpg",
+      "year": 1981,
+      "tmdb": 85,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Scoop",
@@ -639,7 +1535,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0457513",
-      "poster": ""
+      "poster": "posters/scoop-2006.jpg",
+      "year": 2006,
+      "tmdb": 512,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Woody Allen",
+      "genres": [
+        "Comedy",
+        "Mystery"
+      ],
+      "studio": "BBC Film",
+      "logo": "logos/288.png"
     },
     {
       "title": "Foreign Correspondent",
@@ -647,7 +1554,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0032484",
-      "poster": ""
+      "poster": "posters/foreign-correspondent-1940.jpg",
+      "year": 1940,
+      "tmdb": 25670,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Action"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Wrong Man",
@@ -655,7 +1574,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0051207",
-      "poster": ""
+      "poster": "posters/the-wrong-man-1956.jpg",
+      "year": 1956,
+      "tmdb": 22527,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The African Queen",
@@ -663,7 +1593,20 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0043265",
-      "poster": ""
+      "poster": "posters/the-african-queen-1952.jpg",
+      "year": 1952,
+      "tmdb": 488,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "John Huston",
+      "genres": [
+        "Adventure",
+        "Romance",
+        "War",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Adventures of Robin Hood",
@@ -671,7 +1614,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0029843",
-      "poster": ""
+      "poster": "posters/the-adventures-of-robin-hood-1938.jpg",
+      "year": 1938,
+      "tmdb": 10907,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "William Keighley",
+      "genres": [
+        "Adventure",
+        "Romance",
+        "Action"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Sabotage",
@@ -679,7 +1634,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0028212",
-      "poster": ""
+      "poster": "posters/sabotage-1936.jpg",
+      "year": 1936,
+      "tmdb": 12684,
+      "tmdbKind": "movie",
+      "runtime": 77,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Crouching Tiger, Hidden Dragon",
@@ -687,7 +1654,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0190332",
-      "poster": ""
+      "poster": "posters/crouching-tiger-hidden-dragon-2000.jpg",
+      "year": 2000,
+      "tmdb": 146,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Ang Lee",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Action"
+      ],
+      "studio": "Edko Films",
+      "logo": "logos/10284.png"
     },
     {
       "title": "In Good Company",
@@ -695,7 +1674,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0385267",
-      "poster": ""
+      "poster": "posters/in-good-company-2004.jpg",
+      "year": 2004,
+      "tmdb": 1901,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Paul Weitz",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Searchers",
@@ -703,7 +1694,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0049730",
-      "poster": ""
+      "poster": "posters/the-searchers-1956.jpg",
+      "year": 1956,
+      "tmdb": 3114,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "John Ford",
+      "genres": [
+        "Western"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The Hidden Fortress",
@@ -711,7 +1712,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0051808",
-      "poster": ""
+      "poster": "posters/the-hidden-fortress-1958.jpg",
+      "year": 1958,
+      "tmdb": 1059,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Akira Kurosawa",
+      "genres": [
+        "Drama",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "The Naked City",
@@ -719,7 +1732,20 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0040636",
-      "poster": ""
+      "poster": "posters/the-naked-city-1948.jpg",
+      "year": 1948,
+      "tmdb": 20482,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Jules Dassin",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Universal International Pictures",
+      "logo": "logos/10330.png"
     },
     {
       "title": "Fearless",
@@ -727,7 +1753,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0106881",
-      "poster": ""
+      "poster": "posters/fearless-1993.jpg",
+      "year": 1993,
+      "tmdb": 10443,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Peter Weir",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "I Confess",
@@ -735,7 +1771,19 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0045897",
-      "poster": ""
+      "poster": "posters/i-confess-1953.jpg",
+      "year": 1953,
+      "tmdb": 30159,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Stage Fright",
@@ -743,7 +1791,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0042994",
-      "poster": ""
+      "poster": "posters/stage-fright-1950.jpg",
+      "year": 1950,
+      "tmdb": 1978,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Thriller"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Box of Moonlight",
@@ -751,7 +1809,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0115738",
-      "poster": ""
+      "poster": "posters/box-of-moonlight-1996.jpg",
+      "year": 1996,
+      "tmdb": 31146,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Tom DiCillo",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Lakeshore Entertainment",
+      "logo": "logos/126.png"
     },
     {
       "title": "The Horse's Mouth",
@@ -759,7 +1828,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0051739",
-      "poster": ""
+      "poster": "posters/the-horse-s-mouth-1958.jpg",
+      "year": 1958,
+      "tmdb": 43139,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Ronald Neame",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Man in the White Suit",
@@ -767,7 +1846,18 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0044876",
-      "poster": ""
+      "poster": "posters/the-man-in-the-white-suit-1951.jpg",
+      "year": 1951,
+      "tmdb": 32568,
+      "tmdbKind": "movie",
+      "runtime": 85,
+      "director": "Alexander Mackendrick",
+      "genres": [
+        "Comedy",
+        "Science Fiction"
+      ],
+      "studio": "Ealing Studios",
+      "logo": "logos/2650.png"
     },
     {
       "title": "Hotel Paradiso",
@@ -775,7 +1865,17 @@
       "rating10": 7,
       "watched": "2008-07-18",
       "imdb": "tt0060520",
-      "poster": ""
+      "poster": "posters/hotel-paradiso-1966.jpg",
+      "year": 1966,
+      "tmdb": 117360,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Peter Glenville",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Metro-Goldwyn-Mayer British Studios",
+      "logo": "logos/5579.png"
     },
     {
       "title": "Iron Man",
@@ -783,7 +1883,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0371746",
-      "poster": ""
+      "poster": "posters/iron-man-2008.jpg",
+      "year": 2008,
+      "tmdb": 1726,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Jon Favreau",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Secret Window",
@@ -791,7 +1903,18 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0363988",
-      "poster": ""
+      "poster": "posters/secret-window-2004.jpg",
+      "year": 2004,
+      "tmdb": 1586,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "David Koepp",
+      "genres": [
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Back to the Future",
@@ -799,7 +1922,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0088763",
-      "poster": ""
+      "poster": "posters/back-to-the-future-1985.jpg",
+      "year": 1985,
+      "tmdb": 105,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Robert Zemeckis",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Science Fiction"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Ronin",
@@ -807,7 +1942,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0122690",
-      "poster": ""
+      "poster": "posters/ronin-1998.jpg",
+      "year": 1998,
+      "tmdb": 8195,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "John Frankenheimer",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "The Day the Earth Stood Still",
@@ -815,7 +1962,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0043456",
-      "poster": ""
+      "poster": "posters/the-day-the-earth-stood-still-1951.jpg",
+      "year": 1951,
+      "tmdb": 828,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Robert Wise",
+      "genres": [
+        "Science Fiction",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Kung Fu Panda",
@@ -823,7 +1982,20 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0441773",
-      "poster": ""
+      "poster": "posters/kung-fu-panda-2008.jpg",
+      "year": 2008,
+      "tmdb": 9502,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Mark Osborne",
+      "genres": [
+        "Action",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "DreamWorks Animation",
+      "logo": "logos/521.png"
     },
     {
       "title": "Star Wars: Episode I - The Phantom Menace",
@@ -831,7 +2003,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0120915",
-      "poster": ""
+      "poster": "posters/star-wars-episode-i-the-phantom-menace-1999.jpg",
+      "year": 1999,
+      "tmdb": 1893,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "George Lucas",
+      "genres": [
+        "Adventure",
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Lucasfilm Ltd.",
+      "logo": "logos/1.png"
     },
     {
       "title": "Die Hard",
@@ -839,7 +2023,18 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0095016",
-      "poster": ""
+      "poster": "posters/die-hard-1988.jpg",
+      "year": 1988,
+      "tmdb": 562,
+      "tmdbKind": "movie",
+      "runtime": 132,
+      "director": "John McTiernan",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "studio": "Silver Pictures",
+      "logo": "logos/1885.png"
     },
     {
       "title": "Mr. & Mrs. Smith",
@@ -847,7 +2042,18 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0033922",
-      "poster": ""
+      "poster": "posters/mr-mrs-smith-1941.jpg",
+      "year": 1941,
+      "tmdb": 24197,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "RKO Radio Pictures",
+      "logo": "logos/6.png"
     },
     {
       "title": "He Got Game",
@@ -855,7 +2061,17 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0124718",
-      "poster": ""
+      "poster": "posters/he-got-game-1998.jpg",
+      "year": 1998,
+      "tmdb": 9469,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Spike Lee",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "40 Acres and a Mule Filmworks",
+      "logo": "logos/4319.png"
     },
     {
       "title": "Glory",
@@ -863,7 +2079,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0097441",
-      "poster": ""
+      "poster": "posters/glory-1989.jpg",
+      "year": 1989,
+      "tmdb": 9665,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Edward Zwick",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "TriStar Pictures",
+      "logo": "logos/559.png"
     },
     {
       "title": "Torn Curtain",
@@ -871,7 +2099,17 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0061107",
-      "poster": ""
+      "poster": "posters/torn-curtain-1966.jpg",
+      "year": 1966,
+      "tmdb": 5780,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Alfred Hitchcock",
+      "genres": [
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Swan",
@@ -879,7 +2117,19 @@
       "rating10": 6,
       "watched": "2008-07-18",
       "imdb": "tt0049815",
-      "poster": ""
+      "poster": "posters/the-swan-1956.jpg",
+      "year": 1956,
+      "tmdb": 61048,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Charles Vidor",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Metro-Goldwyn-Mayer",
+      "logo": "logos/21.png"
     },
     {
       "title": "Transformers",
@@ -887,7 +2137,19 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0418279",
-      "poster": ""
+      "poster": "posters/transformers-2007.jpg",
+      "year": 2007,
+      "tmdb": 1858,
+      "tmdbKind": "movie",
+      "runtime": 144,
+      "director": "Michael Bay",
+      "genres": [
+        "Adventure",
+        "Science Fiction",
+        "Action"
+      ],
+      "studio": "DreamWorks Pictures",
+      "logo": "logos/7.png"
     },
     {
       "title": "Get Smart",
@@ -895,7 +2157,19 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0425061",
-      "poster": ""
+      "poster": "posters/get-smart-2008.jpg",
+      "year": 2008,
+      "tmdb": 11665,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Peter Segal",
+      "genres": [
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "Mad Chance",
+      "logo": "logos/1757.png"
     },
     {
       "title": "The Brothers Grimm",
@@ -903,7 +2177,21 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0355295",
-      "poster": ""
+      "poster": "posters/the-brothers-grimm-2005.jpg",
+      "year": 2005,
+      "tmdb": 4442,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Terry Gilliam",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action",
+        "Comedy",
+        "Thriller"
+      ],
+      "studio": "Summit Entertainment",
+      "logo": "logos/491.png"
     },
     {
       "title": "Mr. Deeds",
@@ -911,7 +2199,18 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0280590",
-      "poster": ""
+      "poster": "posters/mr-deeds-2002.jpg",
+      "year": 2002,
+      "tmdb": 2022,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Steven Brill",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "The Incredible Hulk",
@@ -919,7 +2218,19 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0800080",
-      "poster": ""
+      "poster": "posters/the-incredible-hulk-2008.jpg",
+      "year": 2008,
+      "tmdb": 1724,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Louis Leterrier",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "Pirates of the Caribbean: Dead Man's Chest",
@@ -927,7 +2238,19 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0383574",
-      "poster": ""
+      "poster": "posters/pirates-of-the-caribbean-dead-man-s-chest-2006.jpg",
+      "year": 2006,
+      "tmdb": 58,
+      "tmdbKind": "movie",
+      "runtime": 151,
+      "director": "Gore Verbinski",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Action"
+      ],
+      "studio": "Walt Disney Pictures",
+      "logo": "logos/2.png"
     },
     {
       "title": "The Black Dahlia",
@@ -935,7 +2258,20 @@
       "rating10": 5,
       "watched": "2008-07-18",
       "imdb": "tt0387877",
-      "poster": ""
+      "poster": "posters/the-black-dahlia-2006.jpg",
+      "year": 2006,
+      "tmdb": 9676,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Brian De Palma",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "Linson Entertainment",
+      "logo": "logos/4700.png"
     },
     {
       "title": "10 Things I Hate About You",
@@ -943,7 +2279,19 @@
       "rating10": 4,
       "watched": "2008-07-18",
       "imdb": "tt0147800",
-      "poster": ""
+      "poster": "posters/10-things-i-hate-about-you-1999.jpg",
+      "year": 1999,
+      "tmdb": 4951,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Gil Junger",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Mad Chance",
+      "logo": "logos/1757.png"
     },
     {
       "title": "Home Alone 3",
@@ -951,7 +2299,18 @@
       "rating10": 3,
       "watched": "2008-07-18",
       "imdb": "tt0119303",
-      "poster": ""
+      "poster": "posters/home-alone-3-1997.jpg",
+      "year": 1997,
+      "tmdb": 9714,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Raja Gosnell",
+      "genres": [
+        "Comedy",
+        "Family"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Collateral Damage",
@@ -959,7 +2318,19 @@
       "rating10": 3,
       "watched": "2008-07-18",
       "imdb": "tt0233469",
-      "poster": ""
+      "poster": "posters/collateral-damage-2002.jpg",
+      "year": 2002,
+      "tmdb": 9884,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Andrew Davis",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Bel Air Entertainment",
+      "logo": "logos/788.png"
     },
     {
       "title": "Ocean's Eleven",
@@ -967,7 +2338,18 @@
       "rating10": 9,
       "watched": "2008-07-20",
       "imdb": "tt0240772",
-      "poster": ""
+      "poster": "posters/ocean-s-eleven-2001.jpg",
+      "year": 2001,
+      "tmdb": 161,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "After Hours",
@@ -975,7 +2357,19 @@
       "rating10": 9,
       "watched": "2008-07-20",
       "imdb": "tt0088680",
-      "poster": ""
+      "poster": "posters/after-hours-1985.jpg",
+      "year": 1985,
+      "tmdb": 10843,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Comedy",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Geffen Pictures",
+      "logo": "logos/360.png"
     },
     {
       "title": "Wonder Boys",
@@ -983,7 +2377,18 @@
       "rating10": 9,
       "watched": "2008-07-20",
       "imdb": "tt0185014",
-      "poster": ""
+      "poster": "posters/wonder-boys-2000.jpg",
+      "year": 2000,
+      "tmdb": 11004,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Curtis Hanson",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Short Cuts",
@@ -991,7 +2396,18 @@
       "rating10": 9,
       "watched": "2008-07-20",
       "imdb": "tt0108122",
-      "poster": ""
+      "poster": "posters/short-cuts-1993.jpg",
+      "year": 1993,
+      "tmdb": 695,
+      "tmdbKind": "movie",
+      "runtime": 188,
+      "director": "Robert Altman",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Spelling Films International",
+      "logo": "logos/18189.png"
     },
     {
       "title": "Lucky Number Slevin",
@@ -999,7 +2415,20 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0425210",
-      "poster": ""
+      "poster": "posters/lucky-number-slevin-2006.jpg",
+      "year": 2006,
+      "tmdb": 186,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Paul McGuigan",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "FilmEngine",
+      "logo": "logos/816.png"
     },
     {
       "title": "Fear and Loathing in Las Vegas",
@@ -1007,7 +2436,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0120669",
-      "poster": ""
+      "poster": "posters/fear-and-loathing-in-las-vegas-1998.jpg",
+      "year": 1998,
+      "tmdb": 1878,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Terry Gilliam",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Rhino Films",
+      "logo": "logos/1591.png"
     },
     {
       "title": "Knocked Up",
@@ -1015,7 +2456,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0478311",
-      "poster": ""
+      "poster": "posters/knocked-up-2007.jpg",
+      "year": 2007,
+      "tmdb": 4964,
+      "tmdbKind": "movie",
+      "runtime": 129,
+      "director": "Judd Apatow",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Apatow Productions",
+      "logo": "logos/10105.png"
     },
     {
       "title": "Finding Forrester",
@@ -1023,7 +2476,18 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0181536",
-      "poster": ""
+      "poster": "posters/finding-forrester-2000.jpg",
+      "year": 2000,
+      "tmdb": 711,
+      "tmdbKind": "movie",
+      "runtime": 136,
+      "director": "Gus Van Sant",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Chasing Amy",
@@ -1031,7 +2495,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0118842",
-      "poster": ""
+      "poster": "posters/chasing-amy-1997.jpg",
+      "year": 1997,
+      "tmdb": 2255,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "View Askew Productions",
+      "logo": "logos/16934.png"
     },
     {
       "title": "High Fidelity",
@@ -1039,7 +2515,20 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0146882",
-      "poster": ""
+      "poster": "posters/high-fidelity-2000.jpg",
+      "year": 2000,
+      "tmdb": 243,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Stephen Frears",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance",
+        "Music"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "Spider-Man 2",
@@ -1047,7 +2536,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0316654",
-      "poster": ""
+      "poster": "posters/spider-man-2-2004.jpg",
+      "year": 2004,
+      "tmdb": 558,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Sam Raimi",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Enterprises",
+      "logo": "logos/19551.png"
     },
     {
       "title": "Road to Perdition",
@@ -1055,7 +2556,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0257044",
-      "poster": ""
+      "poster": "posters/road-to-perdition-2002.jpg",
+      "year": 2002,
+      "tmdb": 4147,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Sam Mendes",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "DreamWorks Pictures",
+      "logo": "logos/7.png"
     },
     {
       "title": "The Talented Mr. Ripley",
@@ -1063,7 +2576,19 @@
       "rating10": 8,
       "watched": "2008-07-20",
       "imdb": "tt0134119",
-      "poster": ""
+      "poster": "posters/the-talented-mr-ripley-1999.jpg",
+      "year": 1999,
+      "tmdb": 1213,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Anthony Minghella",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Mirage Enterprises",
+      "logo": "logos/932.png"
     },
     {
       "title": "The Bourne Identity",
@@ -1071,7 +2596,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0258463",
-      "poster": ""
+      "poster": "posters/the-bourne-identity-2002.jpg",
+      "year": 2002,
+      "tmdb": 2501,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Doug Liman",
+      "genres": [
+        "Action",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Mean Streets",
@@ -1079,15 +2616,37 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0070379",
-      "poster": ""
+      "poster": "posters/mean-streets-1973.jpg",
+      "year": 1973,
+      "tmdb": 203,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Martin Scorsese",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "The 40-Year-Old Virgin",
+      "title": "The 40 Year-Old Virgin",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0405422",
-      "poster": ""
+      "poster": "posters/the-40-year-old-virgin-2005.jpg",
+      "year": 2005,
+      "tmdb": 6957,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Judd Apatow",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Tenacious D in The Pick of Destiny",
@@ -1095,7 +2654,20 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0365830",
-      "poster": ""
+      "poster": "posters/tenacious-d-in-the-pick-of-destiny-2006.jpg",
+      "year": 2006,
+      "tmdb": 2179,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Liam Lynch",
+      "genres": [
+        "Comedy",
+        "Music",
+        "Fantasy",
+        "Adventure"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Dogma",
@@ -1103,7 +2675,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0120655",
-      "poster": ""
+      "poster": "posters/dogma-1999.jpg",
+      "year": 1999,
+      "tmdb": 1832,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "Kevin Smith",
+      "genres": [
+        "Fantasy",
+        "Comedy",
+        "Adventure"
+      ],
+      "studio": "View Askew Productions",
+      "logo": "logos/16934.png"
     },
     {
       "title": "The Bourne Supremacy",
@@ -1111,7 +2695,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0372183",
-      "poster": ""
+      "poster": "posters/the-bourne-supremacy-2004.jpg",
+      "year": 2004,
+      "tmdb": 2502,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Paul Greengrass",
+      "genres": [
+        "Action",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Spider-Man",
@@ -1119,7 +2715,18 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0145487",
-      "poster": ""
+      "poster": "posters/spider-man-2002.jpg",
+      "year": 2002,
+      "tmdb": 557,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Sam Raimi",
+      "genres": [
+        "Action",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Enterprises",
+      "logo": "logos/19551.png"
     },
     {
       "title": "Out of Sight",
@@ -1127,7 +2734,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0120780",
-      "poster": ""
+      "poster": "posters/out-of-sight-1998.jpg",
+      "year": 1998,
+      "tmdb": 1389,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Romance",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Hollywoodland",
@@ -1135,7 +2754,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0427969",
-      "poster": ""
+      "poster": "posters/hollywoodland-2006.jpg",
+      "year": 2006,
+      "tmdb": 1249,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "Allen Coulter",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Mystery"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "The Player",
@@ -1143,7 +2774,19 @@
       "rating10": 7,
       "watched": "2008-07-20",
       "imdb": "tt0105151",
-      "poster": ""
+      "poster": "posters/the-player-1992.jpg",
+      "year": 1992,
+      "tmdb": 10403,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Robert Altman",
+      "genres": [
+        "Mystery",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Spelling Entertainment",
+      "logo": "logos/272.png"
     },
     {
       "title": "Boiler Room",
@@ -1151,7 +2794,19 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0181984",
-      "poster": ""
+      "poster": "posters/boiler-room-2000.jpg",
+      "year": 2000,
+      "tmdb": 14181,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "Ben Younger",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Bull Durham",
@@ -1159,7 +2814,18 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0094812",
-      "poster": ""
+      "poster": "posters/bull-durham-1988.jpg",
+      "year": 1988,
+      "tmdb": 287,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Ron Shelton",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Orion Pictures",
+      "logo": "logos/41.png"
     },
     {
       "title": "Three Kings",
@@ -1167,7 +2833,19 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0120188",
-      "poster": ""
+      "poster": "posters/three-kings-1999.jpg",
+      "year": 1999,
+      "tmdb": 6415,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "David O. Russell",
+      "genres": [
+        "Action",
+        "Comedy",
+        "War"
+      ],
+      "studio": "Village Roadshow Pictures",
+      "logo": "logos/79.png"
     },
     {
       "title": "Along Came a Spider",
@@ -1175,7 +2853,20 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0164334",
-      "poster": ""
+      "poster": "posters/along-came-a-spider-2001.jpg",
+      "year": 2001,
+      "tmdb": 2043,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Lee Tamahori",
+      "genres": [
+        "Crime",
+        "Mystery",
+        "Thriller",
+        "Action"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Daredevil",
@@ -1183,7 +2874,18 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0287978",
-      "poster": ""
+      "poster": "posters/daredevil-2003.jpg",
+      "year": 2003,
+      "tmdb": 9480,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Mark Steven Johnson",
+      "genres": [
+        "Fantasy",
+        "Action"
+      ],
+      "studio": "Marvel Enterprises",
+      "logo": "logos/19551.png"
     },
     {
       "title": "Reindeer Games",
@@ -1191,7 +2893,19 @@
       "rating10": 6,
       "watched": "2008-07-20",
       "imdb": "tt0184858",
-      "poster": ""
+      "poster": "posters/reindeer-games-2000.jpg",
+      "year": 2000,
+      "tmdb": 2155,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "John Frankenheimer",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Crime"
+      ],
+      "studio": "Dimension Films",
+      "logo": "logos/7405.png"
     },
     {
       "title": "Mallrats",
@@ -1199,7 +2913,18 @@
       "rating10": 5.5,
       "watched": "2008-07-20",
       "imdb": "tt0113749",
-      "poster": ""
+      "poster": "posters/mallrats-1995.jpg",
+      "year": 1995,
+      "tmdb": 2293,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Kevin Smith",
+      "genres": [
+        "Romance",
+        "Comedy"
+      ],
+      "studio": "Gramercy Pictures",
+      "logo": "logos/37.png"
     },
     {
       "title": "Syriana",
@@ -1207,7 +2932,18 @@
       "rating10": 5,
       "watched": "2008-07-20",
       "imdb": "tt0365737",
-      "poster": ""
+      "poster": "posters/syriana-2005.jpg",
+      "year": 2005,
+      "tmdb": 231,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Stephen Gaghan",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Participant",
+      "logo": "logos/6735.png"
     },
     {
       "title": "Ocean's Twelve",
@@ -1215,7 +2951,18 @@
       "rating10": 5,
       "watched": "2008-07-20",
       "imdb": "tt0349903",
-      "poster": ""
+      "poster": "posters/ocean-s-twelve-2004.jpg",
+      "year": 2004,
+      "tmdb": 163,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The Good German",
@@ -1223,7 +2970,19 @@
       "rating10": 5,
       "watched": "2008-07-20",
       "imdb": "tt0452624",
-      "poster": ""
+      "poster": "posters/the-good-german-2006.jpg",
+      "year": 2006,
+      "tmdb": 182,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Kiss the Girls",
@@ -1231,7 +2990,19 @@
       "rating10": 5,
       "watched": "2008-07-20",
       "imdb": "tt0119468",
-      "poster": ""
+      "poster": "posters/kiss-the-girls-1997.jpg",
+      "year": 1997,
+      "tmdb": 9437,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Gary Fleder",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Nurse Betty",
@@ -1239,7 +3010,20 @@
       "rating10": 5,
       "watched": "2008-07-20",
       "imdb": "tt0171580",
-      "poster": ""
+      "poster": "posters/nurse-betty-2000.jpg",
+      "year": 2000,
+      "tmdb": 10480,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Neil LaBute",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Gramercy Pictures",
+      "logo": "logos/37.png"
     },
     {
       "title": "Bruce Almighty",
@@ -1247,7 +3031,18 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0315327",
-      "poster": ""
+      "poster": "posters/bruce-almighty-2003.jpg",
+      "year": 2003,
+      "tmdb": 310,
+      "tmdbKind": "movie",
+      "runtime": 101,
+      "director": "Tom Shadyac",
+      "genres": [
+        "Fantasy",
+        "Comedy"
+      ],
+      "studio": "Spyglass Entertainment",
+      "logo": "logos/158.png"
     },
     {
       "title": "Clerks II",
@@ -1255,7 +3050,17 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0424345",
-      "poster": ""
+      "poster": "posters/clerks-ii-2006.jpg",
+      "year": 2006,
+      "tmdb": 2295,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "The Weinstein Company",
+      "logo": "logos/308.png"
     },
     {
       "title": "Jay and Silent Bob Strike Back",
@@ -1263,7 +3068,19 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0261392",
-      "poster": ""
+      "poster": "posters/jay-and-silent-bob-strike-back-2001.jpg",
+      "year": 2001,
+      "tmdb": 2294,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy",
+        "Adventure",
+        "Action"
+      ],
+      "studio": "Dimension Films",
+      "logo": "logos/7405.png"
     },
     {
       "title": "Ocean's Thirteen",
@@ -1271,7 +3088,18 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0496806",
-      "poster": ""
+      "poster": "posters/ocean-s-thirteen-2007.jpg",
+      "year": 2007,
+      "tmdb": 298,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "War of the Worlds",
@@ -1279,7 +3107,19 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0407304",
-      "poster": ""
+      "poster": "posters/war-of-the-worlds-2005.jpg",
+      "year": 2005,
+      "tmdb": 74,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Adventure",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Sum of All Fears",
@@ -1287,7 +3127,19 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0164184",
-      "poster": ""
+      "poster": "posters/the-sum-of-all-fears-2002.jpg",
+      "year": 2002,
+      "tmdb": 4614,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Phil Alden Robinson",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Spirit: Stallion of the Cimarron",
@@ -1295,7 +3147,21 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0166813",
-      "poster": ""
+      "poster": "posters/spirit-stallion-of-the-cimarron-2002.jpg",
+      "year": 2002,
+      "tmdb": 9023,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Kelly Asbury",
+      "genres": [
+        "Adventure",
+        "Animation",
+        "Drama",
+        "Family",
+        "Western"
+      ],
+      "studio": "DreamWorks Animation",
+      "logo": "logos/521.png"
     },
     {
       "title": "Changing Lanes",
@@ -1303,7 +3169,18 @@
       "rating10": 4,
       "watched": "2008-07-20",
       "imdb": "tt0264472",
-      "poster": ""
+      "poster": "posters/changing-lanes-2002.jpg",
+      "year": 2002,
+      "tmdb": 1537,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Roger Michell",
+      "genres": [
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Paycheck",
@@ -1311,7 +3188,19 @@
       "rating10": 3,
       "watched": "2008-07-20",
       "imdb": "tt0338337",
-      "poster": ""
+      "poster": "posters/paycheck-2003.jpg",
+      "year": 2003,
+      "tmdb": 9620,
+      "tmdbKind": "movie",
+      "runtime": 119,
+      "director": "John Woo",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Thriller"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Shrek the Third",
@@ -1319,7 +3208,21 @@
       "rating10": 3,
       "watched": "2008-07-20",
       "imdb": "tt0413267",
-      "poster": ""
+      "poster": "posters/shrek-the-third-2007.jpg",
+      "year": 2007,
+      "tmdb": 810,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Chris Miller",
+      "genres": [
+        "Fantasy",
+        "Adventure",
+        "Animation",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "DreamWorks Animation",
+      "logo": "logos/521.png"
     },
     {
       "title": "Batman & Robin",
@@ -1327,7 +3230,19 @@
       "rating10": 3,
       "watched": "2008-07-20",
       "imdb": "tt0118688",
-      "poster": ""
+      "poster": "posters/batman-robin-1997.jpg",
+      "year": 1997,
+      "tmdb": 415,
+      "tmdbKind": "movie",
+      "runtime": 125,
+      "director": "Joel Schumacher",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Adventure"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The Royal Tenenbaums",
@@ -1335,7 +3250,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0265666",
-      "poster": ""
+      "poster": "posters/the-royal-tenenbaums-2001.jpg",
+      "year": 2001,
+      "tmdb": 9428,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Wes Anderson",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "The Darjeeling Limited",
@@ -1343,7 +3269,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0838221",
-      "poster": ""
+      "poster": "posters/the-darjeeling-limited-2007.jpg",
+      "year": 2007,
+      "tmdb": 4538,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Wes Anderson",
+      "genres": [
+        "Adventure",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "Contempt",
@@ -1351,7 +3289,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0057345",
-      "poster": ""
+      "poster": "posters/contempt-1963.jpg",
+      "year": 1963,
+      "tmdb": 266,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Night on Earth",
@@ -1359,7 +3308,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0102536",
-      "poster": ""
+      "poster": "posters/night-on-earth-1991.jpg",
+      "year": 1991,
+      "tmdb": 339,
+      "tmdbKind": "movie",
+      "runtime": 129,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "JVC",
+      "logo": "logos/182.png"
     },
     {
       "title": "Down by Law",
@@ -1367,7 +3327,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0090967",
-      "poster": ""
+      "poster": "posters/down-by-law-1986.jpg",
+      "year": 1986,
+      "tmdb": 1554,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "Island Pictures",
+      "logo": "logos/3492.png"
     },
     {
       "title": "The Man Who Fell to Earth",
@@ -1375,7 +3347,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0074851",
-      "poster": ""
+      "poster": "posters/the-man-who-fell-to-earth-1976.jpg",
+      "year": 1976,
+      "tmdb": 991,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Nicolas Roeg",
+      "genres": [
+        "Science Fiction",
+        "Drama",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Bank Dick",
@@ -1383,7 +3367,17 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0032234",
-      "poster": ""
+      "poster": "posters/the-bank-dick-1940.jpg",
+      "year": 1940,
+      "tmdb": 911,
+      "tmdbKind": "movie",
+      "runtime": 72,
+      "director": "Edward F. Cline",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Le Samouraï",
@@ -1391,7 +3385,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0062229",
-      "poster": ""
+      "poster": "posters/le-samourai-1967.jpg",
+      "year": 1967,
+      "tmdb": 5511,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Jean-Pierre Melville",
+      "genres": [
+        "Crime",
+        "Thriller",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Straw Dogs",
@@ -1399,7 +3405,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0067800",
-      "poster": ""
+      "poster": "posters/straw-dogs-1971.jpg",
+      "year": 1971,
+      "tmdb": 994,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Sam Peckinpah",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Vanishing",
@@ -1407,15 +3425,36 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0096163",
-      "poster": ""
+      "poster": "posters/the-vanishing-1988.jpg",
+      "year": 1988,
+      "tmdb": 8740,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "George Sluizer",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Mr. Hulot's Holiday",
+      "title": "Monsieur Hulot's Holiday",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0046487",
-      "poster": ""
+      "poster": "posters/monsieur-hulot-s-holiday-1953.jpg",
+      "year": 1953,
+      "tmdb": 778,
+      "tmdbKind": "movie",
+      "runtime": 87,
+      "director": "Jacques Tati",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Specta Films",
+      "logo": "logos/30847.png"
     },
     {
       "title": "Army of Shadows",
@@ -1423,15 +3462,37 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0064040",
-      "poster": ""
+      "poster": "posters/army-of-shadows-1969.jpg",
+      "year": 1969,
+      "tmdb": 15383,
+      "tmdbKind": "movie",
+      "runtime": 145,
+      "director": "Jean-Pierre Melville",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "I vitelloni",
+      "title": "I Vitelloni",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0046521",
-      "poster": ""
+      "poster": "posters/i-vitelloni-1953.jpg",
+      "year": 1953,
+      "tmdb": 12548,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Federico Fellini",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Ruling Class",
@@ -1439,7 +3500,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0069198",
-      "poster": ""
+      "poster": "posters/the-ruling-class-1972.jpg",
+      "year": 1972,
+      "tmdb": 30892,
+      "tmdbKind": "movie",
+      "runtime": 154,
+      "director": "Peter Medak",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Naked Kiss",
@@ -1447,15 +3519,36 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0058390",
-      "poster": ""
+      "poster": "posters/the-naked-kiss-1964.jpg",
+      "year": 1964,
+      "tmdb": 26031,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Samuel Fuller",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "11'09''01 - September 11",
+      "title": "September 11",
       "rating": 4.5,
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0328802",
-      "poster": ""
+      "poster": "posters/september-11-2002.jpg",
+      "year": 2002,
+      "tmdb": 1926,
+      "tmdbKind": "movie",
+      "runtime": 134,
+      "director": "Samira Makhmalbaf",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Galatée Films",
+      "logo": "logos/793.png"
     },
     {
       "title": "Big Deal on Madonna Street",
@@ -1463,7 +3556,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0052216",
-      "poster": ""
+      "poster": "posters/big-deal-on-madonna-street-1958.jpg",
+      "year": 1958,
+      "tmdb": 24382,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Mario Monicelli",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Samurai I: Musashi Miyamoto",
@@ -1471,7 +3575,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0047444",
-      "poster": ""
+      "poster": "posters/samurai-i-musashi-miyamoto-1954.jpg",
+      "year": 1954,
+      "tmdb": 31372,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Hiroshi Inagaki",
+      "genres": [
+        "Drama",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Samurai II: Duel at Ichijoji Temple",
@@ -1479,7 +3595,19 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0048579",
-      "poster": ""
+      "poster": "posters/samurai-ii-duel-at-ichijoji-temple-1955.jpg",
+      "year": 1955,
+      "tmdb": 31374,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Hiroshi Inagaki",
+      "genres": [
+        "Drama",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Samurai III: Duel at Ganryu Island",
@@ -1487,7 +3615,21 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0049710",
-      "poster": ""
+      "poster": "posters/samurai-iii-duel-at-ganryu-island-1956.jpg",
+      "year": 1956,
+      "tmdb": 31378,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Hiroshi Inagaki",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Romance",
+        "History"
+      ],
+      "studio": "TOHO",
+      "logo": "logos/882.png"
     },
     {
       "title": "Death of a Salesman",
@@ -1495,7 +3637,18 @@
       "rating10": 9,
       "watched": "2008-07-28",
       "imdb": "tt0187806",
-      "poster": ""
+      "poster": "posters/death-of-a-salesman-1966.jpg",
+      "year": 1966,
+      "tmdb": 241568,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Alex Segal",
+      "genres": [
+        "Drama",
+        "TV Movie"
+      ],
+      "studio": "CBS",
+      "logo": "logos/4898.png"
     },
     {
       "title": "Dead Man",
@@ -1503,7 +3656,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0112817",
-      "poster": ""
+      "poster": "posters/dead-man-1995.jpg",
+      "year": 1995,
+      "tmdb": 922,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Drama",
+        "Fantasy",
+        "Western"
+      ],
+      "studio": "Pandora Film",
+      "logo": "logos/140.png"
     },
     {
       "title": "Hotel Chevalier",
@@ -1511,7 +3676,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt1094249",
-      "poster": ""
+      "poster": "posters/hotel-chevalier-2007.jpg",
+      "year": 2007,
+      "tmdb": 6418,
+      "tmdbKind": "movie",
+      "runtime": 13,
+      "director": "Wes Anderson",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "Coffee and Cigarettes",
@@ -1519,7 +3695,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0379217",
-      "poster": ""
+      "poster": "posters/coffee-and-cigarettes-2004.jpg",
+      "year": 2004,
+      "tmdb": 883,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Asmik Ace Entertainment",
+      "logo": "logos/194517.png"
     },
     {
       "title": "Hard Boiled",
@@ -1527,7 +3714,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0104684",
-      "poster": ""
+      "poster": "posters/hard-boiled-1992.jpg",
+      "year": 1992,
+      "tmdb": 11782,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "John Woo",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "This Is Spinal Tap",
@@ -1535,7 +3734,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0088258",
-      "poster": ""
+      "poster": "posters/this-is-spinal-tap-1984.jpg",
+      "year": 1984,
+      "tmdb": 11031,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Rob Reiner",
+      "genres": [
+        "Comedy",
+        "Music"
+      ],
+      "studio": "Embassy Pictures",
+      "logo": "logos/112748.png"
     },
     {
       "title": "A History of Violence",
@@ -1543,7 +3753,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0399146",
-      "poster": ""
+      "poster": "posters/a-history-of-violence-2005.jpg",
+      "year": 2005,
+      "tmdb": 59,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "David Cronenberg",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Stranger Than Paradise",
@@ -1551,7 +3773,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0088184",
-      "poster": ""
+      "poster": "posters/stranger-than-paradise-1984.jpg",
+      "year": 1984,
+      "tmdb": 469,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "ZDF",
+      "logo": "logos/4606.png"
     },
     {
       "title": "Eastern Promises",
@@ -1559,7 +3792,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0765443",
-      "poster": ""
+      "poster": "posters/eastern-promises-2007.jpg",
+      "year": 2007,
+      "tmdb": 2252,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "David Cronenberg",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Videodrome",
@@ -1567,7 +3812,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0086541",
-      "poster": ""
+      "poster": "posters/videodrome-1983.jpg",
+      "year": 1983,
+      "tmdb": 837,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "David Cronenberg",
+      "genres": [
+        "Horror",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Unbearable Lightness of Being",
@@ -1575,7 +3832,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0096332",
-      "poster": ""
+      "poster": "posters/the-unbearable-lightness-of-being-1988.jpg",
+      "year": 1988,
+      "tmdb": 10644,
+      "tmdbKind": "movie",
+      "runtime": 171,
+      "director": "Philip Kaufman",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "The Saul Zaentz Company",
+      "logo": "logos/5237.png"
     },
     {
       "title": "Papillon",
@@ -1583,7 +3851,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0070511",
-      "poster": ""
+      "poster": "posters/papillon-1973.jpg",
+      "year": 1973,
+      "tmdb": 5924,
+      "tmdbKind": "movie",
+      "runtime": 151,
+      "director": "Franklin J. Schaffner",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Ghost Dog: The Way of the Samurai",
@@ -1591,7 +3870,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0165798",
-      "poster": ""
+      "poster": "posters/ghost-dog-the-way-of-the-samurai-1999.jpg",
+      "year": 1999,
+      "tmdb": 4816,
+      "tmdbKind": "movie",
+      "runtime": 117,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "JVC",
+      "logo": "logos/182.png"
     },
     {
       "title": "Traffic",
@@ -1599,7 +3889,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0181865",
-      "poster": ""
+      "poster": "posters/traffic-2000.jpg",
+      "year": 2000,
+      "tmdb": 1900,
+      "tmdbKind": "movie",
+      "runtime": 147,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "USA Films",
+      "logo": "logos/987.png"
     },
     {
       "title": "Rain Man",
@@ -1607,7 +3909,17 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0095953",
-      "poster": ""
+      "poster": "posters/rain-man-1988.jpg",
+      "year": 1988,
+      "tmdb": 380,
+      "tmdbKind": "movie",
+      "runtime": 134,
+      "director": "Barry Levinson",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "The Killer",
@@ -1615,7 +3927,20 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0097202",
-      "poster": ""
+      "poster": "posters/the-killer-1989.jpg",
+      "year": 1989,
+      "tmdb": 10835,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "John Woo",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Kramer vs. Kramer",
@@ -1623,7 +3948,17 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0079417",
-      "poster": ""
+      "poster": "posters/kramer-vs-kramer-1979.jpg",
+      "year": 1979,
+      "tmdb": 12102,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Robert Benton",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Taste of Cherry",
@@ -1631,7 +3966,17 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0120265",
-      "poster": ""
+      "poster": "posters/taste-of-cherry-1997.jpg",
+      "year": 1997,
+      "tmdb": 30020,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Abbas Kiarostami",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Kanoon",
+      "logo": "logos/11459.png"
     },
     {
       "title": "Walkabout",
@@ -1639,7 +3984,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0067959",
-      "poster": ""
+      "poster": "posters/walkabout-1971.jpg",
+      "year": 1971,
+      "tmdb": 36040,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Nicolas Roeg",
+      "genres": [
+        "Adventure",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Marathon Man",
@@ -1647,7 +4003,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0074860",
-      "poster": ""
+      "poster": "posters/marathon-man-1976.jpg",
+      "year": 1976,
+      "tmdb": 10518,
+      "tmdbKind": "movie",
+      "runtime": 126,
+      "director": "John Schlesinger",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Viridiana",
@@ -1655,7 +4023,17 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0055601",
-      "poster": ""
+      "poster": "posters/viridiana-1961.jpg",
+      "year": 1961,
+      "tmdb": 4497,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "Luis Buñuel",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Films 59",
+      "logo": "logos/37802.png"
     },
     {
       "title": "Brief Encounter",
@@ -1663,7 +4041,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0037558",
-      "poster": ""
+      "poster": "posters/brief-encounter-1945.jpg",
+      "year": 1945,
+      "tmdb": 851,
+      "tmdbKind": "movie",
+      "runtime": 86,
+      "director": "David Lean",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Wag the Dog",
@@ -1671,7 +4060,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0120885",
-      "poster": ""
+      "poster": "posters/wag-the-dog-1997.jpg",
+      "year": 1997,
+      "tmdb": 586,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Barry Levinson",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "The Harder They Come",
@@ -1679,7 +4079,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0070155",
-      "poster": ""
+      "poster": "posters/the-harder-they-come-1972.jpg",
+      "year": 1972,
+      "tmdb": 7514,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Perry Henzell",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Music"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Pépé le Moko",
@@ -1687,7 +4099,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0029453",
-      "poster": ""
+      "poster": "posters/pepe-le-moko-1937.jpg",
+      "year": 1937,
+      "tmdb": 26252,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Julien Duvivier",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Getaway",
@@ -1695,7 +4119,20 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0068638",
-      "poster": ""
+      "poster": "posters/the-getaway-1972.jpg",
+      "year": 1972,
+      "tmdb": 5916,
+      "tmdbKind": "movie",
+      "runtime": 123,
+      "director": "Sam Peckinpah",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "First Artists",
+      "logo": "logos/4376.png"
     },
     {
       "title": "The Thief of Bagdad",
@@ -1703,7 +4140,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0033152",
-      "poster": ""
+      "poster": "posters/the-thief-of-bagdad-1940.jpg",
+      "year": 1940,
+      "tmdb": 12232,
+      "tmdbKind": "movie",
+      "runtime": 107,
+      "director": "Michael Powell",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Dead Ringers",
@@ -1711,7 +4160,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0094964",
-      "poster": ""
+      "poster": "posters/dead-ringers-1988.jpg",
+      "year": 1988,
+      "tmdb": 9540,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "David Cronenberg",
+      "genres": [
+        "Thriller",
+        "Horror"
+      ],
+      "studio": "Téléfilm Canada",
+      "logo": "logos/806.png"
     },
     {
       "title": "That Obscure Object of Desire",
@@ -1719,7 +4179,19 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0075824",
-      "poster": ""
+      "poster": "posters/that-obscure-object-of-desire-1977.jpg",
+      "year": 1977,
+      "tmdb": 5781,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Luis Buñuel",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Autumn Sonata",
@@ -1727,7 +4199,17 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0077711",
-      "poster": ""
+      "poster": "posters/autumn-sonata-1978.jpg",
+      "year": 1978,
+      "tmdb": 12761,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Ingmar Bergman",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Diary of a Chambermaid",
@@ -1735,7 +4217,18 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0058249",
-      "poster": ""
+      "poster": "posters/diary-of-a-chambermaid-1964.jpg",
+      "year": 1964,
+      "tmdb": 36245,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Luis Buñuel",
+      "genres": [
+        "Drama",
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Vengeance Is Mine",
@@ -1743,23 +4236,56 @@
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0079182",
-      "poster": ""
+      "poster": "posters/vengeance-is-mine-1979.jpg",
+      "year": 1979,
+      "tmdb": 42170,
+      "tmdbKind": "movie",
+      "runtime": 140,
+      "director": "Shōhei Imamura",
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Shochiku",
+      "logo": "logos/192.png"
     },
     {
-      "title": "The Job",
+      "title": "Il Posto",
       "rating": 4,
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0055320",
-      "poster": ""
+      "poster": "posters/il-posto-1961.jpg",
+      "year": 1961,
+      "tmdb": 31742,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Ermanno Olmi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
     },
     {
-      "title": "The Human Beast",
+      "title": "La Bête Humaine",
       "rating": 4,
       "rating10": 8,
       "watched": "2008-07-28",
       "imdb": "tt0029957",
-      "poster": ""
+      "poster": "posters/la-bete-humaine-1938.jpg",
+      "year": 1938,
+      "tmdb": 29415,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "Jean Renoir",
+      "genres": [
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Ivan the Terrible, Part I",
@@ -1767,15 +4293,37 @@
       "rating10": 7.5,
       "watched": "2008-07-28",
       "imdb": "tt0037824",
-      "poster": ""
+      "poster": "posters/ivan-the-terrible-part-i-1944.jpg",
+      "year": 1944,
+      "tmdb": 9797,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Sergei Eisenstein",
+      "genres": [
+        "Drama",
+        "History"
+      ],
+      "studio": "Mosfilm",
+      "logo": "logos/344.png"
     },
     {
-      "title": "Ivan the Terrible, Part II",
+      "title": "Ivan the Terrible, Part II: The Boyars' Plot",
       "rating": 4,
       "rating10": 7.5,
       "watched": "2008-07-28",
       "imdb": "tt0051790",
-      "poster": ""
+      "poster": "posters/ivan-the-terrible-part-ii-the-boyars-plot-1958.jpg",
+      "year": 1958,
+      "tmdb": 43118,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Sergei Eisenstein",
+      "genres": [
+        "History",
+        "Drama"
+      ],
+      "studio": "Mosfilm",
+      "logo": "logos/344.png"
     },
     {
       "title": "Bottle Rocket",
@@ -1783,7 +4331,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0115734",
-      "poster": ""
+      "poster": "posters/bottle-rocket-1996.jpg",
+      "year": 1996,
+      "tmdb": 13685,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Wes Anderson",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Gracie Films",
+      "logo": "logos/18.png"
     },
     {
       "title": "Time Bandits",
@@ -1791,7 +4351,21 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0081633",
-      "poster": ""
+      "poster": "posters/time-bandits-1981.jpg",
+      "year": 1981,
+      "tmdb": 36819,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Terry Gilliam",
+      "genres": [
+        "Family",
+        "Fantasy",
+        "Science Fiction",
+        "Adventure",
+        "Comedy"
+      ],
+      "studio": "Handmade Films",
+      "logo": "logos/20076.png"
     },
     {
       "title": "Sid and Nancy",
@@ -1799,7 +4373,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0091954",
-      "poster": ""
+      "poster": "posters/sid-and-nancy-1986.jpg",
+      "year": 1986,
+      "tmdb": 14924,
+      "tmdbKind": "movie",
+      "runtime": 114,
+      "director": "Alex Cox",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Carnival of Souls",
@@ -1807,7 +4392,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0055830",
-      "poster": ""
+      "poster": "posters/carnival-of-souls-1962.jpg",
+      "year": 1962,
+      "tmdb": 16093,
+      "tmdbKind": "movie",
+      "runtime": 78,
+      "director": "Herk Harvey",
+      "genres": [
+        "Horror",
+        "Mystery",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "RoboCop",
@@ -1815,7 +4412,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0093870",
-      "poster": ""
+      "poster": "posters/robocop-1987.jpg",
+      "year": 1987,
+      "tmdb": 5548,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Paul Verhoeven",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Science Fiction"
+      ],
+      "studio": "Orion Pictures",
+      "logo": "logos/41.png"
     },
     {
       "title": "For All Mankind",
@@ -1823,15 +4432,37 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0097372",
-      "poster": ""
+      "poster": "posters/for-all-mankind-1989.jpg",
+      "year": 1989,
+      "tmdb": 20423,
+      "tmdbKind": "movie",
+      "runtime": 80,
+      "director": "Al Reinert",
+      "genres": [
+        "Documentary",
+        "History"
+      ],
+      "studio": "National Geographic",
+      "logo": "logos/7521.png"
     },
     {
-      "title": "Masculine Feminine",
+      "title": "Masculin Féminin",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0060675",
-      "poster": ""
+      "poster": "posters/masculin-feminin-1966.jpg",
+      "year": 1966,
+      "tmdb": 4710,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
     },
     {
       "title": "Jersey Girl",
@@ -1839,7 +4470,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0300051",
-      "poster": ""
+      "poster": "posters/jersey-girl-2004.jpg",
+      "year": 2004,
+      "tmdb": 9541,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "How to Get Ahead in Advertising",
@@ -1847,7 +4490,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0097531",
-      "poster": ""
+      "poster": "posters/how-to-get-ahead-in-advertising-1989.jpg",
+      "year": 1989,
+      "tmdb": 14776,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Bruce Robinson",
+      "genres": [
+        "Fantasy",
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Virgin Films",
+      "logo": "logos/3150.png"
     },
     {
       "title": "Night and Fog",
@@ -1855,7 +4510,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0048434",
-      "poster": ""
+      "poster": "posters/night-and-fog-1956.jpg",
+      "year": 1956,
+      "tmdb": 803,
+      "tmdbKind": "movie",
+      "runtime": 32,
+      "director": "Alain Resnais",
+      "genres": [
+        "Documentary",
+        "History"
+      ],
+      "studio": "Argos films",
+      "logo": "logos/6116.png"
     },
     {
       "title": "Bring Me the Head of Alfredo Garcia",
@@ -1863,7 +4529,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0071249",
-      "poster": ""
+      "poster": "posters/bring-me-the-head-of-alfredo-garcia-1974.jpg",
+      "year": 1974,
+      "tmdb": 11942,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Sam Peckinpah",
+      "genres": [
+        "Action",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Estudios Churubusco Azteca",
+      "logo": "logos/5153.png"
     },
     {
       "title": "Tootsie",
@@ -1871,7 +4549,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0084805",
-      "poster": ""
+      "poster": "posters/tootsie-1982.jpg",
+      "year": 1982,
+      "tmdb": 9576,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Sydney Pollack",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Mirage Enterprises",
+      "logo": "logos/932.png"
     },
     {
       "title": "Shock Corridor",
@@ -1879,7 +4568,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0057495",
-      "poster": ""
+      "poster": "posters/shock-corridor-1963.jpg",
+      "year": 1963,
+      "tmdb": 25504,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Samuel Fuller",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Salesman",
@@ -1887,7 +4588,17 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0064921",
-      "poster": ""
+      "poster": "posters/salesman-1969.jpg",
+      "year": 1969,
+      "tmdb": 27375,
+      "tmdbKind": "movie",
+      "runtime": 90,
+      "director": "David Maysles",
+      "genres": [
+        "Documentary"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Written on the Wind",
@@ -1895,15 +4606,37 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0049966",
-      "poster": ""
+      "poster": "posters/written-on-the-wind-1956.jpg",
+      "year": 1956,
+      "tmdb": 69605,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Douglas Sirk",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Universal International Pictures",
+      "logo": "logos/10330.png"
     },
     {
-      "title": "The Million",
+      "title": "Le Million",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0022150",
-      "poster": ""
+      "poster": "posters/le-million-1931.jpg",
+      "year": 1931,
+      "tmdb": 32317,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "René Clair",
+      "genres": [
+        "Comedy",
+        "Music"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Lord of the Flies",
@@ -1911,7 +4644,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0057261",
-      "poster": ""
+      "poster": "posters/lord-of-the-flies-1963.jpg",
+      "year": 1963,
+      "tmdb": 9960,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Peter Brook",
+      "genres": [
+        "Drama",
+        "Adventure",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Pink Panther",
@@ -1919,7 +4664,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0057413",
-      "poster": ""
+      "poster": "posters/the-pink-panther-1963.jpg",
+      "year": 1963,
+      "tmdb": 936,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Blake Edwards",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "United Artists",
+      "logo": "logos/60.png"
     },
     {
       "title": "The Blob",
@@ -1927,7 +4683,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0051418",
-      "poster": ""
+      "poster": "posters/the-blob-1958.jpg",
+      "year": 1958,
+      "tmdb": 8851,
+      "tmdbKind": "movie",
+      "runtime": 82,
+      "director": "Irvin S. Yeaworth Jr.",
+      "genres": [
+        "Horror",
+        "Science Fiction"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "...And God Created Woman",
@@ -1935,7 +4702,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0049189",
-      "poster": ""
+      "poster": "posters/and-god-created-woman-1956.jpg",
+      "year": 1956,
+      "tmdb": 8420,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Roger Vadim",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Most Dangerous Game",
@@ -1943,15 +4721,38 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0023238",
-      "poster": ""
+      "poster": "posters/the-most-dangerous-game-1932.jpg",
+      "year": 1932,
+      "tmdb": 1994,
+      "tmdbKind": "movie",
+      "runtime": 63,
+      "director": "Irving Pichel",
+      "genres": [
+        "Thriller",
+        "Adventure",
+        "Horror",
+        "Action"
+      ],
+      "studio": "RKO Radio Pictures",
+      "logo": "logos/6.png"
     },
     {
-      "title": "My Uncle",
+      "title": "Mon Oncle",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0050706",
-      "poster": ""
+      "poster": "posters/mon-oncle-1958.jpg",
+      "year": 1958,
+      "tmdb": 427,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Jacques Tati",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Specta Films",
+      "logo": "logos/30847.png"
     },
     {
       "title": "Youth of the Beast",
@@ -1959,7 +4760,20 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0057697",
-      "poster": ""
+      "poster": "posters/youth-of-the-beast-1963.jpg",
+      "year": 1963,
+      "tmdb": 37939,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Action",
+        "Mystery"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
     },
     {
       "title": "The Killers",
@@ -1967,7 +4781,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0058262",
-      "poster": ""
+      "poster": "posters/the-killers-1964.jpg",
+      "year": 1964,
+      "tmdb": 24229,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Don Siegel",
+      "genres": [
+        "Crime",
+        "Mystery"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "The Firemen's Ball",
@@ -1975,15 +4800,35 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0061781",
-      "poster": ""
+      "poster": "posters/the-firemen-s-ball-1967.jpg",
+      "year": 1967,
+      "tmdb": 38442,
+      "tmdbKind": "movie",
+      "runtime": 73,
+      "director": "Miloš Forman",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Filmové studio Barrandov",
+      "logo": "logos/1931.png"
     },
     {
-      "title": "The Fiances",
+      "title": "The Fiancés",
       "rating": 3.5,
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0055981",
-      "poster": ""
+      "poster": "posters/the-fiances-1963.jpg",
+      "year": 1963,
+      "tmdb": 66180,
+      "tmdbKind": "movie",
+      "runtime": 84,
+      "director": "Ermanno Olmi",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Titanus",
+      "logo": "logos/641.png"
     },
     {
       "title": "Billy Liar",
@@ -1991,7 +4836,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0056868",
-      "poster": ""
+      "poster": "posters/billy-liar-1963.jpg",
+      "year": 1963,
+      "tmdb": 26535,
+      "tmdbKind": "movie",
+      "runtime": 98,
+      "director": "John Schlesinger",
+      "genres": [
+        "Comedy",
+        "Romance",
+        "Drama"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Dark Passage",
@@ -1999,7 +4856,18 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0039302",
-      "poster": ""
+      "poster": "posters/dark-passage-1947.jpg",
+      "year": 1947,
+      "tmdb": 16227,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Delmer Daves",
+      "genres": [
+        "Thriller",
+        "Mystery"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "The Honeymoon Killers",
@@ -2007,7 +4875,20 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0064437",
-      "poster": ""
+      "poster": "posters/the-honeymoon-killers-1970.jpg",
+      "year": 1970,
+      "tmdb": 10237,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Leonard Kastle",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "American International Pictures",
+      "logo": "logos/9266.png"
     },
     {
       "title": "Story of a Prostitute",
@@ -2015,7 +4896,19 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0059715",
-      "poster": ""
+      "poster": "posters/story-of-a-prostitute-1965.jpg",
+      "year": 1965,
+      "tmdb": 39506,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Drama",
+        "Romance",
+        "War"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
     },
     {
       "title": "Clerks",
@@ -2023,7 +4916,17 @@
       "rating10": 7,
       "watched": "2008-07-28",
       "imdb": "tt0109445",
-      "poster": ""
+      "poster": "posters/clerks-1994.jpg",
+      "year": 1994,
+      "tmdb": 2292,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Kevin Smith",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "View Askew Productions",
+      "logo": "logos/16934.png"
     },
     {
       "title": "The Fisher King",
@@ -2031,15 +4934,37 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0101889",
-      "poster": ""
+      "poster": "posters/the-fisher-king-1991.jpg",
+      "year": 1991,
+      "tmdb": 177,
+      "tmdbKind": "movie",
+      "runtime": 138,
+      "director": "Terry Gilliam",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "TriStar Pictures",
+      "logo": "logos/559.png"
     },
     {
-      "title": "I Heart Huckabees",
+      "title": "I ♥ Huckabees",
       "rating": 3,
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0356721",
-      "poster": ""
+      "poster": "posters/i-huckabees-2004.jpg",
+      "year": 2004,
+      "tmdb": 1599,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "David O. Russell",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     },
     {
       "title": "Stranger Than Fiction",
@@ -2047,15 +4972,40 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0420223",
-      "poster": ""
+      "poster": "posters/stranger-than-fiction-2006.jpg",
+      "year": 2006,
+      "tmdb": 1262,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Marc Forster",
+      "genres": [
+        "Drama",
+        "Comedy",
+        "Romance",
+        "Fantasy"
+      ],
+      "studio": "Mandate Pictures",
+      "logo": "logos/771.png"
     },
     {
-      "title": "Alphaville, A Strange Adventure of Lemmy Caution",
+      "title": "Alphaville",
       "rating": 3,
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0058898",
-      "poster": ""
+      "poster": "posters/alphaville-1965.jpg",
+      "year": 1965,
+      "tmdb": 8072,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Jean-Luc Godard",
+      "genres": [
+        "Drama",
+        "Science Fiction",
+        "Mystery"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Juliet of the Spirits",
@@ -2063,7 +5013,19 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0059229",
-      "poster": ""
+      "poster": "posters/juliet-of-the-spirits-1965.jpg",
+      "year": 1965,
+      "tmdb": 19120,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Federico Fellini",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Fantasy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Tokyo Drifter",
@@ -2071,7 +5033,19 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0061101",
-      "poster": ""
+      "poster": "posters/tokyo-drifter-1966.jpg",
+      "year": 1966,
+      "tmdb": 45706,
+      "tmdbKind": "movie",
+      "runtime": 83,
+      "director": "Seijun Suzuki",
+      "genres": [
+        "Thriller",
+        "Crime",
+        "Action"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
     },
     {
       "title": "The Witches",
@@ -2079,7 +5053,19 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0100944",
-      "poster": ""
+      "poster": "posters/the-witches-1990.jpg",
+      "year": 1990,
+      "tmdb": 10166,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Nicolas Roeg",
+      "genres": [
+        "Fantasy",
+        "Family",
+        "Horror"
+      ],
+      "studio": "Jim Henson Productions",
+      "logo": "logos/2504.png"
     },
     {
       "title": "Dick Tracy",
@@ -2087,7 +5073,19 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0099422",
-      "poster": ""
+      "poster": "posters/dick-tracy-1990.jpg",
+      "year": 1990,
+      "tmdb": 8592,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Warren Beatty",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Crime"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "Mona Lisa",
@@ -2095,7 +5093,20 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0091538",
-      "poster": ""
+      "poster": "posters/mona-lisa-1986.jpg",
+      "year": 1986,
+      "tmdb": 10002,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Neil Jordan",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Romance",
+        "Thriller"
+      ],
+      "studio": "Handmade Films",
+      "logo": "logos/20076.png"
     },
     {
       "title": "Double Suicide",
@@ -2103,7 +5114,18 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0064975",
-      "poster": ""
+      "poster": "posters/double-suicide-1969.jpg",
+      "year": 1969,
+      "tmdb": 45713,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Masahiro Shinoda",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "hyogensha",
+      "logo": "logos/21728.png"
     },
     {
       "title": "The Pornographers",
@@ -2111,7 +5133,19 @@
       "rating10": 6,
       "watched": "2008-07-28",
       "imdb": "tt0060560",
-      "poster": ""
+      "poster": "posters/the-pornographers-1966.jpg",
+      "year": 1966,
+      "tmdb": 42718,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Shōhei Imamura",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Nikkatsu Corporation",
+      "logo": "logos/955.png"
     },
     {
       "title": "Schizopolis",
@@ -2119,7 +5153,17 @@
       "rating10": 5,
       "watched": "2008-07-28",
       "imdb": "tt0117561",
-      "poster": ""
+      "poster": "posters/schizopolis-1997.jpg",
+      "year": 1997,
+      "tmdb": 16375,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "Steven Soderbergh",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Hook",
@@ -2127,7 +5171,20 @@
       "rating10": 5,
       "watched": "2008-07-28",
       "imdb": "tt0102057",
-      "poster": ""
+      "poster": "posters/hook-1991.jpg",
+      "year": 1991,
+      "tmdb": 879,
+      "tmdbKind": "movie",
+      "runtime": 142,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Adventure",
+        "Fantasy",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Amblin Entertainment",
+      "logo": "logos/56.png"
     },
     {
       "title": "Lemony Snicket's A Series of Unfortunate Events",
@@ -2135,7 +5192,19 @@
       "rating10": 5,
       "watched": "2008-07-28",
       "imdb": "tt0339291",
-      "poster": ""
+      "poster": "posters/lemony-snicket-s-a-series-of-unfortunate-events-2004.jpg",
+      "year": 2004,
+      "tmdb": 11774,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Brad Silberling",
+      "genres": [
+        "Adventure",
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Blood for Dracula",
@@ -2143,7 +5212,17 @@
       "rating10": 5,
       "watched": "2008-07-28",
       "imdb": "tt0071233",
-      "poster": ""
+      "poster": "posters/blood-for-dracula-1974.jpg",
+      "year": 1974,
+      "tmdb": 25944,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "Paul Morrissey",
+      "genres": [
+        "Horror"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Flesh for Frankenstein",
@@ -2151,7 +5230,17 @@
       "rating10": 5,
       "watched": "2008-07-28",
       "imdb": "tt0071508",
-      "poster": ""
+      "poster": "posters/flesh-for-frankenstein-1973.jpg",
+      "year": 1973,
+      "tmdb": 3043,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Paul Morrissey",
+      "genres": [
+        "Horror"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Meet the Fockers",
@@ -2159,7 +5248,18 @@
       "rating10": 4,
       "watched": "2008-07-28",
       "imdb": "tt0290002",
-      "poster": ""
+      "poster": "posters/meet-the-fockers-2004.jpg",
+      "year": 2004,
+      "tmdb": 693,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Jay Roach",
+      "genres": [
+        "Comedy",
+        "Romance"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Racing Stripes",
@@ -2167,7 +5267,18 @@
       "rating10": 4,
       "watched": "2008-07-28",
       "imdb": "tt0376105",
-      "poster": ""
+      "poster": "posters/racing-stripes-2005.jpg",
+      "year": 2005,
+      "tmdb": 6439,
+      "tmdbKind": "movie",
+      "runtime": 102,
+      "director": "Frederik Du Chau",
+      "genres": [
+        "Comedy",
+        "Family"
+      ],
+      "studio": "Alcon Entertainment",
+      "logo": "logos/1088.png"
     },
     {
       "title": "The Human Condition I: No Greater Love",
@@ -2175,7 +5286,19 @@
       "rating10": 9,
       "watched": "2008-08-05",
       "imdb": "tt0053114",
-      "poster": ""
+      "poster": "posters/the-human-condition-i-no-greater-love-1959.jpg",
+      "year": 1959,
+      "tmdb": 31217,
+      "tmdbKind": "movie",
+      "runtime": 204,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "War",
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Human Condition II: Road to Eternity",
@@ -2183,7 +5306,19 @@
       "rating10": 9,
       "watched": "2008-08-05",
       "imdb": "tt0053115",
-      "poster": ""
+      "poster": "posters/the-human-condition-ii-road-to-eternity-1959.jpg",
+      "year": 1959,
+      "tmdb": 34528,
+      "tmdbKind": "movie",
+      "runtime": 178,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "War",
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Human Condition III: A Soldier's Prayer",
@@ -2191,7 +5326,19 @@
       "rating10": 9,
       "watched": "2008-08-05",
       "imdb": "tt0055233",
-      "poster": ""
+      "poster": "posters/the-human-condition-iii-a-soldier-s-prayer-1961.jpg",
+      "year": 1961,
+      "tmdb": 34530,
+      "tmdbKind": "movie",
+      "runtime": 190,
+      "director": "Masaki Kobayashi",
+      "genres": [
+        "War",
+        "Drama",
+        "History"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Ice Storm",
@@ -2199,7 +5346,17 @@
       "rating10": 9,
       "watched": "2008-08-29",
       "imdb": "tt0119349",
-      "poster": ""
+      "poster": "posters/the-ice-storm-1997.jpg",
+      "year": 1997,
+      "tmdb": 68924,
+      "tmdbKind": "movie",
+      "runtime": 113,
+      "director": "Ang Lee",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Fox Searchlight Pictures",
+      "logo": "logos/43.png"
     }
   ]
 }

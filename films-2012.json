@@ -7,9 +7,19 @@
       "rating10": 10,
       "watched": "2012-01-25",
       "imdb": "tt0357413",
-      "poster": "",
+      "poster": "posters/anchorman-the-legend-of-ron-burgundy-2004.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 406621
+      "imdbVotes": 406621,
+      "year": 2004,
+      "tmdb": 8699,
+      "tmdbKind": "movie",
+      "runtime": 95,
+      "director": "Adam McKay",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "DreamWorks Pictures",
+      "logo": "logos/7.png"
     },
     {
       "title": "Inglourious Basterds",
@@ -17,9 +27,21 @@
       "rating10": 10,
       "watched": "2012-01-25",
       "imdb": "tt0361748",
-      "poster": "",
+      "poster": "posters/inglourious-basterds-2009.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 1831132
+      "imdbVotes": 1831132,
+      "year": 2009,
+      "tmdb": 16869,
+      "tmdbKind": "movie",
+      "runtime": 153,
+      "director": "Quentin Tarantino",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "War"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Rushmore",
@@ -27,9 +49,20 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0128445",
-      "poster": "",
+      "poster": "posters/rushmore-1998.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 210361
+      "imdbVotes": 210361,
+      "year": 1998,
+      "tmdb": 11545,
+      "tmdbKind": "movie",
+      "runtime": 93,
+      "director": "Wes Anderson",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "studio": "Touchstone Pictures",
+      "logo": "logos/9195.png"
     },
     {
       "title": "The Usual Suspects",
@@ -37,9 +70,21 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0114814",
-      "poster": "",
+      "poster": "posters/the-usual-suspects-1995.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 1262897
+      "imdbVotes": 1262897,
+      "year": 1995,
+      "tmdb": 629,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Bryan Singer",
+      "genres": [
+        "Drama",
+        "Crime",
+        "Thriller"
+      ],
+      "studio": "Bad Hat Harry Productions",
+      "logo": "logos/9168.png"
     },
     {
       "title": "Pan's Labyrinth",
@@ -47,9 +92,21 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0457430",
-      "poster": "",
+      "poster": "posters/pan-s-labyrinth-2006.jpg",
       "imdbRating": 8.2,
-      "imdbVotes": 757492
+      "imdbVotes": 757492,
+      "year": 2006,
+      "tmdb": 1417,
+      "tmdbKind": "movie",
+      "runtime": 118,
+      "director": "Guillermo del Toro",
+      "genres": [
+        "Fantasy",
+        "Drama",
+        "War"
+      ],
+      "studio": "Telecinco",
+      "logo": "logos/1182.png"
     },
     {
       "title": "Good Will Hunting",
@@ -57,9 +114,19 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0119217",
-      "poster": "",
+      "poster": "posters/good-will-hunting-1997.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 1254374
+      "imdbVotes": 1254374,
+      "year": 1997,
+      "tmdb": 489,
+      "tmdbKind": "movie",
+      "runtime": 127,
+      "director": "Gus Van Sant",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Miramax",
+      "logo": "logos/14.png"
     },
     {
       "title": "Persona",
@@ -67,9 +134,19 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0060827",
-      "poster": "",
+      "poster": "posters/persona-1966.jpg",
       "imdbRating": 8,
-      "imdbVotes": 143018
+      "imdbVotes": 143018,
+      "year": 1966,
+      "tmdb": 797,
+      "tmdbKind": "movie",
+      "runtime": 85,
+      "director": "Ingmar Bergman",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
     },
     {
       "title": "Avatar",
@@ -77,9 +154,21 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0499549",
-      "poster": "",
+      "poster": "posters/avatar-2009.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 1522049
+      "imdbVotes": 1522049,
+      "year": 2009,
+      "tmdb": 19995,
+      "tmdbKind": "movie",
+      "runtime": 162,
+      "director": "James Cameron",
+      "genres": [
+        "Science Fiction",
+        "Action",
+        "Adventure"
+      ],
+      "studio": "Lightstorm Entertainment",
+      "logo": "logos/574.png"
     },
     {
       "title": "Drive",
@@ -87,9 +176,21 @@
       "rating10": 9,
       "watched": "2012-01-25",
       "imdb": "tt0780504",
-      "poster": "",
+      "poster": "posters/drive-2011.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 779025
+      "imdbVotes": 779025,
+      "year": 2011,
+      "tmdb": 64690,
+      "tmdbKind": "movie",
+      "runtime": 100,
+      "director": "Nicolas Winding Refn",
+      "genres": [
+        "Drama",
+        "Thriller",
+        "Crime"
+      ],
+      "studio": "FilmDistrict",
+      "logo": "logos/7263.png"
     },
     {
       "title": "In Bruges",
@@ -97,9 +198,21 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0780536",
-      "poster": "",
+      "poster": "posters/in-bruges-2008.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 501105
+      "imdbVotes": 501105,
+      "year": 2008,
+      "tmdb": 8321,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Martin McDonagh",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Crime"
+      ],
+      "studio": "Blueprint Pictures",
+      "logo": "logos/2376.png"
     },
     {
       "title": "The Lives of Others",
@@ -107,9 +220,20 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0405094",
-      "poster": "",
+      "poster": "posters/the-lives-of-others-2006.jpg",
       "imdbRating": 8.4,
-      "imdbVotes": 449226
+      "imdbVotes": 449226,
+      "year": 2006,
+      "tmdb": 582,
+      "tmdbKind": "movie",
+      "runtime": 137,
+      "director": "Florian Henckel von Donnersmarck",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "Wiedemann & Berg Film",
+      "logo": "logos/336.png"
     },
     {
       "title": "Schindler's List",
@@ -117,9 +241,21 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0108052",
-      "poster": "",
+      "poster": "posters/schindler-s-list-1993.jpg",
       "imdbRating": 9,
-      "imdbVotes": 1614073
+      "imdbVotes": 1614073,
+      "year": 1993,
+      "tmdb": 424,
+      "tmdbKind": "movie",
+      "runtime": 195,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Drama",
+        "History",
+        "War"
+      ],
+      "studio": "Amblin Entertainment",
+      "logo": "logos/56.png"
     },
     {
       "title": "The Pianist",
@@ -127,9 +263,20 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0253474",
-      "poster": "",
+      "poster": "posters/the-pianist-2002.jpg",
       "imdbRating": 8.5,
-      "imdbVotes": 1032350
+      "imdbVotes": 1032350,
+      "year": 2002,
+      "tmdb": 423,
+      "tmdbKind": "movie",
+      "runtime": 150,
+      "director": "Roman Polanski",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "studio": "Studio Babelsberg",
+      "logo": "logos/264.png"
     },
     {
       "title": "Adaptation.",
@@ -137,9 +284,21 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0268126",
-      "poster": "",
+      "poster": "posters/adaptation-2002.jpg",
       "imdbRating": 7.6,
-      "imdbVotes": 215547
+      "imdbVotes": 215547,
+      "year": 2002,
+      "tmdb": 2757,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Spike Jonze",
+      "genres": [
+        "Comedy",
+        "Crime",
+        "Drama"
+      ],
+      "studio": "Columbia Pictures",
+      "logo": "logos/5.png"
     },
     {
       "title": "Ferris Bueller's Day Off",
@@ -147,19 +306,41 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0091042",
-      "poster": "",
+      "poster": "posters/ferris-bueller-s-day-off-1986.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 422633
+      "imdbVotes": 422633,
+      "year": 1986,
+      "tmdb": 9377,
+      "tmdbKind": "movie",
+      "runtime": 103,
+      "director": "John Hughes",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
-      "title": "School of Rock",
+      "title": "The School of Rock",
       "rating": 4,
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0332379",
-      "poster": "",
+      "poster": "posters/the-school-of-rock-2003.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 364135
+      "imdbVotes": 364135,
+      "year": 2003,
+      "tmdb": 1584,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Richard Linklater",
+      "genres": [
+        "Comedy",
+        "Family",
+        "Music"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "The Battle of Algiers",
@@ -167,9 +348,21 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0058946",
-      "poster": "",
+      "poster": "posters/the-battle-of-algiers-1966.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 77673
+      "imdbVotes": 77673,
+      "year": 1966,
+      "tmdb": 17295,
+      "tmdbKind": "movie",
+      "runtime": 122,
+      "director": "Gillo Pontecorvo",
+      "genres": [
+        "Drama",
+        "War",
+        "History"
+      ],
+      "studio": "Casbah Film",
+      "logo": "logos/10207.png"
     },
     {
       "title": "Gran Torino",
@@ -177,9 +370,19 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt1205489",
-      "poster": "",
+      "poster": "posters/gran-torino-2008.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 874222
+      "imdbVotes": 874222,
+      "year": 2008,
+      "tmdb": 13223,
+      "tmdbKind": "movie",
+      "runtime": 116,
+      "director": "Clint Eastwood",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "Double Nickel Entertainment",
+      "logo": "logos/10138.png"
     },
     {
       "title": "Slumdog Millionaire",
@@ -187,29 +390,62 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt1010048",
-      "poster": "",
+      "poster": "posters/slumdog-millionaire-2008.jpg",
       "imdbRating": 8,
-      "imdbVotes": 918420
+      "imdbVotes": 918420,
+      "year": 2008,
+      "tmdb": 12405,
+      "tmdbKind": "movie",
+      "runtime": 121,
+      "director": "Danny Boyle",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Celador Films",
+      "logo": "logos/3573.png"
     },
     {
-      "title": "Love's a Bitch",
+      "title": "Amores Perros",
       "rating": 4,
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0245712",
-      "poster": "",
+      "poster": "posters/amores-perros-2000.jpg",
       "imdbRating": 8,
-      "imdbVotes": 274242
+      "imdbVotes": 274242,
+      "year": 2000,
+      "tmdb": 55,
+      "tmdbKind": "movie",
+      "runtime": 154,
+      "director": "Alejandro G. Iñárritu",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
-      "title": "Goodbye, Children",
+      "title": "Au Revoir les Enfants",
       "rating": 4,
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0092593",
-      "poster": "",
+      "poster": "posters/au-revoir-les-enfants-1987.jpg",
       "imdbRating": 8,
-      "imdbVotes": 39150
+      "imdbVotes": 39150,
+      "year": 1987,
+      "tmdb": 1786,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Louis Malle",
+      "genres": [
+        "Drama",
+        "War"
+      ],
+      "studio": "MK2 Productions",
+      "logo": "logos/187078.png"
     },
     {
       "title": "Catch Me If You Can",
@@ -217,9 +453,20 @@
       "rating10": 8,
       "watched": "2012-01-25",
       "imdb": "tt0264464",
-      "poster": "",
+      "poster": "posters/catch-me-if-you-can-2002.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 1275034
+      "imdbVotes": 1275034,
+      "year": 2002,
+      "tmdb": 640,
+      "tmdbKind": "movie",
+      "runtime": 141,
+      "director": "Steven Spielberg",
+      "genres": [
+        "Drama",
+        "Crime"
+      ],
+      "studio": "DreamWorks Pictures",
+      "logo": "logos/7.png"
     },
     {
       "title": "Blood Simple",
@@ -227,9 +474,21 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt0086979",
-      "poster": "",
+      "poster": "posters/blood-simple-1985.jpg",
       "imdbRating": 7.5,
-      "imdbVotes": 115825
+      "imdbVotes": 115825,
+      "year": 1985,
+      "tmdb": 11368,
+      "tmdbKind": "movie",
+      "runtime": 97,
+      "director": "Joel Coen",
+      "genres": [
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "Eternal Sunshine of the Spotless Mind",
@@ -237,9 +496,21 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt0338013",
-      "poster": "",
+      "poster": "posters/eternal-sunshine-of-the-spotless-mind-2004.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 1203127
+      "imdbVotes": 1203127,
+      "year": 2004,
+      "tmdb": 38,
+      "tmdbKind": "movie",
+      "runtime": 108,
+      "director": "Michel Gondry",
+      "genres": [
+        "Science Fiction",
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Focus Features",
+      "logo": "logos/10146.png"
     },
     {
       "title": "Let the Right One In",
@@ -247,9 +518,20 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt1139797",
-      "poster": "",
+      "poster": "posters/let-the-right-one-in-2008.jpg",
       "imdbRating": 7.8,
-      "imdbVotes": 242826
+      "imdbVotes": 242826,
+      "year": 2008,
+      "tmdb": 13310,
+      "tmdbKind": "movie",
+      "runtime": 115,
+      "director": "Tomas Alfredson",
+      "genres": [
+        "Horror",
+        "Drama"
+      ],
+      "studio": "Filmpool Nord",
+      "logo": "logos/228.png"
     },
     {
       "title": "Wild Strawberries",
@@ -257,9 +539,19 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt0050986",
-      "poster": "",
+      "poster": "posters/wild-strawberries-1957.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 126487
+      "imdbVotes": 126487,
+      "year": 1957,
+      "tmdb": 614,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "Ingmar Bergman",
+      "genres": [
+        "Drama"
+      ],
+      "studio": "SF Studios",
+      "logo": "logos/6181.png"
     },
     {
       "title": "Brick",
@@ -267,9 +559,21 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt0393109",
-      "poster": "",
+      "poster": "posters/brick-2006.jpg",
       "imdbRating": 7.1,
-      "imdbVotes": 114899
+      "imdbVotes": 114899,
+      "year": 2006,
+      "tmdb": 9270,
+      "tmdbKind": "movie",
+      "runtime": 110,
+      "director": "Rian Johnson",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Crime"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "The Wrestler",
@@ -277,9 +581,20 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt1125849",
-      "poster": "",
+      "poster": "posters/the-wrestler-2008.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 333629
+      "imdbVotes": 333629,
+      "year": 2008,
+      "tmdb": 12163,
+      "tmdbKind": "movie",
+      "runtime": 109,
+      "director": "Darren Aronofsky",
+      "genres": [
+        "Drama",
+        "Romance"
+      ],
+      "studio": "Wild Bunch",
+      "logo": "logos/856.png"
     },
     {
       "title": "Role Models",
@@ -287,9 +602,19 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt0430922",
-      "poster": "",
+      "poster": "posters/role-models-2008.jpg",
       "imdbRating": 6.8,
-      "imdbVotes": 254106
+      "imdbVotes": 254106,
+      "year": 2008,
+      "tmdb": 15373,
+      "tmdbKind": "movie",
+      "runtime": 99,
+      "director": "David Wain",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Universal Pictures",
+      "logo": "logos/33.png"
     },
     {
       "title": "Up",
@@ -297,9 +622,22 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt1049413",
-      "poster": "",
+      "poster": "posters/up-2009.jpg",
       "imdbRating": 8.3,
-      "imdbVotes": 1263979
+      "imdbVotes": 1263979,
+      "year": 2009,
+      "tmdb": 14160,
+      "tmdbKind": "movie",
+      "runtime": 96,
+      "director": "Pete Docter",
+      "genres": [
+        "Animation",
+        "Comedy",
+        "Family",
+        "Adventure"
+      ],
+      "studio": "Pixar",
+      "logo": "logos/3.png"
     },
     {
       "title": "Inception",
@@ -307,9 +645,21 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt1375666",
-      "poster": "",
+      "poster": "posters/inception-2010.jpg",
       "imdbRating": 8.8,
-      "imdbVotes": 2890807
+      "imdbVotes": 2890807,
+      "year": 2010,
+      "tmdb": 27205,
+      "tmdbKind": "movie",
+      "runtime": 148,
+      "director": "Christopher Nolan",
+      "genres": [
+        "Action",
+        "Science Fiction",
+        "Crime"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Harry Potter and the Deathly Hallows: Part 2",
@@ -317,9 +667,20 @@
       "rating10": 7,
       "watched": "2012-01-25",
       "imdb": "tt1201607",
-      "poster": "",
+      "poster": "posters/harry-potter-and-the-deathly-hallows-part-2-2011.jpg",
       "imdbRating": 8.1,
-      "imdbVotes": 1070281
+      "imdbVotes": 1070281,
+      "year": 2011,
+      "tmdb": 12445,
+      "tmdbKind": "movie",
+      "runtime": 130,
+      "director": "David Yates",
+      "genres": [
+        "Adventure",
+        "Fantasy"
+      ],
+      "studio": "Warner Bros. Pictures",
+      "logo": "logos/174.png"
     },
     {
       "title": "Taken",
@@ -327,9 +688,20 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt0936501",
-      "poster": "",
+      "poster": "posters/taken-2008.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 681317
+      "imdbVotes": 681317,
+      "year": 2008,
+      "tmdb": 8681,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Pierre Morel",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "studio": "EuropaCorp",
+      "logo": "logos/6896.png"
     },
     {
       "title": "Old School",
@@ -337,9 +709,19 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt0302886",
-      "poster": "",
+      "poster": "posters/old-school-2003.jpg",
       "imdbRating": 7,
-      "imdbVotes": 259243
+      "imdbVotes": 259243,
+      "year": 2003,
+      "tmdb": 11635,
+      "tmdbKind": "movie",
+      "runtime": 92,
+      "director": "Todd Phillips",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "The Montecito Picture Company",
+      "logo": "logos/2364.png"
     },
     {
       "title": "Die Hard 2",
@@ -347,9 +729,20 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt0099423",
-      "poster": "",
+      "poster": "posters/die-hard-2-1990.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 411692
+      "imdbVotes": 411692,
+      "year": 1990,
+      "tmdb": 1573,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Renny Harlin",
+      "genres": [
+        "Action",
+        "Thriller"
+      ],
+      "studio": "Silver Pictures",
+      "logo": "logos/1885.png"
     },
     {
       "title": "Mulan",
@@ -357,9 +750,21 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt0120762",
-      "poster": "",
+      "poster": "posters/mulan-1998.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 353170
+      "imdbVotes": 353170,
+      "year": 1998,
+      "tmdb": 10674,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Tony Bancroft",
+      "genres": [
+        "Animation",
+        "Family",
+        "Adventure"
+      ],
+      "studio": "Walt Disney Feature Animation",
+      "logo": "logos/171656.png"
     },
     {
       "title": "Platoon",
@@ -367,9 +772,21 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt0091763",
-      "poster": "",
+      "poster": "posters/platoon-1986.jpg",
       "imdbRating": 8,
-      "imdbVotes": 479712
+      "imdbVotes": 479712,
+      "year": 1986,
+      "tmdb": 792,
+      "tmdbKind": "movie",
+      "runtime": 120,
+      "director": "Oliver Stone",
+      "genres": [
+        "Drama",
+        "War",
+        "Action"
+      ],
+      "studio": "",
+      "logo": ""
     },
     {
       "title": "District 9",
@@ -377,9 +794,19 @@
       "rating10": 6,
       "watched": "2012-01-25",
       "imdb": "tt1136608",
-      "poster": "",
+      "poster": "posters/district-9-2009.jpg",
       "imdbRating": 7.9,
-      "imdbVotes": 760451
+      "imdbVotes": 760451,
+      "year": 2009,
+      "tmdb": 17654,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Neill Blomkamp",
+      "genres": [
+        "Science Fiction"
+      ],
+      "studio": "TriStar Pictures",
+      "logo": "logos/559.png"
     },
     {
       "title": "Friday",
@@ -387,9 +814,20 @@
       "rating10": 5,
       "watched": "2012-01-25",
       "imdb": "tt0113118",
-      "poster": "",
+      "poster": "posters/friday-1995.jpg",
       "imdbRating": 7.2,
-      "imdbVotes": 139841
+      "imdbVotes": 139841,
+      "year": 1995,
+      "tmdb": 10634,
+      "tmdbKind": "movie",
+      "runtime": 91,
+      "director": "F. Gary Gray",
+      "genres": [
+        "Comedy",
+        "Action"
+      ],
+      "studio": "New Line Cinema",
+      "logo": "logos/12.png"
     },
     {
       "title": "Alice in Wonderland",
@@ -397,9 +835,22 @@
       "rating10": 5,
       "watched": "2012-01-25",
       "imdb": "tt0043274",
-      "poster": "",
+      "poster": "posters/alice-in-wonderland-1951.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 169738
+      "imdbVotes": 169738,
+      "year": 1951,
+      "tmdb": 12092,
+      "tmdbKind": "movie",
+      "runtime": 75,
+      "director": "Clyde Geronimi",
+      "genres": [
+        "Animation",
+        "Family",
+        "Fantasy",
+        "Adventure"
+      ],
+      "studio": "Walt Disney Productions",
+      "logo": "logos/3166.png"
     },
     {
       "title": "Spider-Man 3",
@@ -407,9 +858,21 @@
       "rating10": 4,
       "watched": "2012-01-25",
       "imdb": "tt0413300",
-      "poster": "",
+      "poster": "posters/spider-man-3-2007.jpg",
       "imdbRating": 6.3,
-      "imdbVotes": 725086
+      "imdbVotes": 725086,
+      "year": 2007,
+      "tmdb": 559,
+      "tmdbKind": "movie",
+      "runtime": 139,
+      "director": "Sam Raimi",
+      "genres": [
+        "Action",
+        "Adventure",
+        "Science Fiction"
+      ],
+      "studio": "Marvel Studios",
+      "logo": "logos/420.png"
     },
     {
       "title": "High Anxiety",
@@ -417,9 +880,21 @@
       "rating10": 4,
       "watched": "2012-01-25",
       "imdb": "tt0076141",
-      "poster": "",
+      "poster": "posters/high-anxiety-1977.jpg",
       "imdbRating": 6.6,
-      "imdbVotes": 26409
+      "imdbVotes": 26409,
+      "year": 1977,
+      "tmdb": 12535,
+      "tmdbKind": "movie",
+      "runtime": 94,
+      "director": "Mel Brooks",
+      "genres": [
+        "Comedy",
+        "Mystery",
+        "Thriller"
+      ],
+      "studio": "20th Century Fox",
+      "logo": "logos/25.png"
     },
     {
       "title": "Sleepy Hollow",
@@ -427,9 +902,22 @@
       "rating10": 4,
       "watched": "2012-01-25",
       "imdb": "tt0162661",
-      "poster": "",
+      "poster": "posters/sleepy-hollow-1999.jpg",
       "imdbRating": 7.3,
-      "imdbVotes": 420693
+      "imdbVotes": 420693,
+      "year": 1999,
+      "tmdb": 2668,
+      "tmdbKind": "movie",
+      "runtime": 105,
+      "director": "Tim Burton",
+      "genres": [
+        "Fantasy",
+        "Thriller",
+        "Mystery",
+        "Horror"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     },
     {
       "title": "Airplane!",
@@ -437,9 +925,19 @@
       "rating10": 3,
       "watched": "2012-01-25",
       "imdb": "tt0080339",
-      "poster": "",
+      "poster": "posters/airplane-1980.jpg",
       "imdbRating": 7.7,
-      "imdbVotes": 294501
+      "imdbVotes": 294501,
+      "year": 1980,
+      "tmdb": 813,
+      "tmdbKind": "movie",
+      "runtime": 88,
+      "director": "Jim Abrahams",
+      "genres": [
+        "Comedy"
+      ],
+      "studio": "Paramount Pictures",
+      "logo": "logos/4.png"
     }
   ]
 }
