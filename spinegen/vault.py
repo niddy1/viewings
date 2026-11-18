@@ -5,7 +5,15 @@
 # typed labels read from IMDb (JSON-LD director/actor, company credits for films with no logo file), and the
 # layouts, stickers, picture shapes and foot styles mixed to the 2026 targets (see CLAUDE.md).
 
-def comp_cut(test, keep=None, top=None, soft=1.4):
+def _turn(rgb, al, rot):
+    """turn a cut-out (rgb + alpha) by rot degrees, growing the canvas so nothing is clipped"""
+    hgt, wid = al.shape; M = cv2.getRotationMatrix2D((wid / 2, hgt / 2), rot, 1)
+    c_, s_ = abs(M[0, 0]), abs(M[0, 1]); nw, nh = int(hgt * s_ + wid * c_), int(hgt * c_ + wid * s_)
+    M[0, 2] += nw / 2 - wid / 2; M[1, 2] += nh / 2 - hgt / 2
+    return cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC), cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
+
+
+def comp_cut(test, keep=None, top=None, soft=1.4, rot=0):
     """an LC cut that keeps whole letters: the connected pieces passing test (rgb 0..1), filtered by
     keep(cx, cy) (the piece's centre, as fractions of the cut-out crop) and/or only the `top` biggest.
     For lettering that interlocks on the poster (arched, stacked or overlapping words), where a straight
@@ -21,11 +29,12 @@ def comp_cut(test, keep=None, top=None, soft=1.4):
         if top:
             idx = [j for j in range(1, n) if ok[j]]; idx.sort(key=lambda j: -st[j, cv2.CC_STAT_AREA])
             ok[:] = False; ok[idx[:top]] = True
-        return rgb, _soft(ok[lab].astype(np.float32), soft)
+        al = _soft(ok[lab].astype(np.float32), soft)
+        return _turn(rgb, al, rot) if rot else (rgb, al)
     return fn
 
 
-def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4):
+def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4, split=0):
     """an LC cut that keeps the letters whose centres lie within r (fraction of the poster width) of pts
     (poster fractions, read off the poster with the comps tool), so a word can be taken out of lettering
     that interlocks with its neighbours.  flat=True drops each letter onto one baseline (lettering that
@@ -37,7 +46,7 @@ def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4):
         ox, oy = max(0, int(box[0] * cw) - margin), max(0, int(box[1] * ch) - margin)
         a = rgb.astype(np.float32) / 255
         m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
-        n, lab, st, cen = cv2.connectedComponentsWithStats(m)
+        n, lab, st, cen = cv2.connectedComponentsWithStats(cv2.erode(m, np.ones((split, split), np.uint8)) if split else m)
         P = lambda j: ((ox + cen[j][0] / k) / cw, (oy + cen[j][1] / k) / ch)
         keep = {j for j in range(1, n) if st[j, 4] > 30 and any((P(j)[0] - px) ** 2 + ((P(j)[1] - py) * ch / cw) ** 2 < r * r for px, py in pts)}
         for px, py in pts:  # a point inside a piece's outline box picks that piece (letters that join up when enlarged)
@@ -45,6 +54,13 @@ def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4):
             inb = [j for j in range(1, n) if st[j, 4] > 30 and st[j, 0] <= qx <= st[j, 0] + st[j, 2] and st[j, 1] <= qy <= st[j, 1] + st[j, 3]]
             if inb: keep.add(min(inb, key=lambda j: (cen[j][0] - qx) ** 2 + (cen[j][1] - qy) ** 2))
         keep = sorted(keep)
+        if split:  # grow the picked pieces back over the letters they were eroded from (touching letters stay apart)
+            grown = np.zeros_like(lab)
+            for j in keep: grown[(cv2.dilate((lab == j).astype(np.uint8), np.ones((split + 2, split + 2), np.uint8)) > 0) & (m > 0) & (grown == 0)] = j
+            lab = grown
+            for j in keep:
+                ys, xs = np.where(lab == j)
+                if len(xs): st[j, :4] = [xs.min(), ys.min(), xs.max() - xs.min() + 1, ys.max() - ys.min() + 1]
         al = _soft(np.isin(lab, keep).astype(np.float32), soft)
         if flat and keep:  # every letter onto one baseline, keeping their spacing across
             pad = 4; rise = max(st[j, 3] for j in keep) + 2 * pad; hh = rise + 2
@@ -68,7 +84,7 @@ def pick_cut(test, box, pts, margin=6, r=.025, flat=False, rot=0, soft=1.4):
     return fn
 
 
-def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None):
+def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None, holes=0):
     """an LC cut that rebuilds a word from the poster's own letters: pts are the letters' centres in reading
     order (poster fractions; None for a word space).  Each letter is turned level along the line through its
     neighbours (lettering set on an arc, as Grand Illusion's) and the letters are laid on one baseline.
@@ -90,7 +106,12 @@ def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None):
             ang = np.degrees(np.arctan2(nxt[1] - prv[1], nxt[0] - prv[0])) if turn is None else turn[ri]
             x, y, w, h = st[j, :4]; pd = int(max(w, h) * .3) + 4
             x0, y0, x1, y1 = max(0, x - pd), max(0, y - pd), min(rgb.shape[1], x + w + pd), min(rgb.shape[0], y + h + pd)
-            al = _soft((lab[y0:y1, x0:x1] == j).astype(np.float32), soft); col = rgb[y0:y1, x0:x1]
+            pm = (lab[y0:y1, x0:x1] == j).astype(np.uint8)
+            if holes:  # fill small holes (Dumbo's white dots), keep the letters' counters open
+                inv = 1 - pm; nh_, lh, sh, _ = cv2.connectedComponentsWithStats(inv, connectivity=4)
+                for q in range(1, nh_):
+                    if sh[q, 4] < holes * pm.sum() and not (sh[q, 0] == 0 or sh[q, 1] == 0 or sh[q, 0] + sh[q, 2] >= pm.shape[1] or sh[q, 1] + sh[q, 3] >= pm.shape[0]): pm[lh == q] = 1
+            al = _soft(pm.astype(np.float32), soft); col = rgb[y0:y1, x0:x1]
             M = cv2.getRotationMatrix2D(((x1 - x0) / 2, (y1 - y0) / 2), ang, 1)
             al = cv2.warpAffine(al, M, (x1 - x0, y1 - y0)); col = cv2.warpAffine(col, M, (x1 - x0, y1 - y0), flags=cv2.INTER_CUBIC)
             ys, xs = np.where(al > .3)
@@ -106,6 +127,23 @@ def seq_cut(test, box, pts, margin=6, gapf=.1, space=.45, soft=1.4, turn=None):
             sub = out_a[y0:y0 + hh, x:x + ww]; mm = a_ > sub
             out_c[y0:y0 + hh, x:x + ww][mm] = c_[mm]; out_a[y0:y0 + hh, x:x + ww] = np.maximum(sub, a_); x += ww + g
         return out_c, out_a
+    return fn
+
+
+def plate_cut(test, rot=0, soft=1.2):
+    """an LC cut for a title printed on a sign or panel: the biggest piece passing test (the panel), its
+    holes filled so the lettering printed on it comes along in its own colours, turned by rot degrees"""
+    def fn(rgb):
+        a = rgb.astype(np.float32) / 255
+        m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+        n, lab, st, _ = cv2.connectedComponentsWithStats(m)
+        if n < 2: return rgb, m.astype(np.float32)
+        j = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA])); p = (lab == j).astype(np.uint8)
+        ff = cv2.copyMakeBorder(1 - p, 1, 1, 1, 1, cv2.BORDER_CONSTANT, value=1)
+        cv2.floodFill(ff, np.zeros((ff.shape[0] + 2, ff.shape[1] + 2), np.uint8), (0, 0), 2)
+        p = (ff[1:-1, 1:-1] != 2).astype(np.float32)
+        al = _soft(p, soft)
+        return _turn(rgb, al, rot) if rot else (rgb, al)
     return fn
 
 
@@ -359,3 +397,96 @@ std('the-wizard-of-oz-1939', ('grad', [(0, (226, 236, 240)), (.6, (200, 216, 224
     LC([(0.16, 0.045, 0.71, 0.215), (0.22, 0.212, 0.8, 0.444)], 150, gapf=.1, cuts=[key_cut(lambda a: _sat(a) > .35)] * 2),
     photo=ph(0.5, 0.68, 1.0, 0.85), pb=(240, 200, 40), lg=None, lw=.55, order='LPTF', dotst=('FAMILY', (40, 120, 60), WHT),
     ft='a', vbox=(40, 60, 150), fcol=(40, 60, 150), fin=OLD, seed=1939)
+
+
+# =====================================================================================
+# 1940s (vault-1940s.json, 51 tapes)
+# =====================================================================================
+
+# Fantasia (1940): Disney, so the white clamshell; the poster's night sky into cloud, its tall blue FANTASIA cut off it in its own colours, Mickey the sorcerer's apprentice in the red diamond
+disney('fantasia-1940', ('grad', [(0, (30, 24, 70)), (.45, (70, 70, 150)), (1, (200, 206, 236))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.2, 0.765, 0.8, 0.912)], 140, cuts=[key_cut(lambda a: (a[..., 2] > a[..., 0] + .15) & (_lum(a) < .78))]),
+       face=ph(.48, .41, .2, 1.4), lcol=WHT, ink=(20, 20, 60))
+
+# Foreign Correspondent (1940): the poster's parchment, its maroon FOREIGN CORRESPONDENT cut off it word by word and turned level (it climbs 22 degrees), Joel McCrea in his trench coat (director from IMDb)
+FCM = lambda a: (a[..., 0] > a[..., 1] + .18) & (_lum(a) < .5)
+std('foreign-correspondent-1940', ('grad', [(0, (236, 226, 200)), (.6, (216, 200, 166)), (1, (140, 116, 84))]), (120, 30, 34),
+    LC([(0.15, 0.04, 0.68, 0.3), (0.0, 0.1, 1.0, 0.47)], 70, gapf=.18, valign='base', cuts=[
+        pick_cut(FCM, (0.15, 0.04, 0.68, 0.3), [(0.184, 0.228), (0.261, 0.211), (0.349, 0.187), (0.42, 0.169), (0.473, 0.157), (0.533, 0.144), (0.622, 0.117)], rot=-22, r=.02),
+        pick_cut(FCM, (0.0, 0.1, 1.0, 0.47), [(0.041, 0.405), (0.115, 0.388), (0.195, 0.364), (0.276, 0.345), (0.341, 0.329), (0.406, 0.31), (0.474, 0.285), (0.56, 0.271), (0.644, 0.249), (0.725, 0.228), (0.793, 0.21), (0.869, 0.19), (0.944, 0.165)], rot=-22, r=.02)]),
+    photo=ph(0.78, 0.66, 0.42, 1.9), pb=(120, 30, 34), order='PTCF', credit=['AN ALFRED HITCHCOCK', 'FILM'], ccol=(120, 30, 34),
+    ft='b', fcol=(90, 40, 34), fin=OLD, seed=1940)
+
+# His Girl Friday (1940): the poster's white, its black HIS GIRL and red FRIDAY cut off it in their own colours, Cary Grant and Rosalind Russell
+std('his-girl-friday-1940', ('grad', [(0, (248, 248, 246)), (.6, (232, 232, 228)), (1, (160, 158, 150))]), (20, 20, 20),
+    LC([(0.03, 0.795, 0.965, 0.884)], 84, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
+    photo=ph(0.55, 0.3, 0.92, 0.95), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTSF', stick=flow(dot, 74, ['COMEDY'], (214, 30, 40), WHT),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1940)
+
+# Pinocchio (1940): Disney, the white clamshell; the poster's starry blue, its gold script Pinocchio cut off the red plaque in its own colours, Pinocchio's face in the red diamond
+disney('pinocchio-1940', ('grad', [(0, (20, 40, 120)), (.5, (40, 90, 180)), (1, (120, 170, 220))]), fin=dict(CLAM, vivid=.22),
+       title=LC([(0.345, 0.435, 0.93, 0.53)], 120, outline=((150, 20, 30), 3), cuts=[key_cut(lambda a: (a[..., 0] > .8) & (a[..., 1] > .6) & (a[..., 2] < .45))]),
+       face=ph(.25, .335, .22, 1.4), lcol=WHT)
+
+# Rebecca (1940): black, the poster's green script Rebecca keyed off it, Olivier and Joan Fontaine with Manderley behind
+std('rebecca-1940', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (110, 200, 120),
+    L((0.105, 0.712, 0.888, 0.888), 100, (112, 204, 124), mode='key', key=(100, 190, 110), t=(70, 150)),
+    photo=ph(0.4, 0.3, 0.8, 1.05), pb=(112, 204, 124), order='PTF', ft='c', fcol=(200, 200, 196), fin=OLD, seed=1940)
+
+# The Bank Dick (1940): the poster's yellow sun, its black THE, Bank and Dick lifted word by word and turned level (they climb 17 degrees), W.C. Fields from the cartoon at the top
+BDK = lambda a: _lum(a) < .25
+std('the-bank-dick-1940', ('grad', [(0, (250, 226, 60)), (.6, (240, 200, 30)), (1, (170, 120, 10))]), (20, 20, 20),
+    LC([(0.39, 0.61, 0.56, 0.68), (0.15, 0.66, 0.56, 0.84), (0.52, 0.59, 0.89, 0.76)], 96, gapf=.14, valign='base', cuts=[
+        pick_cut(BDK, (0.39, 0.61, 0.56, 0.68), [(0.427, 0.653), (0.472, 0.646), (0.518, 0.638)], rot=-17, r=.015),
+        pick_cut(BDK, (0.15, 0.66, 0.56, 0.84), [(0.23, 0.772), (0.321, 0.77), (0.401, 0.751), (0.478, 0.728)], rot=-17, r=.02),
+        pick_cut(BDK, (0.52, 0.59, 0.89, 0.76), [(0.596, 0.696), (0.654, 0.65), (0.677, 0.697), (0.739, 0.682), (0.81, 0.657)], rot=-17, r=.02)]),
+    photo=ph(0.52, 0.17, 0.62, 1.2), pb=(20, 20, 20), lg=(20, 20, 20), lw=.6, order='LPTCF', credit=['W.C. FIELDS'], ccol=(20, 20, 20),
+    ft='d', fcol=(20, 20, 20), fin=OLD, seed=1940)
+
+# The Philadelphia Story (1940): the poster's red, its yellow script The, Philadelphia and Story cut off it word by word and turned level, edged in the poster's dark outline, the three stars kissing
+PSY = lambda a: (a[..., 0] > .85) & (a[..., 1] > .7) & (a[..., 2] < .45)
+std('the-philadelphia-story-1940', ('grad', [(0, (210, 50, 40)), (.6, (150, 30, 24)), (1, (60, 10, 8))]), (250, 220, 60),
+    LC([(0.2, 0.02, 0.47, 0.14), (0.1, 0.0, 0.85, 0.235), (0.45, 0.08, 0.76, 0.24)], 96, gapf=.12, valign='base', outline=((50, 14, 12), 2.2), cuts=[
+        pick_cut(PSY, (0.2, 0.02, 0.47, 0.14), [(0.281, 0.079), (0.37, 0.079)], rot=-10, r=.02),
+        pick_cut(PSY, (0.1, 0.0, 0.85, 0.235), [(0.189, 0.175), (0.361, 0.149), (0.518, 0.108), (0.587, 0.09), (0.656, 0.066), (0.687, 0.066), (0.725, 0.061), (0.757, 0.043), (0.794, 0.042)], rot=-18, r=.012, split=9),
+        pick_cut(PSY, (0.45, 0.08, 0.76, 0.24), [(0.504, 0.181), (0.603, 0.155), (0.7, 0.13), (0.731, 0.132)], rot=-18, r=.015, split=9)]),
+    photo=ph(0.5, 0.42, 1.0, 0.55), pb=(250, 220, 60), lg=None, lw=.5, order='LPTF', ft='e', vbox=(250, 220, 60), vink=(150, 30, 24),
+    fcol=(240, 214, 200), fin=OLD, seed=1940)
+
+# The Thief of Bagdad (1940): the poster's parchment, its blue-grey script The and of and the maroon circus capitals THIEF and BAGDAD cut off it in their own colours, the flying horseman
+TBM = lambda a: (a[..., 0] > a[..., 1] + .2) & (_lum(a) < .45)
+TBB = lambda a: (_lum(a) < .5) & (a[..., 2] > a[..., 0] - .02) & (_sat(a) < .25)
+std('the-thief-of-bagdad-1940', ('grad', [(0, (244, 236, 222)), (.6, (226, 212, 192)), (1, (150, 130, 104))]), (130, 20, 26),
+    [LC([(0.035, 0.125, 0.135, 0.185), (0.035, 0.185, 0.56, 0.312)], 72, gapf=.15, valign='base', cuts=[comp_cut(TBB), comp_cut(TBM)]),
+     LC([(0.55, 0.235, 0.665, 0.305), (0.27, 0.315, 0.97, 0.435)], 72, gapf=.15, valign='base', cuts=[comp_cut(TBB), comp_cut(TBM, keep=lambda x, y: x > .03)])],
+    tgap=10, photo=ph(0.77, 0.115, 0.42, 0.85), pb=(130, 20, 26), order='PTSF', stick=PRC(['$1.99', 'ADVENTURE']),
+    ft='c', fcol=(110, 40, 40), fin=RENTAL, seed=1940)
+
+# Citizen Kane (1941): the poster's cream, its red-and-gold extruded CITIZEN KANE cut off it in its own colours and turned level (it climbs 31 degrees), Kane's face from the top of the poster
+CKR = lambda a: (_sat(a) > .4) & (_lum(a) > .2)
+std('citizen-kane-1941', ('grad', [(0, (246, 238, 220)), (.6, (230, 214, 186)), (1, (150, 120, 90))]), (190, 30, 30),
+    LC([(0.35, 0.36, 0.99, 0.66), (0.48, 0.49, 0.96, 0.74)], 104, gapf=.15, valign='base', margin=0, cuts=[
+        pick_cut(CKR, (0.35, 0.36, 0.99, 0.66), [(0.668, 0.501)], rot=-31, r=.03, margin=0),
+        pick_cut(CKR, (0.48, 0.49, 0.96, 0.74), [(0.723, 0.612)], rot=-31, r=.03, margin=0)]),
+    photo=ph(0.76, 0.17, 0.46, 1.2), pb=(190, 30, 30), lg=(30, 26, 24), lw=.5, order='LPTCF', credit=['AN ORSON WELLES', 'PRODUCTION'],
+    ccol=(30, 26, 24), ft='b', fcol=(60, 40, 30), fin=OLD, seed=1941)
+
+# Dumbo (1941): Disney, the white clamshell; the poster's circus yellow, its red dotted D U M B O rebuilt letter by letter off the diagonal they tumble down, each set upright, Dumbo's face in the red diamond
+disney('dumbo-1941', ('grad', [(0, (250, 236, 120)), (.5, (240, 220, 70)), (1, (210, 180, 40))]), fin=dict(CLAM, vivid=.2), ink=(120, 20, 20),
+       title=LC([(0.04, 0.24, 0.93, 0.73)], 120, outline=((60, 10, 10), 2.2), cuts=[seq_cut(lambda a: (a[..., 0] > .75) & (a[..., 1] < .3) & (a[..., 2] < .3), (0.04, 0.24, 0.93, 0.73),
+           [(0.157, 0.309), (0.276, 0.413), (0.502, 0.447), (0.703, 0.531), (0.806, 0.665)], turn=[0, 8, 14, 22, 4], gapf=.18, holes=.06)]),
+       face=ph(.34, .74, .2, 1.4), lcol=(120, 20, 20))
+
+# Mr. & Mrs. Smith (1941): black, the poster's orange-red sign with its black Mr. & Mrs. Smith cut off it whole and turned level (it hangs at 10 degrees), Carole Lombard
+std('mr-mrs-smith-1941', ('grad', [(0, (40, 30, 30)), (.6, (12, 10, 10)), (1, (2, 2, 2))]), (226, 92, 64),
+    LC([(0.43, 0.0, 0.94, 0.2)], 150, margin=0, cuts=[plate_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .25) & (a[..., 1] < .55) & (a[..., 2] < .45), rot=-10)]),
+    photo=ph(0.36, 0.5, 0.7, 1.2), pb=(226, 92, 64), lg=(226, 92, 64), lw=.5, order='LPTF',
+    ft='c', vbox=(226, 92, 64), vink=(12, 10, 10), fcol=(210, 200, 196), fin=OLD, seed=1941)
+
+# Sullivan's Travels (1941): the poster's black, its tan SULLIVAN'S and TRAVELS in their black keyline cut off it in their own colours and turned level, Joel McCrea and Veronica Lake (Paramount's mountain at the head)
+SVT = lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .45) & (a[..., 0] > a[..., 2] + .15)
+std('sullivan-s-travels-1941', ('grad', [(0, (40, 34, 26)), (.6, (14, 12, 8)), (1, (2, 2, 2))]), (226, 196, 120),
+    [LC([(0.12, 0.04, 0.86, 0.25)], 70, outline=((14, 12, 8), 2), cuts=[pick_cut(SVT, (0.12, 0.04, 0.86, 0.25), [(0.212, 0.145), (0.327, 0.159), (0.402, 0.152), (0.458, 0.148), (0.514, 0.138), (0.576, 0.129), (0.65, 0.128), (0.727, 0.115), (0.81, 0.107)], rot=-6, r=.02)]),
+     LC([(0.23, 0.16, 0.82, 0.31)], 70, outline=((14, 12, 8), 2), cuts=[pick_cut(SVT, (0.23, 0.16, 0.82, 0.31), [(0.271, 0.25), (0.354, 0.253), (0.453, 0.247), (0.538, 0.231), (0.617, 0.226), (0.691, 0.222), (0.768, 0.208)], rot=-6, r=.02)])],
+    tgap=8, photo=ph(0.5, 0.48, 1.0, 0.6), pb=(226, 196, 120), lg=WHT, lw=.5, order='LTPCF', credit=['WRITTEN & DIRECTED BY', 'PRESTON STURGES'],
+    ccol=(226, 196, 120), ft='a', vbox=(226, 196, 120), vink=(14, 12, 8), fcol=(200, 196, 186), fin=OLD, seed=1941)
