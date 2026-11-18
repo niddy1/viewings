@@ -13,7 +13,7 @@ def _turn(rgb, al, rot):
     return cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC), cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
 
 
-def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015):
+def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0):
     """an LC cut that keeps whole letters: the connected pieces passing test (rgb 0..1), filtered by
     keep(cx, cy) (the piece's centre, as fractions of the cut-out crop) and/or only the `top` biggest.
     For lettering that interlocks on the poster (arched, stacked or overlapping words), where a straight
@@ -21,6 +21,7 @@ def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015):
     def fn(rgb):
         a = rgb.astype(np.float32) / 255
         m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        if close: m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((close, close), np.uint8))  # join a letter broken by something across it
         n, lab, st, cen = cv2.connectedComponentsWithStats(m)
         h, w = m.shape; ok = np.zeros(n, bool)
         big = st[1:, cv2.CC_STAT_AREA].max() if n > 1 else 0
@@ -840,3 +841,80 @@ std('the-lavender-hill-mob-1951', ('grad', [(0, (150, 200, 210)), (.6, (100, 160
     [L((0.24, 0.552, 0.755, 0.78), 76, (20, 40, 70), mode='dark'), L((0.24, 0.78, 0.755, 0.912), 76, (20, 40, 70), mode='dark')],
     tgap=8, photo=ph(0.5, 0.42, 1.0, 0.42), pb=(20, 40, 70), lg=(20, 40, 70), lw=.55, order='LPTCF', credit=['ALEC GUINNESS'], ccol=(20, 40, 70),
     ft='e', fcol=(20, 40, 70), fin=OLD, seed=1951)
+
+# The Man in the White Suit (1951): the poster's crimson, its black THE MAN IN THE and the cream WHITE and black SUIT cut off it in their own colours (keyed on the crimson round them), Guinness running in the suit
+WSC = lambda a: _lum(a) < .15
+std('the-man-in-the-white-suit-1951', ('grad', [(0, (150, 20, 40)), (.6, (100, 10, 26)), (1, (40, 4, 10))]), (240, 228, 200),
+    [LC([(0.1, 0.025, 0.99, 0.13)], 44, margin=0, cuts=[comp_cut(lambda a: a[..., 0] < a[..., 1] + .12, minf=.05)]),
+     LC([(0.0, 0.128, 0.995, 0.302)], 96, margin=0, cuts=[comp_cut(lambda a: a[..., 0] < a[..., 1] + .12, keep=lambda x, y: y > .3, minf=.05)])],
+    tgap=6, photo=ph(0.45, 0.66, 0.8, 1.0), pb=(240, 228, 200), lg=(240, 228, 200), lw=.55, order='LPTCF', credit=['ALEC GUINNESS'], ccol=(240, 228, 200),
+    ft='b', fcol=(230, 200, 200), fin=OLD, seed=1951)
+
+# Ikiru (1952): the snowy night's black, the poster's white spaced IKIRU lifted, Watanabe on the swing (top-billed cast from IMDb)
+std('ikiru-1952', ('grad', [(0, (50, 54, 56)), (.6, (18, 20, 22)), (1, (4, 4, 4))]), WHT,
+    L((0.2, 0.177, 0.82, 0.258), 76, WHT, mode='light'),
+    photo=ph(0.5, 0.6, 0.66, 1.25), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['TAKASHI SHIMURA'], ccol=WHT,
+    ft='e', fcol=(200, 204, 206), fin=OLD, seed=1952)
+
+# Singin' in the Rain (1952): the rainy night's blue, its yellow SINGIN' and IN THE RAIN cut off it in their own colours and levelled, Gene Kelly on the lamp-post
+SRY = lambda a: (a[..., 0] > .8) & (a[..., 1] > .6) & (a[..., 2] < .3)
+std('singin-in-the-rain-1952', ('grad', [(0, (30, 60, 90)), (.6, (12, 26, 44)), (1, (4, 8, 14))]), (250, 210, 30),
+    LC([(0.24, 0.62, 0.82, 0.735), (0.07, 0.7, 0.92, 0.815)], 90, gapf=.18, valign='base', cuts=[comp_cut(SRY, rot=6),
+        pick_cut(SRY, (0.07, 0.7, 0.92, 0.815), [(0.109, 0.761), (0.189, 0.749), (0.309, 0.736), (0.389, 0.75), (0.476, 0.761), (0.605, 0.775), (0.705, 0.781), (0.777, 0.776), (0.856, 0.767)], r=.02, rot=2)]),
+    photo=ph(0.55, 0.3, 0.8, 1.0), pb=(250, 210, 30), lg=WHT, lw=.55, order='LPTF', dotst=('MUSICAL', (250, 210, 30), (12, 26, 44)),
+    ft='a', vbox=(250, 210, 30), vink=(12, 26, 44), fcol=(200, 210, 220), fin=OLD, seed=1952)
+
+# The African Queen (1952): the jungle's green, THE AFRICAN QUEEN typeset in heavy italic capitals in the poster's yellow-green (typeset: the poster's A is mostly hidden behind the leaves, so a cut reads FRICAN; three cuts tried), Bogart and Hepburn (no logo file: Romulus Films, from IMDb's company credits)
+std('the-african-queen-1952', ('grad', [(0, (40, 110, 60)), (.6, (16, 50, 26)), (1, (4, 16, 8))]), (230, 230, 70),
+    TT([('THE ', (232, 236, 90)), ('AFRICAN QUEEN', (232, 236, 90))], 'intbki', 64, outline=((10, 30, 16), 2.2)),
+    photo=ph(0.5, 0.56, 0.96, 0.8), pb=(230, 230, 70), studio=['ROMULUS FILMS'], scol=(230, 230, 70), order='lPTCF',
+    credit=['HUMPHREY BOGART', 'KATHARINE HEPBURN'], ccol=(220, 230, 200), ft='c', vbox=(230, 230, 70), vink=(16, 50, 26), fcol=(200, 220, 200), fin=OLD, seed=1952)
+
+# Umberto D. (1952): the poster's white, its red condensed UMBERTO D. keyed off it, Umberto and Flike under it (no logo file: Dear Film, from IMDb's company credits; director from IMDb, in Italian)
+std('umberto-d-1952', ('grad', [(0, (244, 242, 238)), (.6, (226, 224, 218)), (1, (140, 138, 132))]), (200, 40, 40),
+    L((0.425, 0.026, 0.998, 0.12), 80, (204, 42, 42), mode='key', key=(200, 50, 50), t=(70, 150)),
+    photo=ph(0.4, 0.55, 0.62, 1.7), pb=(30, 30, 30), studio=['DEAR FILM'], scol=(30, 30, 30), order='lTPCF', credit=['UN FILM DI', 'VITTORIO DE SICA'],
+    ccol=(30, 30, 30), ft='d', fcol=(30, 30, 30), fin=OLD, seed=1952)
+
+# I Confess (1953): black and the yellow light, the poster's red "I Confess" in its yellow keyline cut off it whole and levelled (it climbs 10 degrees), Montgomery Clift in his cassock
+std('i-confess-1953', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (230, 30, 40),
+    LC([(0.0, 0.1, 0.66, 0.34)], 110, cuts=[comp_cut(lambda a: (_sat(a) > .5) & (a[..., 0] > .6), top=2, rot=-10)]),
+    photo=ph(0.79, 0.3, 0.38, 1.7), pb=(250, 220, 40), lg=WHT, lw=.55, order='LPTSF', stick=PRC(['$1.99', 'THRILLER']),
+    ft='b', fcol=(210, 200, 190), fin=RENTAL, seed=1953)
+
+# I Vitelloni (1953): the poster's white, its red brush I VITELLONI keyed off it, Sandra in the waves (no logo file: Peg-Films, from IMDb's company credits; director from IMDb, in Italian)
+std('i-vitelloni-1953', ('grad', [(0, (240, 244, 246)), (.6, (210, 222, 230)), (1, (110, 140, 160))]), (200, 30, 40),
+    L((0.37, 0.758, 0.905, 0.915), 100, (204, 32, 42), mode='key', key=(200, 40, 50), t=(70, 150)),
+    photo=ph(0.55, 0.35, 0.9, 0.8), pb=(30, 60, 90), studio=['PEG-FILMS'], scol=(30, 60, 90), order='lPTCF', credit=['UN FILM DI', 'FEDERICO FELLINI'],
+    ccol=(30, 60, 90), ft='a', vbox=(200, 30, 40), fcol=(30, 60, 90), fin=OLD, seed=1953)
+
+# Monsieur Hulot's Holiday (1953): the poster's sand, its blue MONSIEUR HULOT'S HOLIDAY lifted in its three lines into one, Hulot drawn on the beach under the title
+std('monsieur-hulot-s-holiday-1953', ('grad', [(0, (236, 230, 216)), (.6, (220, 210, 190)), (1, (150, 136, 110))]), (30, 140, 200),
+    L([(0.315, 0.046, 0.78, 0.141), (0.24, 0.15, 0.655, 0.228), (0.24, 0.228, 0.61, 0.305)], 76, (30, 140, 200), mode='key', key=(40, 150, 210), t=(70, 150), gapf=.22),
+    photo=ph(0.55, 0.66, 0.66, 1.35), pb=(30, 140, 200), lg=(60, 60, 60), lw=.55, order='LTPCF', credit=['JACQUES TATI'], ccol=(60, 60, 60),
+    ft='c', fcol=(60, 60, 60), fin=OLD, seed=1953)
+
+# Peter Pan (1953): Disney, the white clamshell; the poster's night-sky blue, its white serif PETER PAN cut off the red plaque, Peter's face in the red diamond
+disney('peter-pan-1953', ('grad', [(0, (20, 40, 120)), (.5, (40, 100, 190)), (1, (20, 60, 70))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.09, 0.512, 0.87, 0.6)], 110, cuts=[key_cut(lambda a: _lum(a) > .8)]),
+       face=ph(.6, .22, .22, 1.4), lcol=WHT)
+
+# Pickup on South Street (1953): the poster's white, its red brush Pickup and ON SOUTH STREET keyed off it, Jean Peters and Richard Widmark
+std('pickup-on-south-street-1953', ('grad', [(0, (244, 242, 238)), (.6, (226, 222, 214)), (1, (150, 140, 130))]), (200, 30, 40),
+    [L((0.12, 0.062, 0.88, 0.17), 80, (204, 32, 42), mode='key', key=(200, 40, 50), t=(70, 150)), L((0.22, 0.17, 0.875, 0.252), 50, (204, 32, 42), mode='key', key=(200, 40, 50), t=(70, 150))],
+    tgap=8, photo=ph(0.5, 0.66, 0.9, 1.0), pb=(30, 90, 140), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=RWD(),
+    ft='e', fcol=(40, 40, 40), fin=RENTAL, seed=1953)
+
+# The Wages of Fear (1953): black, the poster's pale-yellow THE WAGES and OF FEAR cut off it letter by letter, the burning truck (no logo file: Filmsonor, from IMDb's company credits)
+WFY = lambda a: (a[..., 0] > .85) & (a[..., 1] > .85) & (a[..., 2] < .8)
+std('the-wages-of-fear-1953', ('grad', [(0, (40, 30, 26)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (250, 246, 170),
+    [LC([(0.08, 0.28, 0.86, 0.42)], 70, cuts=[pick_cut(WFY, (0.08, 0.28, 0.86, 0.42), [(0.109, 0.317), (0.15, 0.32), (0.193, 0.317), (0.307, 0.348), (0.437, 0.355), (0.548, 0.347), (0.657, 0.339), (0.78, 0.33)], r=.02, rot=-4)]),
+     LC([(0.2, 0.37, 0.87, 0.53)], 70, cuts=[pick_cut(WFY, (0.2, 0.37, 0.87, 0.53), [(0.246, 0.447), (0.305, 0.438), (0.395, 0.453), (0.512, 0.447), (0.635, 0.437), (0.771, 0.425)], r=.02, rot=-4)])],
+    tgap=8, photo=ph(0.55, 0.75, 0.9, 0.7), pb=(230, 70, 40), studio=['FILMSONOR'], scol=(250, 246, 170), order='lPTCF', credit=['YVES MONTAND', 'CHARLES VANEL'],
+    ccol=(230, 220, 190), ft='d', fcol=(200, 196, 186), fin=OLD, seed=1953)
+
+# Ugetsu (1953): the misty grey, the poster's white serif UGETSU lifted, the boat on the lake (director from IMDb)
+std('ugetsu-1953', ('grad', [(0, (130, 130, 128)), (.6, (60, 60, 60)), (1, (14, 14, 14))]), WHT,
+    L((0.155, 0.846, 0.85, 0.93), 76, WHT, mode='light'),
+    photo=ph(0.5, 0.5, 1.0, 0.75), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'KENJI MIZOGUCHI'], ccol=WHT,
+    ft='b', fcol=(210, 210, 210), fin=OLD, seed=1953)
