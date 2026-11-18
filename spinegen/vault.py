@@ -1846,3 +1846,75 @@ std('the-sting-1973', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1,
     L((0.06, 0.125, 0.96, 0.235), 66, (144, 42, 42), mode='key', key=(140, 50, 50), t=(70, 150)),
     photo=ph(0.5, 0.62, 0.86, 0.95), pb=(144, 42, 42), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['PAUL NEWMAN', 'ROBERT REDFORD'], ccol=(40, 30, 26),
     ft='b', fcol=(40, 30, 26), fin=OLD, seed=1973)
+
+# Blood for Dracula (1974): black, the poster's white thin BLOOD for DRACVLA lifted, the red hands and the face (no logo file: Champion, from IMDb's company credits)
+std('blood-for-dracula-1974', ('grad', [(0, (60, 14, 14)), (.6, (18, 4, 4)), (1, (2, 2, 2))]), WHT,
+    L((0.035, 0.858, 0.978, 0.944), 76, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.3, 0.9, 1.0), pb=(220, 30, 30), studio=['CHAMPION'], scol=WHT, order='lPTCF', credit=['UDO KIER', 'JOE DALLESANDRO'], ccol=WHT,
+    ft='e', fcol=(200, 190, 190), fin=OLD, seed=1974)
+
+# Bring Me the Head of Alfredo Garcia (1974): black, the poster's white serif "BRING ME THE HEAD OF ALFREDO GARCIA" lifted line by line into one, the gold watch and crossed swords (director from IMDb)
+std('bring-me-the-head-of-alfredo-garcia-1974', ('grad', [(0, (60, 40, 20)), (.6, (18, 12, 6)), (1, (2, 2, 2))]), WHT,
+    LC([(0.65, 0.622, 0.925, 0.664), (0.578, 0.662, 0.94, 0.702), (0.545, 0.7, 0.96, 0.741), (0.554, 0.74, 0.975, 0.78), (0.56, 0.778, 0.963, 0.82)], 60, gapf=.2, valign='base', margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .82) & (_sat(a) < .2), minf=.12)] * 5),
+    photo=ph(0.37, 0.785, 0.36, 0.95), pb=(220, 180, 80), lg=WHT, lw=.5, order='LPTCF', credit=['A SAM PECKINPAH', 'FILM'], ccol=WHT,
+    ft='b', fcol=(210, 200, 186), fin=OLD, seed=1974)
+
+# Chinatown (1974): the poster's yellow, its crimson script Chinatown keyed off it, Faye Dunaway's face in the smoke
+std('chinatown-1974', ('grad', [(0, (252, 220, 70)), (.6, (240, 190, 40)), (1, (160, 110, 10))]), (180, 20, 40),
+    L((0.255, 0.627, 0.995, 0.818), 120, (184, 22, 42), mode='key', key=(180, 30, 50), t=(70, 150)),
+    photo=ph(0.6, 0.18, 0.8, 0.7), pb=(184, 22, 42), lg=(184, 22, 42), lw=.55, order='LPTCSF', credit=['JACK NICHOLSON', 'FAYE DUNAWAY'], ccol=(60, 30, 20),
+    stick=flow(dot, 74, ['NOIR'], (184, 22, 42), WHT), ft='a', vbox=(184, 22, 42), fcol=(60, 30, 20), fin=OLD, seed=1974)
+
+# Murder on the Orient Express (1974): the poster's pale blue, its red MURDER ON THE ORIENT EXPRESS keyed off it, the suspects' faces
+std('murder-on-the-orient-express-1974', ('grad', [(0, (226, 236, 240)), (.6, (190, 210, 220)), (1, (90, 110, 120))]), (190, 30, 30),
+    L([(0.145, 0.098, 0.855, 0.182), (0.064, 0.188, 0.937, 0.256)], 70, (194, 32, 32), mode='key', key=(190, 40, 40), t=(70, 150), gapf=.25),
+    photo=ph(0.48, 0.55, 0.8, 1.05), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['A SIDNEY LUMET', 'FILM'], ccol=(30, 30, 30),
+    ft='c', fcol=(30, 30, 30), fin=OLD, seed=1974)
+
+# The Conversation (1974): the poster's grey band, its dark-red "THE CONVERSATION" lifted, Gene Hackman with the headphones (no logo file: The Directors Company, from IMDb's company credits)
+std('the-conversation-1974', ('grad', [(0, (110, 40, 30)), (.6, (50, 16, 12)), (1, (10, 4, 2))]), (226, 220, 210),
+    LC([(0.095, 0.885, 0.905, 0.932)], 64, cuts=[key_cut(lambda a: _lum(a) < .5)], outline=((226, 220, 210), 3)),
+    photo=ph(0.5, 0.3, 0.86, 0.9), pb=(226, 220, 210), studio=['THE DIRECTORS', 'COMPANY'], scol=(226, 220, 210), order='lPTCF', credit=['A FRANCIS FORD', 'COPPOLA FILM'],
+    ccol=(226, 220, 210), ft='d', fcol=(220, 200, 190), fin=OLD, seed=1974)
+
+# The Godfather Part II (1974): a 2-tape box; black, the poster's white The Godfather Part II with the puppeteer's hand lifted, Pacino in the chair
+std('the-godfather-part-ii-1974', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.325, 0.722, 0.675, 0.922), 190, WHT, mode='light'),
+    photo=ph(0.5, 0.27, 0.86, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPCSF', credit=['AL PACINO', 'ROBERT DE NIRO'], ccol=WHT, stick=TWOST((200, 30, 30), WHT),
+    ft='c', fcol=(200, 196, 190), fin=OLD, seed=1974, **TWO)
+
+# Dog Day Afternoon (1975): the poster's white, its red DOG DAY AFTERNOON keyed off it, Pacino's drawn face (no logo file: Warner Bros., from IMDb's company credits)
+std('dog-day-afternoon-1975', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (210, 30, 30),
+    L([(0.32, 0.456, 0.965, 0.52), (0.035, 0.516, 0.958, 0.578)], 76, (214, 32, 32), mode='key', key=(210, 40, 40), t=(70, 150), gapf=.25),
+    photo=ph(0.5, 0.25, 0.86, 0.75), pb=(20, 20, 20), studio=['WARNER BROS.'], scol=(20, 20, 20), order='lPTCF', credit=['AL PACINO'], ccol=(20, 20, 20),
+    ft='a', vbox=(214, 32, 32), fcol=(20, 20, 20), fin=OLD, seed=1975)
+
+# Jaws (1975): the poster's white into the sea, its red JAWS keyed off it, the shark rising to the swimmer under the title
+std('jaws-1975', ('grad', [(0, (246, 246, 246)), (.35, (90, 170, 210)), (1, (10, 50, 90))]), (210, 40, 50),
+    L((0.123, 0.066, 0.877, 0.224), 120, (214, 42, 52), mode='key', key=(205, 45, 55), t=(70, 150)),
+    photo=ph(0.5, 0.75, 0.8, 1.0), pb=WHT, lg=(214, 42, 52), lw=.55, order='LTPSF', stick=BAR('75 0620', top='THRILLER', fill=(236, 234, 220)),
+    ft='e', vbox=(214, 42, 52), fcol=(220, 230, 240), fin=RENTAL, seed=1975)
+
+# Monty Python and the Holy Grail (1975): the poster's cream, its gold swash Monty Python AND THE Holy Grail keyed off it, Arthur and the knights (no logo file in type: Python (Monty) Pictures)
+std('monty-python-and-the-holy-grail-1975', ('grad', [(0, (246, 240, 224)), (.6, (230, 220, 196)), (1, (150, 130, 90))]), (200, 150, 30),
+    L([(0.06, 0.083, 0.945, 0.28), (0.08, 0.282, 0.922, 0.376)], 110, (196, 146, 30), mode='key', key=(200, 150, 40), t=(70, 160), gapf=.2),
+    photo=ph(0.5, 0.75, 1.0, 0.75), pb=(140, 90, 30), lg=(140, 90, 30), lw=.6, order='LPTSF', stick=RWD(),
+    ft='b', fcol=(80, 60, 30), fin=RENTAL, seed=1975)
+
+# One Flew Over the Cuckoo's Nest (1975): the poster's white, its black ONE FLEW OVER / THE CUCKOO'S NEST (the red O of CUCKOO'S kept) cut off it, Nicholson grinning in the beanie (no logo file: Fantasy Films, from IMDb's company credits)
+std('one-flew-over-the-cuckoo-s-nest-1975', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (20, 20, 20),
+    [LC([(0.13, 0.074, 0.9, 0.14)], 64, margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)]), LC([(0.02, 0.138, 0.98, 0.204)], 64, margin=0, cuts=[key_cut(lambda a: (_lum(a) < .35) | ((a[..., 0] > .6) & (a[..., 1] < .3)))])],
+    tgap=8, photo=ph(0.48, 0.78, 0.8, 0.85), pb=(200, 30, 30), studio=['FANTASY FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['JACK NICHOLSON'], ccol=(20, 20, 20),
+    ft='c', fcol=(20, 20, 20), fin=OLD, seed=1975)
+
+# Marathon Man (1976): black, MARATHON MAN typeset in heavy condensed capitals in white (typeset: the poster prints its title three times over, overlapping, with Hoffman's face cut through it, so no clean line can be lifted; two tried), Dustin Hoffman's face behind the gun
+std('marathon-man-1976', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    T('MARATHON MAN', 'intbk', 80, WHT),
+    photo=ph(0.6, 0.415, 0.42, 0.6), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['DUSTIN HOFFMAN', 'LAURENCE OLIVIER'], ccol=WHT,
+    ft='d', fcol=(200, 200, 200), fin=OLD, seed=1976)
+
+# Murder by Death (1976): black, the poster's yellow Murder by Death keyed off it, the detectives at the gate of the house
+std('murder-by-death-1976', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), (250, 220, 40),
+    L((0.03, 0.83, 0.98, 0.932), 100, (252, 222, 42), mode='key', key=(245, 215, 50), t=(70, 150)),
+    photo=ph(0.5, 0.45, 1.0, 0.6), pb=(250, 220, 40), lg=WHT, lw=.55, order='LPTCF', credit=['PETER FALK', 'ALEC GUINNESS'], ccol=WHT,
+    dotst=('COMEDY', (250, 220, 40), (12, 10, 8)), ft='a', vbox=(250, 220, 40), vink=(12, 10, 8), fcol=(200, 196, 190), fin=OLD, seed=1976)
