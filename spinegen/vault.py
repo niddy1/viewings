@@ -2921,3 +2921,74 @@ std('jumanji-1995', ('grad', [(0, (40, 120, 40)), (.5, (20, 70, 24)), (1, (6, 24
     T('JUMANJI', 'intbk', 120, (250, 200, 40), outline=((60, 30, 10), 2.4)),
     photo=ph(0.5, 0.68, 0.86, 0.75), pb=(250, 200, 40), lg=WHT, lw=.5, order='LTPSF', stick=BAR('95 1215', top='FAMILY', fill=(240, 232, 210)),
     ft='b', fcol=(220, 236, 200), fin=RENTAL, seed=1995)
+
+# Kids (1995): black, the poster's white brushed KIDS lifted, the tinted faces of the kids (Independent Pictures logo; director from IMDb)
+std('kids-1995', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.1, 0.405, 0.9, 0.585)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
+    photo=ph(0.5, 0.75, 0.9, 0.5), pb=(220, 70, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'LARRY CLARK'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=OLD, seed=1995)
+
+# La Haine (1995): black, the poster's white distressed LA HAINE lifted, Vinz, Saïd and Hubert in black and white
+std('la-haine-1995', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), WHT,
+    LC([(0.035, 0.575, 0.955, 0.682)], 120, cuts=[key_cut(lambda a: _lum(a) > .75)]),
+    photo=ph(0.5, 0.36, 0.9, 0.55), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'MATHIEU KASSOVITZ'], ccol=WHT,
+    ft='e', fcol=(210, 210, 210), fin=OLD, seed=1995)
+
+# Mallrats (1995): the poster's sky blue, its green spiky Mallrats cut off it whole and levelled, T.S. and Brodie
+std('mallrats-1995', ('grad', [(0, (60, 170, 230)), (.5, (30, 120, 200)), (1, (8, 40, 90))]), (140, 210, 70),
+    LC([(0.02, 0.06, 0.94, 0.33)], 140, cuts=[comp_cut(lambda a: ((a[..., 1] > .5) & (a[..., 1] > a[..., 2] + .1) & (a[..., 0] < .85)) | (_lum(a) < .2), top=1, close=3, rot=14)]),
+    photo=ph(0.55, 0.5, 0.86, 0.8), pb=(140, 210, 70), lg=WHT, lw=.5, order='LPTCSF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=WHT, stick=PRC(['$1.99', 'COMEDY']),
+    ft='d', fcol=(220, 236, 250), fin=RENTAL, seed=1995)
+
+# Mortal Kombat (1995): black, the poster's red serif MORTAL / KOMBAT keyed off it into one line, the gold dragon emblem
+std('mortal-kombat-1995', ('grad', [(0, (60, 20, 10)), (.6, (16, 6, 4)), (1, (2, 2, 2))]), (210, 30, 30),
+    L([(0.228, 0.054, 0.782, 0.154), (0.228, 0.16, 0.784, 0.262)], 100, (210, 30, 30), mode='key', key=(200, 30, 30), t=(70, 160), valign='base'),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 170, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (230, 170, 60), (20, 10, 4)),
+    ft='a', vbox=(210, 30, 30), fcol=(220, 190, 170), fin=RENTAL, seed=1995)
+
+# Pocahontas (1995): Disney clamshell; the sunset's orange, the poster's white brushed POCAHONTAS cut off it, Pocahontas's face in the diamond
+disney('pocahontas-1995', ('grad', [(0, (200, 60, 30)), (.5, (230, 130, 40)), (1, (40, 30, 80))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.085, 0.81, 0.925, 0.928)], 130, outline=((40, 30, 90), 2), cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.02)]),
+       face=ph(.39, .49, .12, 1.4), lcol=WHT)
+
+# Se7en (1995): the dark, the poster's scratched grey SE7EN with its red 7 cut off it in its own colours, Pitt and Freeman
+std('se7en-1995', ('grad', [(0, (60, 56, 46)), (.6, (16, 14, 12)), (1, (2, 2, 2))]), (200, 200, 200),
+    LC([(0.1, 0.81, 0.9, 0.935)], 110, cuts=[comp_cut(lambda a: ((_lum(a) > .3) & (_sat(a) < .25)) | ((a[..., 0] > .5) & (a[..., 1] < .25)), minf=.05, close=4, fillh=True)]),
+    photo=ph(0.5, 0.35, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(190, 186, 176), fin=RENTAL, seed=1995)
+
+# The Usual Suspects (1995): black, the poster's white the / Usual / Suspects cut off it whole, the five in the line-up
+std('the-usual-suspects-1995', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.17, 0.745, 0.83, 0.91)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
+    photo=ph(0.5, 0.45, 0.9, 0.55), pb=WHT, lg=WHT, lw=.5, order='LPTCSF', credit=['KEVIN SPACEY', 'GABRIEL BYRNE'], ccol=WHT, stick=BAR('95 0816', top='MYSTERY', fill=(232, 228, 216)),
+    ft='a', fcol=(200, 200, 200), fin=RENTAL, seed=1995)
+
+# Toy Story (1995): Pixar clamshell, built like Toy Story 4 and 5; the poster's sky blue, its yellow TOY and red STORY plate cut off it, Woody's face in the diamond
+disney('toy-story-1995', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .6))), fin=dict(CLAM, vivid=.3),
+       title=LC([(0.03, 0.04, 0.47, 0.168), (0.03, 0.155, 0.48, 0.255)], 170, gapf=.05, cuts=[ts_letters, ts_plate(.25, .8)]),
+       face=ph(.22, .515, .16, 1.4))
+
+# Twelve Monkeys (1995): black, the poster's red brushed 12 MONKEYS keyed off it, Bruce Willis in the half-light with the red circle
+std('twelve-monkeys-1995', ('grad', [(0, (40, 30, 30)), (.6, (12, 8, 8)), (1, (2, 2, 2))]), (210, 30, 30),
+    L((0.055, 0.838, 0.94, 0.968), 110, (210, 30, 30), mode='key', key=(210, 30, 30), t=(70, 160)),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TERRY GILLIAM', 'FILM'], ccol=WHT,
+    ft='e', vbox=(210, 30, 30), fcol=(200, 196, 196), fin=RENTAL, seed=1995)
+
+# Beavis and Butt-Head Do America (1996): the desert road, the poster's red BEAVIS AND BUTT-HEAD DO AMERICA cut off it word by word into one line, Beavis and Butt-Head's faces
+std('beavis-and-butt-head-do-america-1996', ('grad', [(0, (120, 190, 240)), (.5, (200, 210, 230)), (1, (60, 60, 90))]), (210, 30, 30),
+    LC([(0.42, 0.38, 0.62, 0.425), (0.36, 0.44, 0.785, 0.485), (0.45, 0.488, 0.58, 0.54), (0.29, 0.548, 0.745, 0.612)], 100, valign='base', margin=0, gapf=.25,
+       cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)] * 4),
+    photo=ph(0.5, 0.2, 0.9, 0.5), pb=(210, 30, 30), lg=(30, 30, 40), lw=.55, order='LPTF',
+    ft='b', fcol=(30, 30, 40), fin=RENTAL, seed=1996)
+
+# Bottle Rocket (1996): the poster's pink, its red BOTTLE / ROCKET keyed off it into one line, the motel under the title
+std('bottle-rocket-1996', ('grad', [(0, (250, 210, 220)), (.5, (240, 190, 200)), (1, (150, 110, 120))]), (210, 30, 30),
+    L([(0.222, 0.078, 0.775, 0.153), (0.22, 0.167, 0.782, 0.244)], 96, (210, 30, 30), mode='key', key=(210, 30, 30), t=(70, 160), valign='base'),
+    photo=ph(0.5, 0.36, 0.9, 0.3), pb=(210, 30, 30), lg=(60, 20, 30), lw=.55, order='LTPCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(60, 20, 30),
+    ft='c', fcol=(60, 20, 30), fin=RENTAL, seed=1996)
+
+# Box of Moonlight (1996): the poster's white, BOX OF MOONLIGHT typeset in condensed capitals in its red (parked for Ian's logo, see data/logos-wanted.md: the small OF sits on a tilted black tag that wouldn't cut with the red words), the man with the clock (Lakeshore logo; director from IMDb)
+std('box-of-moonlight-1996', ('grad', [(0, (246, 248, 250)), (.6, (226, 232, 240)), (1, (120, 130, 150))]), (190, 40, 40),
+    TT([('BOX', (196, 50, 44)), ('OF', (30, 30, 40)), ('MOONLIGHT', (196, 50, 44))], 'hcnb', 100, sp=.3),
+    photo=ph(0.7, 0.38, 0.6, 1.3), pb=(190, 40, 40), lg=(40, 40, 60), lw=.55, order='LPTCF', credit=['A FILM BY', 'TOM DiCILLO'], ccol=(40, 40, 60),
+    ft='d', fcol=(40, 40, 60), fin=OLD, seed=1996)
