@@ -2265,3 +2265,79 @@ std('blue-velvet-1986', ('grad', [(0, (30, 40, 110)), (.6, (8, 12, 40)), (1, (2,
     L((0.06, 0.19, 0.958, 0.298), 100, WHT, mode='light', speck=0),
     photo=ph(0.5, 0.65, 0.9, 0.6), pb=(110, 140, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID LYNCH', 'FILM'], ccol=(170, 190, 250),
     ft='b', fcol=(170, 180, 230), fin=OLD, seed=1986)
+
+# Down by Law (1986): the poster's white, its black stencilled DOWN / BY / LAW cut off it into one line, the three of them in the cell (Island Pictures logo)
+std('down-by-law-1986', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (20, 20, 20),
+    LC([(0.44, 0.553, 0.942, 0.631), (0.733, 0.641, 0.936, 0.716), (0.573, 0.726, 0.936, 0.803)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .32)] * 3),
+    photo=ph(0.5, 0.26, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1986)
+
+# Ferris Bueller's Day Off (1986): the poster's white, its red tilted FERRIS / BUELLER'S / DAY OFF cut off it whole and turned level, Ferris behind his sunglasses
+std('ferris-bueller-s-day-off-1986', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (220, 30, 40),
+    LC([(0.265, 0.72, 0.948, 0.946)], 120, outline=((20, 20, 20), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.03, rot=-14)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
+    ft='a', vbox=(220, 30, 40), fcol=(20, 20, 20), fin=RENTAL, seed=1986)
+
+# Hoosiers (1986): the poster's sky and fields, its red HOOSIERS keyed off it, Gene Hackman with the basketball (no logo file: Hemdale, from IMDb's company credits)
+std('hoosiers-1986', ('grad', [(0, (90, 160, 220)), (.5, (110, 150, 80)), (1, (30, 50, 20))]), (220, 30, 30),
+    L((0.033, 0.102, 0.967, 0.205), 84, (220, 30, 30), mode='key', key=(220, 36, 36), t=(70, 160)),
+    photo=ph(0.55, 0.55, 0.7, 1.15), pb=(220, 30, 30), studio=['HEMDALE'], scol=WHT, order='lTPF',
+    ft='b', fcol=(230, 230, 220), fin=RENTAL, seed=1986)
+
+# Mona Lisa (1986): the poster's night teal, its yellow MONA / LISA keyed off it into one line, Bob Hoskins and Cathy Tyson
+std('mona-lisa-1986', ('grad', [(0, (30, 80, 90)), (.6, (10, 26, 30)), (1, (2, 6, 8))]), (250, 220, 30),
+    L([(0.262, 0.552, 0.914, 0.673), (0.5, 0.68, 0.974, 0.798)], 100, (250, 220, 30), mode='key', key=(250, 220, 40), t=(70, 160), valign='base'),
+    photo=ph(0.5, 0.25, 0.86, 0.7), pb=(250, 220, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A NEIL JORDAN', 'FILM'], ccol=(250, 230, 120),
+    ft='d', fcol=(200, 220, 220), fin=OLD, seed=1986)
+
+# Platoon (1986): the jungle's dark green, the poster's chrome PLATOON with the dog-tag O cut off it, Elias falling with his arms raised (no logo file: Hemdale, from IMDb's company credits)
+std('platoon-1986', ('grad', [(0, (40, 70, 50)), (.6, (12, 24, 16)), (1, (2, 6, 4))]), (220, 226, 220),
+    LC([(0.08, 0.077, 0.914, 0.223)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .5) & (_sat(a) < .3), minf=.02, close=2)]),
+    photo=ph(0.5, 0.48, 0.7, 1.0), pb=(220, 226, 220), studio=['HEMDALE'], scol=(220, 226, 220), order='lPTCSF', credit=['AN OLIVER STONE', 'FILM'], ccol=(220, 226, 220), stick=BAR('86 1219', top='WAR', fill=(226, 230, 220)),
+    ft='c', fcol=(200, 210, 200), fin=RENTAL, seed=1986)
+
+# Sid and Nancy (1986): the poster's punk pink, the torn white strip with its black ransom-note SiD & NANCY cut off it whole, Sid and Nancy against the fly-posters (no logo file: Zenith, from IMDb's company credits)
+std('sid-and-nancy-1986', ('grad', [(0, (230, 60, 140)), (.5, (110, 20, 70)), (1, (16, 4, 10))]), WHT,
+    LC([(0.05, 0.6, 0.975, 0.775)], 110, cuts=[plate_cut(lambda a: _lum(a) > .72)]),
+    photo=ph(0.6, 0.25, 0.8, 0.85), pb=WHT, studio=['ZENITH'], scol=WHT, order='lPTF', dotst=('PUNK', (20, 20, 20), (250, 120, 190)),
+    ft='a', vbox=(20, 20, 20), fcol=(250, 210, 230), fin=OLD, seed=1986)
+
+# Stand by Me (1986): the poster's sky, its red STAND BY ME keyed off it, the four boys, and the walk along the lake's edge under the title
+std('stand-by-me-1986', ('grad', [(0, (90, 170, 230)), (.5, (40, 100, 160)), (1, (6, 20, 30))]), (220, 30, 30),
+    L((0.074, 0.454, 0.932, 0.519), 84, (220, 30, 30), mode='key', key=(220, 36, 36), t=(70, 160)),
+    photo=ph(0.5, 0.2, 0.9, 0.62), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A ROB REINER', 'FILM'], ccol=WHT,
+    ft='e', fcol=(220, 230, 240), fin=RENTAL, seed=1986)
+
+# The Color of Money (1986): Touchstone, a slipcase; the felt green, the poster's white stacked the / Color / of / Money cut letter by letter into one line, Newman and Cruise at the table
+std('the-color-of-money-1986', ('grad', [(0, (30, 90, 60)), (.6, (10, 34, 22)), (1, (2, 8, 4))]), WHT,
+    LC([(0.775, 0.2, 0.88, 0.255), (0.655, 0.24, 0.855, 0.3), (0.8, 0.284, 0.88, 0.34), (0.695, 0.326, 0.945, 0.396)], 84, valign='base', margin=0, gapf=.3,
+       cuts=[pick_cut(lambda a: _lum(a) > .8, (0.775, 0.2, 0.88, 0.255), [(0.792, 0.228), (0.82, 0.23), (0.858, 0.233)], margin=0, r=.015),
+             pick_cut(lambda a: _lum(a) > .8, (0.655, 0.24, 0.855, 0.3), [(0.682, 0.27), (0.729, 0.276), (0.762, 0.27), (0.795, 0.276), (0.829, 0.273)], margin=0, r=.015),
+             pick_cut(lambda a: _lum(a) > .8, (0.8, 0.284, 0.88, 0.34), [(0.824, 0.317), (0.86, 0.31)], margin=0, r=.015),
+             pick_cut(lambda a: _lum(a) > .8, (0.695, 0.326, 0.945, 0.396), [(0.731, 0.355), (0.787, 0.361), (0.832, 0.36), (0.875, 0.361), (0.917, 0.365)], margin=0, r=.015)]),
+    photo=ph(0.35, 0.66, 0.6, 1.2), pb=(240, 220, 160), lg=WHT, lw=.5, order='LTPF',
+    ft='b', fcol=(200, 220, 210), fin=RENTAL, seed=1986)
+
+# The Great Mouse Detective (1986): Disney clamshell; the poster's white into Baker Street brown, its black THE GREAT MOUSE beside DETECTIVE cut off it, Basil's face in the diamond
+disney('the-great-mouse-detective-1986', ('grad', [(0, (240, 236, 226)), (.5, (200, 180, 150)), (1, (90, 60, 40))]), fin=dict(CLAM, vivid=.2),
+       title=[LC([(0.415, 0.098, 0.582, 0.138), (0.165, 0.14, 0.838, 0.188)], 100, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: _lum(a) < .32)] * 2),
+              LC([(0.224, 0.19, 0.788, 0.237)], 100, margin=0, cuts=[key_cut(lambda a: _lum(a) < .32)])],
+       face=ph(.31, .5, .14, 1.4), lcol=(30, 20, 14), ink=(30, 20, 14))
+
+# Top Gun (1986): the jacket's brown-black, the poster's white and red TOP GUN wings logo cut off it in its own colours, Maverick and Charlie
+std('top-gun-1986', ('grad', [(0, (70, 50, 40)), (.6, (24, 16, 12)), (1, (4, 2, 2))]), WHT,
+    LC([(0.0, 0.648, 0.968, 0.796)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01, close=2)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE'], ccol=WHT,
+    ft='d', vbox=(200, 30, 40), fcol=(220, 210, 200), fin=RENTAL, seed=1986)
+
+# Au revoir les enfants (1987): the navy of the poster's title plate, its cream AU REVOIR / LES ENFANTS and (GOODBYE, CHILDREN) cut off it into one line, the two boys
+std('au-revoir-les-enfants-1987', ('grad', [(0, (30, 36, 80)), (.6, (12, 14, 34)), (1, (2, 2, 8))]), (240, 226, 170),
+    LC([(0.3, 0.766, 0.705, 0.818), (0.278, 0.816, 0.735, 0.87), (0.32, 0.882, 0.688, 0.909)], 84, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) > .5)] * 3),
+    photo=ph(0.55, 0.35, 0.86, 0.7), pb=(240, 226, 170), lg=(240, 226, 170), lw=.5, order='LPTCF', credit=['UN FILM DE', 'LOUIS MALLE'], ccol=(240, 226, 170),
+    ft='c', fcol=(210, 210, 220), fin=OLD, seed=1987)
+
+# Full Metal Jacket (1987): the poster's white, its black stencilled FULL / METAL / JACKET cut off it into one line, the helmet with BORN TO KILL
+std('full-metal-jacket-1987', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (20, 20, 20),
+    LC([(0.405, 0.642, 0.615, 0.706), (0.36, 0.705, 0.66, 0.767), (0.325, 0.765, 0.68, 0.828)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .32)] * 3),
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='a', fcol=(20, 20, 20), fin=OLD, seed=1987)
