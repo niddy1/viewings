@@ -13,14 +13,15 @@ def _turn(rgb, al, rot):
     return cv2.warpAffine(rgb, M, (nw, nh), flags=cv2.INTER_CUBIC), cv2.warpAffine(al, M, (nw, nh), flags=cv2.INTER_LINEAR)
 
 
-def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0):
+def comp_cut(test, keep=None, top=None, soft=1.4, rot=0, minf=.015, close=0, opn=3):
     """an LC cut that keeps whole letters: the connected pieces passing test (rgb 0..1), filtered by
     keep(cx, cy) (the piece's centre, as fractions of the cut-out crop) and/or only the `top` biggest.
     For lettering that interlocks on the poster (arched, stacked or overlapping words), where a straight
     box edge would take slices of the neighbouring word."""
     def fn(rgb):
         a = rgb.astype(np.float32) / 255
-        m = cv2.morphologyEx(test(a).astype(np.uint8), cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
+        m = test(a).astype(np.uint8)
+        if opn > 1: m = cv2.morphologyEx(m, cv2.MORPH_OPEN, np.ones((opn, opn), np.uint8))  # opn=1 keeps hairlines (thin serifs)
         if close: m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((close, close), np.uint8))  # join a letter broken by something across it
         n, lab, st, cen = cv2.connectedComponentsWithStats(m)
         h, w = m.shape; ok = np.zeros(n, bool)
@@ -1918,3 +1919,75 @@ std('murder-by-death-1976', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, 
     L((0.03, 0.83, 0.98, 0.932), 100, (252, 222, 42), mode='key', key=(245, 215, 50), t=(70, 150)),
     photo=ph(0.5, 0.45, 1.0, 0.6), pb=(250, 220, 40), lg=WHT, lw=.55, order='LPTCF', credit=['PETER FALK', 'ALEC GUINNESS'], ccol=WHT,
     dotst=('COMEDY', (250, 220, 40), (12, 10, 8)), ft='a', vbox=(250, 220, 40), vink=(12, 10, 8), fcol=(200, 196, 190), fin=OLD, seed=1976)
+
+# Network (1976): the poster's white, its black italic NETWORK cut off it, the television set with the lightning bolt
+std('network-1976', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (20, 20, 20),
+    LC([(0.15, 0.776, 0.85, 0.858)], 96, cuts=[key_cut(lambda a: _lum(a) < .35)]),
+    photo=ph(0.5, 0.32, 0.8, 0.8), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='b', fcol=(20, 20, 20), fin=OLD, seed=1976)
+
+# Rocky (1976): the poster's white, its black ROCKY cut off it, Rocky and Adrian walking hand in hand under the title
+std('rocky-1976', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (20, 20, 20),
+    LC([(0.068, 0.11, 0.926, 0.236)], 110, margin=0, cuts=[comp_cut(lambda a: _lum(a) < .35, minf=.2)]),
+    photo=ph(0.5, 0.56, 0.62, 1.4), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPSF', stick=PRC(['$1.99', 'DRAMA']),
+    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=RENTAL, seed=1976)
+
+# Taxi Driver (1976): the poster's yellow cab, its red TAXI DRIVER keyed off the yellow band, De Niro walking past the cab
+std('taxi-driver-1976', ('grad', [(0, (252, 214, 30)), (.55, (236, 190, 20)), (1, (120, 90, 6))]), (190, 30, 30),
+    L((0.125, 0.872, 0.88, 0.935), 84, (190, 30, 30), mode='key', key=(190, 40, 40), t=(70, 150)),
+    photo=ph(0.5, 0.32, 0.5, 1.4), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['ROBERT DE NIRO'], ccol=(20, 20, 20),
+    ft='a', vbox=(190, 30, 30), fcol=(20, 20, 20), fin=OLD, seed=1976)
+
+# The Man Who Fell to Earth (1976): black, the poster's white THE MAN WHO FELL TO EARTH lifted into one line, Bowie in the circle (no logo file: British Lion, from IMDb's company credits)
+std('the-man-who-fell-to-earth-1976', ('grad', [(0, (40, 70, 110)), (.6, (12, 20, 34)), (1, (2, 2, 4))]), WHT,
+    L([(0.425, 0.741, 0.572, 0.771), (0.047, 0.775, 0.958, 0.819), (0.2, 0.823, 0.795, 0.868)], 74, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.3, 0.52, 1.0), pb=(110, 180, 230), studio=['BRITISH LION'], scol=WHT, order='lPTCF', credit=['DAVID BOWIE'], ccol=WHT,
+    ft='c', fcol=(200, 210, 220), fin=OLD, seed=1976)
+
+# The Tenant (1976): the poster's pale grey, its crimson stacked THE / TENANT (the falling man cut through the E) keyed off it, the gilt mirror (no logo file: Marianne Productions, from IMDb's company credits)
+std('the-tenant-1976', ('grad', [(0, (232, 232, 230)), (.6, (210, 210, 206)), (1, (110, 110, 106))]), (128, 0, 50),
+    L([(0.36, 0.8, 0.63, 0.876), (0.36, 0.874, 0.63, 0.91)], 96, (128, 0, 50), mode='key', key=(128, 0, 50), t=(70, 150), valign='base', speck=0, gapf=.12),
+    photo=ph(0.5, 0.3, 0.46, 1.4), pb=(190, 150, 40), studio=['MARIANNE', 'PRODUCTIONS'], scol=(128, 0, 50), order='lPTCF', credit=['UN FILM DE', 'ROMAN POLANSKI'], ccol=(30, 30, 30),
+    ft='e', fcol=(30, 30, 30), fin=OLD, seed=1976)
+
+# Annie Hall (1977): the poster's white, its thin black "ANNIE HALL" lifted (the quotes kept), Diane Keaton and Woody Allen under the title
+std('annie-hall-1977', ('grad', [(0, (246, 246, 244)), (.6, (230, 228, 222)), (1, (130, 128, 120))]), (20, 20, 20),
+    LC([(0.068, 0.815, 0.625, 0.888)], 84, cuts=[key_cut(lambda a: _lum(a) < .4)]),
+    photo=ph(0.6, 0.38, 0.58, 1.6), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPF',
+    ft='b', fcol=(20, 20, 20), fin=OLD, seed=1977)
+
+# Close Encounters of the Third Kind (1977): the night sky, the poster's blue CLOSE ENCOUNTERS and its small OF THE THIRD KIND cut off it in their own colours, the mothership's lights
+std('close-encounters-of-the-third-kind-1977', ('grad', [(0, (60, 30, 10)), (.5, (20, 10, 6)), (1, (2, 4, 10))]), (110, 200, 230),
+    LC([(0.038, 0.56, 0.96, 0.604), (0.345, 0.618, 0.655, 0.636)], 70, valign='base', margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .3) & (a[..., 2] >= a[..., 0]), minf=.02, close=3)] * 2),
+    photo=ph(0.5, 0.3, 0.9, 0.62), pb=(240, 160, 60), lg=WHT, lw=.55, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=(200, 220, 230),
+    ft='d', fcol=(200, 210, 220), fin=OLD, seed=1977)
+
+# High Anxiety (1977): the poster's white, its red HIGH ANXIETY keyed off it, Mel Brooks falling into the spiral
+std('high-anxiety-1977', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (214, 30, 30),
+    L((0.135, 0.143, 0.86, 0.202), 84, (214, 30, 30), mode='key', key=(214, 40, 40), t=(70, 150)),
+    photo=ph(0.5, 0.52, 0.56, 1.0), pb=(214, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='d', fcol=(30, 30, 30), fin=RENTAL, seed=1977)
+
+# Star Wars (1977): Lucasfilm, a slipcase; the starfield, the poster's white stacked STAR / WARS cut into one line, Luke and Leia under the lightsaber
+std('star-wars-1977', ('grad', [(0, (30, 40, 70)), (.6, (10, 14, 26)), (1, (60, 20, 10))]), WHT,
+    LC([(0.274, 0.74, 0.746, 0.838), (0.16, 0.836, 0.842, 0.958)], 120, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) > .8)] * 2),
+    photo=ph(0.62, 0.45, 0.5, 1.2), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTF',
+    ft='a', vbox=(220, 40, 30), fcol=(210, 210, 220), fin=RENTAL, seed=1977)
+
+# Suspiria (1977): black, the poster's white Suspiria lifted, the dancer over the blood (no logo file: Seda Spettacoli, from IMDb's company credits)
+std('suspiria-1977', ('grad', [(0, (120, 10, 14)), (.5, (30, 4, 4)), (1, (2, 2, 2))]), WHT,
+    LC([(0.105, 0.56, 0.9, 0.775)], 110, cuts=[comp_cut(lambda a: _lum(a) > .75, minf=.05)]),
+    photo=ph(0.62, 0.36, 0.5, 1.4), pb=(220, 20, 30), studio=['SEDA SPETTACOLI'], scol=WHT, order='lPTCF', credit=['UN FILM DI', 'DARIO ARGENTO'], ccol=WHT,
+    dotst=('HORROR', (220, 20, 30), WHT), ft='c', fcol=(210, 190, 190), fin=OLD, seed=1977)
+
+# That Obscure Object of Desire (1977): the poster's cream, its black serif That / Obscure / Object / Of Desire cut off it, line by line, into one, the face in the hand mirror (no logo file: Greenwich Film, from IMDb's company credits)
+std('that-obscure-object-of-desire-1977', ('grad', [(0, (246, 240, 226)), (.6, (230, 222, 200)), (1, (140, 126, 96))]), (20, 20, 20),
+    LC([(0.65, 0.635, 0.868, 0.715), (0.583, 0.682, 0.932, 0.762), (0.593, 0.732, 0.887, 0.812), (0.553, 0.786, 0.952, 0.866)], 70, valign='base', margin=0, gapf=.35, cuts=[comp_cut(lambda a: _lum(a) < .55, keep=lambda cx, cy: .25 < cy < .75, minf=.005, opn=1)] * 4),
+    photo=ph(0.42, 0.4, 0.5, 1.0), pb=(150, 30, 40), studio=['GREENWICH FILM'], scol=(20, 20, 20), order='lPTF',
+    ft='e', fcol=(30, 30, 30), fin=OLD, seed=1977)
+
+# The Many Adventures of Winnie the Pooh (1977): Disney clamshell; the Hundred Acre Wood's greens, the cream lettering of the poster's wooden sign (The Many Adventures Of / WINNIE / The POOH) cut off it, The Many Adventures Of beside WINNIE The POOH, Pooh's face in the diamond
+disney('the-many-adventures-of-winnie-the-pooh-1977', ('grad', [(0, (70, 130, 60)), (.5, (110, 160, 80)), (1, (40, 80, 40))]), fin=dict(CLAM, vivid=.2),
+       title=[LC([(0.16, 0.2, 0.84, 0.283), (0.185, 0.282, 0.84, 0.355)], 110, valign='base', margin=0, outline=((62, 42, 20), 3), cuts=[key_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .35))] * 2),
+              LC([(0.155, 0.15, 0.855, 0.195)], 40, margin=0, outline=((62, 42, 20), 3), cuts=[key_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .35))])],
+       face=ph(.44, .585, .17, 1.4), lcol=WHT)
