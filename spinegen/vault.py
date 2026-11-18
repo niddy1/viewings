@@ -2992,3 +2992,73 @@ std('box-of-moonlight-1996', ('grad', [(0, (246, 248, 250)), (.6, (226, 232, 240
     TT([('BOX', (196, 50, 44)), ('OF', (30, 30, 40)), ('MOONLIGHT', (196, 50, 44))], 'hcnb', 100, sp=.3),
     photo=ph(0.7, 0.38, 0.6, 1.3), pb=(190, 40, 40), lg=(40, 40, 60), lw=.55, order='LPTCF', credit=['A FILM BY', 'TOM DiCILLO'], ccol=(40, 40, 60),
     ft='d', fcol=(40, 40, 60), fin=OLD, seed=1996)
+
+# Eraser (1996): the poster's steel greys, its green spaced E R A S E R cut off it, Arnold in the leather jacket
+std('eraser-1996', ('grad', [(0, (90, 100, 90)), (.6, (24, 28, 24)), (1, (2, 4, 2))]), (150, 220, 90),
+    LC([(0.05, 0.81, 0.94, 0.885)], 90, cuts=[comp_cut(lambda a: (a[..., 1] > .45) & (a[..., 1] > a[..., 2] + .12), minf=.05)]),
+    photo=ph(0.7, 0.3, 0.6, 1.3), pb=(150, 220, 90), lg=WHT, lw=.5, order='LPTCSF', credit=['ARNOLD SCHWARZENEGGER'], ccol=WHT, stick=RWD(),
+    ft='a', vbox=(150, 220, 90), vink=(10, 20, 10), fcol=(200, 210, 200), fin=RENTAL, seed=1996)
+
+# Fargo (1996): the poster's cross-stitch white, its red script Fargo cut off it, the stitched body in the snow (PolyGram logo)
+std('fargo-1996', ('grad', [(0, (244, 240, 236)), (.6, (226, 220, 214)), (1, (130, 120, 110))]), (190, 30, 30),
+    LC([(0.14, 0.105, 0.822, 0.288)], 120, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .35))]),
+    photo=ph(0.5, 0.55, 0.86, 0.6), pb=(190, 30, 30), lg=(60, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(60, 30, 30),
+    ft='b', fcol=(60, 30, 30), fin=RENTAL, seed=1996)
+
+# James and the Giant Peach (1996): Walt Disney Pictures, so the clamshell; the sky over the peach, James and the Giant Peach typeset in white with an orange keyline (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on the peach's pale highlight, and the cut lost James), James's face in the diamond
+disney('james-and-the-giant-peach-1996', ('grad', [(0, (90, 170, 230)), (.5, (240, 140, 50)), (1, (60, 120, 40))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('James', WHT), ('and the', (40, 30, 20)), ('Giant Peach', WHT)], 'popb', 90, sp=.3, outline=((170, 70, 10), 2.2)),
+       face=ph(.48, .735, .09, 1.4), lcol=WHT, studio=False)
+
+# Jingle All the Way (1996): the poster's white, its red Jingle All The Way cut off it whole, Arnold diving for the Turbo-Man box
+std('jingle-all-the-way-1996', ('grad', [(0, (246, 244, 244)), (.6, (226, 226, 230)), (1, (120, 120, 140))]), (210, 30, 30),
+    LC([(0.385, 0.105, 0.875, 0.352)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.45, 0.5, 0.86, 0.75), pb=(30, 120, 60), lg=(30, 30, 40), lw=.55, order='LPTSF', stick=BAR('96 1122', top='FAMILY', fill=(236, 240, 230)),
+    ft='d', fcol=(30, 30, 40), fin=RENTAL, seed=1996)
+
+# La Promesse (1996): the poster's pale grey, its pencilled la promesse lifted and darkened, Igor and Assita on the bridge (Les Films du Fleuve logo)
+std('la-promesse-1996', ('grad', [(0, (226, 226, 220)), (.6, (200, 200, 194)), (1, (110, 110, 104))]), (60, 60, 60),
+    L((0.04, 0.2, 0.96, 0.37), 110, (50, 50, 54), mode='dark', speck=0),
+    photo=ph(0.6, 0.72, 0.9, 0.45), pb=(60, 60, 60), lg=(60, 60, 60), lw=.55, order='LPTCF', credit=['UN FILM DE', 'JEAN-PIERRE ET', 'LUC DARDENNE'], ccol=(60, 60, 60),
+    ft='e', fcol=(50, 50, 50), fin=OLD, seed=1996)
+
+# Mars Attacks! (1996): the burning city's red, the poster's red slanted MARS ATTACKS! cut off it whole and levelled, the Martian with the ray gun
+std('mars-attacks-1996', ('grad', [(0, (60, 70, 140)), (.5, (140, 40, 30)), (1, (14, 4, 2))]), (220, 30, 30),
+    LC([(0.06, 0.785, 0.95, 0.915)], 130, outline=((250, 240, 200), 2.2), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.02, rot=-8)]),
+    photo=ph(0.55, 0.35, 0.86, 0.9), pb=(140, 230, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
+    ft='c', fcol=(220, 200, 200), fin=RENTAL, seed=1996)
+
+# Matilda (1996): the night's starry blue, Matilda typeset letter by letter in the logo's rainbow colours (parked for Ian's logo, see data/logos-wanted.md: each letter is shaded from light to dark, so two colour cuts lost the t, i and l), Matilda with the floating orb under the title
+std('matilda-1996', ('grad', [(0, (30, 60, 140)), (.6, (10, 20, 60)), (1, (2, 4, 16))]), (250, 220, 60),
+    TT([('M', (220, 40, 50)), ('a', (250, 140, 30)), ('t', (250, 220, 50)), ('i', (90, 190, 70)), ('l', (60, 160, 230)), ('d', (240, 200, 40)), ('a', (180, 80, 200))], 'pagb', 120, sp=0, outline=(WHT, 1.6)),
+    photo=ph(0.45, 0.5, 0.86, 0.9), pb=(250, 220, 60), lg=WHT, lw=.5, order='LTPSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='b', fcol=(200, 210, 240), fin=RENTAL, seed=1996)
+
+# Paradise Lost: The Child Murders at Robin Hood Hills (1996): the poster's sepia, its black PARADISE / LOST and THE CHILD MURDERS AT ROBIN HOOD HILLS cut off it into one line, the three boys' faces (no logo file: HBO, from IMDb's company credits; directors from IMDb)
+std('paradise-lost-the-child-murders-at-robin-hood-hills-1996', ('grad', [(0, (180, 110, 60)), (.5, (110, 60, 30)), (1, (20, 10, 4))]), (20, 14, 8),
+    LC([(0.14, 0.6, 0.85, 0.69), (0.3, 0.69, 0.68, 0.788)], 100, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) < .18, minf=.02)] * 2),
+    photo=ph(0.5, 0.2, 0.9, 0.5), pb=(20, 14, 8), studio=['HBO'], scol=(20, 14, 8), order='lPTCF', credit=['A DOCUMENTARY BY', 'BERLINGER &', 'SINOFSKY'], ccol=(240, 200, 160),
+    ft='a', fcol=(240, 200, 160), fin=OLD, seed=1996)
+
+# Primal Fear (1996): the storm's dark gold, the poster's white serif PRIMAL · FEAR lifted, Richard Gere in the coat
+std('primal-fear-1996', ('grad', [(0, (120, 110, 70)), (.6, (34, 30, 18)), (1, (4, 4, 2))]), WHT,
+    L((0.052, 0.848, 0.948, 0.918), 84, WHT, mode='light'),
+    photo=ph(0.32, 0.4, 0.5, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['RICHARD GERE', 'EDWARD NORTON'], ccol=WHT,
+    ft='d', fcol=(220, 214, 196), fin=RENTAL, seed=1996)
+
+# Space Jam (1996): the space blue, the poster's green-and-orange SPACE JAM cut off it in its own colours, Michael Jordan and Bugs
+std('space-jam-1996', ('grad', [(0, (30, 40, 120)), (.6, (10, 14, 50)), (1, (2, 2, 14))]), (140, 210, 60),
+    LC([(0.165, 0.09, 0.89, 0.31)], 130, cuts=[comp_cut(lambda a: ((a[..., 1] > .45) & (a[..., 1] > a[..., 2] + .05)) | ((a[..., 0] > .7) & (a[..., 2] < .35)), minf=.01, close=2)]),
+    photo=ph(0.5, 0.6, 0.9, 0.7), pb=(250, 140, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (250, 140, 40), WHT),
+    ft='e', fcol=(200, 206, 240), fin=RENTAL, seed=1996)
+
+# The Cable Guy (1996): the lightning's blue, the poster's white THE / CABLE / GUY lifted into one line, Jim Carrey with the cable
+std('the-cable-guy-1996', ('grad', [(0, (30, 60, 170)), (.6, (10, 20, 70)), (1, (2, 4, 20))]), WHT,
+    L([(0.375, 0.078, 0.585, 0.16), (0.322, 0.158, 0.645, 0.238), (0.195, 0.237, 0.605, 0.32)], 100, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.6, 0.6, 0.86, 0.85), pb=(120, 200, 250), lg=WHT, lw=.5, order='LTPF',
+    ft='a', fcol=(200, 210, 246), fin=RENTAL, seed=1996)
+
+# The Hunchback of Notre Dame (1996): Disney clamshell; the cathedral's red glow, the poster's white THE HUNCHBACK OF NOTRE DAME cut off it, Quasimodo in the diamond
+disney('the-hunchback-of-notre-dame-1996', ('grad', [(0, (180, 60, 40)), (.5, (110, 30, 24)), (1, (30, 8, 8))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.2, 0.815, 0.83, 0.948)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.01)]),
+       face=ph(.53, .62, .14, 1.4), lcol=WHT)

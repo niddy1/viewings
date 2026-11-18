@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Matilda (1996) | Vault 1990s | `logos/matilda-1996-title.png` | typeset in the rainbow colours; each letter is shaded light to dark |
+| James and the Giant Peach (1996) | Vault 1990s | `logos/james-and-the-giant-peach-1996-title.png` | typeset (Disney clamshell); white letters on the peach's pale highlight |
 | Se7en (1995) | Vault 1990s | `logos/se7en-1995-title.png` | cut, but the dim red 7 reads as a slash |
 | Box of Moonlight (1996) | Vault 1990s | `logos/box-of-moonlight-1996-title.png` | typeset; the small OF is on a tilted black tag |
 | GoldenEye (1995) | Vault 1990s | `logos/goldeneye-1995-title.png` | cut, but the gold 007 with the gun barrel is left off (sits on Bond's sleeve) and the chrome E breaks up |
