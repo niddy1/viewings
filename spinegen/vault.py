@@ -2778,3 +2778,74 @@ std('dumb-and-dumber-1994', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)
     LC([(0.06, 0.045, 0.942, 0.158)], 120, cuts=[comp_cut(lambda a: ((a[..., 2] > .4) & (a[..., 0] < .35)) | ((a[..., 0] > .6) & (a[..., 1] < .35)) | ((_lum(a) > .85) & (_lum(a) < .97)), minf=.01, fillh=True)]),
     photo=ph(0.5, 0.55, 0.86, 0.9), pb=(20, 70, 160), lg=(20, 70, 160), lw=.55, order='LPTCSF', credit=['JIM CARREY', 'JEFF DANIELS'], ccol=(20, 40, 90), stick=RWD(),
     ft='d', fcol=(20, 40, 90), fin=RENTAL, seed=1994)
+
+# Ed Wood (1994): Touchstone, a slipcase; black, ED WOOD typeset in heavy capitals in white with a grey keyline (parked for Ian's logo, see data/logos-wanted.md: the poster's chrome letters are tipped back in perspective and their shading broke both cuts), Ed in the director's chair
+std('ed-wood-1994', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    T('ED WOOD', 'intbk', 120, WHT, outline=((110, 110, 120), 2)),
+    photo=ph(0.5, 0.33, 0.8, 1.1), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=WHT,
+    ft='c', fcol=(200, 200, 206), fin=RENTAL, seed=1994)
+
+# Forrest Gump (1994): the poster's sky blue, its navy serif Forrest / Gump cut off it into one line, Forrest on the bench
+std('forrest-gump-1994', ('grad', [(0, (220, 236, 250)), (.5, (170, 206, 240)), (1, (60, 100, 150))]), (20, 30, 70),
+    LC([(0.18, 0.13, 0.8, 0.285), (0.04, 0.285, 0.55, 0.405)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 2] > a[..., 0] + .1) & (_lum(a) < .4), minf=.02)] * 2),
+    photo=ph(0.5, 0.7, 0.9, 0.55), pb=(20, 30, 70), lg=(20, 30, 70), lw=.55, order='LPTSF', stick=BAR('94 0706', top='DRAMA', fill=(236, 236, 226)),
+    ft='a', vbox=(20, 30, 70), fcol=(20, 30, 70), fin=RENTAL, seed=1994)
+
+# Hoop Dreams (1994): a 2-tape box would be too much at 174 minutes, so one tape; the dusk blue, the poster's white outlined HOOP / DREAMS cut off it into one line, the player rising to the hoop (Fine Line; director from IMDb)
+std('hoop-dreams-1994', ('grad', [(0, (30, 50, 150)), (.5, (20, 30, 90)), (1, (220, 140, 40))]), WHT,
+    LC([(0.225, 0.07, 0.775, 0.185), (0.225, 0.182, 0.775, 0.265)], 100, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.02)] * 2),
+    photo=ph(0.6, 0.6, 0.6, 1.1), pb=(250, 180, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'STEVE JAMES'], ccol=WHT,
+    ft='e', fcol=(220, 220, 240), fin=OLD, seed=1994)
+
+# Léon: The Professional (1994): black, the poster's yellow THE PROFESSIONAL keyed off it, Léon and Mathilda in the corridor's light
+std('leon-the-professional-1994', ('grad', [(0, (50, 40, 20)), (.6, (14, 10, 6)), (1, (2, 2, 2))]), (250, 220, 40),
+    L([(0.045, 0.792, 0.11, 0.83), (0.05, 0.828, 0.955, 0.932)], 110, (250, 220, 40), mode='key', key=(250, 220, 40), t=(70, 160), valign='base', speck=0),
+    photo=ph(0.5, 0.35, 0.8, 1.0), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'LUC BESSON'], ccol=(250, 230, 140),
+    ft='b', vbox=(250, 220, 40), vink=(20, 16, 4), fcol=(220, 210, 180), fin=RENTAL, seed=1994)
+
+# Natural Born Killers (1994): the poster's white over black, its yellow slanted NATURAL BORN KILLERS cut off it and levelled, Woody Harrelson in the red glasses
+std('natural-born-killers-1994', ('grad', [(0, (50, 50, 50)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (250, 220, 40),
+    LC([(0.04, 0.745, 0.96, 0.87)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02, rot=-7)]),
+    photo=ph(0.5, 0.3, 0.86, 0.8), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('CRIME', (220, 30, 30), WHT),
+    ft='d', fcol=(210, 210, 210), fin=RENTAL, seed=1994)
+
+# Pulp Fiction (1994): the poster's red, its yellow distressed PULP FICTION keyed off it, Mia on the bed with the cigarette
+std('pulp-fiction-1994', ('grad', [(0, (190, 30, 30)), (.6, (90, 12, 12)), (1, (14, 2, 2))]), (250, 220, 40),
+    LC([(0.09, 0.05, 0.92, 0.185)], 110, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45))]),
+    photo=ph(0.48, 0.55, 0.8, 1.1), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A QUENTIN TARANTINO', 'FILM'], ccol=(250, 220, 120),
+    ft='a', vbox=(250, 220, 40), vink=(30, 10, 4), fcol=(240, 200, 180), fin=RENTAL, seed=1994)
+
+# Quiz Show (1994): black, the poster's red serif QUIZ SHOW keyed off it, the contestant in his booth's headphones
+std('quiz-show-1994', ('grad', [(0, (30, 34, 50)), (.6, (8, 10, 16)), (1, (2, 2, 4))]), (200, 30, 40),
+    L((0.16, 0.744, 0.84, 0.812), 84, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160)),
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A ROBERT REDFORD', 'FILM'], ccol=WHT,
+    ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1994)
+
+# The Hudsucker Proxy (1994): the boardroom's red glow, the poster's chrome HUDSUCKER and its spaced gold P R O X Y cut off it into one line, the man leaping from the window
+std('the-hudsucker-proxy-1994', ('grad', [(0, (120, 30, 20)), (.5, (60, 14, 8)), (1, (10, 2, 2))]), (220, 220, 230),
+    LC([(0.115, 0.752, 0.875, 0.872), (0.125, 0.885, 0.875, 0.902)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.02)] * 2),
+    photo=ph(0.5, 0.22, 0.86, 0.7), pb=(230, 200, 140), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(230, 220, 200),
+    ft='b', fcol=(220, 200, 190), fin=RENTAL, seed=1994)
+
+# The Lion King (1994): Disney clamshell; the Pride Lands' red-orange sunset, the poster's white THE LION KING cut off it (its Disney mark left out, it is on the spine already), Simba's face in the diamond
+disney('the-lion-king-1994', ('grad', [(0, (150, 40, 20)), (.5, (190, 80, 30)), (1, (90, 20, 14))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.28, 0.425, 0.85, 0.545), (0.21, 0.545, 0.85, 0.665)], 120, valign='base', margin=0, gapf=.2, outline=((120, 40, 20), 1.6),
+                cuts=[comp_cut(lambda a: _lum(a) > .88, minf=.005), comp_cut(lambda a: _lum(a) > .88, minf=.03)]),
+       face=ph(.53, .16, .2, 1.4), lcol=WHT)
+
+# The Mask (1994): the poster's black, its green MASK cut off it (the tiny dark THE beside it doesn't come through), Jim Carrey in the yellow hat and green face
+std('the-mask-1994', ('grad', [(0, (40, 40, 30)), (.6, (12, 12, 8)), (1, (2, 2, 2))]), (110, 200, 120),
+    LC([(0.315, 0.655, 0.685, 0.78)], 110, cuts=[comp_cut(lambda a: (a[..., 1] > a[..., 0] + .1) & (a[..., 1] > .4), minf=.002)]),
+    photo=ph(0.55, 0.38, 0.86, 0.9), pb=(250, 210, 40), lg=WHT, lw=.5, order='LTPF',
+    ft='c', fcol=(220, 220, 180), fin=RENTAL, seed=1994)
+
+# The Shawshank Redemption (1994): the rain's dark, the poster's white spaced SHAWSHANK / REDEMPTION lifted into one line, Andy with his arms out in the rain
+std('the-shawshank-redemption-1994', ('grad', [(0, (70, 50, 30)), (.6, (20, 14, 8)), (1, (2, 2, 2))]), WHT,
+    L([(0.112, 0.815, 0.902, 0.869), (0.113, 0.874, 0.897, 0.9)], 90, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=(240, 200, 140), lg=WHT, lw=.5, order='LPTCF', credit=['TIM ROBBINS', 'MORGAN FREEMAN'], ccol=WHT,
+    ft='d', fcol=(220, 210, 196), fin=RENTAL, seed=1994)
+
+# A Goofy Movie (1995): Disney clamshell; the canyon's purple dusk, the poster's yellow A GOOFY MOVIE cut off it in its own colours, Max's face in the diamond
+disney('a-goofy-movie-1995', ('grad', [(0, (120, 60, 150)), (.5, (200, 110, 120)), (1, (40, 120, 170))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.1, 0.07, 0.9, 0.31)], 130, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45)) | (_lum(a) < .18) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01, close=2)]),
+       face=ph(.6, .655, .14, 1.4), lcol=WHT)
