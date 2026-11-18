@@ -1217,8 +1217,7 @@ std('breathless-1960', ('grad', [(0, (230, 100, 100)), (.5, (110, 190, 180)), (1
 # La Dolce Vita (1960): the fountain's grey, the poster's gold serif LA DOLCE VITA keyed off it in its three lines, the kiss in the Trevi
 std('la-dolce-vita-1960', ('grad', [(0, (110, 110, 108)), (.6, (40, 40, 40)), (1, (8, 8, 8))]), (240, 200, 80),
     L([(0.375, 0.352, 0.62, 0.438), (0.17, 0.449, 0.816, 0.537), (0.278, 0.546, 0.713, 0.632)], 76, (242, 204, 84), mode='key', key=(235, 195, 80), t=(70, 150), gapf=.3),
-    photo=ph(0.58, 0.82, 0.6, 0.85), pb=(242, 204, 84), lg=(242, 204, 84), lw=.55, order='LPTCF', credit=['MARCELLO MASTROIANNI', 'ANITA EKBERG'], ccol=(230, 220, 200),
-    ft='a', vbox=(242, 204, 84), vink=(40, 40, 40), fcol=(200, 196, 190), fin=OLD, seed=1960)
+    photo=ph(0.58, 0.82, 0.6, 0.85), pb=(242, 204, 84), lg=(242, 204, 84), lw=.55, order='LTPF', ft='a', vbox=(242, 204, 84), vink=(40, 40, 40), fcol=(200, 196, 190), fin=OLD, seed=1960)
 
 # Le Trou (1960): black, the poster's yellow LE TROU with its glass-bubble O cut off it in its own colours, the two prisoners' faces (director from IMDb)
 std('le-trou-1960', ('grad', [(0, (50, 50, 50)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (250, 236, 20),
@@ -1235,8 +1234,7 @@ std('our-man-in-havana-1960', ('grad', [(0, (40, 110, 160)), (.6, (20, 60, 96)),
 # Peeping Tom (1960): the poster's paper white, its orange-red PEEPING TOM keyed off it, the camera (no logo file: Michael Powell (Theatre), from IMDb's company credits)
 std('peeping-tom-1960', ('grad', [(0, (240, 236, 226)), (.6, (222, 216, 202)), (1, (140, 130, 110))]), (220, 80, 40),
     L([(0.04, 0.11, 0.68, 0.172), (0.032, 0.17, 0.38, 0.232)], 80, (224, 82, 42), mode='key', key=(220, 85, 45), t=(70, 150), gapf=.3),
-    photo=ph(0.6, 0.55, 0.62, 1.0), pb=(30, 30, 30), studio=['MICHAEL POWELL', '(THEATRE)'], scol=(30, 30, 30), order='lPTCF', credit=['A MICHAEL POWELL', 'FILM'],
-    ccol=(30, 30, 30), ft='d', fcol=(30, 30, 30), fin=OLD, seed=1960)
+    photo=ph(0.6, 0.55, 0.62, 1.0), pb=(30, 30, 30), studio=['MICHAEL POWELL', '(THEATRE)'], scol=(30, 30, 30), order='lPTF', ft='d', fcol=(30, 30, 30), fin=OLD, seed=1960)
 
 # Psycho (1960): the poster's dark blue, its yellow PSYCHO cut off it in its own colours, Janet Leigh and Anthony Perkins' hands (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
 std('psycho-1960', ('grad', [(0, (30, 44, 70)), (.6, (12, 16, 28)), (1, (2, 4, 8))]), (250, 220, 70),
@@ -1253,8 +1251,7 @@ std('shoot-the-piano-player-1960', ('grad', [(0, (230, 200, 160)), (.6, (190, 15
 # Spartacus (1960): the poster's red, its white jagged SPARTACUS cut off it, the gladiator with the net
 std('spartacus-1960', ('grad', [(0, (226, 30, 30)), (.6, (160, 16, 16)), (1, (60, 4, 4))]), WHT,
     LC([(0.07, 0.115, 0.945, 0.255)], 90, cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.05)]),
-    photo=ph(0.45, 0.62, 0.8, 0.9), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['KIRK DOUGLAS'], ccol=WHT,
-    ft='d', fcol=(240, 210, 210), fin=OLD, seed=1960)
+    photo=ph(0.45, 0.62, 0.8, 0.9), pb=WHT, lg=WHT, lw=.55, order='LPTF', ft='d', fcol=(240, 210, 210), fin=OLD, seed=1960)
 
 # The Apartment (1960): the poster's red, its white THE APARTMENT lifted, Lemmon and MacLaine dancing (no logo file: The Mirisch Corporation, from IMDb's company credits)
 std('the-apartment-1960', ('grad', [(0, (226, 30, 24)), (.6, (170, 16, 14)), (1, (60, 4, 4))]), WHT,
@@ -1265,8 +1262,7 @@ std('the-apartment-1960', ('grad', [(0, (226, 30, 24)), (.6, (170, 16, 14)), (1,
 # The Bad Sleep Well (1960): black, the poster's white THE SLEEP WELL and red BAD cut off it in their own colours, the office block with the red cross (director from IMDb)
 std('the-bad-sleep-well-1960', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
     LC([(0.018, 0.17, 0.98, 0.285)], 80, cuts=[key_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
-    photo=ph(0.5, 0.66, 1.0, 0.6), pb=(214, 30, 40), lg=WHT, lw=.55, order='LTPCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
-    ft='a', fcol=(200, 200, 200), fin=OLD, seed=1960)
+    photo=ph(0.5, 0.66, 1.0, 0.6), pb=(214, 30, 40), lg=WHT, lw=.55, order='LTPF', ft='a', fcol=(200, 200, 200), fin=OLD, seed=1960)
 
 # Tunes of Glory (1960): the poster's cream, its black TUNES and OF GLORY cut off it letter by letter and levelled (they climb 16 degrees), Alec Guinness's face (no logo file: Knightsbridge Films, from IMDb's company credits)
 TGB = lambda a: _lum(a) < .25
@@ -1285,8 +1281,7 @@ std('breakfast-at-tiffany-s-1961', ('grad', [(0, (246, 244, 242)), (.6, (226, 22
 # Il Posto (1961): the poster's cream, its white ERMANNO OLMI'S and yellow IL POSTO cut off it in their own colours, Domenico at the desk
 std('il-posto-1961', ('grad', [(0, (238, 232, 216)), (.6, (220, 210, 190)), (1, (130, 120, 100))]), (40, 40, 40),
     LC([(0.05, 0.415, 0.545, 0.49)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4))]),
-    photo=ph(0.55, 0.72, 0.86, 0.55), pb=(230, 190, 40), lg=(40, 40, 40), lw=.55, order='LPTCF', credit=["ERMANNO OLMI'S"], ccol=(40, 40, 40),
-    ft='d', fcol=(40, 40, 40), fin=OLD, seed=1961)
+    photo=ph(0.55, 0.72, 0.86, 0.55), pb=(230, 190, 40), lg=(40, 40, 40), lw=.55, order='LTPF', ft='d', fcol=(40, 40, 40), fin=OLD, seed=1961)
 
 # One Hundred and One Dalmatians (1961): Disney, the white clamshell; the poster's sky blue, its white-and-gold 101 DALMATIANS cut off the red banner and edged in its red, Pongo's face in the red diamond
 disney('one-hundred-and-one-dalmatians-1961', ('grad', [(0, (40, 90, 170)), (.5, (70, 130, 200)), (1, (30, 60, 110))]), fin=dict(CLAM, vivid=.2),
@@ -1303,8 +1298,7 @@ std('the-human-condition-iii-a-soldier-s-prayer-1961', ('grad', [(0, (250, 236, 
 # The Hustler (1961): the poster's lime green, its black THE HUSTLER lifted, Paul Newman in the circle with the cue (director from IMDb)
 std('the-hustler-1961', ('grad', [(0, (200, 220, 60)), (.6, (150, 180, 30)), (1, (60, 80, 10))]), (20, 20, 20),
     L([(0.695, 0.393, 0.866, 0.453), (0.58, 0.45, 0.982, 0.522)], 80, (20, 20, 20), mode='dark', gapf=.25),
-    photo=ph(0.7, 0.75, 0.5, 1.0), pb=(214, 40, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['PAUL NEWMAN', 'JACKIE GLEASON'], ccol=(20, 20, 20),
-    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1961)
+    photo=ph(0.7, 0.75, 0.5, 1.0), pb=(214, 40, 40), lg=(20, 20, 20), lw=.55, order='LPTF', ft='e', fcol=(20, 20, 20), fin=OLD, seed=1961)
 
 # The Shadow of the Cat (1961): the poster's teal and black, its yellow THE SHADOW OF THE CAT cut off it in its own colours and levelled, the cat's eyes from the top of the poster
 std('the-shadow-of-the-cat-1961', ('grad', [(0, (30, 110, 120)), (.6, (12, 50, 56)), (1, (2, 14, 16))]), (250, 230, 40),
@@ -1327,8 +1321,7 @@ std('west-side-story-1961', ('grad', [(0, (230, 40, 30)), (.6, (180, 24, 18)), (
 # Yojimbo (1961): the poster's smoky gold, its white YOJIMBO lifted, Mifune under the sword (director from IMDb)
 std('yojimbo-1961', ('grad', [(0, (150, 110, 40)), (.6, (60, 44, 20)), (1, (10, 8, 4))]), WHT,
     L((0.255, 0.606, 0.745, 0.656), 70, WHT, mode='light'),
-    photo=ph(0.35, 0.3, 0.6, 1.2), pb=(240, 190, 60), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
-    ft='d', fcol=(220, 210, 190), fin=OLD, seed=1961)
+    photo=ph(0.35, 0.3, 0.6, 1.2), pb=(240, 190, 60), lg=WHT, lw=.55, order='LPTF', ft='d', fcol=(220, 210, 190), fin=OLD, seed=1961)
 
 # Carnival of Souls (1962): the poster's carnival colours, its red CARNIVAL rebuilt letter by letter off its arc, the black OF and yellow SOULS cut off it in their own colours, the screaming woman (no logo file: Harcourt Productions, from IMDb's company credits)
 CSR = lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4)
@@ -1343,8 +1336,7 @@ std('carnival-of-souls-1962', ('grad', [(0, (80, 50, 120)), (.6, (40, 20, 70)), 
 # Harakiri (1962): the poster's white, its black HARA KIRI with the red slash through it cut off it in its own colours, the red blade from the poster (director and star from IMDb)
 std('harakiri-1962', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (20, 20, 20),
     LC([(0.25, 0.47, 0.88, 0.69), (0.28, 0.7, 0.83, 0.87)], 100, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .7) & (a[..., 1] < .3)))] * 2),
-    photo=ph(0.5, 0.2, 0.5, 0.9), pb=(200, 20, 30), lg=(20, 20, 20), lw=.55, order='LTCF', credit=['TATSUYA NAKADAI'], ccol=(20, 20, 20),
-    ft='b', fcol=(20, 20, 20), fin=OLD, seed=1962)
+    photo=ph(0.5, 0.2, 0.5, 0.9), pb=(200, 20, 30), lg=(20, 20, 20), lw=.55, order='LTF', ft='b', fcol=(20, 20, 20), fin=OLD, seed=1962)
 
 # Jules and Jim (1962): the poster's paper cream, its brown script Jules and Jim lifted, Jeanne Moreau's eyes (director from IMDb)
 std('jules-and-jim-1962', ('grad', [(0, (244, 236, 216)), (.6, (228, 216, 190)), (1, (150, 130, 100))]), (150, 80, 50),
@@ -1355,8 +1347,7 @@ std('jules-and-jim-1962', ('grad', [(0, (244, 236, 216)), (.6, (228, 216, 190)),
 # Knife in the Water (1962): the poster's white, its black thin KNIFE IN THE WATER lifted, the sail's black triangle (no logo file: Kamera, from IMDb's company credits; director from IMDb)
 std('knife-in-the-water-1962', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (140, 140, 140))]), (20, 20, 20),
     L((0.135, 0.172, 0.965, 0.225), 66, (20, 20, 20), mode='dark'),
-    photo=ph(0.55, 0.6, 0.86, 0.95), pb=(20, 20, 20), studio=['ZESPÓŁ FILMOWY', '"KAMERA"'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'ROMAN POLANSKI'],
-    ccol=(20, 20, 20), ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1962)
+    photo=ph(0.55, 0.6, 0.86, 0.95), pb=(20, 20, 20), studio=['ZESPÓŁ FILMOWY', '"KAMERA"'], scol=(20, 20, 20), order='lTPF', ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1962)
 
 # Lawrence of Arabia (1962): a 2-tape box; the poster's desert yellow, its black serif LAWRENCE OF ARABIA lifted, Lawrence's shadowed face in the white keffiyeh (no logo file: Horizon Pictures, from IMDb's company credits)
 std('lawrence-of-arabia-1962', ('grad', [(0, (250, 210, 50)), (.6, (240, 170, 40)), (1, (160, 90, 20))]), (24, 20, 16),
@@ -1367,8 +1358,7 @@ std('lawrence-of-arabia-1962', ('grad', [(0, (250, 210, 50)), (.6, (240, 170, 40
 # Lolita (1962): the poster's pink-white, its white LOLITA lifted and edged pink, the heart-shaped glasses and the lollipop
 std('lolita-1962', ('grad', [(0, (250, 230, 230)), (.6, (236, 200, 200)), (1, (170, 110, 110)) ]), WHT,
     L((0.49, 0.218, 0.85, 0.286), 90, WHT, mode='light', outline=((220, 60, 80), 2)),
-    photo=ph(0.48, 0.55, 0.9, 0.85), pb=(220, 40, 60), lg=(200, 40, 60), lw=.55, order='LPTCF', credit=['A STANLEY KUBRICK', 'FILM'], ccol=(170, 40, 60),
-    ft='e', vbox=(220, 40, 60), fcol=(150, 50, 60), fin=OLD, seed=1962)
+    photo=ph(0.48, 0.55, 0.9, 0.85), pb=(220, 40, 60), lg=(200, 40, 60), lw=.55, order='LPTF', ft='e', vbox=(220, 40, 60), fcol=(150, 50, 60), fin=OLD, seed=1962)
 
 # Sanjuro (1962): the smoky gold, the poster's white SANJURO lifted, Mifune from the top of the poster (director from IMDb)
 std('sanjuro-1962', ('grad', [(0, (130, 100, 50)), (.6, (50, 40, 22)), (1, (8, 6, 4))]), WHT,
@@ -1389,8 +1379,7 @@ std('to-kill-a-mockingbird-1962', ('grad', [(0, (250, 230, 120)), (.6, (240, 210
         pick_cut(TKC, (0.52, 0.4, 0.95, 0.62), [(0.575, 0.549), (0.645, 0.539), (0.734, 0.508), (0.793, 0.489), (0.831, 0.483), (0.892, 0.462)], rot=-22, r=.02),
         pick_cut(TKC, (0.67, 0.59, 0.79, 0.69), [(0.724, 0.637)], r=.02),
         pick_cut(TKC, (0.52, 0.62, 0.96, 0.89), [(0.559, 0.804), (0.609, 0.801), (0.645, 0.791), (0.681, 0.768), (0.716, 0.765), (0.746, 0.757), (0.786, 0.757), (0.822, 0.72), (0.854, 0.719), (0.877, 0.706), (0.923, 0.686)], rot=-26, r=.015)]),
-    photo=ph(0.55, 0.15, 0.6, 0.8), pb=(40, 40, 60), lg=(40, 40, 60), lw=.55, order='LPTCF', credit=['GREGORY PECK'], ccol=(40, 40, 60),
-    ft='c', fcol=(40, 40, 60), fin=OLD, seed=1962)
+    photo=ph(0.55, 0.15, 0.6, 0.8), pb=(40, 40, 60), lg=(40, 40, 60), lw=.55, order='LPTF', ft='c', fcol=(40, 40, 60), fin=OLD, seed=1962)
 
 # Billy Liar (1963): the poster's sky blue, its white BILLY LIAR cut off it, Tom Courtenay under the yellow crown (no logo file: Vic Films, from IMDb's company credits)
 std('billy-liar-1963', ('grad', [(0, (70, 180, 200)), (.6, (40, 130, 150)), (1, (14, 50, 60))]), WHT,
@@ -1422,8 +1411,7 @@ MMR = lambda a: (a[..., 0] > .7) & (a[..., 1] < .35)
 std('it-s-a-mad-mad-mad-mad-world-1963', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 224)), (1, (140, 140, 136))]), (210, 30, 30),
     LC([(0.175, 0.668, 0.39, 0.724), (0.135, 0.726, 0.305, 0.782), (0.03, 0.784, 0.4, 0.843), (0.205, 0.844, 0.36, 0.899), (0.155, 0.901, 0.42, 0.958)], 60, gapf=.15, valign='base', margin=0,
        cuts=[comp_cut(MMR, minf=.03)] * 5),
-    photo=ph(0.48, 0.3, 0.86, 0.9), pb=(210, 30, 30), lg=(210, 30, 30), lw=.55, order='LPTCSF', credit=['SPENCER TRACY'], ccol=(30, 30, 30),
-    stick=PRC(['$2.99', 'COMEDY']), ft='d', fcol=(30, 30, 30), fin=RENTAL, seed=1963)
+    photo=ph(0.48, 0.3, 0.86, 0.9), pb=(210, 30, 30), lg=(210, 30, 30), lw=.55, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']), ft='d', fcol=(30, 30, 30), fin=RENTAL, seed=1963)
 
 # Lord of the Flies (1963): the poster's grey, its red italic LORD OF THE FLIES keyed off it, the boys' faces in the strip (no logo file: Allen-Hodgdon Productions, from IMDb's company credits)
 std('lord-of-the-flies-1963', ('grad', [(0, (226, 226, 226)), (.6, (200, 200, 200)), (1, (110, 110, 110))]), (210, 50, 40),
@@ -1434,8 +1422,7 @@ std('lord-of-the-flies-1963', ('grad', [(0, (226, 226, 226)), (.6, (200, 200, 20
 # Shock Corridor (1963): the poster's white, its black SHOCK CORRIDOR lifted, the screaming patient and the crowd (no logo file: F & F Productions, from IMDb's company credits; director from IMDb)
 std('shock-corridor-1963', ('grad', [(0, (248, 248, 248)), (.6, (228, 228, 228)), (1, (140, 140, 140))]), (20, 20, 20),
     L((0.39, 0.641, 0.82, 0.778), 90, (20, 20, 20), mode='dark'),
-    photo=ph(0.6, 0.5, 0.86, 0.6), pb=(240, 220, 60), studio=['F & F PRODUCTIONS'], scol=(20, 20, 20), order='lPTCF', credit=['WRITTEN & DIRECTED BY', 'SAMUEL FULLER'],
-    ccol=(20, 20, 20), ft='c', fcol=(20, 20, 20), fin=OLD, seed=1963)
+    photo=ph(0.6, 0.5, 0.86, 0.6), pb=(240, 220, 60), studio=['F & F PRODUCTIONS'], scol=(20, 20, 20), order='lTPF', ft='c', fcol=(20, 20, 20), fin=OLD, seed=1963)
 
 # The Birds (1963): the poster's sky blue, its white serif The Birds lifted, Tippi Hedren and the gulls (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
 std('the-birds-1963', ('grad', [(0, (60, 140, 200)), (.6, (30, 80, 140)), (1, (8, 24, 50))]), WHT,
@@ -1452,8 +1439,7 @@ std('the-fiances-1963', ('grad', [(0, (236, 234, 228)), (.6, (216, 214, 206)), (
 # The Great Escape (1963): the poster's white, its outlined grey THE GREAT ESCAPE in the barbed wire cut off it, McQueen and the men running (a 2-tape box)
 std('the-great-escape-1963', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (60, 60, 60),
     LC([(0.14, 0.74, 0.86, 0.96)], 130, cuts=[comp_cut(lambda a: _lum(a) < .7, minf=.01, close=3)]),
-    photo=ph(0.5, 0.33, 0.9, 0.85), pb=(40, 50, 70), lg=(40, 50, 70), lw=.5, order='LPTCSF', credit=['STEVE McQUEEN', 'JAMES GARNER'], ccol=(40, 50, 70),
-    stick=TWOST((40, 50, 70), WHT), ft='a', vbox=(40, 50, 70), fcol=(40, 50, 70), fin=OLD, seed=1963, **TWO)
+    photo=ph(0.5, 0.33, 0.9, 0.85), pb=(40, 50, 70), lg=(40, 50, 70), lw=.5, order='LPTSF', stick=TWOST((40, 50, 70), WHT), ft='a', vbox=(40, 50, 70), fcol=(40, 50, 70), fin=OLD, seed=1963, **TWO)
 
 # The Pink Panther (1963): the poster's white, its small red THE PINK PANTHER label cut off it whole, the gang round the bed and the Panther (director from IMDb)
 std('the-pink-panther-1963', ('grad', [(0, (250, 236, 240)), (.6, (240, 210, 220)), (1, (180, 120, 140))]), (220, 40, 60),
@@ -1469,8 +1455,7 @@ disney('the-sword-in-the-stone-1963', ('grad', [(0, (20, 50, 130)), (.5, (40, 10
 # Youth of the Beast (1963): the poster's white, YOUTH OF THE BEAST typeset in heavy condensed capitals in its black (typeset: the T of BEAST is part of the gunman's black coat on the poster, so a cut reads BEAS; three tried), Jō Shishido with the gun (director from IMDb)
 std('youth-of-the-beast-1963', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (130, 130, 130))]), (20, 20, 20),
     TT([('YOUTH', (20, 20, 20)), ('OF', (20, 20, 20)), ('THE', (20, 20, 20)), ('BEAST', (20, 20, 20))], 'intbk', 80, sp=.3),
-    photo=ph(0.82, 0.22, 0.36, 1.2), pb=(220, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'SEIJUN SUZUKI'], ccol=(20, 20, 20),
-    ft='c', vbox=(220, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1963)
+    photo=ph(0.82, 0.22, 0.36, 1.2), pb=(220, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTF', ft='c', vbox=(220, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1963)
 
 # A Fistful of Dollars (1964): the poster's blood red, its white A FISTFUL OF DOLLARS cut off it letter by letter, Clint Eastwood in the poncho (director from IMDb)
 std('a-fistful-of-dollars-1964', ('grad', [(0, (180, 30, 24)), (.6, (110, 14, 10)), (1, (40, 4, 2))]), WHT,
@@ -1480,9 +1465,9 @@ std('a-fistful-of-dollars-1964', ('grad', [(0, (180, 30, 24)), (.6, (110, 14, 10
     photo=ph(0.5, 0.2, 0.8, 0.6), pb=WHT, lg=WHT, lw=.55, order='LPTCSF', credit=['CLINT EASTWOOD'], ccol=WHT,
     stick=BAR('64 1105', top='WESTERN', fill=(232, 220, 196)), ft='b', fcol=(240, 210, 200), fin=RENTAL, seed=1964)
 
-# Band of Outsiders (1964): the poster's white, its black BAND OF and OUTSIDERS cut off it (the poster's black frame trimmed away), Anna Karina and the boys (no logo file: Columbia Films, from IMDb's company credits; director from IMDb)
+# Band of Outsiders (1964): the poster's white, BAND OF OUTSIDERS typeset in light geometric capitals like the poster's, in black (typeset: the poster's black frame runs into the F and the O of OUTSIDERS; two cuts tried), Anna Karina and the boys (no logo file: Columbia Films, from IMDb's company credits; director from IMDb)
 std('band-of-outsiders-1964', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (130, 130, 130))]), (20, 20, 20),
-    LC([(0.205, 0.234, 0.905, 0.336), (0.0, 0.345, 0.985, 0.452)], 80, gapf=.25, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.2), key_cut(lambda a: _lum(a) < .2)]),
+    T('BAND OF OUTSIDERS', 'adv', 70, (20, 20, 20), track=.04),
     photo=ph(0.5, 0.67, 0.86, 0.75), pb=(20, 20, 20), studio=['COLUMBIA FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['UN FILM DE', 'JEAN-LUC GODARD'],
     ccol=(20, 20, 20), ft='e', fcol=(20, 20, 20), fin=OLD, seed=1964)
 
@@ -1495,8 +1480,7 @@ std('diary-of-a-chambermaid-1964', ('grad', [(0, (120, 180, 220)), (.5, (220, 10
 # Dr. Strangelove (1964): the sky's grey, the poster's white column of DR. STRANGELOVE OR HOW I LEARNED TO STOP WORRYING AND LOVE THE BOMB cut off it and turned to run down the spine, the B-52 (director from IMDb)
 std('dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb-1964', ('grad', [(0, (180, 180, 178)), (.6, (110, 110, 108)), (1, (30, 30, 30))]), WHT,
     LC([(0.38, 0.38, 0.66, 0.93)], 120, cuts=[comp_cut(lambda a: _lum(a) > .88, rot=90, minf=.003)]),
-    photo=ph(0.55, 0.13, 1.0, 0.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A STANLEY KUBRICK', 'PRODUCTION'], ccol=WHT,
-    dotst=('COMEDY', WHT, (60, 60, 60)), ft='d', fcol=(210, 210, 210), fin=OLD, seed=1964)
+    photo=ph(0.55, 0.13, 1.0, 0.3), pb=WHT, lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', WHT, (60, 60, 60)), ft='d', fcol=(210, 210, 210), fin=OLD, seed=1964)
 
 # Marnie (1964): the poster's white, its purple "MARNIE" keyed off it, Sean Connery and Tippi Hedren
 std('marnie-1964', ('grad', [(0, (246, 244, 246)), (.6, (226, 220, 228)), (1, (120, 90, 130))]), (120, 40, 120),
@@ -1519,8 +1503,7 @@ std('the-naked-kiss-1964', ('grad', [(0, (250, 230, 110)), (.6, (240, 210, 70)),
     LC([(0.14, 0.34, 0.48, 0.49), (0.06, 0.45, 0.69, 0.68), (0.17, 0.66, 0.62, 0.875)], 120, gapf=.15, valign='base', cuts=[
         pick_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), (0.14, 0.34, 0.48, 0.49), [(0.217, 0.409), (0.32, 0.418), (0.424, 0.424)], r=.02),
         comp_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), keep=lambda x, y: y > .2, minf=.05), comp_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .6), keep=lambda x, y: y > .08, minf=.05)]),
-    photo=ph(0.5, 0.13, 0.8, 0.55), pb=(110, 90, 170), studio=['ALLIED ARTISTS'], scol=(60, 50, 100), order='lPTCSF', credit=['WRITTEN & DIRECTED BY', 'SAMUEL FULLER'],
-    ccol=(60, 50, 100), stick=RWD(), ft='e', fcol=(60, 50, 100), fin=RENTAL, seed=1964)
+    photo=ph(0.5, 0.13, 0.8, 0.55), pb=(110, 90, 170), studio=['ALLIED ARTISTS'], scol=(60, 50, 100), order='lTPSF', stick=RWD(), ft='e', fcol=(60, 50, 100), fin=RENTAL, seed=1964)
 
 # The Tomb of Ligeia (1964): the poster's white, its yellow THE TOMB OF LIGEIA cut off the black cat, the cat's eyes (no logo file: Alta Vista Productions, from IMDb's company credits)
 std('the-tomb-of-ligeia-1964', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (2, 2, 2))]), (250, 210, 50),
@@ -1545,8 +1528,7 @@ FDK = lambda a: _lum(a) < .72
 std('for-a-few-dollars-more-1965', ('grad', [(0, (246, 242, 236)), (.6, (226, 216, 200)), (1, (150, 110, 70))]), (24, 20, 18),
     LC([(0.605, 0.37, 0.995, 0.54), (0.603, 0.62, 0.64, 0.69), (0.64, 0.54, 0.995, 0.685), (0.6, 0.683, 0.995, 0.762), (0.6, 0.76, 0.995, 0.87)], 90, gapf=.15, valign='base', margin=0,
        cuts=[comp_cut(FDK, minf=.1)] * 5),
-    photo=ph(0.3, 0.27, 0.6, 1.0), pb=(24, 20, 18), lg=(24, 20, 18), lw=.55, order='LPTCF', credit=['CLINT EASTWOOD', 'LEE VAN CLEEF'], ccol=(24, 20, 18),
-    ft='b', fcol=(24, 20, 18), fin=OLD, seed=1965)
+    photo=ph(0.3, 0.27, 0.6, 1.0), pb=(24, 20, 18), lg=(24, 20, 18), lw=.55, order='LPTF', ft='b', fcol=(24, 20, 18), fin=OLD, seed=1965)
 
 # Juliet of the Spirits (1965): black, the poster's green circle with its black JULIET OF THE SPIRITS cut off it whole, Giulietta Masina in blue (no logo file: Rizzoli Film, from IMDb's company credits)
 std('juliet-of-the-spirits-1965', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (130, 180, 80),
@@ -1557,8 +1539,7 @@ std('juliet-of-the-spirits-1965', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)
 # Story of a Prostitute (1965): the poster's sepia, STORY OF A PROSTITUTE typeset in heavy condensed capitals in its rust (typeset: the poster's lettering is printed half-faded over the photograph and breaks into specks in every lift; two tried), the lovers (director from IMDb)
 std('story-of-a-prostitute-1965', ('grad', [(0, (190, 170, 150)), (.6, (110, 96, 80)), (1, (30, 24, 20))]), (160, 86, 54),
     TT([('STORY OF A', (166, 90, 56)), ('PROSTITUTE', (166, 90, 56))], 'intbk', 70, sp=.3, outline=((40, 26, 20), 1.4)),
-    photo=ph(0.6, 0.7, 0.8, 1.1), pb=(160, 86, 54), lg=(240, 230, 220), lw=.55, order='LPTCF', credit=['A FILM BY', 'SEIJUN SUZUKI'], ccol=(240, 230, 220),
-    ft='a', vbox=(160, 86, 54), fcol=(220, 210, 200), fin=OLD, seed=1965)
+    photo=ph(0.6, 0.7, 0.8, 1.1), pb=(160, 86, 54), lg=(240, 230, 220), lw=.55, order='LPTF', ft='a', vbox=(160, 86, 54), fcol=(220, 210, 200), fin=OLD, seed=1965)
 
 # Death of a Salesman (1966): the poster's night blue, its pale DEATH OF A SALESMAN cut off it in its own shading, the salesman dissolving (made for CBS television: the network logo at the head)
 std('death-of-a-salesman-1966', ('grad', [(0, (30, 34, 50)), (.6, (12, 14, 22)), (1, (2, 2, 4))]), (210, 206, 230),
@@ -1569,8 +1550,7 @@ std('death-of-a-salesman-1966', ('grad', [(0, (30, 34, 50)), (.6, (12, 14, 22)),
 # Hotel Paradiso (1966): the poster's white, its red Hotel Paradiso lifted, the farce through the hotel doors
 std('hotel-paradiso-1966', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (140, 130, 120))]), (210, 40, 30),
     L((0.672, 0.822, 0.942, 0.93), 100, (214, 42, 32), mode='key', key=(210, 50, 40), t=(70, 150)),
-    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(214, 42, 32), lg=(214, 42, 32), lw=.5, order='LPTCF', credit=['ALEC GUINNESS', 'GINA LOLLOBRIGIDA'], ccol=(60, 40, 30),
-    ft='b', fcol=(60, 40, 30), fin=OLD, seed=1966)
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(214, 42, 32), lg=(214, 42, 32), lw=.5, order='LPTF', ft='b', fcol=(60, 40, 30), fin=OLD, seed=1966)
 
 # Masculin Féminin (1966): the poster's white, its black masculin and pink féminin cut off it in their own colours, Léaud in the black triangle (director from IMDb)
 std('masculin-feminin-1966', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (140, 140, 140))]), (20, 20, 20),
@@ -1603,8 +1583,7 @@ std('the-good-the-bad-and-the-ugly-1966', ('grad', [(0, (190, 170, 140)), (.6, (
         gapf=.12, valign='base', cuts=[comp_cut(GBW, rot=-90, minf=.1), comp_cut(GBW, minf=.1, close=3), comp_cut(GBW, rot=-90, minf=.1), comp_cut(GBW, minf=.1, close=3)]),
      LC([(0.345, 0.645, 0.398, 0.795), (0.399, 0.62, 0.8, 0.81)], 90, gapf=.12, valign='base', cuts=[comp_cut(GBW, rot=-90, minf=.05), comp_cut(GBW, minf=.1, close=3)])],
     tgap=6,
-    photo=ph(0.5, 0.1, 0.6, 0.6), pb=(240, 200, 140), lg=WHT, lw=.5, order='LPTCSF', credit=['CLINT EASTWOOD'], ccol=WHT,
-    stick=BAR('66 7310', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 200, 140), vink=(40, 26, 14), fcol=(240, 220, 200), fin=RENTAL, seed=1966)
+    photo=ph(0.5, 0.1, 0.6, 0.6), pb=(240, 200, 140), lg=WHT, lw=.5, order='LTPSF', stick=BAR('66 7310', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 200, 140), vink=(40, 26, 14), fcol=(240, 220, 200), fin=RENTAL, seed=1966)
 
 # The Pornographers (1966): black, the poster's white condensed THE PORNOGRAPHERS lifted, the face behind the film camera (director from IMDb)
 std('the-pornographers-1966', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
@@ -1615,8 +1594,7 @@ std('the-pornographers-1966', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (
 # The Sword of Doom (1966): the poster's fiery orange fog, its white THE SWORD OF DOOM lifted, the swordsman in the forest (top-billed cast from IMDb)
 std('the-sword-of-doom-1966', ('grad', [(0, (240, 140, 20)), (.6, (170, 80, 10)), (1, (40, 16, 4))]), WHT,
     L((0.115, 0.75, 0.885, 0.827), 70, WHT, mode='light'),
-    photo=ph(0.45, 0.34, 0.6, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPCF', credit=['TATSUYA NAKADAI'], ccol=WHT,
-    ft='c', fcol=(250, 230, 200), fin=OLD, seed=1966)
+    photo=ph(0.45, 0.34, 0.6, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPF', ft='c', fcol=(250, 230, 200), fin=OLD, seed=1966)
 
 # Tokyo Drifter (1966): black, the poster's pink thin T O K Y stacked down its edge and its last O (the pink ring with the teal DRIFTER inside) cut off it in their own colours and run in one line, the yellow-suited gunman (director from IMDb)
 TDP = lambda a: (a[..., 0] > .55) & (a[..., 2] > .35) & (a[..., 1] < .7) & (_lum(a) > .35)
@@ -1635,8 +1613,7 @@ std('torn-curtain-1966', ('grad', [(0, (180, 20, 20)), (.6, (120, 10, 10)), (1, 
 # Bonnie and Clyde (1967): the poster's pale sky, its black condensed BONNIE AND CLYDE lifted, Beatty and Dunaway with their guns
 std('bonnie-and-clyde-1967', ('grad', [(0, (226, 232, 236)), (.6, (190, 200, 206)), (1, (90, 100, 106))]), (20, 20, 20),
     L((0.115, 0.04, 0.915, 0.15), 80, (20, 20, 20), mode='dark'),
-    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['WARREN BEATTY', 'FAYE DUNAWAY'], ccol=(20, 20, 20),
-    ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1967)
+    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF', ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1967)
 
 # Cool Hand Luke (1967): the poster's white, its black COOL HAND LUKE with the chain lifted, Paul Newman's face in the yellow-orange zigzag
 std('cool-hand-luke-1967', ('grad', [(0, (250, 230, 120)), (.6, (240, 160, 60)), (1, (160, 70, 20))]), (20, 20, 20),
@@ -1656,5 +1633,69 @@ std('samurai-rebellion-1967', ('grad', [(0, (40, 30, 34)), (.6, (12, 10, 12)), (
     LC([(0.28, 0.02, 0.55, 0.44), (0.4, 0.06, 0.75, 0.6)], 84, gapf=.25, valign='base', cuts=[
         seq_cut(SRR, (0.28, 0.02, 0.55, 0.44), [(0.329, 0.059), (0.359, 0.118), (0.388, 0.174), (0.419, 0.234), (0.443, 0.289), (0.479, 0.349), (0.508, 0.405)], turn=[0] * 7, gapf=.1),
         seq_cut(SRR, (0.4, 0.06, 0.75, 0.6), [(0.452, 0.096), (0.483, 0.155), (0.514, 0.212), (0.543, 0.27), (0.57, 0.335), (0.6, 0.393), (0.636, 0.443), (0.666, 0.5), (0.696, 0.558)], turn=[0] * 9, gapf=.1)]),
-    photo=ph(0.25, 0.68, 0.46, 1.1), pb=(230, 30, 40), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'MASAKI KOBAYASHI'], ccol=WHT,
-    ft='a', vbox=(230, 30, 40), fcol=(200, 196, 196), fin=OLD, seed=1967)
+    photo=ph(0.25, 0.68, 0.46, 1.1), pb=(230, 30, 40), lg=WHT, lw=.55, order='LPTF', ft='a', vbox=(230, 30, 40), fcol=(200, 196, 196), fin=OLD, seed=1967)
+
+# The Firemen's Ball (1967): the poster's red and black, THE FIREMEN'S BALL typeset in heavy condensed capitals in the star's yellow (typeset: on the poster the title is printed in black across the star at a 32-degree slant and runs off its points; two cuts came out in pieces), the firemen's faces (no logo file in type: Barrandov; director from IMDb)
+std('the-firemen-s-ball-1967', ('grad', [(0, (200, 30, 20)), (.6, (100, 14, 10)), (1, (20, 2, 2))]), (250, 230, 40),
+    TT([("THE FIREMEN'S", (250, 230, 40)), ('BALL', (250, 230, 40))], 'intbk', 80, sp=.3),
+    photo=ph(0.5, 0.75, 1.0, 0.6), pb=(250, 230, 40), lg=(250, 230, 40), lw=.55, order='LPTCF', credit=['A FILM BY', 'MILOŠ FORMAN'], ccol=(250, 230, 40),
+    ft='e', fcol=(220, 200, 196), fin=OLD, seed=1967)
+
+# The Graduate (1967): the poster's grey, its white THE GRADUATE lifted, Dustin Hoffman framed by Mrs. Robinson's leg
+std('the-graduate-1967', ('grad', [(0, (200, 206, 210)), (.6, (130, 136, 140)), (1, (40, 44, 46))]), WHT,
+    LC([(0.26, 0.82, 0.975, 0.918)], 90, outline=((40, 40, 40), 1.6), cuts=[comp_cut(lambda a: _lum(a) > .85, keep=lambda x, y: x < .95, minf=.15)]),
+    photo=ph(0.5, 0.35, 0.8, 1.0), pb=WHT, lg=WHT, lw=.55, order='LTPF', ft='b', fcol=(230, 230, 230), fin=OLD, seed=1967)
+
+# The Jungle Book (1967): Disney, the white clamshell; the jungle green, the poster's olive-gold The Jungle Book cut off it in its own colours, Mowgli's face in the red diamond
+disney('the-jungle-book-1967', ('grad', [(0, (60, 120, 50)), (.5, (100, 160, 60)), (1, (30, 70, 30))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.315, 0.725, 0.78, 0.873)], 120, outline=((30, 40, 10), 2), cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] > .4) & (a[..., 2] < .3))]),
+       face=ph(.56, .44, .12, 1.4), lcol=WHT)
+
+# 2001: A Space Odyssey (1968): space black, the poster's yellow 2001: a space odyssey keyed off it, the station and the shuttle (director from IMDb)
+std('2001-a-space-odyssey-1968', ('grad', [(0, (20, 30, 50)), (.6, (6, 8, 16)), (1, (2, 2, 4))]), (250, 210, 40),
+    L((0.085, 0.832, 0.918, 0.883), 70, (252, 212, 42), mode='key', key=(245, 205, 50), t=(70, 150)),
+    photo=ph(0.5, 0.3, 1.0, 0.85), pb=(250, 210, 40), lg=WHT, lw=.55, order='LPTCF', credit=['A STANLEY KUBRICK', 'PRODUCTION'], ccol=WHT,
+    dotst=('SCI-FI', (250, 210, 40), (6, 8, 16)), ft='a', vbox=(250, 210, 40), vink=(6, 8, 16), fcol=(200, 204, 214), fin=OLD, seed=1968)
+
+# Rosemary's Baby (1968): the poster's green, its white Rosemary's Baby lifted, the pram on the hill under the title
+std('rosemary-s-baby-1968', ('grad', [(0, (60, 150, 70)), (.6, (24, 70, 30)), (1, (2, 6, 2))]), WHT,
+    L([(0.15, 0.06, 0.846, 0.142), (0.34, 0.14, 0.733, 0.222)], 90, WHT, mode='light', gapf=.25),
+    photo=ph(0.45, 0.68, 0.8, 0.6), pb=WHT, lg=WHT, lw=.55, order='LTPF', ft='c', fcol=(200, 220, 200), fin=OLD, seed=1968)
+
+# Stolen Kisses (1968): the poster's pink, its white "STOLEN KISSES" lifted, the lips (director from IMDb)
+std('stolen-kisses-1968', ('grad', [(0, (240, 150, 140)), (.6, (210, 110, 100)), (1, (120, 50, 44))]), WHT,
+    L((0.16, 0.672, 0.6, 0.732), 70, WHT, mode='light', outline=((150, 60, 54), 1.4)),
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['UN FILM DE', 'FRANÇOIS TRUFFAUT'], ccol=WHT,
+    ft='d', fcol=(250, 230, 226), fin=OLD, seed=1968)
+
+# The Party (1968): black, the poster's yellow bubbly THE PARTY keyed off it, Peter Sellers in the chaos (director from IMDb)
+std('the-party-1968', ('grad', [(0, (230, 80, 120)), (.4, (60, 20, 30)), (1, (4, 2, 2))]), (250, 240, 40),
+    L((0.145, 0.85, 0.876, 0.956), 90, (252, 242, 42), mode='key', key=(245, 235, 50), t=(70, 150)),
+    photo=ph(0.5, 0.42, 0.9, 1.1), pb=(250, 240, 40), lg=WHT, lw=.55, order='LPTSF', stick=BAR('68 2219', top='COMEDY', fill=(240, 236, 210)),
+    ft='e', fcol=(220, 200, 210), fin=RENTAL, seed=1968)
+
+# Army of Shadows (1969): the poster's slate blue, ARMY OF SHADOWS typeset in a light serif like the poster's, in its pale blue (typeset: the poster's thin pale letters fade into the dark figure behind them, and every lift drops the R and the last S; two tried), the man on the chair (no logo file: Les Films Corona, from IMDb's company credits; director from IMDb)
+std('army-of-shadows-1969', ('grad', [(0, (80, 100, 130)), (.6, (40, 56, 76)), (1, (10, 14, 20))]), (210, 220, 236),
+    T('ARMY OF SHADOWS', 'ter', 70, (214, 224, 240), track=.1),
+    photo=ph(0.45, 0.82, 0.6, 0.85), pb=(214, 224, 240), studio=['LES FILMS CORONA'], scol=(214, 224, 240), order='lPTCF', credit=['UN FILM DE', 'JEAN-PIERRE MELVILLE'],
+    ccol=(214, 224, 240), ft='b', fcol=(200, 210, 220), fin=OLD, seed=1969)
+
+# Butch Cassidy and the Sundance Kid (1969): the poster's mustard, its dark BUTCH CASSIDY AND THE SUNDANCE KID lifted, Newman and Redford and the bicycle
+std('butch-cassidy-and-the-sundance-kid-1969', ('grad', [(0, (226, 196, 110)), (.6, (200, 160, 80)), (1, (110, 80, 30))]), (40, 26, 20),
+    L([(0.067, 0.816, 0.937, 0.878), (0.064, 0.877, 0.892, 0.938)], 70, (40, 26, 20), mode='dark', gapf=.2),
+    photo=ph(0.5, 0.4, 0.9, 1.0), pb=(40, 26, 20), lg=(40, 26, 20), lw=.55, order='LPTCF', credit=['PAUL NEWMAN', 'ROBERT REDFORD'], ccol=(40, 26, 20),
+    ft='a', vbox=(40, 26, 20), fcol=(40, 26, 20), fin=OLD, seed=1969)
+
+# Double Suicide (1969): the poster's pale photograph, its white DOUBLE and SUICIDE (the red O and red I among them) rebuilt letter by letter off the columns they run down, the lovers lying together (director from IMDb)
+DSW = lambda a: ((_lum(a) > .92) & (_sat(a) < .12)) | ((a[..., 0] > .7) & (a[..., 1] < .3))
+std('double-suicide-1969', ('grad', [(0, (200, 200, 196)), (.6, (130, 130, 126)), (1, (40, 40, 38))]), WHT,
+    LC([(0.17, 0.0, 0.33, 0.92), (0.64, 0.0, 0.81, 0.99)], 90, gapf=.2, valign='base', outline=((40, 40, 38), 1.6), cuts=[
+        seq_cut(DSW, (0.17, 0.0, 0.33, 0.92), [(0.244, 0.078), (0.24, 0.22), (0.249, 0.373), (0.245, 0.519), (0.24, 0.687), (0.238, 0.835)], turn=[0] * 6, gapf=.08),
+        seq_cut(DSW, (0.64, 0.0, 0.81, 0.99), [(0.731, 0.078), (0.73, 0.223), (0.731, 0.358), (0.717, 0.499), (0.72, 0.63), (0.724, 0.781), (0.719, 0.921)], turn=[0] * 7, gapf=.08)]),
+    photo=ph(0.48, 0.5, 0.3, 1.9), pb=(200, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF', ft='c', fcol=(30, 30, 30), fin=OLD, seed=1969)
+
+# Salesman (1969): the poster's teal, SALESMAN typeset in heavy stencil-like capitals in its white (typeset: the salesman's white silhouette is printed over the poster's MA and cuts it into the letters; two tried), Paul Brennan at the door (no logo file: Maysles Films, from IMDb's company credits; directors from IMDb)
+std('salesman-1969', ('grad', [(0, (40, 110, 100)), (.6, (16, 50, 44)), (1, (2, 10, 8))]), WHT,
+    T('SALESMAN', 'intbk', 84, WHT),
+    photo=ph(0.6, 0.25, 0.8, 0.85), pb=WHT, studio=['MAYSLES FILMS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY BY', 'ALBERT & DAVID MAYSLES'], ccol=WHT,
+    ft='d', fcol=(200, 220, 216), fin=OLD, seed=1969)
