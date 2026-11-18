@@ -1281,3 +1281,79 @@ std('tunes-of-glory-1960', ('grad', [(0, (248, 240, 200)), (.6, (232, 220, 170))
 std('breakfast-at-tiffany-s-1961', ('grad', [(0, (246, 244, 242)), (.6, (226, 224, 222)), (1, (130, 170, 200))]), (210, 30, 110),
     LC([(0.395, 0.625, 0.91, 0.704), (0.395, 0.703, 0.9, 0.782)], 80, gapf=.2, valign='base', cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .4) & (a[..., 2] > .3))] * 2),
     photo=ph(0.24, 0.42, 0.34, 1.9), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF', ft='b', fcol=(20, 20, 20), fin=OLD, seed=1961)
+
+# Il Posto (1961): the poster's cream, its white ERMANNO OLMI'S and yellow IL POSTO cut off it in their own colours, Domenico at the desk
+std('il-posto-1961', ('grad', [(0, (238, 232, 216)), (.6, (220, 210, 190)), (1, (130, 120, 100))]), (40, 40, 40),
+    LC([(0.05, 0.415, 0.545, 0.49)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4))]),
+    photo=ph(0.55, 0.72, 0.86, 0.55), pb=(230, 190, 40), lg=(40, 40, 40), lw=.55, order='LPTCF', credit=["ERMANNO OLMI'S"], ccol=(40, 40, 40),
+    ft='d', fcol=(40, 40, 40), fin=OLD, seed=1961)
+
+# One Hundred and One Dalmatians (1961): Disney, the white clamshell; the poster's sky blue, its white-and-gold 101 DALMATIANS cut off the red banner and edged in its red, Pongo's face in the red diamond
+disney('one-hundred-and-one-dalmatians-1961', ('grad', [(0, (40, 90, 170)), (.5, (70, 130, 200)), (1, (30, 60, 110))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.2, 0.44, 0.75, 0.572), (0.185, 0.566, 0.78, 0.608)], 150, gapf=.25, valign='base', margin=0, outline=((180, 20, 24), 3),
+                cuts=[comp_cut(lambda a: (_lum(a) > .55) & (a[..., 1] > a[..., 0] - .25), minf=.05), comp_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .3), minf=.25)]),
+       face=ph(.63, .2, .3, 1.4), lcol=WHT)
+
+# The Human Condition III: A Soldier's Prayer (1961): the poster's pink-white, its black THE HUMAN CONDITION and Part III cut off it and run in one line, Nakadai in the snow (no logo file: Toho, from IMDb's company credits)
+std('the-human-condition-iii-a-soldier-s-prayer-1961', ('grad', [(0, (250, 236, 232)), (.6, (230, 216, 212)), (1, (60, 120, 150))]), (30, 26, 24),
+    LC([(0.06, 0.066, 0.47, 0.101), (0.06, 0.107, 0.45, 0.143), (0.06, 0.154, 0.22, 0.184)], 80, gapf=.7, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)] * 3),
+    photo=ph(0.6, 0.6, 0.8, 1.15), pb=(40, 110, 140), studio=['TOHO'], scol=(30, 26, 24), order='lTPCF', credit=["A SOLDIER'S PRAYER"],
+    ccol=(30, 26, 24), ft='a', vbox=(40, 110, 140), fcol=(30, 26, 24), fin=OLD, seed=1961)
+
+# The Hustler (1961): the poster's lime green, its black THE HUSTLER lifted, Paul Newman in the circle with the cue (director from IMDb)
+std('the-hustler-1961', ('grad', [(0, (200, 220, 60)), (.6, (150, 180, 30)), (1, (60, 80, 10))]), (20, 20, 20),
+    L([(0.695, 0.393, 0.866, 0.453), (0.58, 0.45, 0.982, 0.522)], 80, (20, 20, 20), mode='dark', gapf=.25),
+    photo=ph(0.7, 0.75, 0.5, 1.0), pb=(214, 40, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['PAUL NEWMAN', 'JACKIE GLEASON'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=OLD, seed=1961)
+
+# The Shadow of the Cat (1961): the poster's teal and black, its yellow THE SHADOW OF THE CAT cut off it in its own colours and levelled, the cat's eyes from the top of the poster
+std('the-shadow-of-the-cat-1961', ('grad', [(0, (30, 110, 120)), (.6, (12, 50, 56)), (1, (2, 14, 16))]), (250, 230, 40),
+    LC([(0.04, 0.63, 0.83, 0.89)], 110, outline=((10, 10, 10), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .8) & (a[..., 1] > .75) & (a[..., 2] < .45), rot=-12, minf=.02)]),
+    photo=ph(0.4, 0.18, 0.7, 0.85), pb=(250, 230, 40), lg=WHT, lw=.55, order='LPTSF', stick=BAR('61 2210', top='HORROR', fill=(232, 228, 200)),
+    ft='c', fcol=(200, 220, 220), fin=RENTAL, seed=1961)
+
+# Viridiana (1961): the poster's tan, its cream serif VIRIDIANA cut off it, Silvia Pinal's face under the veil (no logo file in type: Films 59; director from IMDb)
+std('viridiana-1961', ('grad', [(0, (220, 170, 120)), (.6, (170, 120, 80)), (1, (60, 40, 24))]), (250, 236, 210),
+    LC([(0.03, 0.64, 0.92, 0.722)], 76, cuts=[comp_cut(lambda a: (_lum(a) > .72) & (a[..., 0] > a[..., 2] + .02), keep=lambda x, y: x > .03, minf=.1)]),
+    photo=ph(0.6, 0.27, 0.6, 1.2), pb=(30, 26, 24), lg=(250, 236, 210), lw=.55, order='LPTCF', credit=['UNA PELÍCULA DE', 'LUIS BUÑUEL'], ccol=(250, 236, 210),
+    ft='b', fcol=(230, 210, 190), fin=OLD, seed=1961)
+
+# West Side Story (1961): the poster's red, its black distressed WEST SIDE STORY lifted word by word into one line, the dancers on the fire escape
+std('west-side-story-1961', ('grad', [(0, (230, 40, 30)), (.6, (180, 24, 18)), (1, (70, 8, 6))]), (20, 16, 14),
+    L([(0.075, 0.195, 0.67, 0.393), (0.078, 0.393, 0.6, 0.59), (0.078, 0.59, 0.73, 0.8)], 110, (20, 16, 14), mode='dark', gapf=.2),
+    photo=ph(0.8, 0.53, 0.38, 1.3), pb=WHT, lg=(20, 16, 14), lw=.55, order='LPTF', dotst=('MUSICAL', WHT, (180, 24, 18)),
+    ft='a', vbox=(20, 16, 14), fcol=(40, 20, 16), fin=OLD, seed=1961)
+
+# Yojimbo (1961): the poster's smoky gold, its white YOJIMBO lifted, Mifune under the sword (director from IMDb)
+std('yojimbo-1961', ('grad', [(0, (150, 110, 40)), (.6, (60, 44, 20)), (1, (10, 8, 4))]), WHT,
+    L((0.255, 0.606, 0.745, 0.656), 70, WHT, mode='light'),
+    photo=ph(0.35, 0.3, 0.6, 1.2), pb=(240, 190, 60), lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=WHT,
+    ft='d', fcol=(220, 210, 190), fin=OLD, seed=1961)
+
+# Carnival of Souls (1962): the poster's carnival colours, its red CARNIVAL rebuilt letter by letter off its arc, the black OF and yellow SOULS cut off it in their own colours, the screaming woman (no logo file: Harcourt Productions, from IMDb's company credits)
+CSR = lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4)
+std('carnival-of-souls-1962', ('grad', [(0, (80, 50, 120)), (.6, (40, 20, 70)), (1, (10, 4, 20))]), (230, 50, 40),
+    LC([(0.25, 0.3, 0.95, 0.63), (0.51, 0.558, 0.655, 0.652), (0.42, 0.62, 0.94, 0.81)], 90, gapf=.15, valign='base', cuts=[
+        seq_cut(CSR, (0.25, 0.3, 0.95, 0.63), [(0.316, 0.401), (0.419, 0.387), (0.513, 0.398), (0.612, 0.43), (0.672, 0.47), (0.73, 0.499), (0.817, 0.53), (0.875, 0.568)], gapf=.06),
+        comp_cut(lambda a: _lum(a) < .22, minf=.2),
+        comp_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .75) & (a[..., 2] < .4), rot=8, minf=.05)]),
+    photo=ph(0.7, 0.15, 0.6, 0.85), pb=(250, 220, 60), studio=['HARCOURT', 'PRODUCTIONS'], scol=(250, 220, 60), order='lPTCSF', credit=['A FILM BY', 'HERK HARVEY'],
+    ccol=(250, 220, 60), stick=PRC(['$0.99', 'HORROR']), ft='e', fcol=(210, 200, 220), fin=RENTAL, seed=1962)
+
+# Harakiri (1962): the poster's white, its black HARA KIRI with the red slash through it cut off it in its own colours, the red blade from the poster (director and star from IMDb)
+std('harakiri-1962', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (130, 130, 126))]), (20, 20, 20),
+    LC([(0.25, 0.47, 0.88, 0.69), (0.28, 0.7, 0.83, 0.87)], 100, gapf=.2, valign='base', margin=0, cuts=[key_cut(lambda a: (_lum(a) < .3) | ((a[..., 0] > .7) & (a[..., 1] < .3)))] * 2),
+    photo=ph(0.5, 0.2, 0.5, 0.9), pb=(200, 20, 30), lg=(20, 20, 20), lw=.55, order='LTCF', credit=['TATSUYA NAKADAI'], ccol=(20, 20, 20),
+    ft='b', fcol=(20, 20, 20), fin=OLD, seed=1962)
+
+# Jules and Jim (1962): the poster's paper cream, its brown script Jules and Jim lifted, Jeanne Moreau's eyes (director from IMDb)
+std('jules-and-jim-1962', ('grad', [(0, (244, 236, 216)), (.6, (228, 216, 190)), (1, (150, 130, 100))]), (150, 80, 50),
+    L((0.075, 0.67, 0.92, 0.855), 110, (154, 82, 52), mode='dark'),
+    photo=ph(0.6, 0.18, 0.86, 0.5), pb=(40, 30, 26), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['UN FILM DE', 'FRANÇOIS TRUFFAUT'], ccol=(40, 30, 26),
+    ft='c', fcol=(40, 30, 26), fin=OLD, seed=1962)
+
+# Knife in the Water (1962): the poster's white, its black thin KNIFE IN THE WATER lifted, the sail's black triangle (no logo file: Kamera, from IMDb's company credits; director from IMDb)
+std('knife-in-the-water-1962', ('grad', [(0, (248, 248, 248)), (.6, (230, 230, 230)), (1, (140, 140, 140))]), (20, 20, 20),
+    L((0.135, 0.172, 0.965, 0.225), 66, (20, 20, 20), mode='dark'),
+    photo=ph(0.55, 0.6, 0.86, 0.95), pb=(20, 20, 20), studio=['ZESPÓŁ FILMOWY', '"KAMERA"'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'ROMAN POLANSKI'],
+    ccol=(20, 20, 20), ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1962)
