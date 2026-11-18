@@ -5159,6 +5159,10 @@ std('salaam-bombay-1988', ('grad', [(0, (50, 40, 30)), (.6, (16, 12, 10)), (1, (
     stick=PRC(['$1.99', 'FOREIGN']), ft='b', fcol=(210, 200, 190), fin=OLD, seed=1988)
 
 
+# the Vault (vault-<decade>.json): its specs live in vault.py, in this same namespace
+exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vault.py'), encoding='utf8').read(), 'vault.py', 'exec'))
+
+
 if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
         im = build(SPECS[k])
