@@ -36,6 +36,17 @@
   const IN_VAULT = VAULT.includes(SHELF);
   const DATA_FILE = SHELVES[SHELF];
   const shelfName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
+  // The address of another shelf (keeping the sort where it means the same there), optionally with a tape pulled out.
+  function shelfLink(y, tape) {
+    const q = new URLSearchParams(location.search);
+    q.delete('genre'); // genres differ from shelf to shelf
+    q.delete('tape');
+    if (VAULT.includes(y) !== IN_VAULT) q.delete('sort'); // the Vault and the year shelves sort differently by default
+    if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
+    if (tape) q.set('tape', tape);
+    const qs = q.toString();
+    return location.pathname + (qs ? '?' + qs : '');
+  }
   (function shelfHeader() {
     const h1 = document.querySelector('h1.ticket'), img = h1 && h1.querySelector('img');
     if (img && IN_VAULT) { // no ticket for the Vault: a plate in the shelf's lettering instead
@@ -47,14 +58,7 @@
     $('year').textContent = IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
     if (SHELF !== NEWEST) document.title = IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
     // arrows either side of the ticket: older shelf on the left, newer on the right
-    const link = (y) => {
-      const q = new URLSearchParams(location.search);
-      q.delete('genre'); // genres differ from shelf to shelf
-      if (VAULT.includes(y) !== IN_VAULT) q.delete('sort'); // the Vault and the year shelves sort differently by default
-      if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
-      const qs = q.toString();
-      return location.pathname + (qs ? '?' + qs : '');
-    };
+    const link = shelfLink;
     const i = YEARS.indexOf(SHELF);
     [['shelf-prev', YEARS[i - 1]], ['shelf-next', YEARS[i + 1]]].forEach(([id, y]) => {
       const a = $(id);
@@ -897,7 +901,7 @@
     el.classList.add('pulling');
     setTimeout(() => {
       el.classList.remove('pulling'); el.classList.add('out');
-      current = i; fill(i);
+      current = i; fill(i); setTapeParam(films[i]);
       viewer.classList.add('open'); viewer.setAttribute('aria-hidden', 'false');
       $('close').focus({ preventScroll: true });
     }, 180);
@@ -911,6 +915,7 @@
     viewer.classList.remove('open'); viewer.setAttribute('aria-hidden', 'true');
     el.focus({ preventScroll: true });
     current = -1;
+    setTapeParam(null);
   }
 
   function step(d) {
@@ -919,7 +924,7 @@
     if (p < 0 || order.length < 2) return;
     const n = order[(p + d + order.length) % order.length];
     spineEls[current].classList.remove('out');
-    current = n; spineEls[n].classList.add('out'); fill(n);
+    current = n; spineEls[n].classList.add('out'); fill(n); setTapeParam(films[n]);
   }
 
   $('close').addEventListener('click', closeViewer);
@@ -927,7 +932,7 @@
   $('prev').addEventListener('click', () => step(-1));
   $('next').addEventListener('click', () => step(1));
   document.addEventListener('keydown', (e) => {
-    if (current < 0) return;
+    if (current < 0 || !store.hidden) return; // the store directory, when open, sits over the viewer and has the keys
     if (e.key === 'Escape') closeViewer();
     else if (e.key === 'ArrowLeft') step(-1);
     else if (e.key === 'ArrowRight') step(1);
@@ -936,6 +941,187 @@
   document.querySelector('.panel').addEventListener('click', (e) => {
     if (e.target.classList.contains('panel')) closeViewer();
   });
+
+  /* ---------- the whole store: tape links, the store directory (every shelf + search) and Surprise me ---------- */
+  // A tape's id in links (?tape=tt0181875): its IMDb id. Every film has one; the poster path is a fallback.
+  const tapeId = (f) => f.imdb || f.poster || f.title;
+
+  function setTapeParam(f) { // keep ?tape= in the address bar in step with the tape that's pulled out
+    const q = new URLSearchParams(location.search);
+    if (f) q.set('tape', tapeId(f)); else q.delete('tape');
+    const qs = q.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+
+  // Pull a tape on this shelf out by id. Clears the genre filter if it hides the tape. False if it isn't here.
+  function pullOut(id, instant) {
+    const i = films.findIndex((f) => tapeId(f) === id);
+    if (i < 0) return false;
+    if (!order.includes(i)) { view.genres.clear(); applyView(); }
+    spineEls[i].scrollIntoView({ block: 'center', behavior: instant ? 'auto' : 'smooth' });
+    if (current === i) return true;
+    if (current >= 0) { spineEls[current].classList.remove('out'); current = i; spineEls[i].classList.add('out'); fill(i); setTapeParam(films[i]); }
+    else openViewer(i);
+    return true;
+  }
+
+  // Every tape in the store, loaded the first time the directory opens (all the shelf files: about 1MB, cached after).
+  const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
+    .replace(/&/g, ' and ').replace(/['’.]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  let storeP = null, stock = null;
+  function loadStore() {
+    return storeP || (storeP = Promise.all(YEARS.map(async (k) => {
+      try {
+        const d = await (await fetch(SHELVES[k])).json();
+        return (d.films || []).map((f) => {
+          const t = norm(f.title), dn = norm(f.director);
+          return { k, f, t, bare: t.replace(/^(the|a|an) /, ''), d: dn, hay: `${t} ${dn} ${f.year || ''}` };
+        });
+      } catch { return []; }
+    })).then((a) => { stock = a; return a; }));
+  }
+
+  function search(q) {
+    const nq = norm(q);
+    if (!nq || !stock) return { hits: [], total: 0 };
+    const words = nq.split(' '), isYear = /^(19|20)\d\d$/.test(nq), hits = [];
+    stock.flat().forEach((e) => {
+      if (!words.every((w) => e.hay.includes(w))) return;
+      const s = e.t === nq || e.bare === nq ? 100
+        : e.t.startsWith(nq) || e.bare.startsWith(nq) ? 80
+        : isYear && String(e.f.year) === nq ? 70
+        : (' ' + e.t).includes(' ' + nq) ? 60
+        : e.t.includes(nq) ? 50
+        : (' ' + e.d).includes(' ' + nq) ? 45
+        : 20;
+      hits.push([s, e]);
+    });
+    hits.sort((a, b) => b[0] - a[0] || a[1].bare.localeCompare(b[1].bare) || (a[1].f.year || 0) - (b[1].f.year || 0));
+    return { hits: hits.slice(0, 60).map((h) => h[1]), total: hits.length };
+  }
+
+  const store = $('store'), storeQ = $('store-q'), storeHits = $('store-results'), aisles = $('store-aisles');
+  let lastFocus = null, sel = -1;
+  const shortName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
+
+  // Go to a tape anywhere in the store: pull it out here, or load its shelf with it pulled out.
+  function goTo(k, f) {
+    if (k === SHELF) { closeStore(); pullOut(tapeId(f)); }
+    else location.href = shelfLink(k, tapeId(f));
+  }
+
+  function renderAisles() {
+    const tile = (k) => {
+      const n = stock ? stock[YEARS.indexOf(k)].length : null;
+      const here = k === SHELF;
+      return `<a class="bay${here ? ' here' : ''}" href="${shelfLink(k)}"${here ? ' aria-current="page"' : ''}>`
+        + `<span class="nm">${VAULT.includes(k) ? k.replace('s', '<small>s</small>') : k}</span>`
+        + `<span class="n">${n == null ? '&nbsp;' : `${n} tape${n === 1 ? '' : 's'}`}</span>`
+        + (here ? '<span class="you">You are here</span>' : '') + '</a>';
+    };
+    $('aisle-vault').innerHTML = VAULT.map(tile).join('');
+    $('aisle-years').innerHTML = YEARS.filter((k) => !VAULT.includes(k)).slice().reverse().map(tile).join('');
+    $('store-total').textContent = stock ? `${stock.flat().length.toLocaleString('en-US')} tapes on ${YEARS.length} shelves` : '';
+  }
+
+  function renderHits() {
+    const q = storeQ.value.trim();
+    aisles.hidden = !!q; storeHits.hidden = !q; storeQ.setAttribute('aria-expanded', !!q);
+    sel = -1;
+    if (!q) return;
+    if (!stock) { storeHits.innerHTML = '<p class="none">Checking the shelves...</p>'; return; }
+    const { hits, total } = search(q);
+    if (!hits.length) { storeHits.innerHTML = `<p class="none">Nothing on the shelves for “${q.replace(/[<&]/g, '')}”.</p>`; return; }
+    storeHits.innerHTML = hits.map((e, j) => {
+      const f = e.f, sp = f.poster ? f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg') : '';
+      const r10 = f.rating10 != null ? f.rating10 : (f.rating || 0) * 2;
+      const facts = [f.year, f.director ? `dir. ${f.director}` : null].filter(Boolean).join(' · ');
+      const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+      return `<a class="hit" role="option" id="hit-${j}" data-j="${j}" href="${shelfLink(e.k, tapeId(f))}">`
+        + `<span class="sp">${sp ? `<img src="${esc(sp)}" alt="" loading="lazy" onerror="this.remove()">` : ''}</span>`
+        + `<span class="tx"><b>${esc(f.title)}</b><small>${esc(facts)}</small></span>`
+        + `<span class="mine" title="My rating">${r10 ? +r10.toFixed(1) : '—'}<small>/10</small></span>`
+        + `<span class="where${e.k === SHELF ? ' here' : ''}">${e.k === SHELF ? 'This shelf' : shortName(e.k)}</span></a>`;
+    }).join('') + (total > hits.length ? `<p class="none">${total - hits.length} more: keep typing to narrow it down.</p>` : '');
+    storeHits._hits = hits;
+  }
+
+  function markSel(j) {
+    const els = storeHits.querySelectorAll('.hit');
+    if (!els.length) return;
+    sel = (j + els.length) % els.length;
+    els.forEach((el, n) => el.classList.toggle('sel', n === sel));
+    els[sel].scrollIntoView({ block: 'nearest' });
+    storeQ.setAttribute('aria-activedescendant', `hit-${sel}`);
+  }
+
+  function openStore(focusSearch) {
+    if (store.hidden) {
+      lastFocus = document.activeElement;
+      store.hidden = false; document.body.classList.add('store-open');
+      renderAisles();
+      loadStore().then(() => { renderAisles(); renderHits(); });
+    }
+    if (focusSearch || !matchMedia('(hover: none)').matches) storeQ.focus(); // phones: don't throw the keyboard up unasked
+  }
+  function closeStore() {
+    if (store.hidden) return;
+    store.hidden = true; document.body.classList.remove('store-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+
+  async function surprise() {
+    const all = (await loadStore()).flat().filter((e) => !(e.k === SHELF && current >= 0 && tapeId(e.f) === tapeId(films[current])));
+    const e = all[Math.floor(Math.random() * all.length)];
+    if (e) goTo(e.k, e.f);
+  }
+
+  storeQ.addEventListener('input', renderHits);
+  storeQ.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); markSel(sel + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); markSel(sel - 1); }
+    else if (e.key === 'Enter') {
+      const hits = storeHits._hits || [], h = hits[sel >= 0 ? sel : 0];
+      if (h && !storeHits.hidden) { e.preventDefault(); goTo(h.k, h.f); }
+    }
+  });
+  storeHits.addEventListener('click', (e) => {
+    const a = e.target.closest('.hit');
+    if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return; // let a new-tab click through
+    const h = storeHits._hits[+a.dataset.j];
+    if (h.k === SHELF) { e.preventDefault(); goTo(h.k, h.f); }
+  });
+  aisles.addEventListener('click', (e) => { // this shelf's tile just closes the directory
+    const a = e.target.closest('.bay.here');
+    if (a) { e.preventDefault(); closeStore(); }
+  });
+  store.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', closeStore));
+  $('store-lucky').addEventListener('click', surprise);
+  $('find-btn').addEventListener('click', () => openStore(true));
+  $('lucky-btn').addEventListener('click', surprise);
+  const ticket = document.querySelector('h1.ticket');
+  ticket.tabIndex = 0; ticket.setAttribute('role', 'button'); ticket.title = 'All shelves';
+  ticket.setAttribute('aria-label', `Store directory (now showing ${IN_VAULT ? `the Vault, ${SHELF}` : SHELF})`);
+  ticket.addEventListener('click', () => openStore());
+  ticket.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStore(); } });
+
+  // Keys: "/" finds a tape, "[" and "]" step to the shelf before / after. Esc closes the directory (before the viewer).
+  document.addEventListener('keydown', (e) => {
+    if (!store.hidden && e.key === 'Escape') {
+      e.stopPropagation();
+      if (storeQ.value && document.activeElement === storeQ) { storeQ.value = ''; renderHits(); } else closeStore();
+      return;
+    }
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const t = e.target;
+    if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
+    if (document.querySelector('.vcr.open')) return;
+    if (e.key === '/') { e.preventDefault(); openStore(true); }
+    else if ((e.key === '[' || e.key === ']') && store.hidden) {
+      const a = $(e.key === '[' ? 'shelf-prev' : 'shelf-next');
+      if (a && !a.hidden && a.href) location.href = a.href;
+    }
+  }, true);
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
@@ -962,6 +1148,9 @@
     await Promise.all(films.map((f) => prepare(f)));
     layout();
     controls.hidden = false;
+    $('finder').hidden = false;
+    const want = new URLSearchParams(location.search).get('tape');
+    if (want && !pullOut(want, true)) setTapeParam(null); // ?tape= from a shared link or a search result on another shelf
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
   }
   boot();
