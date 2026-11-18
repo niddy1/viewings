@@ -796,7 +796,7 @@
   function loadView() {
     const q = new URLSearchParams(location.search);
     const m = /^(watched|rating|imdb|year)(-rev)?$/.exec(q.get('sort') || '');
-    if (m) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
+    if (m && !(IN_VAULT && m[1] === 'watched')) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
     (q.get('genre') || '').split(',').filter(Boolean).forEach((g) => view.genres.add(g));
   }
 
@@ -810,6 +810,8 @@
   }
 
   const controls = $('controls'), genreBtn = $('genre-btn'), genreList = $('genre-list');
+  // Vault tapes have no viewing date (their dates are when they were rated in bulk), so no "Date watched" sort there
+  if (IN_VAULT) controls.querySelector('[data-sort="watched"]').remove();
 
   function renderControls() {
     controls.querySelectorAll('[data-sort]').forEach((b) => {
