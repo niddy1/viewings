@@ -918,3 +918,76 @@ std('ugetsu-1953', ('grad', [(0, (130, 130, 128)), (.6, (60, 60, 60)), (1, (14, 
     L((0.155, 0.846, 0.85, 0.93), 76, WHT, mode='light'),
     photo=ph(0.5, 0.5, 1.0, 0.75), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['A FILM BY', 'KENJI MIZOGUCHI'], ccol=WHT,
     ft='b', fcol=(210, 210, 210), fin=OLD, seed=1953)
+
+# Dial M for Murder (1954): the poster's dark red, its cream "dial, the red M on its cream tile, for and Murder" cut off it in their own colours and run in one line, the reaching hand and the telephone
+DMC = lambda a: (_lum(a) > .78) | ((a[..., 0] > .7) & (a[..., 1] < .3))
+std('dial-m-for-murder-1954', ('grad', [(0, (150, 20, 20)), (.6, (90, 10, 10)), (1, (30, 4, 4))]), (244, 238, 220),
+    LC([(0.395, 0.575, 0.585, 0.665), (0.43, 0.67, 0.565, 0.765), (0.44, 0.77, 0.55, 0.825), (0.31, 0.825, 0.68, 0.915)], 100, gapf=.14, valign='base',
+       cuts=[comp_cut(DMC, minf=.05), plate_cut(lambda a: (_lum(a) > .6) | ((a[..., 0] > .7) & (a[..., 1] < .3))), comp_cut(DMC), comp_cut(DMC, minf=.05)]),
+    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(244, 238, 220), lg=(244, 238, 220), lw=.55, order='LPTCF', credit=['RAY MILLAND', 'GRACE KELLY'], ccol=(244, 238, 220),
+    ft='c', vbox=(244, 238, 220), vink=(90, 10, 10), fcol=(230, 200, 196), fin=OLD, seed=1954)
+
+# La Strada (1954): the poster's white, its red LA STRADA keyed off it in its two lines, Gelsomina at the pole (no logo file: Ponti-De Laurentiis, from IMDb's company credits)
+std('la-strada-1954', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 218)), (1, (150, 144, 134))]), (220, 50, 30),
+    L([(0.475, 0.342, 0.69, 0.414), (0.288, 0.422, 0.94, 0.497)], 84, (224, 52, 32), mode='key', key=(220, 60, 40), t=(70, 150), gapf=.3),
+    photo=ph(0.2, 0.42, 0.3, 1.8), pb=(224, 52, 32), studio=['PONTI-DE LAURENTIIS'], scol=(30, 30, 30), order='lPTCF', credit=['ANTHONY QUINN', 'GIULIETTA MASINA'],
+    ccol=(30, 30, 30), ft='a', vbox=(224, 52, 32), fcol=(30, 30, 30), fin=OLD, seed=1954)
+
+# On the Waterfront (1954): the docks' gold into dark, the poster's yellow script On The Waterfront keyed off it, Brando walking with the hook
+std('on-the-waterfront-1954', ('grad', [(0, (200, 150, 60)), (.5, (110, 70, 30)), (1, (20, 12, 6))]), (250, 200, 30),
+    L((0.115, 0.856, 0.885, 0.918), 80, (252, 204, 32), mode='key', key=(240, 190, 40), t=(70, 150)),
+    photo=ph(0.5, 0.4, 0.7, 1.3), pb=(250, 200, 30), lg=WHT, lw=.55, order='LPTCF', credit=['MARLON BRANDO'], ccol=(250, 230, 200),
+    ft='d', vbox=(250, 200, 30), vink=(20, 12, 6), fcol=(220, 200, 170), fin=OLD, seed=1954)
+
+# Rear Window (1954): the brick red, the poster's pale teal REAR WINDOW keyed off it, Stewart with the camera and Grace Kelly under the title (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
+std('rear-window-1954', ('grad', [(0, (160, 50, 40)), (.6, (90, 24, 20)), (1, (30, 6, 6))]), (150, 220, 214),
+    L((0.072, 0.338, 0.925, 0.402), 76, (152, 222, 216), mode='key', key=(140, 210, 205), t=(70, 150)),
+    photo=ph(0.55, 0.87, 0.8, 0.5), pb=(152, 222, 216), studio=['ALFRED J. HITCHCOCK', 'PRODUCTIONS'], scol=(152, 222, 216), order='lTPSF',
+    stick=flow(dot, 74, ['SUSPENSE'], (152, 222, 216), (90, 24, 20)), ft='e', fcol=(220, 200, 196), fin=OLD, seed=1954)
+
+# Samurai I: Musashi Miyamoto (1954): the poster's red sun, its black band with the white MUSASHI MIYAMOTO cut off it whole (SAMURAI I, printed small on the poster's edge, in type under it), Musashi drawing his sword
+std('samurai-i-musashi-miyamoto-1954', ('grad', [(0, (226, 60, 40)), (.6, (170, 30, 20)), (1, (60, 10, 6))]), WHT,
+    LC([(0.0, 0.872, 1.0, 0.962)], 70, margin=0, cuts=[plate_cut(lambda a: _lum(a) < .2)]),
+    photo=ph(0.5, 0.42, 0.9, 1.15), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['SAMURAI I', 'TOSHIRŌ MIFUNE'], ccol=WHT,
+    ft='b', fcol=(240, 220, 210), fin=OLD, seed=1954)
+
+# Sansho the Bailiff (1954): the poster's grey-green, Sansho and THE BAILIFF typeset in a light serif like the poster's, in its white (typeset: the o of Sansho sits on a pale cloth of its own colour and drops out of every key; two tried), the figure in black
+std('sansho-the-bailiff-1954', ('grad', [(0, (176, 186, 176)), (.6, (130, 140, 130)), (1, (50, 56, 50))]), WHT,
+    TT([('Sansho', WHT), ('THE BAILIFF', (236, 238, 234))], 'ter', 80, sp=.5, outline=((60, 66, 60), 1.2)),
+    photo=ph(0.48, 0.28, 0.6, 1.25), pb=(30, 34, 30), lg=(30, 34, 30), lw=.55, order='LPTF', ft='e', fcol=(30, 34, 30), fin=OLD, seed=1954)
+
+# Seven Samurai (1954): a 2-tape box; the poster's charcoal, its white brush Seven Samurai lifted, the village and its faces
+std('seven-samurai-1954', ('grad', [(0, (80, 80, 76)), (.6, (30, 30, 28)), (1, (6, 6, 6))]), WHT,
+    L((0.17, 0.462, 0.86, 0.562), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.82, 1.0, 0.5), pb=WHT, lg=WHT, lw=.5, order='LTPCSF', credit=['TOSHIRŌ MIFUNE', 'TAKASHI SHIMURA'], ccol=WHT,
+    stick=TWOST((200, 30, 30), WHT), ft='d', fcol=(210, 210, 206), fin=OLD, seed=1954, **TWO)
+
+# Touchez pas au grisbi (1954): the poster's white, its red outlined GRISBI keyed off it (the French title under it in type), the hold-up from the top of the poster (no logo file: Del Duca Films, from IMDb's company credits)
+std('touchez-pas-au-grisbi-1954', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (140, 136, 128))]), (210, 40, 60),
+    L((0.022, 0.682, 0.762, 0.826), 110, (214, 42, 62), mode='key', key=(210, 50, 70), t=(70, 150)),
+    photo=ph(0.42, 0.3, 0.76, 0.85), pb=(20, 20, 20), studio=['DEL DUCA FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['TOUCHEZ PAS AU GRISBI'],
+    ccol=(20, 20, 20), ft='a', vbox=(214, 42, 62), fcol=(20, 20, 20), fin=OLD, seed=1954)
+
+# Diabolique (1955): black, the poster's cream DIABOLIQUE rebuilt letter by letter off the ripple it curves along, the hand over the water (no logo file: Filmsonor, from IMDb's company credits)
+std('diabolique-1955', ('grad', [(0, (40, 34, 34)), (.6, (12, 10, 10)), (1, (2, 2, 2))]), (240, 232, 214),
+    LC([(0.0, 0.62, 1.0, 0.78)], 90, cuts=[seq_cut(lambda a: (_lum(a) > .75) & (a[..., 2] < a[..., 0] + .05), (0.0, 0.62, 1.0, 0.78),
+        [(0.098, 0.696), (0.165, 0.702), (0.221, 0.709), (0.318, 0.714), (0.447, 0.709), (0.541, 0.705), (0.616, 0.692), (0.701, 0.679), (0.792, 0.649), (0.885, 0.626)], gapf=.08)]),
+    photo=ph(0.5, 0.25, 0.9, 0.7), pb=(214, 40, 40), studio=['FILMSONOR'], scol=(240, 232, 214), order='lPTCSF', credit=['SIMONE SIGNORET', 'VÉRA CLOUZOT'],
+    ccol=(240, 232, 214), stick=RWD(fill=(240, 230, 210)), ft='c', fcol=(200, 196, 190), fin=RENTAL, seed=1955)
+
+# Lady and the Tramp (1955): Disney, the white clamshell; the poster's night blue, its white script Lady and the Tramp cut off it, Lady's face in the red diamond
+disney('lady-and-the-tramp-1955', ('grad', [(0, (30, 40, 120)), (.5, (50, 70, 170)), (1, (20, 24, 70))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.115, 0.162, 0.885, 0.255)], 110, cuts=[key_cut(lambda a: _lum(a) > .85)]),
+       face=ph(.66, .66, .2, 1.4), lcol=WHT)
+
+# Rififi (1955): the poster's blue, its yellow RIFIFI keyed off it, the safecracker's gloved hand with the diamond (no logo file: Pathé Consortium Cinéma, from IMDb's company credits; director from IMDb)
+std('rififi-1955', ('grad', [(0, (30, 150, 230)), (.6, (20, 100, 170)), (1, (6, 34, 70))]), (250, 190, 30),
+    L((0.055, 0.796, 0.946, 0.97), 110, (252, 192, 32), mode='key', key=(245, 185, 40), t=(70, 150)),
+    photo=ph(0.5, 0.5, 0.8, 1.0), pb=WHT, studio=['PATHÉ'], scol=WHT, order='lPTCF', credit=['UN FILM DE', 'JULES DASSIN'], ccol=WHT,
+    ft='b', fcol=(220, 230, 240), fin=OLD, seed=1955)
+
+# Samurai II: Duel at Ichijoji Temple (1955): the poster's red sun, its black band with the white DUEL AT ICHIJOJI TEMPLE cut off it whole (SAMURAI II in type under it), Musashi among the swords
+std('samurai-ii-duel-at-ichijoji-temple-1955', ('grad', [(0, (230, 70, 40)), (.6, (176, 40, 24)), (1, (70, 14, 8))]), WHT,
+    LC([(0.0, 0.872, 1.0, 0.962)], 70, margin=0, cuts=[plate_cut(lambda a: _lum(a) < .2)]),
+    photo=ph(0.45, 0.32, 0.8, 0.9), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCSF', credit=['SAMURAI II'], ccol=WHT, stick=BAR('59 0612', top='SAMURAI', fill=(236, 226, 206)),
+    ft='a', vbox=(20, 20, 20), fcol=(240, 220, 210), fin=RENTAL, seed=1955)
