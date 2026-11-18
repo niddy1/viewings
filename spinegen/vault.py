@@ -2066,14 +2066,13 @@ std('kagemusha-1980', ('grad', [(0, (180, 140, 40)), (.5, (60, 44, 14)), (1, (8,
 # Raging Bull (1980): black, the poster's red stencilled RAGING / BULL keyed off it into one line, De Niro's bruised face
 std('raging-bull-1980', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (214, 36, 40),
     L([(0.175, 0.728, 0.805, 0.811), (0.175, 0.814, 0.805, 0.895)], 96, (214, 36, 40), mode='key', key=(214, 40, 44), t=(70, 150), valign='base'),
-    photo=ph(0.4, 0.3, 0.7, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    photo=ph(0.4, 0.3, 0.7, 0.9), pb=WHT, lg=WHT, lw=.5, order='LTPF',
     ft='b', vbox=(214, 36, 40), fcol=(210, 210, 210), fin=OLD, seed=1980)
 
 # The Blues Brothers (1980): black, the white THE BLUES and BROTHERS cut off the poster's two mugshot boards, Jake and Elwood in their hats and shades
 std('the-blues-brothers-1980', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
     LC([(0.1, 0.49, 0.2, 0.535), (0.13, 0.531, 0.512, 0.648), (0.548, 0.682, 0.985, 0.786)], 80, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.08)] * 3),
-    photo=ph(0.5, 0.22, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['JOHN BELUSHI', 'DAN AYKROYD'], ccol=WHT,
-    ft='d', fcol=(200, 200, 210), fin=RENTAL, seed=1980)
+    photo=ph(0.5, 0.22, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(200, 200, 210), fin=RENTAL, seed=1980)
 
 # The Empire Strikes Back (1980): Lucasfilm, a slipcase; deep blue, the poster's whole white STAR WARS / THE EMPIRE STRIKES BACK logo cut off it, Han and Leia's embrace
 std('the-empire-strikes-back-1980', ('grad', [(0, (40, 60, 120)), (.6, (12, 20, 46)), (1, (4, 6, 16))]), WHT,
@@ -2129,8 +2128,7 @@ std('missing-1982', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (
 std('the-secret-of-nimh-1982', ('grad', [(0, (60, 40, 110)), (.5, (30, 20, 60)), (1, (8, 6, 18))]), (214, 40, 36),
     LC([(0.435, 0.65, 0.525, 0.678), (0.335, 0.678, 0.662, 0.732), (0.455, 0.731, 0.505, 0.752), (0.338, 0.743, 0.662, 0.798)], 84, valign='base', margin=0, gapf=.25,
        outline=((250, 240, 220), 3), cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35) & (a[..., 2] < .35))] * 4),
-    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(250, 200, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A DON BLUTH', 'FILM'], ccol=(250, 220, 150),
-    ft='b', fcol=(220, 210, 230), fin=RENTAL, seed=1982)
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(250, 200, 60), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 210, 230), fin=RENTAL, seed=1982)
 
 # The Thing (1982): the poster's icy blue, its black ragged THE / THING cut off it into one line, the hooded figure blazing with light
 std('the-thing-1982', ('grad', [(0, (180, 220, 240)), (.5, (60, 140, 200)), (1, (8, 30, 60))]), (12, 16, 24),
@@ -2141,8 +2139,7 @@ std('the-thing-1982', ('grad', [(0, (180, 220, 240)), (.5, (60, 140, 200)), (1, 
 # Tootsie (1982): the poster's white, its black slab-serif Tootsie cut off it, Dorothy Michaels in red sequins before the flag
 std('tootsie-1982', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (20, 20, 20),
     LC([(0.01, 0.835, 0.993, 0.945)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
-    photo=ph(0.4, 0.42, 0.5, 1.6), pb=(200, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['DUSTIN HOFFMAN'], ccol=(20, 20, 20),
-    ft='a', vbox=(200, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1982)
+    photo=ph(0.4, 0.42, 0.5, 1.6), pb=(200, 30, 40), lg=(20, 20, 20), lw=.55, order='LPTF', ft='a', vbox=(200, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1982)
 
 # A Christmas Story (1983): the tree's green, the poster's red arched A CHRISTMAS STORY cut off it whole and turned level, Ralphie in his glasses
 std('a-christmas-story-1983', ('grad', [(0, (30, 80, 40)), (.5, (16, 50, 24)), (1, (4, 16, 8))]), (210, 30, 30),
@@ -2255,8 +2252,7 @@ disney('the-black-cauldron-1985', ('grad', [(0, (30, 40, 90)), (.5, (50, 60, 120
 # Aliens (1986): the hive's blue-black, the poster's spaced A L I E N S lifted, Ripley carrying Newt with the pulse rifle
 std('aliens-1986', ('grad', [(0, (30, 70, 100)), (.6, (8, 20, 34)), (1, (0, 2, 6))]), (150, 190, 230),
     L((0.245, 0.855, 0.765, 0.945), 70, (170, 200, 240), mode='light', speck=0),
-    photo=ph(0.5, 0.3, 0.7, 1.15), pb=(150, 190, 230), lg=WHT, lw=.5, order='LPTCSF', credit=['SIGOURNEY WEAVER'], ccol=(170, 200, 240), dotst=('SCI-FI', (150, 190, 230), (10, 20, 34)),
-    ft='e', fcol=(170, 190, 220), fin=RENTAL, seed=1986)
+    photo=ph(0.5, 0.3, 0.7, 1.15), pb=(150, 190, 230), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(170, 190, 220), fin=RENTAL, seed=1986)
 
 # An American Tail (1986): the poster's sky, its red AN / AMERICAN / TAIL keyed off it word by word into one line, Fievel in his blue hat (Amblin, a slipcase)
 std('an-american-tail-1986', ('grad', [(0, (120, 200, 240)), (.5, (60, 160, 220)), (1, (20, 70, 120))]), (220, 30, 40),
@@ -2292,8 +2288,7 @@ std('hoosiers-1986', ('grad', [(0, (90, 160, 220)), (.5, (110, 150, 80)), (1, (3
 # Mona Lisa (1986): the poster's night teal, its yellow MONA / LISA keyed off it into one line, Bob Hoskins and Cathy Tyson
 std('mona-lisa-1986', ('grad', [(0, (30, 80, 90)), (.6, (10, 26, 30)), (1, (2, 6, 8))]), (250, 220, 30),
     L([(0.262, 0.552, 0.914, 0.673), (0.5, 0.68, 0.974, 0.798)], 100, (250, 220, 30), mode='key', key=(250, 220, 40), t=(70, 160), valign='base'),
-    photo=ph(0.5, 0.25, 0.86, 0.7), pb=(250, 220, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A NEIL JORDAN', 'FILM'], ccol=(250, 230, 120),
-    ft='d', fcol=(200, 220, 220), fin=OLD, seed=1986)
+    photo=ph(0.5, 0.25, 0.86, 0.7), pb=(250, 220, 30), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(200, 220, 220), fin=OLD, seed=1986)
 
 # Platoon (1986): the jungle's dark green, the poster's chrome PLATOON with the dog-tag O cut off it, Elias falling with his arms raised (no logo file: Hemdale, from IMDb's company credits)
 std('platoon-1986', ('grad', [(0, (40, 70, 50)), (.6, (12, 24, 16)), (1, (2, 6, 4))]), (220, 226, 220),
@@ -2310,8 +2305,7 @@ std('sid-and-nancy-1986', ('grad', [(0, (230, 60, 140)), (.5, (110, 20, 70)), (1
 # Stand by Me (1986): the poster's sky, its red STAND BY ME keyed off it, the four boys, and the walk along the lake's edge under the title
 std('stand-by-me-1986', ('grad', [(0, (90, 170, 230)), (.5, (40, 100, 160)), (1, (6, 20, 30))]), (220, 30, 30),
     L((0.074, 0.454, 0.932, 0.519), 84, (220, 30, 30), mode='key', key=(220, 36, 36), t=(70, 160)),
-    photo=ph(0.5, 0.2, 0.9, 0.62), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A ROB REINER', 'FILM'], ccol=WHT,
-    ft='e', fcol=(220, 230, 240), fin=RENTAL, seed=1986)
+    photo=ph(0.5, 0.2, 0.9, 0.62), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(220, 230, 240), fin=RENTAL, seed=1986)
 
 # The Color of Money (1986): Touchstone, a slipcase; the felt green, the poster's white stacked the / Color / of / Money cut letter by letter into one line, Newman and Cruise at the table
 std('the-color-of-money-1986', ('grad', [(0, (30, 90, 60)), (.6, (10, 34, 22)), (1, (2, 8, 4))]), WHT,
@@ -2332,8 +2326,7 @@ disney('the-great-mouse-detective-1986', ('grad', [(0, (240, 236, 226)), (.5, (2
 # Top Gun (1986): the jacket's brown-black, the poster's white and red TOP GUN wings logo cut off it in its own colours, Maverick and Charlie
 std('top-gun-1986', ('grad', [(0, (70, 50, 40)), (.6, (24, 16, 12)), (1, (4, 2, 2))]), WHT,
     LC([(0.0, 0.648, 0.968, 0.796)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.01, close=2)]),
-    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE'], ccol=WHT,
-    ft='d', vbox=(200, 30, 40), fcol=(220, 210, 200), fin=RENTAL, seed=1986)
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='d', vbox=(200, 30, 40), fcol=(220, 210, 200), fin=RENTAL, seed=1986)
 
 # Au revoir les enfants (1987): the navy of the poster's title plate, its cream AU REVOIR / LES ENFANTS and (GOODBYE, CHILDREN) cut off it into one line, the two boys
 std('au-revoir-les-enfants-1987', ('grad', [(0, (30, 36, 80)), (.6, (12, 14, 34)), (1, (2, 2, 8))]), (240, 226, 170),
@@ -2344,14 +2337,13 @@ std('au-revoir-les-enfants-1987', ('grad', [(0, (30, 36, 80)), (.6, (12, 14, 34)
 # Full Metal Jacket (1987): the poster's white, its black stencilled FULL / METAL / JACKET cut off it into one line, the helmet with BORN TO KILL
 std('full-metal-jacket-1987', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (20, 20, 20),
     LC([(0.405, 0.642, 0.615, 0.706), (0.36, 0.705, 0.66, 0.767), (0.325, 0.765, 0.68, 0.828)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .32)] * 3),
-    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPF',
     ft='a', fcol=(20, 20, 20), fin=OLD, seed=1987)
 
 # Raising Arizona (1987): the poster's white, its striped red, white and blue RAISING / ARIZONA (its A a safety pin) cut off it in its own colours into one line, H.I., Ed and the baby on their loungers (no logo file: Circle Films, from IMDb's company credits)
 std('raising-arizona-1987', ('grad', [(0, (246, 246, 244)), (.5, (220, 230, 244)), (1, (110, 130, 170))]), (200, 40, 50),
     LC([(0.295, 0.67, 0.71, 0.742), (0.29, 0.742, 0.715, 0.81)], 90, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (_sat(a) > .14) | (_lum(a) < .8))] * 2),
-    photo=ph(0.4, 0.4, 0.6, 0.8), pb=(60, 80, 160), studio=['CIRCLE FILMS'], scol=(40, 50, 100), order='lPTCSF', credit=['NICOLAS CAGE', 'HOLLY HUNTER'], ccol=(40, 50, 100), stick=RWD(fill=(250, 226, 60)),
-    ft='c', fcol=(40, 50, 100), fin=RENTAL, seed=1987)
+    photo=ph(0.4, 0.4, 0.6, 0.8), pb=(60, 80, 160), studio=['CIRCLE FILMS'], scol=(40, 50, 100), order='lPTF', ft='c', fcol=(40, 50, 100), fin=RENTAL, seed=1987)
 
 # RoboCop (1987): the night street, the poster's white ROBOCOP with its red shadow cut off it in its own colours, RoboCop stepping out of the cruiser
 std('robocop-1987', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, (2, 2, 6))]), WHT,
@@ -2371,8 +2363,7 @@ std('the-princess-bride-1987', ('grad', [(0, (50, 50, 70)), (.5, (90, 70, 50)), 
 # The Untouchables (1987): the dark of the suit, the poster's gold THE UNTOUCHABLES cut off it, Kevin Costner with the badge
 std('the-untouchables-1987', ('grad', [(0, (60, 60, 64)), (.6, (18, 18, 20)), (1, (2, 2, 2))]), (220, 180, 110),
     LC([(0.095, 0.362, 0.905, 0.436)], 100, cuts=[key_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .15) & (_lum(a) > .35))]),
-    photo=ph(0.55, 0.15, 0.8, 0.5), pb=(220, 180, 110), lg=WHT, lw=.5, order='LPTCF', credit=['A BRIAN DE PALMA', 'FILM'], ccol=(220, 190, 140),
-    ft='b', fcol=(200, 196, 190), fin=OLD, seed=1987)
+    photo=ph(0.55, 0.15, 0.8, 0.5), pb=(220, 180, 110), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(200, 196, 190), fin=OLD, seed=1987)
 
 # Beetlejuice (1988): the poster's purple dusk, its yellow BEETLEJUICE keyed off it, Beetlejuice on the model town with Lydia and the Maitlands
 std('beetlejuice-1988', ('grad', [(0, (60, 40, 110)), (.5, (110, 60, 120)), (1, (14, 10, 30))]), (250, 220, 60),
@@ -2389,14 +2380,12 @@ std('bull-durham-1988', ('grad', [(0, (70, 80, 110)), (.6, (24, 26, 40)), (1, (4
 # Dead Ringers (1988): black, the poster's thin red DEAD / RINGERS cut off it into one line, the twin faces of Jeremy Irons merging
 std('dead-ringers-1988', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (210, 30, 40),
     LC([(0.185, 0.771, 0.8, 0.843), (0.182, 0.852, 0.8, 0.928)], 100, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .25))] * 2),
-    photo=ph(0.5, 0.25, 0.9, 0.7), pb=(210, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG', 'FILM'], ccol=(230, 200, 200),
-    ft='e', fcol=(200, 190, 190), fin=OLD, seed=1988)
+    photo=ph(0.5, 0.25, 0.9, 0.7), pb=(210, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 190, 190), fin=OLD, seed=1988)
 
 # Die Hard (1988): black, the poster's red DIE HARD keyed off it, John McClane's face beside the burning tower
 std('die-hard-1988', ('grad', [(0, (50, 40, 34)), (.6, (14, 10, 8)), (1, (2, 2, 2))]), (220, 30, 30),
     L((0.072, 0.844, 0.928, 0.925), 96, (220, 30, 30), mode='key', key=(220, 30, 30), t=(70, 160)),
-    photo=ph(0.6, 0.38, 0.8, 1.0), pb=(250, 150, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['BRUCE WILLIS'], ccol=WHT, stick=PRC(['$2.49', 'ACTION']),
-    ft='b', vbox=(220, 30, 30), fcol=(210, 200, 196), fin=RENTAL, seed=1988)
+    photo=ph(0.6, 0.38, 0.8, 1.0), pb=(250, 150, 40), lg=WHT, lw=.5, order='LPTF', ft='b', vbox=(220, 30, 30), fcol=(210, 200, 196), fin=RENTAL, seed=1988)
 
 # Grave of the Fireflies (1988): Studio Ghibli, a slipcase; black, the poster's white GRAVE of the / FIREFLIES lifted into one line, Seita carrying Setsuko under the umbrella
 std('grave-of-the-fireflies-1988', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), WHT,
@@ -2413,8 +2402,7 @@ disney('oliver-company-1988', ('grad', [(0, (60, 130, 220)), (.5, (90, 160, 230)
 # Rain Man (1988): the poster's park greens, its white serif RAIN MAN lifted, Raymond and Charlie walking
 std('rain-man-1988', ('grad', [(0, (120, 130, 100)), (.6, (50, 56, 40)), (1, (10, 12, 8))]), WHT,
     L((0.07, 0.83, 0.922, 0.917), 90, WHT, mode='light'),
-    photo=ph(0.48, 0.4, 0.7, 1.15), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['DUSTIN HOFFMAN', 'TOM CRUISE'], ccol=WHT,
-    ft='d', fcol=(220, 226, 210), fin=RENTAL, seed=1988)
+    photo=ph(0.48, 0.4, 0.7, 1.15), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(220, 226, 210), fin=RENTAL, seed=1988)
 
 # The Land Before Time (1988): Amblin and Universal, a slipcase; the valley's greens, the poster's whole gold-framed THE LAND BEFORE TIME panel cut off it as it is, Littlefoot and the others
 std('the-land-before-time-1988', ('grad', [(0, (120, 190, 230)), (.5, (110, 170, 90)), (1, (40, 70, 30))]), WHT,
@@ -2444,8 +2432,7 @@ std('the-vanishing-1988', ('grad', [(0, (30, 26, 20)), (.6, (10, 8, 6)), (1, (2,
 # Who Framed Roger Rabbit (1988): Amblin, a slipcase; Toontown's sky, the poster's red arched banner with its yellow Who framed ROGER RABBIT cut off it whole, Roger and Jessica over Eddie Valiant in Benny the Cab
 std('who-framed-roger-rabbit-1988', ('grad', [(0, (60, 120, 210)), (.5, (40, 80, 170)), (1, (10, 20, 60))]), (250, 220, 40),
     LC([(0.095, 0.095, 0.955, 0.325)], 150, cuts=[plate_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3) | ((a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .4)))]),
-    photo=ph(0.5, 0.6, 0.86, 0.95), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['BOB HOSKINS'], ccol=WHT, stick=BAR('88 0622', top='ANIMATION', fill=(240, 236, 210)),
-    ft='a', vbox=(220, 30, 40), fcol=(220, 230, 246), fin=RENTAL, seed=1988)
+    photo=ph(0.5, 0.6, 0.86, 0.95), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(220, 30, 40), fcol=(220, 230, 246), fin=RENTAL, seed=1988)
 
 # Batman (1989): black, the poster's gold Bat-symbol over its outlined gold B A T M A N, each cut off it in its own colours
 std('batman-1989', ('grad', [(0, (30, 30, 36)), (.6, (8, 8, 10)), (1, (0, 0, 0))]), (250, 190, 60),
@@ -2456,8 +2443,7 @@ std('batman-1989', ('grad', [(0, (30, 30, 36)), (.6, (8, 8, 10)), (1, (0, 0, 0))
 # Dead Poets Society (1989): Touchstone, a slipcase; the poster's wheat gold, its dark-red ruled DEAD / POETS / SOCIETY cut off it into one line, the boys carrying Keating's pupil through the field
 std('dead-poets-society-1989', ('grad', [(0, (230, 190, 130)), (.6, (200, 150, 90)), (1, (90, 60, 30))]), (110, 30, 30),
     LC([(0.312, 0.185, 0.693, 0.268), (0.312, 0.272, 0.693, 0.352), (0.312, 0.355, 0.693, 0.405)], 84, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: _lum(a) < .42)] * 3),
-    photo=ph(0.5, 0.67, 0.86, 0.6), pb=(110, 30, 30), lg=(80, 30, 20), lw=.55, order='LPTCF', credit=['ROBIN WILLIAMS'], ccol=(80, 30, 20),
-    ft='d', fcol=(70, 40, 20), fin=RENTAL, seed=1989)
+    photo=ph(0.5, 0.67, 0.86, 0.6), pb=(110, 30, 30), lg=(80, 30, 20), lw=.55, order='LPTF', ft='d', fcol=(70, 40, 20), fin=RENTAL, seed=1989)
 
 # Do the Right Thing (1989): the poster's street blue, its yellow hand-lettered DO THE / RIGHT / THING with its coloured bars cut off it into one line, Mookie with the pizza box (Universal; director from IMDb)
 std('do-the-right-thing-1989', ('grad', [(0, (40, 90, 200)), (.5, (24, 60, 160)), (1, (6, 16, 50))]), (250, 230, 60),
