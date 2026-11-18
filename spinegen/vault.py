@@ -839,22 +839,19 @@ std('the-day-the-earth-stood-still-1951', ('grad', [(0, (40, 60, 110)), (.5, (16
 # The Lavender Hill Mob (1951): the poster's sky blue, its navy THE LAVENDER and HILL MOB lifted, the chase along the London skyline
 std('the-lavender-hill-mob-1951', ('grad', [(0, (150, 200, 210)), (.6, (100, 160, 176)), (1, (40, 80, 96))]), (20, 40, 70),
     [L((0.24, 0.552, 0.755, 0.78), 76, (20, 40, 70), mode='dark'), L((0.24, 0.78, 0.755, 0.912), 76, (20, 40, 70), mode='dark')],
-    tgap=8, photo=ph(0.5, 0.42, 1.0, 0.42), pb=(20, 40, 70), lg=(20, 40, 70), lw=.55, order='LPTCF', credit=['ALEC GUINNESS'], ccol=(20, 40, 70),
-    ft='e', fcol=(20, 40, 70), fin=OLD, seed=1951)
+    tgap=8, photo=ph(0.5, 0.42, 1.0, 0.42), pb=(20, 40, 70), lg=(20, 40, 70), lw=.55, order='LPTF', ft='e', fcol=(20, 40, 70), fin=OLD, seed=1951)
 
 # The Man in the White Suit (1951): the poster's crimson, its black THE MAN IN THE and the cream WHITE and black SUIT cut off it in their own colours (keyed on the crimson round them), Guinness running in the suit
 WSC = lambda a: _lum(a) < .15
 std('the-man-in-the-white-suit-1951', ('grad', [(0, (150, 20, 40)), (.6, (100, 10, 26)), (1, (40, 4, 10))]), (240, 228, 200),
     [LC([(0.1, 0.025, 0.99, 0.13)], 44, margin=0, cuts=[comp_cut(lambda a: a[..., 0] < a[..., 1] + .12, minf=.05)]),
      LC([(0.0, 0.128, 0.995, 0.302)], 96, margin=0, cuts=[comp_cut(lambda a: a[..., 0] < a[..., 1] + .12, keep=lambda x, y: y > .3, minf=.05)])],
-    tgap=6, photo=ph(0.45, 0.66, 0.8, 1.0), pb=(240, 228, 200), lg=(240, 228, 200), lw=.55, order='LPTCF', credit=['ALEC GUINNESS'], ccol=(240, 228, 200),
-    ft='b', fcol=(230, 200, 200), fin=OLD, seed=1951)
+    tgap=6, photo=ph(0.45, 0.66, 0.8, 1.0), pb=(240, 228, 200), lg=(240, 228, 200), lw=.55, order='LPTF', ft='b', fcol=(230, 200, 200), fin=OLD, seed=1951)
 
 # Ikiru (1952): the snowy night's black, the poster's white spaced IKIRU lifted, Watanabe on the swing (top-billed cast from IMDb)
 std('ikiru-1952', ('grad', [(0, (50, 54, 56)), (.6, (18, 20, 22)), (1, (4, 4, 4))]), WHT,
     L((0.2, 0.177, 0.82, 0.258), 76, WHT, mode='light'),
-    photo=ph(0.5, 0.6, 0.66, 1.25), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['TAKASHI SHIMURA'], ccol=WHT,
-    ft='e', fcol=(200, 204, 206), fin=OLD, seed=1952)
+    photo=ph(0.5, 0.6, 0.66, 1.25), pb=WHT, lg=WHT, lw=.55, order='LTPF', ft='e', fcol=(200, 204, 206), fin=OLD, seed=1952)
 
 # Singin' in the Rain (1952): the rainy night's blue, its yellow SINGIN' and IN THE RAIN cut off it in their own colours and levelled, Gene Kelly on the lamp-post
 SRY = lambda a: (a[..., 0] > .8) & (a[..., 1] > .6) & (a[..., 2] < .3)
@@ -910,8 +907,7 @@ WFY = lambda a: (a[..., 0] > .85) & (a[..., 1] > .85) & (a[..., 2] < .8)
 std('the-wages-of-fear-1953', ('grad', [(0, (40, 30, 26)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (250, 246, 170),
     [LC([(0.08, 0.28, 0.86, 0.42)], 70, cuts=[pick_cut(WFY, (0.08, 0.28, 0.86, 0.42), [(0.109, 0.317), (0.15, 0.32), (0.193, 0.317), (0.307, 0.348), (0.437, 0.355), (0.548, 0.347), (0.657, 0.339), (0.78, 0.33)], r=.02, rot=-4)]),
      LC([(0.2, 0.37, 0.87, 0.53)], 70, cuts=[pick_cut(WFY, (0.2, 0.37, 0.87, 0.53), [(0.246, 0.447), (0.305, 0.438), (0.395, 0.453), (0.512, 0.447), (0.635, 0.437), (0.771, 0.425)], r=.02, rot=-4)])],
-    tgap=8, photo=ph(0.55, 0.75, 0.9, 0.7), pb=(230, 70, 40), studio=['FILMSONOR'], scol=(250, 246, 170), order='lPTCF', credit=['YVES MONTAND', 'CHARLES VANEL'],
-    ccol=(230, 220, 190), ft='d', fcol=(200, 196, 186), fin=OLD, seed=1953)
+    tgap=8, photo=ph(0.55, 0.75, 0.9, 0.7), pb=(230, 70, 40), studio=['FILMSONOR'], scol=(250, 246, 170), order='lPTF', ft='d', fcol=(200, 196, 186), fin=OLD, seed=1953)
 
 # Ugetsu (1953): the misty grey, the poster's white serif UGETSU lifted, the boat on the lake (director from IMDb)
 std('ugetsu-1953', ('grad', [(0, (130, 130, 128)), (.6, (60, 60, 60)), (1, (14, 14, 14))]), WHT,
@@ -924,20 +920,17 @@ DMC = lambda a: (_lum(a) > .78) | ((a[..., 0] > .7) & (a[..., 1] < .3))
 std('dial-m-for-murder-1954', ('grad', [(0, (150, 20, 20)), (.6, (90, 10, 10)), (1, (30, 4, 4))]), (244, 238, 220),
     LC([(0.395, 0.575, 0.585, 0.665), (0.43, 0.67, 0.565, 0.765), (0.44, 0.77, 0.55, 0.825), (0.31, 0.825, 0.68, 0.915)], 100, gapf=.14, valign='base',
        cuts=[comp_cut(DMC, minf=.05), plate_cut(lambda a: (_lum(a) > .6) | ((a[..., 0] > .7) & (a[..., 1] < .3))), comp_cut(DMC), comp_cut(DMC, minf=.05)]),
-    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(244, 238, 220), lg=(244, 238, 220), lw=.55, order='LPTCF', credit=['RAY MILLAND', 'GRACE KELLY'], ccol=(244, 238, 220),
-    ft='c', vbox=(244, 238, 220), vink=(90, 10, 10), fcol=(230, 200, 196), fin=OLD, seed=1954)
+    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(244, 238, 220), lg=(244, 238, 220), lw=.55, order='LPTF', ft='c', vbox=(244, 238, 220), vink=(90, 10, 10), fcol=(230, 200, 196), fin=OLD, seed=1954)
 
 # La Strada (1954): the poster's white, its red LA STRADA keyed off it in its two lines, Gelsomina at the pole (no logo file: Ponti-De Laurentiis, from IMDb's company credits)
 std('la-strada-1954', ('grad', [(0, (246, 244, 240)), (.6, (230, 226, 218)), (1, (150, 144, 134))]), (220, 50, 30),
     L([(0.475, 0.342, 0.69, 0.414), (0.288, 0.422, 0.94, 0.497)], 84, (224, 52, 32), mode='key', key=(220, 60, 40), t=(70, 150), gapf=.3),
-    photo=ph(0.2, 0.42, 0.3, 1.8), pb=(224, 52, 32), studio=['PONTI-DE LAURENTIIS'], scol=(30, 30, 30), order='lPTCF', credit=['ANTHONY QUINN', 'GIULIETTA MASINA'],
-    ccol=(30, 30, 30), ft='a', vbox=(224, 52, 32), fcol=(30, 30, 30), fin=OLD, seed=1954)
+    photo=ph(0.2, 0.42, 0.3, 1.8), pb=(224, 52, 32), studio=['PONTI-DE LAURENTIIS'], scol=(30, 30, 30), order='lPTF', ft='a', vbox=(224, 52, 32), fcol=(30, 30, 30), fin=OLD, seed=1954)
 
 # On the Waterfront (1954): the docks' gold into dark, the poster's yellow script On The Waterfront keyed off it, Brando walking with the hook
 std('on-the-waterfront-1954', ('grad', [(0, (200, 150, 60)), (.5, (110, 70, 30)), (1, (20, 12, 6))]), (250, 200, 30),
     L((0.115, 0.856, 0.885, 0.918), 80, (252, 204, 32), mode='key', key=(240, 190, 40), t=(70, 150)),
-    photo=ph(0.5, 0.4, 0.7, 1.3), pb=(250, 200, 30), lg=WHT, lw=.55, order='LPTCF', credit=['MARLON BRANDO'], ccol=(250, 230, 200),
-    ft='d', vbox=(250, 200, 30), vink=(20, 12, 6), fcol=(220, 200, 170), fin=OLD, seed=1954)
+    photo=ph(0.5, 0.4, 0.7, 1.3), pb=(250, 200, 30), lg=WHT, lw=.55, order='LPTF', ft='d', vbox=(250, 200, 30), vink=(20, 12, 6), fcol=(220, 200, 170), fin=OLD, seed=1954)
 
 # Rear Window (1954): the brick red, the poster's pale teal REAR WINDOW keyed off it, Stewart with the camera and Grace Kelly under the title (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
 std('rear-window-1954', ('grad', [(0, (160, 50, 40)), (.6, (90, 24, 20)), (1, (30, 6, 6))]), (150, 220, 214),
@@ -1001,8 +994,7 @@ std('the-ladykillers-1955', ('grad', [(0, (236, 242, 244)), (.6, (210, 222, 228)
 std('the-night-of-the-hunter-1955', ('grad', [(0, (40, 40, 42)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
     [L([(0.72, 0.597, 0.96, 0.68), (0.66, 0.685, 0.962, 0.768)], 66, WHT, mode='light', gapf=.3),
      L([(0.605, 0.773, 0.96, 0.856), (0.545, 0.862, 0.962, 0.945)], 66, WHT, mode='light', gapf=.3)],
-    tgap=8, photo=ph(0.35, 0.3, 0.6, 1.1), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['ROBERT MITCHUM', 'SHELLEY WINTERS'], ccol=WHT,
-    ft='c', fcol=(200, 200, 200), fin=OLD, seed=1955)
+    tgap=8, photo=ph(0.35, 0.3, 0.6, 1.1), pb=WHT, lg=WHT, lw=.55, order='LPTF', ft='c', fcol=(200, 200, 200), fin=OLD, seed=1955)
 
 # The Trouble with Harry (1955): the poster's white, its red serif THE TROUBLE / WITH HARRY keyed off it, the man in the autumn woods (no logo file: Alfred J. Hitchcock Productions, from IMDb's company credits)
 std('the-trouble-with-harry-1955', ('grad', [(0, (246, 242, 234)), (.6, (230, 220, 200)), (1, (150, 110, 70))]), (200, 40, 34),
@@ -1014,8 +1006,7 @@ std('the-trouble-with-harry-1955', ('grad', [(0, (246, 242, 234)), (.6, (230, 22
 # And God Created Woman (1956): black, the poster's white serif "...and God created woman" lifted, Bardot (no logo file: Cocinor, from IMDb's company credits)
 std('and-god-created-woman-1956', ('grad', [(0, (60, 20, 14)), (.6, (18, 6, 4)), (1, (2, 2, 2))]), WHT,
     L((0.335, 0.85, 0.9, 0.882), 50, WHT, mode='light', speck=0),
-    photo=ph(0.55, 0.42, 0.8, 1.15), pb=(240, 160, 50), studio=['COCINOR'], scol=(240, 160, 50), order='lPTCF', credit=['BRIGITTE BARDOT'], ccol=WHT,
-    ft='b', fcol=(210, 200, 190), fin=OLD, seed=1956)
+    photo=ph(0.55, 0.42, 0.8, 1.15), pb=(240, 160, 50), studio=['COCINOR'], scol=(240, 160, 50), order='lPTF', ft='b', fcol=(210, 200, 190), fin=OLD, seed=1956)
 
 # Bob le Flambeur (1956): black, the poster's white ornate BOB, LE and FLAMBEUR from the playing card lifted into one line, Bob's profile in the spade (no logo file: O.G.C., from IMDb's company credits; director from IMDb)
 std('bob-le-flambeur-1956', ('grad', [(0, (24, 44, 44)), (.6, (8, 14, 14)), (1, (2, 2, 2))]), WHT,
@@ -1039,8 +1030,7 @@ std('samurai-iii-duel-at-ganryu-island-1956', ('grad', [(0, (222, 64, 40)), (.6,
 std('the-harder-they-fall-1956', ('grad', [(0, (40, 150, 210)), (.6, (20, 90, 140)), (1, (6, 30, 50))]), (214, 40, 40),
     LC([(0.35, 0.618, 0.49, 0.685), (0.34, 0.728, 0.69, 0.812), (0.34, 0.812, 0.48, 0.9), (0.515, 0.852, 0.69, 0.945)], 80, gapf=.18, valign='base', outline=((20, 16, 14), 2),
        cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .4) & (a[..., 2] < .4), minf=.05)] * 4),
-    photo=ph(0.45, 0.43, 0.8, 0.6), pb=(240, 236, 226), lg=WHT, lw=.55, order='LPTCF', credit=['HUMPHREY BOGART'], ccol=WHT,
-    ft='b', fcol=(210, 226, 236), fin=OLD, seed=1956)
+    photo=ph(0.45, 0.43, 0.8, 0.6), pb=(240, 236, 226), lg=WHT, lw=.55, order='LTPF', ft='b', fcol=(210, 226, 236), fin=OLD, seed=1956)
 
 # The Killing (1956): the poster's blue and black, its white THE KILLING lifted, Sterling Hayden with the rifle (director from IMDb)
 std('the-killing-1956', ('grad', [(0, (40, 140, 180)), (.6, (16, 60, 80)), (1, (4, 16, 20))]), WHT,
@@ -1059,8 +1049,7 @@ std('the-man-who-knew-too-much-1956', ('grad', [(0, (246, 246, 244)), (.6, (226,
 # The Searchers (1956): Monument Valley's red into dark, the poster's white italic THE SEARCHERS lifted, John Wayne under the hat
 std('the-searchers-1956', ('grad', [(0, (60, 40, 30)), (.5, (180, 90, 40)), (1, (60, 24, 10))]), WHT,
     L((0.05, 0.088, 0.95, 0.146), 70, WHT, mode='light'),
-    photo=ph(0.5, 0.52, 0.9, 0.9), pb=(240, 180, 90), lg=WHT, lw=.55, order='LPTCSF', credit=['JOHN WAYNE'], ccol=WHT,
-    stick=BAR('71 4420', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 180, 90), vink=(60, 24, 10), fcol=(240, 220, 200), fin=RENTAL, seed=1956)
+    photo=ph(0.5, 0.52, 0.9, 0.9), pb=(240, 180, 90), lg=WHT, lw=.55, order='LPTSF', stick=BAR('71 4420', top='WESTERN', fill=(232, 220, 196)), ft='a', vbox=(240, 180, 90), vink=(60, 24, 10), fcol=(240, 220, 200), fin=RENTAL, seed=1956)
 
 # The Swan (1956): the poster's pale gold, THE SWAN typeset in a serif like the poster's, its grey-green with the S in its tan (typeset: the poster's tall S is a faint tan on cream and drops out of every key, the rest picks up the hair behind it; three tried), Grace Kelly's face
 std('the-swan-1956', ('grad', [(0, (236, 228, 200)), (.6, (220, 206, 170)), (1, (140, 120, 80))]), (110, 120, 100),
@@ -1082,8 +1071,7 @@ std('written-on-the-wind-1956', ('grad', [(0, (50, 80, 170)), (.6, (24, 36, 90))
 # 12 Angry Men (1957): the poster's white, its gold 12 and dark-red ANGRY MEN cut off it in their own colours, four of the jurors (no logo file: Orion-Nova Productions, from IMDb's company credits)
 std('12-angry-men-1957', ('grad', [(0, (246, 244, 238)), (.6, (226, 222, 212)), (1, (150, 130, 110))]), (150, 30, 30),
     LC([(0.1, 0.51, 0.9, 0.566)], 80, cuts=[key_cut(lambda a: (_lum(a) < .75) & (_sat(a) > .3))]),
-    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(150, 30, 30), studio=['ORION-NOVA', 'PRODUCTIONS'], scol=(150, 30, 30), order='lPTCF', credit=['HENRY FONDA'],
-    ccol=(60, 40, 30), ft='c', fcol=(60, 40, 30), fin=OLD, seed=1957)
+    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(150, 30, 30), studio=['ORION-NOVA', 'PRODUCTIONS'], scol=(150, 30, 30), order='lPTF', ft='c', fcol=(60, 40, 30), fin=OLD, seed=1957)
 
 # Nights of Cabiria (1957): black, the poster's white slab-serif Nights of Cabiria lifted, Giulietta Masina with the cigarette (no logo file: Dino de Laurentiis, from IMDb's company credits)
 std('nights-of-cabiria-1957', ('grad', [(0, (40, 50, 56)), (.6, (12, 16, 18)), (1, (2, 2, 2))]), WHT,
@@ -1094,8 +1082,7 @@ std('nights-of-cabiria-1957', ('grad', [(0, (40, 50, 56)), (.6, (12, 16, 18)), (
 # Paths of Glory (1957): the poster's pale blue, its red "PATHS OF GLORY" keyed off it, the officer leading the charge (director from IMDb)
 std('paths-of-glory-1957', ('grad', [(0, (180, 220, 226)), (.6, (130, 180, 190)), (1, (40, 70, 76))]), (200, 40, 30),
     L((0.165, 0.88, 0.87, 0.944), 76, (204, 42, 32), mode='key', key=(200, 50, 40), t=(70, 150)),
-    photo=ph(0.48, 0.38, 0.86, 1.25), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['KIRK DOUGLAS'],
-    ccol=(20, 20, 20), ft='d', vbox=(204, 42, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
+    photo=ph(0.48, 0.38, 0.86, 1.25), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPF', ft='d', vbox=(204, 42, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
 
 # The Lower Depths (1957): black, the poster's white THE LOWER (light serif) and DEPTHS (bold) set reading down it, cut off it and run in one line, the tenement faces (director from IMDb)
 std('the-lower-depths-1957', ('grad', [(0, (44, 44, 44)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), WHT,
@@ -1112,8 +1099,7 @@ std('the-seventh-seal-1957', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1
 # Throne of Blood (1957): the fog's white, the poster's red serif THRONE OF BLOOD keyed off it, Washizu pinned with arrows under the title
 std('throne-of-blood-1957', ('grad', [(0, (236, 236, 234)), (.6, (210, 210, 206)), (1, (100, 100, 96))]), (200, 20, 30),
     L([(0.13, 0.318, 0.87, 0.404), (0.425, 0.402, 0.585, 0.458), (0.21, 0.458, 0.81, 0.544)], 76, (204, 22, 32), mode='key', key=(190, 30, 40), t=(70, 150), gapf=.25),
-    photo=ph(0.5, 0.76, 0.8, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['TOSHIRŌ MIFUNE'], ccol=(20, 20, 20),
-    ft='e', vbox=(204, 22, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
+    photo=ph(0.5, 0.76, 0.8, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPF', ft='e', vbox=(204, 22, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
 
 # Wild Strawberries (1957): the poster's white, its grey WILD and maroon STRAWBERRIES cut off it in their own colours, Victor Sjöström under the tree
 std('wild-strawberries-1957', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (130, 130, 126))]), (30, 30, 30),
@@ -1130,8 +1116,7 @@ std('witness-for-the-prosecution-1957', ('grad', [(0, (200, 50, 40)), (.6, (140,
 # Big Deal on Madonna Street (1958): the poster's yellow, its navy BIG DEAL ON and maroon MADONNA STREET cut off it in their own colours, the gang drawn under it (no logo file: Lux Film, from IMDb's company credits)
 std('big-deal-on-madonna-street-1958', ('grad', [(0, (250, 230, 60)), (.6, (236, 206, 30)), (1, (160, 130, 10))]), (120, 40, 50),
     LC([(0.05, 0.25, 0.94, 0.33), (0.05, 0.345, 0.95, 0.45), (0.005, 0.465, 0.955, 0.56)], 80, gapf=.2, valign='base', cuts=[key_cut(lambda a: _lum(a) < .55)] * 3),
-    photo=ph(0.5, 0.78, 1.0, 0.6), pb=(120, 40, 50), studio=['LUX FILM'], scol=(40, 40, 90), order='lTPCF', credit=['VITTORIO GASSMAN', 'MARCELLO MASTROIANNI'],
-    ccol=(40, 40, 90), ft='a', vbox=(120, 40, 50), fcol=(40, 40, 90), fin=OLD, seed=1958)
+    photo=ph(0.5, 0.78, 1.0, 0.6), pb=(120, 40, 50), studio=['LUX FILM'], scol=(40, 40, 90), order='lTPF', ft='a', vbox=(120, 40, 50), fcol=(40, 40, 90), fin=OLD, seed=1958)
 
 # Elevator to the Gallows (1958): the poster's white, its black ELEVATOR and GALLOWS (the small TO THE set sideways between them) cut off it, Jeanne Moreau in blue (no logo file: NEF, from IMDb's company credits)
 std('elevator-to-the-gallows-1958', ('grad', [(0, (246, 246, 246)), (.6, (224, 226, 228)), (1, (60, 100, 140))]), (20, 20, 20),
@@ -1149,5 +1134,71 @@ std('ivan-the-terrible-part-ii-the-boyars-plot-1958', ('grad', [(0, (180, 120, 1
 # Mon Oncle (1958): the poster's cream, its black hand-lettered MON ONCLE lifted, Hulot tangled in the red ribbon (director from IMDb)
 std('mon-oncle-1958', ('grad', [(0, (244, 238, 222)), (.6, (230, 220, 196)), (1, (160, 140, 110))]), (24, 24, 24),
     L([(0.545, 0.016, 0.79, 0.117), (0.63, 0.116, 0.95, 0.2)], 90, (24, 24, 24), mode='dark', gapf=.3),
-    photo=ph(0.5, 0.55, 0.9, 1.1), pb=(220, 40, 40), lg=(24, 24, 24), lw=.55, order='LPTCF', credit=['JACQUES TATI'], ccol=(24, 24, 24),
-    dotst=('COMEDY', (220, 40, 40), WHT), ft='b', fcol=(24, 24, 24), fin=OLD, seed=1958)
+    photo=ph(0.5, 0.55, 0.9, 1.1), pb=(220, 40, 40), lg=(24, 24, 24), lw=.55, order='LTPF', dotst=('COMEDY', (220, 40, 40), WHT), ft='b', fcol=(24, 24, 24), fin=OLD, seed=1958)
+
+# The Blob (1958): the drive-in night's dark red, the poster's red dripping THE BLOB cut off it in its own colours, Steve McQueen on the phone (no logo file: Tonylyn Productions, from IMDb's company credits)
+std('the-blob-1958', ('grad', [(0, (60, 20, 40)), (.6, (24, 6, 14)), (1, (4, 2, 4))]), (220, 40, 50),
+    LC([(0.0, 0.13, 0.95, 0.36)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 1] + .3) & (a[..., 0] > a[..., 2] + .2), minf=.05)]),
+    photo=ph(0.35, 0.55, 0.7, 1.0), pb=(250, 220, 40), studio=['TONYLYN', 'PRODUCTIONS'], scol=(220, 200, 200), order='lPTSF', stick=flow(dot, 74, ['SCI-FI'], (250, 220, 40), (24, 6, 14)), ft='c', fcol=(200, 180, 186), fin=RENTAL, seed=1958)
+
+# The Hidden Fortress (1958): the poster's paper cream, its black serif THE HIDDEN FORTRESS lifted, Mifune in the woods (director from IMDb)
+std('the-hidden-fortress-1958', ('grad', [(0, (238, 232, 216)), (.6, (220, 212, 192)), (1, (130, 120, 100))]), (24, 24, 24),
+    L([(0.44, 0.835, 0.58, 0.856), (0.31, 0.856, 0.72, 0.91), (0.265, 0.908, 0.765, 0.968)], 80, (24, 24, 24), mode='dark', gapf=.25),
+    photo=ph(0.5, 0.35, 0.8, 1.05), pb=(24, 24, 24), lg=(24, 24, 24), lw=.55, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=(24, 24, 24),
+    ft='d', fcol=(24, 24, 24), fin=OLD, seed=1958)
+
+# The Horse's Mouth (1958): the poster's white, its cyan THE HORSE'S MOUTH cut off it in its own colours, Alec Guinness among the painted figures (no logo file: Knightsbridge Films, from IMDb's company credits)
+std('the-horse-s-mouth-1958', ('grad', [(0, (246, 248, 250)), (.6, (220, 230, 240)), (1, (40, 70, 150))]), (30, 190, 220),
+    LC([(0.4, 0.36, 0.98, 0.58)], 110, cuts=[comp_cut(lambda a: (a[..., 1] > .5) & (a[..., 2] > .6) & (a[..., 0] < .55) & (a[..., 2] > a[..., 0] + .2), minf=.01)]),
+    photo=ph(0.45, 0.22, 0.5, 0.8), pb=(220, 30, 60), studio=['KNIGHTSBRIDGE FILMS'], scol=(40, 70, 150), order='lPTF', ft='e', fcol=(40, 70, 150), fin=OLD, seed=1958)
+
+# Touch of Evil (1958): the poster's orange, its cream ragged Touch of Evil cut off it in its own colours, Welles under the hat (director from IMDb)
+std('touch-of-evil-1958', ('grad', [(0, (240, 110, 40)), (.6, (200, 80, 24)), (1, (90, 30, 8))]), (246, 236, 210),
+    LC([(0.14, 0.3, 0.79, 0.68)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .75) & (_sat(a) < .3), minf=.04)]),
+    photo=ph(0.48, 0.19, 0.36, 0.95), pb=(246, 236, 210), lg=(246, 236, 210), lw=.55, order='LPTF', ft='b', fcol=(250, 220, 200), fin=OLD, seed=1958)
+
+# Vertigo (1958): the poster's red-orange, its black VERTIGO lifted, the spiral with the falling figures
+std('vertigo-1958', ('grad', [(0, (230, 76, 40)), (.6, (190, 50, 24)), (1, (80, 18, 8))]), (20, 16, 14),
+    L((0.04, 0.826, 0.955, 0.916), 90, (20, 16, 14), mode='dark'),
+    photo=ph(0.5, 0.38, 0.86, 0.9), pb=(20, 16, 14), lg=(20, 16, 14), lw=.55, order='LPTF', ft='a', vbox=(20, 16, 14), fcol=(30, 20, 16), fin=OLD, seed=1958)
+
+# Anatomy of a Murder (1959): black, the poster's white ANATOMY OF A and the big broken MURDER lifted, James Stewart (no logo file: Otto Preminger Films, from IMDb's company credits)
+std('anatomy-of-a-murder-1959', ('grad', [(0, (60, 20, 14)), (.6, (18, 6, 4)), (1, (2, 2, 2))]), WHT,
+    L([(0.095, 0.77, 0.62, 0.827), (0.29, 0.825, 0.9, 0.935)], 96, WHT, mode='light', gapf=.2),
+    photo=ph(0.65, 0.35, 0.7, 1.1), pb=(214, 60, 40), studio=['OTTO PREMINGER', 'FILMS'], scol=WHT, order='lPTCSF', credit=['JAMES STEWART', 'LEE REMICK'], ccol=WHT,
+    stick=PRC(['$2.99', 'DRAMA']), ft='d', fcol=(210, 200, 196), fin=RENTAL, seed=1959)
+
+# North by Northwest (1959): the poster's red, its cream NORTH BY NORTHWEST and the arrow cut off it in its own colours and levelled (it climbs 12 degrees), Cary Grant running from the plane
+std('north-by-northwest-1959', ('grad', [(0, (200, 60, 40)), (.6, (150, 36, 24)), (1, (60, 14, 8))]), (240, 230, 220),
+    LC([(0.08, 0.53, 0.92, 0.72)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .6) & (_sat(a) < .35), keep=lambda x, y: y < .85, rot=-12, minf=.05)]),
+    photo=ph(0.48, 0.25, 0.9, 0.8), pb=(240, 230, 220), lg=(240, 230, 220), lw=.55, order='LTPF', ft='c', vbox=(240, 230, 220), vink=(150, 36, 24), fcol=(240, 220, 210), fin=OLD, seed=1959)
+
+# Sleeping Beauty (1959): Disney, the white clamshell; the poster's violet, its gold script Sleeping Beauty cut off the blue shield, Aurora's face in the red diamond
+disney('sleeping-beauty-1959', ('grad', [(0, (60, 40, 120)), (.5, (100, 60, 160)), (1, (30, 20, 60))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.305, 0.505, 0.69, 0.592), (0.33, 0.588, 0.665, 0.66)], 110, gapf=.2, valign='base', margin=0, outline=((40, 24, 10), 2),
+                cuts=[comp_cut(lambda a: (a[..., 0] > a[..., 2] + .1) & (_lum(a) > .35), keep=lambda x, y: .02 < x < .98, minf=.01)] * 2),
+       face=ph(.38, .22, .2, 1.4), lcol=WHT)
+
+# Some Like It Hot (1959): the poster's white, its red SOME LIKE IT HOT in its black keyline cut off it in its own colours, Marilyn and the two "girls" (no logo file: The Mirisch Corporation, from IMDb's company credits)
+std('some-like-it-hot-1959', ('grad', [(0, (246, 246, 244)), (.6, (228, 228, 224)), (1, (150, 150, 146))]), (220, 30, 40),
+    LC([(0.065, 0.395, 0.94, 0.47)], 80, cuts=[key_cut(lambda a: ((a[..., 0] > .8) & (a[..., 1] < .4)) | (_lum(a) < .25))]),
+    photo=ph(0.5, 0.2, 0.86, 0.55), pb=(30, 140, 100), studio=['THE MIRISCH', 'CORPORATION'], scol=(20, 20, 20), order='lPTCF', credit=['A BILLY WILDER', 'PRODUCTION'],
+    ccol=(20, 20, 20), ft='a', vbox=(220, 30, 40), fcol=(20, 20, 20), fin=OLD, seed=1959)
+
+# The 400 Blows (1959): black, the poster's white the 400 blows lifted, Antoine behind the wire (director from IMDb)
+std('the-400-blows-1959', ('grad', [(0, (60, 60, 60)), (.6, (18, 18, 18)), (1, (4, 4, 4))]), WHT,
+    LC([(0.635, 0.605, 0.97, 0.698), (0.4, 0.698, 0.97, 0.814), (0.4, 0.814, 0.97, 0.903)], 120, gapf=.2, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.12)] * 3),
+    photo=ph(0.4, 0.25, 0.8, 0.75), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['UN FILM DE', 'FRANÇOIS TRUFFAUT'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=OLD, seed=1959)
+
+# The Human Condition I: No Greater Love (1959): a 2-tape box; the poster's peach, its black THE HUMAN CONDITION and Part I cut off it and run in one line, Nakadai's face (no logo file: Bungei Production Ninjin Club, from IMDb's company credits)
+std('the-human-condition-i-no-greater-love-1959', ('grad', [(0, (250, 226, 200)), (.6, (236, 206, 176)), (1, (150, 120, 90))]), (30, 26, 24),
+    LC([(0.055, 0.15, 0.4, 0.185), (0.055, 0.187, 0.375, 0.222), (0.055, 0.224, 0.18, 0.25)], 80, gapf=.4, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)] * 3),
+    photo=ph(0.6, 0.6, 0.8, 1.0), pb=(30, 26, 24), studio=['BUNGEI PRODUCTION', 'NINJIN CLUB'], scol=(30, 26, 24), order='lTPCSF', credit=['NO GREATER LOVE'],
+    ccol=(30, 26, 24), stick=TWOST((30, 26, 24), (250, 226, 200)), ft='b', fcol=(30, 26, 24), fin=OLD, seed=1959, **TWO)
+
+# The Human Condition II: Road to Eternity (1959): the poster's peach, its black THE HUMAN CONDITION and Part II cut off it and run in one line, the soldier with the gun (director from IMDb)
+std('the-human-condition-ii-road-to-eternity-1959', ('grad', [(0, (250, 226, 200)), (.6, (236, 206, 176)), (1, (150, 120, 90))]), (30, 26, 24),
+    LC([(0.06, 0.066, 0.47, 0.101), (0.06, 0.107, 0.45, 0.143), (0.06, 0.154, 0.21, 0.184)], 80, gapf=.7, valign='base', margin=0, cuts=[key_cut(lambda a: _lum(a) < .35)] * 3),
+    photo=ph(0.55, 0.6, 0.86, 1.15), pb=(30, 26, 24), lg=None, studio=['A MASAKI KOBAYASHI', 'FILM'], scol=(30, 26, 24), order='TPlF',
+    ft='c', fcol=(30, 26, 24), fin=OLD, seed=1959)
