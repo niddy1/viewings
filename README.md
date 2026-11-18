@@ -67,6 +67,12 @@ The site uses only relative paths, so it works from any subfolder. Options:
 - **Same host as the main site**: deploy this repo's contents into a `viewings/` folder of the site (a CI step that copies it over works well).
 - **Vercel/Netlify**: deploy this repo as its own project and add a rewrite for `/viewings/*` from the main project.
 
+## Getting around
+
+Click the ticket (or the Vault plate), **Find a tape**, or press `/` to open the **store directory**: every shelf as a tile with its tape count, and a search box that looks through all of them by title, director or year. Picking a result opens that shelf with the tape pulled out. **Surprise me** pulls out a random tape from any shelf.
+
+Every tape has its own link: the address bar shows `?tape=<IMDb id>` while a tape is out (e.g. `?shelf=2000s&tape=tt0181875`), so you can share one film.
+
 ## Keyboard
 
-`←` / `→` flip between tapes, `Esc` puts it back.
+`←` / `→` flip between tapes, `Esc` puts it back. `/` finds a tape, `[` / `]` go to the shelf before / after.

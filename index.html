@@ -31,6 +31,11 @@
         <div class="genre-list" id="genre-list" hidden></div>
       </div>
     </div>
+    <!-- the whole store: search every shelf, or a random tape (app.js, "the whole store") -->
+    <div class="finder" id="finder" role="group" aria-label="The whole store" hidden>
+      <button type="button" id="find-btn" title="Search every shelf (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>Find a tape</button>
+      <button type="button" id="lucky-btn" title="A random tape from any shelf">Surprise me</button>
+    </div>
     <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
   </header>
 
@@ -73,6 +78,32 @@
         <p class="note" id="v-note"></p>
         <button class="close" id="close">Put it back</button>
       </section>
+    </div>
+  </div>
+
+  <!-- the store directory: every shelf, and a search across all of them (app.js; click the ticket, "Find a tape" or press /) -->
+  <div class="store" id="store" hidden>
+    <div class="store-backdrop" data-close></div>
+    <div class="store-box" role="dialog" aria-modal="true" aria-labelledby="store-h">
+      <div class="store-head">
+        <h2 id="store-h"><span>Store</span> <span>Directory</span></h2>
+        <p id="store-total"></p>
+        <button type="button" class="store-x" data-close aria-label="Close">&times;</button>
+      </div>
+      <label class="store-search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+        <span class="vh">Find a tape</span>
+        <input id="store-q" type="search" placeholder="Title, director or year" autocomplete="off" autocapitalize="off" spellcheck="false" role="combobox" aria-controls="store-results" aria-expanded="false">
+      </label>
+      <div class="store-results" id="store-results" role="listbox" aria-label="Tapes found" hidden></div>
+      <div class="store-aisles" id="store-aisles">
+        <section><h3>The Vault <small>by decade of release</small></h3><div class="aisle" id="aisle-vault"></div></section>
+        <section><h3>Year shelves <small>by year watched</small></h3><div class="aisle" id="aisle-years"></div></section>
+      </div>
+      <div class="store-foot">
+        <button type="button" id="store-lucky">Surprise me</button>
+        <span class="keys"><kbd>/</kbd> find <kbd>[</kbd><kbd>]</kbd> next shelf <kbd>Esc</kbd> close</span>
+      </div>
     </div>
   </div>
 
