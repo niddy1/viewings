@@ -1072,3 +1072,82 @@ std('the-wrong-man-1956', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)),
     TT([('The', (226, 70, 70)), ('WRONG MAN', (226, 70, 70))], 'intbki', 76, sp=.3, outline=((40, 20, 20), 1.6)),
     photo=ph(0.4, 0.25, 0.6, 1.1), pb=(220, 60, 60), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(40, 30, 26),
     ft='b', fcol=(40, 30, 26), fin=OLD, seed=1956)
+
+# Written on the Wind (1956): the poster's blue, its white script Written on the Wind lifted, Rock Hudson and Lauren Bacall's kiss (director from IMDb)
+std('written-on-the-wind-1956', ('grad', [(0, (50, 80, 170)), (.6, (24, 36, 90)), (1, (6, 10, 30))]), WHT,
+    L((0.02, 0.578, 0.655, 0.94), 130, WHT, mode='light'),
+    photo=ph(0.5, 0.22, 0.9, 0.85), pb=(240, 200, 40), lg=WHT, lw=.55, order='LPTCF', credit=['A DOUGLAS SIRK', 'PICTURE'], ccol=WHT,
+    ft='a', vbox=(240, 200, 40), vink=(24, 36, 90), fcol=(210, 216, 230), fin=OLD, seed=1956)
+
+# 12 Angry Men (1957): the poster's white, its gold 12 and dark-red ANGRY MEN cut off it in their own colours, four of the jurors (no logo file: Orion-Nova Productions, from IMDb's company credits)
+std('12-angry-men-1957', ('grad', [(0, (246, 244, 238)), (.6, (226, 222, 212)), (1, (150, 130, 110))]), (150, 30, 30),
+    LC([(0.1, 0.51, 0.9, 0.566)], 80, cuts=[key_cut(lambda a: (_lum(a) < .75) & (_sat(a) > .3))]),
+    photo=ph(0.5, 0.2, 1.0, 0.6), pb=(150, 30, 30), studio=['ORION-NOVA', 'PRODUCTIONS'], scol=(150, 30, 30), order='lPTCF', credit=['HENRY FONDA'],
+    ccol=(60, 40, 30), ft='c', fcol=(60, 40, 30), fin=OLD, seed=1957)
+
+# Nights of Cabiria (1957): black, the poster's white slab-serif Nights of Cabiria lifted, Giulietta Masina with the cigarette (no logo file: Dino de Laurentiis, from IMDb's company credits)
+std('nights-of-cabiria-1957', ('grad', [(0, (40, 50, 56)), (.6, (12, 16, 18)), (1, (2, 2, 2))]), WHT,
+    L((0.055, 0.288, 0.63, 0.45), 110, WHT, mode='light'),
+    photo=ph(0.78, 0.6, 0.44, 1.5), pb=(240, 200, 120), studio=['DINO DE LAURENTIIS'], scol=WHT, order='lPTCSF', credit=['UN FILM DI', 'FEDERICO FELLINI'], ccol=WHT,
+    stick=flow(dot, 74, ['DRAMA'], (200, 40, 50), WHT), ft='e', fcol=(200, 206, 210), fin=OLD, seed=1957)
+
+# Paths of Glory (1957): the poster's pale blue, its red "PATHS OF GLORY" keyed off it, the officer leading the charge (director from IMDb)
+std('paths-of-glory-1957', ('grad', [(0, (180, 220, 226)), (.6, (130, 180, 190)), (1, (40, 70, 76))]), (200, 40, 30),
+    L((0.165, 0.88, 0.87, 0.944), 76, (204, 42, 32), mode='key', key=(200, 50, 40), t=(70, 150)),
+    photo=ph(0.48, 0.38, 0.86, 1.25), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['KIRK DOUGLAS'],
+    ccol=(20, 20, 20), ft='d', vbox=(204, 42, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
+
+# The Lower Depths (1957): black, the poster's white THE LOWER (light serif) and DEPTHS (bold) set reading down it, cut off it and run in one line, the tenement faces (director from IMDb)
+std('the-lower-depths-1957', ('grad', [(0, (44, 44, 44)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), WHT,
+    LC([(0.44, 0.38, 0.56, 0.93)], 110, cuts=[comp_cut(lambda a: _lum(a) > .7, rot=90, minf=.01)]),
+    photo=ph(0.5, 0.18, 1.0, 0.55), pb=WHT, lg=WHT, lw=.55, order='LPTCF', credit=['AKIRA KUROSAWA'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=OLD, seed=1957)
+
+# The Seventh Seal (1957): black, the poster's thin spaced THE SEVENTH SEAL lifted, Max von Sydow's face (director from IMDb)
+std('the-seventh-seal-1957', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (220, 220, 216),
+    L((0.07, 0.79, 0.93, 0.83), 50, (226, 226, 222), mode='light', speck=0),
+    photo=ph(0.6, 0.32, 0.6, 1.5), pb=(226, 226, 222), lg=(226, 226, 222), lw=.55, order='LPTCF', credit=['EN FILM AV', 'INGMAR BERGMAN'], ccol=(226, 226, 222),
+    ft='a', fcol=(190, 190, 186), fin=OLD, seed=1957)
+
+# Throne of Blood (1957): the fog's white, the poster's red serif THRONE OF BLOOD keyed off it, Washizu pinned with arrows under the title
+std('throne-of-blood-1957', ('grad', [(0, (236, 236, 234)), (.6, (210, 210, 206)), (1, (100, 100, 96))]), (200, 20, 30),
+    L([(0.13, 0.318, 0.87, 0.404), (0.425, 0.402, 0.585, 0.458), (0.21, 0.458, 0.81, 0.544)], 76, (204, 22, 32), mode='key', key=(190, 30, 40), t=(70, 150), gapf=.25),
+    photo=ph(0.5, 0.76, 0.8, 0.7), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['TOSHIRŌ MIFUNE'], ccol=(20, 20, 20),
+    ft='e', vbox=(204, 22, 32), fcol=(20, 20, 20), fin=OLD, seed=1957)
+
+# Wild Strawberries (1957): the poster's white, its grey WILD and maroon STRAWBERRIES cut off it in their own colours, Victor Sjöström under the tree
+std('wild-strawberries-1957', ('grad', [(0, (244, 244, 242)), (.6, (222, 222, 218)), (1, (130, 130, 126))]), (30, 30, 30),
+    LC([(0.36, 0.452, 0.975, 0.5)], 70, cuts=[comp_cut(lambda a: _lum(a) < .62, keep=lambda x, y: y > .3, minf=.05)]),
+    photo=ph(0.62, 0.72, 0.6, 1.1), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'FOREIGN']),
+    ft='c', fcol=(30, 30, 30), fin=RENTAL, seed=1957)
+
+# Witness for the Prosecution (1957): the poster's red, its cream WITNESS FOR THE PROSECUTION keyed off it, the courtroom figure with the monocle (no logo file: Edward Small Productions, from IMDb's company credits)
+std('witness-for-the-prosecution-1957', ('grad', [(0, (200, 50, 40)), (.6, (140, 30, 24)), (1, (50, 10, 6))]), (250, 240, 170),
+    [L((0.03, 0.795, 1.0, 0.848), 54, (252, 242, 172), mode='key', key=(250, 240, 170), t=(70, 150)), L((0.205, 0.846, 0.96, 0.91), 54, (252, 242, 172), mode='key', key=(250, 240, 170), t=(70, 150))],
+    tgap=8, photo=ph(0.55, 0.42, 0.9, 0.8), pb=(250, 240, 170), studio=['EDWARD SMALL', 'PRODUCTIONS'], scol=(250, 240, 170), order='lPTCF',
+    credit=['A BILLY WILDER', 'FILM'], ccol=(250, 240, 170), ft='b', fcol=(240, 220, 200), fin=OLD, seed=1957)
+
+# Big Deal on Madonna Street (1958): the poster's yellow, its navy BIG DEAL ON and maroon MADONNA STREET cut off it in their own colours, the gang drawn under it (no logo file: Lux Film, from IMDb's company credits)
+std('big-deal-on-madonna-street-1958', ('grad', [(0, (250, 230, 60)), (.6, (236, 206, 30)), (1, (160, 130, 10))]), (120, 40, 50),
+    LC([(0.05, 0.25, 0.94, 0.33), (0.05, 0.345, 0.95, 0.45), (0.005, 0.465, 0.955, 0.56)], 80, gapf=.2, valign='base', cuts=[key_cut(lambda a: _lum(a) < .55)] * 3),
+    photo=ph(0.5, 0.78, 1.0, 0.6), pb=(120, 40, 50), studio=['LUX FILM'], scol=(40, 40, 90), order='lTPCF', credit=['VITTORIO GASSMAN', 'MARCELLO MASTROIANNI'],
+    ccol=(40, 40, 90), ft='a', vbox=(120, 40, 50), fcol=(40, 40, 90), fin=OLD, seed=1958)
+
+# Elevator to the Gallows (1958): the poster's white, its black ELEVATOR and GALLOWS (the small TO THE set sideways between them) cut off it, Jeanne Moreau in blue (no logo file: NEF, from IMDb's company credits)
+std('elevator-to-the-gallows-1958', ('grad', [(0, (246, 246, 246)), (.6, (224, 226, 228)), (1, (60, 100, 140))]), (20, 20, 20),
+    LC([(0.145, 0.298, 0.975, 0.362), (0.145, 0.362, 0.975, 0.428)], 80, gapf=.2, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) < .3, keep=lambda x, y: x > .05, minf=.05)] * 2),
+    photo=ph(0.6, 0.7, 0.8, 0.85), pb=(40, 90, 140), studio=['NEF'], scol=(20, 20, 20), order='lPTCF', credit=['UN FILM DE', 'LOUIS MALLE'], ccol=(20, 20, 20),
+    ft='d', fcol=(20, 20, 20), fin=OLD, seed=1958)
+
+# Ivan the Terrible, Part II (1958): the poster's dusky rose, its pink-red IVAN the TERRIBLE and tan PART II cut off it in their own colours, the tsar's face
+std('ivan-the-terrible-part-ii-the-boyars-plot-1958', ('grad', [(0, (180, 120, 120)), (.6, (100, 60, 60)), (1, (30, 14, 14))]), (210, 50, 50),
+    [LC([(0.02, 0.03, 0.335, 0.165), (0.33, 0.07, 0.44, 0.125), (0.43, 0.03, 0.98, 0.165)], 76, gapf=.14, valign='mid', cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 0] > a[..., 1] + .25)) | ((a[..., 0] > .75) & (a[..., 1] > .62) & (a[..., 0] - a[..., 1] < .2) & (a[..., 0] > a[..., 2] + .1)), minf=.03)] * 3),
+     LC([(0.36, 0.155, 0.64, 0.215)], 34, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 0] > a[..., 2] + .15) & (a[..., 1] > .45), minf=.05)])],
+    tgap=8, photo=ph(0.55, 0.6, 0.8, 1.0), pb=(214, 54, 54), lg=(230, 210, 200), lw=.5, order='LPTCF', credit=['SERGEI EISENSTEIN'], ccol=(230, 210, 200),
+    ft='e', fcol=(220, 200, 196), fin=OLD, seed=1958)
+
+# Mon Oncle (1958): the poster's cream, its black hand-lettered MON ONCLE lifted, Hulot tangled in the red ribbon (director from IMDb)
+std('mon-oncle-1958', ('grad', [(0, (244, 238, 222)), (.6, (230, 220, 196)), (1, (160, 140, 110))]), (24, 24, 24),
+    L([(0.545, 0.016, 0.79, 0.117), (0.63, 0.116, 0.95, 0.2)], 90, (24, 24, 24), mode='dark', gapf=.3),
+    photo=ph(0.5, 0.55, 0.9, 1.1), pb=(220, 40, 40), lg=(24, 24, 24), lw=.55, order='LPTCF', credit=['JACQUES TATI'], ccol=(24, 24, 24),
+    dotst=('COMEDY', (220, 40, 40), WHT), ft='b', fcol=(24, 24, 24), fin=OLD, seed=1958)
