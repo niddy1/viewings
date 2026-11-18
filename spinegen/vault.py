@@ -1776,3 +1776,73 @@ std('the-getaway-1972', ('grad', [(0, (60, 60, 60)), (.6, (24, 24, 24)), (1, (4,
     L((0.055, 0.138, 0.94, 0.224), 76, (242, 222, 62), mode='key', key=(235, 215, 70), t=(70, 150)),
     photo=ph(0.5, 0.58, 1.0, 0.75), pb=(242, 222, 62), lg=WHT, lw=.55, order='LPTCF', credit=['STEVE McQUEEN', 'ALI MacGRAW'], ccol=WHT,
     ft='b', fcol=(200, 200, 196), fin=OLD, seed=1972)
+
+# The Godfather (1972): a 2-tape box; black, the poster's white The Godfather with the puppeteer's hand lifted, Brando with the cat
+std('the-godfather-1972', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.33, 0.745, 0.76, 0.928), 190, WHT, mode='light'),
+    photo=ph(0.5, 0.32, 0.86, 0.9), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((200, 30, 30), WHT),
+    ft='b', fcol=(200, 196, 190), fin=OLD, seed=1972, **TWO)
+
+# The Harder They Come (1972): the poster's sunset colours, THE HARDER THEY COME typeset in heavy rounded capitals in its rainbow, line by line (typeset: the poster's title is a 3-D rainbow block whose letters run into each other and break into stripes in every cut; two tried), Jimmy Cliff with the guns (no logo file: International Films, from IMDb's company credits)
+std('the-harder-they-come-1972', ('grad', [(0, (250, 230, 60)), (.5, (240, 120, 40)), (1, (120, 30, 60))]), (40, 30, 90),
+    TT([('THE', (220, 40, 40)), ('HARDER', (240, 140, 20)), ('THEY', (60, 150, 60)), ('COME', (60, 60, 170))], 'popb', 80, sp=.3, outline=((30, 20, 40), 2)),
+    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(40, 30, 90), studio=['INTERNATIONAL FILMS'], scol=(40, 30, 90), order='lPTCF', credit=['JIMMY CLIFF'], ccol=(40, 30, 90),
+    dotst=('REGGAE', (40, 140, 60), WHT), ft='e', fcol=(40, 30, 90), fin=OLD, seed=1972)
+
+# The Ruling Class (1972): the poster's dark leaves, its white script The Ruling Class lifted, Peter O'Toole under the top hat (no logo file: Keep Films, from IMDb's company credits)
+std('the-ruling-class-1972', ('grad', [(0, (30, 50, 40)), (.6, (10, 18, 14)), (1, (2, 4, 2))]), WHT,
+    LC([(0.05, 0.715, 0.27, 0.835), (0.06, 0.845, 0.94, 0.948)], 110, gapf=.2, valign='base', cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.02)] * 2),
+    photo=ph(0.5, 0.4, 0.8, 1.0), pb=WHT, studio=['KEEP FILMS'], scol=WHT, order='lPTCF', credit=["PETER O'TOOLE", 'ALASTAIR SIM'], ccol=WHT,
+    ft='d', fcol=(200, 210, 204), fin=OLD, seed=1972)
+
+# Amarcord (1973): the poster's painted blues and reds, its white AMARCORD on the black sign cut off it whole, the townsfolk at the tobacconist's (no logo file: F.C. Produzioni, from IMDb's company credits)
+std('amarcord-1973', ('grad', [(0, (60, 140, 200)), (.6, (150, 40, 40)), (1, (50, 12, 12))]), WHT,
+    LC([(0.27, 0.12, 0.73, 0.26)], 120, cuts=[plate_cut(lambda a: _lum(a) < .25)]),
+    photo=ph(0.5, 0.6, 1.0, 0.85), pb=WHT, studio=['F.C. PRODUZIONI'], scol=WHT, order='lPTCF', credit=['UN FILM DI', 'FEDERICO FELLINI'], ccol=WHT,
+    ft='a', vbox=WHT, vink=(150, 40, 40), fcol=(240, 220, 210), fin=OLD, seed=1973)
+
+# F for Fake (1973): black, the poster's white F for FAKE (Orson Welles's in script over it) lifted, Welles's hand with the cigar (no logo file: Les Films de l'Astrophore, from IMDb's company credits)
+std('f-for-fake-1973', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    L((0.36, 0.295, 0.76, 0.44), 110, WHT, mode='light', speck=0),
+    photo=ph(0.4, 0.6, 0.8, 0.85), pb=WHT, studio=["LES FILMS DE", "L'ASTROPHORE"], scol=WHT, order='lPTF', ft='c', fcol=(200, 200, 204), fin=OLD, seed=1973)
+
+# Flesh for Frankenstein (1973): the poster's white, its orange-red dripping FLESH FOR FRANKENSTEIN keyed off it, the faces on the platter (no logo file: Champion, from IMDb's company credits)
+std('flesh-for-frankenstein-1973', ('grad', [(0, (246, 244, 240)), (.6, (226, 222, 214)), (1, (140, 120, 100))]), (240, 80, 40),
+    L([(0.2, 0.728, 0.762, 0.812), (0.055, 0.815, 0.948, 0.948)], 90, (242, 82, 42), mode='key', key=(240, 90, 50), t=(70, 150), gapf=.25),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(242, 82, 42), studio=['CHAMPION'], scol=(40, 40, 40), order='lPTSF', stick=PRC(['$1.99', 'HORROR']),
+    ft='b', fcol=(40, 40, 40), fin=RENTAL, seed=1973)
+
+# Mean Streets (1973): the poster's red and white, its black blocky MEAN STREETS lifted, the gun hand among the tenements (no logo file: Warner Bros., from IMDb's company credits; director from IMDb)
+std('mean-streets-1973', ('grad', [(0, (240, 50, 30)), (.6, (190, 30, 20)), (1, (80, 10, 6))]), (20, 20, 20),
+    LC([(0.22, 0.68, 0.82, 0.875)], 120, cuts=[plate_cut(lambda a: _lum(a) > .85)]),
+    photo=ph(0.5, 0.25, 0.86, 0.85), pb=(20, 20, 20), studio=['WARNER BROS.'], scol=(20, 20, 20), order='lPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=(20, 20, 20),
+    ft='c', fcol=(240, 220, 210), fin=OLD, seed=1973)
+
+# Paper Moon (1973): the poster's navy, its white PAPER MOON lifted, Tatum and Ryan O'Neal on the paper moon
+std('paper-moon-1973', ('grad', [(0, (20, 30, 100)), (.6, (10, 14, 60)), (1, (2, 4, 20))]), WHT,
+    LC([(0.1, 0.083, 0.9, 0.158)], 80, cuts=[key_cut(lambda a: _lum(a) > .8)]),
+    photo=ph(0.45, 0.58, 0.5, 1.4), pb=WHT, lg=WHT, lw=.55, order='LTPCF', credit=["RYAN O'NEAL", "TATUM O'NEAL"], ccol=WHT,
+    ft='e', fcol=(200, 206, 230), fin=OLD, seed=1973)
+
+# Papillon (1973): the poster's white, its blue PAPILLON keyed off it, McQueen and Hoffman in chains (no logo file: Les Films Corona, from IMDb's company credits)
+std('papillon-1973', ('grad', [(0, (246, 248, 250)), (.6, (220, 230, 240)), (1, (120, 140, 160))]), (20, 110, 200),
+    L((0.15, 0.144, 0.85, 0.255), 90, (22, 112, 204), mode='key', key=(20, 110, 200), t=(70, 150)),
+    photo=ph(0.6, 0.55, 0.8, 0.9), pb=(22, 112, 204), studio=['LES FILMS CORONA'], scol=(30, 40, 60), order='lPTCF', credit=['STEVE McQUEEN', 'DUSTIN HOFFMAN'],
+    ccol=(30, 40, 60), ft='a', vbox=(22, 112, 204), fcol=(30, 40, 60), fin=OLD, seed=1973)
+
+# Robin Hood (1973): Disney, the white clamshell; the forest green, the poster's green ROBIN HOOD with its gold keyline cut off the banner in its own colours, Robin's face in the red diamond
+disney('robin-hood-1973', ('grad', [(0, (40, 110, 60)), (.5, (70, 150, 80)), (1, (20, 60, 30))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.115, 0.468, 0.875, 0.6)], 110, outline=((250, 220, 120), 2.4), cuts=[comp_cut(lambda a: a[..., 2] > a[..., 0] + .2, minf=.05)]),
+       face=ph(.45, .18, .2, 1.4), lcol=WHT)
+
+# The Cat Creature (1973): the poster's dark, its gold condensed THE CAT CREATURE cut off it in its own colours, the woman with the gold cat medallion (no logo file: Douglas S. Cramer Company, from IMDb's company credits)
+std('the-cat-creature-1973', ('grad', [(0, (60, 40, 20)), (.6, (20, 14, 8)), (1, (2, 2, 2))]), (220, 170, 90),
+    LC([(0.0, 0.73, 1.0, 0.93)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .35) & (a[..., 0] > a[..., 2] + .1), minf=.05, close=3)]),
+    photo=ph(0.5, 0.35, 0.7, 1.15), pb=(220, 170, 90), studio=['DOUGLAS S. CRAMER', 'COMPANY'], scol=(220, 170, 90), order='lPTSF', stick=RWD(),
+    ft='d', fcol=(200, 190, 170), fin=RENTAL, seed=1973)
+
+# The Sting (1973): the poster's white, its maroon THE STING keyed off it, Newman and Redford in the frame (director from IMDb)
+std('the-sting-1973', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1, (140, 120, 100))]), (140, 40, 40),
+    L((0.06, 0.125, 0.96, 0.235), 66, (144, 42, 42), mode='key', key=(140, 50, 50), t=(70, 150)),
+    photo=ph(0.5, 0.62, 0.86, 0.95), pb=(144, 42, 42), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['PAUL NEWMAN', 'ROBERT REDFORD'], ccol=(40, 30, 26),
+    ft='b', fcol=(40, 30, 26), fin=OLD, seed=1973)
