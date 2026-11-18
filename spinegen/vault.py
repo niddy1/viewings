@@ -1699,3 +1699,80 @@ std('salesman-1969', ('grad', [(0, (40, 110, 100)), (.6, (16, 50, 44)), (1, (2, 
     T('SALESMAN', 'intbk', 84, WHT),
     photo=ph(0.6, 0.25, 0.8, 0.85), pb=WHT, studio=['MAYSLES FILMS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY BY', 'ALBERT & DAVID MAYSLES'], ccol=WHT,
     ft='d', fcol=(200, 220, 216), fin=OLD, seed=1969)
+
+
+# =====================================================================================
+# 1970s (vault-1970s.json, 60 tapes)
+# =====================================================================================
+
+# Le Cercle Rouge (1970): black, the poster's white Le Cercle and Rouge with the red ring between them cut off it in their own colours, Delon in blue halftone (no logo file: Comacico, from IMDb's company credits; director from IMDb, as on the poster)
+std('le-cercle-rouge-1970', ('grad', [(0, (30, 30, 34)), (.6, (10, 10, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.04, 0.17, 0.96, 0.3)], 90, cuts=[key_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)))]),
+    photo=ph(0.5, 0.55, 0.8, 0.9), pb=(40, 170, 220), studio=['COMACICO'], scol=WHT, order='lPTCF', credit=['A FILM BY', 'JEAN-PIERRE MELVILLE'], ccol=WHT,
+    ft='b', fcol=(200, 200, 204), fin=OLD, seed=1970)
+
+# The Aristocats (1970): Disney, the white clamshell; the poster's white, its black THE ARISTOCATS cut off it, Duchess's face in the red diamond
+disney('the-aristocats-1970', ('grad', [(0, (250, 200, 210)), (.5, (240, 170, 190)), (1, (200, 120, 150))]), fin=dict(CLAM, vivid=.15), ink=(40, 30, 40),
+       title=LC([(0.07, 0.15, 0.91, 0.335)], 110, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.003)]),
+       face=ph(.63, .32, .14, 1.4), lcol=(40, 30, 40))
+
+# The Honeymoon Killers (1970): the poster's pink, its black THE HONEYMOON KILLERS lifted, the couple on the trunk (top-billed cast from IMDb)
+std('the-honeymoon-killers-1970', ('grad', [(0, (244, 180, 196)), (.6, (220, 150, 170)), (1, (130, 70, 90))]), (20, 20, 20),
+    [LC([(0.21, 0.864, 0.4, 0.914)], 40, cuts=[comp_cut(lambda a: _lum(a) < .3, minf=.2)]), LC([(0.1, 0.912, 0.79, 0.962)], 60, cuts=[key_cut(lambda a: _lum(a) < .3)])],
+    tgap=8,
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCSF', credit=['SHIRLEY STOLER', 'TONY LO BIANCO'], ccol=(20, 20, 20),
+    stick=flow(dot, 74, ['CRIME'], (20, 20, 20), (244, 180, 196)), ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=RENTAL, seed=1970)
+
+# A Clockwork Orange (1971): the poster's white, its orange A CLOCKWORK ORANGE with the black shadow cut off it in its own colours, Alex with the knife in the triangle
+std('a-clockwork-orange-1971', ('grad', [(0, (248, 248, 248)), (.6, (230, 228, 224)), (1, (140, 130, 120))]), (240, 110, 20),
+    LC([(0.185, 0.765, 0.81, 0.925)], 130, cuts=[key_cut(lambda a: ((a[..., 0] > .8) & (a[..., 1] > .25) & (a[..., 1] < .75) & (a[..., 2] < .35)) | (_lum(a) < .2))]),
+    photo=ph(0.5, 0.3, 0.6, 1.2), pb=(240, 110, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A STANLEY KUBRICK', 'PRODUCTION'], ccol=(20, 20, 20),
+    ft='d', vbox=(240, 110, 20), fcol=(20, 20, 20), fin=OLD, seed=1971)
+
+# Straw Dogs (1971): the poster's white, its black stencil "STRAW DOGS" lifted, Dustin Hoffman behind the broken glasses (no logo file: Amerbroco, from IMDb's company credits)
+std('straw-dogs-1971', ('grad', [(0, (246, 246, 246)), (.6, (226, 226, 226)), (1, (120, 120, 120))]), (20, 20, 20),
+    L((0.105, 0.866, 0.895, 0.912), 70, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(20, 20, 20), studio=['AMERBROCO', 'PRODUCTIONS'], scol=(20, 20, 20), order='lPTCF', credit=['A SAM PECKINPAH', 'FILM'],
+    ccol=(20, 20, 20), ft='e', fcol=(20, 20, 20), fin=OLD, seed=1971)
+
+# The Cat o' Nine Tails (1971): the poster's yellow, its red script "Cat O'Nine Tails" keyed off it, the black cat with the woman on its back (director from IMDb)
+std('the-cat-o-nine-tails-1971', ('grad', [(0, (250, 230, 40)), (.6, (240, 200, 20)), (1, (160, 120, 10))]), (210, 30, 30),
+    L([(0.3, 0.686, 0.745, 0.744), (0.42, 0.742, 0.655, 0.796)], 80, (214, 32, 32), mode='key', key=(210, 40, 40), t=(70, 150), gapf=.25),
+    photo=ph(0.75, 0.38, 0.5, 1.3), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCSF', credit=['A FILM BY', 'DARIO ARGENTO'], ccol=(20, 20, 20),
+    stick=BAR('71 5530', top='GIALLO', fill=(236, 230, 210)), ft='b', fcol=(20, 20, 20), fin=RENTAL, seed=1971)
+
+# The Last Picture Show (1971): the poster's white, its red slab-serif THE LAST PICTURE SHOW keyed off it, Cybill Shepherd and the boys (director from IMDb)
+std('the-last-picture-show-1971', ('grad', [(0, (246, 246, 244)), (.6, (226, 226, 222)), (1, (120, 120, 116))]), (190, 20, 30),
+    L([(0.185, 0.055, 0.495, 0.142), (0.075, 0.145, 0.475, 0.232), (0.27, 0.232, 0.925, 0.32), (0.155, 0.322, 0.608, 0.41)], 76, (194, 22, 32), mode='key', key=(190, 30, 40), t=(70, 150), gapf=.22),
+    photo=ph(0.5, 0.72, 0.9, 0.85), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['A PETER BOGDANOVICH', 'FILM'], ccol=(30, 30, 30),
+    ft='c', fcol=(30, 30, 30), fin=OLD, seed=1971)
+
+# The Murder of Fred Hampton (1971): the poster's black, its white stencil THE MURDER OF FRED HAMPTON lifted, the bullet holes in the wall (no logo file: The Film Group, Chicago, from IMDb's company credits)
+std('the-murder-of-fred-hampton-1971', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (220, 220, 214),
+    L([(0.005, 0.012, 0.93, 0.08), (0.0, 0.077, 0.985, 0.144)], 64, (226, 226, 220), mode='light', gapf=.25),
+    photo=ph(0.5, 0.52, 0.86, 1.1), pb=(226, 226, 220), studio=['THE FILM GROUP'], scol=(226, 226, 220), order='lPTCF', credit=['A DOCUMENTARY BY', 'HOWARD ALK'],
+    ccol=(226, 226, 220), ft='a', fcol=(190, 190, 186), fin=OLD, seed=1971)
+
+# Walkabout (1971): the dusk sky, the poster's white spaced WALKABOUT lifted, the figure on the dune under the moon (no logo file: Max L. Raab Productions, from IMDb's company credits; director from IMDb)
+std('walkabout-1971', ('grad', [(0, (60, 70, 100)), (.6, (40, 34, 40)), (1, (10, 8, 6))]), WHT,
+    LC([(0.52, 0.425, 0.975, 0.47)], 64, cuts=[key_cut(lambda a: (_lum(a) > .62) & (_sat(a) < .2))]),
+    photo=ph(0.5, 0.7, 0.86, 0.75), pb=(240, 150, 60), studio=['MAX L. RAAB', 'PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['A NICOLAS ROEG', 'FILM'], ccol=WHT,
+    ft='d', fcol=(200, 200, 210), fin=OLD, seed=1971)
+
+# Willy Wonka & the Chocolate Factory (1971): the candy colours, the poster's gold WILLY WONKA & THE CHOCOLATE FACTORY cut off the sky in its own colours, Gene Wilder in the top hat (no logo file: Wolper Pictures, from IMDb's company credits)
+std('willy-wonka-the-chocolate-factory-1971', ('grad', [(0, (120, 60, 140)), (.6, (70, 30, 90)), (1, (20, 8, 30))]), (250, 220, 60),
+    LC([(0.04, 0.035, 0.8, 0.255)], 130, outline=((60, 30, 10), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .6) & (a[..., 0] > a[..., 2] + .25), minf=.02, close=3)]),
+    photo=ph(0.7, 0.6, 0.6, 1.3), pb=(250, 220, 60), studio=['WOLPER PICTURES'], scol=(250, 220, 60), order='lPTCF', credit=['GENE WILDER'], ccol=(250, 220, 60),
+    dotst=('FAMILY', (250, 220, 60), (70, 30, 90)), ft='a', vbox=(250, 220, 60), vink=(70, 30, 90), fcol=(220, 200, 230), fin=OLD, seed=1971)
+
+# The Crimes of the Black Cat (1972): the poster's orange, its yellow The Crimes of the Black Cat cut off it in its own colours, the black cat over the torn photographs (no logo file: Compagnia Cinematografica Champion, from IMDb's company credits)
+std('the-crimes-of-the-black-cat-1972', ('grad', [(0, (250, 180, 30)), (.6, (230, 130, 10)), (1, (120, 50, 0))]), (250, 230, 60),
+    LC([(0.48, 0.43, 0.84, 0.735)], 170, outline=((30, 14, 4), 2.2), cuts=[key_cut(lambda a: (a[..., 0] > .85) & (a[..., 1] > .6) & (a[..., 2] < .35))]),
+    photo=ph(0.3, 0.45, 0.6, 1.4), pb=(30, 14, 4), studio=['CHAMPION'], scol=(30, 14, 4), order='lPTSF', stick=RWD(fill=(250, 240, 210)),
+    ft='e', fcol=(40, 20, 6), fin=RENTAL, seed=1972)
+
+# The Getaway (1972): the poster's dark grey, its yellow THE GETAWAY keyed off it, the gun on the papers
+std('the-getaway-1972', ('grad', [(0, (60, 60, 60)), (.6, (24, 24, 24)), (1, (4, 4, 4))]), (240, 220, 60),
+    L((0.055, 0.138, 0.94, 0.224), 76, (242, 222, 62), mode='key', key=(235, 215, 70), t=(70, 150)),
+    photo=ph(0.5, 0.58, 1.0, 0.75), pb=(242, 222, 62), lg=WHT, lw=.55, order='LPTCF', credit=['STEVE McQUEEN', 'ALI MacGRAW'], ccol=WHT,
+    ft='b', fcol=(200, 200, 196), fin=OLD, seed=1972)
