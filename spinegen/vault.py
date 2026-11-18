@@ -2559,3 +2559,75 @@ std('barton-fink-1991', ('grad', [(0, (180, 130, 80)), (.6, (90, 60, 30)), (1, (
 disney('beauty-and-the-beast-1991', ('grad', [(0, (30, 60, 150)), (.5, (50, 90, 190)), (1, (14, 30, 90))]), fin=dict(CLAM, vivid=.2),
        title=TT([('Beauty', (240, 200, 110)), ('and the', (240, 200, 110)), ('Beast', (240, 200, 110))], 'pagb', 96, sp=.3, outline=((40, 30, 80), 2)),
        face=ph(.255, .3, .12, 1.4), lcol=WHT)
+
+# Boyz n the Hood (1991): the poster's blue night, its white graffiti BOYZ N THE HOOD cut off it whole, Tre and Doughboy on the car
+std('boyz-n-the-hood-1991', ('grad', [(0, (40, 80, 160)), (.6, (12, 26, 60)), (1, (2, 6, 16))]), WHT,
+    LC([(0.05, 0.805, 0.948, 0.965)], 130, cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.01)]),
+    photo=ph(0.5, 0.33, 0.86, 0.9), pb=(250, 200, 60), lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOHN SINGLETON'], ccol=WHT,
+    ft='a', vbox=(250, 200, 60), vink=(20, 20, 20), fcol=(200, 210, 240), fin=RENTAL, seed=1991)
+
+# Cape Fear (1991): Amblin, a slipcase; the storm-blue lake, the poster's white condensed CAPE FEAR lifted, De Niro's eyes in the water
+std('cape-fear-1991', ('grad', [(0, (30, 70, 140)), (.6, (8, 20, 46)), (1, (2, 4, 10))]), WHT,
+    L((0.104, 0.046, 0.888, 0.176), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.48, 0.9, 0.5), pb=(140, 180, 240), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
+    ft='c', fcol=(190, 206, 236), fin=RENTAL, seed=1991)
+
+# Delicatessen (1991): black, the poster's gold DELICATESSEN cut off it, the plump pig above and the cleaver below the title
+std('delicatessen-1991', ('grad', [(0, (40, 34, 20)), (.6, (12, 10, 6)), (1, (2, 2, 2))]), (220, 190, 120),
+    LC([(0.103, 0.532, 0.902, 0.596)], 90, cuts=[key_cut(lambda a: (_lum(a) > .4) & (a[..., 0] > a[..., 2]))]),
+    photo=ph(0.5, 0.3, 0.8, 0.6), pb=(220, 190, 120), lg=(220, 190, 120), lw=.5, order='LPTCF', credit=['UN FILM DE', 'JEUNET & CARO'], ccol=(220, 190, 120),
+    ft='e', fcol=(200, 186, 150), fin=OLD, seed=1991)
+
+# Hook (1991): Amblin, a slipcase; the treasure map's parchment, the poster's red swash Hook cut off it, Hook and Peter face to face
+std('hook-1991', ('grad', [(0, (230, 200, 140)), (.5, (200, 160, 90)), (1, (90, 60, 30))]), (180, 20, 30),
+    LC([(0.3, 0.6, 0.86, 0.82)], 150, cuts=[comp_cut(lambda a: ((a[..., 0] > .45) & (a[..., 1] < .25)) | (_lum(a) < .15), minf=.05, close=2)]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(140, 20, 30), lg=(60, 30, 14), lw=.55, order='LPTCSF', credit=['DUSTIN HOFFMAN', 'ROBIN WILLIAMS'], ccol=(60, 30, 14), stick=BAR('91 1211', top='ADVENTURE', fill=(240, 232, 210)),
+    ft='b', fcol=(60, 30, 14), fin=RENTAL, seed=1991)
+
+# Night on Earth (1991): the cab's black, the poster's tilted yellow band with its black NIGHT ON EARTH cut off it whole and levelled, Winona Ryder at the wheel (JVC logo)
+std('night-on-earth-1991', ('grad', [(0, (30, 30, 40)), (.6, (10, 10, 14)), (1, (2, 2, 4))]), (250, 200, 30),
+    LC([(0.0, 0.39, 1.0, 0.61)], 120, cuts=[plate_cut(lambda a: (a[..., 0] > .75) & (a[..., 1] > .6) & (a[..., 2] < .35), rot='auto')]),
+    photo=ph(0.6, 0.18, 0.8, 0.6), pb=(250, 200, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=(250, 220, 120),
+    ft='d', fcol=(210, 206, 196), fin=OLD, seed=1991)
+
+# Terminator 2: Judgment Day (1991): the night's steel blue, the poster's white TERMINATOR 2 and red-shadowed JUDGMENT DAY cut off it into one line, Arnold on the Harley with the shotgun
+std('terminator-2-judgment-day-1991', ('grad', [(0, (40, 60, 90)), (.6, (10, 16, 26)), (1, (2, 2, 6))]), WHT,
+    LC([(0.01, 0.832, 0.955, 0.898), (0.045, 0.898, 0.955, 0.962)], 110, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: (_lum(a) > .7) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)] * 2),
+    photo=ph(0.58, 0.35, 0.86, 1.1), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='a', vbox=(200, 30, 30), fcol=(200, 210, 226), fin=RENTAL, seed=1991)
+
+# The Fisher King (1991): black, the poster's white brushed THE / FISHER / KING cut off it whole, Jack and Parry in the doorway's light under the title
+std('the-fisher-king-1991', ('grad', [(0, (60, 40, 20)), (.6, (18, 12, 6)), (1, (2, 2, 2))]), WHT,
+    LC([(0.38, 0.7, 0.94, 0.945)], 140, cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.005)]),
+    photo=ph(0.38, 0.35, 0.76, 1.2), pb=(250, 200, 120), lg=WHT, lw=.5, order='LTPF',
+    ft='c', fcol=(230, 210, 180), fin=RENTAL, seed=1991)
+
+# The Silence of the Lambs (1991): the poster's black, its orange condensed the silence of the lambs keyed off it, the death's-head moth on Clarice's lips
+std('the-silence-of-the-lambs-1991', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (226, 110, 40),
+    L((0.075, 0.81, 0.928, 0.903), 96, (226, 110, 40), mode='key', key=(220, 110, 40), t=(70, 160)),
+    photo=ph(0.5, 0.45, 0.6, 1.1), pb=(226, 110, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['JODIE FOSTER', 'ANTHONY HOPKINS'], ccol=WHT, dotst=('THRILLER', (226, 110, 40), WHT),
+    ft='e', fcol=(220, 210, 200), fin=RENTAL, seed=1991)
+
+# 3 Ninjas (1992): Touchstone, a slipcase; the poster's hot pink into orange, its purple 3 Ninjas cut off it whole and levelled, the three boys mid-kick
+std('3-ninjas-1992', ('grad', [(0, (250, 60, 170)), (.5, (240, 120, 120)), (1, (240, 150, 40))]), (80, 30, 120),
+    LC([(0.1, 0.735, 0.9, 0.9)], 120, cuts=[comp_cut(lambda a: (a[..., 2] > a[..., 1] + .08) & (_lum(a) < .45), minf=.02, rot=12)]),
+    photo=ph(0.5, 0.3, 0.9, 0.8), pb=(80, 30, 120), lg=(60, 20, 90), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='a', vbox=(80, 30, 120), fcol=(60, 20, 90), fin=RENTAL, seed=1992)
+
+# A Few Good Men (1992): the dark of the poster, its gold A FEW GOOD MEN keyed off it, Cruise, Nicholson and Moore in uniform
+std('a-few-good-men-1992', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, (2, 2, 6))]), (230, 190, 90),
+    L((0.124, 0.752, 0.892, 0.812), 84, (230, 190, 90), mode='key', key=(220, 180, 70), t=(70, 160)),
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE', 'JACK NICHOLSON'], ccol=WHT,
+    ft='b', fcol=(210, 210, 220), fin=RENTAL, seed=1992)
+
+# Aladdin (1992): Disney clamshell; the Genie's blue night, the poster's gold script Aladdin cut off it, Aladdin's face in the diamond
+disney('aladdin-1992', ('grad', [(0, (40, 60, 160)), (.5, (60, 110, 210)), (1, (90, 40, 140))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.06, 0.055, 0.935, 0.21)], 130, outline=((60, 30, 10), 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .4) & (a[..., 2] < .45), minf=.01, close=2)]),
+       face=ph(.66, .477, .1, 1.4), lcol=WHT)
+
+# Batman Returns (1992): the night, the poster's white serif BATMAN / RETURNS lifted into one line, Batman, Catwoman and the Penguin stacked in the dark
+std('batman-returns-1992', ('grad', [(0, (30, 40, 70)), (.6, (8, 10, 20)), (1, (0, 0, 2))]), WHT,
+    L([(0.198, 0.75, 0.8, 0.818), (0.128, 0.83, 0.874, 0.868)], 96, WHT, mode='light', valign='base', gapf=.2, speck=.05),
+    photo=ph(0.5, 0.35, 0.6, 1.4), pb=(160, 190, 240), lg=WHT, lw=.5, order='LPTF',
+    ft='d', fcol=(190, 200, 230), fin=RENTAL, seed=1992)
