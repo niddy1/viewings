@@ -3134,3 +3134,74 @@ std('jackie-brown-1997', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2,
     LC([(0.235, 0.775, 0.675, 0.842), (0.275, 0.837, 0.73, 0.905)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .4) & (a[..., 2] < .45), minf=.02, close=2)] * 2),
     photo=ph(0.6, 0.35, 0.8, 0.9), pb=(250, 200, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A QUENTIN TARANTINO', 'FILM'], ccol=(250, 220, 140),
     ft='c', fcol=(220, 210, 190), fin=RENTAL, seed=1997)
+
+# Kiss the Girls (1997): the poster's white mist, its black kiss the girls cut off it, Morgan Freeman and Ashley Judd
+std('kiss-the-girls-1997', ('grad', [(0, (240, 240, 240)), (.5, (180, 190, 196)), (1, (40, 46, 50))]), (20, 20, 20),
+    LC([(0.105, 0.805, 0.895, 0.875)], 100, cuts=[key_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 80, 30), lg=(20, 20, 20), lw=.55, order='LPTF', dotst=('THRILLER', (200, 80, 30), WHT),
+    ft='e', fcol=(220, 220, 220), fin=RENTAL, seed=1997)
+
+# L.A. Confidential (1997): black, the poster's red slanted L.A. Confidential cut off it whole and levelled, Kim Basinger in the hood
+std('l-a-confidential-1997', ('grad', [(0, (50, 40, 40)), (.6, (14, 10, 10)), (1, (2, 2, 2))]), (210, 30, 30),
+    LC([(0.34, 0.6, 0.96, 0.86)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .3), minf=.02, rot=-20)]),
+    photo=ph(0.4, 0.2, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['KEVIN SPACEY', 'RUSSELL CROWE'], ccol=WHT,
+    ft='a', vbox=(210, 30, 30), fcol=(210, 206, 206), fin=RENTAL, seed=1997)
+
+# Liar Liar (1997): the poster's white, LIAR LIAR typeset in heavy capitals, the first in the poster's dark red and the second in black (parked for Ian's logo, see data/logos-wanted.md: Jim Carrey's hair cuts through the second LIAR), Jim Carrey's grin
+std('liar-liar-1997', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    TT([('LIAR', (150, 24, 30)), ('LIAR', (20, 20, 20))], 'intbk', 110, sp=.3),
+    photo=ph(0.5, 0.45, 0.6, 0.85), pb=(160, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
+    ft='b', fcol=(30, 30, 30), fin=RENTAL, seed=1997)
+
+# Life Is Beautiful (1997): the poster's stone, its dark serif LIFE IS BEAUTIFUL cut off it into one line, Guido with Giosuè on the bicycle (director from IMDb)
+std('life-is-beautiful-1997', ('grad', [(0, (236, 230, 220)), (.6, (210, 200, 186)), (1, (110, 100, 86))]), (40, 26, 20),
+    LC([(0.03, 0.565, 0.505, 0.695), (0.03, 0.69, 0.505, 0.775)], 100, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) < .28, minf=.02)] * 2),
+    photo=ph(0.65, 0.5, 0.7, 1.2), pb=(40, 26, 20), lg=(40, 26, 20), lw=.55, order='LPTCF', credit=['LA VITA È BELLA'], ccol=(120, 40, 30),
+    ft='c', fcol=(40, 26, 20), fin=RENTAL, seed=1997)
+
+# Princess Mononoke (1997): Studio Ghibli, a slipcase; the forest's green, the poster's white spaced PRINCESS / MONONOKE lifted into one line, San with the blood on her face and the white wolf
+std('princess-mononoke-1997', ('grad', [(0, (80, 110, 80)), (.6, (24, 40, 26)), (1, (4, 8, 4))]), WHT,
+    L([(0.315, 0.112, 0.715, 0.127), (0.08, 0.13, 0.945, 0.215)], 96, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.4, 0.5, 0.86, 1.0), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'HAYAO MIYAZAKI'], ccol=WHT,
+    ft='d', fcol=(210, 220, 210), fin=RENTAL, seed=1997)
+
+# Schizopolis (1997): the poster's white, its black mixed-type Schizopolis cut off it, the grid of Soderbergh faces (no logo file: .406 Production, from IMDb's company credits)
+std('schizopolis-1997', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    LC([(0.16, 0.715, 0.83, 0.82)], 110, cuts=[key_cut(lambda a: _lum(a) < .32)]),
+    photo=ph(0.5, 0.33, 0.9, 0.75), pb=(200, 30, 30), studio=['.406 PRODUCTION'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'STEVEN SODERBERGH'], ccol=(20, 20, 20),
+    ft='a', fcol=(20, 20, 20), fin=OLD, seed=1997)
+
+# Taste of Cherry (1997): the poster's ochre, TASTE OF CHERRY typeset in spaced capitals in cream (parked for Ian's logo, see data/logos-wanted.md: the poster's pale title is barely lighter than the ochre and the lift came out in pieces), Mr. Badii's shadow (Kanoon logo; director from IMDb)
+std('taste-of-cherry-1997', ('grad', [(0, (220, 160, 50)), (.6, (170, 110, 30)), (1, (60, 36, 8))]), (250, 236, 200),
+    TT([('TASTE', (250, 236, 200)), ('OF', (250, 236, 200)), ('CHERRY', (250, 236, 200))], 'intxb', 84, sp=.4),
+    photo=ph(0.4, 0.35, 0.7, 1.2), pb=(250, 236, 200), lg=(250, 236, 200), lw=.5, order='LPTCF', credit=['A FILM BY', 'ABBAS KIAROSTAMI'], ccol=(250, 236, 200),
+    ft='b', fcol=(250, 236, 200), fin=OLD, seed=1997)
+
+# The Game (1997): black, the poster's white serif THE / GAME lifted into one line, Michael Douglas's face coming apart in puzzle pieces
+std('the-game-1997', ('grad', [(0, (40, 30, 26)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
+    L([(0.29, 0.742, 0.62, 0.81), (0.24, 0.805, 0.935, 0.91)], 110, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(200, 80, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID FINCHER', 'FILM'], ccol=WHT,
+    ft='c', fcol=(206, 200, 196), fin=RENTAL, seed=1997)
+
+# The Ice Storm (1997): the night's black and ice blue, the poster's pale blue theicestorm lifted, the families in the frozen woods
+std('the-ice-storm-1997', ('grad', [(0, (30, 50, 70)), (.6, (8, 14, 20)), (1, (2, 2, 4))]), (170, 210, 236),
+    L((0.315, 0.14, 0.97, 0.2), 90, (170, 210, 236), mode='light', speck=0),
+    photo=ph(0.55, 0.5, 0.86, 0.9), pb=(170, 210, 236), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(170, 196, 220), fin=RENTAL, seed=1997)
+
+# The Rainmaker (1997): American Zoetrope, the poster's black, its gold serif THE RAINMAKER cut off it, Matt Damon and the courtroom
+std('the-rainmaker-1997', ('grad', [(0, (60, 40, 26)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), (220, 180, 100),
+    LC([(0.03, 0.06, 0.975, 0.145)], 100, cuts=[key_cut(lambda a: (a[..., 0] > .45) & (a[..., 2] < .4) & (a[..., 0] > a[..., 2] + .15))]),
+    photo=ph(0.5, 0.4, 0.86, 0.8), pb=(220, 180, 100), lg=WHT, lw=.5, order='LPTCSF', credit=['MATT DAMON'], ccol=WHT, stick=BAR('97 1121', top='DRAMA', fill=(236, 230, 214)),
+    ft='a', fcol=(220, 200, 170), fin=RENTAL, seed=1997)
+
+# Wag the Dog (1997): black, the poster's red WAG, white THE and blue DOG cut off it in their own colours, Hoffman above and De Niro below
+std('wag-the-dog-1997', ('grad', [(0, (30, 30, 40)), (.6, (10, 10, 14)), (1, (2, 2, 4))]), WHT,
+    LC([(0.155, 0.492, 0.83, 0.565)], 100, cuts=[key_cut(lambda a: (_sat(a) > .4) | ((_lum(a) > .6) & (_sat(a) < .2)))]),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['DUSTIN HOFFMAN', 'ROBERT DE NIRO'], ccol=WHT,
+    ft='d', fcol=(200, 200, 210), fin=RENTAL, seed=1997)
+
+# A Bug's Life (1998): Pixar clamshell; the leaf's green, the poster's yellow a bug's life cut off it, Flik's face in the diamond
+disney('a-bug-s-life-1998', ('grad', [(0, (120, 190, 60)), (.5, (80, 160, 40)), (1, (30, 80, 20))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.28, 0.14, 0.73, 0.34)], 150, outline=((60, 40, 10), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .5) & (a[..., 2] < .45), minf=.01, close=2)]),
+       face=ph(.32, .46, .22, 1.4), lcol=WHT)
