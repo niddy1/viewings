@@ -2043,3 +2043,79 @@ std('the-warriors-1979', ('grad', [(0, (50, 30, 30)), (.6, (14, 8, 8)), (1, (2, 
 std('vengeance-is-mine-1979', ('grad', [(0, (160, 110, 80)), (.6, (70, 40, 30)), (1, (14, 8, 6))]), WHT,
     LC([(0.08, 0.418, 0.92, 0.498)], 96, cuts=[comp_cut(lambda a: (_lum(a) > .86) & (_sat(a) < .14), minf=.02)]),
     photo=ph(0.6, 0.2, 0.62, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(230, 210, 200), fin=OLD, seed=1979)
+
+
+# ---------------------------------------------------------------- the 1980s
+# Airplane! (1980): the poster's sky blue, its red extruded AIRPLANE! cut off it whole and turned nearer level, the airliner with its knotted fuselage
+std('airplane-1980', ('grad', [(0, (230, 240, 250)), (.4, (60, 140, 220)), (1, (10, 50, 120))]), (220, 30, 40),
+    LC([(0.03, 0.13, 0.96, 0.475)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .4) & (a[..., 0] > a[..., 1] + .25), top=1, rot=10)]),
+    photo=ph(0.5, 0.72, 0.9, 0.62), pb=(220, 30, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
+    ft='a', vbox=(220, 30, 40), fcol=(230, 236, 246), fin=RENTAL, seed=1980)
+
+# Kagemusha (1980): the poster's gold and black, its white KAGEMUSHA lifted, the warlord in his armour
+std('kagemusha-1980', ('grad', [(0, (180, 140, 40)), (.5, (60, 44, 14)), (1, (8, 6, 2))]), WHT,
+    L((0.13, 0.615, 0.882, 0.688), 76, WHT, mode='light'),
+    photo=ph(0.48, 0.3, 0.8, 1.0), pb=(230, 190, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'AKIRA KUROSAWA'], ccol=(240, 220, 170),
+    ft='c', fcol=(230, 210, 170), fin=OLD, seed=1980)
+
+# Raging Bull (1980): black, the poster's red stencilled RAGING / BULL keyed off it into one line, De Niro's bruised face
+std('raging-bull-1980', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (214, 36, 40),
+    L([(0.175, 0.728, 0.805, 0.811), (0.175, 0.814, 0.805, 0.895)], 96, (214, 36, 40), mode='key', key=(214, 40, 44), t=(70, 150), valign='base'),
+    photo=ph(0.4, 0.3, 0.7, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='b', vbox=(214, 36, 40), fcol=(210, 210, 210), fin=OLD, seed=1980)
+
+# The Blues Brothers (1980): black, the white THE BLUES and BROTHERS cut off the poster's two mugshot boards, Jake and Elwood in their hats and shades
+std('the-blues-brothers-1980', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    LC([(0.1, 0.49, 0.2, 0.535), (0.13, 0.531, 0.512, 0.648), (0.548, 0.682, 0.985, 0.786)], 80, valign='base', margin=0, cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.08)] * 3),
+    photo=ph(0.5, 0.22, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['JOHN BELUSHI', 'DAN AYKROYD'], ccol=WHT,
+    ft='d', fcol=(200, 200, 210), fin=RENTAL, seed=1980)
+
+# The Empire Strikes Back (1980): Lucasfilm, a slipcase; deep blue, the poster's whole white STAR WARS / THE EMPIRE STRIKES BACK logo cut off it, Han and Leia's embrace
+std('the-empire-strikes-back-1980', ('grad', [(0, (40, 60, 120)), (.6, (12, 20, 46)), (1, (4, 6, 16))]), WHT,
+    LC([(0.19, 0.685, 0.81, 0.935)], 150, cuts=[comp_cut(lambda a: (_lum(a) > .78) & (_sat(a) < .3), minf=.004)]),
+    photo=ph(0.62, 0.3, 0.6, 0.9), pb=(250, 180, 80), lg=WHT, lw=.5, order='LPTSF', stick=RWD(),
+    ft='e', fcol=(200, 210, 230), fin=RENTAL, seed=1980)
+
+# The Shining (1980): the poster's yellow, its black THE (the T and H made of the halftone of Danny's face) and SHiNiNG cut off it word by word, dots and all, and turned level, the halftone face again in the frame
+std('the-shining-1980', ('grad', [(0, (252, 220, 20)), (.6, (240, 200, 10)), (1, (150, 110, 4))]), (20, 20, 20),
+    LC([(0.13, 0.19, 0.79, 0.565), (0.12, 0.44, 0.83, 0.7)], 110, valign='base', margin=0, gapf=.3,
+       cuts=[comp_cut(lambda a: _lum(a) < .4, keep=lambda cx, cy: .19 + .375 * cy < .56 - .1417 * (.13 + .66 * cx - .2), minf=0, opn=1, rot=-18),  # THE: everything above the line between the words, every dot
+             pick_cut(lambda a: _lum(a) < .4, (0.12, 0.44, 0.83, 0.7), [(0.218, 0.627), (0.321, 0.606), (0.406, 0.598), (0.407, 0.553), (0.491, 0.573), (0.579, 0.567), (0.58, 0.52), (0.668, 0.538), (0.765, 0.519)], r=.02, rot=-18, margin=0)]),
+    photo=ph(0.47, 0.27, 0.34, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='a', vbox=(20, 20, 20), vink=(250, 220, 20), fcol=(20, 20, 20), fin=OLD, seed=1980)
+
+# Raiders of the Lost Ark (1981): the temple's dark gold, the poster's orange INDIANA JONES and its white "and the RAIDERS of the LOST ARK", each cut off it in its own colours and run into one line, Indy with the whip
+std('raiders-of-the-lost-ark-1981', ('grad', [(0, (120, 80, 30)), (.6, (50, 30, 10)), (1, (10, 6, 2))]), (250, 180, 40),
+    LC([(0.07, 0.06, 0.95, 0.236), (0.42, 0.158, 0.635, 0.193), (0.29, 0.192, 0.875, 0.227), (0.49, 0.228, 0.885, 0.266)], 90, valign='base', margin=0, gapf=.25,
+       cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 2] < .4) & (a[..., 0] > a[..., 2] + .35), minf=.01, close=3)] + [comp_cut(lambda a: (_lum(a) > .75) & (_sat(a) < .25), minf=.02)] * 3),
+    photo=ph(0.45, 0.55, 0.7, 1.15), pb=(250, 180, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(230, 200, 150), fin=RENTAL, seed=1981)
+
+# The Fox and the Hound (1981): Disney clamshell; the forest's teal, the poster's cream The Fox and the Hound with its orange edge cut off it whole, Tod's face in the diamond
+disney('the-fox-and-the-hound-1981', ('grad', [(0, (20, 80, 80)), (.5, (40, 120, 110)), (1, (10, 50, 50))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.2, 0.168, 0.765, 0.35)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .62) | ((a[..., 0] > .7) & (a[..., 1] < .55) & (a[..., 2] < .35)), minf=.01, close=2)]),
+       face=ph(.7, .575, .17, 1.4), lcol=WHT)
+
+# Thief (1981): black, the poster's blue brushed Thief keyed off it, James Caan in the welding goggles under the sparks (director from IMDb)
+std('thief-1981', ('grad', [(0, (30, 30, 34)), (.6, (10, 10, 12)), (1, (2, 2, 2))]), (60, 140, 230),
+    LC([(0.23, 0.76, 0.74, 0.88)], 110, cuts=[key_cut(lambda a: (a[..., 2] > .45) & (a[..., 2] > a[..., 0] + .2))]),
+    photo=ph(0.5, 0.36, 0.8, 1.05), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A MICHAEL MANN', 'FILM'], ccol=(150, 190, 240),
+    dotst=('CRIME', (60, 140, 230), WHT), ft='b', fcol=(190, 196, 210), fin=OLD, seed=1981)
+
+# Time Bandits (1981): the poster's sky blue, its white serif TIME / BANDITS lifted into one line, the galleon on the giant's hat
+std('time-bandits-1981', ('grad', [(0, (60, 150, 230)), (.6, (20, 90, 190)), (1, (6, 30, 80))]), WHT,
+    LC([(0.565, 0.08, 0.935, 0.255), (0.565, 0.262, 0.935, 0.386)], 100, valign='base', margin=0, gapf=.3, cuts=[key_cut(lambda a: (_lum(a) > .68) & (_sat(a) < .4))] * 2),
+    photo=ph(0.25, 0.68, 0.5, 1.5), pb=(250, 220, 150), lg=WHT, lw=.5, order='LTPF',
+    ft='d', fcol=(220, 230, 246), fin=OLD, seed=1981)
+
+# E.T. the Extra-Terrestrial (1982): night blue, the poster's white E.T. and its small THE EXTRA-TERRESTRIAL lifted into one line, the bicycle crossing the moon
+std('e-t-the-extra-terrestrial-1982', ('grad', [(0, (40, 60, 110)), (.6, (12, 18, 40)), (1, (2, 4, 12))]), WHT,
+    L([(0.345, 0.79, 0.65, 0.917), (0.262, 0.933, 0.738, 0.957)], 110, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.25, 0.86, 0.8), pb=(220, 230, 250), lg=WHT, lw=.5, order='LPTSF', stick=BAR('82 0611', top='FAMILY', fill=(226, 232, 240)),
+    ft='a', vbox=(60, 90, 160), fcol=(200, 210, 230), fin=RENTAL, seed=1982)
+
+# Missing (1982): the poster's white, its dark-red typewritten missing. keyed off it, Jack Lemmon and Sissy Spacek
+std('missing-1982', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (130, 128, 124))]), (150, 30, 40),
+    L((0.432, 0.468, 0.955, 0.53), 84, (150, 30, 40), mode='key', key=(150, 30, 40), t=(70, 160), speck=0),
+    photo=ph(0.6, 0.76, 0.76, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'COSTA-GAVRAS'], ccol=(30, 30, 30),
+    ft='e', fcol=(30, 30, 30), fin=OLD, seed=1982)
