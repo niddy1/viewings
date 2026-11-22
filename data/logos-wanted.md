@@ -6,6 +6,10 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Dinosaur (2000) | Vault 2000s | `logos/dinosaur-2000-title.png` | typeset (Disney clamshell); bronze letters shaded over cloud |
+| Gone in Sixty Seconds (2000) | Vault 2000s | `logos/gone-in-sixty-seconds-2000-title.png` | typeset; slanted red and chrome lettering in flames |
+| Dave Chappelle: Killin' Them Softly (2000) | Vault 2000s | `logos/dave-chappelle-killin-them-softly-2000-title.png` | typeset; sideways green hand lettering on green and yellow |
+| Amores Perros (2000) | Vault 2000s | `logos/amores-perros-2000-title.png` | typeset; the poster chops the words into blocks behind the photo |
 | Three Kings (1999) | Vault 1990s | `logos/three-kings-1999-title.png` | typeset; the blue letters fade into the white sky |
 | Fight Club (1999) | Vault 1990s | `logos/fight-club-1999-title.png` | typeset; the title is pressed into a tilted soap bar held in a hand |
 | Taste of Cherry (1997) | Vault 1990s | `logos/taste-of-cherry-1997-title.png` | typeset; the pale title is barely lighter than the ochre |

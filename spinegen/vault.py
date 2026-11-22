@@ -3456,3 +3456,75 @@ std('three-kings-1999', ('grad', [(0, (230, 236, 246)), (.6, (200, 210, 226)), (
 disney('toy-story-2-1999', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .6))), fin=dict(CLAM, vivid=.3),
        title=LC([(0.27, 0.065, 0.69, 0.17), (0.25, 0.16, 0.73, 0.235), (0.37, 0.215, 0.6, 0.335)], 170, gapf=.05, cuts=[ts_letters, ts_plate(.3, .75), ts_letters]),
        face=ph(.295, .535, .1, 1.4))
+
+
+# ---------------------------------------------------------------- the 2000s
+# Almost Famous (2000): the poster's warm orange, its white ALMOST FAMOUS cut out of the sunglasses' lenses, Kate Hudson's smile under the title
+std('almost-famous-2000', ('grad', [(0, (230, 120, 50)), (.5, (180, 70, 30)), (1, (60, 20, 8))]), WHT,
+    LC([(0.07, 0.38, 0.93, 0.455)], 120, cuts=[comp_cut(lambda a: _lum(a) > .86, minf=.03, keep=lambda cx, cy: not (.4 < cx < .6))]),
+    photo=ph(0.5, 0.75, 0.86, 0.5), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['A CAMERON CROWE', 'FILM'], ccol=WHT,
+    ft='b', fcol=(250, 220, 200), fin=MINT, seed=2000)
+
+# American Psycho (2000): black, the poster's white serif AMERICAN / PSYCHO lifted into one line, Bale with the knife
+std('american-psycho-2000', ('grad', [(0, (60, 30, 40)), (.6, (16, 8, 10)), (1, (2, 2, 2))]), WHT,
+    L([(0.3, 0.85, 0.68, 0.888), (0.205, 0.888, 0.795, 0.982)], 100, WHT, mode='light', valign='base'),
+    photo=ph(0.6, 0.35, 0.8, 1.1), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['CHRISTIAN BALE'], ccol=WHT,
+    ft='a', vbox=(200, 30, 30), fcol=(210, 200, 200), fin=MINT, seed=2000)
+
+# Amores Perros (2000): the poster's white, AMORES PERROS typeset in heavy capitals in its red (parked for Ian's logo, see data/logos-wanted.md: the poster chops the words into blocks that run off its edges and behind the photo, so the cut came out in pieces), the screaming face (no logo file: Altavista Films, from IMDb's company credits)
+std('amores-perros-2000', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (220, 20, 30),
+    TT([('AMORES', (220, 20, 30)), ('PERROS', (220, 20, 30))], 'intbk', 110, sp=.3),
+    photo=ph(0.6, 0.45, 0.5, 0.8), pb=(220, 20, 30), studio=['ALTAVISTA FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['UNA PELÍCULA DE', 'ALEJANDRO G. IÑÁRRITU'], ccol=(20, 20, 20),
+    ft='c', fcol=(20, 20, 20), fin=MINT, seed=2000)
+
+# Boiler Room (2000): the trading floor's black, the poster's white glowing BOILER ROOM lifted, Ribisi, Diesel and Long
+std('boiler-room-2000', ('grad', [(0, (30, 40, 60)), (.6, (8, 12, 20)), (1, (2, 2, 4))]), WHT,
+    L((0.06, 0.148, 0.94, 0.234), 90, WHT, mode='light'),
+    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(120, 200, 240), lg=WHT, lw=.5, order='LPTSF', stick=BAR('00 0218', top='DRAMA', fill=(226, 230, 236)),
+    ft='d', fcol=(190, 200, 220), fin=MINT, seed=2000)
+
+# Chicken Run (2000): the poster's white, its red italic CHICKEN RUN keyed off it, Ginger and the hens on the run (Aardman logo)
+std('chicken-run-2000', ('grad', [(0, (200, 226, 246)), (.6, (170, 200, 230)), (1, (80, 100, 130))]), (210, 30, 30),
+    L((0.12, 0.818, 0.9, 0.894), 96, (210, 30, 30), mode='key', key=(210, 30, 30), t=(70, 160)),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(210, 30, 30), lg=(30, 30, 40), lw=.55, order='LPTF',
+    ft='b', vbox=(210, 30, 30), fcol=(30, 30, 40), fin=MINT, seed=2000)
+
+# Crouching Tiger, Hidden Dragon (2000): the poster's gold, its pale serif CROUCHING TIGER / HIDDEN DRAGON lifted into one line, Michelle Yeoh and Chow Yun-fat
+std('crouching-tiger-hidden-dragon-2000', ('grad', [(0, (220, 160, 60)), (.5, (150, 90, 30)), (1, (40, 20, 6))]), (250, 236, 200),
+    L([(0.065, 0.055, 0.935, 0.106), (0.1, 0.11, 0.9, 0.175)], 90, (250, 236, 200), mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.6, 0.9, 0.8), pb=(250, 236, 200), lg=WHT, lw=.5, order='LPTCF', credit=['AN ANG LEE', 'FILM'], ccol=(250, 236, 200),
+    ft='e', fcol=(250, 230, 200), fin=MINT, seed=2000)
+
+# Dave Chappelle: Killin' Them Softly (2000): the poster's green and yellow, dave chappelle typeset in a script in its green (parked for Ian's logo, see data/logos-wanted.md: the hand lettering runs sideways in green on green and yellow, and the cut came out as smudges), Dave on stage (HBO logo)
+std('dave-chappelle-killin-them-softly-2000', ('grad', [(0, (250, 230, 40)), (.5, (110, 190, 60)), (1, (40, 120, 200))]), (40, 110, 40),
+    T('dave chappelle', 'cho', 120, (40, 120, 40)),
+    photo=ph(0.55, 0.65, 0.7, 1.3), pb=(220, 60, 40), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=["KILLIN' THEM SOFTLY", 'STAND-UP SPECIAL'], ccol=(30, 30, 30),
+    ft='a', fcol=(30, 30, 30), fin=MINT, seed=2000)
+
+# Dinosaur (2000): Disney clamshell; the poster's sky, DINOSAUR typeset in a bronze serif with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved bronze letters are shaded light to dark over cloud, so both cuts came out garbled), Aladar's face in the diamond
+disney('dinosaur-2000', ('grad', [(0, (60, 120, 200)), (.5, (90, 160, 220)), (1, (40, 90, 60))]), fin=dict(CLAM, vivid=.2),
+       title=T('DINOSAUR', 'pagb', 110, (200, 140, 60), outline=((50, 26, 10), 2.2)),
+       face=ph(.5, .4, .36, 1.4), lcol=WHT)
+
+# Fantasia 2000 (2000): Disney clamshell; the poster's wine red, its gold FANTASIA / 2000 cut off it into one line, Mickey the sorcerer's apprentice in the diamond
+disney('fantasia-2000-2000', ('grad', [(0, (110, 20, 50)), (.5, (150, 30, 70)), (1, (60, 10, 30))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.14, 0.075, 0.87, 0.18), (0.29, 0.188, 0.71, 0.26)], 120, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 0] > .65) & (a[..., 1] > .5) & (a[..., 2] < .6), minf=.02)] * 2),
+       face=ph(.62, .43, .2, 1.4), lcol=WHT)
+
+# Finding Forrester (2000): the dusk sky over the city, the poster's white serif FINDING / FORRESTER lifted into one line, Sean Connery's face
+std('finding-forrester-2000', ('grad', [(0, (230, 210, 170)), (.5, (200, 140, 80)), (1, (50, 30, 20))]), WHT,
+    L([(0.45, 0.652, 0.935, 0.722), (0.295, 0.72, 0.97, 0.79)], 90, WHT, mode='light', valign='base'),
+    photo=ph(0.5, 0.33, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(250, 230, 210), fin=MINT, seed=2000)
+
+# Gladiator (2000): the arena's dust, the poster's gold spaced GLADIATOR cut off it in its own shading, Maximus with his sword raised
+std('gladiator-2000', ('grad', [(0, (150, 110, 60)), (.5, (70, 46, 20)), (1, (10, 6, 2))]), (230, 190, 120),
+    LC([(0.1, 0.095, 0.9, 0.185)], 100, cuts=[key_cut(lambda a: (_lum(a) > .38) & (a[..., 0] > a[..., 2] + .1))]),
+    photo=ph(0.5, 0.55, 0.86, 0.9), pb=(230, 190, 120), lg=WHT, lw=.5, order='LPTCSF', credit=['RUSSELL CROWE'], ccol=WHT, dotst=('ACTION', (190, 40, 30), WHT),
+    ft='a', fcol=(230, 210, 180), fin=MINT, seed=2000)
+
+# Gone in Sixty Seconds (2000): Touchstone, a slipcase; the poster's fire orange, GONE IN 60 SECONDS typeset in heavy italic capitals, the 60 in chrome white (parked for Ian's logo, see data/logos-wanted.md: the slanted red and chrome lettering sits in flames of its own colours), Nicolas Cage
+std('gone-in-sixty-seconds-2000', ('grad', [(0, (240, 140, 30)), (.5, (180, 60, 20)), (1, (30, 6, 2))]), WHT,
+    TT([('GONE IN', (190, 20, 20)), ('60', WHT), ('SECONDS', (190, 20, 20))], 'intbki', 100, sp=.3, outline=((30, 10, 4), 1.6)),
+    photo=ph(0.6, 0.2, 0.8, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='e', vbox=(200, 30, 20), fcol=(250, 220, 200), fin=MINT, seed=2000)
