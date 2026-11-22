@@ -4098,3 +4098,76 @@ std('kill-bill-vol-1-2003', ('grad', [(0, (252, 220, 30)), (.5, (244, 200, 20)),
        cuts=[key_cut(lambda a: _lum(a) < .2)] * 2 + [key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3))]),
     photo=ph(0.75, 0.55, 0.5, 1.6), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['THE 4TH FILM BY', 'QUENTIN TARANTINO'], ccol=(20, 16, 10),
     ft='a', vbox=(20, 16, 10), vink=(252, 220, 30), fcol=(20, 16, 10), fin=MINT, seed=2003)
+
+# Lost in Translation (2003): American Zoetrope, the poster's Tokyo lights, its pale Lost In Translation lifted, Scarlett Johansson at the window
+std('lost-in-translation-2003', ('grad', [(0, (200, 160, 100)), (.5, (110, 80, 50)), (1, (20, 14, 10))]), (250, 240, 220),
+    L((0.04, 0.865, 0.96, 0.932), 90, (250, 240, 220), mode='light'),
+    photo=ph(0.6, 0.55, 0.8, 0.85), pb=(250, 240, 220), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'SOFIA COPPOLA'], ccol=(250, 240, 220),
+    ft='b', fcol=(240, 226, 210), fin=MINT, seed=2003)
+
+# Memories of Murder (2003): the poster's grey storm, its spaced grey MEMORIES / OF / MURDER lifted into one line, the scarecrow in the field (CJ logo)
+std('memories-of-murder-2003', ('grad', [(0, (110, 120, 120)), (.6, (40, 46, 46)), (1, (6, 8, 8))]), (210, 216, 216),
+    L([(0.12, 0.08, 0.88, 0.17), (0.44, 0.215, 0.56, 0.255), (0.08, 0.32, 0.92, 0.42)], 90, (210, 216, 216), mode='light', valign='base', gapf=.3, speck=0),
+    photo=ph(0.5, 0.65, 0.86, 0.6), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'BONG JOON HO'], ccol=(210, 216, 216),
+    ft='d', fcol=(200, 206, 206), fin=MINT, seed=2003)
+
+# Mystic River (2003): the river's blue, MYSTIC RIVER typeset in heavy capitals in white (parked for Ian's logo, see data/logos-wanted.md: RIVER fades into the blue reflection and both lifts lost its last letters), the three boys' reflections
+std('mystic-river-2003', ('grad', [(0, (20, 40, 70)), (.5, (40, 90, 140)), (1, (10, 30, 60))]), WHT,
+    T('MYSTIC RIVER', 'intbk', 100, WHT),
+    photo=ph(0.5, 0.5, 0.86, 0.6), pb=(160, 200, 240), lg=WHT, lw=.5, order='LPTCF', credit=['SEAN PENN', 'TIM ROBBINS'], ccol=WHT,
+    ft='c', fcol=(190, 210, 230), fin=MINT, seed=2003)
+
+# Old School (2003): the poster's party dark, OLD typeset in the logo's red with a white keyline and SCHOOL in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the white-edged red OLD sits on the cast's clothes and broke up twice), Will Ferrell, Luke Wilson and Vince Vaughn
+std('old-school-2003', ('grad', [(0, (60, 40, 60)), (.6, (16, 10, 16)), (1, (2, 2, 2))]), WHT,
+    TT([('OLD', (210, 30, 30)), ('SCHOOL', WHT)], 'intbk', 110, sp=.3, outline=((30, 20, 20), 1.6)),
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
+    ft='a', vbox=(200, 30, 30), fcol=(210, 200, 210), fin=MINT, seed=2003)
+
+# Oldboy (2003): the neon night, the poster's white neon OLDBOY with its red glow cut off it letter by letter (stacked on the poster) into one line, Oh Dae-su walking with Mi-do (no logo file: Show East, from IMDb's company credits)
+std('oldboy-2003', ('grad', [(0, (60, 20, 60)), (.6, (16, 6, 20)), (1, (2, 2, 4))]), (240, 90, 170),
+    LC([(0.44, y0, 0.57, y1) for y0, y1 in [(0.058, 0.13), (0.13, 0.2), (0.2, 0.264), (0.274, 0.334), (0.343, 0.413), (0.413, 0.485)]], 120, valign='mid', margin=0, gapf=.08,
+       cuts=[comp_cut(lambda a: _lum(a) > .55, top=1, close=2, fillh=True)] * 6),
+    photo=ph(0.55, 0.75, 0.6, 1.0), pb=(240, 90, 170), studio=['SHOW EAST'], scol=WHT, order='lPTCF', credit=['A FILM BY', 'PARK CHAN-WOOK'], ccol=(250, 180, 220),
+    ft='e', fcol=(220, 196, 220), fin=MINT, seed=2003)
+
+# Owning Mahowny (2003): the poster's blue blocks, its white OWNING / MAHOWNY lifted into one line, Philip Seymour Hoffman in the glasses (Alliance Atlantis logo)
+std('owning-mahowny-2003', ('grad', [(0, (20, 90, 180)), (.6, (10, 40, 90)), (1, (2, 10, 24))]), WHT,
+    L([(0.05, 0.08, 0.6, 0.16), (0.05, 0.185, 0.95, 0.3)], 110, WHT, mode='light', valign='base'),
+    photo=ph(0.3, 0.6, 0.5, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
+    ft='b', fcol=(200, 216, 240), fin=MINT, seed=2003)
+
+# Paycheck (2003): the puzzle's blue, the poster's white italic PAYCHECK lifted, Ben Affleck and Uma Thurman in the broken pieces
+std('paycheck-2003', ('grad', [(0, (20, 30, 60)), (.6, (6, 10, 20)), (1, (0, 0, 4))]), WHT,
+    L((0.07, 0.085, 0.94, 0.132), 96, WHT, mode='light'),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (120, 180, 240), (10, 20, 40)),
+    ft='d', fcol=(190, 200, 226), fin=MINT, seed=2003)
+
+# Pirates of the Caribbean: The Curse of the Black Pearl (2003): Disney, a live-action film, so a slipcase; the poster's sepia, PIRATES OF THE CARIBBEAN typeset in a weathered serif in the logo's parchment and THE CURSE OF THE BLACK PEARL under it (parked for Ian's logo, see data/logos-wanted.md: the logo is printed on a torn strip of the poster's own browns), Jack Sparrow and the crew
+std('pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003', ('grad', [(0, (110, 70, 40)), (.5, (50, 30, 16)), (1, (8, 4, 2))]), (226, 200, 150),
+    [T('PIRATES OF THE CARIBBEAN', 'pagb', 100, (226, 200, 150), outline=((30, 16, 6), 1.6)), T('THE CURSE OF THE BLACK PEARL', 'pagb', 46, (226, 210, 170))], tgap=8,
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(226, 200, 150), lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP'], ccol=(226, 210, 170),
+    ft='a', fcol=(220, 200, 170), fin=MINT, seed=2003)
+
+# Rugrats Go Wild (2003): Paramount (Nickelodeon), a slipcase; the jungle's green, RUGRATS GO WILD typeset in a heavy rounded bold in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the yellow logo sits on the palm's green and yellow and the cut kept only scraps), the babies and the Thornberrys on the island
+std('rugrats-go-wild-2003', ('grad', [(0, (60, 160, 60)), (.5, (40, 120, 40)), (1, (10, 40, 10))]), (250, 220, 40),
+    TT([('RUGRATS', (250, 220, 40)), ('GO WILD', (250, 220, 40))], 'popb', 100, sp=.3, outline=((30, 20, 10), 2)),
+    photo=ph(0.5, 0.15, 0.86, 0.5), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(230, 246, 220), fin=MINT, seed=2003)
+
+# S.W.A.T. (2003): black, the poster's white wide S.W.A.T. lifted, the team in their gear
+std('s-w-a-t-2003', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    L((0.02, 0.745, 0.98, 0.85), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(200, 200, 200), lg=WHT, lw=.5, order='LPTCSF', credit=['SAMUEL L. JACKSON', 'COLIN FARRELL'], ccol=WHT, stick=BAR('03 0808', top='ACTION', fill=(230, 230, 230)),
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2003)
+
+# Sinbad: Legend of the Seven Seas (2003): DreamWorks, a slipcase; the sea's blue, SINBAD typeset in a gold serif with LEGEND OF THE SEVEN SEAS (parked for Ian's logo, see data/logos-wanted.md: the gold script sits on a pale sky and the cut broke it into strokes), Sinbad and Marina on the deck
+std('sinbad-legend-of-the-seven-seas-2003', ('grad', [(0, (60, 150, 220)), (.5, (30, 100, 170)), (1, (10, 40, 80))]), (250, 210, 70),
+    [T('SINBAD', 'pagb', 120, (250, 210, 70), outline=((40, 30, 60), 1.8)), T('LEGEND OF THE SEVEN SEAS', 'pagb', 46, (250, 230, 150))], tgap=8,
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 210, 70), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
+    ft='b', fcol=(220, 236, 250), fin=MINT, seed=2003)
+
+# The Italian Job (2003): black, THE ITALIAN JOB typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: JOB sits against the bright yellow stripe and both lifts lost it), the crew
+std('the-italian-job-2003', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    T('THE ITALIAN JOB', 'hcnb', 110, WHT),
+    photo=ph(0.4, 0.3, 0.8, 0.85), pb=(250, 230, 40), lg=WHT, lw=.5, order='LPTCF', credit=['MARK WAHLBERG'], ccol=WHT,
+    ft='a', vbox=(250, 230, 40), vink=(20, 20, 20), fcol=(200, 200, 200), fin=MINT, seed=2003)

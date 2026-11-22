@@ -6,6 +6,12 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Italian Job (2003) | Vault 2000s | `logos/the-italian-job-2003-title.png` | typeset; JOB against the yellow stripe |
+| Old School (2003) | Vault 2000s | `logos/old-school-2003-title.png` | typeset; white-edged red OLD over the cast |
+| Mystic River (2003) | Vault 2000s | `logos/mystic-river-2003-title.png` | typeset; RIVER fades into the reflection |
+| Sinbad: Legend of the Seven Seas (2003) | Vault 2000s | `logos/sinbad-legend-of-the-seven-seas-2003-title.png` | typeset; gold script on a pale sky |
+| Rugrats Go Wild (2003) | Vault 2000s | `logos/rugrats-go-wild-2003-title.png` | typeset; yellow logo on the palm's green and yellow |
+| Pirates of the Caribbean: The Curse of the Black Pearl (2003) | Vault 2000s | `logos/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-title.png` | typeset; logo printed on a torn strip of the poster's own browns |
 | Brother Bear (2003) | Vault 2000s | `logos/brother-bear-2003-title.png` | typeset (Disney clamshell); the title is a square carved sign |
 | Intolerable Cruelty (2003) | Vault 2000s | `logos/intolerable-cruelty-2003-title.png` | typeset; thin letters lose their bars |
 | Capturing the Friedmans (2003) | Vault 2000s | `logos/capturing-the-friedmans-2003-title.png` | typeset; speckled yellow letters |
