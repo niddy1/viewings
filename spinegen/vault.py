@@ -3886,3 +3886,73 @@ std('gangs-of-new-york-2002', ('grad', [(0, (80, 70, 40)), (.6, (24, 20, 10)), (
     T('GANGS OF NEW YORK', 'hcnb', 100, (230, 196, 110)),
     photo=ph(0.5, 0.2, 0.9, 0.5), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=(230, 210, 160),
     ft='b', fcol=(220, 206, 180), fin=MINT, seed=2002)
+
+# Harry Potter and the Chamber of Secrets (2002): Warner Bros., a slipcase; the poster's green, HARRY POTTER typeset in a gold serif with AND THE CHAMBER OF SECRETS (parked for Ian's logo, see data/logos-wanted.md: the logo's thin gold strokes sit on green light and both cuts broke them up), Harry, Ron and Hermione
+std('harry-potter-and-the-chamber-of-secrets-2002', ('grad', [(0, (30, 70, 60)), (.6, (10, 26, 22)), (1, (2, 6, 4))]), (230, 190, 90),
+    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE CHAMBER OF SECRETS', 'pagb', 46, (232, 210, 150))], tgap=8,
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='a', fcol=(200, 220, 210), fin=MINT, seed=2002)
+
+# Hero (2002): the poster's sepia, HERO typeset in a wide gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters fade into the gold army behind them and both lifts lost half of each), Jet Li and the warriors (Edko logo)
+std('hero-2002', ('grad', [(0, (150, 120, 70)), (.5, (80, 60, 30)), (1, (14, 10, 4))]), (240, 200, 110),
+    T('HERO', 'pagb', 130, (240, 200, 110), outline=((40, 26, 10), 1.6)),
+    photo=ph(0.5, 0.3, 0.9, 0.7), pb=(240, 200, 110), lg=WHT, lw=.5, order='LPTCF', credit=['A ZHANG YIMOU', 'FILM'], ccol=(240, 220, 170),
+    ft='c', fcol=(230, 210, 180), fin=MINT, seed=2002)
+
+# Ice Age (2002): Blue Sky (Fox), a slipcase; the poster's sky blue, its white chunky ICE AGE lifted, Manny, Sid and Diego in the ice
+std('ice-age-2002', ('grad', [(0, (60, 150, 230)), (.5, (130, 200, 240)), (1, (220, 236, 246))]), WHT,
+    LC([(0.06, 0.04, 0.95, 0.175)], 140, outline=((20, 80, 160), 2), cuts=[comp_cut(lambda a: _lum(a) > .86, minf=.03)]),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(20, 80, 160), lg=(20, 60, 120), lw=.55, order='LPTSF', dotst=('FAMILY', (240, 120, 30), WHT),
+    ft='b', fcol=(20, 50, 100), fin=MINT, seed=2002)
+
+# Insomnia (2002): black, INSOMNIA typeset in condensed grey capitals (parked for Ian's logo, see data/logos-wanted.md: the poster's grey letters are blurred, and the lift came out half gone), Al Pacino's face half in the dark
+std('insomnia-2002', ('grad', [(0, (30, 40, 50)), (.6, (8, 10, 14)), (1, (2, 2, 2))]), (200, 206, 214),
+    T('INSOMNIA', 'hcnb', 110, (200, 206, 214)),
+    photo=ph(0.75, 0.42, 0.42, 1.2), pb=(200, 206, 214), lg=WHT, lw=.5, order='LTPCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=(200, 206, 214),
+    ft='e', fcol=(180, 186, 196), fin=MINT, seed=2002)
+
+# Lilo & Stitch (2002): Disney clamshell; the wave's blue, LILO & STITCH typeset in heavy capitals in the logo's red with a white keyline (parked for Ian's logo, see data/logos-wanted.md: the bouncy red letters sit in the wave's white spray and the cut kept only two letters), Stitch's face in the diamond
+disney('lilo-stitch-2002', ('grad', [(0, (60, 150, 220)), (.5, (40, 120, 200)), (1, (20, 60, 120))]), fin=dict(CLAM, vivid=.2),
+       title=T('LILO & STITCH', 'intbk', 110, (210, 40, 40), outline=(WHT, 2.4)),
+       face=ph(.56, .62, .14, 1.4), lcol=WHT)
+
+# Mr. Deeds (2002): the hotel's gold, the poster's black MR. and red DEEDS cut off it into one line, Adam Sandler and Winona Ryder
+std('mr-deeds-2002', ('grad', [(0, (220, 190, 130)), (.6, (170, 130, 70)), (1, (60, 40, 20))]), (200, 20, 30),
+    LC([(0.03, 0.8, 0.43, 0.86), (0.03, 0.86, 0.71, 0.965)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.05), comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .25), minf=.05)]),
+    photo=ph(0.6, 0.4, 0.86, 0.75), pb=(200, 20, 30), lg=(40, 26, 10), lw=.55, order='LPTF',
+    ft='d', fcol=(40, 26, 10), fin=MINT, seed=2002)
+
+# Paid in Full (2002): the poster's brown and black, its gold PAID IN FULL cut off it, the three men (Roc-A-Fella logo)
+std('paid-in-full-2002', ('grad', [(0, (110, 70, 30)), (.6, (30, 18, 8)), (1, (2, 2, 2))]), (240, 190, 50),
+    L((0.045, 0.812, 0.945, 0.876), 100, (240, 190, 50), mode='light'),
+    photo=ph(0.5, 0.35, 0.9, 0.85), pb=(240, 190, 50), lg=WHT, lw=.5, order='LPTCSF', credit=['MEKHI PHIFER', 'WOOD HARRIS'], ccol=WHT, stick=BAR('02 1025', top='CRIME', fill=(232, 226, 210)),
+    ft='a', fcol=(220, 200, 170), fin=MINT, seed=2002)
+
+# Poolhall Junkies (2002): the poster's white, poolhall junkies typeset in a rounded bold in its green (parked for Ian's logo, see data/logos-wanted.md: the felt-textured green letters came out holed both times), the cast in black
+std('poolhall-junkies-2002', ('grad', [(0, (246, 246, 246)), (.6, (226, 232, 226)), (1, (120, 130, 120))]), (40, 140, 60),
+    T('poolhall junkies', 'popb', 110, (40, 140, 60)),
+    photo=ph(0.5, 0.48, 0.9, 0.5), pb=(40, 140, 60), lg=(30, 40, 30), lw=.55, order='LPTF',
+    ft='c', fcol=(30, 40, 30), fin=MINT, seed=2002)
+
+# Red Dragon (2002): the dark, the poster's red RED and white DRAGON serif lifted into one line, Anthony Hopkins's face
+std('red-dragon-2002', ('grad', [(0, (60, 30, 20)), (.6, (16, 8, 6)), (1, (2, 2, 2))]), WHT,
+    LC([(0.08, 0.095, 0.95, 0.155)], 100, cuts=[comp_cut(lambda a: (_lum(a) > .6) | ((a[..., 0] > .5) & (a[..., 1] < .25)), minf=.02)]),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ANTHONY HOPKINS', 'EDWARD NORTON'], ccol=WHT,
+    ft='b', vbox=(200, 30, 30), fcol=(210, 200, 196), fin=MINT, seed=2002)
+
+# Return to Never Land (2002): Disney clamshell; the night sky over London, RETURN TO NEVER LAND typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold glowing letters fade into the moonlit sea and the cut kept a few strokes), Peter Pan's face in the diamond
+disney('return-to-never-land-2002', ('grad', [(0, (20, 40, 100)), (.5, (40, 90, 160)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
+       title=[T('NEVER LAND', 'pagb', 110, (250, 210, 80), outline=((40, 30, 10), 1.6)), T('RETURN TO', 'pagb', 50, (250, 220, 140))],
+       face=ph(.63, .25, .1, 1.4), lcol=WHT)
+
+# Road to Perdition (2002): DreamWorks, a slipcase; the rain's dark, the poster's bronze ROAD TO / PERDITION cut off it into one line, Tom Hanks in the hat and coat
+std('road-to-perdition-2002', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (200, 170, 120),
+    LC([(0.29, 0.76, 0.72, 0.82), (0.09, 0.82, 0.91, 0.925)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) > .45) & (a[..., 0] > a[..., 2]), minf=.02)] * 2),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(200, 170, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A SAM MENDES', 'FILM'], ccol=(220, 200, 170),
+    ft='d', fcol=(200, 200, 200), fin=MINT, seed=2002)
+
+# 11'09''01 September 11 (2002): the poster's white, its black brushed September 11 cut off it, the mosaic of faces (Galatée logo; eleven directors, so no line)
+std('september-11-2002', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    LC([(0.11, 0.09, 0.89, 0.235)], 130, cuts=[comp_cut(lambda a: _lum(a) < .3, minf=.01)]),
+    photo=ph(0.5, 0.52, 0.9, 0.5), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='e', fcol=(20, 20, 20), fin=MINT, seed=2002)

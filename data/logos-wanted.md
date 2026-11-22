@@ -6,6 +6,12 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Poolhall Junkies (2002) | Vault 2000s | `logos/poolhall-junkies-2002-title.png` | typeset; felt-textured green letters came out holed |
+| Insomnia (2002) | Vault 2000s | `logos/insomnia-2002-title.png` | typeset; blurred grey letters |
+| Hero (2002) | Vault 2000s | `logos/hero-2002-title.png` | typeset; gold letters fade into the gold army |
+| Harry Potter and the Chamber of Secrets (2002) | Vault 2000s | `logos/harry-potter-and-the-chamber-of-secrets-2002-title.png` | typeset; thin gold logo on green light (one Harry Potter logo would serve all the films, subtitles typeset) |
+| Return to Never Land (2002) | Vault 2000s | `logos/return-to-never-land-2002-title.png` | typeset (Disney clamshell); glowing gold letters fade into the sea |
+| Lilo & Stitch (2002) | Vault 2000s | `logos/lilo-stitch-2002-title.png` | typeset (Disney clamshell); bouncy red letters in white spray |
 | Gangs of New York (2002) | Vault 2000s | `logos/gangs-of-new-york-2002-title.png` | typeset; distressed gold letters on a gold skyline |
 | The Lord of the Rings: The Fellowship of the Ring (2001) | Vault 2000s | `logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png` | typeset; gold logo on a gold haze (one logo file would do for all three, with the subtitle typeset) |
 | Super Troopers (2001) | Vault 2000s | `logos/super-troopers-2001-title.png` | typeset; the badge sits on the T of TROOPERS |
