@@ -6,6 +6,10 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Meet the Fockers (2004) | Vault 2000s | `logos/meet-the-fockers-2004-title.png` | typeset; the F's thin stroke vanished (read 'rockers') |
+| Spider-Man 2 (2004) | Vault 2000s | `logos/spider-man-2-2004-title.png` | typeset; same as Spider-Man |
+| Shrek 2 (2004) | Vault 2000s | `logos/shrek-2-2004-title.png` | typeset; same green carved logo as Shrek |
+| Ocean's Twelve (2004) | Vault 2000s | `logos/ocean-s-twelve-2004-title.png` | typeset; same as Ocean's Eleven |
 | Jersey Girl (2004) | Vault 2000s | `logos/jersey-girl-2004-title.png` | typeset; the blue letters overlap blue jeans |
 | Mean Girls (2004) | Vault 2000s | `logos/mean-girls-2004-title.png` | typeset; pink letters on the pink ground |
 | Lemony Snicket's A Series of Unfortunate Events (2004) | Vault 2000s | `logos/lemony-snicket-s-a-series-of-unfortunate-events-2004-title.png` | typeset; thin gold letters on a glowing sky |

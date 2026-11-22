@@ -4315,3 +4315,75 @@ std('mean-girls-2004', ('grad', [(0, (250, 220, 236)), (.5, (240, 120, 180)), (1
     TT([('MEAN', (220, 30, 130)), ('GIRLS', WHT)], 'intbk', 110, sp=.2, outline=((80, 10, 50), 1.8)),
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(220, 30, 130), lg=(60, 10, 40), lw=.55, order='LPTSF', dotst=('COMEDY', (250, 220, 236), (180, 30, 110)),
     ft='a', vbox=(220, 30, 130), fcol=(60, 10, 40), fin=MINT, seed=2004)
+
+# Meet the Fockers (2004): the poster's white, Meet the Fockers typeset in a crimson serif (parked for Ian's logo, see data/logos-wanted.md: the F's thin top stroke vanishes in both cuts, so it reads 'rockers'), the two families lined up
+std('meet-the-fockers-2004', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (120, 116, 110))]), (180, 20, 40),
+    T('Meet the Fockers', 'pagb', 110, (180, 20, 40)),
+    photo=ph(0.5, 0.6, 0.86, 0.75), pb=(180, 20, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('04 1222', top='COMEDY', fill=(240, 236, 226)),
+    ft='c', fcol=(30, 30, 30), fin=MINT, seed=2004)
+
+# Million Dollar Baby (2004): black, the poster's white MILLION DOLLAR BABY lifted, Hilary Swank's back between Eastwood and Freeman
+std('million-dollar-baby-2004', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    L((0.02, 0.815, 0.98, 0.862), 84, WHT, mode='light'),
+    photo=ph(0.5, 0.4, 0.9, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A CLINT EASTWOOD', 'FILM'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=MINT, seed=2004)
+
+# Napoleon Dynamite (2004): the poster's yellow, blue and red lockers, its black handwritten Napoleon Dynamite cut off its white label onto a pale spine, Napoleon standing in front of them (no logo file: Fox Searchlight, from IMDb's company credits)
+std('napoleon-dynamite-2004', ('grad', [(0, (250, 246, 236)), (.6, (240, 230, 200)), (1, (210, 160, 60))]), (20, 20, 20),
+    LC([(0.1, 0.08, 0.92, 0.17)], 120, cuts=[comp_cut(lambda a: _lum(a) < .3, minf=.01)]),
+    photo=ph(0.5, 0.5, 0.5, 1.6), pb=(20, 20, 20), studio=['FOX SEARCHLIGHT'], scol=(20, 20, 20), order='lPTSF', dotst=('COMEDY', (210, 50, 50), WHT),
+    ft='a', fcol=(30, 30, 30), fin=MINT, seed=2004)
+
+# Ocean's Twelve (2004): the poster's white, OCEAN'S 12 typeset in heavy condensed capitals in its red (parked with Ocean's Eleven for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 12), the twelve's silhouettes tumbling
+std('ocean-s-twelve-2004', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    TT([("OCEAN'S", (210, 30, 30)), ('12', (210, 30, 30))], 'intbk', 110, sp=.3),
+    photo=ph(0.5, 0.25, 0.8, 0.5), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(30, 30, 30),
+    ft='e', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2004)
+
+# Secret Window (2004): the dark, the poster's red SECRET WINDOW lifted, Johnny Depp in the glasses
+std('secret-window-2004', ('grad', [(0, (60, 40, 30)), (.6, (16, 10, 8)), (1, (2, 2, 2))]), (200, 40, 40),
+    L((0.1, 0.885, 0.9, 0.932), 84, (200, 40, 40), mode='light'),
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 40, 40), lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP'], ccol=WHT,
+    ft='d', fcol=(210, 196, 190), fin=MINT, seed=2004)
+
+# Shark Tale (2004): DreamWorks, a slipcase; the reef's blue, the poster's yellow Shark Tale cut off it, Oscar on the shark
+std('shark-tale-2004', ('grad', [(0, (40, 120, 200)), (.5, (20, 80, 160)), (1, (6, 30, 70))]), (250, 220, 40),
+    LC([(0.12, 0.66, 0.91, 0.8)], 130, outline=((20, 30, 80), 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .45), minf=.02, close=2)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(200, 220, 246), fin=MINT, seed=2004)
+
+# Shrek 2 (2004): DreamWorks, a slipcase; Far Far Away's sky, SHREK 2 typeset in a heavy serif in the logo's green (parked with Shrek for Ian's logo, see data/logos-wanted.md: the same green carved logo on green), Shrek, Fiona, Donkey and Puss
+std('shrek-2-2004', ('grad', [(0, (90, 170, 230)), (.5, (120, 180, 70)), (1, (40, 80, 20))]), (120, 180, 50),
+    T('SHREK 2', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'FAMILY']),
+    ft='b', fcol=(230, 240, 220), fin=MINT, seed=2004)
+
+# Spider-Man 2 (2004): Marvel, a slipcase; the poster's gold dusk, SPIDER-MAN 2 typeset in wide heavy capitals in white (parked with Spider-Man for Ian's logo, see data/logos-wanted.md), Spider-Man and Mary Jane
+std('spider-man-2-2004', ('grad', [(0, (230, 150, 60)), (.5, (160, 60, 30)), (1, (30, 10, 6))]), WHT,
+    T('SPIDER-MAN 2', 'advb', 100, WHT, outline=((90, 30, 10), 2)),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TOBEY MAGUIRE', 'KIRSTEN DUNST'], ccol=WHT,
+    ft='a', vbox=(200, 30, 30), fcol=(250, 230, 210), fin=MINT, seed=2004)
+
+# The Bourne Supremacy (2004): the blue grid, the poster's white BOURNE and red SUPREMACY cut off it into one line, Matt Damon walking
+std('the-bourne-supremacy-2004', ('grad', [(0, (30, 80, 120)), (.6, (8, 24, 40)), (1, (2, 4, 8))]), WHT,
+    LC([(0.1, 0.435, 0.9, 0.5), (0.36, 0.505, 0.9, 0.558)], 110, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03), comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.03)]),
+    photo=ph(0.5, 0.75, 0.86, 0.5), pb=(200, 40, 40), lg=WHT, lw=.5, order='LPTCF', credit=['MATT DAMON'], ccol=WHT,
+    ft='e', fcol=(190, 206, 226), fin=MINT, seed=2004)
+
+# The Incredibles (2004): Pixar clamshell; the fire's red, the poster's white THE INCREDIBLES cut off it, Mr. Incredible's face in the diamond
+disney('the-incredibles-2004', ('grad', [(0, (200, 40, 30)), (.5, (150, 20, 20)), (1, (50, 8, 8))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.22, 0.845, 0.785, 0.928)], 130, outline=((60, 10, 10), 1.6), cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
+       face=ph(.5, .3, .15, 1.4), lcol=WHT)
+
+# The Ladykillers (2004): Touchstone, a slipcase; the poster's misty white, its black THE LADYKILLERS cut off it, Tom Hanks and the gang behind Mrs. Munson
+std('the-ladykillers-2004', ('grad', [(0, (236, 236, 236)), (.6, (210, 210, 210)), (1, (110, 110, 110))]), (20, 20, 20),
+    LC([(0.06, 0.69, 0.94, 0.78)], 110, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(20, 20, 20),
+    ft='a', fcol=(20, 20, 20), fin=MINT, seed=2004)
+
+# The Life Aquatic with Steve Zissou (2004): Touchstone, a slipcase; the sea's teal, the poster's yellow THE / LIFE AQUATIC / with STEVE ZISSOU cut off it into one line, Team Zissou in the submarine
+std('the-life-aquatic-with-steve-zissou-2004', ('grad', [(0, (40, 110, 110)), (.6, (12, 40, 40)), (1, (2, 10, 10))]), (220, 220, 60),
+    LC([(0.08, 0.57, 0.92, 0.66), (0.33, 0.67, 0.66, 0.71)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 1] > .6) & (a[..., 2] < .5), minf=.02)] * 2),
+    photo=ph(0.5, 0.33, 0.86, 0.6), pb=(220, 220, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(230, 230, 150),
+    ft='b', fcol=(200, 226, 220), fin=MINT, seed=2004)
