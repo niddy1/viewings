@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Chicken Little (2005) | Vault 2000s | `logos/chicken-little-2005-title.png` | typeset (Disney clamshell); shaded logo on grass |
+| Charlie and the Chocolate Factory (2005) | Vault 2000s | `logos/charlie-and-the-chocolate-factory-2005-title.png` | typeset; logo printed on Wonka's hat band |
+| Are We There Yet? (2005) | Vault 2000s | `logos/are-we-there-yet-2005-title.png` | typeset; white letters stacked over a white cloud |
 | Meet the Fockers (2004) | Vault 2000s | `logos/meet-the-fockers-2004-title.png` | typeset; the F's thin stroke vanished (read 'rockers') |
 | Spider-Man 2 (2004) | Vault 2000s | `logos/spider-man-2-2004-title.png` | typeset; same as Spider-Man |
 | Shrek 2 (2004) | Vault 2000s | `logos/shrek-2-2004-title.png` | typeset; same green carved logo as Shrek |

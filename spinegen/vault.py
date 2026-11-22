@@ -4387,3 +4387,74 @@ std('the-life-aquatic-with-steve-zissou-2004', ('grad', [(0, (40, 110, 110)), (.
     LC([(0.08, 0.57, 0.92, 0.66), (0.33, 0.67, 0.66, 0.71)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 1] > .6) & (a[..., 2] < .5), minf=.02)] * 2),
     photo=ph(0.5, 0.33, 0.86, 0.6), pb=(220, 220, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(230, 230, 150),
     ft='b', fcol=(200, 226, 220), fin=MINT, seed=2004)
+
+# The Punisher (2004): black, the poster's red THE PUNISHER cut off it, the white skull in the smoke under Frank Castle
+std('the-punisher-2004', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), (220, 30, 30),
+    LC([(0.24, 0.83, 0.73, 0.905)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.45, 0.8, 1.0), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCSF', credit=['THOMAS JANE', 'JOHN TRAVOLTA'], ccol=WHT, stick=BAR('04 0416', top='ACTION', fill=(226, 226, 226)),
+    ft='e', vbox=(220, 30, 30), fcol=(200, 200, 200), fin=MINT, seed=2004)
+
+# The Staircase (2004): the docuseries; the poster's green-gold, its white THE STAIRCASE lifted off the steps into one line, the staircase in the dark (no logo file: Maha Productions, from IMDb's company credits)
+std('the-staircase-2004', ('grad', [(0, (110, 110, 60)), (.6, (30, 30, 16)), (1, (4, 4, 2))]), WHT,
+    LC([(0.6, 0.405, 0.87, 0.49), (0.06, 0.505, 0.94, 0.65)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.02)] * 2),
+    photo=ph(0.4, 0.8, 0.8, 0.5), pb=WHT, studio=['MAHA PRODUCTIONS'], scol=WHT, order='lPTCF', credit=['THE COMPLETE', 'DOCUSERIES'], ccol=WHT,
+    ft='b', fcol=(220, 220, 200), fin=MINT, seed=2004)
+
+# Troy (2004): the dusty gold, the poster's gold spaced T R O Y lifted, Achilles charging with his shield
+std('troy-2004', ('grad', [(0, (180, 150, 80)), (.5, (100, 80, 40)), (1, (20, 14, 6))]), (240, 210, 140),
+    L((0.07, 0.14, 0.93, 0.205), 100, (240, 210, 140), mode='light', speck=0),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(240, 210, 140), lg=WHT, lw=.5, order='LPTCF', credit=['BRAD PITT', 'ERIC BANA'], ccol=WHT,
+    ft='c', fcol=(230, 210, 180), fin=MINT, seed=2004)
+
+# A History of Violence (2005): the poster's painted sky, its white slab A HISTORY OF / VIOLENCE lifted into one line, Viggo Mortensen's red face
+std('a-history-of-violence-2005', ('grad', [(0, (90, 170, 230)), (.5, (180, 60, 60)), (1, (60, 14, 14))]), WHT,
+    L([(0.04, 0.1, 0.97, 0.17), (0.04, 0.172, 0.97, 0.252)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.5, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG', 'FILM'], ccol=WHT,
+    ft='a', fcol=(250, 220, 220), fin=MINT, seed=2005)
+
+# Are We There Yet? (2005): Columbia (Revolution), a slipcase; the poster's sky blue, ARE WE THERE YET? typeset in heavy capitals in white (parked for Ian's logo, see data/logos-wanted.md: the white letters are stacked over a white cloud and the clouds came with them), Ice Cube and the kids by the car
+std('are-we-there-yet-2005', ('grad', [(0, (60, 140, 220)), (.5, (100, 170, 230)), (1, (60, 60, 60))]), WHT,
+    T('ARE WE THERE YET?', 'intbk', 100, WHT, outline=((20, 60, 130), 2)),
+    photo=ph(0.5, 0.6, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='d', fcol=(230, 236, 246), fin=MINT, seed=2005)
+
+# Batman Begins (2005): the poster's burnt orange, its white spaced BATMAN BEGINS lifted, Batman in the swarm of bats
+std('batman-begins-2005', ('grad', [(0, (180, 90, 30)), (.5, (90, 40, 14)), (1, (10, 4, 2))]), WHT,
+    L((0.19, 0.866, 0.81, 0.9), 76, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.35, 0.8, 0.95), pb=(250, 180, 80), lg=WHT, lw=.5, order='LPTCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=WHT,
+    ft='b', fcol=(240, 210, 190), fin=MINT, seed=2005)
+
+# Capote (2005): United Artists, the poster's white sky, its black typewriter capote cut off it, Philip Seymour Hoffman in his bow tie
+std('capote-2005', ('grad', [(0, (240, 240, 240)), (.6, (216, 218, 220)), (1, (100, 100, 104))]), (20, 20, 20),
+    LC([(0.19, 0.09, 0.83, 0.16)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.5, 0.45, 0.6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['PHILIP SEYMOUR HOFFMAN'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=MINT, seed=2005)
+
+# Charlie and the Chocolate Factory (2005): Warner Bros., a slipcase; the candy sky, CHARLIE AND THE CHOCOLATE FACTORY typeset in a rounded bold in the logo's teal and gold (parked for Ian's logo, see data/logos-wanted.md: the logo is printed on Wonka's dark hat band), Wonka under the top hat
+std('charlie-and-the-chocolate-factory-2005', ('grad', [(0, (120, 190, 240)), (.5, (240, 140, 160)), (1, (60, 30, 70))]), (70, 170, 170),
+    TT([('Charlie', (70, 180, 180)), ('and the', (240, 210, 120)), ('Chocolate Factory', (70, 180, 180))], 'popb', 90, sp=.25, outline=((30, 20, 40), 1.8)),
+    photo=ph(0.5, 0.75, 0.8, 0.6), pb=(240, 210, 120), lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP'], ccol=WHT,
+    ft='a', fcol=(240, 220, 230), fin=MINT, seed=2005)
+
+# Chicken Little (2005): Disney clamshell; the sky, CHICKEN LITTLE typeset in heavy rounded capitals in the logo's red and yellow (parked for Ian's logo, see data/logos-wanted.md: the logo stands on the grass and its shading broke the cut), Chicken Little's face in the diamond
+disney('chicken-little-2005', ('grad', [(0, (60, 120, 200)), (.5, (120, 170, 220)), (1, (60, 120, 40))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('chicken', (210, 30, 30)), ('little', (250, 200, 40))], 'popb', 110, sp=.25, outline=(WHT, 2)),
+       face=ph(.49, .3, .34, 1.4), lcol=WHT)
+
+# Coach Carter (2005): the gym's orange haze, the poster's white serif COACH CARTER lifted, Samuel L. Jackson with his foot on the ball
+std('coach-carter-2005', ('grad', [(0, (240, 160, 60)), (.5, (180, 80, 30)), (1, (40, 14, 6))]), WHT,
+    L((0.01, 0.893, 0.985, 0.964), 96, WHT, mode='light'),
+    photo=ph(0.6, 0.45, 0.6, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['SAMUEL L. JACKSON'], ccol=WHT,
+    ft='c', fcol=(250, 230, 210), fin=MINT, seed=2005)
+
+# Corpse Bride (2005): Warner Bros., a slipcase; the moonlit blue, the poster's white spidery Corpse Bride cut off it, Victor and Emily hand in hand
+std('corpse-bride-2005', ('grad', [(0, (60, 90, 130)), (.6, (16, 26, 40)), (1, (2, 4, 8))]), (220, 230, 240),
+    LC([(0.2, 0.74, 0.8, 0.94)], 140, cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.01)]),
+    photo=ph(0.5, 0.33, 0.86, 0.75), pb=(200, 220, 240), lg=WHT, lw=.5, order='LPTSF', dotst=('ANIMATION', (140, 170, 210), (10, 20, 40)),
+    ft='d', fcol=(190, 206, 226), fin=MINT, seed=2005)
+
+# Crash (2005): the poster's dark, its white cracked crash cut off it, Ryan Phillippe's cry
+std('crash-2005', ('grad', [(0, (60, 50, 30)), (.6, (16, 12, 8)), (1, (2, 2, 2))]), WHT,
+    LC([(0.36, 0.79, 0.93, 0.91)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.01, close=2)]),
+    photo=ph(0.4, 0.3, 0.8, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A PAUL HAGGIS', 'FILM'], ccol=WHT,
+    ft='e', fcol=(210, 200, 186), fin=MINT, seed=2005)
