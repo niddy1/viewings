@@ -6,6 +6,12 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Happy Feet (2006) | Vault 2000s | `logos/happy-feet-2006-title.png` | typeset; letters shaded red to yellow |
+| Flushed Away (2006) | Vault 2000s | `logos/flushed-away-2006-title.png` | typeset; water-splashed letters |
+| Cars (2006) | Vault 2000s | `logos/cars-2006-title.png` | typeset (Pixar clamshell); chrome-edged badge among the cars |
+| Borat (2006) | Vault 2000s | `logos/borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006-title.png` | typeset; double-line faux-Cyrillic letters |
+| Black Snake Moan (2006) | Vault 2000s | `logos/black-snake-moan-2006-title.png` | typeset; yellow MOAN on yellow fire |
+| A Scanner Darkly (2006) | Vault 2000s | `logos/a-scanner-darkly-2006-title.png` | typeset; thin letters in a bracket frame |
 | Transporter 2 (2005) | Vault 2000s | `logos/transporter-2-2005-title.png` | typeset; chrome letters in the fireball's streaks |
 | The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) | Vault 2000s | `logos/the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005-title.png` | typeset; shaded copper letters over the lion's mane |
 | Robots (2005) | Vault 2000s | `logos/robots-2005-title.png` | typeset; chrome letters built of gears against cloud |

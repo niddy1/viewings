@@ -4603,3 +4603,74 @@ std('wedding-crashers-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228
     LC([(0.09, 0.065, 0.915, 0.14), (0.09, 0.138, 0.915, 0.205)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)] * 2),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('05 0715', top='COMEDY', fill=(240, 236, 226)),
     ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2005)
+
+# A Scanner Darkly (2006): Warner Independent, the poster's rotoscoped blues, A SCANNER DARKLY typeset in light wide capitals in white (parked for Ian's logo, see data/logos-wanted.md: the thin letters sit in a bracket frame and the lift broke DARKLY), the faces behind the blinds
+std('a-scanner-darkly-2006', ('grad', [(0, (40, 40, 100)), (.6, (12, 12, 34)), (1, (2, 2, 8))]), WHT,
+    T('A SCANNER DARKLY', 'adv', 90, WHT),
+    photo=ph(0.5, 0.4, 0.86, 0.75), pb=(250, 170, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A RICHARD LINKLATER', 'FILM'], ccol=WHT,
+    ft='c', fcol=(200, 200, 230), fin=MINT, seed=2006)
+
+# Arthur and the Invisibles (2006): EuropaCorp, the poster's green, its glowing green ARTHUR cut off it, Arthur in the blade of grass
+std('arthur-and-the-invisibles-2006', ('grad', [(0, (40, 120, 40)), (.6, (10, 40, 12)), (1, (2, 8, 2))]), (170, 230, 60),
+    LC([(0.18, 0.75, 0.83, 0.86)], 120, cuts=[comp_cut(lambda a: (a[..., 1] > .6) & (a[..., 2] < .45), minf=.03, close=2)]),
+    photo=ph(0.5, 0.45, 0.7, 0.85), pb=(170, 230, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (170, 230, 60), (10, 30, 10)),
+    ft='b', fcol=(200, 230, 200), fin=MINT, seed=2006)
+
+# Black Snake Moan (2006): Paramount Vantage, the poster's yellow fire, BLACK SNAKE in red over MOAN in heavy yellow capitals (parked for Ian's logo, see data/logos-wanted.md: the yellow MOAN sits on the yellow fire and broke up), Christina Ricci and Samuel L. Jackson
+std('black-snake-moan-2006', ('grad', [(0, (240, 170, 30)), (.5, (200, 100, 20)), (1, (40, 14, 4))]), (250, 200, 40),
+    TT([('BLACK SNAKE', (200, 30, 30)), ('MOAN', (250, 210, 50))], 'intbk', 100, sp=.25, outline=((30, 10, 4), 1.8)),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 30, 30), lg=(30, 14, 6), lw=.55, order='LPTCF', credit=['CHRISTINA RICCI', 'SAMUEL L. JACKSON'], ccol=(30, 14, 6),
+    ft='a', fcol=(40, 20, 6), fin=MINT, seed=2006)
+
+# Borat (2006): 20th Century Fox, a slipcase; the poster's parchment, BORAT typeset in heavy outlined capitals in black (parked for Ian's logo, see data/logos-wanted.md: the faux-Cyrillic letters are drawn in double lines and the cut kept only their outlines), Borat waving the flag with his suitcase
+std('borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006', ('grad', [(0, (240, 230, 206)), (.6, (220, 206, 176)), (1, (110, 96, 70))]), (20, 16, 10),
+    T('BORAT', 'intbk', 120, (20, 16, 10)),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
+    ft='d', fcol=(20, 16, 10), fin=MINT, seed=2006)
+
+# Brick (2006): the poster's teal water, its white distressed BRICK lifted, the girl's arm with the blue bracelet (no logo file: Focus Features, from IMDb's company credits)
+std('brick-2006', ('grad', [(0, (40, 120, 130)), (.6, (14, 50, 56)), (1, (2, 10, 12))]), WHT,
+    LC([(0.03, 0.825, 0.97, 0.95)], 120, cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.02, close=2)]),
+    photo=ph(0.6, 0.35, 0.8, 0.85), pb=(80, 150, 220), studio=['FOCUS FEATURES'], scol=WHT, order='lPTCF', credit=['JOSEPH GORDON-LEVITT'], ccol=WHT,
+    ft='e', fcol=(200, 226, 226), fin=MINT, seed=2006)
+
+# Cars (2006): Pixar clamshell; the desert's orange, CARS typeset in a heavy italic script in the badge's red with a chrome keyline (parked for Ian's logo, see data/logos-wanted.md: the chrome-edged badge sits on the road among the cars and the cut kept one stripe), Lightning McQueen's face in the diamond
+disney('cars-2006', ('grad', [(0, (230, 140, 50)), (.5, (200, 90, 40)), (1, (80, 30, 14))]), fin=dict(CLAM, vivid=.2),
+       title=T('Cars', 'popbi', 130, (210, 30, 30), outline=((230, 230, 236), 2.4)),
+       face=ph(.48, .665, .16, 1.4), lcol=WHT)
+
+# Casino Royale (2006): MGM, the poster's night blue, its white CASINO / ROYALE with the 007 lifted into one line, Daniel Craig at the table
+std('casino-royale-2006', ('grad', [(0, (20, 40, 60)), (.6, (6, 12, 20)), (1, (2, 2, 4))]), WHT,
+    L([(0.23, 0.47, 0.56, 0.52), (0.45, 0.52, 0.74, 0.58)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.3, 0.25, 0.6, 0.85), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL CRAIG'], ccol=WHT,
+    ft='b', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(190, 200, 210), fin=MINT, seed=2006)
+
+# Children of Men (2006): the poster's grey, its white spaced CHILDREN OF MEN lifted, Clive Owen's face
+std('children-of-men-2006', ('grad', [(0, (120, 130, 136)), (.6, (40, 46, 50)), (1, (4, 6, 8))]), WHT,
+    L((0.12, 0.888, 0.875, 0.935), 84, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.35, 0.86, 0.8), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AN ALFONSO CUARÓN', 'FILM'], ccol=WHT,
+    ft='d', fcol=(200, 206, 210), fin=MINT, seed=2006)
+
+# Clerks II (2006): The Weinstein Company, the poster's red-orange, its ransom-note CLERKS II cut off it in its own colours, Dante, Randal, Becky, Jay and Silent Bob
+std('clerks-ii-2006', ('grad', [(0, (230, 110, 40)), (.5, (200, 50, 30)), (1, (60, 10, 6))]), WHT,
+    LC([(0.1, 0.095, 0.955, 0.225)], 130, cuts=[comp_cut(lambda a: (_sat(a) > .3) | (_lum(a) > .8), minf=.03, fillh=True, keep=lambda cx, cy: True)]),
+    photo=ph(0.5, 0.6, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=WHT,
+    ft='a', fcol=(250, 220, 210), fin=MINT, seed=2006)
+
+# Crank (2006): the poster's orange haze, its white slanted CRANK cut off it and levelled, Jason Statham with the pistol
+std('crank-2006', ('grad', [(0, (230, 140, 50)), (.5, (150, 70, 20)), (1, (20, 8, 2))]), WHT,
+    LC([(0.02, 0.645, 0.98, 0.81)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.03, rot=-10)]),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=BAR('06 0901', top='ACTION', fill=(232, 226, 214)),
+    ft='c', fcol=(250, 230, 210), fin=MINT, seed=2006)
+
+# Flushed Away (2006): Aardman (DreamWorks), a slipcase; the poster's white, Flushed Away typeset in a heavy rounded face in its blue (parked for Ian's logo, see data/logos-wanted.md: the water-splashed letters came out in drops), Roddy and Sid
+std('flushed-away-2006', ('grad', [(0, (230, 240, 250)), (.6, (190, 214, 240)), (1, (60, 100, 150))]), (30, 110, 210),
+    T('Flushed Away', 'popb', 110, (30, 110, 210), outline=((10, 40, 90), 1.6)),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=(30, 110, 210), lg=(20, 40, 80), lw=.55, order='LPTF',
+    ft='e', fcol=(20, 40, 80), fin=MINT, seed=2006)
+
+# Happy Feet (2006): Warner Bros., a slipcase; the poster's sky blue, HAPPY FEET typeset in heavy capitals in the logo's red and orange (parked for Ian's logo, see data/logos-wanted.md: the letters are shaded red to yellow and the cut kept only the red half), Mumble and the penguins on the ice
+std('happy-feet-2006', ('grad', [(0, (60, 150, 220)), (.5, (130, 190, 240)), (1, (200, 220, 240))]), (230, 60, 40),
+    TT([('HAPPY', (220, 40, 40)), ('FEET', (240, 150, 30))], 'intbk', 110, sp=.3, outline=(WHT, 1.8)),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(230, 60, 40), lg=(20, 40, 80), lw=.55, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='a', fcol=(20, 40, 80), fin=MINT, seed=2006)
