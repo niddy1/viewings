@@ -3956,3 +3956,74 @@ std('september-11-2002', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), 
     LC([(0.11, 0.09, 0.89, 0.235)], 130, cuts=[comp_cut(lambda a: _lum(a) < .3, minf=.01)]),
     photo=ph(0.5, 0.52, 0.9, 0.5), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
     ft='e', fcol=(20, 20, 20), fin=MINT, seed=2002)
+
+# Spider-Man (2002): Marvel, a slipcase; the poster's gold, SPIDER-MAN typeset in wide heavy capitals in chrome white (parked for Ian's logo, see data/logos-wanted.md: the chrome letters are banded with the gold background and the cut came out striped), Spider-Man hanging upside down
+std('spider-man-2002', ('grad', [(0, (230, 170, 80)), (.5, (180, 110, 40)), (1, (60, 30, 10))]), WHT,
+    T('SPIDER-MAN', 'advb', 100, WHT, outline=((90, 40, 10), 2)),
+    photo=ph(0.45, 0.4, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TOBEY MAGUIRE'], ccol=WHT,
+    ft='a', vbox=(200, 30, 30), fcol=(250, 230, 210), fin=MINT, seed=2002)
+
+# Spirit: Stallion of the Cimarron (2002): DreamWorks, a slipcase; the sky, SPIRIT typeset in a wide serif in white (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on white cloud and the lift lost the T), the stallion running with the mare
+std('spirit-stallion-of-the-cimarron-2002', ('grad', [(0, (60, 130, 210)), (.5, (110, 170, 230)), (1, (60, 110, 40))]), WHT,
+    T('SPIRIT', 'pagb', 120, WHT, outline=((40, 80, 140), 1.8)),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 120, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='c', fcol=(230, 240, 250), fin=MINT, seed=2002)
+
+# Star Wars: Episode II – Attack of the Clones (2002): Lucasfilm, a slipcase; the poster's gold dusk, STAR WARS / EPISODE II and ATTACK OF THE CLONES typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters sit on a gold glow and both lifts lost the edge letters), Anakin and Padmé
+std('star-wars-episode-ii-attack-of-the-clones-2002', ('grad', [(0, (150, 90, 30)), (.5, (60, 30, 10)), (1, (6, 2, 2))]), (240, 200, 120),
+    [T('EPISODE II', 'pagb', 120, (240, 200, 120), outline=((40, 20, 6), 1.6)), T('ATTACK OF THE CLONES', 'pagb', 50, (240, 210, 150))], tgap=8,
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (240, 200, 120), (30, 14, 4)),
+    ft='b', fcol=(230, 210, 180), fin=MINT, seed=2002)
+
+# The Bourne Identity (2002): the poster's blue, THE BOURNE IDENTITY typeset in white capitals (parked for Ian's logo, see data/logos-wanted.md: THE sits over Matt Damon's shoulder and the lift lost it twice), Matt Damon with the pistol
+std('the-bourne-identity-2002', ('grad', [(0, (40, 90, 140)), (.6, (12, 30, 50)), (1, (2, 6, 10))]), WHT,
+    TT([('THE', WHT), ('BOURNE', WHT), ('IDENTITY', WHT)], 'herb', 100, sp=.3),
+    photo=ph(0.62, 0.1, 0.5, 0.42), pb=(250, 170, 60), lg=WHT, lw=.5, order='LPTCF', credit=['MATT DAMON'], ccol=WHT,
+    ft='d', fcol=(190, 206, 226), fin=MINT, seed=2002)
+
+# The Lord of the Rings: The Two Towers (2002): a 2-tape box (179 minutes, the theatrical cut); the poster's pale gold, THE LORD OF THE RINGS typeset in a gold serif like the first's (parked with it for Ian's logo, see data/logos-wanted.md: the same gold-on-gold logo), the Fellowship before the two towers
+std('the-lord-of-the-rings-the-two-towers-2002', ('grad', [(0, (150, 130, 90)), (.5, (70, 60, 36)), (1, (10, 8, 4))]), (236, 196, 110),
+    T('THE LORD OF THE RINGS', 'pagb', 130, (236, 196, 110), outline=((40, 26, 10), 1.6)),
+    photo=ph(0.6, 0.5, 0.6, 1.0), pb=(236, 196, 110), lg=WHT, lw=.5, order='LPTCSF', credit=['THE TWO TOWERS'], ccol=(236, 210, 160), stick=TWOST((236, 196, 110), (30, 24, 10)),
+    ft='e', fcol=(220, 206, 180), fin=MINT, seed=2002, **TWO)
+
+# The Pianist (2002): black, THE PIANIST typeset in heavy capitals in its gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are scuffed and the final T came out broken twice), the hands on the keys
+std('the-pianist-2002', ('grad', [(0, (50, 40, 30)), (.6, (14, 10, 8)), (1, (2, 2, 2))]), (240, 190, 60),
+    T('THE PIANIST', 'intbk', 110, (240, 190, 60)),
+    photo=ph(0.5, 0.7, 0.9, 0.6), pb=(240, 190, 60), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'ROMAN POLANSKI'], ccol=(240, 210, 140),
+    ft='a', fcol=(210, 200, 186), fin=MINT, seed=2002)
+
+# The Sum of All Fears (2002): the poster's fire into black, THE SUM OF ALL FEARS typeset in heavy condensed capitals in its gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are textured with the fire behind them and the cut came out patchy), Ben Affleck and Morgan Freeman
+std('the-sum-of-all-fears-2002', ('grad', [(0, (180, 60, 20)), (.5, (80, 20, 8)), (1, (4, 2, 2))]), (240, 180, 60),
+    T('THE SUM OF ALL FEARS', 'intbk', 90, (240, 180, 60)),
+    photo=ph(0.5, 0.35, 0.9, 0.75), pb=(240, 180, 60), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(230, 200, 180), fin=MINT, seed=2002)
+
+# The Transporter (2002): the poster's white, THE TRANSPORTER typeset in heavy italic capitals in its orange (parked for Ian's logo, see data/logos-wanted.md: the letters are streaked into a motion blur of their own orange), Jason Statham mid-kick with the pistols (TF1 Films logo)
+std('the-transporter-2002', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (240, 150, 30),
+    T('THE TRANSPORTER', 'intbki', 90, (240, 150, 30), outline=((40, 20, 4), 1.6)),
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(240, 150, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('02 1011', top='ACTION', fill=(240, 236, 226)),
+    ft='e', fcol=(30, 30, 30), fin=MINT, seed=2002)
+
+# The Wild Thornberrys Movie (2002): Paramount (Nickelodeon), a slipcase; the canyon's sunset, THE WILD THORNBERRYS MOVIE typeset in heavy capitals in its green (parked for Ian's logo, see data/logos-wanted.md: the logo sits on a blue badge with a sun behind it and the cut took the wrong piece), Eliza on the elephant
+std('the-wild-thornberrys-movie-2002', ('grad', [(0, (240, 150, 50)), (.5, (200, 80, 40)), (1, (60, 20, 10))]), (120, 200, 60),
+    TT([('THE WILD', (250, 230, 120)), ('THORNBERRYS', (120, 200, 60)), ('MOVIE', (250, 230, 120))], 'popb', 90, sp=.3, outline=((40, 30, 10), 1.8)),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=(120, 200, 60), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(250, 230, 210), fin=MINT, seed=2002)
+
+# Treasure Planet (2002): Disney clamshell; the nebula's blue and orange, the poster's gold Treasure Planet cut off it, Jim Hawkins's face in the diamond
+disney('treasure-planet-2002', ('grad', [(0, (230, 130, 60)), (.5, (60, 90, 160)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.35, 0.6, 0.98, 0.75)], 130, outline=((30, 20, 40), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 2] < .5) & (_lum(a) > .5), minf=.01)]),
+       face=ph(.27, .52, .1, 1.4), lcol=WHT)
+
+# 2 Fast 2 Furious (2003): the poster's black, 2 FAST 2 FURIOUS typeset in heavy italic capitals in white and blue (parked for Ian's logo, see data/logos-wanted.md: the chrome letters sit over the cars' lights and the cut came out in pieces), Paul Walker and Tyrese
+std('2-fast-2-furious-2003', ('grad', [(0, (40, 60, 100)), (.6, (10, 16, 30)), (1, (2, 2, 6))]), WHT,
+    TT([('2 FAST', WHT), ('2 FURIOUS', (90, 160, 240))], 'intbki', 100, sp=.3),
+    photo=ph(0.5, 0.15, 0.9, 0.4), pb=(60, 140, 240), lg=WHT, lw=.5, order='LPTCF', credit=['PAUL WALKER', 'TYRESE GIBSON'], ccol=WHT,
+    ft='a', vbox=(60, 140, 240), fcol=(200, 206, 230), fin=MINT, seed=2003)
+
+# 21 Grams (2003): the poster's red and dark, 21 GRAMS typeset in heavy condensed capitals, 21 in red and GRAMS in gold (parked for Ian's logo, see data/logos-wanted.md: the huge red 21 runs behind the cast's strips and GRAMS is slanted over them), the cast in their strips
+std('21-grams-2003', ('grad', [(0, (140, 30, 20)), (.5, (60, 14, 8)), (1, (6, 2, 2))]), (220, 30, 30),
+    TT([('21', (220, 30, 30)), ('GRAMS', (240, 190, 80))], 'intbk', 120, sp=.3),
+    photo=ph(0.7, 0.4, 0.5, 1.3), pb=(240, 190, 80), lg=WHT, lw=.5, order='LPTCF', credit=['AN ALEJANDRO', 'GONZÁLEZ IÑÁRRITU FILM'], ccol=WHT,
+    ft='d', fcol=(220, 200, 190), fin=MINT, seed=2003)

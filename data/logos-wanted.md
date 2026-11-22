@@ -6,6 +6,17 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Spirit: Stallion of the Cimarron (2002) | Vault 2000s | `logos/spirit-stallion-of-the-cimarron-2002-title.png` | typeset; white letters on white cloud |
+| The Pianist (2002) | Vault 2000s | `logos/the-pianist-2002-title.png` | typeset; the scuffed final T broke |
+| The Bourne Identity (2002) | Vault 2000s | `logos/the-bourne-identity-2002-title.png` | typeset; THE sits over Matt Damon's shoulder |
+| Star Wars: Episode II – Attack of the Clones (2002) | Vault 2000s | `logos/star-wars-episode-ii-attack-of-the-clones-2002-title.png` | typeset; gold on a gold glow |
+| 21 Grams (2003) | Vault 2000s | `logos/21-grams-2003-title.png` | typeset; the red 21 runs behind the cast's strips |
+| 2 Fast 2 Furious (2003) | Vault 2000s | `logos/2-fast-2-furious-2003-title.png` | typeset; chrome letters over the cars' lights |
+| The Wild Thornberrys Movie (2002) | Vault 2000s | `logos/the-wild-thornberrys-movie-2002-title.png` | typeset; logo on a blue badge with a sun behind it |
+| The Transporter (2002) | Vault 2000s | `logos/the-transporter-2002-title.png` | typeset; letters streaked into a motion blur |
+| The Sum of All Fears (2002) | Vault 2000s | `logos/the-sum-of-all-fears-2002-title.png` | typeset; gold letters textured with the fire |
+| Spider-Man (2002) | Vault 2000s | `logos/spider-man-2002-title.png` | typeset; chrome letters banded with the gold ground |
+| The Lord of the Rings: The Two Towers (2002) | Vault 2000s | `logos/the-lord-of-the-rings-the-two-towers-2002-title.png` | typeset; same gold-on-gold logo as the Fellowship |
 | Poolhall Junkies (2002) | Vault 2000s | `logos/poolhall-junkies-2002-title.png` | typeset; felt-textured green letters came out holed |
 | Insomnia (2002) | Vault 2000s | `logos/insomnia-2002-title.png` | typeset; blurred grey letters |
 | Hero (2002) | Vault 2000s | `logos/hero-2002-title.png` | typeset; gold letters fade into the gold army |
