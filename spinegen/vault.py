@@ -3741,3 +3741,75 @@ std('ocean-s-eleven-2001', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228))
     TT([("OCEAN'S", (210, 30, 30)), ('11', (210, 30, 30))], 'intbk', 110, sp=.3),
     photo=ph(0.6, 0.15, 0.8, 0.4), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(30, 30, 30),
     ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2001)
+
+# Osmosis Jones (2001): Warner Bros., a slipcase; the poster's cell blue, its green outlined OSMOSIS / JONES cut off it whole and levelled, Osmosis mid-flight
+std('osmosis-jones-2001', ('grad', [(0, (60, 120, 220)), (.5, (30, 70, 170)), (1, (10, 20, 70))]), (150, 220, 60),
+    LC([(0.06, 0.65, 0.92, 0.85)], 140, cuts=[comp_cut(lambda a: (a[..., 1] > .5) & (a[..., 1] > a[..., 2] + .1) & (a[..., 0] < .85), minf=.02, close=3, fillh=True, rot=-12)]),
+    photo=ph(0.4, 0.3, 0.8, 0.95), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('ANIMATION', (250, 200, 40), (30, 20, 10)),
+    ft='c', fcol=(200, 220, 250), fin=MINT, seed=2001)
+
+# Raw Deal: A Question of Consent (2001): black, the poster's white RAW DEAL and A QUESTION OF CONSENT lifted into one line, the hand on the body (rakontur logo; director from IMDb)
+std('raw-deal-a-question-of-consent-2001', ('grad', [(0, (60, 60, 64)), (.6, (16, 16, 18)), (1, (2, 2, 2))]), WHT,
+    L([(0.125, 0.648, 0.895, 0.703), (0.13, 0.712, 0.88, 0.742)], 90, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.4, 0.4, 0.6, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'BILLY CORBEN'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2001)
+
+# Sex and Lucía (2001): the poster's sky white into red, its white sex and lucía with the small red and cut off it, Paz Vega on the motorbike
+std('sex-and-lucia-2001', ('grad', [(0, (220, 230, 240)), (.5, (220, 120, 100)), (1, (130, 20, 20))]), WHT,
+    LC([(0.02, 0.415, 0.985, 0.537)], 120, outline=((120, 20, 20), 1.6), cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.02)]),
+    photo=ph(0.5, 0.18, 0.7, 0.55), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UNA PELÍCULA DE', 'JULIO MEDEM'], ccol=WHT,
+    ft='b', fcol=(250, 220, 220), fin=MINT, seed=2001)
+
+# Shrek (2001): DreamWorks (PDI), a slipcase; the swamp green, SHREK typeset in a heavy serif in the logo's green with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the green carved letters sit on green grass and both cuts lost them), the green S with Shrek, Fiona and Donkey under it
+std('shrek-2001', ('grad', [(0, (120, 180, 230)), (.5, (110, 170, 60)), (1, (40, 80, 20))]), (110, 170, 40),
+    T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)),
+    photo=ph(0.5, 0.38, 0.86, 0.85), pb=(110, 170, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('01 1102', top='ANIMATION', fill=(230, 240, 220)),
+    ft='a', vbox=(60, 110, 20), fcol=(230, 240, 220), fin=MINT, seed=2001)
+
+# Spirited Away (2001): Studio Ghibli, a slipcase; black, the poster's white serif SPIRITED AWAY lifted, Chihiro before the bathhouse
+std('spirited-away-2001', ('grad', [(0, (60, 30, 30)), (.6, (16, 8, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.078, 0.125, 0.91, 0.19), 90, WHT, mode='light'),
+    photo=ph(0.45, 0.6, 0.8, 1.0), pb=(220, 60, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'HAYAO MIYAZAKI'], ccol=WHT,
+    ft='d', fcol=(220, 200, 196), fin=MINT, seed=2001)
+
+# Super Troopers (2001): the sky blue, SUPER TROOPERS typeset in heavy capitals in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the moustache badge sits on the T of TROOPERS and the cut lost it twice), the five troopers hanging upside down
+std('super-troopers-2001', ('grad', [(0, (120, 180, 220)), (.5, (60, 120, 180)), (1, (20, 40, 70))]), (250, 210, 50),
+    T('SUPER TROOPERS', 'intbk', 100, (250, 200, 40), outline=((60, 30, 10), 2.2)),
+    photo=ph(0.5, 0.25, 0.9, 0.55), pb=(250, 210, 50), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(220, 230, 240), fin=MINT, seed=2001)
+
+# Swordfish (2001): the poster's black and white, its yellow-green SWORDFISH cut off it, Travolta, Jackman and Halle Berry round the keyboard
+std('swordfish-2001', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2, 2))]), (200, 230, 50),
+    LC([(0.06, 0.845, 0.94, 0.94)], 110, cuts=[comp_cut(lambda a: (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(200, 230, 50), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2001)
+
+# The Lord of the Rings: The Fellowship of the Ring (2001): a 2-tape box (179 minutes, the theatrical cut); the poster's golden haze, THE LORD OF THE RINGS and THE FELLOWSHIP OF THE RING typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the logo's gold sits on a gold haze and the cut came out faint and broken), Frodo with the Fellowship round him
+std('the-lord-of-the-rings-the-fellowship-of-the-ring-2001', ('grad', [(0, (120, 100, 60)), (.5, (60, 50, 26)), (1, (10, 8, 4))]), (230, 190, 100),
+    T('THE LORD OF THE RINGS', 'pagb', 130, (236, 196, 110), outline=((40, 26, 10), 1.6)),
+    photo=ph(0.5, 0.5, 0.6, 0.7), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTCSF', credit=['THE FELLOWSHIP', 'OF THE RING'], ccol=(236, 210, 160), stick=TWOST((230, 190, 100), (30, 24, 10)),
+    ft='c', fcol=(220, 206, 180), fin=MINT, seed=2001, **TWO)
+
+# The Man Who Wasn't There (2001): black, THE MAN WHO WASN'T THERE typeset in heavy condensed capitals in the poster's grey and yellow (parked for Ian's logo, see data/logos-wanted.md: the poster's huge grey MAN is cut into strips across the faces, and only WHO WASN'T THERE would cut), Billy Bob Thornton (USA Films logo)
+std('the-man-who-wasn-t-there-2001', ('grad', [(0, (50, 50, 50)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (220, 220, 70),
+    TT([('THE MAN', (190, 190, 190)), ("WHO WASN'T THERE", (220, 220, 70))], 'intbk', 90, sp=.3),
+    photo=ph(0.6, 0.45, 0.6, 1.0), pb=(220, 220, 70), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT,
+    ft='a', fcol=(200, 200, 200), fin=MINT, seed=2001)
+
+# The Royal Tenenbaums (2001): Touchstone, a slipcase; the poster's white, its red Futura THE ROYAL TENENBAUMS keyed off it, the family lined up in their clothes
+std('the-royal-tenenbaums-2001', ('grad', [(0, (246, 240, 230)), (.6, (230, 220, 206)), (1, (130, 116, 100))]), (190, 30, 30),
+    L((0.03, 0.072, 0.97, 0.112), 76, (190, 30, 30), mode='key', key=(190, 40, 40), t=(70, 160)),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(190, 30, 30), lg=(40, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(40, 30, 30),
+    ft='b', fcol=(40, 30, 30), fin=MINT, seed=2001)
+
+# Training Day (2001): the poster's dark sepia, its white serif TRAINING / DAY lifted into one line, Denzel Washington and Ethan Hawke
+std('training-day-2001', ('grad', [(0, (100, 90, 70)), (.6, (30, 26, 20)), (1, (2, 2, 2))]), WHT,
+    L([(0.13, 0.015, 0.92, 0.145), (0.23, 0.145, 0.63, 0.228)], 110, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTCSF', credit=['DENZEL WASHINGTON', 'ETHAN HAWKE'], ccol=WHT, stick=RWD(),
+    ft='d', fcol=(220, 210, 190), fin=MINT, seed=2001)
+
+# Wet Hot American Summer (2001): the camp's pines, WET HOT AMERICAN SUMMER typeset in heavy capitals in the logo's blue and red with white keylines (parked for Ian's logo, see data/logos-wanted.md: the star-spangled letters are striped with white and the cut came out in shreds), the campers piled in the truck (no logo file: USA Films, from IMDb's company credits)
+std('wet-hot-american-summer-2001', ('grad', [(0, (60, 130, 200)), (.5, (40, 110, 60)), (1, (10, 40, 14))]), WHT,
+    TT([('WET', (30, 60, 160)), ('HOT', (210, 30, 40)), ('AMERICAN', (210, 30, 40)), ('SUMMER', (30, 60, 160))], 'intbk', 90, sp=.25, outline=(WHT, 2)),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=(200, 30, 40), studio=['USA FILMS'], scol=WHT, order='lPTCF', credit=['A DAVID WAIN', 'FILM'], ccol=WHT,
+    ft='a', vbox=(200, 30, 40), fcol=(220, 236, 220), fin=MINT, seed=2001)

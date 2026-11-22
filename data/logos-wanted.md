@@ -6,6 +6,11 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Lord of the Rings: The Fellowship of the Ring (2001) | Vault 2000s | `logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png` | typeset; gold logo on a gold haze (one logo file would do for all three, with the subtitle typeset) |
+| Super Troopers (2001) | Vault 2000s | `logos/super-troopers-2001-title.png` | typeset; the badge sits on the T of TROOPERS |
+| Shrek (2001) | Vault 2000s | `logos/shrek-2001-title.png` | typeset; green carved letters on green grass |
+| Wet Hot American Summer (2001) | Vault 2000s | `logos/wet-hot-american-summer-2001-title.png` | typeset; star-striped letters came out in shreds |
+| The Man Who Wasn't There (2001) | Vault 2000s | `logos/the-man-who-wasn-t-there-2001-title.png` | typeset; the huge MAN is cut into strips across the faces |
 | Kiss of the Dragon (2001) | Vault 2000s | `logos/kiss-of-the-dragon-2001-title.png` | typeset; small white letters in the flames' glow |
 | Ocean's Eleven (2001) | Vault 2000s | `logos/ocean-s-eleven-2001-title.png` | typeset; OCEAN'S runs diagonally inside the red 11 |
 | Baby Boy (2001) | Vault 2000s | `logos/baby-boy-2001-title.png` | typeset; thin white letters on a pale sky |
