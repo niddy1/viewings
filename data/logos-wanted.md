@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Baby Boy (2001) | Vault 2000s | `logos/baby-boy-2001-title.png` | typeset; thin white letters on a pale sky |
+| Atlantis: The Lost Empire (2001) | Vault 2000s | `logos/atlantis-the-lost-empire-2001-title.png` | typeset (Disney clamshell); thin white letters in the crystal's glow |
+| Titan A.E. (2000) | Vault 2000s | `logos/titan-a-e-2000-title.png` | typeset; chrome letters reflect the starfield |
 | O Brother, Where Art Thou? (2000) | Vault 2000s | `logos/o-brother-where-art-thou-2000-title.png` | typeset; distressed letters on a mottled sepia field |
 | In the Mood for Love (2000) | Vault 2000s | `logos/in-the-mood-for-love-2000-title.png` | typeset; huge pale letters run behind and over the couple |
 | Memento (2000) | Vault 2000s | `logos/memento-2000-title.png` | typeset; the slanted handwriting breaks across the polaroid's edge |

@@ -3600,3 +3600,73 @@ std('scary-movie-2000', ('grad', [(0, (40, 80, 120)), (.6, (10, 20, 34)), (1, (2
     LC([(0.22, 0.682, 0.785, 0.79), (0.215, 0.785, 0.77, 0.89)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)] * 2),
     photo=ph(0.5, 0.33, 0.9, 0.7), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('00 0707', top='COMEDY', fill=(232, 228, 216)),
     ft='a', vbox=(220, 30, 30), fcol=(200, 210, 230), fin=MINT, seed=2000)
+
+# Snatch (2000): the poster's yellow, its black brushed Snatch. cut off it, the tangle of fists, pistols and the diamond (Marv logo)
+std('snatch-2000', ('grad', [(0, (250, 200, 40)), (.5, (240, 170, 30)), (1, (130, 80, 10))]), (20, 16, 10),
+    LC([(0.095, 0.745, 0.92, 0.905)], 130, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.02)]),
+    photo=ph(0.5, 0.33, 0.8, 0.95), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['A FILM BY', 'GUY RITCHIE'], ccol=(20, 16, 10),
+    ft='b', vbox=(20, 16, 10), vink=(250, 200, 40), fcol=(40, 26, 10), fin=MINT, seed=2000)
+
+# The Emperor's New Groove (2000): Disney clamshell; the jungle sky, the poster's blue plate with THE EMPEROR'S and its golden NEW GROOVE cut off it whole, Kuzco the llama in the diamond
+disney('the-emperor-s-new-groove-2000', ('grad', [(0, (80, 170, 230)), (.5, (60, 140, 210)), (1, (40, 110, 50))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.03, 0.02, 0.98, 0.23)], 140, cuts=[plate_cut(lambda a: (a[..., 2] > .35) & (a[..., 2] > a[..., 0] + .15), rot='auto')]),
+       face=ph(.6, .42, .2, 1.4), lcol=WHT)
+
+# The Road to El Dorado (2000): DreamWorks, a slipcase; the jungle's gold, the poster's gold THE ROAD TO / EL DORADO cut off it into one line, Tulio and Miguel on Altivo before the city
+std('the-road-to-el-dorado-2000', ('grad', [(0, (230, 180, 60)), (.5, (110, 120, 40)), (1, (20, 40, 10))]), (250, 220, 90),
+    LC([(0.35, 0.812, 0.65, 0.84), (0.09, 0.84, 0.91, 0.918)], 110, valign='base', margin=0, gapf=.2, outline=((40, 30, 10), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .55), minf=.02)] * 2),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(250, 220, 90), lg=WHT, lw=.5, order='LPTSF', dotst=('ANIMATION', (250, 220, 90), (40, 30, 10)),
+    ft='c', fcol=(230, 220, 180), fin=MINT, seed=2000)
+
+# The Virgin Suicides (2000): the poster's pale skin and hair, its white THE VIRGIN SUICIDES lifted and inked in the hair's dark gold, Kirsten Dunst's face (American Zoetrope logo)
+std('the-virgin-suicides-2000', ('grad', [(0, (246, 236, 230)), (.6, (230, 210, 196)), (1, (180, 140, 100))]), (140, 90, 40),
+    L([(0.04, 0.82, 0.17, 0.85), (0.04, 0.85, 0.965, 0.915)], 90, (140, 90, 40), mode='light', valign='base', speck=0),
+    photo=ph(0.55, 0.35, 0.86, 0.75), pb=(140, 90, 40), lg=(140, 90, 40), lw=.55, order='LPTCF', credit=['A FILM BY', 'SOFIA COPPOLA'], ccol=(140, 90, 40),
+    ft='e', fcol=(110, 70, 40), fin=MINT, seed=2000)
+
+# Titan A.E. (2000): 20th Century Fox, a slipcase; space, TITAN A.E. typeset in wide heavy capitals in chrome white with a blue keyline (parked for Ian's logo, see data/logos-wanted.md: the chrome letters reflect the starfield and the cut came out in pieces), Cale flying from the ship
+std('titan-a-e-2000', ('grad', [(0, (30, 30, 60)), (.6, (8, 8, 20)), (1, (2, 2, 6))]), (220, 220, 236),
+    TT([('TITAN', (226, 228, 240)), ('A.E.', (226, 228, 240))], 'advb', 100, sp=.4, outline=((40, 80, 160), 2)),
+    photo=ph(0.5, 0.72, 0.8, 0.6), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTF',
+    ft='a', vbox=(200, 40, 40), fcol=(190, 196, 220), fin=MINT, seed=2000)
+
+# Traffic (2000): the poster's dark green, its white stencilled TRAFFIC lifted, the cast's faces in the grain (USA Films logo)
+std('traffic-2000', ('grad', [(0, (60, 80, 50)), (.6, (16, 22, 12)), (1, (2, 4, 2))]), WHT,
+    LC([(0.06, 0.798, 0.94, 0.878)], 100, cuts=[comp_cut(lambda a: _lum(a) > .75, minf=.05, close=2, fillh=True)]),
+    photo=ph(0.5, 0.33, 0.9, 0.75), pb=(200, 200, 140), lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SODERBERGH', 'FILM'], ccol=WHT,
+    ft='d', fcol=(200, 210, 190), fin=MINT, seed=2000)
+
+# Wonder Boys (2000): black, the poster's white script Wonder Boys lifted, the four of them, Douglas in the glasses
+std('wonder-boys-2000', ('grad', [(0, (40, 34, 30)), (.6, (12, 10, 8)), (1, (2, 2, 2))]), WHT,
+    L((0.025, 0.52, 0.98, 0.618), 110, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['MICHAEL DOUGLAS', 'TOBEY MAGUIRE'], ccol=WHT,
+    ft='a', fcol=(210, 200, 196), fin=MINT, seed=2000)
+
+# A Beautiful Mind (2001): the chalkboard's dark, the poster's gold A BEAUTIFUL / MIND cut off it into one line, Russell Crowe behind the window of equations
+std('a-beautiful-mind-2001', ('grad', [(0, (60, 60, 40)), (.6, (16, 16, 10)), (1, (2, 2, 2))]), (240, 210, 90),
+    LC([(0.195, 0.83, 0.845, 0.892), (0.3, 0.89, 0.77, 0.97)], 100, valign='base', margin=0, gapf=.4, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .5) & (a[..., 2] < .45), minf=.02)] * 2),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=(240, 210, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A RON HOWARD', 'FILM'], ccol=(240, 220, 150),
+    ft='e', fcol=(210, 210, 190), fin=MINT, seed=2001)
+
+# Along Came a Spider (2001): the shattered glass blue into white, the poster's white along came a spider lifted onto the blue, Morgan Freeman and Monica Potter
+std('along-came-a-spider-2001', ('grad', [(0, (20, 60, 100)), (.6, (10, 30, 60)), (1, (2, 10, 20))]), WHT,
+    L((0.215, 0.072, 0.97, 0.148), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.38, 0.86, 0.75), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
+    ft='b', fcol=(190, 210, 230), fin=MINT, seed=2001)
+
+# Amélie (2001): the poster's green, its yellow script Amelie cut off it, Audrey Tautou's smile
+std('amelie-2001', ('grad', [(0, (30, 130, 60)), (.6, (12, 60, 24)), (1, (2, 14, 6))]), (250, 220, 40),
+    LC([(0.07, 0.79, 0.93, 0.95)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02)]),
+    photo=ph(0.48, 0.35, 0.8, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'JEAN-PIERRE JEUNET'], ccol=(250, 230, 140),
+    ft='c', fcol=(210, 230, 210), fin=MINT, seed=2001)
+
+# Atlantis: The Lost Empire (2001): Disney clamshell; the poster's deep blue, ATLANTIS / THE LOST EMPIRE typeset in a white serif like the logo's (parked for Ian's logo, see data/logos-wanted.md: the thin white letters sit in the crystal's white glow, and both cuts broke), Milo's face in the diamond
+disney('atlantis-the-lost-empire-2001', ('grad', [(0, (20, 60, 120)), (.5, (40, 110, 180)), (1, (10, 30, 70))]), fin=dict(CLAM, vivid=.2),
+       title=[T('ATLANTIS', 'pagb', 100, WHT, outline=((20, 50, 110), 1.6)), T('THE LOST EMPIRE', 'pagb', 46, WHT)],
+       face=ph(.5, .72, .12, 1.4), lcol=WHT)
+
+# Baby Boy (2001): the poster's sky, BABY BOY typeset in light spaced capitals in white (parked for Ian's logo, see data/logos-wanted.md: the thin white letters on a pale sky lost their strokes twice), Tyrese Gibson on the bike
+std('baby-boy-2001', ('grad', [(0, (180, 210, 230)), (.5, (140, 150, 140)), (1, (40, 40, 30))]), WHT,
+    TT([('BABY', WHT), ('BOY', WHT)], 'hcn', 100, sp=.4, outline=((60, 80, 100), 1.6)),
+    photo=ph(0.55, 0.55, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOHN SINGLETON'], ccol=WHT,
+    ft='d', fcol=(220, 220, 210), fin=MINT, seed=2001)
