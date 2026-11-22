@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Kiss of the Dragon (2001) | Vault 2000s | `logos/kiss-of-the-dragon-2001-title.png` | typeset; small white letters in the flames' glow |
+| Ocean's Eleven (2001) | Vault 2000s | `logos/ocean-s-eleven-2001-title.png` | typeset; OCEAN'S runs diagonally inside the red 11 |
 | Baby Boy (2001) | Vault 2000s | `logos/baby-boy-2001-title.png` | typeset; thin white letters on a pale sky |
 | Atlantis: The Lost Empire (2001) | Vault 2000s | `logos/atlantis-the-lost-empire-2001-title.png` | typeset (Disney clamshell); thin white letters in the crystal's glow |
 | Titan A.E. (2000) | Vault 2000s | `logos/titan-a-e-2000-title.png` | typeset; chrome letters reflect the starfield |

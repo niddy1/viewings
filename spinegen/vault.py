@@ -3670,3 +3670,74 @@ std('baby-boy-2001', ('grad', [(0, (180, 210, 230)), (.5, (140, 150, 140)), (1, 
     TT([('BABY', WHT), ('BOY', WHT)], 'hcn', 100, sp=.4, outline=((60, 80, 100), 1.6)),
     photo=ph(0.55, 0.55, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOHN SINGLETON'], ccol=WHT,
     ft='d', fcol=(220, 220, 210), fin=MINT, seed=2001)
+
+# Blow (2001): the poster's red, its white stencilled BLOW lifted, Johnny Depp and Penélope Cruz lying together
+std('blow-2001', ('grad', [(0, (170, 50, 60)), (.5, (110, 24, 30)), (1, (24, 4, 6))]), WHT,
+    LC([(0.125, 0.105, 0.88, 0.205)], 110, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.05)]),
+    photo=ph(0.5, 0.45, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP', 'PENÉLOPE CRUZ'], ccol=WHT,
+    ft='b', fcol=(240, 210, 210), fin=MINT, seed=2001)
+
+# Donnie Darko (2001): the night forest's blue, the poster's pale serif DONNIE DARKO lifted, Frank the rabbit in the trees (Flower Films logo)
+std('donnie-darko-2001', ('grad', [(0, (30, 50, 80)), (.6, (8, 14, 26)), (1, (2, 4, 8))]), (200, 220, 236),
+    L((0.19, 0.888, 0.81, 0.932), 90, (210, 226, 240), mode='light', speck=0),
+    photo=ph(0.5, 0.33, 0.7, 1.1), pb=(170, 200, 230), lg=WHT, lw=.5, order='LPTCF', credit=['JAKE GYLLENHAAL'], ccol=(200, 220, 236),
+    ft='c', fcol=(170, 190, 210), fin=MINT, seed=2001)
+
+# From Hell (2001): black, the poster's white FROM / HELL lifted into one line, the red slash of light and Ripper's silhouette (no logo file: 20th Century Fox, from IMDb's company credits)
+std('from-hell-2001', ('grad', [(0, (60, 20, 20)), (.6, (16, 6, 6)), (1, (2, 2, 2))]), WHT,
+    L([(0.52, 0.676, 0.866, 0.746), (0.52, 0.746, 0.866, 0.816)], 110, WHT, mode='light', valign='base'),
+    photo=ph(0.65, 0.2, 0.6, 0.55), pb=(210, 30, 30), studio=['20TH CENTURY FOX'], scol=WHT, order='lPTSF', stick=BAR('01 1019', top='HORROR', fill=(230, 226, 214)),
+    ft='a', vbox=(210, 30, 30), fcol=(210, 200, 200), fin=MINT, seed=2001)
+
+# Hannibal (2001): black, the poster's red serif HANNIBAL keyed off it, Anthony Hopkins's face in the dark with its red eye
+std('hannibal-2001', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), (200, 30, 30),
+    LC([(0.03, 0.1, 0.95, 0.175)], 90, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .22) & (a[..., 0] > a[..., 1] * 2.5), minf=.1)]),
+    photo=ph(0.55, 0.5, 0.9, 0.75), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(210, 196, 180), fin=MINT, seed=2001)
+
+# Harry Potter and the Philosopher's Stone (2001): Warner Bros., a slipcase; the night blue over Hogwarts, the poster's silver Harry Potter with its lightning P cut off it, and AND THE PHILOSOPHER'S STONE, Harry in his glasses
+std('harry-potter-and-the-philosopher-s-stone-2001', ('grad', [(0, (20, 40, 80)), (.6, (8, 16, 36)), (1, (2, 4, 10))]), (220, 220, 230),
+    LC([(0.06, 0.03, 0.94, 0.22), (0.5, 0.22, 0.96, 0.266)], 140, valign='mid', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .62, minf=.003)] * 2),
+    photo=ph(0.55, 0.52, 0.8, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL RADCLIFFE'], ccol=WHT,
+    ft='d', fcol=(190, 200, 220), fin=MINT, seed=2001)
+
+# Jay and Silent Bob Strike Back (2001): the road map, the poster's silver JAY AND SILENT BOB STRIKE BACK badge cut off it whole and levelled, Jay, Silent Bob and the cast
+std('jay-and-silent-bob-strike-back-2001', ('grad', [(0, (240, 236, 226)), (.6, (220, 214, 200)), (1, (120, 110, 96))]), (30, 30, 34),
+    LC([(0.2, 0.53, 0.82, 0.78)], 140, cuts=[plate_cut(lambda a: (_lum(a) < .45) | ((_sat(a) < .15) & (_lum(a) > .5) & (_lum(a) < .85)), rot='auto')]),
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(30, 30, 34), lg=(30, 30, 34), lw=.55, order='LPTCSF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=(30, 30, 34), stick=PRC(['$1.99', 'COMEDY']),
+    ft='b', fcol=(30, 30, 34), fin=MINT, seed=2001)
+
+# Kiss of the Dragon (2001): the fire's red into black, KISS OF THE DRAGON typeset in white spaced capitals (parked for Ian's logo, see data/logos-wanted.md: the small white letters sit in the flames' bright glow and two cuts lost them), Jet Li and Bridget Fonda (EuropaCorp logo)
+std('kiss-of-the-dragon-2001', ('grad', [(0, (170, 40, 20)), (.5, (80, 14, 8)), (1, (6, 2, 2))]), WHT,
+    T('KISS OF THE DRAGON', 'hcnb', 80, WHT),
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(250, 160, 60), lg=WHT, lw=.5, order='LPTF', dotst=('ACTION', (250, 160, 60), (30, 10, 4)),
+    ft='a', fcol=(230, 200, 190), fin=MINT, seed=2001)
+
+# Knockaround Guys (2001): the desert's pale sky, the poster's white KNOCKAROUND and red GUYS cut off it in their own colours, the four in their leather jackets (no logo file: New Line Cinema, from IMDb's company credits)
+std('knockaround-guys-2001', ('grad', [(0, (200, 210, 220)), (.5, (150, 150, 140)), (1, (40, 34, 26))]), WHT,
+    LC([(0.08, 0.39, 0.98, 0.55)], 130, outline=((30, 30, 30), 1.6), cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .6) & (a[..., 1] < .3) & (a[..., 2] < .3)), minf=.08)]),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(200, 30, 30), studio=['NEW LINE CINEMA'], scol=(30, 30, 30), order='lPTF',
+    ft='e', fcol=(240, 236, 226), fin=MINT, seed=2001)
+
+# Lagaan: Once Upon a Time in India (2001): a 2-tape box (233 minutes); the poster's cream, its green serif LAGAAN and Once upon a time in India cut off it into one line, Aamir Khan's face
+std('lagaan-once-upon-a-time-in-india-2001', ('grad', [(0, (246, 234, 200)), (.6, (230, 210, 170)), (1, (130, 110, 70))]), (30, 80, 50),
+    [LC([(0.075, 0.78, 0.94, 0.875)], 120, cuts=[key_cut(lambda a: (a[..., 1] > a[..., 0]) & (_lum(a) < .45))]), LC([(0.075, 0.882, 0.935, 0.905)], 40, cuts=[key_cut(lambda a: (a[..., 1] > a[..., 0]) & (_lum(a) < .5))])], tgap=6,
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(30, 80, 50), lg=(30, 60, 40), lw=.55, order='LPTSF', stick=TWOST((30, 80, 50), (246, 234, 200)),
+    ft='c', fcol=(30, 60, 40), fin=MINT, seed=2001, **TWO)
+
+# Monsters, Inc. (2001): Pixar clamshell; the door's blue, the poster's white panel with its blue MONSTERS, INC. cut off it whole, Mike's face in the diamond
+disney('monsters-inc-2001', ('grad', [(0, (30, 80, 200)), (.5, (60, 120, 220)), (1, (20, 40, 120))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.06, 0.06, 0.96, 0.24)], 140, cuts=[plate_cut(lambda a: _lum(a) > .85)]),
+       face=ph(.62, .77, .2, 1.4), lcol=WHT)
+
+# Mulholland Drive (2001): black, the poster's white condensed MULHOLLAND DRIVE lifted, Naomi Watts and Laura Harring in the blue light
+std('mulholland-drive-2001', ('grad', [(0, (30, 40, 80)), (.6, (8, 10, 24)), (1, (2, 2, 4))]), WHT,
+    L((0.105, 0.86, 0.893, 0.93), 90, WHT, mode='light'),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(80, 130, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID LYNCH', 'FILM'], ccol=(170, 190, 240),
+    ft='b', fcol=(180, 190, 220), fin=MINT, seed=2001)
+
+# Ocean's Eleven (2001): the poster's white, OCEAN'S 11 typeset in heavy condensed capitals in its red (parked for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 11 and the cut came out a sliver), the eleven's legs walking
+std('ocean-s-eleven-2001', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    TT([("OCEAN'S", (210, 30, 30)), ('11', (210, 30, 30))], 'intbk', 110, sp=.3),
+    photo=ph(0.6, 0.15, 0.8, 0.4), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(30, 30, 30),
+    ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2001)
