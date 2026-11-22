@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Gangs of New York (2002) | Vault 2000s | `logos/gangs-of-new-york-2002-title.png` | typeset; distressed gold letters on a gold skyline |
 | The Lord of the Rings: The Fellowship of the Ring (2001) | Vault 2000s | `logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png` | typeset; gold logo on a gold haze (one logo file would do for all three, with the subtitle typeset) |
 | Super Troopers (2001) | Vault 2000s | `logos/super-troopers-2001-title.png` | typeset; the badge sits on the T of TROOPERS |
 | Shrek (2001) | Vault 2000s | `logos/shrek-2001-title.png` | typeset; green carved letters on green grass |

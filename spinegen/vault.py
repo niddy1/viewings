@@ -3813,3 +3813,76 @@ std('wet-hot-american-summer-2001', ('grad', [(0, (60, 130, 200)), (.5, (40, 110
     TT([('WET', (30, 60, 160)), ('HOT', (210, 30, 40)), ('AMERICAN', (210, 30, 40)), ('SUMMER', (30, 60, 160))], 'intbk', 90, sp=.25, outline=(WHT, 2)),
     photo=ph(0.5, 0.65, 0.86, 0.85), pb=(200, 30, 40), studio=['USA FILMS'], scol=WHT, order='lPTCF', credit=['A DAVID WAIN', 'FILM'], ccol=WHT,
     ft='a', vbox=(200, 30, 40), fcol=(220, 236, 220), fin=MINT, seed=2001)
+
+# 25th Hour (2002): Touchstone, a slipcase; the poster's red, its white stencilled 25th / hour cut off it whole, Edward Norton walking his dog
+std('25th-hour-2002', ('grad', [(0, (200, 30, 30)), (.5, (140, 16, 16)), (1, (30, 4, 4))]), WHT,
+    LC([(0.04, 0.2, 0.71, 0.49)], 140, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.03)]),
+    photo=ph(0.7, 0.72, 0.5, 1.1), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=WHT,
+    ft='a', vbox=(20, 20, 20), fcol=(250, 220, 220), fin=MINT, seed=2002)
+
+# 8 Mile (2002): black, the poster's yellow-orange 8 Mile cut off it, Eminem in the hood
+std('8-mile-2002', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (250, 200, 40),
+    LC([(0.22, 0.575, 0.78, 0.715)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .45) & (a[..., 2] < .4), minf=.02)]),
+    photo=ph(0.5, 0.22, 0.7, 0.75), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('MUSIC', (250, 200, 40), (20, 20, 20)),
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2002)
+
+# Adaptation. (2002): the poster's white, its green typewriter Adaptation. keyed off it, the orchid and Nicolas Cage in the flowerpot
+std('adaptation-2002', ('grad', [(0, (246, 246, 244)), (.6, (230, 236, 226)), (1, (130, 140, 120))]), (40, 150, 70),
+    LC([(0.1, 0.195, 0.9, 0.268)], 100, cuts=[key_cut(lambda a: a[..., 1] > a[..., 0] + .1)]),
+    photo=ph(0.55, 0.65, 0.86, 0.6), pb=(40, 150, 70), lg=(30, 50, 30), lw=.55, order='LPTCF', credit=['A SPIKE JONZE', 'FILM'], ccol=(30, 50, 30),
+    ft='b', fcol=(30, 50, 30), fin=MINT, seed=2002)
+
+# Austin Powers in Goldmember (2002): the poster's sky blue, its gold GOLDMEMBER with the AUSTIN POWERS IN badge cut off it whole, Austin, Foxxy and the villains
+std('austin-powers-in-goldmember-2002', ('grad', [(0, (60, 170, 230)), (.5, (30, 130, 200)), (1, (10, 50, 90))]), (250, 200, 40),
+    LC([(0.13, 0.715, 0.87, 0.9)], 140, cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 1] > .45) & (a[..., 2] < .4)) | (_lum(a) < .15), minf=.02, close=2)]),
+    photo=ph(0.5, 0.35, 0.86, 0.8), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
+    ft='c', fcol=(220, 236, 250), fin=MINT, seed=2002)
+
+# Bend It Like Beckham (2002): the poster's white, its green-and-black BEND IT / LIKE BECKHAM cut off it into one line, Jess and Jules laughing
+std('bend-it-like-beckham-2002', ('grad', [(0, (246, 246, 246)), (.6, (226, 232, 226)), (1, (120, 130, 120))]), (100, 180, 60),
+    LC([(0.105, 0.115, 0.86, 0.196), (0.105, 0.193, 0.86, 0.237)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) < .3) | ((a[..., 1] > .55) & (a[..., 2] < .5) & (a[..., 0] < .8)), minf=.02)] * 2),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(100, 180, 60), lg=(30, 30, 30), lw=.55, order='LPTF',
+    ft='a', vbox=(100, 180, 60), fcol=(30, 30, 30), fin=MINT, seed=2002)
+
+# Bowling for Columbine (2002): black, the poster's white BOWLING / COLUMBINE and red FOR cut off it into one line, the pins as bullets (director from IMDb)
+std('bowling-for-columbine-2002', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
+    LC([(0.05, 0.695, 0.95, 0.78), (0.05, 0.783, 0.95, 0.87)], 100, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) > .82) | ((a[..., 0] > .5) & (a[..., 1] < .3)), minf=.02)] * 2),
+    photo=ph(0.5, 0.25, 0.86, 0.75), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'MICHAEL MOORE'], ccol=WHT,
+    ft='d', vbox=(200, 30, 30), fcol=(210, 210, 210), fin=MINT, seed=2002)
+
+# Catch Me If You Can (2002): DreamWorks, a slipcase; the poster's white, its blue arrow with catch me / if you can cut off it whole, Frank and Hanratty running
+std('catch-me-if-you-can-2002', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 90, 170),
+    LC([(0.0, 0.47, 0.89, 0.65)], 140, cuts=[plate_cut(lambda a: (a[..., 2] > .45) & (a[..., 0] < .35))]),
+    photo=ph(0.87, 0.35, 0.26, 1.6), pb=(30, 90, 170), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['LEONARDO DiCAPRIO', 'TOM HANKS'], ccol=(30, 40, 70),
+    ft='b', fcol=(30, 40, 70), fin=MINT, seed=2002)
+
+# Changing Lanes (2002): the night street, the poster's yellow CHANGING / LANES cut off it into one line, Ben Affleck and Samuel L. Jackson
+std('changing-lanes-2002', ('grad', [(0, (40, 50, 60)), (.6, (12, 14, 18)), (1, (2, 2, 4))]), (250, 220, 40),
+    LC([(0.3, 0.522, 0.705, 0.6), (0.3, 0.598, 0.705, 0.712)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .4), minf=.02)] * 2),
+    photo=ph(0.5, 0.25, 0.86, 0.75), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('02 0412', top='THRILLER', fill=(232, 228, 214)),
+    ft='e', fcol=(200, 206, 210), fin=MINT, seed=2002)
+
+# City of God (2002): the poster's orange-red, its white CITY of GOD lifted, the gang on the dusty hill (O2 Filmes logo)
+std('city-of-god-2002', ('grad', [(0, (240, 160, 40)), (.5, (200, 60, 30)), (1, (60, 10, 6))]), WHT,
+    L((0.04, 0.432, 0.96, 0.534), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.2, 0.9, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UM FILME DE', 'FERNANDO MEIRELLES'], ccol=WHT,
+    ft='c', fcol=(250, 220, 200), fin=MINT, seed=2002)
+
+# Collateral Damage (2002): the poster's fire into black, its white COLLATERAL / DAMAGE lifted into one line, Arnold's face
+std('collateral-damage-2002', ('grad', [(0, (200, 120, 40)), (.5, (90, 40, 14)), (1, (4, 2, 2))]), WHT,
+    [L((0.025, 0.812, 0.975, 0.865), 96, WHT, mode='light'), L((0.025, 0.865, 0.975, 0.915), 96, WHT, mode='light')], tgap=8,
+    photo=ph(0.45, 0.4, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(230, 210, 190), fin=MINT, seed=2002)
+
+# Die Another Day (2002): the ice-blue, the poster's white italic DIE / ANOTHER / DAY cut off it into one line (its gold 007 left off: it sits on the sea's glints), Bond with the pistol
+std('die-another-day-2002', ('grad', [(0, (60, 150, 190)), (.5, (20, 70, 110)), (1, (4, 14, 26))]), WHT,
+    LC([(0.18, 0.05, 0.44, 0.12), (0.05, 0.115, 0.625, 0.18), (0.22, 0.185, 0.71, 0.255)], 110, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: _lum(a) > .8, minf=.03)] * 3),
+    photo=ph(0.6, 0.55, 0.86, 0.85), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['PIERCE BROSNAN'], ccol=WHT,
+    ft='d', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 220, 236), fin=MINT, seed=2002)
+
+# Gangs of New York (2002): Miramax, the poster's dusk, GANGS OF NEW YORK typeset in condensed capitals in the poster's gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are distressed and sit on a gold skyline, and both cuts came out faint and broken), DiCaprio, Diaz and Day-Lewis
+std('gangs-of-new-york-2002', ('grad', [(0, (80, 70, 40)), (.6, (24, 20, 10)), (1, (2, 2, 2))]), (230, 190, 100),
+    T('GANGS OF NEW YORK', 'hcnb', 100, (230, 196, 110)),
+    photo=ph(0.5, 0.2, 0.9, 0.5), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE', 'PICTURE'], ccol=(230, 210, 160),
+    ft='b', fcol=(220, 206, 180), fin=MINT, seed=2002)
