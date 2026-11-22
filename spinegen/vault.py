@@ -4531,3 +4531,75 @@ std('racing-stripes-2005', ('grad', [(0, (90, 180, 230)), (.5, (130, 200, 240)),
     LC([(0.02, 0.045, 0.99, 0.14)], 120, outline=((30, 20, 10), 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)]),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(220, 236, 250), fin=MINT, seed=2005)
+
+# Robots (2005): Blue Sky (Fox), a slipcase; the poster's sky, ROBOTS typeset in heavy rounded capitals in chrome white (parked for Ian's logo, see data/logos-wanted.md: the chrome letters are built of gears against cloud), Rodney and the rusties
+std('robots-2005', ('grad', [(0, (60, 140, 220)), (.5, (120, 180, 230)), (1, (40, 80, 120))]), WHT,
+    T('ROBOTS', 'popb', 120, (226, 232, 240), outline=((30, 60, 110), 2.2)),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(250, 160, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='b', fcol=(220, 236, 250), fin=MINT, seed=2005)
+
+# Sin City (2005): black, the poster's red brushed SIN / CITY cut off it whole, Marv and the cast in black and white rain
+std('sin-city-2005', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (220, 30, 30),
+    LC([(0.42, 0.62, 0.96, 0.86)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02, rot=-14)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['FRANK MILLER &', 'ROBERT RODRIGUEZ'], ccol=WHT,
+    ft='a', vbox=(220, 30, 30), fcol=(210, 210, 210), fin=MINT, seed=2005)
+
+# Syriana (2005): the poster's cream, its black distressed SYRIANA cut off it, Clooney, Damon and the cast
+std('syriana-2005', ('grad', [(0, (240, 230, 206)), (.6, (220, 206, 176)), (1, (110, 96, 70))]), (20, 16, 10),
+    LC([(0.09, 0.065, 0.925, 0.145)], 110, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.01)]),
+    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'MATT DAMON'], ccol=(20, 16, 10),
+    ft='e', fcol=(20, 16, 10), fin=MINT, seed=2005)
+
+# Thank You for Smoking (2005): the poster's white, its black THANK YOU / FOR SMOKING cut off it into one line, Aaron Eckhart's head as the cigarette's ash
+std('thank-you-for-smoking-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    LC([(0.065, 0.75, 0.935, 0.84), (0.065, 0.84, 0.935, 0.915)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) < .25, minf=.02)] * 2),
+    photo=ph(0.5, 0.25, 0.8, 0.75), pb=(200, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A JASON REITMAN', 'FILM'], ccol=(20, 20, 20),
+    ft='c', vbox=(200, 30, 30), fcol=(20, 20, 20), fin=MINT, seed=2005)
+
+# The 40-Year-Old Virgin (2005): the poster's orange, its white The / 40-Year-Old / Virgin lifted into one line, Steve Carell's grin
+std('the-40-year-old-virgin-2005', ('grad', [(0, (240, 130, 40)), (.5, (240, 170, 60)), (1, (140, 70, 20))]), WHT,
+    L([(0.43, 0.03, 0.57, 0.06), (0.14, 0.058, 0.86, 0.14), (0.32, 0.16, 0.68, 0.225)], 100, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(),
+    ft='d', fcol=(250, 230, 210), fin=MINT, seed=2005)
+
+# The Brothers Grimm (2005): the dark, the poster's white serif THE BROTHERS GRIMM lifted, Matt Damon and Heath Ledger
+std('the-brothers-grimm-2005', ('grad', [(0, (60, 70, 70)), (.6, (16, 20, 20)), (1, (2, 2, 2))]), (226, 220, 206),
+    L((0.085, 0.82, 0.92, 0.875), 90, (226, 220, 206), mode='light', speck=0),
+    photo=ph(0.5, 0.25, 0.86, 0.5), pb=(226, 220, 206), lg=WHT, lw=.5, order='LPTCF', credit=['A TERRY GILLIAM', 'FILM'], ccol=(226, 220, 206),
+    ft='b', fcol=(200, 206, 206), fin=MINT, seed=2005)
+
+# The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005): Disney, a live-action film, so a slipcase; the poster's green, NARNIA typeset in a copper serif with THE LION, THE WITCH AND THE WARDROBE (parked for Ian's logo, see data/logos-wanted.md: the copper letters are shaded with the lion's mane behind them), Aslan's face
+std('the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005', ('grad', [(0, (40, 100, 90)), (.6, (12, 30, 28)), (1, (2, 6, 6))]), (220, 110, 50),
+    [T('NARNIA', 'pagb', 120, (220, 110, 50), outline=((40, 20, 10), 1.8)), T('THE LION, THE WITCH AND THE WARDROBE', 'pagb', 42, (240, 220, 180))], tgap=8,
+    photo=ph(0.5, 0.52, 0.8, 0.7), pb=(220, 110, 50), lg=WHT, lw=.5, order='LPTCF', credit=['AN ANDREW ADAMSON', 'FILM'], ccol=(240, 220, 180),
+    ft='a', fcol=(200, 220, 210), fin=MINT, seed=2005)
+
+# The Longest Yard (2005): the poster's blue, its white THE LONGEST YARD lifted, Adam Sandler and the team
+std('the-longest-yard-2005', ('grad', [(0, (40, 90, 170)), (.6, (12, 30, 60)), (1, (2, 6, 14))]), WHT,
+    LC([(0.06, 0.725, 0.94, 0.87)], 120, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.8), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTCF', credit=['ADAM SANDLER', 'BURT REYNOLDS'], ccol=WHT,
+    ft='e', fcol=(200, 210, 236), fin=MINT, seed=2005)
+
+# Transporter 2 (2005): the poster's white, TRANSPORTER 2 typeset in heavy italic capitals in chrome grey (parked with The Transporter for Ian's logo, see data/logos-wanted.md: the chrome letters sit in the fireball's streaks), Jason Statham leaping with the pistols
+std('transporter-2-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (60, 60, 64),
+    T('TRANSPORTER 2', 'intbki', 90, (70, 70, 76), outline=((250, 150, 40), 1.6)),
+    photo=ph(0.5, 0.3, 0.86, 0.6), pb=(240, 140, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', dotst=('ACTION', (240, 140, 40), (20, 10, 4)),
+    ft='c', fcol=(30, 30, 30), fin=MINT, seed=2005)
+
+# Wallace & Gromit: The Curse of the Were-Rabbit (2005): Aardman (DreamWorks), a slipcase; the poster's night, its yellow Wallace & Gromit / THE CURSE OF THE WERE-RABBIT cut off it into one line, Wallace and Gromit before the giant pumpkin
+std('wallace-gromit-the-curse-of-the-were-rabbit-2005', ('grad', [(0, (40, 50, 80)), (.6, (12, 16, 26)), (1, (2, 2, 6))]), (250, 220, 60),
+    LC([(0.22, 0.79, 0.78, 0.83), (0.22, 0.83, 0.78, 0.925)], 110, valign='base', margin=0, gapf=.2, outline=((30, 20, 10), 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .6) & (a[..., 2] < .5), minf=.02)] * 2),
+    photo=ph(0.55, 0.45, 0.86, 0.85), pb=(250, 220, 60), lg=WHT, lw=.5, order='LTPF',
+    ft='b', fcol=(210, 210, 226), fin=MINT, seed=2005)
+
+# War of the Worlds (2005): the burning red, the poster's chrome WAR OF THE WORLDS cut off it, Tom Cruise holding Dakota Fanning
+std('war-of-the-worlds-2005', ('grad', [(0, (60, 40, 30)), (.5, (140, 40, 20)), (1, (20, 4, 2))]), (220, 220, 226),
+    LC([(0.05, 0.595, 0.96, 0.77)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .55) & (_sat(a) < .3), minf=.02)]),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(250, 160, 60), lg=WHT, lw=.5, order='LPTCF', credit=['A STEVEN SPIELBERG', 'FILM'], ccol=WHT,
+    ft='d', fcol=(220, 200, 190), fin=MINT, seed=2005)
+
+# Wedding Crashers (2005): the poster's white, its red WEDDING / CRASHERS cut off it into one line, Owen Wilson and Vince Vaughn
+std('wedding-crashers-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    LC([(0.09, 0.065, 0.915, 0.14), (0.09, 0.138, 0.915, 0.205)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)] * 2),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('05 0715', top='COMEDY', fill=(240, 236, 226)),
+    ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2005)

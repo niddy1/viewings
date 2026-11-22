@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Transporter 2 (2005) | Vault 2000s | `logos/transporter-2-2005-title.png` | typeset; chrome letters in the fireball's streaks |
+| The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) | Vault 2000s | `logos/the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005-title.png` | typeset; shaded copper letters over the lion's mane |
+| Robots (2005) | Vault 2000s | `logos/robots-2005-title.png` | typeset; chrome letters built of gears against cloud |
 | Lord of War (2005) | Vault 2000s | `logos/lord-of-war-2005-title.png` | typeset; the tiny red OF dropped out |
 | Mr. & Mrs. Smith (2005) | Vault 2000s | `logos/mr-mrs-smith-2005-title.png` | typeset; serif title over a black suit |
 | Madagascar (2005) | Vault 2000s | `logos/madagascar-2005-title.png` | typeset; carved orange letters shaded through yellow |
