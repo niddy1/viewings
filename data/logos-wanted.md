@@ -6,6 +6,10 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Brother Bear (2003) | Vault 2000s | `logos/brother-bear-2003-title.png` | typeset (Disney clamshell); the title is a square carved sign |
+| Intolerable Cruelty (2003) | Vault 2000s | `logos/intolerable-cruelty-2003-title.png` | typeset; thin letters lose their bars |
+| Capturing the Friedmans (2003) | Vault 2000s | `logos/capturing-the-friedmans-2003-title.png` | typeset; speckled yellow letters |
+| Bad Santa (2003) | Vault 2000s | `logos/bad-santa-2003-title.png` | typeset; unevenly lit green letters |
 | Spirit: Stallion of the Cimarron (2002) | Vault 2000s | `logos/spirit-stallion-of-the-cimarron-2002-title.png` | typeset; white letters on white cloud |
 | The Pianist (2002) | Vault 2000s | `logos/the-pianist-2002-title.png` | typeset; the scuffed final T broke |
 | The Bourne Identity (2002) | Vault 2000s | `logos/the-bourne-identity-2002-title.png` | typeset; THE sits over Matt Damon's shoulder |

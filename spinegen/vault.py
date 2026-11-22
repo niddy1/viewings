@@ -4027,3 +4027,74 @@ std('21-grams-2003', ('grad', [(0, (140, 30, 20)), (.5, (60, 14, 8)), (1, (6, 2,
     TT([('21', (220, 30, 30)), ('GRAMS', (240, 190, 80))], 'intbk', 120, sp=.3),
     photo=ph(0.7, 0.4, 0.5, 1.3), pb=(240, 190, 80), lg=WHT, lw=.5, order='LPTCF', credit=['AN ALEJANDRO', 'GONZÁLEZ IÑÁRRITU FILM'], ccol=WHT,
     ft='d', fcol=(220, 200, 190), fin=MINT, seed=2003)
+
+# Bad Boys II (2003): the desert haze, the poster's black stencilled BAD BOYS II cut off it, Will Smith and Martin Lawrence walking from the fire
+std('bad-boys-ii-2003', ('grad', [(0, (200, 190, 160)), (.5, (180, 140, 80)), (1, (70, 40, 14))]), (20, 16, 10),
+    LC([(0.05, 0.1, 0.955, 0.205)], 110, cuts=[comp_cut(lambda a: _lum(a) < .22, minf=.02)]),
+    photo=ph(0.5, 0.5, 0.86, 0.75), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['WILL SMITH', 'MARTIN LAWRENCE'], ccol=(20, 16, 10),
+    ft='b', vbox=(20, 16, 10), vink=(220, 200, 160), fcol=(30, 20, 10), fin=MINT, seed=2003)
+
+# Bad Santa (2003): the elf's green, BAD SANTA typeset in heavy capitals in the logo's green with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the green letters are lit unevenly and the cut lost the T twice), Billy Bob Thornton in the Santa suit
+std('bad-santa-2003', ('grad', [(0, (200, 40, 40)), (.5, (120, 20, 20)), (1, (20, 60, 20))]), (120, 200, 60),
+    T('BAD SANTA', 'intbk', 110, (110, 190, 60), outline=((20, 40, 10), 2)),
+    photo=ph(0.45, 0.3, 0.86, 0.85), pb=(120, 200, 60), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
+    ft='c', fcol=(240, 220, 200), fin=MINT, seed=2003)
+
+# Big Fish (2003): Columbia, a slipcase; the poster's sky into green, its dark branchy BIG FISH lifted, the tree on the hill
+std('big-fish-2003', ('grad', [(0, (120, 170, 220)), (.5, (160, 190, 120)), (1, (30, 40, 20))]), (60, 20, 14),
+    L((0.12, 0.42, 0.95, 0.63), 120, (70, 26, 16), mode='dark', speck=.02),
+    photo=ph(0.5, 0.25, 0.9, 0.5), pb=(60, 20, 14), lg=(40, 20, 10), lw=.55, order='LPTCF', credit=['A TIM BURTON', 'FILM'], ccol=(40, 20, 10),
+    ft='a', fcol=(250, 240, 220), fin=MINT, seed=2003)
+
+# Brother Bear (2003): Disney clamshell; the forest's blues, BROTHER BEAR typeset in a rough serif in the sign's wood brown on a cream keyline (parked for Ian's logo, see data/logos-wanted.md: the poster's title is a square carved sign, which only reads across the spine, not down it), Kenai's face in the diamond
+disney('brother-bear-2003', ('grad', [(0, (40, 90, 160)), (.5, (60, 130, 190)), (1, (30, 60, 40))]), fin=dict(CLAM, vivid=.2),
+       title=T('BROTHER BEAR', 'schb', 110, (130, 70, 30), outline=((250, 230, 190), 2.2)),
+       face=ph(.47, .27, .18, 1.4), lcol=WHT)
+
+# Bruce Almighty (2003): the sky, the poster's white Bruce and red ALMIGHTY cut off it in their own colours, Jim Carrey holding the world on a string
+std('bruce-almighty-2003', ('grad', [(0, (90, 160, 230)), (.5, (160, 200, 240)), (1, (30, 60, 100))]), WHT,
+    LC([(0.01, 0.065, 0.975, 0.122)], 110, outline=((20, 40, 90), 1.6), cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.02)]),
+    photo=ph(0.55, 0.5, 0.86, 0.9), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('COMEDY', (200, 30, 30), WHT),
+    ft='a', fcol=(220, 230, 250), fin=MINT, seed=2003)
+
+# Capturing the Friedmans (2003): black, CAPTURING THE FRIEDMANS typeset in condensed capitals in its yellow (parked for Ian's logo, see data/logos-wanted.md: the yellow letters are speckled and both lifts came out holed), the torn family snapshot (HBO Documentary logo; director from IMDb)
+std('capturing-the-friedmans-2003', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (250, 230, 60),
+    T('CAPTURING THE FRIEDMANS', 'hcnb', 90, (250, 230, 60)),
+    photo=ph(0.55, 0.38, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'ANDREW JARECKI'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2003)
+
+# Daredevil (2003): 20th Century Fox (Marvel), a slipcase; the red rain, the poster's red italic DAREDEVIL cut off it, Daredevil on the cross with Elektra
+std('daredevil-2003', ('grad', [(0, (60, 70, 90)), (.5, (40, 20, 20)), (1, (8, 2, 2))]), (220, 30, 30),
+    LC([(0.06, 0.815, 0.94, 0.895)], 110, outline=((20, 10, 10), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('03 0214', top='ACTION', fill=(232, 226, 214)),
+    ft='d', vbox=(220, 30, 30), fcol=(210, 200, 196), fin=MINT, seed=2003)
+
+# Dogville (2003): a 2-tape box (178 minutes); the poster's white, its black stencilled DOGVILLE cut off it, Nicole Kidman's face
+std('dogville-2003', ('grad', [(0, (246, 246, 246)), (.6, (226, 226, 226)), (1, (120, 120, 120))]), (20, 20, 20),
+    LC([(0.12, 0.11, 0.875, 0.19)], 110, cuts=[key_cut(lambda a: _lum(a) < .3)]),
+    photo=ph(0.55, 0.6, 0.6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCSF', credit=['EN FILM AF', 'LARS VON TRIER'], ccol=(20, 20, 20), stick=TWOST((20, 20, 20), WHT),
+    ft='b', fcol=(20, 20, 20), fin=MINT, seed=2003, **TWO)
+
+# Finding Nemo (2003): Pixar clamshell; the reef's blue, the poster's white FINDING NEMO with its wave cut off it whole, Nemo's face in the diamond
+disney('finding-nemo-2003', ('grad', [(0, (30, 90, 180)), (.5, (40, 120, 200)), (1, (10, 40, 90))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.07, 0.08, 0.94, 0.3)], 140, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.01)]),
+       face=ph(.47, .45, .12, 1.4), lcol=WHT)
+
+# Holes (2003): Disney, a live-action film, so a slipcase; black, the poster's chrome HOLES cut off it whole, the boys looking down into the hole
+std('holes-2003', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), (220, 210, 200),
+    LC([(0.17, 0.7, 0.83, 0.885)], 130, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.05, close=2)]),
+    photo=ph(0.5, 0.3, 0.8, 0.85), pb=(240, 170, 80), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    ft='e', fcol=(210, 200, 190), fin=MINT, seed=2003)
+
+# Intolerable Cruelty (2003): the poster's white, INTOLERABLE CRUELTY typeset in thin grey capitals (parked for Ian's logo, see data/logos-wanted.md: the thin letters' T bars vanish at spine size), George Clooney and Catherine Zeta-Jones
+std('intolerable-cruelty-2003', ('grad', [(0, (246, 246, 244)), (.6, (226, 228, 226)), (1, (120, 124, 120))]), (60, 60, 64),
+    T('INTOLERABLE CRUELTY', 'adv', 90, (70, 70, 74)),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(190, 20, 30), lg=(40, 40, 44), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(40, 40, 44),
+    ft='c', fcol=(40, 40, 44), fin=MINT, seed=2003)
+
+# Kill Bill: Vol. 1 (2003): Miramax, the poster's yellow, its black KILL / BILL and red VOLUME 1 cut off it into one line, the Bride with her sword
+std('kill-bill-vol-1-2003', ('grad', [(0, (252, 220, 30)), (.5, (244, 200, 20)), (1, (150, 110, 10))]), (20, 16, 10),
+    LC([(0.05, 0.1, 0.56, 0.29), (0.05, 0.29, 0.56, 0.48), (0.05, 0.485, 0.42, 0.54)], 120, valign='base', margin=0, gapf=.2,
+       cuts=[key_cut(lambda a: _lum(a) < .2)] * 2 + [key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3))]),
+    photo=ph(0.75, 0.55, 0.5, 1.6), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTCF', credit=['THE 4TH FILM BY', 'QUENTIN TARANTINO'], ccol=(20, 16, 10),
+    ft='a', vbox=(20, 16, 10), vink=(252, 220, 30), fcol=(20, 16, 10), fin=MINT, seed=2003)
