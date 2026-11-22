@@ -4242,3 +4242,76 @@ std('friday-night-lights-2004', ('grad', [(0, (40, 50, 60)), (.6, (12, 14, 18)),
     L((0.09, 0.83, 0.92, 0.875), 84, WHT, mode='light'),
     photo=ph(0.5, 0.5, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['BILLY BOB THORNTON'], ccol=WHT,
     ft='d', fcol=(200, 206, 210), fin=MINT, seed=2004)
+
+# Hamburger America (2004): the poster's burger browns, its cream serif Hamburger / America lifted into one line, the cheeseburgers on the plate (no logo file: MotzFilms, from IMDb's company credits)
+std('hamburger-america-2004', ('grad', [(0, (180, 110, 50)), (.5, (120, 70, 30)), (1, (30, 16, 6))]), (250, 226, 150),
+    L([(0.09, 0.09, 0.9, 0.152), (0.18, 0.18, 0.78, 0.238)], 100, (250, 226, 150), mode='light', valign='base', gapf=.25),
+    photo=ph(0.5, 0.6, 0.86, 0.6), pb=(250, 226, 150), studio=['MOTZFILMS'], scol=(250, 226, 150), order='lPTCF', credit=['A FILM BY', 'GEORGE MOTZ'], ccol=(250, 226, 150),
+    ft='c', fcol=(240, 220, 180), fin=MINT, seed=2004)
+
+# Harry Potter and the Prisoner of Azkaban (2004): Warner Bros., a slipcase; the storm sky, HARRY POTTER typeset in a gold serif with AND THE PRISONER OF AZKABAN (parked with the others for Ian's logo, see data/logos-wanted.md), Harry with the Hogwarts sky behind
+std('harry-potter-and-the-prisoner-of-azkaban-2004', ('grad', [(0, (50, 70, 100)), (.6, (14, 20, 30)), (1, (2, 4, 6))]), (232, 194, 96),
+    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE PRISONER OF AZKABAN', 'pagb', 46, (232, 210, 150))], tgap=8,
+    photo=ph(0.5, 0.45, 0.86, 0.75), pb=(232, 194, 96), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(200, 210, 220), fin=MINT, seed=2004)
+
+# Home on the Range (2004): Disney clamshell; the desert sky, HOME ON THE RANGE typeset in heavy italic capitals in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the slanted yellow letters crowd round the cows' heads and the cut kept only scraps), Maggie the cow's face in the diamond
+disney('home-on-the-range-2004', ('grad', [(0, (40, 80, 170)), (.5, (60, 120, 200)), (1, (200, 110, 50))]), fin=dict(CLAM, vivid=.2),
+       title=T('HOME ON THE RANGE', 'intbki', 100, (250, 210, 50), outline=((40, 20, 10), 2)),
+       face=ph(.5, .48, .2, 1.4), lcol=WHT)
+
+# I Like Killing Flies (2004): the poster's parchment, I LIKE KILLING FLIES typeset in a hand-drawn-looking face in brown (parked for Ian's logo, see data/logos-wanted.md: the scratchy pen lettering came out faint and broken), Kenny Shopsin's face under it (no logo file: THINKFilm, from IMDb's company credits; director from IMDb)
+std('i-like-killing-flies-2004', ('grad', [(0, (236, 210, 150)), (.5, (200, 160, 90)), (1, (80, 50, 20))]), (40, 30, 20),
+    T('I LIKE KILLING FLIES', 'curbi', 90, (60, 40, 20)),
+    photo=ph(0.5, 0.82, 0.86, 0.35), pb=(40, 30, 20), studio=['THINKFILM'], scol=(40, 30, 20), order='lPTCF', credit=['A DOCUMENTARY BY', 'MATT MAHURIN'], ccol=(40, 30, 20),
+    ft='a', fcol=(40, 30, 20), fin=MINT, seed=2004)
+
+# I Heart Huckabees (2004): Fox Searchlight, the poster's orange, its white i ♥ huckabees cut off it with the blue heart, the grid of faces
+std('i-huckabees-2004', ('grad', [(0, (250, 160, 30)), (.5, (240, 140, 20)), (1, (130, 70, 10))]), WHT,
+    LC([(0.08, 0.835, 0.92, 0.9)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .85) | ((a[..., 2] > .5) & (a[..., 0] < .4)), minf=.02)]),
+    photo=ph(0.5, 0.33, 0.9, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID O. RUSSELL', 'FILM'], ccol=WHT,
+    ft='e', fcol=(250, 230, 200), fin=MINT, seed=2004)
+
+# In Good Company (2004): the poster's white, its crimson serif In Good / Company cut off it into one line, Topher Grace between Dennis Quaid and Scarlett (no logo file: Universal Pictures, from IMDb's company credits)
+std('in-good-company-2004', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (140, 20, 40),
+    LC([(0.24, 0.03, 0.83, 0.135), (0.02, 0.135, 0.98, 0.24)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .35) & (a[..., 1] < .25), minf=.02)] * 2),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(140, 20, 40), studio=['UNIVERSAL PICTURES'], scol=(40, 30, 30), order='lPTF',
+    ft='d', fcol=(40, 30, 30), fin=MINT, seed=2004)
+
+# Jersey Girl (2004): Miramax, the poster's white, jersey girl typeset in a heavy rounded face in its blue (parked for Ian's logo, see data/logos-wanted.md: the blue letters overlap the girl's blue jeans and both tries took the jeans too), Ben Affleck and Raquel Castro crossing their arms
+std('jersey-girl-2004', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 70, 160),
+    T('jersey girl', 'popb', 110, (30, 70, 160)),
+    photo=ph(0.5, 0.35, 0.86, 0.75), pb=(30, 70, 160), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=(30, 40, 70),
+    ft='c', fcol=(30, 40, 70), fin=MINT, seed=2004)
+
+# Kill Bill: Vol. 2 (2004): Miramax, the poster's red and yellow, KILL BILL typeset in heavy condensed capitals in its yellow over VOLUME 2 in white (parked for Ian's logo, see data/logos-wanted.md: the Bride's sword and jacket cut across BILL), the Bride drawing her sword
+std('kill-bill-vol-2-2004', ('grad', [(0, (220, 30, 30)), (.5, (180, 20, 20)), (1, (60, 6, 6))]), (250, 220, 30),
+    [T('KILL BILL', 'intbk', 120, (250, 220, 30)), T('VOLUME 2', 'intbk', 50, WHT)], tgap=8,
+    photo=ph(0.75, 0.55, 0.45, 1.3), pb=(250, 220, 30), lg=WHT, lw=.5, order='LTPCF', credit=['THE 4TH FILM BY', 'QUENTIN TARANTINO'], ccol=WHT,
+    ft='b', vbox=(250, 220, 30), vink=(30, 10, 4), fcol=(250, 220, 200), fin=MINT, seed=2004)
+
+# Kung Fu Hustle (2004): the poster's white, its red-and-yellow KUNG FU / HUSTLE cut off it into one line, Stephen Chow mid-kick
+std('kung-fu-hustle-2004', ('grad', [(0, (246, 244, 240)), (.6, (228, 224, 216)), (1, (120, 116, 108))]), (220, 40, 30),
+    LC([(0.12, 0.05, 0.88, 0.15), (0.1, 0.15, 0.9, 0.25)], 120, valign='base', margin=0, gapf=.2, outline=((30, 20, 10), 1.4),
+       cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 2] < .35) | (_lum(a) < .15), minf=.02, close=2)] * 2),
+    photo=ph(0.5, 0.65, 0.86, 0.75), pb=(220, 40, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['A STEPHEN CHOW', 'FILM'], ccol=(30, 30, 30),
+    ft='a', vbox=(220, 40, 30), fcol=(30, 30, 30), fin=MINT, seed=2004)
+
+# Layer Cake (2004): black, the poster's yellow Layer and white Cake cut off it into one line, Daniel Craig with the pistol (Marv logo)
+std('layer-cake-2004', ('grad', [(0, (60, 50, 30)), (.6, (16, 12, 8)), (1, (2, 2, 2))]), (250, 220, 40),
+    LC([(0.05, 0.12, 0.63, 0.28), (0.05, 0.28, 0.6, 0.47)], 120, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.03), comp_cut(lambda a: _lum(a) > .85, minf=.03)]),
+    photo=ph(0.6, 0.65, 0.8, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL CRAIG'], ccol=WHT,
+    ft='e', fcol=(220, 210, 190), fin=MINT, seed=2004)
+
+# Lemony Snicket's A Series of Unfortunate Events (2004): Paramount, a slipcase; the poster's storm teal, A SERIES OF UNFORTUNATE EVENTS typeset in a gold serif with LEMONY SNICKET'S over it (parked for Ian's logo, see data/logos-wanted.md: the thin gold letters sit on a glowing sky and the cut came out empty), the orphans on the sand
+std('lemony-snicket-s-a-series-of-unfortunate-events-2004', ('grad', [(0, (60, 100, 110)), (.6, (16, 30, 34)), (1, (2, 6, 8))]), (230, 190, 100),
+    [T('UNFORTUNATE EVENTS', 'pagb', 100, (230, 190, 100), outline=((20, 30, 30), 1.6)), T("LEMONY SNICKET'S A SERIES OF", 'pagb', 46, (230, 210, 160))], tgap=8,
+    photo=ph(0.5, 0.75, 0.9, 0.55), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='c', fcol=(200, 210, 210), fin=MINT, seed=2004)
+
+# Mean Girls (2004): Paramount, the poster's hot pink, MEAN GIRLS typeset in heavy capitals, MEAN in pink and GIRLS in white with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the pink letters sit on the pink ground and the cut came out in shreds), Lindsay Lohan and the Plastics
+std('mean-girls-2004', ('grad', [(0, (250, 220, 236)), (.5, (240, 120, 180)), (1, (180, 30, 110))]), (220, 30, 130),
+    TT([('MEAN', (220, 30, 130)), ('GIRLS', WHT)], 'intbk', 110, sp=.2, outline=((80, 10, 50), 1.8)),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(220, 30, 130), lg=(60, 10, 40), lw=.55, order='LPTSF', dotst=('COMEDY', (250, 220, 236), (180, 30, 110)),
+    ft='a', vbox=(220, 30, 130), fcol=(60, 10, 40), fin=MINT, seed=2004)

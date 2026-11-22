@@ -6,6 +6,13 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Jersey Girl (2004) | Vault 2000s | `logos/jersey-girl-2004-title.png` | typeset; the blue letters overlap blue jeans |
+| Mean Girls (2004) | Vault 2000s | `logos/mean-girls-2004-title.png` | typeset; pink letters on the pink ground |
+| Lemony Snicket's A Series of Unfortunate Events (2004) | Vault 2000s | `logos/lemony-snicket-s-a-series-of-unfortunate-events-2004-title.png` | typeset; thin gold letters on a glowing sky |
+| Kill Bill: Vol. 2 (2004) | Vault 2000s | `logos/kill-bill-vol-2-2004-title.png` | typeset; the sword cuts across BILL |
+| I Like Killing Flies (2004) | Vault 2000s | `logos/i-like-killing-flies-2004-title.png` | typeset; scratchy pen lettering came out faint |
+| Home on the Range (2004) | Vault 2000s | `logos/home-on-the-range-2004-title.png` | typeset (Disney clamshell); slanted letters round the cows' heads |
+| Harry Potter and the Prisoner of Azkaban (2004) | Vault 2000s | `logos/harry-potter-and-the-prisoner-of-azkaban-2004-title.png` | typeset; one Harry Potter logo would serve all the films |
 | The Triplets of Belleville (2003) | Vault 2000s | `logos/the-triplets-of-belleville-2003-title.png` | typeset; tilted gold letters on the sepia drawing |
 | The Jungle Book 2 (2003) | Vault 2000s | `logos/the-jungle-book-2-2003-title.png` | typeset (Disney clamshell); gold letters among gold leaves |
 | The Italian Job (2003) | Vault 2000s | `logos/the-italian-job-2003-title.png` | typeset; JOB against the yellow stripe |
