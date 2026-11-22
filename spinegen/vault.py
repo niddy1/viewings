@@ -3528,3 +3528,75 @@ std('gone-in-sixty-seconds-2000', ('grad', [(0, (240, 140, 30)), (.5, (180, 60, 
     TT([('GONE IN', (190, 20, 20)), ('60', WHT), ('SECONDS', (190, 20, 20))], 'intbki', 100, sp=.3, outline=((30, 10, 4), 1.6)),
     photo=ph(0.6, 0.2, 0.8, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTF',
     ft='e', vbox=(200, 30, 20), fcol=(250, 220, 200), fin=MINT, seed=2000)
+
+# High Fidelity (2000): Touchstone, a slipcase; the poster's orange record sleeve, its blue condensed High Fidelity keyed off it, the grid of John Cusack's faces
+std('high-fidelity-2000', ('grad', [(0, (250, 150, 40)), (.5, (240, 120, 30)), (1, (120, 50, 10))]), (30, 60, 140),
+    LC([(0.53, 0.305, 0.945, 0.402)], 100, cuts=[key_cut(lambda a: (a[..., 2] > a[..., 0] + .05) & (_lum(a) < .55))]),
+    photo=ph(0.5, 0.62, 0.86, 0.75), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['JOHN CUSACK'], ccol=(30, 30, 30),
+    ft='a', vbox=(30, 60, 140), fcol=(40, 20, 10), fin=MINT, seed=2000)
+
+# How the Grinch Stole Christmas (2000): the night blue, the poster's green GRINCH with its red STOLE CHRISTMAS cut off it whole, the Grinch leaping before the moon
+std('how-the-grinch-stole-christmas-2000', ('grad', [(0, (30, 60, 140)), (.6, (10, 20, 60)), (1, (2, 4, 16))]), (120, 200, 60),
+    LC([(0.18, 0.66, 0.94, 0.94)], 140, cuts=[comp_cut(lambda a: ((a[..., 1] > a[..., 0] + .1) & (a[..., 1] > .4) & (a[..., 2] < .5)) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.02, close=3)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'FAMILY']),
+    ft='b', fcol=(200, 216, 240), fin=MINT, seed=2000)
+
+# In the Mood for Love (2000): the poster's red, IN THE MOOD FOR LOVE typeset in a pale gold serif like the poster's (parked for Ian's logo, see data/logos-wanted.md: the huge pale letters run behind and over the couple, so two cuts lost half of each word), Maggie Cheung and Tony Leung
+std('in-the-mood-for-love-2000', ('grad', [(0, (190, 30, 30)), (.6, (120, 14, 14)), (1, (30, 4, 4))]), (230, 200, 130),
+    T('IN THE MOOD FOR LOVE', 'ter', 90, (232, 204, 140)),
+    photo=ph(0.55, 0.33, 0.6, 0.6), pb=(230, 200, 130), lg=(230, 200, 130), lw=.5, order='LPTCF', credit=['A FILM BY', 'WONG KAR-WAI'], ccol=(230, 200, 130),
+    ft='e', fcol=(240, 210, 190), fin=MINT, seed=2000)
+
+# Me, Myself & Irene (2000): the poster's white, its blue Me, Myself and red & Irene cut off it in their own colours, Jim Carrey's split face
+std('me-myself-irene-2000', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 70, 160),
+    LC([(0.015, 0.06, 0.935, 0.25)], 130, cuts=[comp_cut(lambda a: _sat(a) > .4, minf=.02)]),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(200, 30, 40), lg=(30, 40, 80), lw=.55, order='LPTF',
+    ft='d', fcol=(30, 40, 80), fin=MINT, seed=2000)
+
+# Meet the Parents (2000): the poster's white, its red serif Meet the Parents cut off it, De Niro and Stiller at the lie detector
+std('meet-the-parents-2000', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (120, 116, 110))]), (180, 20, 40),
+    LC([(0.115, 0.022, 0.885, 0.27)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.02)]),
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(180, 20, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='c', fcol=(30, 30, 30), fin=MINT, seed=2000)
+
+# Memento (2000): the polaroid's white, MEMENTO typeset in a slanting hand in black (parked for Ian's logo, see data/logos-wanted.md: the handwriting runs at a tilt across the polaroid's edge and the cut broke into strokes), Guy Pearce in the nested photographs
+std('memento-2000', ('grad', [(0, (246, 244, 238)), (.6, (230, 226, 218)), (1, (120, 116, 108))]), (20, 20, 20),
+    T('MEMENTO', 'curbi', 110, (20, 20, 20)),
+    photo=ph(0.5, 0.3, 0.86, 0.75), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=(20, 20, 20),
+    ft='b', fcol=(20, 20, 20), fin=MINT, seed=2000)
+
+# Nurse Betty (2000): the poster's white, its red NURSE BETTY keyed off it, Renée Zellweger with Morgan Freeman and Chris Rock
+std('nurse-betty-2000', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (210, 30, 30),
+    L((0.04, 0.795, 0.948, 0.868), 90, (210, 30, 30), mode='key', key=(210, 30, 30), t=(70, 160)),
+    photo=ph(0.5, 0.33, 0.9, 0.75), pb=(210, 30, 30), lg=(30, 30, 40), lw=.55, order='LPTCF', credit=['A NEIL LABUTE', 'FILM'], ccol=(30, 30, 40),
+    ft='a', vbox=(210, 30, 30), fcol=(30, 30, 40), fin=MINT, seed=2000)
+
+# O Brother, Where Art Thou? (2000): Touchstone, a slipcase; the poster's sepia, O BROTHER, WHERE ART THOU? typeset in heavy slab capitals in its black (parked for Ian's logo, see data/logos-wanted.md: the distressed letters sit on a mottled sepia field and both cuts came out speckled), the three in their prison stripes
+std('o-brother-where-art-thou-2000', ('grad', [(0, (210, 190, 130)), (.6, (160, 130, 70)), (1, (50, 40, 20))]), (30, 24, 14),
+    [T('O BROTHER,', 'schb', 100, (30, 24, 14)), T('WHERE ART THOU?', 'schb', 50, (30, 24, 14))], tgap=8,
+    photo=ph(0.5, 0.33, 0.9, 0.75), pb=(30, 24, 14), lg=(30, 24, 14), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(30, 24, 14),
+    ft='d', fcol=(30, 24, 14), fin=MINT, seed=2000)
+
+# Paradise Lost 2: Revelations (2000): black, the poster's gold PARADISE LOST 2 / REVELATIONS cut off it into one line, the faces of the three (HBO logo; directors from IMDb)
+std('paradise-lost-2-revelations-2000', ('grad', [(0, (110, 70, 30)), (.6, (30, 18, 8)), (1, (2, 2, 2))]), (230, 160, 80),
+    LC([(0.13, 0.722, 0.87, 0.78), (0.13, 0.78, 0.87, 0.824)], 100, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 2] < .5), minf=.01)] * 2),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(230, 160, 80), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'BERLINGER &', 'SINOFSKY'], ccol=(230, 200, 160),
+    ft='e', fcol=(220, 200, 170), fin=MINT, seed=2000)
+
+# Reindeer Games (2000): the poster's black, its orange REINDEER / GAMES cut off it into one line, Ben Affleck and the burning casino
+std('reindeer-games-2000', ('grad', [(0, (60, 30, 20)), (.6, (16, 8, 4)), (1, (2, 2, 2))]), (240, 150, 40),
+    LC([(0.31, 0.745, 0.74, 0.812), (0.285, 0.812, 0.725, 0.905)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .4) & (a[..., 2] < .35), minf=.02)] * 2),
+    photo=ph(0.5, 0.33, 0.86, 0.8), pb=(240, 150, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (240, 150, 40), (20, 10, 4)),
+    ft='c', fcol=(220, 200, 186), fin=MINT, seed=2000)
+
+# Remember the Titans (2000): Disney, a live-action film, so a slipcase; the poster's black, its white REMEMBER THE / TITANS lifted into one line, Denzel Washington's face
+std('remember-the-titans-2000', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))]), WHT,
+    L([(0.25, 0.11, 0.76, 0.14), (0.148, 0.142, 0.868, 0.22)], 96, WHT, mode='light', valign='base', speck=0),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 160, 60), lg=WHT, lw=.5, order='LPTCF', credit=['DENZEL WASHINGTON'], ccol=WHT,
+    ft='b', fcol=(220, 200, 186), fin=MINT, seed=2000)
+
+# Scary Movie (2000): the theatre's dark, the poster's red dripping SCARY / MOVIE cut off it into one line, the cast screaming in their seats
+std('scary-movie-2000', ('grad', [(0, (40, 80, 120)), (.6, (10, 20, 34)), (1, (2, 2, 6))]), (220, 30, 30),
+    LC([(0.22, 0.682, 0.785, 0.79), (0.215, 0.785, 0.77, 0.89)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)] * 2),
+    photo=ph(0.5, 0.33, 0.9, 0.7), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('00 0707', top='COMEDY', fill=(232, 228, 216)),
+    ft='a', vbox=(220, 30, 30), fcol=(200, 210, 230), fin=MINT, seed=2000)

@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| O Brother, Where Art Thou? (2000) | Vault 2000s | `logos/o-brother-where-art-thou-2000-title.png` | typeset; distressed letters on a mottled sepia field |
+| In the Mood for Love (2000) | Vault 2000s | `logos/in-the-mood-for-love-2000-title.png` | typeset; huge pale letters run behind and over the couple |
+| Memento (2000) | Vault 2000s | `logos/memento-2000-title.png` | typeset; the slanted handwriting breaks across the polaroid's edge |
 | Dinosaur (2000) | Vault 2000s | `logos/dinosaur-2000-title.png` | typeset (Disney clamshell); bronze letters shaded over cloud |
 | Gone in Sixty Seconds (2000) | Vault 2000s | `logos/gone-in-sixty-seconds-2000-title.png` | typeset; slanted red and chrome lettering in flames |
 | Dave Chappelle: Killin' Them Softly (2000) | Vault 2000s | `logos/dave-chappelle-killin-them-softly-2000-title.png` | typeset; sideways green hand lettering on green and yellow |
