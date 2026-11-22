@@ -6,6 +6,12 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Lord of War (2005) | Vault 2000s | `logos/lord-of-war-2005-title.png` | typeset; the tiny red OF dropped out |
+| Mr. & Mrs. Smith (2005) | Vault 2000s | `logos/mr-mrs-smith-2005-title.png` | typeset; serif title over a black suit |
+| Madagascar (2005) | Vault 2000s | `logos/madagascar-2005-title.png` | typeset; carved orange letters shaded through yellow |
+| Kiss Kiss Bang Bang (2005) | Vault 2000s | `logos/kiss-kiss-bang-bang-2005-title.png` | typeset; stacked words over the suits |
+| Hoodwinked! (2005) | Vault 2000s | `logos/hoodwinked-2005-title.png` | typeset; red banner on red |
+| Harry Potter and the Goblet of Fire (2005) | Vault 2000s | `logos/harry-potter-and-the-goblet-of-fire-2005-title.png` | typeset; one Harry Potter logo would serve all the films |
 | Chicken Little (2005) | Vault 2000s | `logos/chicken-little-2005-title.png` | typeset (Disney clamshell); shaded logo on grass |
 | Charlie and the Chocolate Factory (2005) | Vault 2000s | `logos/charlie-and-the-chocolate-factory-2005-title.png` | typeset; logo printed on Wonka's hat band |
 | Are We There Yet? (2005) | Vault 2000s | `logos/are-we-there-yet-2005-title.png` | typeset; white letters stacked over a white cloud |

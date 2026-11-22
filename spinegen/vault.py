@@ -4458,3 +4458,76 @@ std('crash-2005', ('grad', [(0, (60, 50, 30)), (.6, (16, 12, 8)), (1, (2, 2, 2))
     LC([(0.36, 0.79, 0.93, 0.91)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.01, close=2)]),
     photo=ph(0.4, 0.3, 0.8, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A PAUL HAGGIS', 'FILM'], ccol=WHT,
     ft='e', fcol=(210, 200, 186), fin=MINT, seed=2005)
+
+# Fantastic Four (2005): 20th Century Fox (Marvel), a slipcase; the poster's blue, its silver FANTASTIC and the flaming 4 cut off it, the four with the Thing behind
+std('fantastic-four-2005', ('grad', [(0, (30, 60, 130)), (.6, (10, 20, 50)), (1, (2, 4, 14))]), WHT,
+    LC([(0.03, 0.065, 0.995, 0.15)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .72) | ((a[..., 0] > .7) & (a[..., 2] < .4)), minf=.02)]),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(250, 160, 40), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
+    ft='a', fcol=(200, 210, 236), fin=MINT, seed=2005)
+
+# Four Brothers (2005): black, the poster's grey FOUR and red BROTHERS cut off it in their own colours, the four brothers in the snow
+std('four-brothers-2005', ('grad', [(0, (60, 60, 64)), (.6, (16, 16, 18)), (1, (2, 2, 2))]), (200, 30, 30),
+    LC([(0.05, 0.78, 0.97, 0.865)], 110, cuts=[comp_cut(lambda a: ((_lum(a) > .5) & (_sat(a) < .15)) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.02)]),
+    photo=ph(0.5, 0.33, 0.86, 0.75), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A JOHN SINGLETON', 'FILM'], ccol=WHT,
+    ft='c', fcol=(200, 200, 200), fin=MINT, seed=2005)
+
+# Harry Potter and the Goblet of Fire (2005): Warner Bros., a slipcase; the night blue, HARRY POTTER typeset in a gold serif with AND THE GOBLET OF FIRE (parked with the others for Ian's logo, see data/logos-wanted.md), Harry and the champions
+std('harry-potter-and-the-goblet-of-fire-2005', ('grad', [(0, (30, 50, 70)), (.6, (10, 16, 24)), (1, (2, 4, 6))]), (232, 194, 96),
+    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE GOBLET OF FIRE', 'pagb', 46, (232, 210, 150))], tgap=8,
+    photo=ph(0.4, 0.5, 0.7, 0.85), pb=(232, 194, 96), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL RADCLIFFE'], ccol=WHT,
+    ft='e', fcol=(200, 210, 220), fin=MINT, seed=2005)
+
+# Hoodwinked! (2005): the forest sky, HOODWINKED! typeset in heavy capitals in the banner's red with a cream keyline (parked for Ian's logo, see data/logos-wanted.md: the banner is red on red and the cut kept one letter), Red, Granny, the Wolf and the Woodsman in the line-up
+std('hoodwinked-2005', ('grad', [(0, (120, 190, 240)), (.5, (90, 150, 90)), (1, (30, 60, 20))]), (220, 40, 40),
+    T('HOODWINKED!', 'intbk', 110, (220, 40, 40), outline=((250, 230, 190), 2)),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (250, 200, 40), (30, 20, 10)),
+    ft='b', fcol=(230, 240, 236), fin=MINT, seed=2005)
+
+# Kicking & Screaming (2005): the poster's sky, its red KICKING & SCREAMING cut off it, Will Ferrell cheering over the team (no logo file: Universal Pictures, from IMDb's company credits)
+std('kicking-screaming-2005', ('grad', [(0, (90, 170, 230)), (.5, (140, 200, 240)), (1, (40, 120, 40))]), (210, 30, 30),
+    LC([(0.08, 0.04, 0.92, 0.26)], 140, outline=(WHT, 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), studio=['UNIVERSAL PICTURES'], scol=WHT, order='lPTSF', stick=PRC(['$1.99', 'COMEDY']),
+    ft='d', fcol=(230, 246, 230), fin=MINT, seed=2005)
+
+# King Kong (2005): a 2-tape box (188 minutes); the poster's steel blue, its pale KING KONG cut off it, Kong roaring on the Empire State
+std('king-kong-2005', ('grad', [(0, (60, 90, 120)), (.6, (16, 26, 36)), (1, (2, 4, 8))]), (200, 220, 236),
+    LC([(0.08, 0.79, 0.92, 0.935)], 130, cuts=[comp_cut(lambda a: _lum(a) > .58, minf=.03, close=2)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 220, 236), lg=WHT, lw=.5, order='LPTCSF', credit=['A PETER JACKSON', 'FILM'], ccol=(200, 220, 236), stick=TWOST((200, 220, 236), (10, 20, 30)),
+    ft='a', fcol=(190, 206, 220), fin=MINT, seed=2005, **TWO)
+
+# Kiss Kiss Bang Bang (2005): the poster's white, kiss kiss bang bang typeset in a typewriter face, the kisses in blue and the bangs in red (parked for Ian's logo, see data/logos-wanted.md: the stacked words lean over the actors' suits and came out in pieces), Robert Downey Jr. and Val Kilmer
+std('kiss-kiss-bang-bang-2005', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 70, 160),
+    TT([('kiss kiss', (30, 70, 160)), ('bang bang', (210, 40, 30))], 'mono', 110, sp=.3),
+    photo=ph(0.5, 0.8, 0.86, 0.45), pb=(220, 60, 30), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['ROBERT DOWNEY JR.', 'VAL KILMER'], ccol=(30, 40, 70),
+    ft='e', fcol=(30, 40, 70), fin=MINT, seed=2005)
+
+# Lord of War (2005): the poster's white, LORD OF WAR typeset in a grey serif with the small red OF (parked for Ian's logo, see data/logos-wanted.md: the tiny OF drops out of both cuts, so it read LORD WAR), Nicolas Cage's face made of bullets
+std('lord-of-war-2005', ('grad', [(0, (240, 240, 240)), (.6, (216, 216, 216)), (1, (100, 100, 100))]), (40, 40, 40),
+    TT([('LORD', (50, 50, 50)), ('of', (190, 30, 30)), ('WAR', (50, 50, 50))], 'ter', 110, sp=.25),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(40, 40, 40), lg=(40, 40, 40), lw=.55, order='LPTCF', credit=['NICOLAS CAGE'], ccol=(40, 40, 40),
+    ft='c', fcol=(40, 40, 40), fin=MINT, seed=2005)
+
+# Madagascar (2005): DreamWorks (PDI), a slipcase; the beach sky, MADAGASCAR typeset in heavy capitals in the logo's orange with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved orange letters are shaded through yellow and the cut kept one block), Alex, Marty, Gloria and Melman
+std('madagascar-2005', ('grad', [(0, (60, 170, 230)), (.5, (90, 190, 230)), (1, (230, 200, 130))]), (240, 130, 30),
+    T('MADAGASCAR', 'intbk', 110, (240, 130, 30), outline=((60, 30, 10), 2.2)),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(240, 130, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('05 0527', top='FAMILY', fill=(236, 236, 226)),
+    ft='a', fcol=(40, 30, 20), fin=MINT, seed=2005)
+
+# Match Point (2005): the poster's white, its black MATCH and red POINT cut off it into one line, Scarlett Johansson and Jonathan Rhys Meyers
+std('match-point-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    LC([(0.02, 0.71, 0.64, 0.83), (0.3, 0.83, 0.9, 0.96)], 110, valign='base', margin=0, gapf=.2,
+       cuts=[comp_cut(lambda a: _lum(a) < .2, minf=.03), comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .3), minf=.03)]),
+    photo=ph(0.35, 0.35, 0.6, 0.85), pb=(180, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A WOODY ALLEN', 'FILM'], ccol=(20, 20, 20),
+    ft='b', fcol=(20, 20, 20), fin=MINT, seed=2005)
+
+# Mr. & Mrs. Smith (2005): the poster's white, Mr. & Mrs. Smith typeset in a black serif with the red ampersand (parked for Ian's logo, see data/logos-wanted.md: the serif title is stacked over Brad Pitt's black suit and both cuts lost letters), Brad Pitt and Angelina Jolie back to back
+std('mr-mrs-smith-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
+    TT([('Mr.', (20, 20, 20)), ('&', (200, 30, 30)), ('Mrs. Smith', (20, 20, 20))], 'ter', 110, sp=.25),
+    photo=ph(0.5, 0.6, 0.86, 0.75), pb=(190, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['BRAD PITT', 'ANGELINA JOLIE'], ccol=(20, 20, 20),
+    ft='d', fcol=(20, 20, 20), fin=MINT, seed=2005)
+
+# Racing Stripes (2005): Warner Bros., a slipcase; the poster's sky blue, its red RACING STRIPES cut off it, Stripes the zebra in his racing hood
+std('racing-stripes-2005', ('grad', [(0, (90, 180, 230)), (.5, (130, 200, 240)), (1, (40, 100, 150))]), (210, 30, 30),
+    LC([(0.02, 0.045, 0.99, 0.14)], 120, outline=((30, 20, 10), 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(220, 236, 250), fin=MINT, seed=2005)
