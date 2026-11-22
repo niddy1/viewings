@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Triplets of Belleville (2003) | Vault 2000s | `logos/the-triplets-of-belleville-2003-title.png` | typeset; tilted gold letters on the sepia drawing |
+| The Jungle Book 2 (2003) | Vault 2000s | `logos/the-jungle-book-2-2003-title.png` | typeset (Disney clamshell); gold letters among gold leaves |
 | The Italian Job (2003) | Vault 2000s | `logos/the-italian-job-2003-title.png` | typeset; JOB against the yellow stripe |
 | Old School (2003) | Vault 2000s | `logos/old-school-2003-title.png` | typeset; white-edged red OLD over the cast |
 | Mystic River (2003) | Vault 2000s | `logos/mystic-river-2003-title.png` | typeset; RIVER fades into the reflection |

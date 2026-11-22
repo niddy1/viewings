@@ -4171,3 +4171,74 @@ std('the-italian-job-2003', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1,
     T('THE ITALIAN JOB', 'hcnb', 110, WHT),
     photo=ph(0.4, 0.3, 0.8, 0.85), pb=(250, 230, 40), lg=WHT, lw=.5, order='LPTCF', credit=['MARK WAHLBERG'], ccol=WHT,
     ft='a', vbox=(250, 230, 40), vink=(20, 20, 20), fcol=(200, 200, 200), fin=MINT, seed=2003)
+
+# The Jungle Book 2 (2003): Disney clamshell; the jungle's green, THE JUNGLE BOOK 2 typeset in a gold serif with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved gold letters sit among leaves of the same gold and the cut came out patchy), Mowgli's face in the diamond
+disney('the-jungle-book-2-2003', ('grad', [(0, (60, 140, 60)), (.5, (90, 170, 80)), (1, (30, 70, 30))]), fin=dict(CLAM, vivid=.2),
+       title=T('THE JUNGLE BOOK 2', 'pagb', 110, (240, 190, 70), outline=((40, 26, 10), 2)),
+       face=ph(.75, .66, .12, 1.4), lcol=WHT)
+
+# The Lord of the Rings: The Return of the King (2003): a 2-tape box (201 minutes); the poster's silver grey, THE LORD OF THE RINGS typeset in a gold serif like the first two's (parked with them for Ian's logo, see data/logos-wanted.md), Aragorn with the sword raised
+std('the-lord-of-the-rings-the-return-of-the-king-2003', ('grad', [(0, (120, 120, 116)), (.5, (50, 50, 48)), (1, (8, 8, 8))]), (236, 196, 110),
+    T('THE LORD OF THE RINGS', 'pagb', 130, (236, 196, 110), outline=((40, 26, 10), 1.6)),
+    photo=ph(0.4, 0.55, 0.7, 0.85), pb=(236, 196, 110), lg=WHT, lw=.5, order='LPTCSF', credit=['THE RETURN', 'OF THE KING'], ccol=(236, 210, 160), stick=TWOST((236, 196, 110), (30, 24, 10)),
+    ft='d', fcol=(220, 206, 180), fin=MINT, seed=2003, **TWO)
+
+# The School of Rock (2003): the poster's white, its red School of Rock with the cream outline cut off it, Jack Black mid-shred
+std('the-school-of-rock-2003', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    LC([(0.02, 0.035, 0.975, 0.14)], 130, cuts=[comp_cut(lambda a: ((a[..., 0] > .55) & (a[..., 1] < .3)) | (_lum(a) < .2), minf=.02, close=2)]),
+    photo=ph(0.45, 0.35, 0.8, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('03 1003', top='COMEDY', fill=(240, 236, 226)),
+    ft='b', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2003)
+
+# The Triplets of Belleville (2003): the poster's dark sepia, THE TRIPLETS OF BELLEVILLE typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the tilted gold letters sit on the sepia drawing and the lifts lost their ends), the triplets and Madame Souza
+std('the-triplets-of-belleville-2003', ('grad', [(0, (90, 60, 30)), (.6, (30, 18, 8)), (1, (4, 2, 2))]), (240, 200, 70),
+    [T('THE TRIPLETS OF', 'pagb', 60, (240, 200, 70)), T('BELLEVILLE', 'pagb', 100, (240, 200, 70), outline=((30, 16, 6), 1.6))], tgap=8,
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(240, 200, 70), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'SYLVAIN CHOMET'], ccol=(240, 220, 150),
+    ft='c', fcol=(230, 210, 180), fin=MINT, seed=2003)
+
+# 50 First Dates (2004): the beach sky, the poster's black 50, red FIRST and white DATES cut off it in their own colours, Drew Barrymore and Adam Sandler on the picnic blanket
+std('50-first-dates-2004', ('grad', [(0, (120, 190, 240)), (.5, (100, 170, 210)), (1, (200, 170, 120))]), (210, 30, 30),
+    LC([(0.03, 0.115, 0.96, 0.2)], 120, outline=((30, 40, 60), 1.4), cuts=[comp_cut(lambda a: (_lum(a) < .25) | ((a[..., 0] > .6) & (a[..., 1] < .3)) | (_lum(a) > .93), minf=.02)]),
+    photo=ph(0.5, 0.6, 0.86, 0.75), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ADAM SANDLER', 'DREW BARRYMORE'], ccol=WHT,
+    ft='a', vbox=(210, 30, 30), fcol=(40, 30, 20), fin=MINT, seed=2004)
+
+# Anchorman: The Legend of Ron Burgundy (2004): DreamWorks, a slipcase; the poster's blue, its white ANCHORMAN lifted and the yellow THE LEGEND OF RON BURGUNDY bar cut off it, Ron and the news team
+std('anchorman-the-legend-of-ron-burgundy-2004', ('grad', [(0, (30, 70, 150)), (.6, (10, 26, 60)), (1, (2, 6, 16))]), WHT,
+    [L((0.055, 0.05, 0.94, 0.15), 110, WHT, mode='light'), LC([(0.13, 0.155, 0.87, 0.2)], 50, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)])], tgap=8,
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('COMEDY', (250, 210, 40), (20, 20, 40)),
+    ft='e', fcol=(200, 210, 236), fin=MINT, seed=2004)
+
+# Coffee and Cigarettes (2004): the poster's black and white, its red band with the white COFFEE AND CIGARETTES cut off it whole, the table with the coffee cups
+std('coffee-and-cigarettes-2004', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
+    LC([(0.0, 0.275, 1.0, 0.36)], 120, margin=0, cuts=[key_cut(lambda a: _lum(a) >= 0)]),
+    photo=ph(0.5, 0.55, 0.86, 0.75), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
+    ft='d', fcol=(210, 210, 210), fin=MINT, seed=2004)
+
+# Collateral (2004): black, the poster's orange spaced COLLATERAL lifted, Tom Cruise in the grey suit
+std('collateral-2004', ('grad', [(0, (40, 30, 20)), (.6, (12, 8, 6)), (1, (2, 2, 2))]), (230, 140, 50),
+    L((0.07, 0.845, 0.93, 0.897), 84, (230, 140, 50), mode='light', speck=0),
+    photo=ph(0.4, 0.35, 0.7, 1.2), pb=(230, 140, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A MICHAEL MANN', 'FILM'], ccol=(240, 190, 130),
+    ft='c', fcol=(200, 196, 190), fin=MINT, seed=2004)
+
+# DodgeBall: A True Underdog Story (2004): 20th Century Fox, a slipcase; the poster's white, its red DodgeBall cut off it, Vince Vaughn with the red ball and Ben Stiller
+std('dodgeball-a-true-underdog-story-2004', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    LC([(0.09, 0.075, 0.925, 0.165)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.02)]),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LTPSF', stick=PRC(['$2.49', 'COMEDY']),
+    ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2004)
+
+# Eternal Sunshine of the Spotless Mind (2004): the frozen lake's white into blue, the poster's orange Eternal Sunshine and dark of the spotless mind lifted, Joel and Clementine on the ice
+std('eternal-sunshine-of-the-spotless-mind-2004', ('grad', [(0, (220, 230, 240)), (.5, (120, 160, 200)), (1, (20, 40, 70))]), (240, 140, 40),
+    [L((0.04, 0.41, 0.97, 0.485), 84, (240, 140, 40), mode='key', key=(240, 150, 60), t=(80, 170)), L((0.04, 0.48, 0.72, 0.516), 40, (30, 40, 60), mode='dark', speck=0)], tgap=8,
+    photo=ph(0.6, 0.18, 0.7, 0.55), pb=(240, 140, 40), lg=(30, 40, 60), lw=.55, order='LPTCF', credit=['JIM CARREY', 'KATE WINSLET'], ccol=WHT,
+    ft='b', fcol=(230, 236, 246), fin=MINT, seed=2004)
+
+# Finding Neverland (2004): Miramax, the poster's warm glow, its red serif FINDING / NEVERLAND cut off it into one line, Johnny Depp and Kate Winslet
+std('finding-neverland-2004', ('grad', [(0, (230, 200, 150)), (.5, (150, 80, 40)), (1, (30, 10, 6))]), (190, 30, 30),
+    LC([(0.28, 0.515, 0.82, 0.575), (0.12, 0.575, 0.96, 0.645)], 110, valign='base', margin=0, gapf=.2, outline=((250, 240, 220), 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .3), minf=.02)] * 2),
+    photo=ph(0.5, 0.25, 0.9, 0.55), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(240, 220, 200), fin=MINT, seed=2004)
+
+# Friday Night Lights (2004): the stadium's night, the poster's white FRIDAY NIGHT LIGHTS lifted, the three players walking out under the floodlights
+std('friday-night-lights-2004', ('grad', [(0, (40, 50, 60)), (.6, (12, 14, 18)), (1, (2, 2, 2))]), WHT,
+    L((0.09, 0.83, 0.92, 0.875), 84, WHT, mode='light'),
+    photo=ph(0.5, 0.5, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['BILLY BOB THORNTON'], ccol=WHT,
+    ft='d', fcol=(200, 206, 210), fin=MINT, seed=2004)
