@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Pirates of the Caribbean: Dead Man's Chest (2006) | Vault 2000s | `logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png` | typeset; same as the first Pirates (one logo would serve both) |
+| Lucky Number Slevin (2006) | Vault 2000s | `logos/lucky-number-slevin-2006-title.png` | typeset; slanted banner across the cast's faces |
 | Happy Feet (2006) | Vault 2000s | `logos/happy-feet-2006-title.png` | typeset; letters shaded red to yellow |
 | Flushed Away (2006) | Vault 2000s | `logos/flushed-away-2006-title.png` | typeset; water-splashed letters |
 | Cars (2006) | Vault 2000s | `logos/cars-2006-title.png` | typeset (Pixar clamshell); chrome-edged badge among the cars |

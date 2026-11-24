@@ -4674,3 +4674,75 @@ std('happy-feet-2006', ('grad', [(0, (60, 150, 220)), (.5, (130, 190, 240)), (1,
     TT([('HAPPY', (220, 40, 40)), ('FEET', (240, 150, 30))], 'intbk', 110, sp=.3, outline=(WHT, 1.8)),
     photo=ph(0.5, 0.6, 0.86, 0.85), pb=(230, 60, 40), lg=(20, 40, 80), lw=.55, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
     ft='a', fcol=(20, 40, 80), fin=MINT, seed=2006)
+
+# Hard Candy (2006): the poster's pale grey, its grey spaced HARD CANDY lifted, Hayley in the red hood standing on the trap
+std('hard-candy-2006', ('grad', [(0, (236, 232, 222)), (.6, (214, 210, 200)), (1, (110, 106, 98))]), (80, 76, 76),
+    L((0.06, 0.865, 0.94, 0.928), 90, (90, 86, 86), mode='dark', speck=0),
+    photo=ph(0.5, 0.3, 0.6, 1.3), pb=(200, 30, 40), lg=(60, 56, 56), lw=.55, order='LPTCF', credit=['PATRICK WILSON', 'ELLIOT PAGE'], ccol=(60, 56, 56),
+    ft='b', fcol=(60, 56, 56), fin=MINT, seed=2006)
+
+# Hollywoodland (2006): Focus Features, the poster's dark red, its gold HOLLYWOOD and red LAND cut off it in their own colours, Adrien Brody and the stars of the old studio
+std('hollywoodland-2006', ('grad', [(0, (120, 40, 30)), (.6, (40, 12, 8)), (1, (4, 2, 2))]), (240, 200, 110),
+    LC([(0.1, 0.738, 0.92, 0.8)], 120, margin=0, cuts=[comp_cut(lambda a: (_lum(a) > .62) | ((a[..., 0] > .7) & (a[..., 1] < .3)), minf=.03)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(240, 200, 110), lg=WHT, lw=.5, order='LPTCF', credit=['ADRIEN BRODY', 'BEN AFFLECK'], ccol=WHT,
+    ft='e', fcol=(220, 200, 190), fin=MINT, seed=2006)
+
+# Ice Age: The Meltdown (2006): Blue Sky (Fox), a slipcase; the poster's sky blue, its white chunky ICE AGE cut off it (THE MELTDOWN typeset under it: the poster's is too small to cut cleanly), Manny, Sid and Diego on the ice
+std('ice-age-the-meltdown-2006', ('grad', [(0, (60, 150, 230)), (.5, (130, 200, 240)), (1, (220, 236, 246))]), WHT,
+    [LC([(0.1, 0.035, 0.9, 0.16)], 140, outline=((20, 80, 160), 2), cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03)]), T('THE MELTDOWN', 'intbk', 40, WHT)], tgap=8,
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(20, 80, 160), lg=(20, 60, 120), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'FAMILY']),
+    ft='c', fcol=(20, 50, 100), fin=MINT, seed=2006)
+
+# Inside Man (2006): Universal, the poster's steel blue, its white INSIDE and red MAN cut off it in their own colours, Denzel Washington, Jodie Foster and Clive Owen
+std('inside-man-2006', ('grad', [(0, (70, 90, 110)), (.6, (20, 26, 34)), (1, (2, 4, 6))]), WHT,
+    LC([(0.08, 0.495, 0.92, 0.605)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.03)]),
+    photo=ph(0.5, 0.22, 0.86, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE LEE', 'JOINT'], ccol=WHT,
+    ft='a', vbox=(200, 30, 30), fcol=(200, 206, 214), fin=MINT, seed=2006)
+
+# Little Miss Sunshine (2006): Fox Searchlight, the poster's yellow, its black LITTLE MISS / SUNSHINE cut off it into one line, the family pushing the yellow van
+std('little-miss-sunshine-2006', ('grad', [(0, (252, 220, 30)), (.5, (246, 206, 20)), (1, (150, 110, 10))]), (20, 20, 20),
+    LC([(0.46, 0.342, 0.93, 0.397), (0.33, 0.395, 0.92, 0.467)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) < .3)] * 2),
+    photo=ph(0.5, 0.65, 0.9, 0.45), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['A FILM BY', 'DAYTON & FARIS'], ccol=(20, 20, 20),
+    ft='d', vbox=(20, 20, 20), vink=(252, 220, 30), fcol=(20, 20, 20), fin=MINT, seed=2006)
+
+# Lucky Number Slevin (2006): the poster's red, LUCKY NUMBER SLEVIN typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: LUCKY#SLEVIN runs on a slanted white-edged banner across the cast's faces and the cut took the faces), Josh Hartnett, Lucy Liu and the rest round the gun
+std('lucky-number-slevin-2006', ('grad', [(0, (200, 40, 30)), (.6, (100, 16, 10)), (1, (14, 2, 2))]), WHT,
+    TT([('LUCKY', WHT), ('#', (30, 20, 20)), ('SLEVIN', WHT)], 'intbk', 110, sp=.2),
+    photo=ph(0.5, 0.7, 0.86, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTSF', dotst=('CRIME', (30, 20, 20), WHT),
+    ft='b', fcol=(250, 220, 210), fin=MINT, seed=2006)
+
+# Monster House (2006): Columbia (ImageMovers), a slipcase; the night blue, its orange MONSTER / HOUSE cut off it into one line, the house glowing in the dark woods
+std('monster-house-2006', ('grad', [(0, (30, 50, 80)), (.6, (8, 14, 26)), (1, (2, 4, 6))]), (240, 110, 40),
+    LC([(0.3, 0.832, 0.725, 0.882), (0.27, 0.88, 0.76, 0.956)], 120, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .5) & (a[..., 2] < .35), minf=.03)] * 2),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(240, 110, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('06 0721', top='FAMILY', fill=(230, 232, 236)),
+    ft='e', fcol=(190, 200, 220), fin=MINT, seed=2006)
+
+# Night at the Museum (2006): 20th Century Fox, a slipcase; the hall's gold dark, the poster's white NIGHT AT THE MUSEUM lifted, Ben Stiller with the torch before the T. rex
+std('night-at-the-museum-2006', ('grad', [(0, (120, 90, 40)), (.6, (34, 24, 10)), (1, (4, 2, 2))]), WHT,
+    L((0.14, 0.868, 0.86, 0.94), 96, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(240, 200, 110), lg=WHT, lw=.5, order='LPTCF', credit=['BEN STILLER'], ccol=WHT,
+    ft='a', fcol=(230, 210, 180), fin=MINT, seed=2006)
+
+# Open Season (2006): Sony Pictures Animation, a slipcase; the forest's blue sky, the poster's wooden OPEN SEASON sign cut off it as it is, Boog and Elliot in the rapids
+std('open-season-2006', ('grad', [(0, (70, 150, 220)), (.5, (60, 130, 80)), (1, (20, 50, 30))]), (240, 200, 110),
+    LC([(0.0, 0.05, 1.0, 0.24)], 140, margin=0, cuts=[plate_cut(lambda a: (a[..., 0] > a[..., 2] + .15) & (_lum(a) > .25))]),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(240, 200, 110), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(230, 240, 236), fin=MINT, seed=2006)
+
+# Over the Hedge (2006): DreamWorks, a slipcase; the poster's sky blue, its orange OVER THE / HEDGE cut off it, RJ and the animals on the wagon
+std('over-the-hedge-2006', ('grad', [(0, (60, 160, 230)), (.5, (100, 180, 230)), (1, (60, 110, 40))]), (240, 130, 30),
+    LC([(0.15, 0.05, 0.86, 0.21)], 140, outline=((40, 20, 10), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .35) & (a[..., 2] < .35), minf=.02, close=2)]),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(240, 130, 30), lg=WHT, lw=.5, order='LTPSF', dotst=('ANIMATION', (250, 200, 40), (40, 20, 10)),
+    ft='d', fcol=(220, 236, 250), fin=MINT, seed=2006)
+
+# Pan's Labyrinth (2006): the poster's green dark, its white serif PAN'S / LABYRINTH lifted into one line, Ofelia before the tree
+std('pan-s-labyrinth-2006', ('grad', [(0, (50, 70, 60)), (.6, (14, 20, 16)), (1, (2, 4, 2))]), WHT,
+    L([(0.13, 0.828, 0.65, 0.888), (0.13, 0.888, 0.85, 0.95)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.4, 0.86, 0.85), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTCF', credit=['UNA PELÍCULA DE', 'GUILLERMO DEL TORO'], ccol=WHT,
+    ft='b', fcol=(200, 210, 200), fin=MINT, seed=2006)
+
+# Pirates of the Caribbean: Dead Man's Chest (2006): Disney, a live-action film, so a slipcase; the poster's dark, PIRATES OF THE CARIBBEAN typeset in a weathered serif in parchment with DEAD MAN'S CHEST (parked with the first for Ian's logo, see data/logos-wanted.md), Jack Sparrow and the crew
+std('pirates-of-the-caribbean-dead-man-s-chest-2006', ('grad', [(0, (60, 70, 40)), (.5, (20, 24, 14)), (1, (2, 4, 2))]), (226, 200, 150),
+    [T('PIRATES OF THE CARIBBEAN', 'pagb', 100, (226, 200, 150), outline=((30, 16, 6), 1.6)), T("DEAD MAN'S CHEST", 'pagb', 50, (226, 210, 170))], tgap=8,
+    photo=ph(0.5, 0.3, 0.9, 0.6), pb=(226, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
+    ft='e', fcol=(220, 200, 170), fin=MINT, seed=2006)
