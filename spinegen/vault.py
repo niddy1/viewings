@@ -5364,3 +5364,77 @@ std('year-one-2009', ('grad', [(0, (60, 170, 230)), (.5, (110, 190, 230)), (1, (
     L((0.05, 0.076, 0.945, 0.192), 110, (210, 30, 30), mode='key', key=(210, 30, 30)),
     photo=ph(0.5, 0.5, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='b', fcol=(240, 220, 200), fin=MINT, seed=2009)
+
+# ---------------------------------------------------------------- the 2010s
+
+# Alice in Wonderland (2010): Disney, live action, so a slipcase; Wonderland's sky, the poster's purple ALICE / IN / WONDERLAND cut off it, Alice, the Hatter and the White Rabbit among the mushrooms
+std('alice-in-wonderland-2010', ('grad', [(0, (150, 190, 220)), (.5, (110, 150, 120)), (1, (40, 60, 30))]), (70, 30, 90),
+    LC([(0.24, 0.15, 0.76, 0.335)], 150, outline=(WHT, 2), cuts=[comp_cut(lambda a: (_lum(a) < .35) & (a[..., 2] > a[..., 1]), minf=.02, close=2)]),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=(70, 30, 90), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON FILM'], ccol=WHT,
+    ft='b', fcol=(230, 240, 220), fin=MINT, seed=2010)
+
+# Black Swan (2010): Fox Searchlight, the poster's black, its spaced black BLACK and white SWAN cut off her shoulder in their own colours on its skin tone, Natalie Portman's cracked face
+std('black-swan-2010', ('grad', [(0, (220, 190, 180)), (.5, (150, 120, 110)), (1, (10, 8, 8))]), (16, 16, 16),
+    LC([(0.04, 0.842, 0.96, 0.912)], 100, cuts=[comp_cut(lambda a: (_lum(a) < .15) | (_lum(a) > .92), minf=.03)], outline=((120, 96, 90), 1.4)),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LPTF',
+    ft='c', fcol=(230, 220, 216), fin=MINT, seed=2010)
+
+# Easy A (2010): Screen Gems, the poster's chalkboard green, its white easy and red A cut off it in their own colours, Emma Stone with her sign
+std('easy-a-2010', ('grad', [(0, (40, 80, 60)), (.6, (16, 36, 26)), (1, (2, 6, 4))]), WHT,
+    LC([(0.2, 0.8, 0.84, 0.95)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .7) & (a[..., 1] < .3)), minf=.03)]),
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('COMEDY', (220, 30, 30), WHT),
+    ft='a', fcol=(210, 230, 220), fin=MINT, seed=2010)
+
+# Elite Squad: The Enemy Within (2010): Globo Filmes, the poster's dark, its silver ELITE SQUAD cut off it (THE ENEMY WITHIN typeset under it: the poster's is too small to lift), Wagner Moura and BOPE
+std('elite-squad-the-enemy-within-2010', ('grad', [(0, (60, 64, 70)), (.6, (16, 18, 20)), (1, (0, 0, 0))]), WHT,
+    [LC([(0.06, 0.432, 0.94, 0.51)], 110, cuts=[comp_cut(lambda a: _lum(a) > .48, minf=.02, close=2, fillh=True)]), T('THE ENEMY WITHIN', 'intbk', 40, (210, 214, 220))], tgap=8,
+    photo=ph(0.5, 0.15, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UM FILME DE', 'JOSÉ PADILHA'], ccol=WHT,
+    ft='d', vbox=(200, 30, 30), fcol=(200, 200, 204), fin=MINT, seed=2010)
+
+# Harry Potter and the Deathly Hallows: Part 1 (2010): Warner Bros., a slipcase; the poster's forest night, HARRY POTTER typeset in a silver serif with AND THE DEATHLY HALLOWS (parked with the others for Ian's logo, see data/logos-wanted.md), Harry, Ron and Hermione running
+std('harry-potter-and-the-deathly-hallows-part-1-2010', ('grad', [(0, (30, 60, 70)), (.6, (8, 16, 20)), (1, (0, 2, 4))]), (220, 226, 230),
+    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE DEATHLY HALLOWS · PART 1', 'pagb', 40, (200, 214, 220))], tgap=8,
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(180, 200, 210), fin=MINT, seed=2010)
+
+# How to Train Your Dragon (2010): DreamWorks, a slipcase; the poster's moonlit blue, its red DRAGON cut off it with HOW TO TRAIN YOUR typeset over it in white (the poster's is too small to cut), Hiccup reaching to Toothless
+std('how-to-train-your-dragon-2010', ('grad', [(0, (20, 60, 140)), (.5, (10, 30, 80)), (1, (2, 6, 20))]), (220, 30, 30),
+    [T('HOW TO TRAIN YOUR', 'intbk', 40, WHT), LC([(0.2, 0.822, 0.8, 0.905)], 120, outline=(WHT, 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 1] + .2), minf=.03, close=2, fillh=True)])], tgap=6,
+    photo=ph(0.5, 0.4, 0.86, 1.3), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('10 0326', top='FAMILY', fill=(236, 236, 226)),
+    ft='b', fcol=(190, 210, 240), fin=MINT, seed=2010)
+
+# I Saw the Devil (2010): Peppermint & Company, the poster's black, its white stencil I SAW / THE / DEVIL lifted into one line, Lee Byung-hun's face half in red
+std('i-saw-the-devil-2010', ('grad', [(0, (70, 20, 20)), (.6, (16, 6, 6)), (1, (0, 0, 0))]), WHT,
+    L([(0.515, 0.524, 0.72, 0.575), (0.51, 0.585, 0.64, 0.635), (0.515, 0.645, 0.705, 0.695)], 110, WHT, mode='light', valign='base', gapf=.25),
+    photo=ph(0.24, 0.45, 0.42, 1.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KIM JEE-WOON'], ccol=WHT,
+    ft='a', fcol=(210, 200, 200), fin=MINT, seed=2010)
+
+# Inception (2010): Warner Bros., the poster's teal city, its red INCEPTION lifted, the team in the folding street
+std('inception-2010', ('grad', [(0, (50, 90, 110)), (.6, (14, 26, 34)), (1, (2, 4, 6))]), (220, 30, 30),
+    L((0.05, 0.084, 0.95, 0.162), 110, (220, 30, 30), mode='key', key=(210, 30, 30)),
+    photo=ph(0.5, 0.65, 0.86, 1.0), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['LEONARDO DICAPRIO'], ccol=WHT,
+    ft='c', fcol=(180, 206, 216), fin=MINT, seed=2010)
+
+# Jack Goes Boating (2010): Overture, the poster's night lake, its pale blue JACK / GOES BOATING lifted into one line, the rowing boat from above
+std('jack-goes-boating-2010', ('grad', [(0, (30, 70, 90)), (.6, (8, 20, 28)), (1, (0, 4, 6))]), (150, 210, 230),
+    L([(0.69, 0.118, 0.935, 0.172), (0.29, 0.172, 0.935, 0.228)], 110, (150, 210, 230), mode='light', valign='base', gapf=.25),
+    photo=ph(0.4, 0.8, 0.7, 0.85), pb=(150, 210, 230), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
+    ft='e', fcol=(170, 200, 210), fin=MINT, seed=2010)
+
+# Kick-Ass (2010): Lionsgate (Plan B), the poster's black, its yellow KICK-ASS lifted, Kick-Ass, Hit-Girl and Red Mist in the paint splash
+std('kick-ass-2010', ('grad', [(0, (30, 30, 30)), (.6, (8, 8, 8)), (1, (0, 0, 0))]), (250, 220, 40),
+    L((0.2, 0.776, 0.8, 0.905), 120, (250, 220, 40), mode='key', key=(250, 220, 40)),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(40, 200, 120), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (40, 200, 120), (10, 10, 10)),
+    ft='d', vbox=(250, 220, 40), vink=(10, 10, 10), fcol=(220, 220, 200), fin=MINT, seed=2010)
+
+# Megamind (2010): DreamWorks, a slipcase; the poster's yellow, its blue MEGAMIND lifted, Megamind, Minion, Metro Man and Roxanne
+std('megamind-2010', ('grad', [(0, (250, 220, 40)), (.5, (246, 200, 20)), (1, (160, 120, 0))]), (20, 50, 140),
+    L((0.07, 0.775, 0.935, 0.865), 110, (20, 50, 140), mode='key', key=(20, 50, 140)),
+    photo=ph(0.5, 0.4, 0.86, 1.3), pb=(20, 50, 140), lg=(20, 30, 80), lw=.55, order='LPTF',
+    ft='b', fcol=(30, 30, 60), fin=MINT, seed=2010)
+
+# Salt (2010): Columbia, the poster's black, its spaced white SALT lifted, Angelina Jolie's eyes
+std('salt-2010', ('grad', [(0, (40, 44, 50)), (.6, (10, 12, 14)), (1, (0, 0, 0))]), WHT,
+    L((0.12, 0.405, 0.88, 0.495), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.2, 0.86, 0.4), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ANGELINA JOLIE'], ccol=WHT,
+    ft='a', fcol=(200, 200, 206), fin=MINT, seed=2010)
