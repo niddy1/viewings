@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Inglourious Basterds (2009) | Vault 2000s | `logos/inglourious-basterds-2009-title.png` | typeset; white outlined letters on the white poster with the eagle in the line, both cuts lost them |
+| Harry Potter and the Half-Blood Prince (2009) | Vault 2000s | `logos/harry-potter-and-the-half-blood-prince-2009-title.png` | typeset like the other Potters |
+| Fast & Furious (2009) | Vault 2000s | `logos/fast-furious-2009-title.png` | typeset like 2 Fast 2 Furious; chrome logo slanted across the bonnet |
 | The Incredible Hulk (2008) | Vault 2000s | `logos/the-incredible-hulk-2008-title.png` | typeset; chrome HULK darkens to black across its middle, both cuts split the letters |
 | Tropic Thunder (2008) | Vault 2000s | `logos/tropic-thunder-2008-title.png` | typeset; weathered letters on the explosion, the cut kept the fire |
 | The Fall (2008) | Vault 2000s | `logos/the-fall-2008-title.png` | typeset; thin red script with long flourishes, both cuts lost The |

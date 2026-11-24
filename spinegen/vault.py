@@ -5246,3 +5246,75 @@ std('avatar-2009', ('grad', [(0, (20, 60, 100)), (.5, (8, 24, 44)), (1, (0, 4, 8
     L((0.14, 0.84, 0.84, 0.918), 110, (120, 220, 240), mode='light'),
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(120, 220, 240), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.99', 'SCI-FI']),
     ft='d', vbox=(120, 220, 240), vink=(0, 10, 20), fcol=(180, 220, 230), fin=MINT, seed=2009)
+
+# Bronson (2009): Vertigo Films, the poster's black, its weathered tan BRONSON cut off it, Tom Hardy under the light
+std('bronson-2009', ('grad', [(0, (70, 50, 24)), (.6, (16, 12, 6)), (1, (0, 0, 0))]), (200, 170, 120),
+    LC([(0.1, 0.838, 0.9, 0.928)], 110, cuts=[comp_cut(lambda a: _lum(a) > .35, minf=.03, close=2)]),
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(230, 180, 90), lg=WHT, lw=.5, order='LPTCF', credit=['TOM HARDY'], ccol=WHT,
+    ft='c', fcol=(210, 190, 160), fin=MINT, seed=2009)
+
+# Cloudy with a Chance of Meatballs (2009): Sony Pictures Animation, a slipcase; the poster's sky, its red CLOUDY, white with a chance of on its red tab and red MEATBALLS cut off it into one line, Flint and Sam in the food storm
+std('cloudy-with-a-chance-of-meatballs-2009', ('grad', [(0, (90, 180, 240)), (.5, (130, 200, 240)), (1, (60, 140, 40))]), (220, 30, 30),
+    LC([(0.08, 0.068, 0.64, 0.158), (0.665, 0.062, 0.975, 0.152), (0.05, 0.158, 0.955, 0.252)], 130, valign='base', margin=0, gapf=.15, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .35), minf=.03), plate_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .35) | (_lum(a) > .9)), comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .35), minf=.03)]),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (250, 210, 40), (30, 30, 30)),
+    ft='a', fcol=(240, 250, 230), fin=MINT, seed=2009)
+
+# District 9 (2009): TriStar, the poster's black, its white DISTRICT and red 9 cut off it, the mothership over Johannesburg and the NO HUMANS ALLOWED sign
+std('district-9-2009', ('grad', [(0, (80, 80, 76)), (.6, (20, 20, 20)), (1, (0, 0, 0))]), WHT,
+    LC([(0.1, 0.842, 0.9, 0.928)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .6) & (a[..., 1] < .25)), minf=.03)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('09 0814', top='SCI-FI', fill=(230, 230, 224)),
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2009)
+
+# Fantastic Mr. Fox (2009): 20th Century Fox (Regency), a slipcase; the feast's autumn red, its white serif FANTASTIC / MR. FOX lifted into one line, Mr. Fox at the head of the table
+std('fantastic-mr-fox-2009', ('grad', [(0, (170, 80, 30)), (.5, (110, 40, 14)), (1, (30, 10, 4))]), WHT,
+    L([(0.18, 0.19, 0.79, 0.248), (0.28, 0.256, 0.71, 0.304)], 110, WHT, mode='light', valign='base', gapf=.4),
+    photo=ph(0.48, 0.55, 0.6, 1.0), pb=(240, 190, 80), lg=WHT, lw=.5, order='LPTCF', credit=['GEORGE CLOONEY', 'MERYL STREEP'], ccol=WHT,
+    ft='b', fcol=(250, 220, 190), fin=MINT, seed=2009)
+
+# Fast & Furious (2009): Universal, the poster's black, FAST & FURIOUS typeset in heavy italic capitals in chrome grey (parked with 2 Fast 2 Furious for Ian's logo, see data/logos-wanted.md: the chrome logo slants across the car's bonnet), Vin Diesel, Paul Walker and the Charger
+std('fast-furious-2009', ('grad', [(0, (50, 60, 80)), (.6, (12, 14, 20)), (1, (0, 0, 2))]), (220, 226, 232),
+    T('FAST & FURIOUS', 'intbki', 100, (220, 226, 232), outline=((20, 30, 60), 2)),
+    photo=ph(0.5, 0.25, 0.86, 0.7), pb=(60, 110, 220), lg=WHT, lw=.5, order='LPTCF', credit=['VIN DIESEL', 'PAUL WALKER'], ccol=WHT,
+    ft='d', vbox=(60, 110, 220), fcol=(190, 200, 214), fin=MINT, seed=2009)
+
+# Fish Tank (2009): BBC Film, the poster's sky blue, its orange FISH / TANK lifted into one line, Mia in her hood
+std('fish-tank-2009', ('grad', [(0, (110, 180, 230)), (.5, (70, 140, 200)), (1, (20, 50, 90))]), (240, 100, 40),
+    L([(0.04, 0.414, 0.775, 0.607), (0.04, 0.606, 0.94, 0.79)], 120, (240, 100, 40), mode='key', key=(230, 90, 40), valign='base', gapf=.2),
+    photo=ph(0.55, 0.15, 0.6, 1.0), pb=(240, 100, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'ANDREA ARNOLD'], ccol=WHT,
+    ft='c', fcol=(230, 240, 250), fin=MINT, seed=2009)
+
+# Harry Potter and the Half-Blood Prince (2009): Warner Bros., a slipcase; the poster's storm teal, HARRY POTTER typeset in a silver serif with AND THE HALF-BLOOD PRINCE (parked with the others for Ian's logo, see data/logos-wanted.md), Harry with his wand and Dumbledore behind
+std('harry-potter-and-the-half-blood-prince-2009', ('grad', [(0, (40, 80, 90)), (.6, (10, 24, 30)), (1, (2, 6, 8))]), (220, 226, 230),
+    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE HALF-BLOOD PRINCE', 'pagb', 44, (200, 220, 224))], tgap=8,
+    photo=ph(0.3, 0.6, 0.5, 1.6), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 60), ink=(30, 20, 10)),
+    ft='a', fcol=(180, 210, 214), fin=MINT, seed=2009)
+
+# Ice Age: Dawn of the Dinosaurs (2009): Blue Sky (Fox), a slipcase; the poster's sky, its white ICE AGE cut off it (DAWN OF THE DINOSAURS typeset under it, as on The Meltdown), Manny, Sid and the dinosaur
+std('ice-age-dawn-of-the-dinosaurs-2009', ('grad', [(0, (40, 110, 210)), (.5, (90, 170, 230)), (1, (60, 120, 50))]), WHT,
+    [LC([(0.07, 0.038, 0.92, 0.16)], 140, outline=((20, 60, 140), 2), cuts=[comp_cut(lambda a: _lum(a) > .7, minf=.03, fillh=True)]), T('DAWN OF THE DINOSAURS', 'intbk', 40, (250, 220, 60))], tgap=8,
+    photo=ph(0.5, 0.55, 0.86, 1.0), pb=(250, 220, 60), lg=WHT, lw=.5, order='LPTF',
+    ft='d', fcol=(230, 240, 220), fin=MINT, seed=2009)
+
+# Inglourious Basterds (2009): Universal (The Weinstein Company), the poster's white and blood red, INGLOURIOUS BASTERDS typeset in a heavy slab serif in white with a black keyline like the poster's (parked for Ian's logo, see data/logos-wanted.md: white letters on the white poster, with the eagle in the line; both cuts lost them), the Basterds in a row
+std('inglourious-basterds-2009', ('grad', [(0, (200, 30, 30)), (.6, (130, 14, 14)), (1, (40, 4, 4))]), (20, 20, 20),
+    T('INGLOURIOUS BASTERDS', 'schb', 100, WHT, outline=((16, 16, 16), 2.6)),
+    photo=ph(0.5, 0.86, 0.86, 0.4), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPCF', credit=['BRAD PITT', 'DIANE KRUGER'], ccol=WHT,
+    ft='b', fcol=(240, 220, 220), fin=MINT, seed=2009)
+
+# Moon (2009): Sony Pictures Classics (Liberty Films), the poster's black, its white MOON lifted, Sam in his spacesuit at the centre of the rings
+std('moon-2009', ('grad', [(0, (40, 40, 44)), (.6, (10, 10, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.085, 0.885, 0.44, 0.942), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'DUNCAN JONES'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2009)
+
+# Public Enemies (2009): Universal, the poster's grey Chicago, its grey weathered PUBLIC / ENEMIES cut off it into one line, Johnny Depp in the hat
+std('public-enemies-2009', ('grad', [(0, (120, 124, 126)), (.6, (40, 42, 44)), (1, (6, 6, 6))]), WHT,
+    LC([(0.38, 0.703, 0.63, 0.76), (0.355, 0.758, 0.655, 0.815)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.03, close=2)] * 2),
+    photo=ph(0.5, 0.3, 0.7, 1.4), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP', 'CHRISTIAN BALE'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2009)
+
+# Sherlock Holmes (2009): Warner Bros., the poster's teal Victorian street, its white serif SHERLOCK / HOLMES lifted into one line, Robert Downey Jr. and Jude Law
+std('sherlock-holmes-2009', ('grad', [(0, (60, 100, 100)), (.6, (16, 30, 30)), (1, (2, 6, 6))]), WHT,
+    L([(0.11, 0.548, 0.89, 0.614), (0.1, 0.616, 0.95, 0.704)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTSF', dotst=('MYSTERY', (220, 200, 150), (20, 30, 30)),
+    ft='b', fcol=(200, 220, 220), fin=MINT, seed=2009)
