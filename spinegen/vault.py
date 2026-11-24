@@ -5721,3 +5721,74 @@ std('men-in-black-3-2012', ('grad', [(0, (50, 50, 54)), (.6, (12, 12, 14)), (1, 
     LC([(0.6, 0.83, 0.97, 0.935)], 140, margin=0, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.01)]),
     photo=ph(0.5, 0.35, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(10, 10, 10)),
     ft='b', fcol=(200, 200, 204), fin=MINT, seed=2012)
+
+# Moonrise Kingdom (2012): Focus Features (Indian Paintbrush), the poster's pale sky, its yellow script Moonrise / Kingdom cut off it into one line, the cast lined up on the meadow
+std('moonrise-kingdom-2012', ('grad', [(0, (140, 190, 200)), (.5, (180, 200, 160)), (1, (90, 110, 50))]), (250, 230, 100),
+    LC([(0.14, 0.045, 0.86, 0.23), (0.08, 0.235, 0.92, 0.43)], 120, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .78) & (a[..., 1] > .7) & (a[..., 2] < .6), minf=.01, opn=1, close=2)] * 2),
+    photo=ph(0.5, 0.75, 0.86, 0.6), pb=(240, 80, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A WES ANDERSON FILM'], ccol=(40, 40, 30),
+    ft='c', fcol=(30, 40, 20), fin=MINT, seed=2012)
+
+# Paradise Lost 3: Purgatory (2012): HBO Documentary Films, the poster's black, its white PARADISE LOST 3: and red PURGATORY cut off it into one line, the mugshots and family photos
+std('paradise-lost-3-purgatory-2012', ('grad', [(0, (40, 40, 40)), (.6, (10, 10, 10)), (1, (0, 0, 0))]), WHT,
+    LC([(0.1, 0.712, 0.91, 0.767), (0.1, 0.785, 0.91, 0.827)], 100, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .5) & (a[..., 1] < .3)), minf=.01, opn=1)] * 2),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=(200, 40, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'BERLINGER & SINOFSKY'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2012)
+
+# Partysaurus Rex (2012): Pixar (a short), so a clamshell; the poster's disco purple, its yellow-framed PARTY SAURUS / REX sign cut off it whole, Rex's face in the diamond
+disney('partysaurus-rex-2012', ('grad', [(0, (60, 40, 140)), (.5, (30, 60, 170)), (1, (10, 20, 70))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.05, 0.02, 0.95, 0.36)], 150, cuts=[comp_cut(lambda a: ((a[..., 0] > .75) & (a[..., 1] > .7) & (a[..., 2] < .45)) | ((a[..., 0] > .4) & (a[..., 2] > .5) & (a[..., 1] < .4)), top=2, fillh=True)]),
+       face=ph(.47, .43, .2, 1.4), lcol=WHT)
+
+# Pitch Perfect (2012): Universal (Brownstone), the poster's concrete grey, its yellow stencil PITCH PERFECT lifted, the Barden Bellas in a row
+std('pitch-perfect-2012', ('grad', [(0, (110, 110, 110)), (.6, (40, 40, 40)), (1, (6, 6, 6))]), (250, 230, 50),
+    L((0.08, 0.065, 0.9, 0.21), 110, (250, 230, 50), mode='key', key=(240, 220, 50), speck=.01),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 230, 50), lg=WHT, lw=.5, order='LPTSF', dotst=('MUSIC', (250, 230, 50), (20, 20, 20)),
+    ft='e', fcol=(220, 220, 210), fin=MINT, seed=2012)
+
+# Searching for Sugar Man (2012): Sony Pictures Classics (Passion Pictures), the poster's orange, its white SEARCHING / FOR / SUGAR MAN lifted into one line, Rodriguez walking in Detroit
+std('searching-for-sugar-man-2012', ('grad', [(0, (250, 150, 30)), (.5, (240, 130, 20)), (1, (140, 60, 6))]), WHT,
+    L([(0.055, 0.484, 0.95, 0.588), (0.34, 0.588, 0.68, 0.688), (0.03, 0.688, 0.97, 0.792)], 110, WHT, mode='light', valign='base', gapf=.35),
+    photo=ph(0.5, 0.2, 0.6, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'MALIK BENDJELLOUL'], ccol=WHT,
+    ft='b', fcol=(60, 30, 6), fin=MINT, seed=2012)
+
+# Seven Psychopaths (2012): CBS Films (BFI), the poster's yellow, its black boxed SEVEN PSYCHOPATHS lifted, the cast in a line with the Shih Tzu
+std('seven-psychopaths-2012', ('grad', [(0, (230, 220, 30)), (.5, (220, 210, 20)), (1, (90, 80, 6))]), (20, 20, 20),
+    L((0.1, 0.109, 0.9, 0.17), 100, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.55, 0.86, 0.6), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['COLIN FARRELL', 'WOODY HARRELSON'], ccol=(20, 20, 20),
+    ft='d', vbox=(20, 20, 20), vink=(230, 220, 30), fcol=(30, 30, 10), fin=MINT, seed=2012)
+
+# Side by Side (2012): Company Films (no logo file; label from IMDb's company credits), the poster's dark teal, its thin white SIDE BY SIDE lifted, the film reels and the digital light
+std('side-by-side-2012', ('grad', [(0, (20, 50, 60)), (.6, (6, 14, 18)), (1, (0, 2, 4))]), WHT,
+    L((0.25, 0.76, 0.75, 0.805), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.35, 0.86, 0.5), pb=(60, 200, 190), lg=WHT, lw=.5, order='lPTCF', studio=['COMPANY FILMS'], scol=WHT, credit=['A DOCUMENTARY BY', 'CHRISTOPHER KENNEALLY'], ccol=WHT,
+    ft='c', fcol=(180, 210, 210), fin=MINT, seed=2012)
+
+# Silver Linings Playbook (2012): The Weinstein Company, the poster's black and white, its yellow SILVER / LININGS lifted into one line with PLAYBOOK typeset after it (the poster's is too small to lift), Bradley Cooper and Jennifer Lawrence
+std('silver-linings-playbook-2012', ('grad', [(0, (80, 80, 80)), (.6, (20, 20, 20)), (1, (0, 0, 0))]), (250, 220, 40),
+    [L([(0.375, 0.572, 0.615, 0.62), (0.358, 0.62, 0.642, 0.668)], 110, (250, 220, 40), mode='key', key=(240, 210, 40), valign='base', gapf=.2), T('PLAYBOOK', 'intbk', 44, (250, 220, 40))], tgap=8,
+    photo=ph(0.25, 0.35, 0.5, 1.6), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTCF', credit=['BRADLEY COOPER', 'JENNIFER LAWRENCE'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2012)
+
+# Ted (2012): Universal, the poster's white, its green ted lifted, John and Ted on the couch
+std('ted-2012', ('grad', [(0, (250, 250, 250)), (.6, (230, 236, 230)), (1, (120, 140, 120))]), (60, 140, 70),
+    L((0.23, 0.095, 0.77, 0.275), 140, (60, 140, 70), mode='key', key=(60, 140, 70)),
+    photo=ph(0.6, 0.75, 0.86, 0.6), pb=(60, 140, 70), lg=(30, 40, 30), lw=.55, order='LTPSF', stick=BAR('12 0629', top='COMEDY', fill=(240, 244, 236)),
+    ft='e', fcol=(30, 40, 30), fin=MINT, seed=2012)
+
+# The Amazing Spider-Man (2012): Columbia (Marvel), a slipcase; the city's blue night, its chrome THE AMAZING / SPIDER-MAN lifted into one line, the mask under the web
+std('the-amazing-spider-man-2012', ('grad', [(0, (30, 60, 110)), (.6, (8, 16, 30)), (1, (0, 2, 4))]), (220, 226, 232),
+    L([(0.22, 0.872, 0.79, 0.896), (0.08, 0.906, 0.92, 0.945)], 110, (220, 226, 232), mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ANDREW GARFIELD', 'EMMA STONE'], ccol=WHT,
+    ft='b', fcol=(190, 206, 220), fin=MINT, seed=2012)
+
+# The Avengers (2012): Marvel, a slipcase; the poster's battle blue, its chrome AVENGERS lifted, the team in the street
+std('the-avengers-2012', ('grad', [(0, (40, 70, 100)), (.6, (10, 18, 26)), (1, (0, 2, 4))]), (220, 226, 232),
+    L((0.05, 0.65, 0.94, 0.825), 120, (220, 226, 232), mode='light'),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 210, 40), ink=(20, 20, 20)),
+    ft='d', vbox=(200, 30, 30), fcol=(190, 206, 220), fin=MINT, seed=2012)
+
+# The Central Park Five (2012): Sundance Selects (WETA), the poster's black, its grey THE / CENTRAL / PARK / FIVE cut off it into one line, the scales of justice with the city
+std('the-central-park-five-2012', ('grad', [(0, (40, 40, 40)), (.6, (10, 10, 10)), (1, (0, 0, 0))]), (200, 204, 208),
+    LC([(0.33, 0.55, 0.63, 0.617), (0.33, 0.617, 0.96, 0.686), (0.33, 0.686, 0.72, 0.758), (0.33, 0.758, 0.64, 0.822)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (_lum(a) > .45) & (_lum(a) < .82), minf=.05, close=2)] * 4),
+    photo=ph(0.4, 0.3, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KEN BURNS, SARAH BURNS', '& DAVID McMAHON'], ccol=WHT,
+    ft='e', fcol=(200, 200, 200), fin=MINT, seed=2012)
