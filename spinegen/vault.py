@@ -5792,3 +5792,74 @@ std('the-central-park-five-2012', ('grad', [(0, (40, 40, 40)), (.6, (10, 10, 10)
     LC([(0.33, 0.55, 0.63, 0.617), (0.33, 0.617, 0.96, 0.686), (0.33, 0.686, 0.72, 0.758), (0.33, 0.758, 0.64, 0.822)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (_lum(a) > .45) & (_lum(a) < .82), minf=.05, close=2)] * 4),
     photo=ph(0.4, 0.3, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'KEN BURNS, SARAH BURNS', '& DAVID McMAHON'], ccol=WHT,
     ft='e', fcol=(200, 200, 200), fin=MINT, seed=2012)
+
+# The Dark Knight Rises (2012): Warner Bros. (Syncopy), the poster's burning city, its spaced white THE DARK KNIGHT RISES lifted, Batman before the collapsing towers
+std('the-dark-knight-rises-2012', ('grad', [(0, (120, 60, 20)), (.5, (30, 16, 8)), (1, (0, 0, 0))]), WHT,
+    L((0.11, 0.858, 0.89, 0.888), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.4, 0.86, 1.3), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTCF', credit=['CHRISTIAN BALE', 'TOM HARDY'], ccol=WHT,
+    ft='e', fcol=(220, 200, 180), fin=MINT, seed=2012)
+
+# The Grey (2012): Open Road, the poster's snow grey, its white weathered THE GREY cut off it, Liam Neeson's frozen face
+std('the-grey-2012', ('grad', [(0, (120, 130, 140)), (.5, (50, 56, 62)), (1, (6, 8, 10))]), WHT,
+    LC([(0.2, 0.765, 0.8, 0.858)], 110, cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.02, close=2, fillh=True)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'THRILLER']),
+    ft='a', fcol=(210, 216, 222), fin=MINT, seed=2012)
+
+# The Hobbit: An Unexpected Journey (2012): Warner Bros. (New Line), the poster's dusk, its bronze THE HOBBIT with AN UNEXPECTED JOURNEY cut off it whole, Bilbo with Sting
+std('the-hobbit-an-unexpected-journey-2012', ('grad', [(0, (90, 90, 60)), (.6, (24, 24, 14)), (1, (2, 2, 0))]), (220, 190, 130),
+    LC([(0.08, 0.03, 0.92, 0.255)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .08) & (_lum(a) > .45), minf=.01, close=2)]),
+    photo=ph(0.5, 0.5, 0.86, 1.0), pb=(220, 190, 130), lg=WHT, lw=.5, order='LPTCF', credit=['MARTIN FREEMAN', 'IAN McKELLEN'], ccol=WHT,
+    ft='b', fcol=(220, 210, 180), fin=MINT, seed=2012)
+
+# The Hunger Games (2012): Lionsgate, the poster's black, its gold THE / HUNGER GAMES cut off it into one line, the burning mockingjay
+std('the-hunger-games-2012', ('grad', [(0, (60, 30, 10)), (.6, (14, 8, 4)), (1, (0, 0, 0))]), (230, 180, 70),
+    LC([(0.44, 0.845, 0.56, 0.866), (0.19, 0.866, 0.815, 0.902)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .25) & (a[..., 0] > a[..., 2] + .1), minf=.04, close=2)] * 2),
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (240, 140, 40), (20, 10, 4)),
+    ft='c', fcol=(220, 200, 180), fin=MINT, seed=2012)
+
+# The Hunt (2012): Magnolia (Zentropa), the poster's warm dark, its thin white THE HUNT cut off it, Mads Mikkelsen's face
+std('the-hunt-2012', ('grad', [(0, (100, 80, 50)), (.6, (24, 20, 12)), (1, (0, 0, 0))]), WHT,
+    LC([(0.16, 0.866, 0.84, 0.93)], 90, cuts=[comp_cut(lambda a: _lum(a) > .55, top=7, minf=.01, opn=1)]),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(230, 200, 150), lg=WHT, lw=.5, order='LPTCF', credit=['EN FILM AF', 'THOMAS VINTERBERG'], ccol=WHT,
+    ft='d', vbox=(230, 200, 150), vink=(20, 16, 10), fcol=(220, 200, 180), fin=MINT, seed=2012)
+
+# The Iceman (2012): Millennium (Bleiberg), the diner's dark, its red THE ICEMAN lifted, Michael Shannon at the counter
+std('the-iceman-2012', ('grad', [(0, (60, 30, 24)), (.6, (14, 8, 6)), (1, (0, 0, 0))]), (210, 30, 30),
+    L((0.03, 0.856, 0.97, 0.926), 110, (210, 30, 30), mode='key', key=(200, 30, 30)),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(210, 200, 196), fin=MINT, seed=2012)
+
+# Wreck-It Ralph (2012): Walt Disney Animation, so a clamshell; the arcade blue, WRECK-IT RALPH typeset in heavy red capitals with the logo's purple keyline (parked for Ian's logo, see data/logos-wanted.md: Ralph and Calhoun stand in front of WRECK-IT and the cut came away in pieces), Ralph's face in the diamond
+disney('wreck-it-ralph-2012', ('grad', [(0, (30, 90, 170)), (.5, (20, 60, 130)), (1, (6, 20, 50))]), fin=dict(CLAM, vivid=.2),
+       title=T('WRECK-IT RALPH', 'intbk', 110, (230, 40, 40), outline=((80, 40, 140), 2.4)),
+       face=ph(.55, .29, .18, 1.4), lcol=WHT)
+
+# 12 Years a Slave (2013): Fox Searchlight (New Regency), the poster's white, its orange 12 and white small capitals YEARS A SLAVE cut off it, with a dark keyline, Solomon running
+std('12-years-a-slave-2013', ('grad', [(0, (250, 250, 250)), (.6, (230, 226, 220)), (1, (120, 100, 80))]), (220, 110, 40),
+    LC([(0.31, 0.45, 0.85, 0.535)], 110, outline=((60, 50, 40), 1.4), cuts=[comp_cut(lambda a: ((a[..., 0] > .7) & (a[..., 0] > a[..., 2] + .3)) | (_lum(a) > .88), minf=.01, opn=1)]),
+    photo=ph(0.45, 0.78, 0.8, 0.6), pb=(220, 110, 40), lg=(40, 30, 20), lw=.55, order='LTPCF', credit=['A FILM BY', 'STEVE McQUEEN'], ccol=(40, 30, 20),
+    ft='b', fcol=(40, 30, 20), fin=MINT, seed=2013)
+
+# American Hustle (2013): Columbia (Annapurna), the poster's dark, its yellow AMERICAN / HUSTLE cut off it into one line, the cast in their seventies best
+std('american-hustle-2013', ('grad', [(0, (90, 60, 30)), (.6, (22, 14, 8)), (1, (0, 0, 0))]), (250, 210, 40),
+    LC([(0.055, 0.12, 0.94, 0.235), (0.055, 0.24, 0.94, 0.395)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02, close=2)] * 2),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=(250, 210, 40), lg=WHT, lw=.5, order='LPTCF', credit=['CHRISTIAN BALE', 'AMY ADAMS'], ccol=WHT,
+    ft='e', fcol=(220, 200, 170), fin=MINT, seed=2013)
+
+# Anchorman 2: The Legend Continues (2013): Paramount (Gary Sanchez), the poster's sky blue, its yellow ANCHORMAN 2 cut off it with THE LEGEND CONTINUES under it, Ron and the news team in the street
+std('anchorman-2-the-legend-continues-2013', ('grad', [(0, (90, 170, 230)), (.5, (60, 120, 180)), (1, (40, 30, 20))]), (250, 210, 40),
+    LC([(0.07, 0.39, 0.95, 0.488), (0.15, 0.495, 0.78, 0.542)], 120, valign='base', margin=0, gapf=.2, outline=((30, 20, 10), 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .42) & (a[..., 2] < .35), minf=.01, close=2, fillh=True)] * 2),
+    photo=ph(0.5, 0.76, 0.86, 0.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('13 1218', top='COMEDY', fill=(250, 246, 220)),
+    ft='a', fcol=(230, 220, 200), fin=MINT, seed=2013)
+
+# Captain Phillips (2013): Columbia, the poster's steel grey, its weathered white CAPTAIN / PHILLIPS cut off it into one line, Tom Hanks with the pirates behind
+std('captain-phillips-2013', ('grad', [(0, (90, 100, 110)), (.6, (24, 28, 32)), (1, (2, 2, 4))]), WHT,
+    LC([(0.24, 0.645, 0.76, 0.807), (0.24, 0.81, 0.76, 0.968)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .42, minf=.02, close=3, fillh=True)] * 2),
+    photo=ph(0.55, 0.3, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['TOM HANKS'], ccol=WHT,
+    ft='c', fcol=(210, 214, 220), fin=MINT, seed=2013)
+
+# Dallas Buyers Club (2013): Focus Features (Voltage), the poster's dusty sky, its blue serif DALLAS / BUYERS / CLUB lifted into one line, Matthew McConaughey spreading his arms before the skyline
+std('dallas-buyers-club-2013', ('grad', [(0, (220, 220, 206)), (.5, (180, 186, 180)), (1, (80, 90, 90))]), (40, 80, 120),
+    L([(0.29, 0.14, 0.715, 0.198), (0.29, 0.217, 0.715, 0.276), (0.285, 0.29, 0.715, 0.373)], 110, (40, 80, 120), mode='key', key=(50, 90, 130), valign='base', gapf=.25),
+    photo=ph(0.5, 0.68, 0.86, 0.6), pb=(40, 80, 120), lg=(30, 40, 50), lw=.55, order='LTPF',
+    ft='d', vbox=(40, 80, 120), fcol=(30, 40, 50), fin=MINT, seed=2013)

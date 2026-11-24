@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Wreck-It Ralph (2012) | Vault 2010s | `logos/wreck-it-ralph-2012-title.png` | typeset; Ralph and Calhoun stand in front of WRECK-IT, the cut came away in pieces |
 | Harry Potter and the Deathly Hallows: Part 2 (2011) | Vault 2010s | `logos/harry-potter-and-the-deathly-hallows-part-2-2011-title.png` | typeset like the other Potters |
 | Cars 2 (2011) | Vault 2010s | `logos/cars-2-2011-title.png` | typeset like Cars; chrome badge over fireworks broke in both cuts |
 | Scott Pilgrim vs. the World (2010) | Vault 2010s | `logos/scott-pilgrim-vs-the-world-2010-title.png` | typeset; the hand-drawn white scrawl wraps round Scott, the cut kept scraps |
