@@ -6,6 +6,10 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Ocean's Thirteen (2007) | Vault 2000s | `logos/ocean-s-thirteen-2007-title.png` | typeset like Eleven and Twelve; OCEAN'S runs diagonally inside the big 13 |
+| Shrek the Third (2007) | Vault 2000s | `logos/shrek-the-third-2007-title.png` | typeset like the other Shreks |
+| Sunshine (2007) | Vault 2000s | `logos/sunshine-2007-title.png` | typeset; the letters burn into flames and both cuts left them unreadable |
+| Harry Potter and the Order of the Phoenix (2007) | Vault 2000s | `logos/harry-potter-and-the-order-of-the-phoenix-2007-title.png` | typeset like the other Potters (one HARRY POTTER logo would serve all) |
 | Enchanted (2007) | Vault 2000s | `logos/enchanted-2007-title.png` | typeset in a script; the gold scroll sits on a gold-rimmed plaque and both cuts broke it up |
 | The Lives of Others (2006) | Vault 2000s | `logos/the-lives-of-others-2006-title.png` | typeset in mono; the typewriter T touches the pale bedsheet and the cut breaks it |
 | Pirates of the Caribbean: Dead Man's Chest (2006) | Vault 2000s | `logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png` | typeset; same as the first Pirates (one logo would serve both) |

@@ -4889,3 +4889,73 @@ std('knocked-up-2007', ('grad', [(0, (150, 200, 90)), (.5, (120, 180, 70)), (1, 
     L((0.03, 0.09, 0.975, 0.19), 110, (210, 30, 40), mode='key', key=(210, 30, 40)),
     photo=ph(0.5, 0.65, 0.9, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['SETH ROGEN', 'KATHERINE HEIGL'], ccol=(20, 30, 10),
     ft='b', fcol=(20, 30, 10), fin=MINT, seed=2007)
+
+# Like Stars on Earth (2007): Aamir Khan Productions, the poster's crayon yellow, its black hand-written Like / stars / on Earth lifted into one line, Ishaan and Nikumbh
+std('like-stars-on-earth-2007', ('grad', [(0, (250, 210, 100)), (.5, (240, 190, 80)), (1, (170, 110, 40))]), (30, 30, 30),
+    L([(0.17, 0.02, 0.62, 0.125), (0.3, 0.13, 0.78, 0.24), (0.15, 0.25, 0.93, 0.37)], 110, (30, 30, 30), mode='dark', valign='base', gapf=.25, speck=.02),
+    photo=ph(0.5, 0.65, 0.9, 0.6), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LTPCF', credit=['DARSHEEL SAFARY', 'AAMIR KHAN'], ccol=(30, 30, 30),
+    ft='c', fcol=(50, 30, 10), fin=MINT, seed=2007)
+
+# Meet the Robinsons (2007): Walt Disney Animation, so a clamshell; the poster's blue sky, its white MEET THE ROBINSONS cut off it, Lewis's face in the diamond
+disney('meet-the-robinsons-2007', ('grad', [(0, (60, 150, 230)), (.5, (30, 90, 190)), (1, (10, 30, 80))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.13, 0.8, 0.89, 0.91)], 130, outline=((10, 30, 80), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.02)]),
+       face=ph(.52, .52, .3, 1.4), lcol=WHT)
+
+# Michael Clayton (2007): Warner Bros. (Castle Rock), the poster's night blue, its red MICHAEL and white CLAYTON cut off it into one line, George Clooney on the phone
+std('michael-clayton-2007', ('grad', [(0, (30, 60, 100)), (.6, (8, 16, 30)), (1, (2, 4, 8))]), WHT,
+    LC([(0.01, 0.522, 0.985, 0.626), (0.005, 0.624, 0.99, 0.728)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .6) & (a[..., 1] < .2)), minf=.03)] * 2),
+    photo=ph(0.4, 0.22, 0.7, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('THRILLER', (210, 30, 30), WHT),
+    ft='d', vbox=(210, 30, 30), fcol=(180, 200, 220), fin=MINT, seed=2007)
+
+# Mr. Brooks (2007): MGM (Relativity), the poster's black, its white serif MR. BROOKS lifted, Kevin Costner with the torn mask
+std('mr-brooks-2007', ('grad', [(0, (60, 20, 20)), (.6, (14, 6, 6)), (1, (0, 0, 0))]), WHT,
+    LC([(0.18, 0.79, 0.83, 0.845)], 90, cuts=[comp_cut(lambda a: _lum(a) > .7, minf=.02, opn=1, close=2)]),
+    photo=ph(0.5, 0.35, 0.8, 1.2), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['KEVIN COSTNER', 'DEMI MOORE'], ccol=WHT,
+    ft='b', fcol=(200, 190, 190), fin=MINT, seed=2007)
+
+# No Country for Old Men (2007): Miramax, the poster's black, its weathered NO COUNTRY / FOR OLD MEN block cut off it whole in its own colours, Llewelyn crossing the plain under Chigurh's eyes
+std('no-country-for-old-men-2007', ('grad', [(0, (60, 40, 24)), (.6, (14, 10, 6)), (1, (0, 0, 0))]), (230, 190, 140),
+    LC([(0.22, 0.7, 0.745, 0.84)], 120, margin=0, cuts=[comp_cut(lambda a: _lum(a) > .3, minf=.02, close=2)]),
+    photo=ph(0.5, 0.25, 0.86, 0.9), pb=(230, 190, 140), lg=WHT, lw=.5, order='LPTCF', credit=['TOMMY LEE JONES', 'JAVIER BARDEM'], ccol=(230, 210, 180),
+    ft='a', fcol=(200, 180, 150), fin=MINT, seed=2007)
+
+# Ocean's Thirteen (2007): Warner Bros., the poster's white, OCEAN'S 13 typeset in heavy condensed capitals in its red (parked with Eleven and Twelve for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 13), the thirteen's silhouettes
+std('ocean-s-thirteen-2007', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
+    TT([("OCEAN'S", (210, 30, 30)), ('13', (30, 30, 30))], 'intbk', 110, sp=.3),
+    photo=ph(0.55, 0.12, 0.8, 0.35), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF',
+    ft='e', fcol=(60, 60, 60), fin=MINT, seed=2007)
+
+# Persepolis (2007): Sony Pictures Classics, the poster's black, its white PERSEPOLIS lifted, Marjane smoking among the drawn figures
+std('persepolis-2007', ('grad', [(0, (30, 30, 30)), (.6, (8, 8, 8)), (1, (0, 0, 0))]), WHT,
+    L((0.05, 0.074, 0.955, 0.147), 110, WHT, mode='light'),
+    photo=ph(0.4, 0.55, 0.8, 1.0), pb=(40, 190, 200), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'SATRAPI & PARONNAUD'], ccol=WHT,
+    ft='c', fcol=(200, 200, 200), fin=MINT, seed=2007)
+
+# Ratatouille (2007): Pixar, so a clamshell; Paris at dusk, the poster's white RATATOUILLE cut off its navy oval with a navy keyline, Remy's face in the diamond
+disney('ratatouille-2007', ('grad', [(0, (230, 170, 90)), (.5, (130, 110, 150)), (1, (30, 30, 80))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.11, 0.44, 0.89, 0.5)], 130, outline=((20, 40, 120), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.03)]),
+       face=ph(.48, .25, .2, 1.4), lcol=WHT)
+
+# Shrek the Third (2007): DreamWorks, a slipcase; the poster's sky, SHREK THE THIRD typeset in a heavy serif in the logo's green (parked with the other Shreks for Ian's logo, see data/logos-wanted.md), Shrek, Fiona, Puss and Donkey
+std('shrek-the-third-2007', ('grad', [(0, (90, 170, 230)), (.5, (60, 140, 210)), (1, (30, 70, 30))]), (120, 180, 50),
+    [T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)), T('THE THIRD', 'schb', 50, (230, 200, 80))], tgap=8,
+    photo=ph(0.5, 0.65, 0.6, 1.4), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(220, 236, 250), fin=MINT, seed=2007)
+
+# Spider-Man 3 (2007): Marvel (Columbia), a slipcase; the city's grey blue, the poster's white SPIDER-MAN 3 lifted, the red and the black suits
+std('spider-man-3-2007', ('grad', [(0, (70, 90, 110)), (.6, (20, 26, 34)), (1, (2, 4, 6))]), WHT,
+    L((0.09, 0.908, 0.91, 0.944), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.4, 0.86, 1.3), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TOBEY MAGUIRE'], ccol=WHT,
+    ft='e', fcol=(200, 210, 220), fin=MINT, seed=2007)
+
+# Sunshine (2007): Fox Searchlight, the poster's black, SUNSHINE typeset in heavy capitals in the poster's fire orange (parked for Ian's logo, see data/logos-wanted.md: the letters burn into flames and both cuts left them unreadable), the sun's rim and Capa's face
+std('sunshine-2007', ('grad', [(0, (60, 20, 6)), (.6, (14, 4, 2)), (1, (0, 0, 0))]), (250, 170, 60),
+    T('SUNSHINE', 'intbk', 110, (250, 170, 60), outline=((90, 20, 4), 2)),
+    photo=ph(0.4, 0.3, 0.7, 1.1), pb=(250, 170, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'SCI-FI']),
+    ft='a', fcol=(240, 200, 160), fin=MINT, seed=2007)
+
+# Superbad (2007): Columbia, the poster's cream, its red SUPERBAD with the black drop shadow cut off it in its own colours, Seth, Evan and Fogell
+std('superbad-2007', ('grad', [(0, (240, 234, 220)), (.6, (226, 218, 200)), (1, (150, 130, 100))]), (220, 30, 30),
+    LC([(0.04, 0.31, 0.98, 0.48)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .25), minf=.03)], outline=((16, 16, 16), 2.4)),
+    photo=ph(0.6, 0.5, 0.8, 1.6), pb=(220, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['JONAH HILL', 'MICHAEL CERA'], ccol=(30, 30, 30),
+    ft='d', vbox=(220, 30, 30), fcol=(40, 30, 20), fin=MINT, seed=2007)
