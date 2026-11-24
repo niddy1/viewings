@@ -4746,3 +4746,74 @@ std('pirates-of-the-caribbean-dead-man-s-chest-2006', ('grad', [(0, (60, 70, 40)
     [T('PIRATES OF THE CARIBBEAN', 'pagb', 100, (226, 200, 150), outline=((30, 16, 6), 1.6)), T("DEAD MAN'S CHEST", 'pagb', 50, (226, 210, 170))], tgap=8,
     photo=ph(0.5, 0.3, 0.9, 0.6), pb=(226, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
     ft='e', fcol=(220, 200, 170), fin=MINT, seed=2006)
+
+# Scoop (2006): BBC Film, the poster's tarot red, its white SCOOP lifted, Scarlett Johansson and Hugh Jackman with the card
+std('scoop-2006', ('grad', [(0, (200, 30, 30)), (.6, (120, 10, 14)), (1, (30, 2, 4))]), WHT,
+    L((0.27, 0.035, 0.96, 0.18), 120, WHT, mode='light'),
+    photo=ph(0.5, 0.55, 0.9, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A WOODY ALLEN FILM'], ccol=WHT,
+    ft='c', fcol=(250, 220, 220), fin=MINT, seed=2006)
+
+# Stranger Than Fiction (2006): Columbia (Mandate), the poster's white, its black serif Stranger / than / Fiction cut off it into one line, Will Ferrell looking up at the skyline
+std('stranger-than-fiction-2006', ('grad', [(0, (250, 250, 248)), (.6, (226, 232, 238)), (1, (150, 170, 190))]), (20, 20, 24),
+    LC([(0.43, 0.138, 0.975, 0.214), (0.52, 0.212, 0.82, 0.273), (0.42, 0.275, 0.975, 0.352)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) < .3)] * 3),
+    photo=ph(0.6, 0.72, 0.8, 0.5), pb=(30, 110, 190), lg=(30, 30, 40), lw=.55, order='LTPF',
+    ft='b', fcol=(40, 50, 60), fin=MINT, seed=2006)
+
+# Tenacious D in The Pick of Destiny (2006): New Line, the poster's purple dark, its red TENACIOUS D cut off it in its own colours, IN THE PICK OF DESTINY typeset under it in orange (the poster's is printed in flames, which a cut can't separate), Jack Black and Kyle Gass flying
+std('tenacious-d-in-the-pick-of-destiny-2006', ('grad', [(0, (60, 20, 90)), (.6, (20, 6, 30)), (1, (2, 0, 4))]), (240, 80, 40),
+    [LC([(0.12, 0.055, 0.87, 0.138)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .5) & (a[..., 2] < .4), minf=.2, close=2)]), T('IN THE PICK OF DESTINY', 'intbk', 46, (250, 170, 50))], tgap=8,
+    photo=ph(0.5, 0.5, 0.9, 0.85), pb=(250, 170, 50), lg=WHT, lw=.5, order='LPTSF', stick=BAR('06 1122', top='COMEDY', fill=(250, 236, 120)),
+    ft='a', fcol=(230, 200, 240), fin=MINT, seed=2006)
+
+# The Ant Bully (2006): Warner Bros. (DNA Productions), a slipcase; the poster's sky, its black ant and red BULLY cut off it in their own colours, Lucas among the ants
+std('the-ant-bully-2006', ('grad', [(0, (60, 160, 230)), (.5, (120, 200, 230)), (1, (60, 110, 30))]), (30, 30, 30),
+    LC([(0.07, 0.07, 0.93, 0.2)], 130, outline=(WHT, 2.4), cuts=[key_cut(lambda a: (_lum(a) < .2) | ((a[..., 0] > .7) & (a[..., 1] < .3)))]),
+    photo=ph(0.5, 0.55, 0.86, 1.6), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(20, 40, 20), fin=MINT, seed=2006)
+
+# The Black Dahlia (2006): Universal, the poster's black, its white serif THE BLACK / DAHLIA lifted into one line, Mia Kirshner's face
+std('the-black-dahlia-2006', ('grad', [(0, (30, 30, 34)), (.6, (8, 8, 10)), (1, (0, 0, 0))]), WHT,
+    L([(0.07, 0.21, 0.54, 0.31), (0.42, 0.325, 0.945, 0.405)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.55, 0.62, 0.86, 0.45), pb=(150, 20, 30), lg=WHT, lw=.5, order='LTPCF', credit=['A BRIAN DE PALMA FILM'], ccol=WHT,
+    ft='d', vbox=(150, 20, 30), fcol=(200, 200, 204), fin=MINT, seed=2006)
+
+# The Departed (2006): Warner Bros., the poster's grimy red, its white THE DEPARTED lifted, DiCaprio above, Nicholson and Damon below
+std('the-departed-2006', ('grad', [(0, (130, 30, 24)), (.6, (40, 26, 16)), (1, (6, 4, 2))]), WHT,
+    L((0.08, 0.345, 0.545, 0.487), 110, WHT, mode='light', speck=0),
+    photo=ph(0.75, 0.24, 0.5, 1.4), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['LEONARDO DICAPRIO', 'MATT DAMON'], ccol=WHT,
+    ft='b', fcol=(220, 200, 180), fin=MINT, seed=2006)
+
+# The Devil Wears Prada (2006): Fox 2000, the poster's white, its red THE DEVIL and black WEARS PRADA cut off it in their own colours, the red heel with the pitchfork
+std('the-devil-wears-prada-2006', ('grad', [(0, (252, 252, 252)), (.6, (238, 236, 236)), (1, (180, 176, 176))]), (180, 20, 30),
+    LC([(0.53, 0.595, 0.93, 0.69), (0.5, 0.69, 0.93, 0.778)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: _lum(a) < .55)] * 2),
+    photo=ph(0.3, 0.5, 0.5, 1.9), pb=(180, 20, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', dotst=('COMEDY', (200, 20, 40), WHT),
+    ft='c', fcol=(40, 40, 40), fin=MINT, seed=2006)
+
+# The Good German (2006): Warner Bros., the poster's grey ruins, its red The GOOD GERMAN cut off it, George Clooney and Cate Blanchett
+std('the-good-german-2006', ('grad', [(0, (60, 60, 60)), (.6, (24, 24, 24)), (1, (4, 4, 4))]), (230, 60, 40),
+    LC([(0.17, 0.1, 0.71, 0.24)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35), minf=.02)]),
+    photo=ph(0.45, 0.45, 0.6, 1.2), pb=(230, 60, 40), lg=WHT, lw=.5, order='LPTCF', credit=['GEORGE CLOONEY', 'CATE BLANCHETT'], ccol=WHT,
+    ft='a', fcol=(200, 200, 200), fin=MINT, seed=2006)
+
+# The Lives of Others (2006): Wiedemann & Berg, the poster's teal dark, The Lives of Others typeset in typewriter type in white like the poster's (parked for Ian's logo, see data/logos-wanted.md: the T runs into the pale bedsheet beside it and a cut breaks it), Wiesler at the headphones
+std('the-lives-of-others-2006', ('grad', [(0, (40, 70, 70)), (.6, (12, 22, 22)), (1, (2, 4, 4))]), WHT,
+    T('The Lives of Others', 'mono', 80, WHT),
+    photo=ph(0.45, 0.15, 0.86, 0.6), pb=(190, 190, 170), lg=WHT, lw=.5, order='LPTCF', credit=['EIN FILM VON', 'F. H. VON DONNERSMARCK'], ccol=WHT,
+    ft='e', fcol=(190, 210, 210), fin=MINT, seed=2006)
+
+# The Prestige (2006): Warner Bros., the poster's black, its white THE PRESTIGE lifted (thin THE and heavy PRESTIGE as printed), Hugh Jackman, Scarlett Johansson and Christian Bale in the smoke
+std('the-prestige-2006', ('grad', [(0, (30, 36, 46)), (.6, (8, 10, 14)), (1, (0, 0, 0))]), WHT,
+    L((0.09, 0.782, 0.91, 0.836), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.4, 0.9, 1.4), pb=(150, 170, 200), lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(190, 196, 210), fin=MINT, seed=2006)
+
+# The Wild (2006): Walt Disney Pictures, an animated film, so a clamshell; the city's sky blue, the poster's green THE WILD road sign cut off it whole, Samson the lion's face in the diamond
+disney('the-wild-2006', ('grad', [(0, (120, 180, 230)), (.5, (70, 140, 210)), (1, (30, 70, 130))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.26, 0.8, 0.78, 0.905)], 130, margin=0, cuts=[plate_cut(lambda a: (a[..., 1] > a[..., 0] + .12) | (_lum(a) > .85))]),
+       face=ph(.6, .43, .18, 1.4), lcol=WHT)
+
+# V for Vendetta (2006): Warner Bros., the poster's red and black, its white V FOR / VENDETTA lifted into one line, Natalie Portman and V's mask
+std('v-for-vendetta-2006', ('grad', [(0, (190, 30, 30)), (.5, (60, 10, 10)), (1, (2, 0, 0))]), WHT,
+    L([(0.16, 0.77, 0.46, 0.838), (0.3, 0.853, 0.855, 0.92)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.55, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 40), ink=(20, 16, 12)),
+    ft='d', vbox=(200, 30, 30), fcol=(220, 200, 200), fin=MINT, seed=2006)
