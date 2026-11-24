@@ -5863,3 +5863,73 @@ std('dallas-buyers-club-2013', ('grad', [(0, (220, 220, 206)), (.5, (180, 186, 1
     L([(0.29, 0.14, 0.715, 0.198), (0.29, 0.217, 0.715, 0.276), (0.285, 0.29, 0.715, 0.373)], 110, (40, 80, 120), mode='key', key=(50, 90, 130), valign='base', gapf=.25),
     photo=ph(0.5, 0.68, 0.86, 0.6), pb=(40, 80, 120), lg=(30, 40, 50), lw=.55, order='LTPF',
     ft='d', vbox=(40, 80, 120), fcol=(30, 40, 50), fin=MINT, seed=2013)
+
+# Don Jon (2013): Relativity (HitRecord), the poster's neon blue, its white italic DON JON on its blue panel cut off it whole, Joseph Gordon-Levitt, Scarlett Johansson and Julianne Moore
+std('don-jon-2013', ('grad', [(0, (60, 40, 150)), (.5, (30, 30, 110)), (1, (6, 6, 30))]), WHT,
+    LC([(0.1, 0.745, 0.9, 0.876)], 120, margin=0, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03, fillh=True)], outline=((30, 60, 160), 2.4)),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(230, 40, 60), lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOSEPH GORDON-LEVITT'], ccol=WHT,
+    ft='b', fcol=(200, 200, 240), fin=MINT, seed=2013)
+
+# Frozen (2013): Walt Disney Animation, so a clamshell; the ice blue, the poster's white FROZEN cut off it, Elsa's face in the diamond
+disney('frozen-2013', ('grad', [(0, (130, 200, 240)), (.5, (60, 140, 210)), (1, (20, 60, 120))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.17, 0.06, 0.87, 0.14)], 140, outline=((20, 60, 130), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03)]),
+       face=ph(.1, .45, .12, 1.4), lcol=WHT)
+
+# Fruitvale Station (2013): The Weinstein Company (no logo file; production companies from IMDb), the subway's dark, its orange FRUITVALE / STATION lifted into one line, Michael B. Jordan on the platform
+std('fruitvale-station-2013', ('grad', [(0, (60, 50, 40)), (.6, (14, 12, 10)), (1, (0, 0, 0))]), (240, 160, 40),
+    L([(0.42, 0.738, 0.91, 0.83), (0.53, 0.847, 0.905, 0.94)], 110, (240, 160, 40), mode='key', key=(230, 150, 40), valign='base', gapf=.2),
+    photo=ph(0.4, 0.3, 0.8, 0.85), pb=(240, 160, 40), lg=WHT, lw=.5, order='lPTCF', studio=['OG PROJECT', 'SIGNIFICANT PRODUCTIONS'], scol=WHT, credit=['WRITTEN & DIRECTED BY', 'RYAN COOGLER'], ccol=WHT,
+    ft='a', fcol=(220, 200, 180), fin=MINT, seed=2013)
+
+# Gravity (2013): Warner Bros., space black, the poster's spaced white GRAVITY cut off it, the debris over the Earth's rim
+std('gravity-2013', ('grad', [(0, (20, 30, 50)), (.6, (4, 8, 14)), (1, (0, 0, 0))]), WHT,
+    LC([(0.15, 0.262, 0.86, 0.322)], 90, cuts=[comp_cut(lambda a: (_lum(a) > .85) & (np.abs(a[..., 2] - a[..., 0]) < .1), top=7, minf=.05, opn=1)]),
+    photo=ph(0.55, 0.62, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['SANDRA BULLOCK', 'GEORGE CLOONEY'], ccol=WHT,
+    ft='e', fcol=(190, 200, 214), fin=MINT, seed=2013)
+
+# Grudge Match (2013): Warner Bros. (Gerber), the poster's black with its stars, its gold condensed GRUDGE / MATCH cut off it into one line, De Niro and Stallone in the ring
+std('grudge-match-2013', ('grad', [(0, (40, 34, 24)), (.6, (10, 8, 6)), (1, (0, 0, 0))]), (230, 170, 50),
+    LC([(0.09, 0.172, 0.91, 0.405), (0.09, 0.41, 0.91, 0.6)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] > .35) & (a[..., 2] < .35), minf=.03, close=2)] * 2),
+    photo=ph(0.5, 0.75, 0.86, 0.6), pb=(230, 170, 50), lg=WHT, lw=.5, order='LTPSF', dotst=('COMEDY', (230, 170, 50), (10, 8, 6)),
+    ft='c', fcol=(210, 200, 180), fin=MINT, seed=2013)
+
+# Her (2013): Warner Bros. (Annapurna), the poster's pink red, its white her lifted, Joaquin Phoenix's face
+std('her-2013', ('grad', [(0, (220, 40, 70)), (.5, (190, 20, 50)), (1, (60, 4, 14))]), WHT,
+    L((0.31, 0.755, 0.69, 0.896), 140, WHT, mode='light'),
+    photo=ph(0.55, 0.35, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A SPIKE JONZE LOVE STORY'], ccol=WHT,
+    ft='d', vbox=WHT, vink=(190, 20, 50), fcol=(250, 220, 226), fin=MINT, seed=2013)
+
+# Monsters University (2013): Pixar, so a clamshell; the campus sky, the poster's blue MONSTERS / UNIVERSITY cut off it into one line, Mike's face in the diamond
+disney('monsters-university-2013', ('grad', [(0, (40, 90, 170)), (.5, (20, 50, 120)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.12, 0.11, 0.9, 0.195), (0.18, 0.2, 0.84, 0.265)], 150, valign='base', margin=0, gapf=.15, outline=(WHT, 2.4), cuts=[comp_cut(lambda a: ((a[..., 2] > a[..., 0] + .25) & (_lum(a) < .5)) | (_lum(a) < .12), minf=.005, close=2, fillh=True)] * 2),
+       face=ph(.33, .73, .14, 1.4), lcol=WHT)
+
+# Nebraska (2013): Paramount (Echo Lake), black and white, the poster's white NEBRASKA lifted, Woody's profile and wild hair
+std('nebraska-2013', ('grad', [(0, (60, 60, 60)), (.6, (14, 14, 14)), (1, (0, 0, 0))]), WHT,
+    L((0.24, 0.335, 0.78, 0.43), 110, WHT, mode='light'),
+    photo=ph(0.6, 0.2, 0.7, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AN ALEXANDER PAYNE FILM'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=MINT, seed=2013)
+
+# Now You See Me (2013): Summit, the poster's grey, NOW YOU SEE ME typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the title is the floor itself, in huge letters in steep perspective under the Horsemen), the four Horsemen walking
+std('now-you-see-me-2013', ('grad', [(0, (150, 150, 150)), (.6, (60, 60, 60)), (1, (10, 10, 10))]), WHT,
+    T('NOW YOU SEE ME', 'intbk', 110, WHT, outline=((40, 40, 40), 2)),
+    photo=ph(0.5, 0.5, 0.86, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 40, 50), ink=WHT),
+    ft='a', fcol=(220, 220, 220), fin=MINT, seed=2013)
+
+# Nurse 3D (2013): Lionsgate, the poster's white with dripping blood, its black script Nurse cut off it, Paz de la Huerta astride the syringe
+std('nurse-3-d-2013', ('grad', [(0, (190, 20, 20)), (.3, (250, 248, 246)), (1, (220, 216, 210))]), (20, 20, 20),
+    LC([(0.18, 0.75, 0.75, 0.9)], 120, cuts=[comp_cut(lambda a: _lum(a) < .45, minf=.02, opn=1, close=2)]),
+    photo=ph(0.5, 0.35, 0.8, 1.0), pb=(190, 20, 20), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['PAZ DE LA HUERTA'], ccol=(30, 30, 30),
+    ft='e', fcol=(40, 30, 30), fin=MINT, seed=2013)
+
+# Nymphomaniac: Vol. I (2013): Magnolia (Zentropa), the poster's white, its black NYMPH()MANIAC / VOLUME I lifted into one line, Charlotte Gainsbourg's face
+std('nymphomaniac-vol-i-2013', ('grad', [(0, (250, 248, 246)), (.6, (230, 220, 212)), (1, (120, 90, 70))]), (20, 20, 20),
+    L([(0.03, 0.088, 0.97, 0.142), (0.3, 0.155, 0.69, 0.195)], 100, (20, 20, 20), mode='dark', valign='base', gapf=.25),
+    photo=ph(0.55, 0.55, 0.86, 0.85), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A FILM BY', 'LARS VON TRIER'], ccol=(20, 20, 20),
+    ft='c', fcol=(30, 20, 20), fin=MINT, seed=2013)
+
+# Only Lovers Left Alive (2013): Sony Pictures Classics (Recorded Picture Company), the poster's dark green and gold, its pink blackletter Only Lovers / Left Alive lifted into one line, Tilda Swinton and Tom Hiddleston lying entwined
+std('only-lovers-left-alive-2013', ('grad', [(0, (60, 70, 50)), (.6, (16, 20, 14)), (1, (0, 2, 0))]), (240, 170, 190),
+    L([(0.15, 0.745, 0.905, 0.833), (0.21, 0.835, 0.835, 0.913)], 110, (240, 170, 190), mode='key', key=(240, 160, 180), valign='base', gapf=.25),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(240, 170, 190), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
+    ft='d', vbox=(240, 170, 190), vink=(16, 20, 14), fcol=(200, 210, 190), fin=MINT, seed=2013)
