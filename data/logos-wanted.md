@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Amazing Spider-Man 2 (2014) | Vault 2010s | `logos/the-amazing-spider-man-2-2014-title.png` | typeset; thin chrome logo on the bright city lifted in fragments |
+| Teenage Mutant Ninja Turtles (2014) | Vault 2010s | `logos/teenage-mutant-ninja-turtles-2014-title.png` | typeset; chrome letters reflect the sky, both cuts left holes |
 | Interstellar (2014) | Vault 2010s | `logos/interstellar-2014-title.png` | typeset; the letters cross from dark sea onto a white wake and change colour |
 | Gone Girl (2014) | Vault 2010s | `logos/gone-girl-2014-title.png` | typeset; the letters fade into the clouds by design |
 | Blue Ruin (2014) | Vault 2010s | `logos/blue-ruin-2014-title.png` | typeset; giant letters with Dwight's face showing through, a cut keeps the face |

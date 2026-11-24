@@ -6147,3 +6147,69 @@ std('jerrod-carmichael-love-at-the-store-2014', ('grad', [(0, (140, 20, 30)), (.
     L([(0.02, 0.068, 0.98, 0.146), (0.02, 0.158, 0.98, 0.218)], 110, WHT, mode='light', valign='base', gapf=.2),
     photo=ph(0.5, 0.65, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['STAND-UP SPECIAL'], ccol=WHT,
     ft='c', fcol=(250, 210, 214), fin=MINT, seed=2014)
+
+# John Wick (2014): Lionsgate (87Eleven), the poster's teal rain, its pale JOHN WICK cut off it, Keanu Reeves walking out of the fog with the gun
+std('john-wick-2014', ('grad', [(0, (60, 130, 140)), (.6, (14, 34, 40)), (1, (0, 4, 6))]), WHT,
+    LC([(0.05, 0.355, 0.95, 0.495)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .55) & (a[..., 2] > a[..., 0] - .05), minf=.03, close=3, fillh=True)]),
+    photo=ph(0.45, 0.75, 0.7, 0.9), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['KEANU REEVES'], ccol=WHT,
+    ft='a', fcol=(190, 220, 220), fin=MINT, seed=2014)
+
+# Maleficent (2014): Disney, live action, so a slipcase; the poster's blue night, its silver MALEFICENT cut off it, Angelina Jolie in the horns
+std('maleficent-2014', ('grad', [(0, (40, 70, 110)), (.6, (10, 20, 34)), (1, (0, 2, 6))]), (200, 206, 214),
+    LC([(0.1, 0.84, 0.95, 0.95)], 110, cuts=[comp_cut(lambda a: _lum(a) > .5, minf=.02, close=2, fillh=True)]),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(150, 30, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('FANTASY', (60, 120, 60), WHT),
+    ft='e', fcol=(200, 206, 220), fin=MINT, seed=2014)
+
+# Murder of a Cat (2014): Gravitas (Seine Pictures), the poster's orange, its black MURDER / OF A / CAT lifted into one line, the cast in the yellow strip and the cat
+std('murder-of-a-cat-2014', ('grad', [(0, (250, 160, 40)), (.5, (246, 140, 30)), (1, (150, 70, 6))]), (16, 16, 16),
+    L([(0.07, 0.275, 0.5, 0.362), (0.07, 0.368, 0.3, 0.454), (0.07, 0.46, 0.26, 0.546)], 110, (16, 16, 16), mode='dark', valign='base', gapf=.25),
+    photo=ph(0.85, 0.4, 0.25, 1.9), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LTPCF', credit=['FRAN KRANZ'], ccol=(16, 16, 16),
+    ft='b', fcol=(30, 16, 6), fin=MINT, seed=2014)
+
+# Nightcrawler (2014): Open Road (Sierra/Affinity), the poster's night, its yellow slanted NIGHTCRAWLER cut off it and turned level, Lou Bloom by the red Challenger
+std('nightcrawler-2014', ('grad', [(0, (40, 50, 50)), (.6, (10, 12, 12)), (1, (0, 0, 0))]), (240, 240, 60),
+    LC([(0.18, 0.78, 0.82, 0.93)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .6) & (a[..., 2] < .4), minf=.02, close=2, rot=6)]),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['JAKE GYLLENHAAL'], ccol=WHT,
+    ft='c', fcol=(200, 206, 200), fin=MINT, seed=2014)
+
+# Non-Stop (2014): Universal (Silver Pictures), the plane's grey teal, its yellow spaced NON-STOP lifted, Liam Neeson with the gun in the cabin
+std('non-stop-2014', ('grad', [(0, (90, 120, 120)), (.6, (20, 30, 30)), (1, (0, 2, 2))]), (240, 230, 50),
+    L((0.07, 0.775, 0.93, 0.862), 110, (240, 230, 50), mode='key', key=(230, 220, 50)),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(240, 230, 50), lg=WHT, lw=.5, order='LPTSF', stick=BAR('14 0228', top='ACTION', fill=(236, 240, 236)),
+    ft='d', vbox=(240, 230, 50), vink=(10, 14, 14), fcol=(200, 214, 214), fin=MINT, seed=2014)
+
+# Rob the Mob (2014): Millennium (The Exchange), the poster's white, its red ROB THE MOB cut off it, Michael Pitt and Nina Arianda before the New York skyline
+std('rob-the-mob-2014', ('grad', [(0, (240, 240, 240)), (.6, (210, 210, 214)), (1, (60, 60, 70))]), (170, 20, 20),
+    LC([(0.02, 0.222, 0.98, 0.418)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .2) & (a[..., 0] > a[..., 1] + .12) & (a[..., 0] > a[..., 2] + .1), minf=.02, close=2)]),
+    photo=ph(0.5, 0.66, 0.86, 0.6), pb=(170, 20, 20), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['MICHAEL PITT', 'NINA ARIANDA'], ccol=(30, 30, 30),
+    ft='a', vbox=(170, 20, 20), fcol=(240, 240, 240), fin=MINT, seed=2014)
+
+# Sin City: A Dame to Kill For (2014): Dimension (Miramax), black and white with the red, its red SIN CITY cut off it with A DAME TO KILL FOR typeset under it (the poster's is slanted on a busy ground), the cast in the light
+std('sin-city-a-dame-to-kill-for-2014', ('grad', [(0, (60, 60, 60)), (.6, (14, 14, 14)), (1, (0, 0, 0))]), (210, 20, 30),
+    [LC([(0.47, 0.6, 0.96, 0.72)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .25), minf=.03, close=2)]), T('A DAME TO KILL FOR', 'intbk', 44, WHT)], tgap=8,
+    photo=ph(0.45, 0.25, 0.86, 0.6), pb=(210, 20, 30), lg=WHT, lw=.5, order='LPTCF', credit=['FRANK MILLER\'S'], ccol=WHT,
+    ft='e', fcol=(210, 210, 210), fin=MINT, seed=2014)
+
+# Tales of the Grim Sleeper (2014): HBO Documentary Films, the poster's black, its white TALES OF THE GRIM SLEEPER lifted, the orange handprint
+std('tales-of-the-grim-sleeper-2014', ('grad', [(0, (50, 34, 14)), (.6, (12, 8, 4)), (1, (0, 0, 0))]), WHT,
+    L((0.1, 0.848, 0.88, 0.895), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(240, 150, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'NICK BROOMFIELD'], ccol=WHT,
+    ft='b', fcol=(220, 200, 180), fin=MINT, seed=2014)
+
+# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city's dusk, NINJA TURTLES typeset in heavy chrome-grey capitals with TEENAGE MUTANT above it (parked for Ian's logo, see data/logos-wanted.md: the chrome letters reflect the sky behind them and both cuts left holes), the four turtles
+std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (60, 110, 160)), (.5, (180, 120, 60)), (1, (20, 20, 20))]), (220, 226, 232),
+    [T('TEENAGE MUTANT', 'intbk', 40, (220, 226, 232)), T('NINJA TURTLES', 'intbk', 110, (220, 226, 232), outline=((30, 80, 30), 2.2))], tgap=6,
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(80, 160, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'ACTION']),
+    ft='a', fcol=(220, 220, 200), fin=MINT, seed=2014)
+
+# The Amazing Spider-Man 2 (2014): Columbia, a slipcase; the city's blue, THE AMAZING SPIDER-MAN 2 typeset in wide heavy capitals (parked with the other Spider-Mans for Ian's logo, see data/logos-wanted.md: the thin chrome logo on the bright city lifted in fragments), Spider-Man swinging
+std('the-amazing-spider-man-2-2014', ('grad', [(0, (60, 110, 170)), (.6, (16, 30, 50)), (1, (0, 2, 6))]), (220, 226, 232),
+    [T('THE AMAZING', 'advb', 40, (220, 226, 232)), T('SPIDER-MAN 2', 'advb', 100, WHT, outline=((30, 50, 90), 2))], tgap=6,
+    photo=ph(0.6, 0.55, 0.8, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='d', vbox=(200, 30, 30), fcol=(200, 214, 226), fin=MINT, seed=2014)
+
+# The Drop (2014): Fox Searchlight, the poster's sepia, its red THE / DROP lifted into one line, Tom Hardy, James Gandolfini and Noomi Rapace above the bridge
+std('the-drop-2014', ('grad', [(0, (230, 220, 200)), (.6, (190, 176, 150)), (1, (90, 76, 60))]), (210, 70, 40),
+    L([(0.38, 0.415, 0.6, 0.468), (0.1, 0.47, 0.905, 0.585)], 110, (210, 70, 40), mode='key', key=(210, 70, 40), valign='base', gapf=.25),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(210, 70, 40), lg=(30, 24, 20), lw=.55, order='LPTCF', credit=['TOM HARDY', 'NOOMI RAPACE'], ccol=(30, 24, 20),
+    ft='c', fcol=(40, 30, 20), fin=MINT, seed=2014)
