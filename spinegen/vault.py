@@ -5175,3 +5175,74 @@ std('the-hurt-locker-2008', ('grad', [(0, (70, 64, 52)), (.5, (30, 28, 22)), (1,
     L([(0.27, 0.38, 0.42, 0.416), (0.19, 0.41, 0.93, 0.516), (0.04, 0.512, 0.7, 0.577)], 110, (200, 170, 90), mode='key', key=(190, 160, 80), valign='base', gapf=.2),
     photo=ph(0.5, 0.82, 0.86, 0.55), pb=(200, 170, 90), lg=WHT, lw=.5, order='LTPF',
     ft='d', vbox=(200, 170, 90), vink=(30, 26, 20), fcol=(220, 200, 160), fin=MINT, seed=2008)
+
+# The Incredible Hulk (2008): Marvel, a slipcase; the poster's night teal, THE INCREDIBLE HULK typeset in heavy steel-grey capitals (parked for Ian's logo, see data/logos-wanted.md: the chrome HULK darkens to black across its middle and both cuts split the letters), the Hulk's back over Bruce Banner
+std('the-incredible-hulk-2008', ('grad', [(0, (40, 60, 60)), (.6, (10, 16, 18)), (1, (0, 2, 2))]), (220, 226, 230),
+    [T('THE INCREDIBLE', 'intbk', 40, (200, 206, 210)), T('HULK', 'intbk', 130, (220, 226, 230), outline=((20, 30, 30), 2))], tgap=8,
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(90, 170, 70), lg=WHT, lw=.5, order='LPTCF', credit=['EDWARD NORTON'], ccol=WHT,
+    ft='b', fcol=(190, 210, 210), fin=MINT, seed=2008)
+
+# The Visitor (2008): Overture, the poster's white, its rose the and red Visitor cut off it in their own colours, Walter drumming on the subway bench
+std('the-visitor-2008', ('grad', [(0, (250, 248, 246)), (.6, (232, 226, 220)), (1, (150, 130, 110))]), (140, 40, 40),
+    LC([(0.06, 0.13, 0.94, 0.27)], 110, cuts=[key_cut(lambda a: _lum(a) < .72)]),
+    photo=ph(0.65, 0.68, 0.6, 1.4), pb=(140, 40, 40), lg=(40, 30, 30), lw=.55, order='LTPCF', credit=['RICHARD JENKINS'], ccol=(40, 30, 30),
+    ft='c', fcol=(50, 40, 40), fin=MINT, seed=2008)
+
+# The Wrestler (2008): Fox Searchlight (Wild Bunch), the arena's gold dark, its weathered gold THE / WRESTLER cut off it into one line, Randy bowed on the ropes
+std('the-wrestler-2008', ('grad', [(0, (90, 60, 20)), (.6, (24, 16, 6)), (1, (2, 2, 0))]), (230, 190, 110),
+    LC([(0.32, 0.045, 0.67, 0.155), (0.05, 0.185, 0.95, 0.295)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.02, close=2)] * 2),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 190, 110), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'DARREN ARONOFSKY'], ccol=WHT,
+    ft='a', fcol=(220, 200, 170), fin=MINT, seed=2008)
+
+# Tropic Thunder (2008): DreamWorks, the poster's jungle fire, TROPIC THUNDER typeset in heavy capitals in its tan (parked for Ian's logo, see data/logos-wanted.md: the weathered letters sit on the explosion and the cut kept the fire), Ben Stiller, Jack Black and Robert Downey Jr. with the guns
+std('tropic-thunder-2008', ('grad', [(0, (120, 60, 20)), (.5, (50, 30, 10)), (1, (8, 6, 2))]), (240, 200, 120),
+    T('TROPIC THUNDER', 'intbk', 110, (240, 200, 120), outline=((90, 30, 10), 2)),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 0813', top='COMEDY', fill=(236, 240, 220)),
+    ft='e', fcol=(230, 210, 180), fin=MINT, seed=2008)
+
+# Tyson (2008): Sony Pictures Classics (Wild Bunch), the poster's black, its white serif TYSON lifted, Mike Tyson's tattooed face
+std('tyson-2008', ('grad', [(0, (40, 34, 30)), (.6, (10, 8, 8)), (1, (0, 0, 0))]), WHT,
+    L((0.04, 0.008, 0.93, 0.158), 120, WHT, mode='light'),
+    photo=ph(0.55, 0.5, 0.86, 1.2), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'JAMES TOBACK'], ccol=WHT,
+    ft='d', vbox=(200, 30, 30), fcol=(200, 190, 180), fin=MINT, seed=2008)
+
+# Vicky Cristina Barcelona (2008): The Weinstein Company (Mediapro), the poster's white, its dark red serif Vicky Cristina Barcelona lifted, Javier Bardem, Penélope Cruz and Scarlett Johansson
+std('vicky-cristina-barcelona-2008', ('grad', [(0, (250, 248, 244)), (.6, (236, 226, 214)), (1, (150, 110, 80))]), (110, 20, 20),
+    L((0.015, 0.78, 0.985, 0.842), 90, (110, 20, 20), mode='dark', speck=.01),
+    photo=ph(0.55, 0.33, 0.86, 0.6), pb=(110, 20, 20), lg=(40, 20, 20), lw=.55, order='LPTF',
+    ft='b', fcol=(60, 30, 20), fin=MINT, seed=2008)
+
+# WALL-E (2008): Pixar, so a clamshell; the poster's starry night, its white WALL-E with the red dot cut off it, WALL-E's face in the diamond
+disney('wall-e-2008', ('grad', [(0, (20, 30, 80)), (.5, (40, 60, 140)), (1, (10, 14, 40))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.24, 0.848, 0.76, 0.893)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .7) & (a[..., 1] < .3)), minf=.02)]),
+       face=ph(.47, .55, .16, 1.4), lcol=WHT)
+
+# Zack and Miri Make a Porno (2008): The Weinstein Company (View Askew), the poster's white, its black Zack and Miri / make a porno with the pink porno cut off it into one line, the cast in a row
+std('zack-and-miri-make-a-porno-2008', ('grad', [(0, (250, 250, 250)), (.6, (236, 236, 240)), (1, (150, 150, 170))]), (20, 20, 20),
+    LC([(0.19, 0.815, 0.81, 0.876), (0.18, 0.879, 0.8, 0.932)], 110, valign='base', margin=0, gapf=.2, cuts=[key_cut(lambda a: (_lum(a) < .35) | ((a[..., 0] > .6) & (a[..., 1] < .45)))] * 2),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(230, 60, 140), lg=(30, 30, 30), lw=.55, order='LPTSF', dotst=('COMEDY', (230, 60, 140), WHT),
+    ft='a', fcol=(40, 40, 40), fin=MINT, seed=2008)
+
+# (500) Days of Summer (2009): Fox Searchlight, the poster's pale blue, its white (500) DAYS / OF SUMMER cut off it into one line with a navy keyline, Tom and Summer in the collage
+std('500-days-of-summer-2009', ('grad', [(0, (200, 226, 240)), (.5, (140, 190, 220)), (1, (40, 70, 110))]), WHT,
+    LC([(0.05, 0.155, 0.95, 0.262), (0.05, 0.262, 0.95, 0.338)], 110, valign='base', margin=0, gapf=.2, outline=((20, 40, 80), 2), cuts=[comp_cut(lambda a: _lum(a) > .92, minf=.03)] * 2),
+    photo=ph(0.4, 0.72, 0.7, 1.2), pb=(250, 200, 40), lg=(20, 40, 80), lw=.55, order='LPTCF', credit=['JOSEPH GORDON-LEVITT', 'ZOOEY DESCHANEL'], ccol=(20, 40, 80),
+    ft='c', fcol=(230, 240, 250), fin=MINT, seed=2009)
+
+# 3 Idiots (2009): Vidhu Vinod Chopra, the poster's chalky yellow, its black hand-written 3 idiots cut off it, the three friends on the chairs
+std('3-idiots-2009', ('grad', [(0, (250, 230, 100)), (.5, (240, 210, 80)), (1, (150, 120, 40))]), (20, 20, 20),
+    LC([(0.13, 0.135, 0.87, 0.285)], 120, cuts=[comp_cut(lambda a: _lum(a) < .15, minf=.05)]),
+    photo=ph(0.5, 0.65, 0.9, 0.6), pb=(200, 30, 30), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['AAMIR KHAN', 'MADHAVAN'], ccol=(20, 20, 20),
+    ft='e', fcol=(40, 30, 10), fin=MINT, seed=2009)
+
+# 9 (2009): Focus Features (Tim Burton Productions), the poster's green murk, its glowing green 9 cut off it, 9 with the lamp in the ruins
+std('9-2009', ('grad', [(0, (60, 90, 50)), (.5, (24, 36, 20)), (1, (4, 6, 2))]), (190, 240, 90),
+    LC([(0.28, 0.09, 0.64, 0.46)], 160, margin=0, cuts=[comp_cut(lambda a: (a[..., 1] > .55) & (a[..., 1] > a[..., 2] + .1), minf=.05, close=3)]),
+    photo=ph(0.5, 0.62, 0.86, 0.85), pb=(190, 240, 90), lg=WHT, lw=.5, order='LTPCF', credit=['ELIJAH WOOD', 'JENNIFER CONNELLY'], ccol=WHT,
+    ft='b', fcol=(200, 220, 180), fin=MINT, seed=2009)
+
+# Avatar (2009): 20th Century Fox (Lightstorm), a slipcase; Pandora's night blue, the poster's glowing blue AVATAR lifted, Neytiri and Jake's faces
+std('avatar-2009', ('grad', [(0, (20, 60, 100)), (.5, (8, 24, 44)), (1, (0, 4, 8))]), (120, 220, 240),
+    L((0.14, 0.84, 0.84, 0.918), 110, (120, 220, 240), mode='light'),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(120, 220, 240), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.99', 'SCI-FI']),
+    ft='d', vbox=(120, 220, 240), vink=(0, 10, 20), fcol=(180, 220, 230), fin=MINT, seed=2009)

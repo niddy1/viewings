@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Incredible Hulk (2008) | Vault 2000s | `logos/the-incredible-hulk-2008-title.png` | typeset; chrome HULK darkens to black across its middle, both cuts split the letters |
+| Tropic Thunder (2008) | Vault 2000s | `logos/tropic-thunder-2008-title.png` | typeset; weathered letters on the explosion, the cut kept the fire |
 | The Fall (2008) | Vault 2000s | `logos/the-fall-2008-title.png` | typeset; thin red script with long flourishes, both cuts lost The |
 | Kung Fu Panda (2008) | Vault 2000s | `logos/kung-fu-panda-2008-title.png` | typeset; yellow brush letters on a sunset of the same yellows, both cuts lost most of PANDA |
 | Let the Right One In (2008) | Vault 2000s | `logos/let-the-right-one-in-2008-title.png` | typeset; silver letters on a frost-white ground, the lift lost LET and smeared IN |
