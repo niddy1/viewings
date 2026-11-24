@@ -5578,3 +5578,74 @@ std('sherlock-holmes-a-game-of-shadows-2011', ('grad', [(0, (90, 100, 110)), (.6
 disney('small-fry-2011', ('grad', [(0, (120, 200, 250)), (.5, (90, 170, 240)), (1, (60, 40, 140))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.18, 0.735, 0.82, 0.825)], 140, cuts=[comp_cut(lambda a: _lum(a) < .93, minf=.03, close=2, fillh=True)]),
        face=ph(.78, .41, .14, 1.4), lcol=WHT)
+
+# The Adventures of Tintin (2011): Paramount, the poster's sea blue, its gold TINTIN cut off it with THE ADVENTURES OF lifted above it, Tintin, Haddock and Snowy at sea
+std('the-adventures-of-tintin-2011', ('grad', [(0, (120, 190, 220)), (.5, (40, 100, 150)), (1, (10, 30, 50))]), (250, 210, 60),
+    LC([(0.21, 0.79, 0.795, 0.818), (0.1, 0.83, 0.9, 0.958)], 120, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .65) & (a[..., 1] > .5) & (a[..., 2] < .5), minf=.02, close=2)] * 2),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(250, 210, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('ADVENTURE', (250, 210, 60), (20, 30, 40)),
+    ft='b', fcol=(200, 220, 230), fin=MINT, seed=2011)
+
+# The Artist (2011): The Weinstein Company (uFilm), the poster's black, its white Art Deco The ARTIST with the red The cut off it in its own colours, George and Peppy about to kiss
+std('the-artist-2011', ('grad', [(0, (40, 40, 40)), (.6, (10, 10, 10)), (1, (0, 0, 0))]), WHT,
+    LC([(0.54, 0.09, 0.96, 0.27)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .5) & (a[..., 1] < .2)), minf=.01, opn=1, close=2)]),
+    photo=ph(0.4, 0.5, 0.8, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'MICHEL HAZANAVICIUS'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2011)
+
+# The Cat Vanishes (2011): Patagonik, the poster's black, its gold EL / GATO / DESAPARECE cut off it into one line, the cat's yellow eyes
+std('the-cat-vanishes-2011', ('grad', [(0, (40, 34, 20)), (.6, (10, 8, 4)), (1, (0, 0, 0))]), (190, 160, 60),
+    LC([(0.43, 0.1, 0.56, 0.21), (0.37, 0.22, 0.62, 0.325), (0.18, 0.338, 0.8, 0.43)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 0] > .22) & (a[..., 0] > a[..., 2] + .1), minf=.02, close=3, fillh=True)] * 3),
+    photo=ph(0.5, 0.6, 0.86, 0.4), pb=(220, 200, 40), lg=WHT, lw=.5, order='LPTCF', credit=['UNA PELÍCULA DE', 'CARLOS SORÍN'], ccol=WHT,
+    ft='d', vbox=(190, 160, 60), vink=(10, 8, 4), fcol=(200, 190, 160), fin=MINT, seed=2011)
+
+# The Girl with the Dragon Tattoo (2011): Columbia, the poster's grey, its white THE GIRL WITH THE / DRAGON TATTOO lifted into one line, Lisbeth's profile
+std('the-girl-with-the-dragon-tattoo-2011', ('grad', [(0, (140, 150, 154)), (.5, (60, 66, 70)), (1, (6, 8, 10))]), WHT,
+    L([(0.155, 0.775, 0.73, 0.835), (0.1, 0.84, 0.9, 0.918)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.4, 0.35, 0.8, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(220, 226, 230), fin=MINT, seed=2011)
+
+# The Help (2011): DreamWorks, the poster's yellow, its purple the Help lifted, Aibileen, Minny, Skeeter and Celia on the bench
+std('the-help-2011', ('grad', [(0, (250, 210, 60)), (.5, (246, 196, 40)), (1, (170, 120, 20))]), (100, 70, 170),
+    L((0.23, 0.115, 0.82, 0.31), 120, (100, 70, 170), mode='key', key=(100, 70, 170)),
+    photo=ph(0.5, 0.65, 0.86, 0.6), pb=(100, 70, 170), lg=(40, 30, 60), lw=.55, order='LTPCF', credit=['VIOLA DAVIS', 'EMMA STONE'], ccol=(40, 30, 60),
+    ft='e', fcol=(40, 30, 20), fin=MINT, seed=2011)
+
+# Warrior (2011): Lionsgate, the poster's black, its gold weathered WARRIOR cut off it, Tom Hardy and Joel Edgerton in the cage
+std('warrior-2011', ('grad', [(0, (60, 46, 24)), (.6, (14, 10, 6)), (1, (0, 0, 0))]), (210, 170, 90),
+    LC([(0.12, 0.105, 0.88, 0.255)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .12), minf=.03, close=2)]),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(210, 170, 90), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'DRAMA']),
+    ft='b', fcol=(210, 200, 180), fin=MINT, seed=2011)
+
+# 21 Jump Street (2012): Columbia, the prom's purple night, its white 21 and red JUMP / STREET cut off it whole, Jonah Hill and Channing Tatum in white tuxes
+std('21-jump-street-2012', ('grad', [(0, (60, 80, 140)), (.6, (20, 26, 50)), (1, (2, 4, 10))]), WHT,
+    LC([(0.29, 0.69, 0.77, 0.835)], 130, outline=((10, 10, 20), 2), cuts=[comp_cut(lambda a: (_lum(a) > .9) | ((a[..., 0] > .6) & (a[..., 1] < .3)), minf=.08)]),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['JONAH HILL', 'CHANNING TATUM'], ccol=WHT,
+    ft='a', fcol=(200, 210, 230), fin=MINT, seed=2012)
+
+# Amour (2012): Sony Pictures Classics (Les Films du Losange), the poster's black, its white serif AMOUR lifted, Emmanuelle Riva's face
+std('amour-2012', ('grad', [(0, (60, 54, 50)), (.6, (14, 12, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.0, 0.708, 1.0, 0.845), 110, WHT, mode='light'),
+    photo=ph(0.55, 0.3, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'MICHAEL HANEKE'], ccol=WHT,
+    ft='c', fcol=(200, 196, 190), fin=MINT, seed=2012)
+
+# Argo (2012): Warner Bros. (GK Films), the poster's steel blue, its white ARGO cut off the red film strip whole, Ben Affleck's face
+std('argo-2012', ('grad', [(0, (40, 70, 90)), (.6, (10, 20, 26)), (1, (0, 2, 4))]), WHT,
+    LC([(0.0, 0.44, 1.0, 0.56)], 110, margin=0, cuts=[plate_cut(lambda a: ((a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .2)) | (_lum(a) > .85))]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(180, 200, 210), fin=MINT, seed=2012)
+
+# Brave (2012): Pixar, so a clamshell; the forest's teal, the poster's bronze BRAVE cut off it, Merida's face in the diamond
+disney('brave-2012', ('grad', [(0, (40, 110, 140)), (.5, (20, 70, 90)), (1, (6, 26, 34))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.14, 0.715, 0.81, 0.86)], 140, outline=((10, 20, 30), 1.8), cuts=[comp_cut(lambda a: (_lum(a) > .45) & (a[..., 2] < a[..., 0] + .05), minf=.05, close=3, fillh=True)]),
+       face=ph(.6, .2, .2, 1.4), lcol=WHT)
+
+# Django Unchained (2012): The Weinstein Company, the poster's white, its red DJANGO with UNCHAINED cut off it, Django, Schultz and Calvin Candie
+std('django-unchained-2012', ('grad', [(0, (250, 248, 246)), (.5, (220, 210, 206)), (1, (110, 20, 20))]), (210, 30, 30),
+    LC([(0.15, 0.445, 0.85, 0.58)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .3), minf=.01, close=2)]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['JAMIE FOXX', 'CHRISTOPH WALTZ'], ccol=(30, 30, 30),
+    ft='d', vbox=(210, 30, 30), fcol=(40, 20, 20), fin=MINT, seed=2012)
+
+# Doin' It in the Park: Pick-Up Basketball, NYC (2012): Goldcrest, the poster's pale wash, its black DOIN' IT IN THE PARK lifted with PICK-UP BASKETBALL, NEW YORK CITY under it, the players under the hoop
+std('doin-it-in-the-park-pick-up-basketball-nyc-2012', ('grad', [(0, (230, 226, 210)), (.6, (200, 196, 180)), (1, (110, 106, 90))]), (20, 20, 20),
+    L([(0.035, 0.825, 0.965, 0.902), (0.16, 0.902, 0.84, 0.935)], 100, (20, 20, 20), mode='dark', valign='base', gapf=.25),
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=(220, 80, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A DOCUMENTARY BY', 'COULIAU & GARCIA'], ccol=(20, 20, 20),
+    ft='b', fcol=(30, 30, 30), fin=MINT, seed=2012)
