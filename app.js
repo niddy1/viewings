@@ -114,6 +114,13 @@
   // "A FILM BY" credit, or nothing (chosen per film in prepare()).
   const logoZone = (f) => ({ logo: 40, panel: 12 + (f._w - 10) + 9, sticker: 50, tag: 32 }[f._top] || 12);
 
+  // Designed spine pictures load only when their tape comes near the window (the big Vault shelves hold
+  // hundreds of them, several MB in all). Without IntersectionObserver they load straight away.
+  let spineSizes = null;
+  const spineIO = 'IntersectionObserver' in window ? new IntersectionObserver((es) => {
+    for (const e of es) if (e.isIntersecting) { const el = e.target; el.style.backgroundImage = `url("${el.dataset.bg}")`; spineIO.unobserve(el); }
+  }, { rootMargin: '600px 0px' }) : null;
+  const lazySpine = (el, src) => { if (spineIO) { el.dataset.bg = src; spineIO.observe(el); } else el.style.backgroundImage = `url("${src}")`; };
   const loadImg = (src) => new Promise((resolve) => {
     if (!src) return resolve(null);
     const img = new Image();
@@ -293,7 +300,15 @@
     // drawn=true (the Re-mark spine preview) always builds the drawn spine.
     f._spine = null;
     let si = null;
-    if (f.poster) { const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg'); si = await loadImg(sp); if (si) f._spine = sp; }
+    if (f.poster) {
+      const sp = f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg');
+      // posters/spines.json (written by spinegen) gives every designed picture's size, so the tape can be
+      // sized and shelved without downloading it; the picture itself loads when it scrolls near (lazySpine).
+      const known = spineSizes && spineSizes[sp.replace(/^.*\/|-spine-b\.jpg$/g, '')];
+      if (known && !drawn) si = { naturalWidth: known[0], naturalHeight: known[1] };
+      else si = await loadImg(sp);
+      if (si) f._spine = sp;
+    }
     if (f._spine && !drawn) {
       const rt = f.runtime || (90 + hash(f.title) % 60);
       f._w = Math.round(Math.min(52, Math.max(42, 40 + (rt - 90) * 0.12)));
@@ -655,7 +670,7 @@
       + `--cy:${15 + r % 70}%;--cx:${20 + (r >> 4) % 60}%;--flip:${(r >> 9) % 2 ? 1 : -1};--cut:${5 + r % 6}px`;
     if (f._spine && i >= 0) { // the designed picture carries its own lettering, wear and stickers
       b.className = 'spine designed' + (f._clam ? ' clam' : ''); // a clamshell's moulded corners are rounded (CSS)
-      b.style.backgroundImage = `url("${f._spine}")`;
+      lazySpine(b, f._spine);
       b.addEventListener('click', () => openViewer(i));
       return b;
     }
@@ -1148,6 +1163,7 @@
   /* ---------- boot ---------- */
   async function boot() {
     let data;
+    const sizesP = fetch('posters/spines.json', { cache: 'no-cache' }).then((r) => r.json()).catch(() => null); // fetched alongside the shelf file
     try { data = await (await fetch(DATA_FILE, { cache: 'no-cache' })).json(); }
     catch { shelves.innerHTML = `<p style="text-align:center;opacity:.6">Couldn't load ${DATA_FILE}. Serve this folder over http (see README).</p>`; return; }
     films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
@@ -1156,6 +1172,7 @@
     renderControls();
     updateTally();
     $('count').parentNode.hidden = false; // hidden until the real number is known (no "0 TAPES" while loading)
+    spineSizes = await sizesP;
     await Promise.all(films.map((f) => prepare(f)));
     layout();
     controls.hidden = false;

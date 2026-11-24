@@ -5167,3 +5167,5 @@ if __name__ == '__main__':
     for k in (sys.argv[1:] or list(SPECS)):
         im = build(SPECS[k])
         print(k, im.size, round(im.width / im.height, 4))
+    # keep posters/spines.json (each picture's size, read by the shelf to lay out before the pictures load) current
+    exec(compile(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'manifest.py'), encoding='utf8').read(), 'manifest.py', 'exec'), {'__file__': os.path.join(os.path.dirname(os.path.abspath(__file__)), 'manifest.py')})
