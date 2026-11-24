@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Transformers (2007) | Vault 2000s | `logos/transformers-2007-title.png` | typeset; the chrome letters shade into the sky and both cuts lost letters |
+| The Simpsons Movie (2007) | Vault 2000s | `logos/the-simpsons-movie-2007-title.png` | typeset; the doughnut O and the small The Simpsons over the sky broke up in both cuts |
+| Sweeney Todd: The Demon Barber of Fleet Street (2007) | Vault 2000s | `logos/sweeney-todd-the-demon-barber-of-fleet-street-2007-title.png` | typeset; grey letters on a grey room, run through by blood; both cuts broke them |
 | Ocean's Thirteen (2007) | Vault 2000s | `logos/ocean-s-thirteen-2007-title.png` | typeset like Eleven and Twelve; OCEAN'S runs diagonally inside the big 13 |
 | Shrek the Third (2007) | Vault 2000s | `logos/shrek-the-third-2007-title.png` | typeset like the other Shreks |
 | Sunshine (2007) | Vault 2000s | `logos/sunshine-2007-title.png` | typeset; the letters burn into flames and both cuts left them unreadable |

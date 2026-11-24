@@ -4959,3 +4959,75 @@ std('superbad-2007', ('grad', [(0, (240, 234, 220)), (.6, (226, 218, 200)), (1, 
     LC([(0.04, 0.31, 0.98, 0.48)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] < .25), minf=.03)], outline=((16, 16, 16), 2.4)),
     photo=ph(0.6, 0.5, 0.8, 1.6), pb=(220, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['JONAH HILL', 'MICHAEL CERA'], ccol=(30, 30, 30),
     ft='d', vbox=(220, 30, 30), fcol=(40, 30, 20), fin=MINT, seed=2007)
+
+# Surf's Up (2007): Sony Pictures Animation, a slipcase; the wave's blue, the poster's yellow SURF'S UP board cut off it whole, Cody riding the curl
+std('surf-s-up-2007', ('grad', [(0, (40, 170, 230)), (.5, (90, 200, 230)), (1, (230, 150, 50))]), (250, 220, 40),
+    LC([(0.08, 0.03, 0.61, 0.2), (0.6, 0.01, 0.86, 0.17)], 140, valign='base', margin=0, gapf=.1, cuts=[plate_cut(lambda a: ((a[..., 0] > .75) & (a[..., 1] > .65) & (a[..., 2] < .45)) | ((a[..., 2] > a[..., 0] + .2) & (_lum(a) < .45)))] * 2),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (240, 110, 30), WHT),
+    ft='c', fcol=(20, 40, 70), fin=MINT, seed=2007)
+
+# Sweeney Todd: The Demon Barber of Fleet Street (2007): DreamWorks, the poster's grey-blue gloom, SWEENEY TODD typeset in a pale serif with THE DEMON BARBER OF FLEET STREET in blood red under it (parked for Ian's logo, see data/logos-wanted.md: grey letters on a grey room, run through by blood; both cuts broke them), Johnny Depp in the barber's chair
+std('sweeney-todd-the-demon-barber-of-fleet-street-2007', ('grad', [(0, (60, 70, 80)), (.6, (16, 18, 22)), (1, (2, 2, 4))]), (220, 222, 226),
+    [T('SWEENEY TODD', 'pagb', 100, (220, 222, 226)), T('THE DEMON BARBER OF FLEET STREET', 'pagb', 36, (190, 30, 30))], tgap=8,
+    photo=ph(0.4, 0.3, 0.7, 1.2), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON FILM'], ccol=WHT,
+    ft='b', fcol=(190, 196, 204), fin=MINT, seed=2007)
+
+# The Assassination of Jesse James by the Coward Robert Ford (2007): Warner Bros. (Plan B), the poster's prairie sky, its white weathered capitals lifted in two lines side by side, Jesse and Robert in the wheat
+std('the-assassination-of-jesse-james-by-the-coward-robert-ford-2007', ('grad', [(0, (80, 110, 150)), (.5, (40, 60, 90)), (1, (110, 80, 30))]), WHT,
+    [L([(0.07, 0.12, 0.89, 0.2), (0.04, 0.2, 0.82, 0.316)], 100, WHT, mode='light', valign='base', gapf=.2, speck=0), L([(0.82, 0.2, 0.945, 0.316), (0.04, 0.318, 0.945, 0.412)], 100, WHT, mode='light', valign='base', gapf=.2, speck=0)], tgap=8,
+    photo=ph(0.6, 0.75, 0.8, 0.85), pb=(220, 180, 100), lg=WHT, lw=.5, order='LPTCF', credit=['BRAD PITT', 'CASEY AFFLECK'], ccol=WHT,
+    ft='e', fcol=(220, 200, 170), fin=MINT, seed=2007)
+
+# The Bourne Ultimatum (2007): Universal, the poster's steel blue, its white THE BOURNE and blue ULTIMATUM cut off it in their own colours, Matt Damon running
+std('the-bourne-ultimatum-2007', ('grad', [(0, (40, 70, 90)), (.6, (10, 20, 28)), (1, (2, 4, 6))]), WHT,
+    LC([(0.1, 0.435, 0.89, 0.5), (0.35, 0.505, 0.885, 0.558)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (_lum(a) > .85) | ((a[..., 2] > .7) & (a[..., 0] < .3)), minf=.02)] * 2),
+    photo=ph(0.6, 0.2, 0.7, 0.85), pb=(40, 130, 230), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(20, 30, 40)),
+    ft='a', vbox=(40, 130, 230), fcol=(180, 200, 210), fin=MINT, seed=2007)
+
+# The Darjeeling Limited (2007): Fox Searchlight, the poster's teal and gold carriage, its yellow serif THE / DARJEELING / LIMITED cut off it into one line, the three brothers
+std('the-darjeeling-limited-2007', ('grad', [(0, (40, 120, 110)), (.5, (20, 80, 76)), (1, (160, 40, 30))]), (250, 210, 60),
+    LC([(0.4, 0.062, 0.6, 0.1), (0.2, 0.105, 0.8, 0.155), (0.32, 0.16, 0.69, 0.2)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .45), minf=.02)] * 3),
+    photo=ph(0.5, 0.82, 0.9, 0.5), pb=(250, 210, 60), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(250, 220, 120),
+    ft='d', vbox=(160, 40, 30), fcol=(230, 230, 200), fin=MINT, seed=2007)
+
+# The Simpsons Movie (2007): Fox (Gracie Films), a slipcase; the sky's blue, THE SIMPSONS MOVIE typeset in round yellow capitals with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the doughnut O and the small The Simpsons over the sky both broke up in the cut), the family on the roof
+std('the-simpsons-movie-2007', ('grad', [(0, (90, 170, 240)), (.5, (140, 200, 250)), (1, (230, 120, 30))]), (250, 220, 40),
+    T('THE SIMPSONS MOVIE', 'popb', 110, (250, 220, 40), outline=((20, 20, 20), 2.4)),
+    photo=ph(0.6, 0.7, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('07 1218', top='COMEDY', fill=(250, 240, 200)),
+    ft='b', fcol=(30, 40, 60), fin=MINT, seed=2007)
+
+# There Will Be Blood (2007): Paramount Vantage, the poster's black, its white blackletter There Will Be Blood lifted, Daniel Plainview against the burning derrick
+std('there-will-be-blood-2007', ('grad', [(0, (60, 24, 10)), (.6, (14, 6, 2)), (1, (0, 0, 0))]), WHT,
+    L((0.055, 0.868, 0.945, 0.935), 100, WHT, mode='light', speck=.01),
+    photo=ph(0.55, 0.5, 0.86, 1.3), pb=(230, 120, 40), lg=WHT, lw=.5, order='LPTCF', credit=['DANIEL DAY-LEWIS', 'PAUL DANO'], ccol=WHT,
+    ft='c', fcol=(220, 200, 180), fin=MINT, seed=2007)
+
+# Transformers (2007): DreamWorks (Paramount), the poster's dusk, TRANSFORMERS typeset in wide heavy capitals in chrome grey (parked for Ian's logo, see data/logos-wanted.md: the chrome letters shade into the sky and both cuts lost letters), Optimus Prime with Bumblebee and Megatron
+std('transformers-2007', ('grad', [(0, (40, 70, 120)), (.5, (20, 30, 50)), (1, (200, 110, 30))]), (220, 226, 232),
+    T('TRANSFORMERS', 'advb', 100, (220, 226, 232), outline=((10, 16, 30), 2)),
+    photo=ph(0.5, 0.22, 0.9, 0.6), pb=(40, 110, 210), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(200, 210, 230), fin=MINT, seed=2007)
+
+# Zodiac (2007): Paramount, the poster's teal fog, its pale ZODIAC with the cipher's crossed O lifted, the Golden Gate and the city lights
+std('zodiac-2007', ('grad', [(0, (30, 60, 66)), (.6, (8, 18, 20)), (1, (2, 4, 4))]), (210, 226, 226),
+    LC([(0.08, 0.3, 0.88, 0.445)], 100, cuts=[comp_cut(lambda a: _lum(a) > .42, minf=.02, opn=1, close=3)]),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(200, 40, 30), lg=WHT, lw=.5, order='LTPCF', credit=['A DAVID FINCHER FILM'], ccol=WHT,
+    ft='a', fcol=(180, 200, 200), fin=MINT, seed=2007)
+
+# 21 (2008): Columbia, the poster's white card, its red 21 lifted, Ben and the blackjack team on the ace and jack
+std('21-2008', ('grad', [(0, (250, 250, 250)), (.6, (230, 230, 230)), (1, (60, 60, 60))]), (210, 20, 30),
+    L((0.32, 0.735, 0.68, 0.945), 140, (210, 20, 30), mode='key', key=(210, 20, 30)),
+    photo=ph(0.6, 0.35, 0.86, 1.0), pb=(210, 20, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['JIM STURGESS', 'KATE BOSWORTH'], ccol=(30, 30, 30),
+    ft='d', vbox=(30, 30, 30), fcol=(40, 40, 40), fin=MINT, seed=2008)
+
+# A Wednesday! (2008): UTV, the poster's grey city, its white hand-lettered a wednesday ! lifted, Naseeruddin Shah and Anupam Kher over Mumbai
+std('a-wednesday-2008', ('grad', [(0, (120, 124, 128)), (.6, (40, 42, 44)), (1, (6, 6, 6))]), WHT,
+    L((0.14, 0.71, 0.88, 0.81), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.3, 0.9, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['ANUPAM KHER', 'NASEERUDDIN SHAH'], ccol=WHT,
+    ft='b', fcol=(210, 210, 210), fin=MINT, seed=2008)
+
+# Burn After Reading (2008): Focus Features, the poster's red, its yellow BURN, white AFTER and yellow READING lifted into one line onto the red panel behind it, the cast's faces round it
+std('burn-after-reading-2008', ('grad', [(0, (190, 20, 20)), (.6, (110, 8, 8)), (1, (20, 0, 0))]), (250, 220, 50),
+    L([(0.36, 0.316, 0.74, 0.418), (0.36, 0.418, 0.75, 0.505), (0.36, 0.505, 0.75, 0.575)], 110, [(250, 220, 50), WHT, (250, 220, 50)], mode=['key', 'light', 'key'], key=(250, 220, 50), valign='base', gapf=.25),
+    photo=ph(0.17, 0.4, 0.3, 1.4), pb=(250, 220, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A COEN BROTHERS FILM'], ccol=WHT,
+    ft='e', fcol=(250, 210, 200), fin=MINT, seed=2008)
