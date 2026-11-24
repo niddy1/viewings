@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Cars 2 (2011) | Vault 2010s | `logos/cars-2-2011-title.png` | typeset like Cars; chrome badge over fireworks broke in both cuts |
+| Scott Pilgrim vs. the World (2010) | Vault 2010s | `logos/scott-pilgrim-vs-the-world-2010-title.png` | typeset; the hand-drawn white scrawl wraps round Scott, the cut kept scraps |
+| Shrek Forever After (2010) | Vault 2010s | `logos/shrek-forever-after-2010-title.png` | typeset like the other Shreks |
 | Harry Potter and the Deathly Hallows: Part 1 (2010) | Vault 2010s | `logos/harry-potter-and-the-deathly-hallows-part-1-2010-title.png` | typeset like the other Potters |
 | The Princess and the Frog (2009) | Vault 2000s | `logos/the-princess-and-the-frog-2009-title.png` | typeset in gold and green; the gilded letters on the night bayou lost AND THE in both cuts |
 | Inglourious Basterds (2009) | Vault 2000s | `logos/inglourious-basterds-2009-title.png` | typeset; white outlined letters on the white poster with the eagle in the line, both cuts lost them |

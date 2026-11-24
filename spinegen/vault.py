@@ -5438,3 +5438,72 @@ std('salt-2010', ('grad', [(0, (40, 44, 50)), (.6, (10, 12, 14)), (1, (0, 0, 0))
     L((0.12, 0.405, 0.88, 0.495), 110, WHT, mode='light'),
     photo=ph(0.5, 0.2, 0.86, 0.4), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ANGELINA JOLIE'], ccol=WHT,
     ft='a', fcol=(200, 200, 206), fin=MINT, seed=2010)
+
+# Scott Pilgrim vs. the World (2010): Universal (Marc Platt), the poster's red, SCOTT PILGRIM VS. THE WORLD typeset in white (parked for Ian's logo, see data/logos-wanted.md: the hand-drawn white scrawl wraps round Scott and the cut kept only scraps), Scott with the bass
+std('scott-pilgrim-vs-the-world-2010', ('grad', [(0, (190, 20, 20)), (.6, (110, 6, 6)), (1, (30, 0, 0))]), WHT,
+    [T('SCOTT PILGRIM', 'popbi', 100, WHT), T('VS. THE WORLD', 'popbi', 44, WHT)], tgap=8,
+    photo=ph(0.5, 0.55, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['MICHAEL CERA', 'MARY ELIZABETH WINSTEAD'], ccol=WHT,
+    ft='c', fcol=(250, 210, 210), fin=MINT, seed=2010)
+
+# Shrek Forever After (2010): DreamWorks, a slipcase; the poster's sky, SHREK typeset in the green with FOREVER AFTER (parked with the other Shreks for Ian's logo, see data/logos-wanted.md), Shrek, Fiona and Rumpelstiltskin
+std('shrek-forever-after-2010', ('grad', [(0, (60, 140, 220)), (.5, (90, 160, 80)), (1, (30, 50, 20))]), (120, 180, 50),
+    [T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)), T('FOREVER AFTER', 'schb', 50, (230, 200, 80))], tgap=8,
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'FAMILY']),
+    ft='a', fcol=(220, 236, 250), fin=MINT, seed=2010)
+
+# Tangled (2010): Walt Disney Animation, so a clamshell; the tower's green meadow, the poster's gold Tangled cut off it, Rapunzel's face in the diamond
+disney('tangled-2010', ('grad', [(0, (90, 160, 210)), (.5, (60, 130, 60)), (1, (20, 60, 20))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.2, 0.775, 0.77, 0.93)], 140, outline=((60, 30, 10), 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 1] - .02) & (a[..., 2] < a[..., 0] - .15), minf=.03, close=2, fillh=True)]),
+       face=ph(.52, .345, .12, 1.4), lcol=WHT)
+
+# The Fighter (2010): Paramount (The Weinstein Company), the poster's black, its white THE / FIGHTER lifted into one line, Christian Bale and Mark Wahlberg on the ropes
+std('the-fighter-2010', ('grad', [(0, (60, 50, 40)), (.6, (14, 12, 10)), (1, (0, 0, 0))]), WHT,
+    L([(0.18, 0.112, 0.275, 0.132), (0.18, 0.142, 0.82, 0.22)], 110, WHT, mode='light', valign='base', gapf=.25, speck=0),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTCF', credit=['MARK WAHLBERG', 'CHRISTIAN BALE'], ccol=WHT,
+    ft='e', fcol=(210, 200, 190), fin=MINT, seed=2010)
+
+# The Illusionist (2010): Sony Pictures Classics (Django Films), the theatre's night blue, the poster's gold THE ILLUSIONIST cut off it, Tatischeff and his rabbit on stage
+std('the-illusionist-2010', ('grad', [(0, (30, 40, 90)), (.5, (14, 18, 50)), (1, (120, 20, 20))]), (240, 210, 110),
+    LC([(0.15, 0.26, 0.84, 0.46)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .12), minf=.02, opn=1, close=2)]),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 210, 110), lg=WHT, lw=.5, order='LTPCF', credit=['UN FILM DE', 'SYLVAIN CHOMET'], ccol=WHT,
+    ft='b', fcol=(210, 210, 230), fin=MINT, seed=2010)
+
+# The King's Speech (2010): The Weinstein Company, the palace's grey, its gold THE KING'S / SPEECH with the crown cut off it whole, Colin Firth and Geoffrey Rush at the window
+std('the-king-s-speech-2010', ('grad', [(0, (90, 96, 100)), (.6, (24, 26, 30)), (1, (2, 2, 4))]), (230, 210, 150),
+    LC([(0.11, 0.5, 0.9, 0.75)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 0] > a[..., 2] + .08) & (_lum(a) > .45), minf=.02, close=2)]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(230, 210, 150), lg=WHT, lw=.5, order='LPTSF', dotst=('DRAMA', (40, 60, 120), WHT),
+    ft='d', vbox=(230, 210, 150), vink=(20, 20, 24), fcol=(220, 220, 214), fin=MINT, seed=2010)
+
+# The Social Network (2010): Columbia, the poster's dark, its white the social network on the blue bar lifted onto the same blue, Jesse Eisenberg's face
+std('the-social-network-2010', ('grad', [(0, (60, 50, 40)), (.6, (16, 14, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.1, 0.875, 0.9, 0.925), 100, WHT, mode='light', plate=((60, 100, 170), 10, 6)),
+    photo=ph(0.5, 0.4, 0.86, 1.3), pb=(60, 100, 170), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID FINCHER FILM'], ccol=WHT,
+    ft='a', fcol=(200, 190, 180), fin=MINT, seed=2010)
+
+# The Town (2010): Warner Bros. (Legendary), the poster's steel blue, its white THE and red TOWN cut off it in their own colours, the crew over Charlestown
+std('the-town-2010', ('grad', [(0, (40, 60, 80)), (.6, (10, 16, 22)), (1, (0, 2, 4))]), (210, 30, 30),
+    LC([(0.18, 0.37, 0.82, 0.48)], 120, cuts=[comp_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .3)) | (_lum(a) > .88), minf=.03)]),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['BEN AFFLECK', 'REBECCA HALL'], ccol=WHT,
+    ft='c', fcol=(190, 200, 210), fin=MINT, seed=2010)
+
+# Toy Story 3 (2010): Pixar, so a clamshell; the logo's pieces laid along the spine in reading order as on Toy Story 2 (TOY, the red STORY plate, the 3), Woody's face in the diamond
+disney('toy-story-3-2010', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .6))), fin=dict(CLAM, vivid=.3),
+       title=LC([(0.3, 0.08, 0.67, 0.195), (0.33, 0.19, 0.65, 0.25), (0.42, 0.25, 0.57, 0.365)], 170, gapf=.05, cuts=[ts_letters, ts_plate(.3, .75), ts_letters]),
+       face=ph(.46, .5, .2, 1.4))
+
+# Cars 2 (2011): Pixar, so a clamshell; the poster's fireworks night, Cars 2 typeset in red italic with a chrome keyline like Cars (parked with Cars for Ian's logo, see data/logos-wanted.md: the chrome badge over fireworks broke up in both cuts), Lightning McQueen's face in the diamond
+disney('cars-2-2011', ('grad', [(0, (20, 60, 150)), (.5, (30, 80, 170)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('Cars', (210, 30, 30)), ('2', (230, 230, 236))], 'popbi', 130, outline=((230, 230, 236), 2.4)),
+       face=ph(.7, .62, .2, 1.4), lcol=WHT)
+
+# Contagion (2011): Warner Bros. (Participant), the poster's black, its black CONTAGION lifted off the yellow tape onto the same yellow, the faces in the panels
+std('contagion-2011', ('grad', [(0, (40, 40, 30)), (.6, (10, 10, 8)), (1, (0, 0, 0))]), (250, 220, 40),
+    L((0.0, 0.4, 1.0, 0.55), 110, (16, 16, 16), mode='dark', plate=((250, 220, 40), 10, 6)),
+    photo=ph(0.5, 0.15, 0.86, 0.5), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 40), ink=(10, 10, 10)),
+    ft='e', fcol=(220, 220, 200), fin=MINT, seed=2011)
+
+# Drive (2011): FilmDistrict, the poster's blue night, its pink script Drive lifted, Ryan Gosling at the wheel
+std('drive-2011', ('grad', [(0, (40, 70, 90)), (.6, (10, 18, 24)), (1, (0, 2, 4))]), (230, 60, 150),
+    L((0.17, 0.745, 0.83, 0.925), 130, (230, 60, 150), mode='key', key=(220, 50, 140)),
+    photo=ph(0.6, 0.35, 0.8, 0.85), pb=(230, 60, 150), lg=WHT, lw=.5, order='LPTCF', credit=['RYAN GOSLING'], ccol=WHT,
+    ft='b', fcol=(190, 210, 220), fin=MINT, seed=2011)
