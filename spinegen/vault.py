@@ -5933,3 +5933,75 @@ std('only-lovers-left-alive-2013', ('grad', [(0, (60, 70, 50)), (.6, (16, 20, 14
     L([(0.15, 0.745, 0.905, 0.833), (0.21, 0.835, 0.835, 0.913)], 110, (240, 170, 190), mode='key', key=(240, 160, 180), valign='base', gapf=.25),
     photo=ph(0.5, 0.35, 0.86, 1.0), pb=(240, 170, 190), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
     ft='d', vbox=(240, 170, 190), vink=(16, 20, 14), fcol=(200, 210, 190), fin=MINT, seed=2013)
+
+# Prisoners (2013): Warner Bros. (Alcon), the poster's storm blue, its spaced white PRISONERS lifted, Hugh Jackman above and Jake Gyllenhaal below
+std('prisoners-2013', ('grad', [(0, (50, 70, 90)), (.6, (12, 18, 24)), (1, (0, 2, 4))]), WHT,
+    L((0.26, 0.488, 0.955, 0.542), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.78, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['HUGH JACKMAN', 'JAKE GYLLENHAAL'], ccol=WHT,
+    ft='a', fcol=(200, 210, 220), fin=MINT, seed=2013)
+
+# Rush (2013): Universal (Working Title), the poster's racing red, its white RUSH between the white stripes lifted, Chris Hemsworth and Daniel Brühl in their overalls
+std('rush-2013', ('grad', [(0, (180, 30, 30)), (.6, (80, 10, 10)), (1, (10, 0, 0))]), WHT,
+    L((0.25, 0.545, 0.76, 0.64), 120, WHT, mode='light'),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=BAR('13 0920', top='DRAMA', fill=(240, 240, 236)),
+    ft='b', fcol=(250, 220, 220), fin=MINT, seed=2013)
+
+# Short Term 12 (2013): Cinedigm (Animal Kingdom), the poster's night, its thin white SHORT / TERM / 12 lifted into one line, the group home under the stars
+std('short-term-12-2013', ('grad', [(0, (60, 60, 60)), (.6, (18, 18, 18)), (1, (2, 2, 2))]), WHT,
+    L([(0.14, 0.215, 0.86, 0.352), (0.19, 0.358, 0.79, 0.49), (0.39, 0.498, 0.6, 0.634)], 110, WHT, mode='light', valign='base', gapf=.25, speck=0),
+    photo=ph(0.5, 0.78, 0.86, 0.4), pb=(240, 200, 90), lg=WHT, lw=.5, order='LTPCF', credit=['BRIE LARSON'], ccol=WHT,
+    ft='c', fcol=(200, 200, 200), fin=MINT, seed=2013)
+
+# Snowpiercer (2013): Radius-TWC (Moho), the poster's steel grey, its spaced white SNOWPIERCER cut off it, Chris Evans and the rebels in the tail
+std('snowpiercer-2013', ('grad', [(0, (90, 110, 120)), (.6, (24, 30, 34)), (1, (2, 4, 4))]), WHT,
+    LC([(0.06, 0.49, 0.97, 0.538)], 90, cuts=[comp_cut(lambda a: _lum(a) > .85, top=11, minf=.05, opn=1)]),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'BONG JOON HO'], ccol=WHT,
+    ft='d', vbox=WHT, vink=(20, 30, 34), fcol=(200, 214, 220), fin=MINT, seed=2013)
+
+# Star Trek Into Darkness (2013): Paramount (Bad Robot), the city's ruin grey, its silver INTO DARKNESS cut off it, with STAR TREK typeset above it (the poster's is too faint on the rubble to cut), John Harrison on the rubble
+std('star-trek-into-darkness-2013', ('grad', [(0, (120, 140, 150)), (.5, (40, 50, 56)), (1, (4, 6, 8))]), WHT,
+    [T('STAR TREK', 'advb', 40, (200, 206, 214)), LC([(0.29, 0.865, 0.71, 0.915)], 110, cuts=[comp_cut(lambda a: _lum(a) > .62, minf=.05, close=2, fillh=True)])], tgap=6,
+    photo=ph(0.5, 0.45, 0.86, 1.3), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['CHRIS PINE', 'ZACHARY QUINTO'], ccol=WHT,
+    ft='e', fcol=(200, 210, 220), fin=MINT, seed=2013)
+
+# Stranger by the Lake (2013): Strand (Les Films du Worso), the poster's black band, its white STRANGER / BY THE LAKE lifted into one line, the painted lake shore and the embrace
+std('stranger-by-the-lake-2013', ('grad', [(0, (30, 30, 30)), (.6, (10, 10, 10)), (1, (0, 0, 0))]), WHT,
+    L([(0.03, 0.125, 0.97, 0.21), (0.06, 0.218, 0.88, 0.305)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.65, 0.86, 1.0), pb=(250, 220, 30), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'ALAIN GUIRAUDIE'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2013)
+
+# The Best Offer (2013): Warner Bros. Italia (PACO Cinematografica), the poster's gilt brown, its gold THE BEST / OFFER cut off it into one line, Geoffrey Rush and the portrait
+std('the-best-offer-2013', ('grad', [(0, (70, 54, 30)), (.6, (20, 16, 8)), (1, (0, 0, 0))]), (210, 170, 70),
+    LC([(0.18, 0.752, 0.81, 0.816), (0.18, 0.82, 0.81, 0.91)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .2), minf=.02, close=2, fillh=True)] * 2),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(210, 170, 70), lg=WHT, lw=.5, order='LPTSF', dotst=('MYSTERY', (210, 170, 70), (20, 16, 8)),
+    ft='b', fcol=(210, 200, 180), fin=MINT, seed=2013)
+
+# The Crash Reel (2013): HBO Documentary Films, the poster's sky blue, THE CRASH REEL typeset in heavy blue capitals with a white keyline (parked for Ian's logo, see data/logos-wanted.md: the letters are filled with the photo of the sky and Kevin's face, so neither cut could find their edges), Kevin Pearce in the halfpipe
+std('the-crash-reel-2013', ('grad', [(0, (20, 60, 150)), (.5, (60, 120, 200)), (1, (220, 230, 240))]), WHT,
+    T('THE CRASH REEL', 'intbk', 110, (30, 80, 170), outline=(WHT, 2.4)),
+    photo=ph(0.4, 0.08, 0.6, 0.4), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'LUCY WALKER'], ccol=(20, 40, 90),
+    ft='c', fcol=(20, 40, 90), fin=MINT, seed=2013)
+
+# The Hobbit: The Desolation of Smaug (2013): Warner Bros. (New Line), the poster's dark gold, its bronze THE HOBBIT cut off it with THE DESOLATION OF SMAUG, Gandalf, Bilbo and the company
+std('the-hobbit-the-desolation-of-smaug-2013', ('grad', [(0, (70, 60, 30)), (.6, (20, 16, 8)), (1, (0, 0, 0))]), (220, 180, 110),
+    LC([(0.11, 0.78, 0.89, 0.96)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .12) & (_lum(a) > .35), minf=.01, close=2)]),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(220, 180, 110), lg=WHT, lw=.5, order='LPTF',
+    ft='e', fcol=(220, 210, 180), fin=MINT, seed=2013)
+
+# The Hunger Games: Catching Fire (2013): Lionsgate, the poster's fire, its gold THE HUNGER GAMES: / CATCHING FIRE cut off it into one line, Katniss drawing her bow
+std('the-hunger-games-catching-fire-2013', ('grad', [(0, (120, 40, 10)), (.6, (30, 8, 2)), (1, (0, 0, 0))]), (230, 180, 70),
+    LC([(0.18, 0.762, 0.84, 0.79), (0.09, 0.795, 0.9, 0.838)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .3) & (a[..., 0] > a[..., 2] + .1), minf=.04, close=2)] * 2),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTCF', credit=['JENNIFER LAWRENCE'], ccol=WHT,
+    ft='a', fcol=(220, 200, 180), fin=MINT, seed=2013)
+
+# The Place Beyond the Pines (2013): Focus Features (Sidney Kimmel), the poster's sepia, its white THE PLACE / BEYOND THE PINES lifted into one line, Ryan Gosling, Bradley Cooper and Eva Mendes
+std('the-place-beyond-the-pines-2013', ('grad', [(0, (110, 90, 70)), (.6, (30, 24, 18)), (1, (2, 2, 0))]), WHT,
+    L([(0.18, 0.44, 0.835, 0.542), (0.18, 0.552, 0.835, 0.594)], 110, WHT, mode='light', valign='base', gapf=.2, speck=.02),
+    photo=ph(0.5, 0.15, 0.86, 0.5), pb=(220, 200, 160), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'DEREK CIANFRANCE'], ccol=WHT,
+    ft='d', vbox=(220, 200, 160), vink=(20, 16, 10), fcol=(220, 210, 190), fin=MINT, seed=2013)
+
+# The Tale of the Princess Kaguya (2013): Studio Ghibli, a slipcase like the other Ghiblis; the poster's white, its dark serif THE TALE / OF THE / PRINCESS / KAGUYA lifted into one line, Kaguya in her pink robe
+std('the-tale-of-the-princess-kaguya-2013', ('grad', [(0, (250, 248, 246)), (.6, (236, 232, 226)), (1, (190, 160, 160))]), (30, 40, 50),
+    L([(0.17, 0.112, 0.82, 0.19), (0.38, 0.2, 0.6, 0.236), (0.17, 0.243, 0.82, 0.322), (0.17, 0.335, 0.83, 0.426)], 110, (30, 40, 50), mode='dark', valign='base', gapf=.25),
+    photo=ph(0.6, 0.8, 0.8, 0.5), pb=(230, 120, 160), lg=(30, 40, 50), lw=.55, order='LTPCF', credit=['A FILM BY', 'ISAO TAKAHATA'], ccol=(30, 40, 50),
+    ft='b', fcol=(40, 40, 50), fin=MINT, seed=2013)
