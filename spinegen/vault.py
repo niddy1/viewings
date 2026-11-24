@@ -5318,3 +5318,49 @@ std('sherlock-holmes-2009', ('grad', [(0, (60, 100, 100)), (.6, (16, 30, 30)), (
     L([(0.11, 0.548, 0.89, 0.614), (0.1, 0.616, 0.95, 0.704)], 110, WHT, mode='light', valign='base', gapf=.2),
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTSF', dotst=('MYSTERY', (220, 200, 150), (20, 30, 30)),
     ft='b', fcol=(200, 220, 220), fin=MINT, seed=2009)
+
+# Star Trek (2009): Paramount, the poster's white and black, its chrome italic STAR TREK lifted, Kirk, Spock and Uhura
+std('star-trek-2009', ('grad', [(0, (60, 70, 90)), (.6, (14, 16, 22)), (1, (0, 0, 2))]), WHT,
+    L((0.07, 0.5, 0.95, 0.642), 110, WHT, mode='light', speck=.01),
+    photo=ph(0.5, 0.2, 0.86, 0.6), pb=(240, 190, 40), lg=WHT, lw=.5, order='LPTCF', credit=['CHRIS PINE', 'ZACHARY QUINTO'], ccol=WHT,
+    ft='c', fcol=(200, 206, 216), fin=MINT, seed=2009)
+
+# The Hangover (2009): Warner Bros. (Legendary), the poster's Vegas gold, its red marquee THE HANGOVER cut off it whole, the Wolfpack and the baby
+std('the-hangover-2009', ('grad', [(0, (230, 190, 100)), (.5, (160, 120, 60)), (1, (40, 30, 14))]), (200, 30, 30),
+    LC([(0.07, 0.072, 0.94, 0.182)], 130, margin=0, cuts=[plate_cut(lambda a: ((a[..., 0] > .45) & (a[..., 1] < .35)) | (_lum(a) > .85))]),
+    photo=ph(0.5, 0.55, 0.86, 1.2), pb=(200, 30, 30), lg=(30, 20, 10), lw=.55, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
+    ft='a', fcol=(240, 220, 190), fin=MINT, seed=2009)
+
+# The Imaginarium of Doctor Parnassus (2009): Lionsgate (Davis Films), the poster's midnight teal, its gold IMAGINARIUM banner, DOCTOR and lit-up PARNASSUS cut off it into one line, the cast over the London skyline
+std('the-imaginarium-of-doctor-parnassus-2009', ('grad', [(0, (20, 80, 110)), (.6, (6, 24, 34)), (1, (0, 4, 6))]), (240, 220, 170),
+    LC([(0.22, 0.622, 0.76, 0.668), (0.32, 0.668, 0.69, 0.733), (0.1, 0.733, 0.9, 0.84)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) > .5) & (a[..., 0] > a[..., 2] - .05), minf=.02, close=2), comp_cut(lambda a: _lum(a) > .38, minf=.02, close=2, fillh=True), comp_cut(lambda a: (_lum(a) > .5) & (a[..., 0] > a[..., 2] - .05), minf=.02, close=2)]),
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=(240, 220, 170), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'TERRY GILLIAM'], ccol=WHT,
+    ft='e', fcol=(190, 220, 230), fin=MINT, seed=2009)
+
+# The Princess and the Frog (2009): Walt Disney Animation, so a clamshell; the bayou's teal night, THE PRINCESS AND THE typeset in a gold serif with FROG in green (parked for Ian's logo, see data/logos-wanted.md: the gilded letters on the night bayou lost AND THE and their highlights in both cuts), Tiana's face in the diamond
+disney('the-princess-and-the-frog-2009', ('grad', [(0, (20, 120, 150)), (.5, (10, 70, 100)), (1, (4, 24, 40))]), fin=dict(CLAM, vivid=.2),
+       title=TT([('THE PRINCESS AND THE', (230, 190, 90)), ('FROG', (110, 200, 90))], 'pagb', 90, sp=.2),
+       face=ph(.48, .405, .12, 1.4), lcol=WHT)
+
+# The Secret in Their Eyes (2009): Tornasol (Canal+ España), the poster's gold and black, its white serif THE SECRET IN THEIR EYES lifted into one line, Espósito in shadow and Irene at the door
+std('the-secret-in-their-eyes-2009', ('grad', [(0, (200, 160, 40)), (.5, (90, 70, 20)), (1, (8, 6, 2))]), WHT,
+    L([(0.22, 0.09, 0.38, 0.131), (0.13, 0.131, 0.775, 0.214), (0.13, 0.203, 0.425, 0.25), (0.425, 0.2, 0.875, 0.302)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.6, 0.6, 0.7, 1.2), pb=(240, 200, 60), lg=WHT, lw=.5, order='LPTCF', credit=['UNA PELÍCULA DE', 'JUAN JOSÉ CAMPANELLA'], ccol=WHT,
+    ft='b', fcol=(230, 210, 170), fin=MINT, seed=2009)
+
+# Up (2009): Pixar, so a clamshell; the poster's sky blue, its white UP cut off it with a blue keyline, the house on its balloons in the diamond (the poster has no faces)
+disney('up-2009', ('grad', [(0, (40, 150, 220)), (.5, (90, 180, 230)), (1, (200, 220, 236))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.17, 0.135, 0.87, 0.31)], 150, outline=((20, 90, 170), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .9, minf=.05)]),
+       face=ph(.22, .82, .1, 1.4), lcol=WHT)
+
+# Up in the Air (2009): Paramount, the poster's pale blue, its black UP IN THE AIR lifted, George Clooney and Vera Farmiga at the bar
+std('up-in-the-air-2009', ('grad', [(0, (130, 200, 220)), (.5, (110, 180, 206)), (1, (40, 80, 100))]), (20, 20, 24),
+    L((0.08, 0.162, 0.93, 0.236), 110, (20, 20, 24), mode='dark'),
+    photo=ph(0.5, 0.55, 0.86, 0.7), pb=(20, 20, 24), lg=(20, 20, 24), lw=.55, order='LTPF',
+    ft='d', vbox=(20, 20, 24), vink=(130, 200, 220), fcol=(220, 236, 240), fin=MINT, seed=2009)
+
+# Year One (2009): Columbia, the poster's sky blue, its red YEAR ONE lifted, Jack Black and Michael Cera in furs
+std('year-one-2009', ('grad', [(0, (60, 170, 230)), (.5, (110, 190, 230)), (1, (110, 70, 40))]), (210, 30, 30),
+    L((0.05, 0.076, 0.945, 0.192), 110, (210, 30, 30), mode='key', key=(210, 30, 30)),
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['JACK BLACK', 'MICHAEL CERA'], ccol=WHT,
+    ft='b', fcol=(240, 220, 200), fin=MINT, seed=2009)

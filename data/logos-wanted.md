@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Princess and the Frog (2009) | Vault 2000s | `logos/the-princess-and-the-frog-2009-title.png` | typeset in gold and green; the gilded letters on the night bayou lost AND THE in both cuts |
 | Inglourious Basterds (2009) | Vault 2000s | `logos/inglourious-basterds-2009-title.png` | typeset; white outlined letters on the white poster with the eagle in the line, both cuts lost them |
 | Harry Potter and the Half-Blood Prince (2009) | Vault 2000s | `logos/harry-potter-and-the-half-blood-prince-2009-title.png` | typeset like the other Potters |
 | Fast & Furious (2009) | Vault 2000s | `logos/fast-furious-2009-title.png` | typeset like 2 Fast 2 Furious; chrome logo slanted across the bonnet |
