@@ -5507,3 +5507,74 @@ std('drive-2011', ('grad', [(0, (40, 70, 90)), (.6, (10, 18, 24)), (1, (0, 2, 4)
     L((0.17, 0.745, 0.83, 0.925), 130, (230, 60, 150), mode='key', key=(220, 50, 140)),
     photo=ph(0.6, 0.35, 0.8, 0.85), pb=(230, 60, 150), lg=WHT, lw=.5, order='LPTCF', credit=['RYAN GOSLING'], ccol=WHT,
     ft='b', fcol=(190, 210, 220), fin=MINT, seed=2011)
+
+# Harry Potter and the Deathly Hallows: Part 2 (2011): Warner Bros., a slipcase; the poster's burning Hogwarts, HARRY POTTER typeset in a silver serif with AND THE DEATHLY HALLOWS · PART 2 (parked with the others for Ian's logo, see data/logos-wanted.md), Harry before the ruins
+std('harry-potter-and-the-deathly-hallows-part-2-2011', ('grad', [(0, (40, 70, 80)), (.6, (12, 20, 22)), (1, (60, 20, 6))]), (220, 226, 230),
+    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE DEATHLY HALLOWS · PART 2', 'pagb', 40, (200, 214, 220))], tgap=8,
+    photo=ph(0.5, 0.58, 0.6, 1.5), pb=(230, 120, 40), lg=WHT, lw=.5, order='LTPF',
+    ft='c', fcol=(180, 200, 210), fin=MINT, seed=2011)
+
+# Hugo (2011): Paramount (GK Films), the poster's clock gold, its gold HUGO cut off it, Hugo hanging from the clock hands
+std('hugo-2011', ('grad', [(0, (30, 70, 90)), (.5, (110, 80, 30)), (1, (30, 16, 4))]), (230, 180, 70),
+    LC([(0.1, 0.72, 0.9, 0.9)], 130, cuts=[comp_cut(lambda a: (_lum(a) > .4) & (a[..., 0] > a[..., 2] + .2), minf=.05, close=3)]),
+    photo=ph(0.55, 0.35, 0.86, 1.0), pb=(230, 180, 70), lg=WHT, lw=.5, order='LPTCF', credit=['A MARTIN SCORSESE PICTURE'], ccol=WHT,
+    ft='a', fcol=(230, 210, 180), fin=MINT, seed=2011)
+
+# Into the Abyss (2011): Sundance Selects (Skellig Rock), the poster's prison grey, its white spaced serif INTO THE ABYSS lifted, the inmate at the visiting window
+std('into-the-abyss-2011', ('grad', [(0, (150, 160, 160)), (.5, (70, 80, 80)), (1, (10, 14, 14))]), WHT,
+    L((0.17, 0.797, 0.83, 0.842), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.33, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'WERNER HERZOG'], ccol=WHT,
+    ft='b', fcol=(220, 226, 226), fin=MINT, seed=2011)
+
+# Jiro Dreams of Sushi (2011): Magnolia (Sundial), the poster's white, its black JIRO DREAMS OF SUSHI lifted, Jiro among the plates of sushi
+std('jiro-dreams-of-sushi-2011', ('grad', [(0, (250, 250, 248)), (.6, (232, 228, 222)), (1, (150, 130, 110))]), (20, 20, 20),
+    L((0.05, 0.812, 0.95, 0.858), 100, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 40, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', dotst=('DOCUMENTARY', (200, 40, 30), WHT),
+    ft='d', vbox=(20, 20, 20), fcol=(40, 40, 40), fin=MINT, seed=2011)
+
+# Limitless (2011): Relativity, the poster's black, its white LIMITLESS lifted, Bradley Cooper in the streaming city lights
+std('limitless-2011', ('grad', [(0, (60, 50, 20)), (.6, (14, 12, 6)), (1, (0, 0, 0))]), WHT,
+    L((0.045, 0.79, 0.96, 0.895), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.48, 0.86, 0.5), pb=(240, 190, 60), lg=WHT, lw=.5, order='LPTCF', credit=['BRADLEY COOPER'], ccol=WHT,
+    ft='e', fcol=(210, 200, 180), fin=MINT, seed=2011)
+
+# Melancholia (2011): Magnolia (Zentropa), the poster's green dusk, its white serif Melancholia lifted, Kirsten Dunst in the wedding dress
+std('melancholia-2011', ('grad', [(0, (40, 80, 70)), (.6, (12, 26, 22)), (1, (2, 6, 4))]), WHT,
+    L((0.11, 0.12, 0.89, 0.2), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.6, 0.6, 1.5), pb=(220, 230, 220), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'LARS VON TRIER'], ccol=WHT,
+    ft='c', fcol=(200, 220, 210), fin=MINT, seed=2011)
+
+# Midnight in Paris (2011): Sony Pictures Classics (Mediapro), the poster's Van Gogh night, its white serif Midnight in Paris lifted, Owen Wilson walking the Seine
+std('midnight-in-paris-2011', ('grad', [(0, (30, 70, 140)), (.5, (16, 40, 90)), (1, (4, 10, 30))]), WHT,
+    L((0.08, 0.832, 0.92, 0.912), 100, WHT, mode='light'),
+    photo=ph(0.45, 0.4, 0.86, 1.3), pb=(240, 210, 80), lg=WHT, lw=.5, order='LPTCF', credit=['A WOODY ALLEN FILM'], ccol=WHT,
+    ft='a', fcol=(200, 210, 230), fin=MINT, seed=2011)
+
+# Moneyball (2011): Columbia (Scott Rudin), the poster's green field, its cream MONEYBALL lifted, Brad Pitt in the empty stands
+std('moneyball-2011', ('grad', [(0, (60, 110, 60)), (.6, (20, 40, 22)), (1, (2, 6, 4))]), (230, 226, 170),
+    L((0.11, 0.088, 0.89, 0.146), 100, (230, 226, 170), mode='light'),
+    photo=ph(0.5, 0.55, 0.86, 1.3), pb=(230, 226, 170), lg=WHT, lw=.5, order='LPTSF', stick=BAR('11 0923', top='DRAMA', fill=(236, 236, 224)),
+    ft='b', fcol=(210, 220, 200), fin=MINT, seed=2011)
+
+# Our Idiot Brother (2011): The Weinstein Company (Big Beach), the poster's grey wall, its white OUR IDIOT / BROTHER lifted into one line, Paul Rudd and his sisters on the couch
+std('our-idiot-brother-2011', ('grad', [(0, (180, 184, 186)), (.5, (130, 134, 136)), (1, (40, 44, 50))]), WHT,
+    L([(0.075, 0.138, 0.62, 0.232), (0.075, 0.232, 0.62, 0.33)], 110, WHT, mode='light', valign='base', gapf=.25),
+    photo=ph(0.5, 0.65, 0.9, 0.5), pb=(220, 60, 50), lg=WHT, lw=.5, order='LTPF',
+    ft='e', fcol=(240, 240, 240), fin=MINT, seed=2011)
+
+# Rango (2011): Paramount (Nickelodeon), the poster's desert blue sky, its white western RANGO lifted, Rango clutching the wind-up fish
+std('rango-2011', ('grad', [(0, (60, 150, 220)), (.5, (110, 180, 230)), (1, (160, 110, 60))]), WHT,
+    LC([(0.24, 0.8, 0.91, 0.955)], 120, cuts=[comp_cut(lambda a: _lum(a) > .85, top=5, minf=.02)]),
+    photo=ph(0.5, 0.25, 0.7, 0.9), pb=(240, 120, 40), lg=WHT, lw=.5, order='LPTCF', credit=['JOHNNY DEPP'], ccol=WHT,
+    ft='d', vbox=(240, 120, 40), fcol=(60, 40, 20), fin=MINT, seed=2011)
+
+# Sherlock Holmes: A Game of Shadows (2011): Warner Bros. (Village Roadshow), the poster's grey, its white serif SHERLOCK / HOLMES lifted into one line onto the dark of its type blocks, with A GAME OF SHADOWS typeset under it, Robert Downey Jr. and Jude Law
+std('sherlock-holmes-a-game-of-shadows-2011', ('grad', [(0, (90, 100, 110)), (.6, (24, 28, 32)), (1, (2, 2, 4))]), WHT,
+    [L([(0.1, 0.478, 0.91, 0.542), (0.1, 0.556, 0.91, 0.645)], 110, WHT, mode='light', valign='base', gapf=.2, plate=((34, 34, 36), 8, 6)), T('A GAME OF SHADOWS', 'schb', 44, (220, 220, 220))], tgap=8,
+    photo=ph(0.5, 0.25, 0.86, 0.6), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(200, 206, 214), fin=MINT, seed=2011)
+
+# Small Fry (2011): Pixar (a short), so a clamshell; the poster's white, its purple-edged SMALL FRY cut off it in its own colours, the fast-food Buzz's face in the diamond
+disney('small-fry-2011', ('grad', [(0, (120, 200, 250)), (.5, (90, 170, 240)), (1, (60, 40, 140))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.18, 0.735, 0.82, 0.825)], 140, cuts=[comp_cut(lambda a: _lum(a) < .93, minf=.03, close=2, fillh=True)]),
+       face=ph(.78, .41, .14, 1.4), lcol=WHT)
