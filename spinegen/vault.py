@@ -5649,3 +5649,75 @@ std('doin-it-in-the-park-pick-up-basketball-nyc-2012', ('grad', [(0, (230, 226, 
     L([(0.035, 0.825, 0.965, 0.902), (0.16, 0.902, 0.84, 0.935)], 100, (20, 20, 20), mode='dark', valign='base', gapf=.25),
     photo=ph(0.5, 0.45, 0.86, 1.0), pb=(220, 80, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A DOCUMENTARY BY', 'COULIAU & GARCIA'], ccol=(20, 20, 20),
     ft='b', fcol=(30, 30, 30), fin=MINT, seed=2012)
+
+# End of Watch (2012): Open Road (Exclusive Media), the poster's gold dusk, its white END OF / WATCH lifted into one line, Jake Gyllenhaal and Michael Peña with their guns
+std('end-of-watch-2012', ('grad', [(0, (110, 100, 60)), (.6, (30, 26, 16)), (1, (2, 2, 0))]), WHT,
+    L([(0.7, 0.645, 0.995, 0.688), (0.455, 0.688, 0.98, 0.752)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.5, 0.3, 0.86, 1.0), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTCF', credit=['JAKE GYLLENHAAL', 'MICHAEL PEÑA'], ccol=WHT,
+    ft='a', fcol=(220, 210, 180), fin=MINT, seed=2012)
+
+# Ernest & Celestine (2012): Les Armateurs, the poster's watercolour white, its brown script Ernest & Celestine lifted, Ernest and Celestine in the wash
+std('ernest-celestine-2012', ('grad', [(0, (250, 248, 244)), (.6, (236, 230, 220)), (1, (180, 160, 140))]), (80, 40, 30),
+    L((0.07, 0.68, 0.93, 0.78), 110, (80, 40, 30), mode='dark', speck=.01),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(180, 60, 50), lg=(60, 40, 30), lw=.55, order='LPTCF', credit=['UN FILM DE', 'AUBIER, PATAR & RENNER'], ccol=(60, 40, 30),
+    ft='c', fcol=(60, 40, 30), fin=MINT, seed=2012)
+
+# Flight (2012): Paramount, the poster's sky blue, its spaced white FLIGHT lifted, Denzel Washington in the captain's hat
+std('flight-2012', ('grad', [(0, (40, 120, 220)), (.5, (20, 70, 150)), (1, (4, 14, 30))]), WHT,
+    L((0.1, 0.065, 0.9, 0.113), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.5, 0.86, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=BAR('12 1102', top='DRAMA', fill=(236, 240, 246)),
+    ft='e', fcol=(200, 220, 240), fin=MINT, seed=2012)
+
+# Ice Age: Continental Drift (2012): Blue Sky (Fox), a slipcase; the poster's sea blue, its white ICE AGE cut off it with CONTINENTAL DRIFT typeset under it as on the others, Scrat's pirate flag and the herd on the ice
+std('ice-age-continental-drift-2012', ('grad', [(0, (40, 140, 220)), (.5, (30, 100, 190)), (1, (10, 40, 90))]), WHT,
+    [LC([(0.2, 0.855, 0.8, 0.932)], 140, outline=((20, 60, 140), 2), cuts=[comp_cut(lambda a: _lum(a) > .75, minf=.03, fillh=True)]), T('CONTINENTAL DRIFT', 'intbk', 40, (250, 220, 60))], tgap=8,
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=(250, 220, 60), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(210, 230, 250), fin=MINT, seed=2012)
+
+# Jack Reacher (2012): Paramount, the poster's black and gold, its white weathered JACK REACHER cut off it, Tom Cruise in the street lights
+std('jack-reacher-2012', ('grad', [(0, (80, 70, 30)), (.6, (18, 16, 8)), (1, (0, 0, 0))]), WHT,
+    LC([(0.08, 0.04, 0.92, 0.14)], 110, cuts=[comp_cut(lambda a: _lum(a) > .62, minf=.02, close=2, fillh=True)]),
+    photo=ph(0.5, 0.35, 0.86, 0.6), pb=(230, 190, 60), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE'], ccol=WHT,
+    ft='d', vbox=(230, 190, 60), vink=(10, 10, 6), fcol=(210, 200, 180), fin=MINT, seed=2012)
+
+# Killing Them Softly (2012): The Weinstein Company (Plan B), the poster's black, its white killing / them / softly cut off it into one line, Brad Pitt with the shotgun
+std('killing-them-softly-2012', ('grad', [(0, (40, 40, 40)), (.6, (10, 10, 10)), (1, (0, 0, 0))]), WHT,
+    LC([(0.07, 0.15, 0.79, 0.3), (0.07, 0.265, 0.79, 0.418), (0.07, 0.42, 0.79, 0.58)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .85, keep=lambda cx, cy: cy < .8, minf=.02), comp_cut(lambda a: _lum(a) > .85, keep=lambda cx, cy: cy > .15, minf=.02), comp_cut(lambda a: _lum(a) > .85, minf=.02)]),
+    photo=ph(0.6, 0.8, 0.8, 0.5), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'ANDREW DOMINIK'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2012)
+
+# Lawless (2012): The Weinstein Company (Benaroya), the poster's dusk blue, its red spaced LAWLESS lifted, Tom Hardy, Jessica Chastain and Shia LaBeouf
+std('lawless-2012', ('grad', [(0, (60, 80, 100)), (.6, (16, 20, 26)), (1, (2, 2, 4))]), (200, 30, 30),
+    L((0.08, 0.88, 0.93, 0.965), 100, (200, 30, 30), mode='key', key=(190, 30, 30)),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('CRIME', (200, 30, 30), WHT),
+    ft='c', fcol=(200, 206, 214), fin=MINT, seed=2012)
+
+# Life of Pi (2012): Fox 2000, the poster's golden sky, its blue LIFE OF PI lifted, Pi and Richard Parker on the boat
+std('life-of-pi-2012', ('grad', [(0, (220, 210, 180)), (.5, (180, 170, 140)), (1, (50, 80, 110))]), (60, 90, 160),
+    L((0.12, 0.072, 0.88, 0.25), 120, (60, 90, 160), mode='key', key=(70, 100, 160)),
+    photo=ph(0.4, 0.62, 0.8, 0.85), pb=(60, 90, 160), lg=(30, 40, 60), lw=.55, order='LPTCF', credit=['AN ANG LEE FILM'], ccol=(30, 40, 60),
+    ft='b', fcol=(230, 230, 220), fin=MINT, seed=2012)
+
+# Like Someone in Love (2012): IFC (MK2), the poster's night, its white Like someone / in love lifted into one line, Akiko's face in the taxi lights
+std('like-someone-in-love-2012', ('grad', [(0, (30, 60, 80)), (.6, (8, 16, 22)), (1, (0, 2, 4))]), WHT,
+    L([(0.09, 0.672, 0.92, 0.745), (0.295, 0.755, 0.71, 0.83)], 110, WHT, mode='light', valign='base', gapf=.25),
+    photo=ph(0.4, 0.28, 0.8, 0.85), pb=(220, 40, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'ABBAS KIAROSTAMI'], ccol=WHT,
+    ft='e', fcol=(190, 210, 220), fin=MINT, seed=2012)
+
+# Lincoln (2012): DreamWorks, the poster's white, its dark serif LINCOLN lifted, Daniel Day-Lewis bowed in profile
+std('lincoln-2012', ('grad', [(0, (250, 250, 248)), (.6, (226, 226, 222)), (1, (60, 60, 60))]), (30, 30, 30),
+    L((0.1, 0.785, 0.63, 0.85), 100, (30, 30, 30), mode='dark', speck=0),
+    photo=ph(0.6, 0.35, 0.8, 0.85), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['DANIEL DAY-LEWIS'], ccol=(30, 30, 30),
+    ft='d', vbox=(30, 30, 30), fcol=(40, 40, 40), fin=MINT, seed=2012)
+
+# Looper (2012): TriStar (Endgame), the poster's white mist, its black spaced LOOPER with the clock O cut off it, Bruce Willis above and Joseph Gordon-Levitt below
+std('looper-2012', ('grad', [(0, (240, 238, 234)), (.5, (200, 196, 190)), (1, (70, 60, 50))]), (20, 20, 20),
+    LC([(0.04, 0.42, 0.96, 0.505)], 100, cuts=[comp_cut(lambda a: _lum(a) < .4, minf=.01)]),
+    photo=ph(0.5, 0.75, 0.86, 0.6), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['JOSEPH GORDON-LEVITT', 'BRUCE WILLIS'], ccol=(20, 20, 20),
+    ft='a', fcol=(30, 30, 30), fin=MINT, seed=2012)
+
+# Men in Black 3 (2012): Columbia, the poster's black, its white MIB3 cut off it with MEN IN BLACK 3 under it, Will Smith, Tommy Lee Jones and Josh Brolin in shades
+std('men-in-black-3-2012', ('grad', [(0, (50, 50, 54)), (.6, (12, 12, 14)), (1, (0, 0, 0))]), WHT,
+    LC([(0.6, 0.83, 0.97, 0.935)], 140, margin=0, cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.01)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(10, 10, 10)),
+    ft='b', fcol=(200, 200, 204), fin=MINT, seed=2012)
