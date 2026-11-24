@@ -6075,3 +6075,75 @@ std('burt-s-buzz-2014', ('grad', [(0, (250, 220, 80)), (.5, (240, 200, 60)), (1,
     L([(0.07, 0.048, 0.94, 0.192), (0.07, 0.2, 0.94, 0.39)], 110, (16, 16, 16), mode='dark', valign='base', gapf=.2),
     photo=ph(0.6, 0.75, 0.8, 0.6), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='lTPCF', studio=['EVERYDAY PICTURES', 'BUFFALO GAL PICTURES'], scol=(16, 16, 16), credit=['A DOCUMENTARY BY', 'JODY SHAPIRO'], ccol=(16, 16, 16),
     ft='b', fcol=(30, 20, 10), fin=MINT, seed=2014)
+
+# Captain America: The Winter Soldier (2014): Marvel, a slipcase; the smoke grey, its white CAPTAIN AMERICA / THE WINTER SOLDIER lifted into one line, Cap, Black Widow and Falcon
+std('captain-america-the-winter-soldier-2014', ('grad', [(0, (90, 100, 110)), (.6, (24, 28, 32)), (1, (2, 2, 4))]), WHT,
+    L([(0.05, 0.87, 0.955, 0.926), (0.13, 0.93, 0.87, 0.96)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (40, 80, 170), WHT),
+    ft='b', fcol=(200, 206, 214), fin=MINT, seed=2014)
+
+# Coherence (2014): Oscilloscope (Bellanova), the poster's black, COHERENCE typeset in thin spaced capitals in white (the poster's runs round two arcs, too fine to cut and rebuild), Em's faces in the orange light
+std('coherence-2014', ('grad', [(0, (120, 50, 20)), (.5, (30, 16, 10)), (1, (2, 2, 4))]), WHT,
+    T('C O H E R E N C E', 'intxb', 70, WHT),
+    photo=ph(0.35, 0.5, 0.5, 0.8), pb=(240, 130, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JAMES WARD BYRKIT'], ccol=WHT,
+    ft='c', fcol=(220, 200, 180), fin=MINT, seed=2014)
+
+# Dawn of the Planet of the Apes (2014): 20th Century Fox (TSG), a slipcase; the poster's black, its stone-grey DAWN / PLANET / APES with the small OF THEs cut off it into one line, Caesar's face in war paint
+std('dawn-of-the-planet-of-the-apes-2014', ('grad', [(0, (150, 60, 30)), (.6, (70, 24, 10)), (1, (14, 4, 2))]), (190, 196, 200),
+    LC([(0.07, 0.705, 0.73, 0.783), (0.07, 0.783, 0.73, 0.868), (0.29, 0.868, 0.73, 0.958)], 160, valign='base', margin=0, gapf=.12, outline=((10, 10, 10), 1.6), cuts=[comp_cut(lambda a: _lum(a) > .25, minf=.002, close=2, fillh=True)] * 3),
+    photo=ph(0.55, 0.3, 0.86, 0.5), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(200, 206, 210), fin=MINT, seed=2014)
+
+# Divorce Corp (2014): Candor (no logo file; production companies from IMDb), the tower's blue, its white DIVORCE / CORP. lifted into one line, the little chapel in the glass tower's shadow
+std('divorce-corp-2014', ('grad', [(0, (40, 60, 120)), (.6, (12, 20, 40)), (1, (2, 4, 10))]), WHT,
+    L([(0.13, 0.15, 0.875, 0.215), (0.22, 0.215, 0.815, 0.292)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.7, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='lPTCF', studio=['CANDOR ENTERTAINMENT', 'ANARCHY POST'], scol=WHT, credit=['A DOCUMENTARY BY', 'JOSEPH SORGE'], ccol=WHT,
+    ft='e', fcol=(200, 210, 230), fin=MINT, seed=2014)
+
+# Edge of Tomorrow (2014): Warner Bros. (RatPac), the beach's fire, its grey EDGE OF and red TOMORROW cut off it into one line, Tom Cruise and Emily Blunt in their exo-suits
+std('edge-of-tomorrow-2014', ('grad', [(0, (120, 80, 50)), (.6, (30, 20, 12)), (1, (2, 2, 0))]), (210, 30, 30),
+    LC([(0.1, 0.768, 0.6, 0.858), (0.045, 0.858, 0.925, 0.95)], 110, valign='base', margin=0, gapf=.2, outline=((16, 10, 6), 2), cuts=[comp_cut(lambda a: (_lum(a) > .55) & (np.abs(a[..., 0] - a[..., 2]) < .15), minf=.03, close=2, fillh=True), comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .25), minf=.03, close=2)]),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TOM CRUISE', 'EMILY BLUNT'], ccol=WHT,
+    ft='d', vbox=(210, 30, 30), fcol=(220, 200, 180), fin=MINT, seed=2014)
+
+# Enemy (2014): A24 (Rhombus Media), the poster's cream, its black spaced ENEMY lifted, Jake Gyllenhaal's head with Toronto and the spider in it
+std('enemy-2014', ('grad', [(0, (246, 238, 226)), (.6, (226, 214, 196)), (1, (110, 90, 70))]), (20, 20, 20),
+    L((0.11, 0.08, 0.9, 0.18), 110, (20, 20, 20), mode='dark'),
+    photo=ph(0.6, 0.55, 0.8, 1.3), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='b', fcol=(30, 20, 10), fin=MINT, seed=2014)
+
+# Foxcatcher (2014): Sony Pictures Classics (Annapurna), the poster's dark sky, its white serif FOXCATCHER lifted, Channing Tatum, Steve Carell and Mark Ruffalo under the eagle
+std('foxcatcher-2014', ('grad', [(0, (80, 70, 50)), (.6, (20, 18, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.07, 0.845, 0.945, 0.912), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.45, 0.86, 0.6), pb=(210, 190, 150), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'BENNETT MILLER'], ccol=WHT,
+    ft='c', fcol=(210, 200, 180), fin=MINT, seed=2014)
+
+# God's Pocket (2014): IFC (Park Pictures), the bar's teal dark, its white GOD'S POCKET lifted, Philip Seymour Hoffman and John Turturro at the bar
+std('god-s-pocket-2014', ('grad', [(0, (40, 80, 90)), (.6, (10, 20, 24)), (1, (0, 2, 4))]), WHT,
+    L((0.11, 0.852, 0.89, 0.906), 100, WHT, mode='light'),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(10, 20, 24)),
+    ft='a', fcol=(190, 210, 214), fin=MINT, seed=2014)
+
+# Gone Girl (2014): 20th Century Fox, the poster's grey sky, GONE GIRL typeset in spaced slate capitals (parked for Ian's logo, see data/logos-wanted.md: the letters fade into the clouds by design, so both cuts lost half of them), Ben Affleck by the water
+std('gone-girl-2014', ('grad', [(0, (200, 208, 212)), (.6, (160, 170, 176)), (1, (110, 120, 128))]), (30, 34, 40),
+    T('G O N E   G I R L', 'intxb', 80, (40, 46, 52)),
+    photo=ph(0.5, 0.82, 0.86, 0.4), pb=(30, 34, 40), lg=(30, 34, 40), lw=.55, order='LTPCF', credit=['BEN AFFLECK', 'ROSAMUND PIKE'], ccol=(30, 34, 40),
+    ft='e', fcol=(20, 24, 28), fin=MINT, seed=2014)
+
+# Guardians of the Galaxy (2014): Marvel, a slipcase; space blue, the poster's gold GUARDIANS / OF THE / GALAXY cut off it whole, the five of them with their guns
+std('guardians-of-the-galaxy-2014', ('grad', [(0, (40, 50, 110)), (.6, (10, 14, 34)), (1, (0, 0, 4))]), (230, 180, 70),
+    LC([(0.08, 0.815, 0.92, 0.96)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .15), minf=.002, close=2, fillh=True)]),
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=(230, 180, 70), lg=WHT, lw=.5, order='LPTCF', credit=['CHRIS PRATT'], ccol=WHT,
+    ft='d', vbox=(230, 180, 70), vink=(10, 14, 34), fcol=(200, 206, 230), fin=MINT, seed=2014)
+
+# Interstellar (2014): Paramount (Legendary), the water planet's grey sea, INTERSTELLAR typeset in spaced white serif capitals (parked for Ian's logo, see data/logos-wanted.md: the letters cross from the dark sea onto a white wake and change colour halfway, so a lift loses half of them), Cooper in the shallows by the lander
+std('interstellar-2014', ('grad', [(0, (150, 160, 170)), (.5, (60, 70, 80)), (1, (6, 8, 10))]), WHT,
+    T('I N T E R S T E L L A R', 'pagb', 80, WHT),
+    photo=ph(0.5, 0.55, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'CHRISTOPHER NOLAN'], ccol=WHT,
+    ft='b', fcol=(210, 216, 222), fin=MINT, seed=2014)
+
+# Jerrod Carmichael: Love at the Store (2014): HBO (Funny or Die), the poster's deep red, its white condensed JERROD CARMICHAEL / LIVE AT THE COMEDY STORE lifted into one line, Jerrod at the mic
+std('jerrod-carmichael-love-at-the-store-2014', ('grad', [(0, (140, 20, 30)), (.5, (90, 10, 20)), (1, (20, 2, 4))]), WHT,
+    L([(0.02, 0.068, 0.98, 0.146), (0.02, 0.158, 0.98, 0.218)], 110, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.65, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['STAND-UP SPECIAL'], ccol=WHT,
+    ft='c', fcol=(250, 210, 214), fin=MINT, seed=2014)
