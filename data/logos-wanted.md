@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Mission: Impossible - Rogue Nation (2015) | Vault 2010s | `logos/mission-impossible-rogue-nation-2015-title.png` | typeset; stunt figures behind the letters came away with them, the tighter cut lost the I |
+| Dope (2015) | Vault 2010s | `logos/dope-2015-title.png` | typeset; distressed white letters run into the white frame, cuts broke D and lost E |
+| Aziz Ansari: Live at Madison Square Garden (2015) | Vault 2010s | `logos/aziz-ansari-live-at-madison-square-garden-2015-title.png` | typeset; bulb-lit letters in steep perspective |
 | The Grand Budapest Hotel (2014) | Vault 2010s | `logos/the-grand-budapest-hotel-2014-title.png` | typeset; gold letters on sunlit mountains of the same tones, both cuts lost their middles |
 | The Amazing Spider-Man 2 (2014) | Vault 2010s | `logos/the-amazing-spider-man-2-2014-title.png` | typeset; thin chrome logo on the bright city lifted in fragments |
 | Teenage Mutant Ninja Turtles (2014) | Vault 2010s | `logos/teenage-mutant-ninja-turtles-2014-title.png` | typeset; chrome letters reflect the sky, both cuts left holes |

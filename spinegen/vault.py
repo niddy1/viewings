@@ -6284,3 +6284,73 @@ std('ant-man-2015', ('grad', [(0, (50, 90, 130)), (.6, (14, 26, 40)), (1, (0, 2,
     L((0.22, 0.78, 0.78, 0.89), 120, (210, 30, 30), mode='key', key=(190, 20, 30)),
     photo=ph(0.5, 0.35, 0.86, 1.0), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['PAUL RUDD'], ccol=WHT,
     ft='e', fcol=(200, 214, 226), fin=MINT, seed=2015)
+
+# Aziz Ansari: Live at Madison Square Garden (2015): Netflix (no logo file), the poster's black, AZIZ ANSARI typeset in heavy capitals in the marquee's cream with LIVE AT MADISON SQUARE GARDEN (parked for Ian's logo, see data/logos-wanted.md: the bulb-lit letters run up the poster in steep perspective), Aziz on the stage
+std('aziz-ansari-live-at-madison-square-garden-2015', ('grad', [(0, (40, 34, 30)), (.6, (10, 8, 8)), (1, (0, 0, 0))]), (240, 226, 200),
+    [T('AZIZ ANSARI', 'intbk', 110, (240, 226, 200)), T('LIVE AT MADISON SQUARE GARDEN', 'intbk', 40, (220, 206, 180))], tgap=8,
+    photo=ph(0.36, 0.86, 0.3, 0.9), pb=(240, 226, 200), lg=WHT, lw=.5, order='lTPCF', studio=['NETFLIX'], scol=(220, 40, 40), credit=['STAND-UP SPECIAL'], ccol=WHT,
+    ft='a', fcol=(220, 210, 190), fin=MINT, seed=2015)
+
+# Crimson Peak (2015): Universal (Double Dare You), the poster's night blue, its gold serif CRIMSON PEAK cut off it, the house in blue and Edith in red
+std('crimson-peak-2015', ('grad', [(0, (30, 60, 100)), (.6, (8, 16, 30)), (1, (0, 0, 4))]), (220, 180, 110),
+    LC([(0.03, 0.04, 0.975, 0.155)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .15), minf=.02, opn=1, close=2)]),
+    photo=ph(0.5, 0.45, 0.86, 1.0), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A GUILLERMO DEL TORO FILM'], ccol=WHT,
+    ft='c', fcol=(200, 210, 230), fin=MINT, seed=2015)
+
+# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, DOPE typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the distressed white letters run into the poster's white frame and both cuts broke the D and lost the E), Malcolm and friends on their bikes under the palms
+std('dope-2015', ('grad', [(0, (60, 140, 220)), (.5, (110, 180, 230)), (1, (40, 60, 80))]), WHT,
+    T('DOPE', 'intbk', 140, WHT),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 60, 80), lg=WHT, lw=.5, order='lPTSF', studio=['i am OTHER', 'SIGNIFICANT PRODUCTIONS'], scol=WHT, stick=BAR('15 0619', top='COMEDY', fill=(240, 240, 236)),
+    ft='b', fcol=(20, 30, 40), fin=MINT, seed=2015)
+
+# Ex Machina (2015): A24 (DNA Films), the poster's black, its white ex machina lifted off the red plate onto the same red, Ava in her mesh
+std('ex-machina-2015', ('grad', [(0, (40, 40, 44)), (.6, (10, 10, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.12, 0.5, 0.9, 0.585), 100, WHT, mode='light', plate=((220, 40, 50), 12, 8)),
+    photo=ph(0.45, 0.2, 0.7, 0.85), pb=(220, 40, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'ALEX GARLAND'], ccol=WHT,
+    ft='d', vbox=(220, 40, 50), fcol=(200, 200, 206), fin=MINT, seed=2015)
+
+# Furious 7 (2015): Universal (Original Film), the poster's grey sky, its black italic FURIOUS 7 lifted, the crew in a line
+std('furious-7-2015', ('grad', [(0, (210, 214, 216)), (.5, (150, 156, 160)), (1, (30, 34, 38))]), (20, 20, 20),
+    L((0.18, 0.15, 0.86, 0.215), 110, (20, 20, 20), mode='dark'),
+    photo=ph(0.5, 0.72, 0.86, 0.5), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['VIN DIESEL', 'PAUL WALKER'], ccol=(20, 20, 20),
+    ft='e', fcol=(240, 240, 240), fin=MINT, seed=2015)
+
+# Heist (2015): Lionsgate (EFO Films), the poster's night, its white HEIST lifted, Robert De Niro, Jeffrey Dean Morgan and the bus in flames
+std('heist-2015', ('grad', [(0, (50, 70, 90)), (.6, (12, 18, 24)), (1, (0, 2, 4))]), WHT,
+    L((0.16, 0.835, 0.85, 0.96), 120, WHT, mode='light'),
+    photo=ph(0.5, 0.25, 0.86, 0.85), pb=(240, 130, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (240, 130, 40), (10, 10, 10)),
+    ft='a', fcol=(200, 210, 220), fin=MINT, seed=2015)
+
+# Inside Out (2015): Pixar, so a clamshell; the poster's coloured bubbles, its white INSIDE / OUT cut off it with a navy keyline, Joy's face in the diamond
+disney('inside-out-2015', ('grad', [(0, (60, 80, 200)), (.5, (110, 60, 170)), (1, (30, 20, 80))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.14, 0.12, 0.8, 0.48)], 150, outline=((20, 30, 110), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .85, minf=.03, close=2, fillh=True)]),
+       face=ph(.46, .48, .14, 1.4), lcol=WHT)
+
+# Kingsman: The Secret Service (2015): 20th Century Fox, a slipcase; the poster's black, its gold serif Kingsman with THE SECRET SERVICE lifted into one line, Eggsy and Harry in the ring of the cast
+std('kingsman-the-secret-service-2015', ('grad', [(0, (50, 46, 40)), (.6, (12, 12, 10)), (1, (0, 0, 0))]), (220, 200, 160),
+    L([(0.07, 0.06, 0.91, 0.13), (0.07, 0.15, 0.93, 0.2)], 110, (220, 200, 160), mode='light', valign='base', gapf=.25),
+    photo=ph(0.5, 0.6, 0.86, 1.0), pb=(220, 200, 160), lg=WHT, lw=.5, order='LPTCF', credit=['COLIN FIRTH', 'TARON EGERTON'], ccol=WHT,
+    ft='b', fcol=(210, 200, 180), fin=MINT, seed=2015)
+
+# Louis C.K.: Live at the Comedy Store (2015): Pig Newton (no logo file; label from IMDb's company credits), the poster's red, its black LOUIS CK lifted onto its cream band, the five photos of Louis at the mic
+std('louis-c-k-live-at-the-comedy-store-2015', ('grad', [(0, (200, 30, 30)), (.5, (170, 20, 20)), (1, (60, 4, 4))]), (16, 16, 16),
+    [L((0.14, 0.125, 0.87, 0.197), 110, (16, 16, 16), mode='dark', plate=((240, 230, 210), 10, 6)), T('LIVE AT THE COMEDY STORE', 'intbk', 40, (240, 230, 210))], tgap=8,
+    photo=ph(0.5, 0.4, 0.86, 0.45), pb=(16, 16, 16), lg=WHT, lw=.5, order='lPTCF', studio=['PIG NEWTON'], scol=(240, 230, 210), credit=['STAND-UP SPECIAL'], ccol=(240, 230, 210),
+    ft='c', fcol=(250, 220, 210), fin=MINT, seed=2015)
+
+# Mad Max: Fury Road (2015): Warner Bros., the poster's black, its orange MAD / MAX / FURY ROAD lifted into one line, Furiosa and Max
+std('mad-max-fury-road-2015', ('grad', [(0, (60, 40, 20)), (.6, (14, 10, 4)), (1, (0, 0, 0))]), (250, 180, 30),
+    L([(0.21, 0.058, 0.79, 0.235), (0.21, 0.235, 0.79, 0.403), (0.21, 0.403, 0.79, 0.476)], 110, (250, 180, 30), mode='key', key=(240, 170, 30), valign='base', gapf=.2),
+    photo=ph(0.55, 0.75, 0.86, 0.6), pb=(250, 180, 30), lg=WHT, lw=.5, order='LTPCF', credit=['TOM HARDY', 'CHARLIZE THERON'], ccol=WHT,
+    ft='d', vbox=(250, 180, 30), vink=(10, 8, 4), fcol=(220, 200, 170), fin=MINT, seed=2015)
+
+# Mission: Impossible - Rogue Nation (2015): Paramount, the poster's white, MISSION: IMPOSSIBLE typeset in condensed red capitals with ROGUE NATION in black (parked for Ian's logo, see data/logos-wanted.md: the stunt figures behind the letters came away with them, and the tighter cut lost the I), Tom Cruise in shades and the cast
+std('mission-impossible-rogue-nation-2015', ('grad', [(0, (250, 250, 250)), (.6, (226, 226, 226)), (1, (90, 90, 90))]), (200, 20, 20),
+    [TT([('MISSION: ', (200, 20, 20)), ('IMPOSSIBLE', (200, 20, 20))], 'intbk', 100), T('ROGUE NATION', 'intbk', 50, (30, 30, 30))], tgap=8,
+    photo=ph(0.55, 0.3, 0.86, 0.85), pb=(200, 20, 20), lg=(30, 30, 30), lw=.55, order='LPTF',
+    ft='a', vbox=(200, 20, 20), fcol=(40, 40, 40), fin=MINT, seed=2015)
+
+# Riley's First Date? (2015): Pixar (a short), so a clamshell; the poster's night, its red RILEY'S / FIRST DATE? cut off it into one line, Anger's face in the diamond
+disney('riley-s-first-date-2015', ('grad', [(0, (30, 30, 90)), (.5, (20, 20, 60)), (1, (6, 6, 24))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.13, 0.095, 0.87, 0.21), (0.13, 0.212, 0.87, 0.275)], 130, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .4), minf=.02, close=2, fillh=True)] * 2),
+       face=ph(.5, .68, .28, 1.4), lcol=WHT)
