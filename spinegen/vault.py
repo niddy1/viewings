@@ -5031,3 +5031,75 @@ std('burn-after-reading-2008', ('grad', [(0, (190, 20, 20)), (.6, (110, 8, 8)), 
     L([(0.36, 0.316, 0.74, 0.418), (0.36, 0.418, 0.75, 0.505), (0.36, 0.505, 0.75, 0.575)], 110, [(250, 220, 50), WHT, (250, 220, 50)], mode=['key', 'light', 'key'], key=(250, 220, 50), valign='base', gapf=.25),
     photo=ph(0.17, 0.4, 0.3, 1.4), pb=(250, 220, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A COEN BROTHERS FILM'], ccol=WHT,
     ft='e', fcol=(250, 210, 200), fin=MINT, seed=2008)
+
+# Dear Zachary: A Letter to a Son About His Father (2008): MSNBC Films, the poster's black, its red typewriter Dear / Zachary: lifted into one line, A LETTER TO A SON ABOUT HIS FATHER typeset under it in grey typewriter type (the poster's is too faint to lift), the chalk outline and the baby
+std('dear-zachary-a-letter-to-a-son-about-his-father-2008', ('grad', [(0, (30, 30, 30)), (.6, (8, 8, 8)), (1, (0, 0, 0))]), (220, 30, 30),
+    [L([(0.14, 0.625, 0.545, 0.72), (0.05, 0.724, 0.745, 0.84)], 110, (220, 30, 30), mode='key', key=(220, 30, 30), valign='base', gapf=.25), T('a letter to a son about his father', 'mono', 40, (200, 200, 200))], tgap=8,
+    photo=ph(0.4, 0.25, 0.8, 0.8), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'KURT KUENNE'], ccol=WHT,
+    ft='b', fcol=(200, 200, 200), fin=MINT, seed=2008)
+
+# Forgetting Sarah Marshall (2008): Universal, the poster's white, its red FORGETTING / SARAH / MARSHALL block cut off it whole, Peter holding the broken heart
+std('forgetting-sarah-marshall-2008', ('grad', [(0, (250, 250, 250)), (.6, (226, 236, 244)), (1, (90, 150, 200))]), (210, 30, 30),
+    LC([(0.07, 0.645, 0.51, 0.848)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35), minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(40, 140, 210), lg=(30, 30, 40), lw=.55, order='LPTSF', dotst=('COMEDY', (40, 140, 210), WHT),
+    ft='c', fcol=(30, 40, 60), fin=MINT, seed=2008)
+
+# Get Smart (2008): Warner Bros., the poster's grey, its red slanted GET SMART lifted as printed, Steve Carell, Anne Hathaway and the Rock
+std('get-smart-2008', ('grad', [(0, (150, 156, 164)), (.6, (60, 64, 70)), (1, (10, 10, 12))]), (220, 20, 30),
+    L((0.055, 0.51, 0.945, 0.674), 120, (220, 20, 30), mode='key', key=(220, 20, 30)),
+    photo=ph(0.45, 0.25, 0.86, 0.85), pb=(220, 20, 30), lg=WHT, lw=.5, order='LPTCF', credit=['STEVE CARELL', 'ANNE HATHAWAY'], ccol=WHT,
+    ft='a', fcol=(220, 224, 230), fin=MINT, seed=2008)
+
+# Gran Torino (2008): Warner Bros., the poster's black, its gold GRAN / TORINO lifted into one line, Clint Eastwood by the car
+std('gran-torino-2008', ('grad', [(0, (40, 34, 24)), (.6, (10, 8, 6)), (1, (0, 0, 0))]), (180, 140, 70),
+    L([(0.06, 0.326, 0.52, 0.403), (0.06, 0.402, 0.525, 0.46)], 110, (180, 140, 70), mode='key', key=(160, 120, 50), valign='base', gapf=.25),
+    photo=ph(0.75, 0.45, 0.42, 1.9), pb=(180, 140, 70), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'CLINT EASTWOOD'], ccol=WHT,
+    ft='d', vbox=(180, 140, 70), vink=(10, 8, 6), fcol=(200, 190, 170), fin=MINT, seed=2008)
+
+# Gunnin' for That #1 Spot (2008): Oscilloscope, the poster's yellow, its black condensed GUNNIN' / FOR / THAT #1 / SPOT lifted into one line, the players on the bleachers
+std('gunnin-for-that-1-spot-2008', ('grad', [(0, (252, 214, 20)), (.5, (246, 200, 10)), (1, (160, 120, 0))]), (20, 20, 20),
+    L([(0.05, 0.052, 0.29, 0.15), (0.05, 0.149, 0.165, 0.242), (0.05, 0.242, 0.28, 0.336), (0.05, 0.335, 0.455, 0.455)], 110, (20, 20, 20), mode='dark', valign='base', gapf=.25),
+    photo=ph(0.6, 0.65, 0.86, 0.6), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['A DOCUMENTARY BY', 'ADAM YAUCH'], ccol=(20, 20, 20),
+    ft='e', fcol=(20, 20, 20), fin=MINT, seed=2008)
+
+# Hancock (2008): Columbia, the poster's grey-blue, its chrome HANCOCK cut off it, Will Smith in the beanie with the city in his glasses
+std('hancock-2008', ('grad', [(0, (60, 80, 110)), (.6, (16, 22, 30)), (1, (2, 4, 6))]), (220, 226, 232),
+    LC([(0.05, 0.062, 0.945, 0.158)], 120, outline=((10, 16, 30), 2), cuts=[comp_cut(lambda a: _lum(a) > .55, minf=.03, close=2)]),
+    photo=ph(0.5, 0.5, 0.86, 1.0), pb=(200, 40, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'ACTION']),
+    ft='b', fcol=(200, 210, 220), fin=MINT, seed=2008)
+
+# In Bruges (2008): Focus Features, the poster's stormy Bruges, its magenta IN BRUGES cut off it, Colin Farrell and Brendan Gleeson with the guns
+std('in-bruges-2008', ('grad', [(0, (80, 100, 120)), (.6, (24, 30, 36)), (1, (4, 4, 6))]), (200, 40, 130),
+    LC([(0.1, 0.752, 0.86, 0.9)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .35) & (a[..., 2] > .3), minf=.02)]),
+    photo=ph(0.5, 0.35, 0.86, 0.85), pb=(200, 40, 130), lg=WHT, lw=.5, order='LPTCF', credit=['COLIN FARRELL', 'BRENDAN GLEESON'], ccol=WHT,
+    ft='a', fcol=(200, 206, 214), fin=MINT, seed=2008)
+
+# Ip Man (2008): Mandarin Films, the poster's storm grey, its white IP MAN lifted, Donnie Yen in his stance before the town
+std('ip-man-2008', ('grad', [(0, (60, 76, 90)), (.6, (16, 20, 24)), (1, (2, 2, 4))]), WHT,
+    L((0.24, 0.775, 0.76, 0.857), 110, WHT, mode='light'),
+    photo=ph(0.48, 0.38, 0.8, 1.2), pb=(180, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['DONNIE YEN'], ccol=WHT,
+    ft='c', fcol=(200, 206, 214), fin=MINT, seed=2008)
+
+# Iron Man (2008): Marvel, a slipcase; the poster's night blue, its spaced gold IRON MAN cut off it in its own colours, the suit's helmet and Tony Stark
+std('iron-man-2008', ('grad', [(0, (30, 40, 70)), (.6, (8, 10, 20)), (1, (0, 0, 4))]), (220, 170, 60),
+    LC([(0.08, 0.842, 0.9, 0.942)], 100, cuts=[comp_cut(lambda a: (_lum(a) > .2) & (a[..., 0] > a[..., 2] + .15), minf=.03, close=2)]),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ROBERT DOWNEY JR.'], ccol=WHT,
+    ft='e', vbox=(190, 30, 30), fcol=(200, 200, 210), fin=MINT, seed=2008)
+
+# Kung Fu Panda (2008): DreamWorks, a slipcase; the poster's sunset red, KUNG FU PANDA typeset in heavy yellow capitals with a red keyline (parked for Ian's logo, see data/logos-wanted.md: yellow brush letters on a sunset of the same yellows; both cuts lost most of PANDA), Po and the Furious Five
+std('kung-fu-panda-2008', ('grad', [(0, (240, 120, 40)), (.5, (220, 70, 30)), (1, (120, 30, 10))]), (250, 220, 40),
+    T('KUNG FU PANDA', 'intbk', 110, (250, 220, 40), outline=((150, 30, 10), 2.4)),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 1109', top='FAMILY', fill=(250, 240, 210)),
+    ft='d', fcol=(250, 220, 200), fin=MINT, seed=2008)
+
+# Let the Right One In (2008): Magnolia (Filmpool Nord), the poster's frost white, LET THE RIGHT ONE IN typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: silver letters on a frost-white ground, and the lift lost LET and smeared IN), Oskar's hand on the glass and Eli's shadow
+std('let-the-right-one-in-2008', ('grad', [(0, (150, 170, 180)), (.6, (70, 84, 94)), (1, (14, 16, 20))]), WHT,
+    T('LET THE RIGHT ONE IN', 'intbk', 100, WHT),
+    photo=ph(0.65, 0.25, 0.5, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EN FILM AV', 'TOMAS ALFREDSON'], ccol=WHT,
+    ft='b', fcol=(210, 220, 226), fin=MINT, seed=2008)
+
+# Madagascar: Escape 2 Africa (2008): DreamWorks, a slipcase; the savanna's green, MADAGASCAR typeset in heavy capitals in the logo's orange with ESCAPE 2 AFRICA (parked with Madagascar for Ian's logo, see data/logos-wanted.md), Alex, Marty, Gloria and Melman in the jeep
+std('madagascar-escape-2-africa-2008', ('grad', [(0, (60, 160, 60)), (.5, (140, 200, 60)), (1, (120, 80, 30))]), (240, 130, 30),
+    [T('MADAGASCAR', 'intbk', 110, (240, 130, 30), outline=((60, 30, 10), 2.2)), T('ESCAPE 2 AFRICA', 'intbk', 46, (250, 220, 60))], tgap=8,
+    photo=ph(0.5, 0.65, 0.86, 1.2), pb=(240, 130, 30), lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(250, 240, 210), fin=MINT, seed=2008)

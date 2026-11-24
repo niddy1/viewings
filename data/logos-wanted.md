@@ -6,6 +6,9 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Kung Fu Panda (2008) | Vault 2000s | `logos/kung-fu-panda-2008-title.png` | typeset; yellow brush letters on a sunset of the same yellows, both cuts lost most of PANDA |
+| Let the Right One In (2008) | Vault 2000s | `logos/let-the-right-one-in-2008-title.png` | typeset; silver letters on a frost-white ground, the lift lost LET and smeared IN |
+| Madagascar: Escape 2 Africa (2008) | Vault 2000s | `logos/madagascar-escape-2-africa-2008-title.png` | typeset like Madagascar |
 | Transformers (2007) | Vault 2000s | `logos/transformers-2007-title.png` | typeset; the chrome letters shade into the sky and both cuts lost letters |
 | The Simpsons Movie (2007) | Vault 2000s | `logos/the-simpsons-movie-2007-title.png` | typeset; the doughnut O and the small The Simpsons over the sky broke up in both cuts |
 | Sweeney Todd: The Demon Barber of Fleet Street (2007) | Vault 2000s | `logos/sweeney-todd-the-demon-barber-of-fleet-street-2007-title.png` | typeset; grey letters on a grey room, run through by blood; both cuts broke them |
