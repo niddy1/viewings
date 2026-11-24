@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Fall (2008) | Vault 2000s | `logos/the-fall-2008-title.png` | typeset; thin red script with long flourishes, both cuts lost The |
 | Kung Fu Panda (2008) | Vault 2000s | `logos/kung-fu-panda-2008-title.png` | typeset; yellow brush letters on a sunset of the same yellows, both cuts lost most of PANDA |
 | Let the Right One In (2008) | Vault 2000s | `logos/let-the-right-one-in-2008-title.png` | typeset; silver letters on a frost-white ground, the lift lost LET and smeared IN |
 | Madagascar: Escape 2 Africa (2008) | Vault 2000s | `logos/madagascar-escape-2-africa-2008-title.png` | typeset like Madagascar |

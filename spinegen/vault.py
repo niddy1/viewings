@@ -5103,3 +5103,75 @@ std('madagascar-escape-2-africa-2008', ('grad', [(0, (60, 160, 60)), (.5, (140, 
     [T('MADAGASCAR', 'intbk', 110, (240, 130, 30), outline=((60, 30, 10), 2.2)), T('ESCAPE 2 AFRICA', 'intbk', 46, (250, 220, 60))], tgap=8,
     photo=ph(0.5, 0.65, 0.86, 1.2), pb=(240, 130, 30), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(250, 240, 210), fin=MINT, seed=2008)
+
+# Mamma Mia! (2008): Universal (Playtone), the poster's sparkling sea blue, its navy MAMMA MIA! lifted, Amanda Seyfried in the wedding dress
+std('mamma-mia-2008', ('grad', [(0, (200, 230, 250)), (.5, (130, 190, 240)), (1, (30, 90, 170))]), (20, 70, 130),
+    L((0.03, 0.066, 0.968, 0.216), 110, (20, 70, 130), mode='key', key=(20, 70, 130)),
+    photo=ph(0.55, 0.55, 0.7, 1.4), pb=(250, 210, 60), lg=(20, 50, 100), lw=.55, order='LPTSF', dotst=('MUSICAL', (240, 80, 150), WHT),
+    ft='b', fcol=(20, 40, 80), fin=MINT, seed=2008)
+
+# Maradona by Kusturica (2008): Wild Bunch, the poster's painted wall, its navy MARADONA and BY KUSTURICA lifted in two lines side by side, Maradona's face on the bricks with Kusturica below
+std('maradona-by-kusturica-2008', ('grad', [(0, (230, 170, 60)), (.5, (200, 130, 50)), (1, (80, 50, 20))]), (20, 40, 90),
+    [L((0.03, 0.024, 0.975, 0.156), 110, (20, 40, 90), mode='key', key=(30, 50, 90), t=(90, 170)), L((0.04, 0.795, 0.6, 0.87), 60, (20, 40, 90), mode='key', key=(30, 50, 90), t=(90, 170))], tgap=8,
+    photo=ph(0.5, 0.4, 0.8, 1.0), pb=(40, 120, 200), lg=(20, 40, 90), lw=.55, order='LPTCF', credit=['A DOCUMENTARY BY', 'EMIR KUSTURICA'], ccol=(30, 20, 10),
+    ft='d', vbox=(20, 40, 90), fcol=(30, 20, 10), fin=MINT, seed=2008)
+
+# Pineapple Express (2008): Columbia, the poster's white smoke, its red PINEAPPLE / EXPRESS cut off it into one line, Seth Rogen, James Franco and Danny McBride with the guns
+std('pineapple-express-2008', ('grad', [(0, (30, 40, 50)), (.5, (110, 120, 120)), (1, (220, 224, 224))]), (220, 30, 30),
+    LC([(0.22, 0.064, 0.77, 0.128), (0.22, 0.13, 0.78, 0.19)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .35), minf=.02)] * 2),
+    photo=ph(0.5, 0.45, 0.86, 0.85), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['SETH ROGEN', 'JAMES FRANCO'], ccol=(30, 30, 30),
+    ft='c', fcol=(30, 30, 30), fin=MINT, seed=2008)
+
+# Ponyo (2008): Studio Ghibli, a slipcase like Kiki's; the poster's sea blue, its white PONYO lifted, Ponyo in her bubble
+std('ponyo-2008', ('grad', [(0, (30, 120, 200)), (.5, (20, 90, 170)), (1, (10, 40, 90))]), WHT,
+    L((0.02, 0.06, 0.98, 0.205), 140, WHT, mode='light'),
+    photo=ph(0.48, 0.62, 0.5, 0.9), pb=(240, 90, 80), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'HAYAO MIYAZAKI'], ccol=WHT,
+    ft='e', fcol=(200, 226, 250), fin=MINT, seed=2008)
+
+# Role Models (2008): Universal, the poster's white wall, its navy ROLE MODELS lifted, Paul Rudd and Seann William Scott with the kids
+std('role-models-2008', ('grad', [(0, (240, 240, 236)), (.6, (210, 214, 220)), (1, (100, 110, 130))]), (20, 40, 110),
+    L((0.025, 0.026, 0.975, 0.098), 110, (20, 40, 110), mode='key', key=(20, 40, 110)),
+    photo=ph(0.5, 0.5, 0.86, 1.3), pb=(20, 40, 110), lg=(20, 30, 60), lw=.55, order='LPTCF', credit=['PAUL RUDD', 'SEANN WILLIAM SCOTT'], ccol=(20, 30, 60),
+    ft='a', fcol=(20, 30, 60), fin=MINT, seed=2008)
+
+# Slumdog Millionaire (2008): Fox Searchlight (Celador), the poster's black, its orange and yellow slumdog / millionaire cut off it into one line, Jamal and Latika in the lights
+std('slumdog-millionaire-2008', ('grad', [(0, (40, 20, 30)), (.6, (10, 6, 8)), (1, (0, 0, 0))]), (250, 170, 30),
+    LC([(0.18, 0.108, 0.72, 0.2), (0.38, 0.2, 0.9, 0.29)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .7) & (a[..., 2] < .3), minf=.02)] * 2),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 170, 30), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 210, 40), ink=(30, 20, 10)),
+    ft='b', fcol=(230, 200, 180), fin=MINT, seed=2008)
+
+# Step Brothers (2008): Columbia, the poster's blue portrait ground, its red STEP and white BROTHERS cut off it into one line, Will Ferrell and John C. Reilly in their sweaters
+std('step-brothers-2008', ('grad', [(0, (100, 130, 190)), (.6, (40, 60, 110)), (1, (10, 14, 30))]), WHT,
+    LC([(0.05, 0.67, 0.42, 0.746), (0.16, 0.744, 0.95, 0.825)], 120, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) > .85) | ((a[..., 0] > .7) & (a[..., 1] < .2)), minf=.03)] * 2),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['WILL FERRELL', 'JOHN C. REILLY'], ccol=WHT,
+    ft='d', vbox=(220, 30, 30), fcol=(200, 210, 230), fin=MINT, seed=2008)
+
+# Synecdoche, New York (2008): Sony Pictures Classics (Likely Story), the poster's sepia city, its white boxed SYNECDOCHE / NEW YORK lifted into one line, the street of buildings and the hand from the sky
+std('synecdoche-new-york-2008', ('grad', [(0, (120, 100, 60)), (.6, (40, 32, 18)), (1, (6, 4, 2))]), WHT,
+    L([(0.11, 0.31, 0.87, 0.398), (0.11, 0.398, 0.87, 0.48)], 100, WHT, mode='light', valign='base', gapf=.2),
+    photo=ph(0.5, 0.75, 0.86, 0.85), pb=(230, 200, 140), lg=WHT, lw=.5, order='LTPCF', credit=['PHILIP SEYMOUR HOFFMAN'], ccol=WHT,
+    ft='e', fcol=(220, 200, 170), fin=MINT, seed=2008)
+
+# Taken (2008): EuropaCorp, the poster's black, its orange TAKEN lifted, Liam Neeson in shadow
+std('taken-2008', ('grad', [(0, (40, 30, 24)), (.6, (10, 8, 6)), (1, (0, 0, 0))]), (240, 120, 40),
+    L((0.07, 0.395, 0.925, 0.466), 110, (240, 120, 40), mode='key', key=(240, 120, 40)),
+    photo=ph(0.5, 0.2, 0.7, 0.85), pb=(240, 120, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 0130', top='ACTION', fill=(240, 236, 226)),
+    ft='a', fcol=(210, 200, 190), fin=MINT, seed=2008)
+
+# The Dark Knight (2008): Warner Bros., the poster's smoky blue, its spaced white THE DARK KNIGHT lifted, the burning bat on the tower and Batman below
+std('the-dark-knight-2008', ('grad', [(0, (40, 60, 90)), (.6, (10, 16, 26)), (1, (0, 2, 4))]), WHT,
+    L((0.12, 0.853, 0.885, 0.88), 90, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.3, 0.86, 0.85), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTCF', credit=['CHRISTIAN BALE', 'HEATH LEDGER'], ccol=WHT,
+    ft='c', fcol=(180, 196, 210), fin=MINT, seed=2008)
+
+# The Fall (2008): Radical Media, the poster's night sky, The Fall typeset in a tall serif in its red (parked for Ian's logo, see data/logos-wanted.md: the thin red script with its long flourishes lost The in both cuts), the red cloth spilling down the white sheet
+std('the-fall-2008', ('grad', [(0, (10, 14, 40)), (.5, (40, 60, 110)), (1, (150, 130, 100))]), (200, 30, 40),
+    T('The Fall', 'pagb', 120, (200, 30, 40)),
+    photo=ph(0.4, 0.6, 0.5, 1.9), pb=(200, 20, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'TARSEM SINGH'], ccol=WHT,
+    ft='b', fcol=(40, 30, 30), fin=MINT, seed=2008)
+
+# The Hurt Locker (2008): Voltage, the poster's dust grey, its gold THE HURT / LOCKER lifted into one line, the bomb suit in the blast and Jeremy Renner below
+std('the-hurt-locker-2008', ('grad', [(0, (70, 64, 52)), (.5, (30, 28, 22)), (1, (8, 6, 4))]), (200, 170, 90),
+    L([(0.27, 0.38, 0.42, 0.416), (0.19, 0.41, 0.93, 0.516), (0.04, 0.512, 0.7, 0.577)], 110, (200, 170, 90), mode='key', key=(190, 160, 80), valign='base', gapf=.2),
+    photo=ph(0.5, 0.82, 0.86, 0.55), pb=(200, 170, 90), lg=WHT, lw=.5, order='LTPF',
+    ft='d', vbox=(200, 170, 90), vink=(30, 26, 20), fcol=(220, 200, 160), fin=MINT, seed=2008)
