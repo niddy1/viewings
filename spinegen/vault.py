@@ -6213,3 +6213,74 @@ std('the-drop-2014', ('grad', [(0, (230, 220, 200)), (.6, (190, 176, 150)), (1, 
     L([(0.38, 0.415, 0.6, 0.468), (0.1, 0.47, 0.905, 0.585)], 110, (210, 70, 40), mode='key', key=(210, 70, 40), valign='base', gapf=.25),
     photo=ph(0.5, 0.2, 0.86, 0.6), pb=(210, 70, 40), lg=(30, 24, 20), lw=.55, order='LPTCF', credit=['TOM HARDY', 'NOOMI RAPACE'], ccol=(30, 24, 20),
     ft='c', fcol=(40, 30, 20), fin=MINT, seed=2014)
+
+# The Equalizer (2014): Columbia, the poster's rain grey, its red slanted THE EQUALIZER cut off it and turned level, Denzel Washington in the rain
+std('the-equalizer-2014', ('grad', [(0, (90, 90, 90)), (.6, (24, 24, 24)), (1, (0, 0, 0))]), (210, 30, 30),
+    LC([(0.05, 0.735, 0.96, 0.905)], 110, cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .3), minf=.02, close=2, rot=-8)]),
+    photo=ph(0.6, 0.3, 0.8, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['DENZEL WASHINGTON'], ccol=WHT,
+    ft='a', fcol=(210, 210, 210), fin=MINT, seed=2014)
+
+# The Grand Budapest Hotel (2014): Fox Searchlight, the poster's lilac mountains, THE GRAND BUDAPEST HOTEL typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters sit on the sunlit mountains of the same tones and both cuts lost their middles), the pink hotel
+std('the-grand-budapest-hotel-2014', ('grad', [(0, (110, 60, 100)), (.5, (80, 36, 70)), (1, (30, 10, 24))]), (230, 200, 130),
+    [T('THE GRAND BUDAPEST', 'pagb', 90, (230, 200, 130)), T('HOTEL', 'pagb', 50, (230, 200, 130))], tgap=8,
+    photo=ph(0.5, 0.6, 0.86, 0.6), pb=(230, 200, 130), lg=WHT, lw=.5, order='LPTCF', credit=['A WES ANDERSON FILM'], ccol=WHT,
+    ft='e', fcol=(240, 220, 230), fin=MINT, seed=2014)
+
+# The Guest (2014): Picturehouse (HanWay), the poster's black, its cream THE / GUEST cut off it into one line, Dan Stevens in the neon prism
+std('the-guest-2014', ('grad', [(0, (90, 30, 140)), (.5, (30, 10, 60)), (1, (0, 0, 4))]), (250, 236, 220),
+    LC([(0.37, 0.565, 0.59, 0.64), (0.1, 0.64, 0.9, 0.79)], 120, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (_lum(a) > .85) & (a[..., 0] > a[..., 2] + .02), minf=.08, close=2, fillh=True)] * 2),
+    photo=ph(0.55, 0.3, 0.7, 0.85), pb=(200, 60, 220), lg=WHT, lw=.5, order='LPTSF', dotst=('THRILLER', (200, 60, 220), WHT),
+    ft='c', fcol=(220, 210, 240), fin=MINT, seed=2014)
+
+# The Hobbit: The Battle of the Five Armies (2014): Warner Bros. (New Line), the poster's dusk, its bronze THE HOBBIT with THE BATTLE OF THE FIVE ARMIES cut off it whole, Bilbo, Gandalf and Thorin
+std('the-hobbit-the-battle-of-the-five-armies-2014', ('grad', [(0, (90, 80, 60)), (.6, (24, 20, 14)), (1, (2, 2, 0))]), (220, 180, 110),
+    LC([(0.1, 0.755, 0.92, 0.945)], 120, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 0] > a[..., 2] + .1) & (_lum(a) > .4), minf=.005, close=2)]),
+    photo=ph(0.5, 0.3, 0.86, 1.0), pb=(220, 180, 110), lg=WHT, lw=.5, order='LPTCF', credit=['MARTIN FREEMAN', 'IAN McKELLEN'], ccol=WHT,
+    ft='d', vbox=(220, 180, 110), vink=(20, 16, 10), fcol=(220, 210, 180), fin=MINT, seed=2014)
+
+# The Hunger Games: Mockingjay - Part 1 (2014): Lionsgate, the poster's black, its gold THE HUNGER GAMES: / MOCKINGJAY / PART I cut off it into one line, the mockingjay in flames
+std('the-hunger-games-mockingjay-part-1-2014', ('grad', [(0, (100, 40, 10)), (.6, (24, 10, 4)), (1, (0, 0, 0))]), (230, 180, 70),
+    LC([(0.22, 0.86, 0.79, 0.882), (0.16, 0.885, 0.84, 0.924), (0.4, 0.928, 0.59, 0.953)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .35) & (a[..., 0] > a[..., 2] + .12), minf=.04, close=2)] * 3),
+    photo=ph(0.5, 0.4, 0.86, 1.0), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTF',
+    ft='b', fcol=(220, 200, 180), fin=MINT, seed=2014)
+
+# The King of Arcades (2014): Tiedebaby Films (no logo file; production companies from IMDb), the arcade's black, its yellow and red KING OF / ARCADES cut off it whole, Richie Knucklez with his fists up before the cabinet
+std('the-king-of-arcades-2014', ('grad', [(0, (40, 40, 110)), (.6, (10, 10, 30)), (1, (0, 0, 4))]), (250, 210, 30),
+    LC([(0.12, 0.665, 0.88, 0.815)], 130, cuts=[comp_cut(lambda a: (a[..., 0] > .65) & (a[..., 2] < .35), minf=.01, close=3, fillh=True)]),
+    photo=ph(0.5, 0.3, 0.86, 0.6), pb=(250, 210, 30), lg=WHT, lw=.5, order='lPTCF', studio=['TIEDEBABY FILMS'], scol=WHT, credit=['A DOCUMENTARY BY', 'SEAN TIEDEMAN'], ccol=WHT,
+    ft='e', fcol=(200, 200, 230), fin=MINT, seed=2014)
+
+# The Theory of Everything (2014): Focus Features (Working Title), the poster's blue chalkboard sky, its white THE THEORY OF EVERYTHING lifted, Eddie Redmayne and Felicity Jones lying in the grass
+std('the-theory-of-everything-2014', ('grad', [(0, (60, 90, 130)), (.6, (20, 34, 56)), (1, (4, 8, 14))]), WHT,
+    L([(0.05, 0.12, 0.93, 0.2), (0.11, 0.2, 0.89, 0.288)], 100, WHT, mode='light', valign='base', gapf=.2, speck=0),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EDDIE REDMAYNE', 'FELICITY JONES'], ccol=WHT,
+    ft='a', fcol=(200, 214, 230), fin=MINT, seed=2014)
+
+# Toy Story That Time Forgot (2014): Pixar (a TV special), so a clamshell; the poster's dusk, its TOY STORY and gold THAT TIME / FORGOT cut off it in reading order, Trixie's face in the diamond
+disney('toy-story-that-time-forgot-2014', ('grad', [(0, (40, 30, 110)), (.5, (110, 60, 90)), (1, (60, 30, 20))]), fin=dict(CLAM, vivid=.25),
+       title=LC([(0.37, 0.035, 0.68, 0.13), (0.35, 0.125, 0.68, 0.2), (0.25, 0.225, 0.73, 0.4)], 150, gapf=.08, cuts=[ts_letters, ts_plate(.2, .8), comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] > .3) & (a[..., 2] < .4), minf=.02, close=3, fillh=True)]),
+       face=ph(.33, .6, .12, 1.4), lcol=WHT)
+
+# Veronica Mars (2014): Warner Bros., the poster's dark, its grey veronica and teal MARS lifted into one line, Kristen Bell with the camera and the film strip
+std('veronica-mars-2014', ('grad', [(0, (40, 60, 60)), (.6, (10, 16, 16)), (1, (0, 0, 0))]), (90, 200, 190),
+    LC([(0.22, 0.795, 0.79, 0.835)], 100, cuts=[comp_cut(lambda a: _lum(a) > .35, minf=.03, opn=1)]),
+    photo=ph(0.4, 0.4, 0.8, 1.0), pb=(90, 200, 190), lg=WHT, lw=.5, order='LPTCF', credit=['KRISTEN BELL'], ccol=WHT,
+    ft='c', fcol=(190, 210, 210), fin=MINT, seed=2014)
+
+# Wild (2014): Fox Searchlight, the desert's gold scrub, its white hand-drawn Wild lifted, Reese Witherspoon with her pack on the road
+std('wild-2014', ('grad', [(0, (120, 170, 210)), (.5, (170, 150, 80)), (1, (70, 60, 20))]), WHT,
+    L((0.13, 0.35, 0.85, 0.615), 140, WHT, mode='light', speck=.01),
+    photo=ph(0.75, 0.15, 0.5, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JEAN-MARC VALLÉE'], ccol=WHT,
+    ft='b', fcol=(250, 240, 220), fin=MINT, seed=2014)
+
+# American Ultra (2015): Lionsgate, the explosion's fire, its yellow italic AMERICAN / ULTRA cut off it into one line, Jesse Eisenberg and Kristen Stewart walking away from it
+std('american-ultra-2015', ('grad', [(0, (60, 40, 30)), (.5, (180, 80, 20)), (1, (30, 10, 4))]), (250, 220, 40),
+    LC([(0.14, 0.065, 0.93, 0.29)], 130, outline=((30, 10, 4), 2), cuts=[comp_cut(lambda a: (a[..., 0] > .8) & (a[..., 1] > .7) & (a[..., 2] < .4), minf=.02, close=2)]),
+    photo=ph(0.5, 0.65, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 40), ink=(30, 10, 4)),
+    ft='d', vbox=(250, 220, 40), vink=(30, 10, 4), fcol=(240, 210, 180), fin=MINT, seed=2015)
+
+# Ant-Man (2015): Marvel, a slipcase; the poster's blue, its red ANT-MAN lifted, Ant-Man in his suit with the cast
+std('ant-man-2015', ('grad', [(0, (50, 90, 130)), (.6, (14, 26, 40)), (1, (0, 2, 6))]), (210, 30, 30),
+    L((0.22, 0.78, 0.78, 0.89), 120, (210, 30, 30), mode='key', key=(190, 20, 30)),
+    photo=ph(0.5, 0.35, 0.86, 1.0), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['PAUL RUDD'], ccol=WHT,
+    ft='e', fcol=(200, 214, 226), fin=MINT, seed=2015)
