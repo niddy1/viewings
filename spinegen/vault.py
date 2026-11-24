@@ -6005,3 +6005,73 @@ std('the-tale-of-the-princess-kaguya-2013', ('grad', [(0, (250, 248, 246)), (.6,
     L([(0.17, 0.112, 0.82, 0.19), (0.38, 0.2, 0.6, 0.236), (0.17, 0.243, 0.82, 0.322), (0.17, 0.335, 0.83, 0.426)], 110, (30, 40, 50), mode='dark', valign='base', gapf=.25),
     photo=ph(0.6, 0.8, 0.8, 0.5), pb=(230, 120, 160), lg=(30, 40, 50), lw=.55, order='LTPCF', credit=['A FILM BY', 'ISAO TAKAHATA'], ccol=(30, 40, 50),
     ft='b', fcol=(40, 40, 50), fin=MINT, seed=2013)
+
+# The Wolf of Wall Street (2013): Paramount (Red Granite), 180 minutes, so a 2-tape box; the party's gold, its THE WOLF / OF WALL STREET lifted off the yellow plate and inked in the plate's yellow, Leonardo DiCaprio in the chaos
+std('the-wolf-of-wall-street-2013', ('grad', [(0, (120, 90, 40)), (.6, (30, 22, 10)), (1, (2, 2, 0))]), (20, 20, 20),
+    L([(0.18, 0.094, 0.825, 0.166), (0.18, 0.169, 0.825, 0.214)], 110, (240, 180, 40), mode='dark', valign='base', gapf=.2),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(240, 180, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['A MARTIN SCORSESE PICTURE'], ccol=WHT,
+    stick=TWOST((240, 180, 40), (20, 20, 20)), ft='b', fcol=(230, 210, 170), fin=MINT, seed=2013, **TWO)
+
+# Toy Story of Terror! (2013): Pixar (a TV special), so a clamshell; the haunted night, the poster's TOY STORY and green TERROR! cut off it into one line, Jessie's face in the diamond
+disney('toy-story-of-terror-2013', ('grad', [(0, (20, 40, 100)), (.5, (10, 24, 60)), (1, (2, 6, 20))]), fin=dict(CLAM, vivid=.25),
+       title=LC([(0.37, 0.14, 0.69, 0.245), (0.34, 0.235, 0.69, 0.295), (0.3, 0.3, 0.73, 0.39)], 150, gapf=.08, cuts=[ts_letters, ts_plate(.2, .8), comp_cut(lambda a: (a[..., 1] > .45) & (a[..., 1] > a[..., 2] + .1), minf=.02, close=2, fillh=True)]),
+       face=ph(.3, .6, .12, 1.4), lcol=WHT)
+
+# 22 Jump Street (2014): Columbia, the spring-break crowd, 22 JUMP STREET typeset in heavy capitals, chrome, red and chrome like the poster's (parked for Ian's logo, see data/logos-wanted.md: the chrome letters melt into the bright crowd behind them and both cuts lost them), Jonah Hill and Channing Tatum in their shades
+std('22-jump-street-2014', ('grad', [(0, (60, 160, 220)), (.5, (40, 100, 160)), (1, (10, 20, 40))]), WHT,
+    TT([('22', (210, 214, 220)), ('JUMP', (220, 30, 30)), ('STREET', (210, 214, 220))], 'intbk', 110, outline=((10, 10, 20), 2.2)),
+    photo=ph(0.5, 0.5, 0.86, 1.0), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.99', 'COMEDY']),
+    ft='a', fcol=(220, 230, 240), fin=MINT, seed=2014)
+
+# A Most Violent Year (2014): A24 (Participant), the poster's black, its lilac serif A MOST / VIOLENT / YEAR lifted into one line, Oscar Isaac and Jessica Chastain in profile
+std('a-most-violent-year-2014', ('grad', [(0, (50, 46, 50)), (.6, (12, 10, 12)), (1, (0, 0, 0))]), (190, 150, 240),
+    L([(0.33, 0.65, 0.935, 0.738), (0.245, 0.738, 0.935, 0.824), (0.48, 0.824, 0.93, 0.912)], 110, (190, 150, 240), mode='key', key=(180, 140, 230), valign='base', gapf=.35),
+    photo=ph(0.55, 0.25, 0.86, 0.6), pb=(190, 150, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'J.C. CHANDOR'], ccol=WHT,
+    ft='c', fcol=(200, 196, 206), fin=MINT, seed=2014)
+
+# A Walk Among the Tombstones (2014): Universal (Jersey Films), the poster's snow white, its red A WALK AMONG THE / TOMBSTONES cut off it into one line, Liam Neeson in the graveyard
+std('a-walk-among-the-tombstones-2014', ('grad', [(0, (240, 240, 240)), (.5, (190, 196, 200)), (1, (40, 30, 30))]), (170, 30, 30),
+    LC([(0.3, 0.095, 0.69, 0.118), (0.15, 0.12, 0.83, 0.172)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .35) & (a[..., 0] > a[..., 1] + .2), minf=.02, opn=1)] * 2),
+    photo=ph(0.5, 0.55, 0.86, 1.3), pb=(170, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['LIAM NEESON'], ccol=(30, 30, 30),
+    ft='d', vbox=(170, 30, 30), fcol=(240, 236, 236), fin=MINT, seed=2014)
+
+# American Sniper (2014): Warner Bros., the poster's mist white, its black spaced serif AMERICAN SNIPER lifted, Bradley Cooper with the flag
+std('american-sniper-2014', ('grad', [(0, (230, 230, 230)), (.5, (180, 184, 186)), (1, (50, 50, 50))]), (20, 20, 20),
+    L((0.05, 0.122, 0.95, 0.172), 90, (20, 20, 20), mode='dark', speck=0),
+    photo=ph(0.55, 0.45, 0.86, 1.0), pb=(160, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTF',
+    ft='e', fcol=(30, 30, 30), fin=MINT, seed=2014)
+
+# An Honest Liar (2014): Abramorama (no logo file; production companies from IMDb), the poster's black, its white AN HONEST LIAR lifted, James Randi's face
+std('an-honest-liar-2014', ('grad', [(0, (70, 60, 50)), (.6, (16, 14, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.01, 0.876, 0.99, 0.988), 110, WHT, mode='light'),
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(210, 40, 40), lg=WHT, lw=.5, order='lPTCF', studio=['LEFT TURN FILMS', 'PURE MUTT PRODUCTIONS'], scol=WHT, credit=['A DOCUMENTARY BY', 'MEASOM & WEINSTEIN'], ccol=WHT,
+    ft='b', fcol=(220, 210, 200), fin=MINT, seed=2014)
+
+# Big Hero 6 (2014): Walt Disney Animation, so a clamshell; San Fransokyo's night, the poster's white BIG / HERO / 6 on its red panel cut off it whole, Hiro's face in the diamond
+disney('big-hero-6-2014', ('grad', [(0, (30, 60, 130)), (.5, (16, 30, 80)), (1, (4, 8, 26))]), fin=dict(CLAM, vivid=.2),
+       title=LC([(0.54, 0.65, 0.94, 0.99)], 150, margin=0, cuts=[plate_cut(lambda a: ((a[..., 0] > .6) & (a[..., 1] < .3)) | (_lum(a) > .85))]),
+       face=ph(.31, .17, .1, 1.4), lcol=WHT)
+
+# Birdman or (The Unexpected Virtue of Ignorance) (2014): Fox Searchlight (TSG), the poster's sage green, its spaced white BIRDMAN lifted, Michael Keaton under the Birdman
+std('birdman-or-the-unexpected-virtue-of-ignorance-2014', ('grad', [(0, (170, 190, 160)), (.5, (120, 140, 110)), (1, (60, 40, 30))]), WHT,
+    L((0.2, 0.82, 0.79, 0.87), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(60, 40, 30), lg=(40, 40, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'ALEJANDRO G. IÑÁRRITU'], ccol=WHT,
+    ft='c', fcol=(240, 240, 230), fin=MINT, seed=2014)
+
+# Blue Ruin (2014): RADiUS-TWC (Paradise City), the poster's dusk, BLUE RUIN typeset in heavy black capitals (parked for Ian's logo, see data/logos-wanted.md: the giant letters fill the poster with Dwight's face showing through them, so a cut keeps the face), the car on the road at sunset
+std('blue-ruin-2014', ('grad', [(0, (80, 140, 170)), (.5, (110, 130, 150)), (1, (220, 120, 80))]), (16, 16, 16),
+    T('BLUE RUIN', 'intbk', 120, (16, 16, 16)),
+    photo=ph(0.5, 0.88, 0.86, 0.3), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LTPCF', credit=['WRITTEN & DIRECTED BY', 'JEREMY SAULNIER'], ccol=(16, 16, 16),
+    ft='a', fcol=(20, 20, 20), fin=MINT, seed=2014)
+
+# Boyhood (2014): IFC, the poster's green grass, its white hand-written Boyhood lifted, Mason lying in the grass
+std('boyhood-2014', ('grad', [(0, (90, 150, 50)), (.5, (60, 120, 40)), (1, (20, 50, 10))]), WHT,
+    L((0.01, 0.168, 0.965, 0.34), 120, WHT, mode='light', speck=.01),
+    photo=ph(0.5, 0.75, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'RICHARD LINKLATER'], ccol=WHT,
+    ft='d', vbox=WHT, vink=(30, 70, 20), fcol=(220, 240, 200), fin=MINT, seed=2014)
+
+# Burt's Buzz (2014): FilmBuff (no logo file; production companies from IMDb), the poster's honeycomb yellow, its black BURT'S / BUZZ lifted into one line, Burt's woodcut face and the bees
+std('burt-s-buzz-2014', ('grad', [(0, (250, 220, 80)), (.5, (240, 200, 60)), (1, (150, 110, 20))]), (16, 16, 16),
+    L([(0.07, 0.048, 0.94, 0.192), (0.07, 0.2, 0.94, 0.39)], 110, (16, 16, 16), mode='dark', valign='base', gapf=.2),
+    photo=ph(0.6, 0.75, 0.8, 0.6), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='lTPCF', studio=['EVERYDAY PICTURES', 'BUFFALO GAL PICTURES'], scol=(16, 16, 16), credit=['A DOCUMENTARY BY', 'JODY SHAPIRO'], ccol=(16, 16, 16),
+    ft='b', fcol=(30, 20, 10), fin=MINT, seed=2014)

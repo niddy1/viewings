@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Blue Ruin (2014) | Vault 2010s | `logos/blue-ruin-2014-title.png` | typeset; giant letters with Dwight's face showing through, a cut keeps the face |
+| 22 Jump Street (2014) | Vault 2010s | `logos/22-jump-street-2014-title.png` | typeset; chrome letters melt into the bright crowd |
 | The Crash Reel (2013) | Vault 2010s | `logos/the-crash-reel-2013-title.png` | typeset; photo-filled letters, neither cut found their edges |
 | Now You See Me (2013) | Vault 2010s | `logos/now-you-see-me-2013-title.png` | typeset; the title is the floor in steep perspective under the cast |
 | Wreck-It Ralph (2012) | Vault 2010s | `logos/wreck-it-ralph-2012-title.png` | typeset; Ralph and Calhoun stand in front of WRECK-IT, the cut came away in pieces |
