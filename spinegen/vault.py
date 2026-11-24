@@ -4817,3 +4817,75 @@ std('v-for-vendetta-2006', ('grad', [(0, (190, 30, 30)), (.5, (60, 10, 10)), (1,
     L([(0.16, 0.77, 0.46, 0.838), (0.3, 0.853, 0.855, 0.92)], 110, WHT, mode='light', valign='base', gapf=.2, speck=0),
     photo=ph(0.55, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 40), ink=(20, 16, 12)),
     ft='d', vbox=(200, 30, 30), fcol=(220, 200, 200), fin=MINT, seed=2006)
+
+# Alvin and the Chipmunks (2007): Fox 2000, a slipcase; the poster's white, its red ALVIN and THE CHIPMUNKS cut off it into one line, Alvin, Simon and Theodore with Jason Lee
+std('alvin-and-the-chipmunks-2007', ('grad', [(0, (250, 250, 250)), (.6, (230, 236, 244)), (1, (140, 160, 200))]), (200, 30, 30),
+    LC([(0.03, 0.1, 0.585, 0.19), (0.03, 0.214, 0.585, 0.248)], 120, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] < .35))] * 2),
+    photo=ph(0.48, 0.65, 0.9, 0.85), pb=(200, 30, 30), lg=(30, 30, 40), lw=.55, order='LPTSF', dotst=('FAMILY', (250, 210, 40), (30, 30, 30)),
+    ft='b', fcol=(40, 40, 60), fin=MINT, seed=2007)
+
+# American Gangster (2007): Universal (Imagine), the poster's black, its black serif AMERICAN / GANGSTER lifted into one line onto the poster's own white band, Denzel Washington above, Russell Crowe below
+std('american-gangster-2007', ('grad', [(0, (30, 30, 30)), (.6, (8, 8, 8)), (1, (0, 0, 0))]), WHT,
+    L([(0.07, 0.428, 0.88, 0.505), (0.07, 0.532, 0.93, 0.61)], 100, (16, 16, 16), mode='dark', valign='base', gapf=.25, speck=0, plate=(WHT, 10, 8)),
+    photo=ph(0.4, 0.17, 0.7, 0.9), pb=(170, 20, 30), lg=WHT, lw=.5, order='LPTCF', credit=['DENZEL WASHINGTON', 'RUSSELL CROWE'], ccol=WHT,
+    ft='a', vbox=(170, 20, 30), fcol=(200, 200, 200), fin=MINT, seed=2007)
+
+# Atonement (2007): Focus Features, the poster's poppy field, its dark spaced ATONEMENT lifted onto the sky's pale, Keira Knightley in the field
+std('atonement-2007', ('grad', [(0, (226, 226, 222)), (.5, (200, 196, 180)), (1, (190, 120, 40))]), (30, 30, 30),
+    L((0.1, 0.476, 0.91, 0.532), 90, (30, 30, 30), mode='dark', speck=.02),
+    photo=ph(0.72, 0.8, 0.5, 1.1), pb=(200, 40, 30), lg=(30, 30, 30), lw=.55, order='LTPF',
+    ft='d', fcol=(40, 30, 20), fin=MINT, seed=2007)
+
+# Eastern Promises (2007): Focus Features, the poster's black, its red EASTERN / PROMISES lifted into one line, the tattooed hand
+std('eastern-promises-2007', ('grad', [(0, (30, 26, 26)), (.6, (8, 6, 6)), (1, (0, 0, 0))]), (210, 30, 30),
+    L([(0.13, 0.752, 0.87, 0.853), (0.13, 0.855, 0.87, 0.94)], 110, (210, 30, 30), mode='key', key=(200, 30, 30), valign='base', gapf=.25),
+    photo=ph(0.5, 0.35, 0.86, 1.3), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG FILM'], ccol=WHT,
+    ft='c', fcol=(200, 190, 190), fin=MINT, seed=2007)
+
+# Enchanted (2007): Disney, live action, so a slipcase; the poster's royal blue, Enchanted typeset in a gold script (parked for Ian's logo, see data/logos-wanted.md: the gold scroll sits on a gold-rimmed plaque and both cuts broke it up), Giselle, Robert and Edward
+std('enchanted-2007', ('grad', [(0, (40, 80, 190)), (.5, (20, 40, 120)), (1, (6, 10, 40))]), (240, 200, 90),
+    T('Enchanted', 'curbi', 120, (240, 200, 90), outline=((16, 30, 90), 2.4)),
+    photo=ph(0.5, 0.75, 0.86, 0.7), pb=(240, 200, 90), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 150, 200), ink=(40, 20, 40)),
+    ft='e', fcol=(220, 220, 250), fin=MINT, seed=2007)
+
+# Fracture (2007): New Line, the poster's black, its white cracked serif FRACTURE lifted, Anthony Hopkins above and Ryan Gosling below
+std('fracture-2007', ('grad', [(0, (40, 40, 44)), (.6, (10, 10, 12)), (1, (0, 0, 0))]), WHT,
+    L((0.1, 0.465, 0.91, 0.555), 100, WHT, mode='light', speck=0),
+    photo=ph(0.5, 0.2, 0.86, 0.5), pb=(190, 190, 200), lg=WHT, lw=.5, order='LPTCF', credit=['ANTHONY HOPKINS', 'RYAN GOSLING'], ccol=WHT,
+    ft='b', fcol=(190, 190, 200), fin=MINT, seed=2007)
+
+# Gone Baby Gone (2007): Miramax, the poster's dusk amber, its white GONE and orange BABY cut off it in their own colours, Casey Affleck and the cast
+std('gone-baby-gone-2007', ('grad', [(0, (60, 40, 20)), (.5, (180, 110, 40)), (1, (20, 12, 6))]), WHT,
+    LC([(0.05, 0.482, 0.95, 0.537)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .8) | ((a[..., 0] > .8) & (a[..., 1] > .45) & (a[..., 2] < .3)), minf=.03)]),
+    photo=ph(0.5, 0.25, 0.9, 0.6), pb=(240, 170, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'BEN AFFLECK'], ccol=WHT,
+    ft='a', fcol=(240, 220, 190), fin=MINT, seed=2007)
+
+# Harry Potter and the Order of the Phoenix (2007): Warner Bros., a slipcase; the poster's teal night, HARRY POTTER typeset in a silver serif with AND THE ORDER OF THE PHOENIX (parked with the others for Ian's logo, see data/logos-wanted.md), Harry, Ron and Hermione with their wands
+std('harry-potter-and-the-order-of-the-phoenix-2007', ('grad', [(0, (30, 80, 90)), (.6, (8, 24, 30)), (1, (2, 4, 6))]), (220, 226, 230),
+    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE ORDER OF THE PHOENIX', 'pagb', 42, (200, 220, 224))], tgap=8,
+    photo=ph(0.5, 0.6, 0.9, 1.0), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTF',
+    ft='c', fcol=(180, 210, 214), fin=MINT, seed=2007)
+
+# Hotel Chevalier (2007): Fox Searchlight, the poster's white, its navy HOTEL / CHEVALIER cut off it into one line, Natalie Portman in the watercolour Paris
+std('hotel-chevalier-2007', ('grad', [(0, (252, 252, 250)), (.6, (236, 240, 244)), (1, (190, 206, 220))]), (20, 40, 90),
+    LC([(0.25, 0.734, 0.76, 0.816), (0.145, 0.818, 0.855, 0.887)], 110, valign='base', margin=0, gapf=.25, cuts=[key_cut(lambda a: _lum(a) < .45)] * 2),
+    photo=ph(0.5, 0.4, 0.86, 0.9), pb=(240, 190, 30), lg=(20, 40, 90), lw=.55, order='LPTCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(20, 40, 90),
+    ft='d', vbox=(20, 40, 90), fcol=(20, 40, 90), fin=MINT, seed=2007)
+
+# Into the Wild (2007): Paramount Vantage (River Road), the poster's sky, its teal INTO THE WILD lifted, Chris on the roof of the bus
+std('into-the-wild-2007', ('grad', [(0, (150, 200, 230)), (.5, (200, 226, 240)), (1, (100, 130, 90))]), (20, 70, 90),
+    L((0.04, 0.274, 0.962, 0.352), 110, (20, 70, 90), mode='dark', speck=0),
+    photo=ph(0.5, 0.75, 0.86, 0.5), pb=(20, 70, 90), lg=(20, 50, 70), lw=.55, order='LTPSF', stick=BAR('07 0921', top='DRAMA', fill=(236, 240, 220)),
+    ft='e', fcol=(20, 40, 50), fin=MINT, seed=2007)
+
+# Juno (2007): Fox Searchlight (Mandate), the poster's orange stripes, its green JUNO with its black shadow cut off it in its own colours, Juno and Bleeker
+std('juno-2007', ('grad', [(0, (240, 100, 30)), (.5, (250, 140, 60)), (1, (140, 50, 10))]), (120, 200, 60),
+    LC([(0.46, 0.33, 0.945, 0.43)], 130, outline=(WHT, 2.4), cuts=[comp_cut(lambda a: ((a[..., 1] > .55) & (a[..., 2] < .4) & (a[..., 0] < .8)) | (_lum(a) < .2), keep=lambda cx, cy: cx > .08, minf=.12)]),
+    photo=ph(0.27, 0.45, 0.48, 1.6), pb=WHT, lg=WHT, lw=.5, order='LPTF',
+    ft='a', fcol=(40, 20, 10), fin=MINT, seed=2007)
+
+# Knocked Up (2007): Universal (Apatow), the poster's green, its red KNOCKED UP lifted, Katherine Heigl and Seth Rogen in the waiting room
+std('knocked-up-2007', ('grad', [(0, (150, 200, 90)), (.5, (120, 180, 70)), (1, (40, 70, 20))]), (210, 30, 40),
+    L((0.03, 0.09, 0.975, 0.19), 110, (210, 30, 40), mode='key', key=(210, 30, 40)),
+    photo=ph(0.5, 0.65, 0.9, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['SETH ROGEN', 'KATHERINE HEIGL'], ccol=(20, 30, 10),
+    ft='b', fcol=(20, 30, 10), fin=MINT, seed=2007)

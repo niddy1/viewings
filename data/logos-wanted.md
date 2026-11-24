@@ -6,6 +6,7 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| Enchanted (2007) | Vault 2000s | `logos/enchanted-2007-title.png` | typeset in a script; the gold scroll sits on a gold-rimmed plaque and both cuts broke it up |
 | The Lives of Others (2006) | Vault 2000s | `logos/the-lives-of-others-2006-title.png` | typeset in mono; the typewriter T touches the pale bedsheet and the cut breaks it |
 | Pirates of the Caribbean: Dead Man's Chest (2006) | Vault 2000s | `logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png` | typeset; same as the first Pirates (one logo would serve both) |
 | Lucky Number Slevin (2006) | Vault 2000s | `logos/lucky-number-slevin-2006-title.png` | typeset; slanted banner across the cast's faces |
