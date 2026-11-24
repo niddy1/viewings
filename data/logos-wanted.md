@@ -6,6 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
+| The Man from U.N.C.L.E. (2015) | Vault 2010s | `logos/the-man-from-u-n-c-l-e-2015-title.png` | typeset; the suits stand in front of the U and E |
+| Victoria (2015) | Vault 2010s | `logos/victoria-2015-title.png` | typeset; translucent letters over the lit face take its colours |
 | Mission: Impossible - Rogue Nation (2015) | Vault 2010s | `logos/mission-impossible-rogue-nation-2015-title.png` | typeset; stunt figures behind the letters came away with them, the tighter cut lost the I |
 | Dope (2015) | Vault 2010s | `logos/dope-2015-title.png` | typeset; distressed white letters run into the white frame, cuts broke D and lost E |
 | Aziz Ansari: Live at Madison Square Garden (2015) | Vault 2010s | `logos/aziz-ansari-live-at-madison-square-garden-2015-title.png` | typeset; bulb-lit letters in steep perspective |

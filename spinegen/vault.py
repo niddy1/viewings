@@ -6354,3 +6354,39 @@ std('mission-impossible-rogue-nation-2015', ('grad', [(0, (250, 250, 250)), (.6,
 disney('riley-s-first-date-2015', ('grad', [(0, (30, 30, 90)), (.5, (20, 20, 60)), (1, (6, 6, 24))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.13, 0.095, 0.87, 0.21), (0.13, 0.212, 0.87, 0.275)], 130, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .4), minf=.02, close=2, fillh=True)] * 2),
        face=ph(.5, .68, .28, 1.4), lcol=WHT)
+
+# The Gift (2015): STX (Blumhouse), the poster's black, its bronze THE GIFT cut off it, Joel Edgerton holding the wrapped box
+std('the-gift-2015', ('grad', [(0, (40, 36, 30)), (.6, (10, 10, 8)), (1, (0, 0, 0))]), (200, 170, 110),
+    LC([(0.14, 0.705, 0.84, 0.805)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .3) & (a[..., 0] > a[..., 2] + .05), minf=.03, close=3, fillh=True)]),
+    photo=ph(0.5, 0.38, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOEL EDGERTON'], ccol=WHT,
+    ft='c', fcol=(210, 200, 180), fin=MINT, seed=2015)
+
+# The Man from U.N.C.L.E. (2015): Warner Bros. (Davis Entertainment), the suits' charcoal, THE MAN FROM U.N.C.L.E. typeset in white capitals (parked for Ian's logo, see data/logos-wanted.md: the suits stand in front of the U and the E and both lifts broke them), Henry Cavill and Armie Hammer
+std('the-man-from-u-n-c-l-e-2015', ('grad', [(0, (50, 50, 50)), (.5, (24, 24, 24)), (1, (4, 4, 4))]), WHT,
+    [T('THE MAN FROM', 'intxb', 40, WHT), T('U.N.C.L.E.', 'intbk', 120, WHT)], tgap=6,
+    photo=ph(0.5, 0.18, 0.86, 0.5), pb=(240, 200, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SPY', (240, 200, 40), (20, 20, 20)),
+    ft='b', vbox=(240, 200, 40), vink=(20, 20, 20), fcol=(220, 220, 220), fin=MINT, seed=2015)
+
+# The Martian (2015): 20th Century Fox (Genre Films), a slipcase; Mars dust, the poster's white THE MARTIAN cut off the helmet, Matt Damon in his helmet
+std('the-martian-2015', ('grad', [(0, (200, 110, 60)), (.5, (130, 60, 30)), (1, (40, 16, 8))]), WHT,
+    LC([(0.1, 0.105, 0.905, 0.192)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .85) & (np.abs(a[..., 0] - a[..., 2]) < .12), minf=.02, opn=1)]),
+    photo=ph(0.5, 0.55, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['MATT DAMON'], ccol=WHT,
+    ft='d', vbox=WHT, vink=(130, 60, 30), fcol=(250, 220, 200), fin=MINT, seed=2015)
+
+# The Seven Five (2015): Sony (All3Media), the poster's grey Brooklyn, its blue serif THE / SEVEN FIVE lifted into one line, the mugshots along the top
+std('the-seven-five-2015', ('grad', [(0, (150, 150, 150)), (.6, (50, 50, 50)), (1, (6, 6, 6))]), (40, 70, 220),
+    L([(0.42, 0.79, 0.58, 0.826), (0.12, 0.837, 0.875, 0.894)], 110, (40, 70, 220), mode='key', key=(40, 70, 220), valign='base', gapf=.25),
+    photo=ph(0.5, 0.12, 0.86, 0.3), pb=(40, 70, 220), lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'TILLER RUSSELL'], ccol=WHT,
+    ft='a', fcol=(220, 220, 220), fin=MINT, seed=2015)
+
+# The Wolfpack (2015): Magnolia (Kotva Films), the poster's red, its black THE WOLFPACK lifted, the six brothers in their suits and shades
+std('the-wolfpack-2015', ('grad', [(0, (240, 70, 50)), (.5, (220, 50, 40)), (1, (110, 20, 14))]), (16, 16, 16),
+    L((0.09, 0.185, 0.91, 0.28), 110, (16, 16, 16), mode='key', key=(20, 20, 20)),
+    photo=ph(0.5, 0.7, 0.86, 0.6), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LTPSF', stick=RWD(fill=(250, 250, 250), ink=(16, 16, 16)),
+    ft='e', fcol=(30, 10, 6), fin=MINT, seed=2015)
+
+# Victoria (2015): Adopt Films (RadicalMedia), the poster's neon blue and orange, VICTORIA typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: the translucent white letters lie over Laia Costa's lit face and take its colours), her face
+std('victoria-2015', ('grad', [(0, (30, 60, 200)), (.5, (110, 40, 120)), (1, (220, 110, 40))]), WHT,
+    T('VICTORIA', 'intbk', 130, WHT),
+    photo=ph(0.5, 0.75, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['EIN FILM VON', 'SEBASTIAN SCHIPPER'], ccol=WHT,
+    ft='c', fcol=(240, 220, 210), fin=MINT, seed=2015)
