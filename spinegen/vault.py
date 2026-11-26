@@ -3608,7 +3608,7 @@ std('snatch-2000', ('grad', [(0, (250, 200, 40)), (.5, (240, 170, 30)), (1, (130
 # The Emperor's New Groove (2000): Disney clamshell; the jungle sky, the poster's blue plate with THE EMPEROR'S and its golden NEW GROOVE cut off it whole, Kuzco the llama in the diamond
 disney('the-emperor-s-new-groove-2000', ('grad', [(0, (80, 170, 230)), (.5, (60, 140, 210)), (1, (40, 110, 50))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.03, 0.02, 0.98, 0.23)], 140, cuts=[plate_cut(lambda a: (a[..., 2] > .35) & (a[..., 2] > a[..., 0] + .15), rot='auto')]),
-       face=ph(.6, .42, .2, 1.4), lcol=WHT)
+       face=ph(.6, .42, .3, 1.4), lcol=WHT)
 
 # The Road to El Dorado (2000): DreamWorks, a slipcase; the jungle's gold, the poster's gold THE ROAD TO / EL DORADO cut off it into one line, Tulio and Miguel on Altivo before the city
 std('the-road-to-el-dorado-2000', ('grad', [(0, (230, 180, 60)), (.5, (110, 120, 40)), (1, (20, 40, 10))]), (250, 220, 90),
@@ -4256,7 +4256,7 @@ std('harry-potter-and-the-prisoner-of-azkaban-2004', ('grad', [(0, (50, 70, 100)
 # Home on the Range (2004): Disney clamshell; the desert sky, the film's own title logo (Ian's image, logos/home-on-the-range-2004-title.png), which carries the Disney mark, so no separate studio logo, Maggie the cow's face in the diamond
 disney('home-on-the-range-2004', ('grad', [(0, (40, 80, 170)), (.5, (60, 120, 200)), (1, (200, 110, 50))]), fin=dict(CLAM, vivid=.2),
        title=Pic('logos/home-on-the-range-2004-title.png', 170), studio=False,
-       face=ph(.5, .48, .2, 1.4), lcol=WHT)
+       face=ph(.5, .48, .3, 1.4), lcol=WHT)
 
 # I Like Killing Flies (2004): the poster's parchment, I LIKE KILLING FLIES typeset in a hand-drawn-looking face in brown (kept typeset: Ian is happy with it, 26 Nov 2026: the scratchy pen lettering came out faint and broken), Kenny Shopsin's face under it (no logo file: THINKFilm, from IMDb's company credits; director from IMDb)
 std('i-like-killing-flies-2004', ('grad', [(0, (236, 210, 150)), (.5, (200, 160, 90)), (1, (80, 50, 20))]), (40, 30, 20),
