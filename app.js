@@ -32,16 +32,25 @@
   VAULT.forEach((d) => { SHELVES[d] = `vault-${d}.json`; });
   const YEARS = [...VAULT, ...Object.keys(SHELVES).filter((k) => !VAULT.includes(k)).map(Number).sort((a, b) => a - b)];
   const NEWEST = YEARS[YEARS.length - 1];
-  const SHELF = (() => { const p = new URLSearchParams(location.search).get('shelf') || ''; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : NEWEST; })();
+  // The Whole Store (?shelf=all): every tape from every shelf on one giant case, with divider cards between groups.
+  // It has no data file of its own: it is built from all of them (so the VCR and Re-mark spine stay off there).
+  const ALL = 'all';
+  const NAV = [...YEARS, ALL]; // the arrows' order: 1930s ... 2010s, 2016 ... 2026, then the Whole Store
+  const SHELF = (() => { const p = new URLSearchParams(location.search).get('shelf') || ''; if (p === ALL) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : NEWEST; })();
   const IN_VAULT = VAULT.includes(SHELF);
-  const DATA_FILE = SHELVES[SHELF];
-  const shelfName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
+  const IN_ALL = SHELF === ALL;
+  const DATA_FILE = IN_ALL ? null : SHELVES[SHELF];
+  const shelfName = (k) => (k === ALL ? 'All' : VAULT.includes(k) ? `Vault ${k}` : String(k));
   // The address of another shelf (keeping the sort where it means the same there), optionally with a tape pulled out.
   function shelfLink(y, tape) {
     const q = new URLSearchParams(location.search);
     q.delete('genre'); // genres differ from shelf to shelf
     q.delete('tape');
-    if (VAULT.includes(y) !== IN_VAULT) q.delete('sort'); // the Vault and the year shelves sort differently by default
+    // The Vault and the year shelves sort differently by default, so the sort is dropped crossing between them.
+    // The Whole Store takes every sort; leaving it keeps the sort unless the Vault has no such sort.
+    const sort = q.get('sort') || '';
+    const keep = y === ALL || (IN_ALL ? !(VAULT.includes(y) && sort.startsWith('watched')) : VAULT.includes(y) === IN_VAULT);
+    if (!keep) q.delete('sort');
     if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
     if (tape) q.set('tape', tape);
     const qs = q.toString();
@@ -49,7 +58,12 @@
   }
   (function shelfHeader() {
     const h1 = document.querySelector('h1.ticket'), img = h1 && h1.querySelector('img');
-    if (img && IN_VAULT) { // no ticket for the Vault: a plate in the shelf's lettering instead
+    if (img && IN_ALL) { // the Whole Store: a plate like the Vault's, no footnote
+      img.remove();
+      const plate = document.createElement('span'); plate.className = 'vault-plate all-plate'; plate.setAttribute('aria-hidden', 'true');
+      plate.innerHTML = '<span class="v2">The Whole</span><span class="v1">Store</span>';
+      h1.prepend(plate); h1.classList.add('vault');
+    } else if (img && IN_VAULT) { // no ticket for the Vault: a plate in the shelf's lettering instead
       img.remove();
       const plate = document.createElement('span'); plate.className = 'vault-plate'; plate.setAttribute('aria-hidden', 'true');
       plate.innerHTML = `<span class="v1">The Vault</span><span class="v2">${SHELF}</span>`;
@@ -63,18 +77,18 @@
         + 'The dates are lost to time, so these tapes are shelved by the decade they came out.</span>';
       h1.closest('.ticket-row').after(note);
     } else if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
-    $('year').textContent = IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
-    if (SHELF !== NEWEST) document.title = IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
+    $('year').textContent = IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
+    if (SHELF !== NEWEST) document.title = IN_ALL ? 'Viewings: the whole store' : IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
     // arrows either side of the ticket: older shelf on the left, newer on the right
     const link = shelfLink;
-    const i = YEARS.indexOf(SHELF);
-    [['shelf-prev', YEARS[i - 1]], ['shelf-next', YEARS[i + 1]]].forEach(([id, y]) => {
+    const i = NAV.indexOf(SHELF);
+    [['shelf-prev', NAV[i - 1]], ['shelf-next', NAV[i + 1]]].forEach(([id, y]) => {
       const a = $(id);
       if (!a) return;
       if (y == null) { a.hidden = true; return; }
       a.href = link(y);
       a.querySelector('.yr').textContent = shelfName(y);
-      a.setAttribute('aria-label', `${shelfName(y)} shelf`);
+      a.setAttribute('aria-label', y === ALL ? 'The whole store: every tape' : `${shelfName(y)} shelf`);
       a.hidden = false;
     });
   })();
@@ -82,7 +96,8 @@
   let spineEls = [];
   let current = -1;
   let order = [];      // indices into films, in shelf order, after sorting and the genre filter
-  const VIEW_DEFAULT = IN_VAULT ? { sort: 'year', dir: 1 } : { sort: 'watched', dir: 1 };
+  // The Vault and the Whole Store open by release year, oldest first (a walk from the 1930s to now).
+  const VIEW_DEFAULT = IN_VAULT || IN_ALL ? { sort: 'year', dir: 1 } : { sort: 'watched', dir: 1 };
   const view = { ...VIEW_DEFAULT, genres: new Set() };
 
   const hash = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
@@ -751,21 +766,27 @@
 
   function layout() {
     shelves.textContent = '';
+    if (spineIO) spineEls.forEach((el) => spineIO.unobserve(el)); // the old spines are thrown away
     spineEls = films.map(spineEl);
     // room inside the case: its width less the side panels (padding) and the gap at each end of a shelf
     const cs = getComputedStyle(shelves), gap = parseFloat(cs.getPropertyValue('--end-gap')) || 16;
     const avail = shelves.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 2 * gap;
+    // On the Whole Store a divider card goes in front of each group (decade, star rating, year watched...).
+    // Items are film indices, or divider objects. A card never ends a row on its own: it moves down with its first tape.
+    const items = [], groups = IN_ALL ? groupsOf(order) : null;
+    order.forEach((i, n) => { if (groups && groups.starts.has(n)) items.push(groups.starts.get(n)); items.push(i); });
+    const wOf = (it) => (typeof it === 'number' ? films[it]._w : DIVIDER_W);
     let row = [], used = 0, rows = [];
-    order.forEach((i) => {
-      const w = films[i]._w;
-      if (used + w > avail && row.length) { rows.push(row); row = []; used = 0; }
-      row.push(i); used += w;
+    items.forEach((it, n) => {
+      const w = wOf(it), next = typeof it === 'number' ? 0 : wOf(items[n + 1] ?? it);
+      if (used + w + next > avail && row.length) { rows.push(row); row = []; used = 0; }
+      row.push(it); used += w;
     });
     if (row.length) rows.push(row);
     rows.forEach((r) => {
       const wrap = document.createElement('div'); wrap.className = 'shelf-row';
       const shelf = document.createElement('div'); shelf.className = 'shelf';
-      r.forEach((i) => shelf.appendChild(spineEls[i]));
+      r.forEach((it) => shelf.appendChild(typeof it === 'number' ? spineEls[it] : dividerEl(it)));
       const board = document.createElement('div'); board.className = 'board';
       wrap.append(shelf, board);
       shelves.appendChild(wrap);
@@ -773,10 +794,51 @@
     if (current >= 0) spineEls[current].classList.add('out');
   }
 
+  /* ---------- divider cards (the Whole Store) ---------- */
+  // Like the section cards in a video store: one stands in front of each group of tapes, and the groups follow
+  // the sort: decades of release, my star ratings, IMDb scores, or the year watched (the Vault first).
+  const DIVIDER_W = 40;
+  function groupKey(f) {
+    switch (view.sort) {
+      case 'year': { const d = Math.floor((f.year || 0) / 10) * 10; return { k: d, big: `${d}s`, small: 'Released in the' }; }
+      case 'rating': {
+        const r = Math.floor(r10(f));
+        return r < 4 ? { k: 3, big: 'Under 4', small: 'My rating' } : { k: r, big: r === 10 ? '10' : `${r}`, small: 'My rating', stars: true };
+      }
+      case 'imdb': {
+        if (f.imdbRating == null) return { k: -1, big: 'No score', small: 'IMDb' };
+        const r = Math.floor(f.imdbRating);
+        return r < 5 ? { k: 4, big: 'Under 5', small: 'IMDb' } : { k: r, big: `${r}`, small: 'IMDb' };
+      }
+      default: return f._vault ? { k: 0, big: 'Vault', small: 'Watched before 2016' } : { k: +String(f.watched).slice(0, 4), big: String(f.watched).slice(0, 4), small: 'Watched in' };
+    }
+  }
+  function groupsOf(ord) {
+    const starts = new Map();
+    let cur = null;
+    ord.forEach((i, n) => {
+      const g = groupKey(films[i]);
+      if (!cur || cur.k !== g.k) { cur = { ...g, n: 0 }; starts.set(n, cur); }
+      cur.n++;
+    });
+    return { starts };
+  }
+  function dividerEl(g) {
+    const d = document.createElement('div');
+    d.className = 'divider' + (g.big.length > 5 ? ' long' : '');
+    d.setAttribute('role', 'heading'); d.setAttribute('aria-level', '2');
+    d.setAttribute('aria-label', `${g.small} ${g.big}${g.stars ? ' out of 10' : ''}: ${g.n} tape${g.n === 1 ? '' : 's'}`);
+    const big = g.stars ? `${g.big}<i>&#9733;</i>` : g.big.replace(/(\d)s$/, '$1<small>s</small>');
+    d.innerHTML = `<span class="tab">${g.n}</span><span class="txt"><span class="sm">${g.small}</span><span class="bg">${big}</span></span>`;
+    return d;
+  }
+
   /* ---------- sorting and the genre filter ---------- */
   const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1 }; // oldest viewing first; best and newest first
   const r10 = (f) => (f.rating10 != null ? f.rating10 : (f.rating || 0) * 2);
-  const byWatched = (a, b) => (a.watched || '').localeCompare(b.watched || '');
+  // On the Whole Store, Vault tapes (no real viewing date) come before everything watched since 2016.
+  const wkey = (f) => (f._vault ? '0' : f.watched || '');
+  const byWatched = (a, b) => wkey(a).localeCompare(wkey(b));
   const SORTS = {
     watched: byWatched,
     rating: (a, b) => r10(a) - r10(b),
@@ -918,7 +980,7 @@
     $('v-rating').innerHTML = stars(f);
     $('v-imdb').textContent = f.imdbRating != null ? `IMDb ${f.imdbRating.toFixed(1)}` : '';
     // Vault dates are when the film was rated in bulk, not watched (see the Vault note in the header)
-    $('v-watched').textContent = IN_VAULT ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
+    $('v-watched').textContent = IN_VAULT || f._vault ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
     $('v-note').textContent = f.note || '';
   }
@@ -1032,8 +1094,9 @@
   const shortName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
 
   // Go to a tape anywhere in the store: pull it out here, or load its shelf with it pulled out.
+  const isHere = (k) => IN_ALL || k === SHELF; // every tape is on the Whole Store
   function goTo(k, f) {
-    if (k === SHELF) { closeStore(); pullOut(tapeId(f)); }
+    if (isHere(k)) { closeStore(); pullOut(tapeId(f)); }
     else location.href = shelfLink(k, tapeId(f));
   }
 
@@ -1046,6 +1109,11 @@
         + `<span class="n">${n == null ? '&nbsp;' : `${n} tape${n === 1 ? '' : 's'}`}</span>`
         + (here ? '<span class="you">You are here</span>' : '') + '</a>';
     };
+    const total = stock ? stock.flat().length : null;
+    $('aisle-all').innerHTML = `<a class="bay all${IN_ALL ? ' here' : ''}" href="${shelfLink(ALL)}"${IN_ALL ? ' aria-current="page"' : ''}>`
+      + '<span class="nm">The Whole Store</span>'
+      + `<span class="n">${total == null ? '&nbsp;' : `Every tape, ${total.toLocaleString('en-US')} of them, on one case`}</span>`
+      + (IN_ALL ? '<span class="you">You are here</span>' : '') + '</a>';
     $('aisle-vault').innerHTML = VAULT.map(tile).join('');
     $('aisle-years').innerHTML = YEARS.filter((k) => !VAULT.includes(k)).slice().reverse().map(tile).join('');
     $('store-total').textContent = stock ? `${stock.flat().length.toLocaleString('en-US')} tapes on ${YEARS.length} shelves` : '';
@@ -1068,7 +1136,7 @@
         + `<span class="sp">${sp ? `<img src="${esc(sp)}" alt="" loading="lazy" onerror="this.remove()">` : ''}</span>`
         + `<span class="tx"><b>${esc(f.title)}</b><small>${esc(facts)}</small></span>`
         + `<span class="mine" title="My rating">${r10 ? +r10.toFixed(1) : '—'}<small>/10</small></span>`
-        + `<span class="where${e.k === SHELF ? ' here' : ''}">${e.k === SHELF ? 'This shelf' : shortName(e.k)}</span></a>`;
+        + `<span class="where${isHere(e.k) ? ' here' : ''}">${e.k === SHELF ? 'This shelf' : shortName(e.k)}</span></a>`;
     }).join('') + (total > hits.length ? `<p class="none">${total - hits.length} more: keep typing to narrow it down.</p>` : '');
     storeHits._hits = hits;
   }
@@ -1098,7 +1166,7 @@
   }
 
   async function surprise() {
-    const all = (await loadStore()).flat().filter((e) => !(e.k === SHELF && current >= 0 && tapeId(e.f) === tapeId(films[current])));
+    const all = (await loadStore()).flat().filter((e) => !(isHere(e.k) && current >= 0 && tapeId(e.f) === tapeId(films[current])));
     const e = all[Math.floor(Math.random() * all.length)];
     if (e) goTo(e.k, e.f);
   }
@@ -1116,7 +1184,7 @@
     const a = e.target.closest('.hit');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return; // let a new-tab click through
     const h = storeHits._hits[+a.dataset.j];
-    if (h.k === SHELF) { e.preventDefault(); goTo(h.k, h.f); }
+    if (isHere(h.k)) { e.preventDefault(); goTo(h.k, h.f); }
   });
   aisles.addEventListener('click', (e) => { // this shelf's tile just closes the directory
     const a = e.target.closest('.bay.here');
@@ -1128,7 +1196,7 @@
   $('lucky-btn').addEventListener('click', surprise);
   const ticket = document.querySelector('h1.ticket');
   ticket.tabIndex = 0; ticket.setAttribute('role', 'button'); ticket.title = 'All shelves';
-  ticket.setAttribute('aria-label', `Store directory (now showing ${IN_VAULT ? `the Vault, ${SHELF}` : SHELF})`);
+  ticket.setAttribute('aria-label', `Store directory (now showing ${IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF})`);
   ticket.addEventListener('click', () => openStore());
   ticket.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openStore(); } });
 
@@ -1154,6 +1222,7 @@
   window.viewings = {
     shelf: SHELF,        // the year on show, or the Vault's decade ('1990s')
     vault: IN_VAULT,
+    all: IN_ALL,         // the Whole Store: built from every shelf file, so vcr.js changes nothing here
     dataFile: DATA_FILE, // films.json for the newest year, films-<year>.json for older ones (vcr.js reads and commits this)
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },
@@ -1165,9 +1234,19 @@
   async function boot() {
     let data;
     const sizesP = fetch('posters/spines.json', { cache: 'no-cache' }).then((r) => r.json()).catch(() => null); // fetched alongside the shelf file
-    try { data = await (await fetch(DATA_FILE, { cache: 'no-cache' })).json(); }
-    catch { shelves.innerHTML = `<p style="text-align:center;opacity:.6">Couldn't load ${DATA_FILE}. Serve this folder over http (see README).</p>`; return; }
-    films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
+    if (IN_ALL) { // every shelf file (the same ones the store directory loads), Vault decades first, each year in watched order
+      const st = await loadStore();
+      films = st.flatMap((list, n) => {
+        const k = YEARS[n], fs = list.map((e) => e.f);
+        fs.forEach((f) => { f._k = k; f._vault = VAULT.includes(k); });
+        return VAULT.includes(k) ? fs.slice().sort((a, b) => (a.year || 0) - (b.year || 0)) : fs.slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
+      });
+      if (!films.length) { shelves.innerHTML = '<p style="text-align:center;opacity:.6">Couldn\'t load the shelves. Serve this folder over http (see README).</p>'; return; }
+    } else {
+      try { data = await (await fetch(DATA_FILE, { cache: 'no-cache' })).json(); }
+      catch { shelves.innerHTML = `<p style="text-align:center;opacity:.6">Couldn't load ${DATA_FILE}. Serve this folder over http (see README).</p>`; return; }
+      films = (data.films || []).slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
+    }
     loadView();
     computeOrder();
     renderControls();

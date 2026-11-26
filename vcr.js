@@ -121,7 +121,11 @@
     return commit;
   }
   // The shelf on show (?shelf=2025) has its own data file; app.js says which.
-  const DATA = () => (window.viewings && window.viewings.dataFile) || 'films.json';
+  // The Whole Store (?shelf=all) is built from every shelf file and has none of its own: never read or commit there.
+  const DATA = () => {
+    if (window.viewings && window.viewings.all) throw new Error('The Whole Store is every shelf at once, so nothing is saved from here. Open a year shelf to add ratings, or the tape\u2019s own shelf to re-mark it.');
+    return (window.viewings && window.viewings.dataFile) || 'films.json';
+  };
   const filmKey = (f) => f.imdb || `${f.title}|${f.year}`;
 
   const toBase64 = (blob) => new Promise((resolve, reject) => {
@@ -477,7 +481,7 @@
       spineBtn.addEventListener('click', () => { const f = window.viewings && window.viewings.current; if (f) openSpineEditor(f); });
       info.append(spineBtn);
     }
-    spineBtn.hidden = !store.get(KEYS.gh);
+    spineBtn.hidden = !store.get(KEYS.gh) || !!(window.viewings && window.viewings.all); // nothing to commit to on the Whole Store
   }
   syncSpineButton();
 
