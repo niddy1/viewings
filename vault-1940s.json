@@ -363,7 +363,7 @@
     {
       "title": "Casablanca",
       "rating": 4.5,
-      "rating10": 9,
+      "rating10": 8.5,
       "watched": "2007-01-13",
       "imdb": "tt0034583",
       "poster": "posters/casablanca-1943.jpg",
@@ -938,8 +938,8 @@
     },
     {
       "title": "Kind Hearts and Coronets",
-      "rating": 4.5,
-      "rating10": 9,
+      "rating": 5,
+      "rating10": 9.5,
       "watched": "2007-01-14",
       "imdb": "tt0041546",
       "poster": "posters/kind-hearts-and-coronets-1949.jpg",
