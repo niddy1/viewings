@@ -1289,10 +1289,10 @@ std('il-posto-1961', ('grad', [(0, (238, 232, 216)), (.6, (220, 210, 190)), (1, 
     LC([(0.05, 0.415, 0.545, 0.49)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4))]),
     photo=ph(0.55, 0.72, 0.86, 0.55), pb=(230, 190, 40), lg=(40, 40, 40), lw=.55, order='LTPF', ft='d', fcol=(40, 40, 40), fin=OLD, seed=1961)
 
-# One Hundred and One Dalmatians (1961): Disney, the white clamshell; the poster's sky blue, the title in the red One Hundred and One Dalmatians lettering from Ian's logo image (26 Nov 2026), Pongo's face in the red diamond
-disney('one-hundred-and-one-dalmatians-1961', cover='../spinegen/covers/one-hundred-and-one-dalmatians-1961.jpg', bg=('grad', [(0, (40, 90, 170)), (.5, (70, 130, 200)), (1, (30, 60, 110))]), fin=dict(CLAM, vivid=.2),
+# One Hundred and One Dalmatians (1961): Disney, the white clamshell; the new poster's yellow (Ian, 26 Nov 2026), the title in the red One Hundred and One Dalmatians lettering from Ian's logo image (26 Nov 2026), Pongo's face in the red diamond
+disney('one-hundred-and-one-dalmatians-1961', cover='../spinegen/covers/one-hundred-and-one-dalmatians-1961.jpg', bg=('grad', [(0, (252, 222, 20)), (.5, (251, 216, 0)), (1, (236, 196, 0))]), fin=dict(CLAM, vivid=.1),
        title=Pic('logos/one-hundred-and-one-dalmatians-1961-title.png', 170), side=4,
-       face=ph(.63, .2, .3, 1.4), lcol=WHT)
+       face=ph(.63, .2, .3, 1.4), lcol=(30, 30, 30), ink=(30, 30, 30))
 
 # The Human Condition III: A Soldier's Prayer (1961): the poster's pink-white, its black THE HUMAN CONDITION and Part III cut off it and run in one line, Nakadai in the snow (no logo file: Toho, from IMDb's company credits)
 std('the-human-condition-iii-a-soldier-s-prayer-1961', ('grad', [(0, (250, 236, 232)), (.6, (230, 216, 212)), (1, (60, 120, 150))]), (30, 26, 24),
