@@ -462,7 +462,8 @@ body.designed-spine .vcr-respine { display: none; }
   font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: .05em; text-transform: uppercase;
 }
 .facts { margin: 6px 0 14px; opacity: .65; font-size: .9rem; }
-.rating { font-size: 1.9rem; letter-spacing: .08em; line-height: 1; }
+.rating { font-size: 1.45rem; letter-spacing: .04em; line-height: 1; }
+.rating .stars { white-space: nowrap; }
 .star { color: var(--dim); }
 .star.full { color: var(--gold); }
 .star.half {
@@ -495,7 +496,7 @@ body.designed-spine .vcr-respine { display: none; }
   .info { margin-top: 12px; }
   .info h2 { font-size: clamp(1.35rem, 6.4vw, 1.9rem); line-height: 1.1; }
   .facts { margin: 4px 0 8px; font-size: .8rem; }
-  .rating { font-size: 1.5rem; }
+  .rating { font-size: 1.1rem; }
   .watched { margin: 8px 0 8px; font-size: .82rem; }
   .genres { gap: 6px; }
   .genres span { padding: 1px 10px; font-size: .7rem; }

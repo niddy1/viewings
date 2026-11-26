@@ -880,13 +880,14 @@
     return f.imdb ? `https://www.imdb.com/title/${f.imdb}/` : `https://www.imdb.com/find/?q=${encodeURIComponent(f.title + ' ' + f.year)}`;
   }
 
-  // Ratings are out of 10 (PassThePopcorn). Stars round to the nearest half: 8.5 -> 4.5 stars, 7.5 -> 4.
-  // Films from the old Letterboxd import only have "rating" (out of 5).
+  // Ratings are out of 10 (PassThePopcorn), shown as ten stars: 8.5 -> eight full stars and a half.
+  // Films from the old Letterboxd import only have "rating" (out of 5), doubled here.
   function stars(f) {
-    const r10 = f.rating10 != null ? f.rating10 : (f.rating || 0) * 2, r = Math.round(r10) / 2;
+    const r10 = f.rating10 != null ? f.rating10 : (f.rating || 0) * 2, r = Math.round(r10 * 2) / 2;
     let h = '';
-    for (let i = 1; i <= 5; i++) h += `<span class="star ${r >= i ? 'full' : r >= i - .5 ? 'half' : ''}">&#9733;</span>`;
-    return h + `<small>${r10 ? +r10.toFixed(1) : '—'} / 10</small>`;
+    for (let i = 1; i <= 10; i++) h += `<span class="star ${r >= i ? 'full' : r >= i - .5 ? 'half' : ''}">&#9733;</span>`;
+    return `<span class="stars" role="img" aria-label="${r10 ? +r10.toFixed(1) : 'No rating'} out of 10">${h}</span>`
+      + `<small>${r10 ? +r10.toFixed(1) : '—'} / 10</small>`;
   }
 
   function fmtDate(iso) {
