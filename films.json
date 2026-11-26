@@ -2317,6 +2317,107 @@
       "logo": "logos/43613.png",
       "imdbRating": 6.9,
       "imdbVotes": 9937
+    },
+    {
+      "title": "Akira",
+      "year": 1988,
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2026-11-17",
+      "tmdb": 149,
+      "tmdbKind": "movie",
+      "runtime": 124,
+      "director": "Katsuhiro Otomo",
+      "genres": [
+        "Animation",
+        "Science Fiction",
+        "Action"
+      ],
+      "imdb": "tt0094625",
+      "poster": "posters/akira-1988.jpg"
+    },
+    {
+      "title": "Divorce Italian Style",
+      "year": 1961,
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2026-11-18",
+      "tmdb": 20271,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Pietro Germi",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "imdb": "tt0055913",
+      "poster": "posters/divorce-italian-style-1961.jpg"
+    },
+    {
+      "title": "In the Line of Fire",
+      "year": 1993,
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2026-11-18",
+      "tmdb": 9386,
+      "tmdbKind": "movie",
+      "runtime": 128,
+      "director": "Wolfgang Petersen",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Crime"
+      ],
+      "imdb": "tt0107206",
+      "poster": "posters/in-the-line-of-fire-1993.jpg"
+    },
+    {
+      "title": "Sundays",
+      "year": 2025,
+      "rating": 3.5,
+      "rating10": 6.5,
+      "watched": "2026-11-21",
+      "tmdb": 1443576,
+      "tmdbKind": "movie",
+      "runtime": 112,
+      "director": "Alauda Ruiz de Azúa",
+      "genres": [
+        "Drama"
+      ],
+      "imdb": "tt35513027",
+      "poster": "posters/sundays-2025.jpg"
+    },
+    {
+      "title": "Mystery Train",
+      "year": 1989,
+      "rating": 3.5,
+      "rating10": 7,
+      "watched": "2026-11-22",
+      "tmdb": 11305,
+      "tmdbKind": "movie",
+      "runtime": 106,
+      "director": "Jim Jarmusch",
+      "genres": [
+        "Comedy"
+      ],
+      "imdb": "tt0097940",
+      "poster": "posters/mystery-train-1989.jpg"
+    },
+    {
+      "title": "You Can See Everything",
+      "year": 2026,
+      "rating": 4,
+      "rating10": 7.5,
+      "watched": "2026-11-26",
+      "tmdb": 1765072,
+      "tmdbKind": "movie",
+      "runtime": 175,
+      "director": "Nathan Fielder",
+      "genres": [
+        "Documentary"
+      ],
+      "imdb": "tt45368240",
+      "poster": "posters/you-can-see-everything-2026.jpg"
     }
   ]
 }
