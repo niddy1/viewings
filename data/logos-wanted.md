@@ -6,123 +6,6 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
-| The Man from U.N.C.L.E. (2015) | Vault 2010s | `logos/the-man-from-u-n-c-l-e-2015-title.png` | typeset; the suits stand in front of the U and E |
-| Victoria (2015) | Vault 2010s | `logos/victoria-2015-title.png` | typeset; translucent letters over the lit face take its colours |
-| Mission: Impossible - Rogue Nation (2015) | Vault 2010s | `logos/mission-impossible-rogue-nation-2015-title.png` | typeset; stunt figures behind the letters came away with them, the tighter cut lost the I |
-| Dope (2015) | Vault 2010s | `logos/dope-2015-title.png` | typeset; distressed white letters run into the white frame, cuts broke D and lost E |
-| Aziz Ansari: Live at Madison Square Garden (2015) | Vault 2010s | `logos/aziz-ansari-live-at-madison-square-garden-2015-title.png` | typeset; bulb-lit letters in steep perspective |
-| The Grand Budapest Hotel (2014) | Vault 2010s | `logos/the-grand-budapest-hotel-2014-title.png` | typeset; gold letters on sunlit mountains of the same tones, both cuts lost their middles |
-| The Amazing Spider-Man 2 (2014) | Vault 2010s | `logos/the-amazing-spider-man-2-2014-title.png` | typeset; thin chrome logo on the bright city lifted in fragments |
-| Teenage Mutant Ninja Turtles (2014) | Vault 2010s | `logos/teenage-mutant-ninja-turtles-2014-title.png` | typeset; chrome letters reflect the sky, both cuts left holes |
-| Interstellar (2014) | Vault 2010s | `logos/interstellar-2014-title.png` | typeset; the letters cross from dark sea onto a white wake and change colour |
-| Gone Girl (2014) | Vault 2010s | `logos/gone-girl-2014-title.png` | typeset; the letters fade into the clouds by design |
-| Blue Ruin (2014) | Vault 2010s | `logos/blue-ruin-2014-title.png` | typeset; giant letters with Dwight's face showing through, a cut keeps the face |
-| 22 Jump Street (2014) | Vault 2010s | `logos/22-jump-street-2014-title.png` | typeset; chrome letters melt into the bright crowd |
-| The Crash Reel (2013) | Vault 2010s | `logos/the-crash-reel-2013-title.png` | typeset; photo-filled letters, neither cut found their edges |
-| Now You See Me (2013) | Vault 2010s | `logos/now-you-see-me-2013-title.png` | typeset; the title is the floor in steep perspective under the cast |
-| Wreck-It Ralph (2012) | Vault 2010s | `logos/wreck-it-ralph-2012-title.png` | typeset; Ralph and Calhoun stand in front of WRECK-IT, the cut came away in pieces |
-| Harry Potter and the Deathly Hallows: Part 2 (2011) | Vault 2010s | `logos/harry-potter-and-the-deathly-hallows-part-2-2011-title.png` | typeset like the other Potters |
-| Cars 2 (2011) | Vault 2010s | `logos/cars-2-2011-title.png` | typeset like Cars; chrome badge over fireworks broke in both cuts |
-| Scott Pilgrim vs. the World (2010) | Vault 2010s | `logos/scott-pilgrim-vs-the-world-2010-title.png` | typeset; the hand-drawn white scrawl wraps round Scott, the cut kept scraps |
-| Shrek Forever After (2010) | Vault 2010s | `logos/shrek-forever-after-2010-title.png` | typeset like the other Shreks |
-| Harry Potter and the Deathly Hallows: Part 1 (2010) | Vault 2010s | `logos/harry-potter-and-the-deathly-hallows-part-1-2010-title.png` | typeset like the other Potters |
-| The Princess and the Frog (2009) | Vault 2000s | `logos/the-princess-and-the-frog-2009-title.png` | typeset in gold and green; the gilded letters on the night bayou lost AND THE in both cuts |
-| Inglourious Basterds (2009) | Vault 2000s | `logos/inglourious-basterds-2009-title.png` | typeset; white outlined letters on the white poster with the eagle in the line, both cuts lost them |
-| Harry Potter and the Half-Blood Prince (2009) | Vault 2000s | `logos/harry-potter-and-the-half-blood-prince-2009-title.png` | typeset like the other Potters |
-| Fast & Furious (2009) | Vault 2000s | `logos/fast-furious-2009-title.png` | typeset like 2 Fast 2 Furious; chrome logo slanted across the bonnet |
-| The Incredible Hulk (2008) | Vault 2000s | `logos/the-incredible-hulk-2008-title.png` | typeset; chrome HULK darkens to black across its middle, both cuts split the letters |
-| Tropic Thunder (2008) | Vault 2000s | `logos/tropic-thunder-2008-title.png` | typeset; weathered letters on the explosion, the cut kept the fire |
-| The Fall (2008) | Vault 2000s | `logos/the-fall-2008-title.png` | typeset; thin red script with long flourishes, both cuts lost The |
-| Kung Fu Panda (2008) | Vault 2000s | `logos/kung-fu-panda-2008-title.png` | typeset; yellow brush letters on a sunset of the same yellows, both cuts lost most of PANDA |
-| Let the Right One In (2008) | Vault 2000s | `logos/let-the-right-one-in-2008-title.png` | typeset; silver letters on a frost-white ground, the lift lost LET and smeared IN |
-| Madagascar: Escape 2 Africa (2008) | Vault 2000s | `logos/madagascar-escape-2-africa-2008-title.png` | typeset like Madagascar |
-| Transformers (2007) | Vault 2000s | `logos/transformers-2007-title.png` | typeset; the chrome letters shade into the sky and both cuts lost letters |
-| The Simpsons Movie (2007) | Vault 2000s | `logos/the-simpsons-movie-2007-title.png` | typeset; the doughnut O and the small The Simpsons over the sky broke up in both cuts |
-| Sweeney Todd: The Demon Barber of Fleet Street (2007) | Vault 2000s | `logos/sweeney-todd-the-demon-barber-of-fleet-street-2007-title.png` | typeset; grey letters on a grey room, run through by blood; both cuts broke them |
-| Ocean's Thirteen (2007) | Vault 2000s | `logos/ocean-s-thirteen-2007-title.png` | typeset like Eleven and Twelve; OCEAN'S runs diagonally inside the big 13 |
-| Shrek the Third (2007) | Vault 2000s | `logos/shrek-the-third-2007-title.png` | typeset like the other Shreks |
-| Sunshine (2007) | Vault 2000s | `logos/sunshine-2007-title.png` | typeset; the letters burn into flames and both cuts left them unreadable |
-| Harry Potter and the Order of the Phoenix (2007) | Vault 2000s | `logos/harry-potter-and-the-order-of-the-phoenix-2007-title.png` | typeset like the other Potters (one HARRY POTTER logo would serve all) |
-| Enchanted (2007) | Vault 2000s | `logos/enchanted-2007-title.png` | typeset in a script; the gold scroll sits on a gold-rimmed plaque and both cuts broke it up |
-| The Lives of Others (2006) | Vault 2000s | `logos/the-lives-of-others-2006-title.png` | typeset in mono; the typewriter T touches the pale bedsheet and the cut breaks it |
-| Pirates of the Caribbean: Dead Man's Chest (2006) | Vault 2000s | `logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png` | typeset; same as the first Pirates (one logo would serve both) |
-| Lucky Number Slevin (2006) | Vault 2000s | `logos/lucky-number-slevin-2006-title.png` | typeset; slanted banner across the cast's faces |
-| Happy Feet (2006) | Vault 2000s | `logos/happy-feet-2006-title.png` | typeset; letters shaded red to yellow |
-| Flushed Away (2006) | Vault 2000s | `logos/flushed-away-2006-title.png` | typeset; water-splashed letters |
-| Cars (2006) | Vault 2000s | `logos/cars-2006-title.png` | typeset (Pixar clamshell); chrome-edged badge among the cars |
-| Borat (2006) | Vault 2000s | `logos/borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006-title.png` | typeset; double-line faux-Cyrillic letters |
-| Black Snake Moan (2006) | Vault 2000s | `logos/black-snake-moan-2006-title.png` | typeset; yellow MOAN on yellow fire |
-| A Scanner Darkly (2006) | Vault 2000s | `logos/a-scanner-darkly-2006-title.png` | typeset; thin letters in a bracket frame |
-| Transporter 2 (2005) | Vault 2000s | `logos/transporter-2-2005-title.png` | typeset; chrome letters in the fireball's streaks |
-| The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005) | Vault 2000s | `logos/the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005-title.png` | typeset; shaded copper letters over the lion's mane |
-| Robots (2005) | Vault 2000s | `logos/robots-2005-title.png` | typeset; chrome letters built of gears against cloud |
-| Lord of War (2005) | Vault 2000s | `logos/lord-of-war-2005-title.png` | typeset; the tiny red OF dropped out |
-| Mr. & Mrs. Smith (2005) | Vault 2000s | `logos/mr-mrs-smith-2005-title.png` | typeset; serif title over a black suit |
-| Madagascar (2005) | Vault 2000s | `logos/madagascar-2005-title.png` | typeset; carved orange letters shaded through yellow |
-| Kiss Kiss Bang Bang (2005) | Vault 2000s | `logos/kiss-kiss-bang-bang-2005-title.png` | typeset; stacked words over the suits |
-| Hoodwinked! (2005) | Vault 2000s | `logos/hoodwinked-2005-title.png` | typeset; red banner on red |
-| Harry Potter and the Goblet of Fire (2005) | Vault 2000s | `logos/harry-potter-and-the-goblet-of-fire-2005-title.png` | typeset; one Harry Potter logo would serve all the films |
-| Chicken Little (2005) | Vault 2000s | `logos/chicken-little-2005-title.png` | typeset (Disney clamshell); shaded logo on grass |
-| Charlie and the Chocolate Factory (2005) | Vault 2000s | `logos/charlie-and-the-chocolate-factory-2005-title.png` | typeset; logo printed on Wonka's hat band |
-| Are We There Yet? (2005) | Vault 2000s | `logos/are-we-there-yet-2005-title.png` | typeset; white letters stacked over a white cloud |
-| Meet the Fockers (2004) | Vault 2000s | `logos/meet-the-fockers-2004-title.png` | typeset; the F's thin stroke vanished (read 'rockers') |
-| Spider-Man 2 (2004) | Vault 2000s | `logos/spider-man-2-2004-title.png` | typeset; same as Spider-Man |
-| Shrek 2 (2004) | Vault 2000s | `logos/shrek-2-2004-title.png` | typeset; same green carved logo as Shrek |
-| Ocean's Twelve (2004) | Vault 2000s | `logos/ocean-s-twelve-2004-title.png` | typeset; same as Ocean's Eleven |
-| Jersey Girl (2004) | Vault 2000s | `logos/jersey-girl-2004-title.png` | typeset; the blue letters overlap blue jeans |
-| Mean Girls (2004) | Vault 2000s | `logos/mean-girls-2004-title.png` | typeset; pink letters on the pink ground |
-| Lemony Snicket's A Series of Unfortunate Events (2004) | Vault 2000s | `logos/lemony-snicket-s-a-series-of-unfortunate-events-2004-title.png` | typeset; thin gold letters on a glowing sky |
-| Kill Bill: Vol. 2 (2004) | Vault 2000s | `logos/kill-bill-vol-2-2004-title.png` | typeset; the sword cuts across BILL |
-| I Like Killing Flies (2004) | Vault 2000s | `logos/i-like-killing-flies-2004-title.png` | typeset; scratchy pen lettering came out faint |
-| Home on the Range (2004) | Vault 2000s | `logos/home-on-the-range-2004-title.png` | typeset (Disney clamshell); slanted letters round the cows' heads |
-| Harry Potter and the Prisoner of Azkaban (2004) | Vault 2000s | `logos/harry-potter-and-the-prisoner-of-azkaban-2004-title.png` | typeset; one Harry Potter logo would serve all the films |
-| The Triplets of Belleville (2003) | Vault 2000s | `logos/the-triplets-of-belleville-2003-title.png` | typeset; tilted gold letters on the sepia drawing |
-| The Jungle Book 2 (2003) | Vault 2000s | `logos/the-jungle-book-2-2003-title.png` | typeset (Disney clamshell); gold letters among gold leaves |
-| The Italian Job (2003) | Vault 2000s | `logos/the-italian-job-2003-title.png` | typeset; JOB against the yellow stripe |
-| Old School (2003) | Vault 2000s | `logos/old-school-2003-title.png` | typeset; white-edged red OLD over the cast |
-| Mystic River (2003) | Vault 2000s | `logos/mystic-river-2003-title.png` | typeset; RIVER fades into the reflection |
-| Sinbad: Legend of the Seven Seas (2003) | Vault 2000s | `logos/sinbad-legend-of-the-seven-seas-2003-title.png` | typeset; gold script on a pale sky |
-| Rugrats Go Wild (2003) | Vault 2000s | `logos/rugrats-go-wild-2003-title.png` | typeset; yellow logo on the palm's green and yellow |
-| Pirates of the Caribbean: The Curse of the Black Pearl (2003) | Vault 2000s | `logos/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-title.png` | typeset; logo printed on a torn strip of the poster's own browns |
-| Brother Bear (2003) | Vault 2000s | `logos/brother-bear-2003-title.png` | typeset (Disney clamshell); the title is a square carved sign |
-| Intolerable Cruelty (2003) | Vault 2000s | `logos/intolerable-cruelty-2003-title.png` | typeset; thin letters lose their bars |
-| Capturing the Friedmans (2003) | Vault 2000s | `logos/capturing-the-friedmans-2003-title.png` | typeset; speckled yellow letters |
-| Bad Santa (2003) | Vault 2000s | `logos/bad-santa-2003-title.png` | typeset; unevenly lit green letters |
-| Spirit: Stallion of the Cimarron (2002) | Vault 2000s | `logos/spirit-stallion-of-the-cimarron-2002-title.png` | typeset; white letters on white cloud |
-| The Pianist (2002) | Vault 2000s | `logos/the-pianist-2002-title.png` | typeset; the scuffed final T broke |
-| The Bourne Identity (2002) | Vault 2000s | `logos/the-bourne-identity-2002-title.png` | typeset; THE sits over Matt Damon's shoulder |
-| Star Wars: Episode II – Attack of the Clones (2002) | Vault 2000s | `logos/star-wars-episode-ii-attack-of-the-clones-2002-title.png` | typeset; gold on a gold glow |
-| 21 Grams (2003) | Vault 2000s | `logos/21-grams-2003-title.png` | typeset; the red 21 runs behind the cast's strips |
-| 2 Fast 2 Furious (2003) | Vault 2000s | `logos/2-fast-2-furious-2003-title.png` | typeset; chrome letters over the cars' lights |
-| The Wild Thornberrys Movie (2002) | Vault 2000s | `logos/the-wild-thornberrys-movie-2002-title.png` | typeset; logo on a blue badge with a sun behind it |
-| The Transporter (2002) | Vault 2000s | `logos/the-transporter-2002-title.png` | typeset; letters streaked into a motion blur |
-| The Sum of All Fears (2002) | Vault 2000s | `logos/the-sum-of-all-fears-2002-title.png` | typeset; gold letters textured with the fire |
-| Spider-Man (2002) | Vault 2000s | `logos/spider-man-2002-title.png` | typeset; chrome letters banded with the gold ground |
-| The Lord of the Rings: The Two Towers (2002) | Vault 2000s | `logos/the-lord-of-the-rings-the-two-towers-2002-title.png` | typeset; same gold-on-gold logo as the Fellowship |
-| Poolhall Junkies (2002) | Vault 2000s | `logos/poolhall-junkies-2002-title.png` | typeset; felt-textured green letters came out holed |
-| Insomnia (2002) | Vault 2000s | `logos/insomnia-2002-title.png` | typeset; blurred grey letters |
-| Hero (2002) | Vault 2000s | `logos/hero-2002-title.png` | typeset; gold letters fade into the gold army |
-| Harry Potter and the Chamber of Secrets (2002) | Vault 2000s | `logos/harry-potter-and-the-chamber-of-secrets-2002-title.png` | typeset; thin gold logo on green light (one Harry Potter logo would serve all the films, subtitles typeset) |
-| Return to Never Land (2002) | Vault 2000s | `logos/return-to-never-land-2002-title.png` | typeset (Disney clamshell); glowing gold letters fade into the sea |
-| Lilo & Stitch (2002) | Vault 2000s | `logos/lilo-stitch-2002-title.png` | typeset (Disney clamshell); bouncy red letters in white spray |
-| Gangs of New York (2002) | Vault 2000s | `logos/gangs-of-new-york-2002-title.png` | typeset; distressed gold letters on a gold skyline |
-| The Lord of the Rings: The Fellowship of the Ring (2001) | Vault 2000s | `logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png` | typeset; gold logo on a gold haze (one logo file would do for all three, with the subtitle typeset) |
-| Super Troopers (2001) | Vault 2000s | `logos/super-troopers-2001-title.png` | typeset; the badge sits on the T of TROOPERS |
-| Shrek (2001) | Vault 2000s | `logos/shrek-2001-title.png` | typeset; green carved letters on green grass |
-| Wet Hot American Summer (2001) | Vault 2000s | `logos/wet-hot-american-summer-2001-title.png` | typeset; star-striped letters came out in shreds |
-| The Man Who Wasn't There (2001) | Vault 2000s | `logos/the-man-who-wasn-t-there-2001-title.png` | typeset; the huge MAN is cut into strips across the faces |
-| Kiss of the Dragon (2001) | Vault 2000s | `logos/kiss-of-the-dragon-2001-title.png` | typeset; small white letters in the flames' glow |
-| Ocean's Eleven (2001) | Vault 2000s | `logos/ocean-s-eleven-2001-title.png` | typeset; OCEAN'S runs diagonally inside the red 11 |
-| Baby Boy (2001) | Vault 2000s | `logos/baby-boy-2001-title.png` | typeset; thin white letters on a pale sky |
-| Atlantis: The Lost Empire (2001) | Vault 2000s | `logos/atlantis-the-lost-empire-2001-title.png` | typeset (Disney clamshell); thin white letters in the crystal's glow |
-| Titan A.E. (2000) | Vault 2000s | `logos/titan-a-e-2000-title.png` | typeset; chrome letters reflect the starfield |
-| O Brother, Where Art Thou? (2000) | Vault 2000s | `logos/o-brother-where-art-thou-2000-title.png` | typeset; distressed letters on a mottled sepia field |
-| In the Mood for Love (2000) | Vault 2000s | `logos/in-the-mood-for-love-2000-title.png` | typeset; huge pale letters run behind and over the couple |
-| Memento (2000) | Vault 2000s | `logos/memento-2000-title.png` | typeset; the slanted handwriting breaks across the polaroid's edge |
-| Dinosaur (2000) | Vault 2000s | `logos/dinosaur-2000-title.png` | typeset (Disney clamshell); bronze letters shaded over cloud |
-| Gone in Sixty Seconds (2000) | Vault 2000s | `logos/gone-in-sixty-seconds-2000-title.png` | typeset; slanted red and chrome lettering in flames |
-| Dave Chappelle: Killin' Them Softly (2000) | Vault 2000s | `logos/dave-chappelle-killin-them-softly-2000-title.png` | typeset; sideways green hand lettering on green and yellow |
-| Amores Perros (2000) | Vault 2000s | `logos/amores-perros-2000-title.png` | typeset; the poster chops the words into blocks behind the photo |
 | Three Kings (1999) | Vault 1990s | `logos/three-kings-1999-title.png` | typeset; the blue letters fade into the white sky |
 | Fight Club (1999) | Vault 1990s | `logos/fight-club-1999-title.png` | typeset; the title is pressed into a tilted soap bar held in a hand |
 | Taste of Cherry (1997) | Vault 1990s | `logos/taste-of-cherry-1997-title.png` | typeset; the pale title is barely lighter than the ochre |
@@ -168,3 +51,17 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 | The Jungle Book | 2016 | `logos/the-jungle-book-2016-title.png` | typeset (Disney clamshell) |
 
 The full reason for each is in the comment above its spec in `spinegen/vault.py` or `spinegen/tapes.py`.
+
+## Done: Vault 2000s and 2010s (26 Nov 2026)
+
+**Logos placed (71).** Ian sent a batch of title logos; each is saved as `logos/<poster name>-title.png` and is on its spine with `Pic(...)`:
+
+- Vault 2010s: Dope (2015), The Grand Budapest Hotel (2014), The Amazing Spider-Man 2 (2014), Teenage Mutant Ninja Turtles (2014), Interstellar (2014), Gone Girl (2014), 22 Jump Street (2014), Wreck-It Ralph (2012), Harry Potter and the Deathly Hallows: Part 2 (2011), Cars 2 (2011), Scott Pilgrim vs. the World (2010), Shrek Forever After (2010), Harry Potter and the Deathly Hallows: Part 1 (2010).
+- Vault 2000s: The Princess and the Frog (2009), Inglourious Basterds (2009), Harry Potter and the Half-Blood Prince (2009), Tropic Thunder (2008), The Fall (2008), Kung Fu Panda (2008), Madagascar: Escape 2 Africa (2008), Transformers (2007), The Simpsons Movie (2007), Ocean's Thirteen (2007), Shrek the Third (2007), Sunshine (2007), Harry Potter and the Order of the Phoenix (2007), Enchanted (2007), Pirates of the Caribbean: Dead Man's Chest (2006), Happy Feet (2006), Cars (2006), Borat (2006), Black Snake Moan (2006), A Scanner Darkly (2006), Robots (2005), Lord of War (2005), Madagascar (2005), Hoodwinked! (2005), Harry Potter and the Goblet of Fire (2005), Chicken Little (2005), Charlie and the Chocolate Factory (2005), Spider-Man 2 (2004), Shrek 2 (2004), Ocean's Twelve (2004), Home on the Range (2004), Harry Potter and the Prisoner of Azkaban (2004), The Jungle Book 2 (2003), Rugrats Go Wild (2003), Pirates of the Caribbean: The Curse of the Black Pearl (2003), Brother Bear (2003), Bad Santa (2003), Spirit: Stallion of the Cimarron (2002), 2 Fast 2 Furious (2003), The Wild Thornberrys Movie (2002), The Sum of All Fears (2002), Spider-Man (2002), The Lord of the Rings: The Two Towers (2002), Insomnia (2002), Hero (2002), Harry Potter and the Chamber of Secrets (2002), Return to Never Land (2002), Lilo & Stitch (2002), Gangs of New York (2002), The Lord of the Rings: The Fellowship of the Ring (2001), Super Troopers (2001), Shrek (2001), Wet Hot American Summer (2001), Ocean's Eleven (2001), Titan A.E. (2000), Memento (2000), Dinosaur (2000), Gone in Sixty Seconds (2000).
+
+**Kept as typeset (46).** No logo came for these and Ian is happy with the typeset stand-in, so they are off the list:
+
+- Vault 2010s: The Man from U.N.C.L.E. (2015), Victoria (2015), Mission: Impossible - Rogue Nation (2015), Aziz Ansari: Live at Madison Square Garden (2015), Blue Ruin (2014), The Crash Reel (2013), Now You See Me (2013).
+- Vault 2000s: Fast & Furious (2009), The Incredible Hulk (2008), Let the Right One In (2008), Sweeney Todd: The Demon Barber of Fleet Street (2007), The Lives of Others (2006), Lucky Number Slevin (2006), Flushed Away (2006), Transporter 2 (2005), The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005), Mr. & Mrs. Smith (2005), Kiss Kiss Bang Bang (2005), Are We There Yet? (2005), Meet the Fockers (2004), Jersey Girl (2004), Mean Girls (2004), Lemony Snicket's A Series of Unfortunate Events (2004), Kill Bill: Vol. 2 (2004), I Like Killing Flies (2004), The Triplets of Belleville (2003), The Italian Job (2003), Old School (2003), Mystic River (2003), Sinbad: Legend of the Seven Seas (2003), Intolerable Cruelty (2003), Capturing the Friedmans (2003), The Pianist (2002), The Bourne Identity (2002), Star Wars: Episode II – Attack of the Clones (2002), 21 Grams (2003), The Transporter (2002), Poolhall Junkies (2002), The Man Who Wasn't There (2001), Kiss of the Dragon (2001), Baby Boy (2001), Atlantis: The Lost Empire (2001), O Brother, Where Art Thou? (2000), In the Mood for Love (2000), Dave Chappelle: Killin' Them Softly (2000), Amores Perros (2000).
+
+Logos with a black ground (Interstellar) were keyed out; ones on white (Cars, Tropic Thunder) had the white cut away. Scott Pilgrim's dark red scrawl is printed white, as on the poster. Ocean's Eleven, Twelve and Thirteen, Black Snake Moan, the Spider-Mans, Shrek and Shrek 2, Titan A.E., Gone in Sixty Seconds and The Two Towers got darker or bluer spine grounds so their logos show. Logos that carry the Disney or DreamWorks mark (Cars, Dinosaur, Home on the Range, The Jungle Book 2, Lilo & Stitch, The Princess and the Frog; Kung Fu Panda, Shrek 2, Shrek Forever After, Spirit) drop the separate studio logo.

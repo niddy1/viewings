@@ -3471,7 +3471,7 @@ std('american-psycho-2000', ('grad', [(0, (60, 30, 40)), (.6, (16, 8, 10)), (1, 
     photo=ph(0.6, 0.35, 0.8, 1.1), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['CHRISTIAN BALE'], ccol=WHT,
     ft='a', vbox=(200, 30, 30), fcol=(210, 200, 200), fin=MINT, seed=2000)
 
-# Amores Perros (2000): the poster's white, AMORES PERROS typeset in heavy capitals in its red (parked for Ian's logo, see data/logos-wanted.md: the poster chops the words into blocks that run off its edges and behind the photo, so the cut came out in pieces), the screaming face (no logo file: Altavista Films, from IMDb's company credits)
+# Amores Perros (2000): the poster's white, AMORES PERROS typeset in heavy capitals in its red (kept typeset: Ian is happy with it, 26 Nov 2026: the poster chops the words into blocks that run off its edges and behind the photo, so the cut came out in pieces), the screaming face (no logo file: Altavista Films, from IMDb's company credits)
 std('amores-perros-2000', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (220, 20, 30),
     TT([('AMORES', (220, 20, 30)), ('PERROS', (220, 20, 30))], 'intbk', 110, sp=.3),
     photo=ph(0.6, 0.45, 0.5, 0.8), pb=(220, 20, 30), studio=['ALTAVISTA FILMS'], scol=(20, 20, 20), order='lPTCF', credit=['UNA PELÍCULA DE', 'ALEJANDRO G. IÑÁRRITU'], ccol=(20, 20, 20),
@@ -3495,15 +3495,15 @@ std('crouching-tiger-hidden-dragon-2000', ('grad', [(0, (220, 160, 60)), (.5, (1
     photo=ph(0.5, 0.6, 0.9, 0.8), pb=(250, 236, 200), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(250, 230, 200), fin=MINT, seed=2000)
 
-# Dave Chappelle: Killin' Them Softly (2000): the poster's green and yellow, dave chappelle typeset in a script in its green (parked for Ian's logo, see data/logos-wanted.md: the hand lettering runs sideways in green on green and yellow, and the cut came out as smudges), Dave on stage (HBO logo)
+# Dave Chappelle: Killin' Them Softly (2000): the poster's green and yellow, dave chappelle typeset in a script in its green (kept typeset: Ian is happy with it, 26 Nov 2026: the hand lettering runs sideways in green on green and yellow, and the cut came out as smudges), Dave on stage (HBO logo)
 std('dave-chappelle-killin-them-softly-2000', ('grad', [(0, (250, 230, 40)), (.5, (110, 190, 60)), (1, (40, 120, 200))]), (40, 110, 40),
     T('dave chappelle', 'cho', 120, (40, 120, 40)),
     photo=ph(0.55, 0.65, 0.7, 1.3), pb=(220, 60, 40), lg=(30, 30, 30), lw=.55, order='LPTF',
     ft='a', fcol=(30, 30, 30), fin=MINT, seed=2000)
 
-# Dinosaur (2000): Disney clamshell; the poster's sky, DINOSAUR typeset in a bronze serif with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved bronze letters are shaded light to dark over cloud, so both cuts came out garbled), Aladar's face in the diamond
+# Dinosaur (2000): Disney clamshell; the poster's sky, the film's own title logo (Ian's image, logos/dinosaur-2000-title.png), which carries the Disney mark, so no separate studio logo, Aladar's face in the diamond
 disney('dinosaur-2000', ('grad', [(0, (60, 120, 200)), (.5, (90, 160, 220)), (1, (40, 90, 60))]), fin=dict(CLAM, vivid=.2),
-       title=T('DINOSAUR', 'pagb', 110, (200, 140, 60), outline=((50, 26, 10), 2.2)),
+       title=Pic('logos/dinosaur-2000-title.png', 170), studio=False,
        face=ph(.5, .4, .36, 1.4), lcol=WHT)
 
 # Fantasia 2000 (2000): Disney clamshell; the poster's wine red, its gold FANTASIA / 2000 cut off it into one line, Mickey the sorcerer's apprentice in the diamond
@@ -3523,9 +3523,9 @@ std('gladiator-2000', ('grad', [(0, (150, 110, 60)), (.5, (70, 46, 20)), (1, (10
     photo=ph(0.5, 0.55, 0.86, 0.9), pb=(230, 190, 120), lg=WHT, lw=.5, order='LPTSF', dotst=('ACTION', (190, 40, 30), WHT),
     ft='a', fcol=(230, 210, 180), fin=MINT, seed=2000)
 
-# Gone in Sixty Seconds (2000): Touchstone, a slipcase; the poster's fire orange, GONE IN 60 SECONDS typeset in heavy italic capitals, the 60 in chrome white (parked for Ian's logo, see data/logos-wanted.md: the slanted red and chrome lettering sits in flames of its own colours), Nicolas Cage
-std('gone-in-sixty-seconds-2000', ('grad', [(0, (240, 140, 30)), (.5, (180, 60, 20)), (1, (30, 6, 2))]), WHT,
-    TT([('GONE IN', (190, 20, 20)), ('60', WHT), ('SECONDS', (190, 20, 20))], 'intbki', 100, sp=.3, outline=((30, 10, 4), 1.6)),
+# Gone in Sixty Seconds (2000): Touchstone, a slipcase; the poster's fire orange, the film's own title logo (Ian's image, logos/gone-in-sixty-seconds-2000-title.png), Nicolas Cage
+std('gone-in-sixty-seconds-2000', ('grad', [(0, (200, 110, 30)), (.45, (80, 26, 8)), (1, (18, 4, 2))]), WHT,
+    Pic('logos/gone-in-sixty-seconds-2000-title.png', 170),
     photo=ph(0.6, 0.2, 0.6, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTF',
     ft='e', vbox=(200, 30, 20), fcol=(250, 220, 200), fin=MINT, seed=2000)
 
@@ -3541,7 +3541,7 @@ std('how-the-grinch-stole-christmas-2000', ('grad', [(0, (30, 60, 140)), (.6, (1
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'FAMILY']),
     ft='b', fcol=(200, 216, 240), fin=MINT, seed=2000)
 
-# In the Mood for Love (2000): the poster's red, IN THE MOOD FOR LOVE typeset in a pale gold serif like the poster's (parked for Ian's logo, see data/logos-wanted.md: the huge pale letters run behind and over the couple, so two cuts lost half of each word), Maggie Cheung and Tony Leung
+# In the Mood for Love (2000): the poster's red, IN THE MOOD FOR LOVE typeset in a pale gold serif like the poster's (kept typeset: Ian is happy with it, 26 Nov 2026: the huge pale letters run behind and over the couple, so two cuts lost half of each word), Maggie Cheung and Tony Leung
 std('in-the-mood-for-love-2000', ('grad', [(0, (190, 30, 30)), (.6, (120, 14, 14)), (1, (30, 4, 4))]), (230, 200, 130),
     T('IN THE MOOD FOR LOVE', 'ter', 90, (232, 204, 140)),
     photo=ph(0.55, 0.33, 0.6, 0.6), pb=(230, 200, 130), lg=(230, 200, 130), lw=.5, order='LPTCF', credit=['A FILM BY', 'WONG KAR-WAI'], ccol=(230, 200, 130),
@@ -3559,9 +3559,9 @@ std('meet-the-parents-2000', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222
     photo=ph(0.5, 0.62, 0.86, 0.85), pb=(180, 20, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
     ft='c', fcol=(30, 30, 30), fin=MINT, seed=2000)
 
-# Memento (2000): the polaroid's white, MEMENTO typeset in a slanting hand in black (parked for Ian's logo, see data/logos-wanted.md: the handwriting runs at a tilt across the polaroid's edge and the cut broke into strokes), Guy Pearce in the nested photographs
+# Memento (2000): the polaroid's white, the film's own title logo (Ian's image, logos/memento-2000-title.png), Guy Pearce in the nested photographs
 std('memento-2000', ('grad', [(0, (246, 244, 238)), (.6, (230, 226, 218)), (1, (120, 116, 108))]), (20, 20, 20),
-    T('MEMENTO', 'curbi', 110, (20, 20, 20)),
+    Pic('logos/memento-2000-title.png', 170),
     photo=ph(0.5, 0.3, 0.6, 1.3), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=(20, 20, 20),
     ft='b', fcol=(20, 20, 20), fin=MINT, seed=2000)
 
@@ -3571,7 +3571,7 @@ std('nurse-betty-2000', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (
     photo=ph(0.5, 0.33, 0.9, 0.75), pb=(210, 30, 30), lg=(30, 30, 40), lw=.55, order='LPTCF', credit=['A NEIL LABUTE', 'FILM'], ccol=(30, 30, 40),
     ft='a', vbox=(210, 30, 30), fcol=(30, 30, 40), fin=MINT, seed=2000)
 
-# O Brother, Where Art Thou? (2000): Touchstone, a slipcase; the poster's sepia, O BROTHER, WHERE ART THOU? typeset in heavy slab capitals in its black (parked for Ian's logo, see data/logos-wanted.md: the distressed letters sit on a mottled sepia field and both cuts came out speckled), the three in their prison stripes
+# O Brother, Where Art Thou? (2000): Touchstone, a slipcase; the poster's sepia, O BROTHER, WHERE ART THOU? typeset in heavy slab capitals in its black (kept typeset: Ian is happy with it, 26 Nov 2026: the distressed letters sit on a mottled sepia field and both cuts came out speckled), the three in their prison stripes
 std('o-brother-where-art-thou-2000', ('grad', [(0, (210, 190, 130)), (.6, (160, 130, 70)), (1, (50, 40, 20))]), (30, 24, 14),
     [T('O BROTHER,', 'schb', 100, (30, 24, 14)), T('WHERE ART THOU?', 'schb', 50, (30, 24, 14))], tgap=8,
     photo=ph(0.5, 0.33, 0.9, 0.75), pb=(30, 24, 14), lg=(30, 24, 14), lw=.55, order='LTPCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(30, 24, 14),
@@ -3624,9 +3624,9 @@ std('the-virgin-suicides-2000', ('grad', [(0, (246, 236, 230)), (.6, (230, 210, 
     photo=ph(0.55, 0.35, 0.86, 0.75), pb=(140, 90, 40), lg=(140, 90, 40), lw=.55, order='LTPCF', credit=['A FILM BY', 'SOFIA COPPOLA'], ccol=(140, 90, 40),
     ft='e', fcol=(110, 70, 40), fin=MINT, seed=2000)
 
-# Titan A.E. (2000): 20th Century Fox, a slipcase; space, TITAN A.E. typeset in wide heavy capitals in chrome white with a blue keyline (parked for Ian's logo, see data/logos-wanted.md: the chrome letters reflect the starfield and the cut came out in pieces), Cale flying from the ship
-std('titan-a-e-2000', ('grad', [(0, (30, 30, 60)), (.6, (8, 8, 20)), (1, (2, 2, 6))]), (220, 220, 236),
-    TT([('TITAN', (226, 228, 240)), ('A.E.', (226, 228, 240))], 'advb', 100, sp=.4, outline=((40, 80, 160), 2)),
+# Titan A.E. (2000): 20th Century Fox, a slipcase; a pale space blue behind the gunmetal logo, the film's own title logo (Ian's image, logos/titan-a-e-2000-title.png), Cale flying from the ship
+std('titan-a-e-2000', ('grad', [(0, (40, 70, 130)), (.5, (120, 160, 210)), (1, (14, 20, 50))]), (220, 220, 236),
+    Pic('logos/titan-a-e-2000-title.png', 170),
     photo=ph(0.5, 0.72, 0.8, 0.6), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTF',
     ft='a', vbox=(200, 40, 40), fcol=(190, 196, 220), fin=MINT, seed=2000)
 
@@ -3660,12 +3660,12 @@ std('amelie-2001', ('grad', [(0, (30, 130, 60)), (.6, (12, 60, 24)), (1, (2, 14,
     photo=ph(0.48, 0.35, 0.8, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'JEAN-PIERRE JEUNET'], ccol=(250, 230, 140),
     ft='c', fcol=(210, 230, 210), fin=MINT, seed=2001)
 
-# Atlantis: The Lost Empire (2001): Disney clamshell; the poster's deep blue, ATLANTIS / THE LOST EMPIRE typeset in a white serif like the logo's (parked for Ian's logo, see data/logos-wanted.md: the thin white letters sit in the crystal's white glow, and both cuts broke), Milo's face in the diamond
+# Atlantis: The Lost Empire (2001): Disney clamshell; the poster's deep blue, ATLANTIS / THE LOST EMPIRE typeset in a white serif like the logo's (kept typeset: Ian is happy with it, 26 Nov 2026: the thin white letters sit in the crystal's white glow, and both cuts broke), Milo's face in the diamond
 disney('atlantis-the-lost-empire-2001', ('grad', [(0, (20, 60, 120)), (.5, (40, 110, 180)), (1, (10, 30, 70))]), fin=dict(CLAM, vivid=.2),
        title=[T('ATLANTIS', 'pagb', 100, WHT, outline=((20, 50, 110), 1.6)), T('THE LOST EMPIRE', 'pagb', 46, WHT)],
        face=ph(.5, .72, .12, 1.4), lcol=WHT)
 
-# Baby Boy (2001): the poster's sky, BABY BOY typeset in light spaced capitals in white (parked for Ian's logo, see data/logos-wanted.md: the thin white letters on a pale sky lost their strokes twice), Tyrese Gibson on the bike
+# Baby Boy (2001): the poster's sky, BABY BOY typeset in light spaced capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: the thin white letters on a pale sky lost their strokes twice), Tyrese Gibson on the bike
 std('baby-boy-2001', ('grad', [(0, (180, 210, 230)), (.5, (140, 150, 140)), (1, (40, 40, 30))]), WHT,
     TT([('BABY', WHT), ('BOY', WHT)], 'hcn', 100, sp=.4, outline=((60, 80, 100), 1.6)),
     photo=ph(0.55, 0.55, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['WRITTEN & DIRECTED BY', 'JOHN SINGLETON'], ccol=WHT,
@@ -3707,7 +3707,7 @@ std('jay-and-silent-bob-strike-back-2001', ('grad', [(0, (240, 236, 226)), (.6, 
     photo=ph(0.5, 0.25, 0.6, 1.3), pb=(30, 30, 34), lg=(30, 30, 34), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
     ft='b', fcol=(30, 30, 34), fin=MINT, seed=2001)
 
-# Kiss of the Dragon (2001): the fire's red into black, KISS OF THE DRAGON typeset in white spaced capitals (parked for Ian's logo, see data/logos-wanted.md: the small white letters sit in the flames' bright glow and two cuts lost them), Jet Li and Bridget Fonda (EuropaCorp logo)
+# Kiss of the Dragon (2001): the fire's red into black, KISS OF THE DRAGON typeset in white spaced capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the small white letters sit in the flames' bright glow and two cuts lost them), Jet Li and Bridget Fonda (EuropaCorp logo)
 std('kiss-of-the-dragon-2001', ('grad', [(0, (170, 40, 20)), (.5, (80, 14, 8)), (1, (6, 2, 2))]), WHT,
     T('KISS OF THE DRAGON', 'hcnb', 80, WHT),
     photo=ph(0.5, 0.4, 0.86, 0.85), pb=(250, 160, 60), lg=WHT, lw=.5, order='LTPF', dotst=('ACTION', (250, 160, 60), (30, 10, 4)),
@@ -3736,11 +3736,11 @@ std('mulholland-drive-2001', ('grad', [(0, (30, 40, 80)), (.6, (8, 10, 24)), (1,
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(80, 130, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID LYNCH', 'FILM'], ccol=(170, 190, 240),
     ft='b', fcol=(180, 190, 220), fin=MINT, seed=2001)
 
-# Ocean's Eleven (2001): the poster's white, OCEAN'S 11 typeset in heavy condensed capitals in its red (parked for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 11 and the cut came out a sliver), the eleven's legs walking
-std('ocean-s-eleven-2001', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
-    TT([("OCEAN'S", (210, 30, 30)), ('11', (210, 30, 30))], 'intbk', 110, sp=.3),
-    photo=ph(0.6, 0.15, 0.6, 1.3), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(30, 30, 30),
-    ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2001)
+# Ocean's Eleven (2001): charcoal (the logo's white OCEAN'S needs a dark ground; the poster is white), the film's own title logo (Ian's image, logos/ocean-s-eleven-2001-title.png), the eleven's legs walking
+std('ocean-s-eleven-2001', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
+    Pic('logos/ocean-s-eleven-2001-title.png', 170),
+    photo=ph(0.6, 0.15, 0.6, 1.3), pb=(236, 236, 236), lg=WHT, lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(230, 230, 230),
+    ft='a', vbox=(210, 30, 30), fcol=(220, 220, 220), fin=MINT, seed=2001)
 
 # Osmosis Jones (2001): Warner Bros., a slipcase; the poster's cell blue, its green outlined OSMOSIS / JONES cut off it whole and levelled, Osmosis mid-flight
 std('osmosis-jones-2001', ('grad', [(0, (60, 120, 220)), (.5, (30, 70, 170)), (1, (10, 20, 70))]), (150, 220, 60),
@@ -3760,9 +3760,9 @@ std('sex-and-lucia-2001', ('grad', [(0, (220, 230, 240)), (.5, (220, 120, 100)),
     photo=ph(0.5, 0.18, 0.7, 0.55), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['UNA PELÍCULA DE', 'JULIO MEDEM'], ccol=WHT,
     ft='b', fcol=(250, 220, 220), fin=MINT, seed=2001)
 
-# Shrek (2001): DreamWorks (PDI), a slipcase; the swamp green, SHREK typeset in a heavy serif in the logo's green with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the green carved letters sit on green grass and both cuts lost them), the green S with Shrek, Fiona and Donkey under it
-std('shrek-2001', ('grad', [(0, (120, 180, 230)), (.5, (110, 170, 60)), (1, (40, 80, 20))]), (110, 170, 40),
-    T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)),
+# Shrek (2001): DreamWorks (PDI), a slipcase; the swamp green, the film's own title logo (Ian's image, logos/shrek-2001-title.png), the green S with Shrek, Fiona and Donkey under it
+std('shrek-2001', ('grad', [(0, (120, 180, 230)), (.7, (80, 140, 200)), (1, (40, 80, 20))]), (110, 170, 40),
+    Pic('logos/shrek-2001-title.png', 170),
     photo=ph(0.5, 0.38, 0.86, 0.85), pb=(110, 170, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('01 1102', top='ANIMATION', fill=(230, 240, 220)),
     ft='a', vbox=(60, 110, 20), fcol=(230, 240, 220), fin=MINT, seed=2001)
 
@@ -3772,9 +3772,9 @@ std('spirited-away-2001', ('grad', [(0, (60, 30, 30)), (.6, (16, 8, 8)), (1, (2,
     photo=ph(0.45, 0.6, 0.8, 1.0), pb=(220, 60, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'HAYAO MIYAZAKI'], ccol=WHT,
     ft='d', fcol=(220, 200, 196), fin=MINT, seed=2001)
 
-# Super Troopers (2001): the sky blue, SUPER TROOPERS typeset in heavy capitals in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the moustache badge sits on the T of TROOPERS and the cut lost it twice), the five troopers hanging upside down
+# Super Troopers (2001): the sky blue, the film's own title logo (Ian's image, logos/super-troopers-2001-title.png), the five troopers hanging upside down
 std('super-troopers-2001', ('grad', [(0, (120, 180, 220)), (.5, (60, 120, 180)), (1, (20, 40, 70))]), (250, 210, 50),
-    T('SUPER TROOPERS', 'intbk', 100, (250, 200, 40), outline=((60, 30, 10), 2.2)),
+    Pic('logos/super-troopers-2001-title.png', 170),
     photo=ph(0.5, 0.25, 0.9, 0.55), pb=(250, 210, 50), lg=WHT, lw=.5, order='LPTF',
     ft='b', fcol=(220, 230, 240), fin=MINT, seed=2001)
 
@@ -3784,13 +3784,13 @@ std('swordfish-2001', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2
     photo=ph(0.5, 0.35, 0.6, 1.3), pb=(200, 230, 50), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 200, 200), fin=MINT, seed=2001)
 
-# The Lord of the Rings: The Fellowship of the Ring (2001): a 2-tape box (179 minutes, the theatrical cut); the poster's golden haze, THE LORD OF THE RINGS and THE FELLOWSHIP OF THE RING typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the logo's gold sits on a gold haze and the cut came out faint and broken), Frodo with the Fellowship round him
+# The Lord of the Rings: The Fellowship of the Ring (2001): a 2-tape box (179 minutes, the theatrical cut); the poster's golden haze, the film's own title logo (Ian's image, logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png), Frodo with the Fellowship round him
 std('the-lord-of-the-rings-the-fellowship-of-the-ring-2001', ('grad', [(0, (120, 100, 60)), (.5, (60, 50, 26)), (1, (10, 8, 4))]), (230, 190, 100),
-    T('THE LORD OF THE RINGS', 'pagb', 130, (236, 196, 110), outline=((40, 26, 10), 1.6)),
+    Pic('logos/the-lord-of-the-rings-the-fellowship-of-the-ring-2001-title.png', 170),
     photo=ph(0.5, 0.5, 0.6, 0.7), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((230, 190, 100), (30, 24, 10)),
     ft='c', fcol=(220, 206, 180), fin=MINT, seed=2001, **TWO)
 
-# The Man Who Wasn't There (2001): black, THE MAN WHO WASN'T THERE typeset in heavy condensed capitals in the poster's grey and yellow (parked for Ian's logo, see data/logos-wanted.md: the poster's huge grey MAN is cut into strips across the faces, and only WHO WASN'T THERE would cut), Billy Bob Thornton (USA Films logo)
+# The Man Who Wasn't There (2001): black, THE MAN WHO WASN'T THERE typeset in heavy condensed capitals in the poster's grey and yellow (kept typeset: Ian is happy with it, 26 Nov 2026: the poster's huge grey MAN is cut into strips across the faces, and only WHO WASN'T THERE would cut), Billy Bob Thornton (USA Films logo)
 std('the-man-who-wasn-t-there-2001', ('grad', [(0, (50, 50, 50)), (.6, (14, 14, 14)), (1, (2, 2, 2))]), (220, 220, 70),
     TT([('THE MAN', (190, 190, 190)), ("WHO WASN'T THERE", (220, 220, 70))], 'intbk', 90, sp=.3),
     photo=ph(0.6, 0.45, 0.6, 1.0), pb=(220, 220, 70), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=WHT,
@@ -3808,9 +3808,9 @@ std('training-day-2001', ('grad', [(0, (100, 90, 70)), (.6, (30, 26, 20)), (1, (
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTSF', stick=RWD(),
     ft='d', fcol=(220, 210, 190), fin=MINT, seed=2001)
 
-# Wet Hot American Summer (2001): the camp's pines, WET HOT AMERICAN SUMMER typeset in heavy capitals in the logo's blue and red with white keylines (parked for Ian's logo, see data/logos-wanted.md: the star-spangled letters are striped with white and the cut came out in shreds), the campers piled in the truck (no logo file: USA Films, from IMDb's company credits)
+# Wet Hot American Summer (2001): the camp's pines, the film's own title logo (Ian's image, logos/wet-hot-american-summer-2001-title.png), the campers piled in the truck (no logo file: USA Films, from IMDb's company credits)
 std('wet-hot-american-summer-2001', ('grad', [(0, (60, 130, 200)), (.5, (40, 110, 60)), (1, (10, 40, 14))]), WHT,
-    TT([('WET', (30, 60, 160)), ('HOT', (210, 30, 40)), ('AMERICAN', (210, 30, 40)), ('SUMMER', (30, 60, 160))], 'intbk', 90, sp=.25, outline=(WHT, 2)),
+    Pic('logos/wet-hot-american-summer-2001-title.png', 170),
     photo=ph(0.5, 0.65, 0.86, 0.85), pb=(200, 30, 40), studio=['USA FILMS'], scol=WHT, order='lPTCF', credit=['A DAVID WAIN', 'FILM'], ccol=WHT,
     ft='a', vbox=(200, 30, 40), fcol=(220, 236, 220), fin=MINT, seed=2001)
 
@@ -3881,21 +3881,21 @@ std('die-another-day-2002', ('grad', [(0, (60, 150, 190)), (.5, (20, 70, 110)), 
     photo=ph(0.6, 0.55, 0.86, 0.85), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF',
     ft='d', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 220, 236), fin=MINT, seed=2002)
 
-# Gangs of New York (2002): Miramax, the poster's dusk, GANGS OF NEW YORK typeset in condensed capitals in the poster's gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are distressed and sit on a gold skyline, and both cuts came out faint and broken), DiCaprio, Diaz and Day-Lewis
+# Gangs of New York (2002): Miramax, the poster's dusk, the film's own title logo (Ian's image, logos/gangs-of-new-york-2002-title.png), DiCaprio, Diaz and Day-Lewis
 std('gangs-of-new-york-2002', ('grad', [(0, (80, 70, 40)), (.6, (24, 20, 10)), (1, (2, 2, 2))]), (230, 190, 100),
-    T('GANGS OF NEW YORK', 'hcnb', 100, (230, 196, 110)),
+    Pic('logos/gangs-of-new-york-2002-title.png', 170),
     photo=ph(0.5, 0.2, 0.9, 0.5), pb=(230, 190, 100), lg=WHT, lw=.5, order='LTPF',
     ft='b', fcol=(220, 206, 180), fin=MINT, seed=2002)
 
-# Harry Potter and the Chamber of Secrets (2002): Warner Bros., a slipcase; the poster's green, HARRY POTTER typeset in a gold serif with AND THE CHAMBER OF SECRETS (parked for Ian's logo, see data/logos-wanted.md: the logo's thin gold strokes sit on green light and both cuts broke them up), Harry, Ron and Hermione
+# Harry Potter and the Chamber of Secrets (2002): Warner Bros., a slipcase; the poster's green, the film's own title logo (Ian's image, logos/harry-potter-and-the-chamber-of-secrets-2002-title.png), Harry, Ron and Hermione
 std('harry-potter-and-the-chamber-of-secrets-2002', ('grad', [(0, (30, 70, 60)), (.6, (10, 26, 22)), (1, (2, 6, 4))]), (230, 190, 90),
-    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE CHAMBER OF SECRETS', 'pagb', 46, (232, 210, 150))], tgap=8,
+    Pic('logos/harry-potter-and-the-chamber-of-secrets-2002-title.png', 170), tgap=8,
     photo=ph(0.5, 0.5, 0.86, 0.85), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
     ft='a', fcol=(200, 220, 210), fin=MINT, seed=2002)
 
-# Hero (2002): the poster's sepia, HERO typeset in a wide gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters fade into the gold army behind them and both lifts lost half of each), Jet Li and the warriors (Edko logo)
+# Hero (2002): the poster's sepia, the film's own title logo (Ian's image, logos/hero-2002-title.png), Jet Li and the warriors (Edko logo)
 std('hero-2002', ('grad', [(0, (150, 120, 70)), (.5, (80, 60, 30)), (1, (14, 10, 4))]), (240, 200, 110),
-    T('HERO', 'pagb', 130, (240, 200, 110), outline=((40, 26, 10), 1.6)),
+    Pic('logos/hero-2002-title.png', 123),
     photo=ph(0.5, 0.3, 0.9, 0.7), pb=(240, 200, 110), lg=WHT, lw=.5, order='LPTCF', credit=['A ZHANG YIMOU', 'FILM'], ccol=(240, 220, 170),
     ft='c', fcol=(230, 210, 180), fin=MINT, seed=2002)
 
@@ -3905,15 +3905,15 @@ std('ice-age-2002', ('grad', [(0, (60, 150, 230)), (.5, (130, 200, 240)), (1, (2
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(20, 80, 160), lg=(20, 60, 120), lw=.55, order='LPTSF', dotst=('FAMILY', (240, 120, 30), WHT),
     ft='b', fcol=(20, 50, 100), fin=MINT, seed=2002)
 
-# Insomnia (2002): black, INSOMNIA typeset in condensed grey capitals (parked for Ian's logo, see data/logos-wanted.md: the poster's grey letters are blurred, and the lift came out half gone), Al Pacino's face half in the dark
+# Insomnia (2002): black, the film's own title logo (Ian's image, logos/insomnia-2002-title.png), Al Pacino's face half in the dark
 std('insomnia-2002', ('grad', [(0, (30, 40, 50)), (.6, (8, 10, 14)), (1, (2, 2, 2))]), (200, 206, 214),
-    T('INSOMNIA', 'hcnb', 110, (200, 206, 214)),
+    Pic('logos/insomnia-2002-title.png', 170),
     photo=ph(0.75, 0.42, 0.42, 1.2), pb=(200, 206, 214), lg=WHT, lw=.5, order='LTPCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=(200, 206, 214),
     ft='e', fcol=(180, 186, 196), fin=MINT, seed=2002)
 
-# Lilo & Stitch (2002): Disney clamshell; the wave's blue, LILO & STITCH typeset in heavy capitals in the logo's red with a white keyline (parked for Ian's logo, see data/logos-wanted.md: the bouncy red letters sit in the wave's white spray and the cut kept only two letters), Stitch's face in the diamond
+# Lilo & Stitch (2002): Disney clamshell; the wave's blue, the film's own title logo (Ian's image, logos/lilo-stitch-2002-title.png), which carries the Disney mark, so no separate studio logo, Stitch's face in the diamond
 disney('lilo-stitch-2002', ('grad', [(0, (60, 150, 220)), (.5, (40, 120, 200)), (1, (20, 60, 120))]), fin=dict(CLAM, vivid=.2),
-       title=T('LILO & STITCH', 'intbk', 110, (210, 40, 40), outline=(WHT, 2.4)),
+       title=Pic('logos/lilo-stitch-2002-title.png', 170), studio=False,
        face=ph(.56, .62, .14, 1.4), lcol=WHT)
 
 # Mr. Deeds (2002): the hotel's gold, the poster's black MR. and red DEEDS cut off it into one line, Adam Sandler and Winona Ryder
@@ -3928,7 +3928,7 @@ std('paid-in-full-2002', ('grad', [(0, (110, 70, 30)), (.6, (30, 18, 8)), (1, (2
     photo=ph(0.5, 0.35, 0.9, 0.85), pb=(240, 190, 50), lg=WHT, lw=.5, order='LPTSF', stick=BAR('02 1025', top='CRIME', fill=(232, 226, 210)),
     ft='a', fcol=(220, 200, 170), fin=MINT, seed=2002)
 
-# Poolhall Junkies (2002): the poster's white, poolhall junkies typeset in a rounded bold in its green (parked for Ian's logo, see data/logos-wanted.md: the felt-textured green letters came out holed both times), the cast in black
+# Poolhall Junkies (2002): the poster's white, poolhall junkies typeset in a rounded bold in its green (kept typeset: Ian is happy with it, 26 Nov 2026: the felt-textured green letters came out holed both times), the cast in black
 std('poolhall-junkies-2002', ('grad', [(0, (246, 246, 246)), (.6, (226, 232, 226)), (1, (120, 130, 120))]), (40, 140, 60),
     T('poolhall junkies', 'popb', 110, (40, 140, 60)),
     photo=ph(0.5, 0.48, 0.9, 0.5), pb=(40, 140, 60), lg=(30, 40, 30), lw=.55, order='LTPF',
@@ -3940,9 +3940,9 @@ std('red-dragon-2002', ('grad', [(0, (60, 30, 20)), (.6, (16, 8, 6)), (1, (2, 2,
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['ANTHONY HOPKINS', 'EDWARD NORTON'], ccol=WHT,
     ft='b', vbox=(200, 30, 30), fcol=(210, 200, 196), fin=MINT, seed=2002)
 
-# Return to Never Land (2002): Disney clamshell; the night sky over London, RETURN TO NEVER LAND typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold glowing letters fade into the moonlit sea and the cut kept a few strokes), Peter Pan's face in the diamond
+# Return to Never Land (2002): Disney clamshell; the night sky over London, the film's own title logo (Ian's image, logos/return-to-never-land-2002-title.png), Peter Pan's face in the diamond
 disney('return-to-never-land-2002', ('grad', [(0, (20, 40, 100)), (.5, (40, 90, 160)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
-       title=[T('NEVER LAND', 'pagb', 110, (250, 210, 80), outline=((40, 30, 10), 1.6)), T('RETURN TO', 'pagb', 50, (250, 220, 140))],
+       title=Pic('logos/return-to-never-land-2002-title.png', 170),
        face=ph(.63, .25, .1, 1.4), lcol=WHT)
 
 # Road to Perdition (2002): DreamWorks, a slipcase; the rain's dark, the poster's bronze ROAD TO / PERDITION cut off it into one line, Tom Hanks in the hat and coat
@@ -3957,57 +3957,57 @@ std('september-11-2002', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), 
     photo=ph(0.5, 0.52, 0.9, 0.5), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
     ft='e', fcol=(20, 20, 20), fin=MINT, seed=2002)
 
-# Spider-Man (2002): Marvel, a slipcase; the poster's gold, SPIDER-MAN typeset in wide heavy capitals in chrome white (parked for Ian's logo, see data/logos-wanted.md: the chrome letters are banded with the gold background and the cut came out striped), Spider-Man hanging upside down
-std('spider-man-2002', ('grad', [(0, (230, 170, 80)), (.5, (180, 110, 40)), (1, (60, 30, 10))]), WHT,
-    T('SPIDER-MAN', 'advb', 100, WHT, outline=((90, 40, 10), 2)),
+# Spider-Man (2002): Marvel, a slipcase; the poster's gold, the film's own title logo (Ian's image, logos/spider-man-2002-title.png), Spider-Man hanging upside down
+std('spider-man-2002', ('grad', [(0, (180, 120, 50)), (.45, (80, 40, 14)), (1, (16, 8, 4))]), WHT,
+    Pic('logos/spider-man-2002-title.png', 92),
     photo=ph(0.45, 0.4, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='a', vbox=(200, 30, 30), fcol=(250, 230, 210), fin=MINT, seed=2002)
 
-# Spirit: Stallion of the Cimarron (2002): DreamWorks, a slipcase; the sky, SPIRIT typeset in a wide serif in white (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on white cloud and the lift lost the T), the stallion running with the mare
+# Spirit: Stallion of the Cimarron (2002): DreamWorks, a slipcase; the sky, the film's own title logo (Ian's image, logos/spirit-stallion-of-the-cimarron-2002-title.png), which carries the DreamWorks mark, so no separate studio logo, the stallion running with the mare
 std('spirit-stallion-of-the-cimarron-2002', ('grad', [(0, (60, 130, 210)), (.5, (110, 170, 230)), (1, (60, 110, 40))]), WHT,
-    T('SPIRIT', 'pagb', 120, WHT, outline=((40, 80, 140), 1.8)),
-    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 120, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    Pic('logos/spirit-stallion-of-the-cimarron-2002-title.png', 170),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 120, 50), lg=WHT, lw=.5, order='PTSF', stick=PRC(['$1.99', 'FAMILY']),
     ft='c', fcol=(230, 240, 250), fin=MINT, seed=2002)
 
-# Star Wars: Episode II – Attack of the Clones (2002): Lucasfilm, a slipcase; the poster's gold dusk, STAR WARS / EPISODE II and ATTACK OF THE CLONES typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters sit on a gold glow and both lifts lost the edge letters), Anakin and Padmé
+# Star Wars: Episode II – Attack of the Clones (2002): Lucasfilm, a slipcase; the poster's gold dusk, STAR WARS / EPISODE II and ATTACK OF THE CLONES typeset in a gold serif (kept typeset: Ian is happy with it, 26 Nov 2026: the gold letters sit on a gold glow and both lifts lost the edge letters), Anakin and Padmé
 std('star-wars-episode-ii-attack-of-the-clones-2002', ('grad', [(0, (150, 90, 30)), (.5, (60, 30, 10)), (1, (6, 2, 2))]), (240, 200, 120),
     [T('EPISODE II', 'pagb', 120, (240, 200, 120), outline=((40, 20, 6), 1.6)), T('ATTACK OF THE CLONES', 'pagb', 50, (240, 210, 150))], tgap=8,
     photo=ph(0.5, 0.33, 0.86, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (240, 200, 120), (30, 14, 4)),
     ft='b', fcol=(230, 210, 180), fin=MINT, seed=2002)
 
-# The Bourne Identity (2002): the poster's blue, THE BOURNE IDENTITY typeset in white capitals (parked for Ian's logo, see data/logos-wanted.md: THE sits over Matt Damon's shoulder and the lift lost it twice), Matt Damon with the pistol
+# The Bourne Identity (2002): the poster's blue, THE BOURNE IDENTITY typeset in white capitals (kept typeset: Ian is happy with it, 26 Nov 2026: THE sits over Matt Damon's shoulder and the lift lost it twice), Matt Damon with the pistol
 std('the-bourne-identity-2002', ('grad', [(0, (40, 90, 140)), (.6, (12, 30, 50)), (1, (2, 6, 10))]), WHT,
     TT([('THE', WHT), ('BOURNE', WHT), ('IDENTITY', WHT)], 'herb', 100, sp=.3),
     photo=ph(0.62, 0.1, 0.5, 0.42), pb=(250, 170, 60), lg=WHT, lw=.5, order='LTPF',
     ft='d', fcol=(190, 206, 226), fin=MINT, seed=2002)
 
-# The Lord of the Rings: The Two Towers (2002): a 2-tape box (179 minutes, the theatrical cut); the poster's pale gold, THE LORD OF THE RINGS typeset in a gold serif like the first's (parked with it for Ian's logo, see data/logos-wanted.md: the same gold-on-gold logo), the Fellowship before the two towers
-std('the-lord-of-the-rings-the-two-towers-2002', ('grad', [(0, (150, 130, 90)), (.5, (70, 60, 36)), (1, (10, 8, 4))]), (236, 196, 110),
-    T('THE LORD OF THE RINGS', 'pagb', 130, (236, 196, 110), outline=((40, 26, 10), 1.6)),
-    photo=ph(0.6, 0.5, 0.6, 1.0), pb=(236, 196, 110), lg=WHT, lw=.5, order='LPTCSF', credit=['THE TWO TOWERS'], ccol=(236, 210, 160), stick=TWOST((236, 196, 110), (30, 24, 10)),
+# The Lord of the Rings: The Two Towers (2002): a 2-tape box (179 minutes, the theatrical cut); the poster's pale gold, the film's own title logo (Ian's image, logos/the-lord-of-the-rings-the-two-towers-2002-title.png), the Fellowship before the two towers
+std('the-lord-of-the-rings-the-two-towers-2002', ('grad', [(0, (100, 84, 56)), (.5, (40, 34, 20)), (1, (8, 6, 3))]), (236, 196, 110),
+    Pic('logos/the-lord-of-the-rings-the-two-towers-2002-title.png', 144),
+    photo=ph(0.6, 0.5, 0.6, 1.0), pb=(236, 196, 110), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((236, 196, 110), (30, 24, 10)),
     ft='e', fcol=(220, 206, 180), fin=MINT, seed=2002, **TWO)
 
-# The Pianist (2002): black, THE PIANIST typeset in heavy capitals in its gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are scuffed and the final T came out broken twice), the hands on the keys
+# The Pianist (2002): black, THE PIANIST typeset in heavy capitals in its gold (kept typeset: Ian is happy with it, 26 Nov 2026: the gold letters are scuffed and the final T came out broken twice), the hands on the keys
 std('the-pianist-2002', ('grad', [(0, (50, 40, 30)), (.6, (14, 10, 8)), (1, (2, 2, 2))]), (240, 190, 60),
     T('THE PIANIST', 'intbk', 110, (240, 190, 60)),
     photo=ph(0.5, 0.7, 0.9, 0.6), pb=(240, 190, 60), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'ROMAN POLANSKI'], ccol=(240, 210, 140),
     ft='a', fcol=(210, 200, 186), fin=MINT, seed=2002)
 
-# The Sum of All Fears (2002): the poster's fire into black, THE SUM OF ALL FEARS typeset in heavy condensed capitals in its gold (parked for Ian's logo, see data/logos-wanted.md: the gold letters are textured with the fire behind them and the cut came out patchy), Ben Affleck and Morgan Freeman
+# The Sum of All Fears (2002): the poster's fire into black, the film's own title logo (Ian's image, logos/the-sum-of-all-fears-2002-title.png), Ben Affleck and Morgan Freeman
 std('the-sum-of-all-fears-2002', ('grad', [(0, (180, 60, 20)), (.5, (80, 20, 8)), (1, (4, 2, 2))]), (240, 180, 60),
-    T('THE SUM OF ALL FEARS', 'intbk', 90, (240, 180, 60)),
+    Pic('logos/the-sum-of-all-fears-2002-title.png', 95),
     photo=ph(0.5, 0.35, 0.9, 0.75), pb=(240, 180, 60), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(230, 200, 180), fin=MINT, seed=2002)
 
-# The Transporter (2002): the poster's white, THE TRANSPORTER typeset in heavy italic capitals in its orange (parked for Ian's logo, see data/logos-wanted.md: the letters are streaked into a motion blur of their own orange), Jason Statham mid-kick with the pistols (TF1 Films logo)
+# The Transporter (2002): the poster's white, THE TRANSPORTER typeset in heavy italic capitals in its orange (kept typeset: Ian is happy with it, 26 Nov 2026: the letters are streaked into a motion blur of their own orange), Jason Statham mid-kick with the pistols (TF1 Films logo)
 std('the-transporter-2002', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (240, 150, 30),
     T('THE TRANSPORTER', 'intbki', 90, (240, 150, 30), outline=((40, 20, 4), 1.6)),
     photo=ph(0.5, 0.25, 0.6, 1.3), pb=(240, 150, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('02 1011', top='ACTION', fill=(240, 236, 226)),
     ft='e', fcol=(30, 30, 30), fin=MINT, seed=2002)
 
-# The Wild Thornberrys Movie (2002): Paramount (Nickelodeon), a slipcase; the canyon's sunset, THE WILD THORNBERRYS MOVIE typeset in heavy capitals in its green (parked for Ian's logo, see data/logos-wanted.md: the logo sits on a blue badge with a sun behind it and the cut took the wrong piece), Eliza on the elephant
+# The Wild Thornberrys Movie (2002): Paramount (Nickelodeon), a slipcase; the canyon's sunset, the film's own title logo (Ian's image, logos/the-wild-thornberrys-movie-2002-title.png), Eliza on the elephant
 std('the-wild-thornberrys-movie-2002', ('grad', [(0, (240, 150, 50)), (.5, (200, 80, 40)), (1, (60, 20, 10))]), (120, 200, 60),
-    TT([('THE WILD', (250, 230, 120)), ('THORNBERRYS', (120, 200, 60)), ('MOVIE', (250, 230, 120))], 'popb', 90, sp=.3, outline=((40, 30, 10), 1.8)),
+    Pic('logos/the-wild-thornberrys-movie-2002-title.png', 170),
     photo=ph(0.5, 0.65, 0.86, 0.85), pb=(120, 200, 60), lg=WHT, lw=.5, order='LPTF',
     ft='b', fcol=(250, 230, 210), fin=MINT, seed=2002)
 
@@ -4016,13 +4016,13 @@ disney('treasure-planet-2002', ('grad', [(0, (230, 130, 60)), (.5, (60, 90, 160)
        title=LC([(0.35, 0.6, 0.98, 0.75)], 130, outline=((30, 20, 40), 1.6), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 2] < .5) & (_lum(a) > .5), minf=.01)]),
        face=ph(.27, .52, .1, 1.4), lcol=WHT)
 
-# 2 Fast 2 Furious (2003): the poster's black, 2 FAST 2 FURIOUS typeset in heavy italic capitals in white and blue (parked for Ian's logo, see data/logos-wanted.md: the chrome letters sit over the cars' lights and the cut came out in pieces), Paul Walker and Tyrese
+# 2 Fast 2 Furious (2003): the poster's black, the film's own title logo (Ian's image, logos/2-fast-2-furious-2003-title.png), Paul Walker and Tyrese
 std('2-fast-2-furious-2003', ('grad', [(0, (40, 60, 100)), (.6, (10, 16, 30)), (1, (2, 2, 6))]), WHT,
-    TT([('2 FAST', WHT), ('2 FURIOUS', (90, 160, 240))], 'intbki', 100, sp=.3),
+    Pic('logos/2-fast-2-furious-2003-title.png', 170),
     photo=ph(0.5, 0.15, 0.9, 0.4), pb=(60, 140, 240), lg=WHT, lw=.5, order='LPTF',
     ft='a', vbox=(60, 140, 240), fcol=(200, 206, 230), fin=MINT, seed=2003)
 
-# 21 Grams (2003): the poster's red and dark, 21 GRAMS typeset in heavy condensed capitals, 21 in red and GRAMS in gold (parked for Ian's logo, see data/logos-wanted.md: the huge red 21 runs behind the cast's strips and GRAMS is slanted over them), the cast in their strips
+# 21 Grams (2003): the poster's red and dark, 21 GRAMS typeset in heavy condensed capitals, 21 in red and GRAMS in gold (kept typeset: Ian is happy with it, 26 Nov 2026: the huge red 21 runs behind the cast's strips and GRAMS is slanted over them), the cast in their strips
 std('21-grams-2003', ('grad', [(0, (140, 30, 20)), (.5, (60, 14, 8)), (1, (6, 2, 2))]), (220, 30, 30),
     TT([('21', (220, 30, 30)), ('GRAMS', (240, 190, 80))], 'intbk', 120, sp=.3),
     photo=ph(0.7, 0.4, 0.5, 1.3), pb=(240, 190, 80), lg=WHT, lw=.5, order='LTPCF', credit=['AN ALEJANDRO', 'GONZÁLEZ IÑÁRRITU FILM'], ccol=WHT,
@@ -4034,9 +4034,9 @@ std('bad-boys-ii-2003', ('grad', [(0, (200, 190, 160)), (.5, (180, 140, 80)), (1
     photo=ph(0.5, 0.5, 0.86, 0.75), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTF',
     ft='b', vbox=(20, 16, 10), vink=(220, 200, 160), fcol=(30, 20, 10), fin=MINT, seed=2003)
 
-# Bad Santa (2003): the elf's green, BAD SANTA typeset in heavy capitals in the logo's green with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the green letters are lit unevenly and the cut lost the T twice), Billy Bob Thornton in the Santa suit
+# Bad Santa (2003): the elf's green, the film's own title logo (Ian's image, logos/bad-santa-2003-title.png), Billy Bob Thornton in the Santa suit
 std('bad-santa-2003', ('grad', [(0, (200, 40, 40)), (.5, (120, 20, 20)), (1, (20, 60, 20))]), (120, 200, 60),
-    T('BAD SANTA', 'intbk', 110, (110, 190, 60), outline=((20, 40, 10), 2)),
+    Pic('logos/bad-santa-2003-title.png', 158),
     photo=ph(0.45, 0.3, 0.86, 0.85), pb=(120, 200, 60), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
     ft='c', fcol=(240, 220, 200), fin=MINT, seed=2003)
 
@@ -4046,9 +4046,9 @@ std('big-fish-2003', ('grad', [(0, (120, 170, 220)), (.5, (160, 190, 120)), (1, 
     photo=ph(0.5, 0.25, 0.6, 1.3), pb=(60, 20, 14), lg=(40, 20, 10), lw=.55, order='LPTF',
     ft='a', fcol=(250, 240, 220), fin=MINT, seed=2003)
 
-# Brother Bear (2003): Disney clamshell; the forest's blues, BROTHER BEAR typeset in a rough serif in the sign's wood brown on a cream keyline (parked for Ian's logo, see data/logos-wanted.md: the poster's title is a square carved sign, which only reads across the spine, not down it), Kenai's face in the diamond
+# Brother Bear (2003): Disney clamshell; the forest's blues, the film's own title logo (Ian's image, logos/brother-bear-2003-title.png), Kenai's face in the diamond
 disney('brother-bear-2003', ('grad', [(0, (40, 90, 160)), (.5, (60, 130, 190)), (1, (30, 60, 40))]), fin=dict(CLAM, vivid=.2),
-       title=T('BROTHER BEAR', 'schb', 110, (130, 70, 30), outline=((250, 230, 190), 2.2)),
+       title=Pic('logos/brother-bear-2003-title.png', 170),
        face=ph(.47, .27, .18, 1.4), lcol=WHT)
 
 # Bruce Almighty (2003): the sky, the poster's white Bruce and red ALMIGHTY cut off it in their own colours, Jim Carrey holding the world on a string
@@ -4057,7 +4057,7 @@ std('bruce-almighty-2003', ('grad', [(0, (90, 160, 230)), (.5, (160, 200, 240)),
     photo=ph(0.55, 0.5, 0.86, 0.9), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', dotst=('COMEDY', (200, 30, 30), WHT),
     ft='a', fcol=(220, 230, 250), fin=MINT, seed=2003)
 
-# Capturing the Friedmans (2003): black, CAPTURING THE FRIEDMANS typeset in condensed capitals in its yellow (parked for Ian's logo, see data/logos-wanted.md: the yellow letters are speckled and both lifts came out holed), the torn family snapshot (HBO Documentary logo; director from IMDb)
+# Capturing the Friedmans (2003): black, CAPTURING THE FRIEDMANS typeset in condensed capitals in its yellow (kept typeset: Ian is happy with it, 26 Nov 2026: the yellow letters are speckled and both lifts came out holed), the torn family snapshot (HBO Documentary logo; director from IMDb)
 std('capturing-the-friedmans-2003', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), (250, 230, 60),
     T('CAPTURING THE FRIEDMANS', 'hcnb', 90, (250, 230, 60)),
     photo=ph(0.55, 0.38, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DOCUMENTARY BY', 'ANDREW JARECKI'], ccol=WHT,
@@ -4086,7 +4086,7 @@ std('holes-2003', ('grad', [(0, (60, 40, 20)), (.6, (16, 10, 6)), (1, (2, 2, 2))
     photo=ph(0.5, 0.3, 0.8, 0.85), pb=(240, 170, 80), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
     ft='e', fcol=(210, 200, 190), fin=MINT, seed=2003)
 
-# Intolerable Cruelty (2003): the poster's white, INTOLERABLE CRUELTY typeset in thin grey capitals (parked for Ian's logo, see data/logos-wanted.md: the thin letters' T bars vanish at spine size), George Clooney and Catherine Zeta-Jones
+# Intolerable Cruelty (2003): the poster's white, INTOLERABLE CRUELTY typeset in thin grey capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the thin letters' T bars vanish at spine size), George Clooney and Catherine Zeta-Jones
 std('intolerable-cruelty-2003', ('grad', [(0, (246, 246, 244)), (.6, (226, 228, 226)), (1, (120, 124, 120))]), (60, 60, 64),
     T('INTOLERABLE CRUELTY', 'adv', 90, (70, 70, 74)),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(190, 20, 30), lg=(40, 40, 44), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(40, 40, 44),
@@ -4111,13 +4111,13 @@ std('memories-of-murder-2003', ('grad', [(0, (110, 120, 120)), (.6, (40, 46, 46)
     photo=ph(0.5, 0.65, 0.86, 0.6), pb=(200, 40, 30), lg=WHT, lw=.5, order='LPTF',
     ft='d', fcol=(200, 206, 206), fin=MINT, seed=2003)
 
-# Mystic River (2003): the river's blue, MYSTIC RIVER typeset in heavy capitals in white (parked for Ian's logo, see data/logos-wanted.md: RIVER fades into the blue reflection and both lifts lost its last letters), the three boys' reflections
+# Mystic River (2003): the river's blue, MYSTIC RIVER typeset in heavy capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: RIVER fades into the blue reflection and both lifts lost its last letters), the three boys' reflections
 std('mystic-river-2003', ('grad', [(0, (20, 40, 70)), (.5, (40, 90, 140)), (1, (10, 30, 60))]), WHT,
     T('MYSTIC RIVER', 'intbk', 100, WHT),
     photo=ph(0.5, 0.5, 0.86, 0.6), pb=(160, 200, 240), lg=WHT, lw=.5, order='LPTCF', credit=['SEAN PENN', 'TIM ROBBINS'], ccol=WHT,
     ft='c', fcol=(190, 210, 230), fin=MINT, seed=2003)
 
-# Old School (2003): the poster's party dark, OLD typeset in the logo's red with a white keyline and SCHOOL in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the white-edged red OLD sits on the cast's clothes and broke up twice), Will Ferrell, Luke Wilson and Vince Vaughn
+# Old School (2003): the poster's party dark, OLD typeset in the logo's red with a white keyline and SCHOOL in heavy white capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the white-edged red OLD sits on the cast's clothes and broke up twice), Will Ferrell, Luke Wilson and Vince Vaughn
 std('old-school-2003', ('grad', [(0, (60, 40, 60)), (.6, (16, 10, 16)), (1, (2, 2, 2))]), WHT,
     TT([('OLD', (210, 30, 30)), ('SCHOOL', WHT)], 'intbk', 110, sp=.3, outline=((30, 20, 20), 1.6)),
     photo=ph(0.5, 0.3, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPSF', stick=PRC(['$1.99', 'COMEDY']),
@@ -4142,15 +4142,15 @@ std('paycheck-2003', ('grad', [(0, (20, 30, 60)), (.6, (6, 10, 20)), (1, (0, 0, 
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTSF', dotst=('SCI-FI', (120, 180, 240), (10, 20, 40)),
     ft='d', fcol=(190, 200, 226), fin=MINT, seed=2003)
 
-# Pirates of the Caribbean: The Curse of the Black Pearl (2003): Disney, a live-action film, so a slipcase; the poster's sepia, PIRATES OF THE CARIBBEAN typeset in a weathered serif in the logo's parchment and THE CURSE OF THE BLACK PEARL under it (parked for Ian's logo, see data/logos-wanted.md: the logo is printed on a torn strip of the poster's own browns), Jack Sparrow and the crew
+# Pirates of the Caribbean: The Curse of the Black Pearl (2003): Disney, a live-action film, so a slipcase; the poster's sepia, the film's own title logo (Ian's image, logos/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-title.png), Jack Sparrow and the crew
 std('pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003', ('grad', [(0, (110, 70, 40)), (.5, (50, 30, 16)), (1, (8, 4, 2))]), (226, 200, 150),
-    [T('PIRATES OF THE CARIBBEAN', 'pagb', 100, (226, 200, 150), outline=((30, 16, 6), 1.6)), T('THE CURSE OF THE BLACK PEARL', 'pagb', 46, (226, 210, 170))], tgap=8,
+    Pic('logos/pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003-title.png', 170), tgap=8,
     photo=ph(0.5, 0.25, 0.9, 0.6), pb=(226, 200, 150), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(220, 200, 170), fin=MINT, seed=2003)
 
-# Rugrats Go Wild (2003): Paramount (Nickelodeon), a slipcase; the jungle's green, RUGRATS GO WILD typeset in a heavy rounded bold in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the yellow logo sits on the palm's green and yellow and the cut kept only scraps), the babies and the Thornberrys on the island
+# Rugrats Go Wild (2003): Paramount (Nickelodeon), a slipcase; the jungle's green, the film's own title logo (Ian's image, logos/rugrats-go-wild-2003-title.png), the babies and the Thornberrys on the island
 std('rugrats-go-wild-2003', ('grad', [(0, (60, 160, 60)), (.5, (40, 120, 40)), (1, (10, 40, 10))]), (250, 220, 40),
-    TT([('RUGRATS', (250, 220, 40)), ('GO WILD', (250, 220, 40))], 'popb', 100, sp=.3, outline=((30, 20, 10), 2)),
+    Pic('logos/rugrats-go-wild-2003-title.png', 170),
     photo=ph(0.5, 0.15, 0.6, 1.3), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(230, 246, 220), fin=MINT, seed=2003)
 
@@ -4160,21 +4160,21 @@ std('s-w-a-t-2003', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 
     photo=ph(0.5, 0.3, 0.9, 0.7), pb=(200, 200, 200), lg=WHT, lw=.5, order='LPTCSF', credit=['SAMUEL L. JACKSON', 'COLIN FARRELL'], ccol=WHT, stick=BAR('03 0808', top='ACTION', fill=(230, 230, 230)),
     ft='e', fcol=(200, 200, 200), fin=MINT, seed=2003)
 
-# Sinbad: Legend of the Seven Seas (2003): DreamWorks, a slipcase; the sea's blue, SINBAD typeset in a gold serif with LEGEND OF THE SEVEN SEAS (parked for Ian's logo, see data/logos-wanted.md: the gold script sits on a pale sky and the cut broke it into strokes), Sinbad and Marina on the deck
+# Sinbad: Legend of the Seven Seas (2003): DreamWorks, a slipcase; the sea's blue, SINBAD typeset in a gold serif with LEGEND OF THE SEVEN SEAS (kept typeset: Ian is happy with it, 26 Nov 2026: the gold script sits on a pale sky and the cut broke it into strokes), Sinbad and Marina on the deck
 std('sinbad-legend-of-the-seven-seas-2003', ('grad', [(0, (60, 150, 220)), (.5, (30, 100, 170)), (1, (10, 40, 80))]), (250, 210, 70),
     [T('SINBAD', 'pagb', 120, (250, 210, 70), outline=((40, 30, 60), 1.8)), T('LEGEND OF THE SEVEN SEAS', 'pagb', 46, (250, 230, 150))], tgap=8,
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 210, 70), lg=WHT, lw=.5, order='LTPSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
     ft='b', fcol=(220, 236, 250), fin=MINT, seed=2003)
 
-# The Italian Job (2003): black, THE ITALIAN JOB typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: JOB sits against the bright yellow stripe and both lifts lost it), the crew
+# The Italian Job (2003): black, THE ITALIAN JOB typeset in heavy condensed capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: JOB sits against the bright yellow stripe and both lifts lost it), the crew
 std('the-italian-job-2003', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1, (2, 2, 2))]), WHT,
     T('THE ITALIAN JOB', 'hcnb', 110, WHT),
     photo=ph(0.4, 0.3, 0.8, 0.85), pb=(250, 230, 40), lg=WHT, lw=.5, order='LPTF',
     ft='a', vbox=(250, 230, 40), vink=(20, 20, 20), fcol=(200, 200, 200), fin=MINT, seed=2003)
 
-# The Jungle Book 2 (2003): Disney clamshell; the jungle's green, THE JUNGLE BOOK 2 typeset in a gold serif with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved gold letters sit among leaves of the same gold and the cut came out patchy), Mowgli's face in the diamond
+# The Jungle Book 2 (2003): Disney clamshell; the jungle's green, the film's own title logo (Ian's image, logos/the-jungle-book-2-2003-title.png), which carries the Disney mark, so no separate studio logo, Mowgli's face in the diamond
 disney('the-jungle-book-2-2003', ('grad', [(0, (60, 140, 60)), (.5, (90, 170, 80)), (1, (30, 70, 30))]), fin=dict(CLAM, vivid=.2),
-       title=T('THE JUNGLE BOOK 2', 'pagb', 110, (240, 190, 70), outline=((40, 26, 10), 2)),
+       title=Pic('logos/the-jungle-book-2-2003-title.png', 170), studio=False,
        face=ph(.75, .66, .12, 1.4), lcol=WHT)
 
 # The Lord of the Rings: The Return of the King (2003): a 2-tape box (201 minutes); the poster's silver grey, THE LORD OF THE RINGS typeset in a gold serif like the first two's (parked with them for Ian's logo, see data/logos-wanted.md), Aragorn with the sword raised
@@ -4189,7 +4189,7 @@ std('the-school-of-rock-2003', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 2
     photo=ph(0.45, 0.35, 0.8, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('03 1003', top='COMEDY', fill=(240, 236, 226)),
     ft='b', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2003)
 
-# The Triplets of Belleville (2003): the poster's dark sepia, THE TRIPLETS OF BELLEVILLE typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the tilted gold letters sit on the sepia drawing and the lifts lost their ends), the triplets and Madame Souza
+# The Triplets of Belleville (2003): the poster's dark sepia, THE TRIPLETS OF BELLEVILLE typeset in a gold serif (kept typeset: Ian is happy with it, 26 Nov 2026: the tilted gold letters sit on the sepia drawing and the lifts lost their ends), the triplets and Madame Souza
 std('the-triplets-of-belleville-2003', ('grad', [(0, (90, 60, 30)), (.6, (30, 18, 8)), (1, (4, 2, 2))]), (240, 200, 70),
     [T('THE TRIPLETS OF', 'pagb', 60, (240, 200, 70)), T('BELLEVILLE', 'pagb', 100, (240, 200, 70), outline=((30, 16, 6), 1.6))], tgap=8,
     photo=ph(0.5, 0.4, 0.86, 0.85), pb=(240, 200, 70), lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'SYLVAIN CHOMET'], ccol=(240, 220, 150),
@@ -4249,18 +4249,18 @@ std('hamburger-america-2004', ('grad', [(0, (180, 110, 50)), (.5, (120, 70, 30))
     photo=ph(0.5, 0.6, 0.86, 0.6), pb=(250, 226, 150), studio=['MOTZFILMS'], scol=(250, 226, 150), order='lPTCF', credit=['A FILM BY', 'GEORGE MOTZ'], ccol=(250, 226, 150),
     ft='c', fcol=(240, 220, 180), fin=MINT, seed=2004)
 
-# Harry Potter and the Prisoner of Azkaban (2004): Warner Bros., a slipcase; the storm sky, HARRY POTTER typeset in a gold serif with AND THE PRISONER OF AZKABAN (parked with the others for Ian's logo, see data/logos-wanted.md), Harry with the Hogwarts sky behind
+# Harry Potter and the Prisoner of Azkaban (2004): Warner Bros., a slipcase; the storm sky, the film's own title logo (Ian's image, logos/harry-potter-and-the-prisoner-of-azkaban-2004-title.png), Harry with the Hogwarts sky behind
 std('harry-potter-and-the-prisoner-of-azkaban-2004', ('grad', [(0, (50, 70, 100)), (.6, (14, 20, 30)), (1, (2, 4, 6))]), (232, 194, 96),
-    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE PRISONER OF AZKABAN', 'pagb', 46, (232, 210, 150))], tgap=8,
+    Pic('logos/harry-potter-and-the-prisoner-of-azkaban-2004-title.png', 170), tgap=8,
     photo=ph(0.5, 0.45, 0.86, 0.75), pb=(232, 194, 96), lg=WHT, lw=.5, order='LTPF',
     ft='b', fcol=(200, 210, 220), fin=MINT, seed=2004)
 
-# Home on the Range (2004): Disney clamshell; the desert sky, HOME ON THE RANGE typeset in heavy italic capitals in the logo's yellow with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the slanted yellow letters crowd round the cows' heads and the cut kept only scraps), Maggie the cow's face in the diamond
+# Home on the Range (2004): Disney clamshell; the desert sky, the film's own title logo (Ian's image, logos/home-on-the-range-2004-title.png), which carries the Disney mark, so no separate studio logo, Maggie the cow's face in the diamond
 disney('home-on-the-range-2004', ('grad', [(0, (40, 80, 170)), (.5, (60, 120, 200)), (1, (200, 110, 50))]), fin=dict(CLAM, vivid=.2),
-       title=T('HOME ON THE RANGE', 'intbki', 100, (250, 210, 50), outline=((40, 20, 10), 2)),
+       title=Pic('logos/home-on-the-range-2004-title.png', 170), studio=False,
        face=ph(.5, .48, .2, 1.4), lcol=WHT)
 
-# I Like Killing Flies (2004): the poster's parchment, I LIKE KILLING FLIES typeset in a hand-drawn-looking face in brown (parked for Ian's logo, see data/logos-wanted.md: the scratchy pen lettering came out faint and broken), Kenny Shopsin's face under it (no logo file: THINKFilm, from IMDb's company credits; director from IMDb)
+# I Like Killing Flies (2004): the poster's parchment, I LIKE KILLING FLIES typeset in a hand-drawn-looking face in brown (kept typeset: Ian is happy with it, 26 Nov 2026: the scratchy pen lettering came out faint and broken), Kenny Shopsin's face under it (no logo file: THINKFilm, from IMDb's company credits; director from IMDb)
 std('i-like-killing-flies-2004', ('grad', [(0, (236, 210, 150)), (.5, (200, 160, 90)), (1, (80, 50, 20))]), (40, 30, 20),
     T('I LIKE KILLING FLIES', 'curbi', 90, (60, 40, 20)),
     photo=ph(0.5, 0.82, 0.6, 1.3), pb=(40, 30, 20), studio=['THINKFILM'], scol=(40, 30, 20), order='lPTF',
@@ -4278,13 +4278,13 @@ std('in-good-company-2004', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)
     photo=ph(0.5, 0.6, 0.86, 0.85), pb=(140, 20, 40), studio=['UNIVERSAL PICTURES'], scol=(40, 30, 30), order='lPTF',
     ft='d', fcol=(40, 30, 30), fin=MINT, seed=2004)
 
-# Jersey Girl (2004): Miramax, the poster's white, jersey girl typeset in a heavy rounded face in its blue (parked for Ian's logo, see data/logos-wanted.md: the blue letters overlap the girl's blue jeans and both tries took the jeans too), Ben Affleck and Raquel Castro crossing their arms
+# Jersey Girl (2004): Miramax, the poster's white, jersey girl typeset in a heavy rounded face in its blue (kept typeset: Ian is happy with it, 26 Nov 2026: the blue letters overlap the girl's blue jeans and both tries took the jeans too), Ben Affleck and Raquel Castro crossing their arms
 std('jersey-girl-2004', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 70, 160),
     T('jersey girl', 'popb', 110, (30, 70, 160)),
     photo=ph(0.5, 0.35, 0.86, 0.75), pb=(30, 70, 160), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['A FILM BY', 'KEVIN SMITH'], ccol=(30, 40, 70),
     ft='c', fcol=(30, 40, 70), fin=MINT, seed=2004)
 
-# Kill Bill: Vol. 2 (2004): Miramax, the poster's red and yellow, KILL BILL typeset in heavy condensed capitals in its yellow over VOLUME 2 in white (parked for Ian's logo, see data/logos-wanted.md: the Bride's sword and jacket cut across BILL), the Bride drawing her sword
+# Kill Bill: Vol. 2 (2004): Miramax, the poster's red and yellow, KILL BILL typeset in heavy condensed capitals in its yellow over VOLUME 2 in white (kept typeset: Ian is happy with it, 26 Nov 2026: the Bride's sword and jacket cut across BILL), the Bride drawing her sword
 std('kill-bill-vol-2-2004', ('grad', [(0, (220, 30, 30)), (.5, (180, 20, 20)), (1, (60, 6, 6))]), (250, 220, 30),
     [T('KILL BILL', 'intbk', 120, (250, 220, 30)), T('VOLUME 2', 'intbk', 50, WHT)], tgap=8,
     photo=ph(0.75, 0.55, 0.45, 1.3), pb=(250, 220, 30), lg=WHT, lw=.5, order='LTPCF', credit=['THE 4TH FILM BY', 'QUENTIN TARANTINO'], ccol=WHT,
@@ -4304,19 +4304,19 @@ std('layer-cake-2004', ('grad', [(0, (60, 50, 30)), (.6, (16, 12, 8)), (1, (2, 2
     photo=ph(0.6, 0.65, 0.8, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LTPCF', credit=['DANIEL CRAIG'], ccol=WHT,
     ft='e', fcol=(220, 210, 190), fin=MINT, seed=2004)
 
-# Lemony Snicket's A Series of Unfortunate Events (2004): Paramount, a slipcase; the poster's storm teal, A SERIES OF UNFORTUNATE EVENTS typeset in a gold serif with LEMONY SNICKET'S over it (parked for Ian's logo, see data/logos-wanted.md: the thin gold letters sit on a glowing sky and the cut came out empty), the orphans on the sand
+# Lemony Snicket's A Series of Unfortunate Events (2004): Paramount, a slipcase; the poster's storm teal, A SERIES OF UNFORTUNATE EVENTS typeset in a gold serif with LEMONY SNICKET'S over it (kept typeset: Ian is happy with it, 26 Nov 2026: the thin gold letters sit on a glowing sky and the cut came out empty), the orphans on the sand
 std('lemony-snicket-s-a-series-of-unfortunate-events-2004', ('grad', [(0, (60, 100, 110)), (.6, (16, 30, 34)), (1, (2, 6, 8))]), (230, 190, 100),
     [T('UNFORTUNATE EVENTS', 'pagb', 100, (230, 190, 100), outline=((20, 30, 30), 1.6)), T("LEMONY SNICKET'S A SERIES OF", 'pagb', 46, (230, 210, 160))], tgap=8,
     photo=ph(0.5, 0.75, 0.9, 0.55), pb=(230, 190, 100), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
     ft='c', fcol=(200, 210, 210), fin=MINT, seed=2004)
 
-# Mean Girls (2004): Paramount, the poster's hot pink, MEAN GIRLS typeset in heavy capitals, MEAN in pink and GIRLS in white with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the pink letters sit on the pink ground and the cut came out in shreds), Lindsay Lohan and the Plastics
+# Mean Girls (2004): Paramount, the poster's hot pink, MEAN GIRLS typeset in heavy capitals, MEAN in pink and GIRLS in white with a dark keyline (kept typeset: Ian is happy with it, 26 Nov 2026: the pink letters sit on the pink ground and the cut came out in shreds), Lindsay Lohan and the Plastics
 std('mean-girls-2004', ('grad', [(0, (250, 220, 236)), (.5, (240, 120, 180)), (1, (180, 30, 110))]), (220, 30, 130),
     TT([('MEAN', (220, 30, 130)), ('GIRLS', WHT)], 'intbk', 110, sp=.2, outline=((80, 10, 50), 1.8)),
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(220, 30, 130), lg=(60, 10, 40), lw=.55, order='LPTSF', dotst=('COMEDY', (250, 220, 236), (180, 30, 110)),
     ft='a', vbox=(220, 30, 130), fcol=(60, 10, 40), fin=MINT, seed=2004)
 
-# Meet the Fockers (2004): the poster's white, Meet the Fockers typeset in a crimson serif (parked for Ian's logo, see data/logos-wanted.md: the F's thin top stroke vanishes in both cuts, so it reads 'rockers'), the two families lined up
+# Meet the Fockers (2004): the poster's white, Meet the Fockers typeset in a crimson serif (kept typeset: Ian is happy with it, 26 Nov 2026: the F's thin top stroke vanishes in both cuts, so it reads 'rockers'), the two families lined up
 std('meet-the-fockers-2004', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1, (120, 116, 110))]), (180, 20, 40),
     T('Meet the Fockers', 'pagb', 110, (180, 20, 40)),
     photo=ph(0.5, 0.6, 0.86, 0.75), pb=(180, 20, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('04 1222', top='COMEDY', fill=(240, 236, 226)),
@@ -4334,11 +4334,11 @@ std('napoleon-dynamite-2004', ('grad', [(0, (250, 246, 236)), (.6, (240, 230, 20
     photo=ph(0.5, 0.5, 0.5, 1.6), pb=(20, 20, 20), studio=['FOX SEARCHLIGHT'], scol=(20, 20, 20), order='lPTSF', dotst=('COMEDY', (210, 50, 50), WHT),
     ft='a', fcol=(30, 30, 30), fin=MINT, seed=2004)
 
-# Ocean's Twelve (2004): the poster's white, OCEAN'S 12 typeset in heavy condensed capitals in its red (parked with Ocean's Eleven for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 12), the twelve's silhouettes tumbling
-std('ocean-s-twelve-2004', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
-    TT([("OCEAN'S", (210, 30, 30)), ('12', (210, 30, 30))], 'intbk', 110, sp=.3),
-    photo=ph(0.5, 0.25, 0.8, 0.5), pb=(30, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF',
-    ft='e', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2004)
+# Ocean's Twelve (2004): charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-twelve-2004-title.png), the twelve's silhouettes tumbling
+std('ocean-s-twelve-2004', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
+    Pic('logos/ocean-s-twelve-2004-title.png', 170),
+    photo=ph(0.5, 0.25, 0.8, 0.5), pb=(236, 236, 236), lg=WHT, lw=.55, order='LPTF',
+    ft='e', vbox=(210, 30, 30), fcol=(220, 220, 220), fin=MINT, seed=2004)
 
 # Secret Window (2004): the dark, the poster's red SECRET WINDOW lifted, Johnny Depp in the glasses
 std('secret-window-2004', ('grad', [(0, (60, 40, 30)), (.6, (16, 10, 8)), (1, (2, 2, 2))]), (200, 40, 40),
@@ -4352,15 +4352,15 @@ std('shark-tale-2004', ('grad', [(0, (40, 120, 200)), (.5, (20, 80, 160)), (1, (
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(200, 220, 246), fin=MINT, seed=2004)
 
-# Shrek 2 (2004): DreamWorks, a slipcase; Far Far Away's sky, SHREK 2 typeset in a heavy serif in the logo's green (parked with Shrek for Ian's logo, see data/logos-wanted.md: the same green carved logo on green), Shrek, Fiona, Donkey and Puss
-std('shrek-2-2004', ('grad', [(0, (90, 170, 230)), (.5, (120, 180, 70)), (1, (40, 80, 20))]), (120, 180, 50),
-    T('SHREK 2', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)),
-    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'FAMILY']),
+# Shrek 2 (2004): DreamWorks, a slipcase; Far Far Away's sky, the film's own title logo (Ian's image, logos/shrek-2-2004-title.png), which carries the DreamWorks mark, so no separate studio logo, Shrek, Fiona, Donkey and Puss
+std('shrek-2-2004', ('grad', [(0, (90, 170, 230)), (.7, (70, 130, 200)), (1, (40, 80, 20))]), (120, 180, 50),
+    Pic('logos/shrek-2-2004-title.png', 166),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(120, 180, 50), lg=WHT, lw=.5, order='PTSF', stick=PRC(['$2.99', 'FAMILY']),
     ft='b', fcol=(230, 240, 220), fin=MINT, seed=2004)
 
-# Spider-Man 2 (2004): Marvel, a slipcase; the poster's gold dusk, SPIDER-MAN 2 typeset in wide heavy capitals in white (parked with Spider-Man for Ian's logo, see data/logos-wanted.md), Spider-Man and Mary Jane
-std('spider-man-2-2004', ('grad', [(0, (230, 150, 60)), (.5, (160, 60, 30)), (1, (30, 10, 6))]), WHT,
-    T('SPIDER-MAN 2', 'advb', 100, WHT, outline=((90, 30, 10), 2)),
+# Spider-Man 2 (2004): Marvel, a slipcase; the poster's gold dusk, the film's own title logo (Ian's image, logos/spider-man-2-2004-title.png), Spider-Man and Mary Jane
+std('spider-man-2-2004', ('grad', [(0, (190, 110, 50)), (.45, (90, 30, 14)), (1, (18, 6, 4))]), WHT,
+    Pic('logos/spider-man-2-2004-title.png', 76),
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['TOBEY MAGUIRE', 'KIRSTEN DUNST'], ccol=WHT,
     ft='a', vbox=(200, 30, 30), fcol=(250, 230, 210), fin=MINT, seed=2004)
 
@@ -4412,7 +4412,7 @@ std('a-history-of-violence-2005', ('grad', [(0, (90, 170, 230)), (.5, (180, 60, 
     photo=ph(0.5, 0.5, 0.6, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG', 'FILM'], ccol=WHT,
     ft='a', fcol=(250, 220, 220), fin=MINT, seed=2005)
 
-# Are We There Yet? (2005): Columbia (Revolution), a slipcase; the poster's sky blue, ARE WE THERE YET? typeset in heavy capitals in white (parked for Ian's logo, see data/logos-wanted.md: the white letters are stacked over a white cloud and the clouds came with them), Ice Cube and the kids by the car
+# Are We There Yet? (2005): Columbia (Revolution), a slipcase; the poster's sky blue, ARE WE THERE YET? typeset in heavy capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: the white letters are stacked over a white cloud and the clouds came with them), Ice Cube and the kids by the car
 std('are-we-there-yet-2005', ('grad', [(0, (60, 140, 220)), (.5, (100, 170, 230)), (1, (60, 60, 60))]), WHT,
     T('ARE WE THERE YET?', 'intbk', 100, WHT, outline=((20, 60, 130), 2)),
     photo=ph(0.5, 0.6, 0.86, 0.75), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
@@ -4430,15 +4430,15 @@ std('capote-2005', ('grad', [(0, (240, 240, 240)), (.6, (216, 218, 220)), (1, (1
     photo=ph(0.5, 0.45, 0.6, 1.0), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF',
     ft='e', fcol=(20, 20, 20), fin=MINT, seed=2005)
 
-# Charlie and the Chocolate Factory (2005): Warner Bros., a slipcase; the candy sky, CHARLIE AND THE CHOCOLATE FACTORY typeset in a rounded bold in the logo's teal and gold (parked for Ian's logo, see data/logos-wanted.md: the logo is printed on Wonka's dark hat band), Wonka under the top hat
+# Charlie and the Chocolate Factory (2005): Warner Bros., a slipcase; the candy sky, the film's own title logo (Ian's image, logos/charlie-and-the-chocolate-factory-2005-title.png), Wonka under the top hat
 std('charlie-and-the-chocolate-factory-2005', ('grad', [(0, (120, 190, 240)), (.5, (240, 140, 160)), (1, (60, 30, 70))]), (70, 170, 170),
-    TT([('Charlie', (70, 180, 180)), ('and the', (240, 210, 120)), ('Chocolate Factory', (70, 180, 180))], 'popb', 90, sp=.25, outline=((30, 20, 40), 1.8)),
+    Pic('logos/charlie-and-the-chocolate-factory-2005-title.png', 170),
     photo=ph(0.5, 0.75, 0.8, 0.6), pb=(240, 210, 120), lg=WHT, lw=.5, order='LTPCF', credit=['JOHNNY DEPP'], ccol=WHT,
     ft='a', fcol=(240, 220, 230), fin=MINT, seed=2005)
 
-# Chicken Little (2005): Disney clamshell; the sky, CHICKEN LITTLE typeset in heavy rounded capitals in the logo's red and yellow (parked for Ian's logo, see data/logos-wanted.md: the logo stands on the grass and its shading broke the cut), Chicken Little's face in the diamond
+# Chicken Little (2005): Disney clamshell; the sky, the film's own title logo (Ian's image, logos/chicken-little-2005-title.png), Chicken Little's face in the diamond
 disney('chicken-little-2005', ('grad', [(0, (60, 120, 200)), (.5, (120, 170, 220)), (1, (60, 120, 40))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('chicken', (210, 30, 30)), ('little', (250, 200, 40))], 'popb', 110, sp=.25, outline=(WHT, 2)),
+       title=Pic('logos/chicken-little-2005-title.png', 170),
        face=ph(.49, .3, .34, 1.4), lcol=WHT)
 
 # Coach Carter (2005): the gym's orange haze, the poster's white serif COACH CARTER lifted, Samuel L. Jackson with his foot on the ball
@@ -4471,15 +4471,15 @@ std('four-brothers-2005', ('grad', [(0, (60, 60, 64)), (.6, (16, 16, 18)), (1, (
     photo=ph(0.5, 0.33, 0.86, 0.75), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A JOHN SINGLETON', 'FILM'], ccol=WHT,
     ft='c', fcol=(200, 200, 200), fin=MINT, seed=2005)
 
-# Harry Potter and the Goblet of Fire (2005): Warner Bros., a slipcase; the night blue, HARRY POTTER typeset in a gold serif with AND THE GOBLET OF FIRE (parked with the others for Ian's logo, see data/logos-wanted.md), Harry and the champions
+# Harry Potter and the Goblet of Fire (2005): Warner Bros., a slipcase; the night blue, the film's own title logo (Ian's image, logos/harry-potter-and-the-goblet-of-fire-2005-title.png), Harry and the champions
 std('harry-potter-and-the-goblet-of-fire-2005', ('grad', [(0, (30, 50, 70)), (.6, (10, 16, 24)), (1, (2, 4, 6))]), (232, 194, 96),
-    [T('HARRY POTTER', 'pagb', 110, (232, 194, 96), outline=((30, 20, 6), 1.6)), T('AND THE GOBLET OF FIRE', 'pagb', 46, (232, 210, 150))], tgap=8,
+    Pic('logos/harry-potter-and-the-goblet-of-fire-2005-title.png', 170), tgap=8,
     photo=ph(0.4, 0.5, 0.7, 0.85), pb=(232, 194, 96), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 210, 220), fin=MINT, seed=2005)
 
-# Hoodwinked! (2005): the forest sky, HOODWINKED! typeset in heavy capitals in the banner's red with a cream keyline (parked for Ian's logo, see data/logos-wanted.md: the banner is red on red and the cut kept one letter), Red, Granny, the Wolf and the Woodsman in the line-up
+# Hoodwinked! (2005): the forest sky, the film's own title logo (Ian's image, logos/hoodwinked-2005-title.png), Red, Granny, the Wolf and the Woodsman in the line-up
 std('hoodwinked-2005', ('grad', [(0, (120, 190, 240)), (.5, (90, 150, 90)), (1, (30, 60, 20))]), (220, 40, 40),
-    T('HOODWINKED!', 'intbk', 110, (220, 40, 40), outline=((250, 230, 190), 2)),
+    Pic('logos/hoodwinked-2005-title.png', 168),
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(220, 40, 40), lg=WHT, lw=.5, order='LTPSF', dotst=('FAMILY', (250, 200, 40), (30, 20, 10)),
     ft='b', fcol=(230, 240, 236), fin=MINT, seed=2005)
 
@@ -4495,21 +4495,21 @@ std('king-kong-2005', ('grad', [(0, (60, 90, 120)), (.6, (16, 26, 36)), (1, (2, 
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(200, 220, 236), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((200, 220, 236), (10, 20, 30)),
     ft='a', fcol=(190, 206, 220), fin=MINT, seed=2005, **TWO)
 
-# Kiss Kiss Bang Bang (2005): the poster's white, kiss kiss bang bang typeset in a typewriter face, the kisses in blue and the bangs in red (parked for Ian's logo, see data/logos-wanted.md: the stacked words lean over the actors' suits and came out in pieces), Robert Downey Jr. and Val Kilmer
+# Kiss Kiss Bang Bang (2005): the poster's white, kiss kiss bang bang typeset in a typewriter face, the kisses in blue and the bangs in red (kept typeset: Ian is happy with it, 26 Nov 2026: the stacked words lean over the actors' suits and came out in pieces), Robert Downey Jr. and Val Kilmer
 std('kiss-kiss-bang-bang-2005', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)), (1, (120, 130, 150))]), (30, 70, 160),
     TT([('kiss kiss', (30, 70, 160)), ('bang bang', (210, 40, 30))], 'mono', 110, sp=.3),
     photo=ph(0.5, 0.8, 0.86, 0.45), pb=(220, 60, 30), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['ROBERT DOWNEY JR.', 'VAL KILMER'], ccol=(30, 40, 70),
     ft='e', fcol=(30, 40, 70), fin=MINT, seed=2005)
 
-# Lord of War (2005): the poster's white, LORD OF WAR typeset in a grey serif with the small red OF (parked for Ian's logo, see data/logos-wanted.md: the tiny OF drops out of both cuts, so it read LORD WAR), Nicolas Cage's face made of bullets
+# Lord of War (2005): the poster's white, the film's own title logo (Ian's image, logos/lord-of-war-2005-title.png), Nicolas Cage's face made of bullets
 std('lord-of-war-2005', ('grad', [(0, (240, 240, 240)), (.6, (216, 216, 216)), (1, (100, 100, 100))]), (40, 40, 40),
-    TT([('LORD', (50, 50, 50)), ('of', (190, 30, 30)), ('WAR', (50, 50, 50))], 'ter', 110, sp=.25),
+    Pic('logos/lord-of-war-2005-title.png', 102),
     photo=ph(0.5, 0.5, 0.86, 0.85), pb=(40, 40, 40), lg=(40, 40, 40), lw=.55, order='LPTF',
     ft='c', fcol=(40, 40, 40), fin=MINT, seed=2005)
 
-# Madagascar (2005): DreamWorks (PDI), a slipcase; the beach sky, MADAGASCAR typeset in heavy capitals in the logo's orange with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved orange letters are shaded through yellow and the cut kept one block), Alex, Marty, Gloria and Melman
+# Madagascar (2005): DreamWorks (PDI), a slipcase; the beach sky, the film's own title logo (Ian's image, logos/madagascar-2005-title.png), Alex, Marty, Gloria and Melman
 std('madagascar-2005', ('grad', [(0, (60, 170, 230)), (.5, (90, 190, 230)), (1, (230, 200, 130))]), (240, 130, 30),
-    T('MADAGASCAR', 'intbk', 110, (240, 130, 30), outline=((60, 30, 10), 2.2)),
+    Pic('logos/madagascar-2005-title.png', 170),
     photo=ph(0.5, 0.6, 0.86, 0.85), pb=(240, 130, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('05 0527', top='FAMILY', fill=(236, 236, 226)),
     ft='a', fcol=(40, 30, 20), fin=MINT, seed=2005)
 
@@ -4520,7 +4520,7 @@ std('match-point-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (
     photo=ph(0.35, 0.35, 0.6, 0.85), pb=(180, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A WOODY ALLEN', 'FILM'], ccol=(20, 20, 20),
     ft='b', fcol=(20, 20, 20), fin=MINT, seed=2005)
 
-# Mr. & Mrs. Smith (2005): the poster's white, Mr. & Mrs. Smith typeset in a black serif with the red ampersand (parked for Ian's logo, see data/logos-wanted.md: the serif title is stacked over Brad Pitt's black suit and both cuts lost letters), Brad Pitt and Angelina Jolie back to back
+# Mr. & Mrs. Smith (2005): the poster's white, Mr. & Mrs. Smith typeset in a black serif with the red ampersand (kept typeset: Ian is happy with it, 26 Nov 2026: the serif title is stacked over Brad Pitt's black suit and both cuts lost letters), Brad Pitt and Angelina Jolie back to back
 std('mr-mrs-smith-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
     TT([('Mr.', (20, 20, 20)), ('&', (200, 30, 30)), ('Mrs. Smith', (20, 20, 20))], 'ter', 110, sp=.25),
     photo=ph(0.5, 0.66, 0.86, 0.75), pb=(190, 30, 30), lg=(20, 20, 20), lw=.55, order='LTPF',
@@ -4532,9 +4532,9 @@ std('racing-stripes-2005', ('grad', [(0, (90, 180, 230)), (.5, (130, 200, 240)),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(220, 236, 250), fin=MINT, seed=2005)
 
-# Robots (2005): Blue Sky (Fox), a slipcase; the poster's sky, ROBOTS typeset in heavy rounded capitals in chrome white (parked for Ian's logo, see data/logos-wanted.md: the chrome letters are built of gears against cloud), Rodney and the rusties
+# Robots (2005): Blue Sky (Fox), a slipcase; the poster's sky, the film's own title logo (Ian's image, logos/robots-2005-title.png), Rodney and the rusties
 std('robots-2005', ('grad', [(0, (60, 140, 220)), (.5, (120, 180, 230)), (1, (40, 80, 120))]), WHT,
-    T('ROBOTS', 'popb', 120, (226, 232, 240), outline=((30, 60, 110), 2.2)),
+    Pic('logos/robots-2005-title.png', 170),
     photo=ph(0.5, 0.6, 0.86, 0.85), pb=(250, 160, 40), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
     ft='b', fcol=(220, 236, 250), fin=MINT, seed=2005)
 
@@ -4568,7 +4568,7 @@ std('the-brothers-grimm-2005', ('grad', [(0, (60, 70, 70)), (.6, (16, 20, 20)), 
     photo=ph(0.5, 0.25, 0.6, 1.3), pb=(226, 220, 206), lg=WHT, lw=.5, order='LTPCF', credit=['A TERRY GILLIAM', 'FILM'], ccol=(226, 220, 206),
     ft='b', fcol=(200, 206, 206), fin=MINT, seed=2005)
 
-# The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005): Disney, a live-action film, so a slipcase; the poster's green, NARNIA typeset in a copper serif with THE LION, THE WITCH AND THE WARDROBE (parked for Ian's logo, see data/logos-wanted.md: the copper letters are shaded with the lion's mane behind them), Aslan's face
+# The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005): Disney, a live-action film, so a slipcase; the poster's green, NARNIA typeset in a copper serif with THE LION, THE WITCH AND THE WARDROBE (kept typeset: Ian is happy with it, 26 Nov 2026: the copper letters are shaded with the lion's mane behind them), Aslan's face
 std('the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005', ('grad', [(0, (40, 100, 90)), (.6, (12, 30, 28)), (1, (2, 6, 6))]), (220, 110, 50),
     [T('NARNIA', 'pagb', 120, (220, 110, 50), outline=((40, 20, 10), 1.8)), T('THE LION, THE WITCH AND THE WARDROBE', 'pagb', 42, (240, 220, 180))], tgap=8,
     photo=ph(0.5, 0.52, 0.8, 0.7), pb=(220, 110, 50), lg=WHT, lw=.5, order='LPTCF', credit=['AN ANDREW ADAMSON', 'FILM'], ccol=(240, 220, 180),
@@ -4580,7 +4580,7 @@ std('the-longest-yard-2005', ('grad', [(0, (40, 90, 170)), (.6, (12, 30, 60)), (
     photo=ph(0.5, 0.35, 0.86, 0.8), pb=(250, 200, 40), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 210, 236), fin=MINT, seed=2005)
 
-# Transporter 2 (2005): the poster's white, TRANSPORTER 2 typeset in heavy italic capitals in chrome grey (parked with The Transporter for Ian's logo, see data/logos-wanted.md: the chrome letters sit in the fireball's streaks), Jason Statham leaping with the pistols
+# Transporter 2 (2005): the poster's white, TRANSPORTER 2 typeset in heavy italic capitals in chrome grey (kept typeset: Ian is happy with it, 26 Nov 2026: the chrome letters sit in the fireball's streaks), Jason Statham leaping with the pistols
 std('transporter-2-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (60, 60, 64),
     T('TRANSPORTER 2', 'intbki', 90, (70, 70, 76), outline=((250, 150, 40), 1.6)),
     photo=ph(0.5, 0.3, 0.86, 0.6), pb=(240, 140, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', dotst=('ACTION', (240, 140, 40), (20, 10, 4)),
@@ -4604,9 +4604,9 @@ std('wedding-crashers-2005', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=BAR('05 0715', top='COMEDY', fill=(240, 236, 226)),
     ft='a', vbox=(210, 30, 30), fcol=(30, 30, 30), fin=MINT, seed=2005)
 
-# A Scanner Darkly (2006): Warner Independent, the poster's rotoscoped blues, A SCANNER DARKLY typeset in light wide capitals in white (parked for Ian's logo, see data/logos-wanted.md: the thin letters sit in a bracket frame and the lift broke DARKLY), the faces behind the blinds
+# A Scanner Darkly (2006): Warner Independent, the poster's rotoscoped blues, the film's own title logo (Ian's image, logos/a-scanner-darkly-2006-title.png), the faces behind the blinds
 std('a-scanner-darkly-2006', ('grad', [(0, (40, 40, 100)), (.6, (12, 12, 34)), (1, (2, 2, 8))]), WHT,
-    T('A SCANNER DARKLY', 'adv', 90, WHT),
+    Pic('logos/a-scanner-darkly-2006-title.png', 170),
     photo=ph(0.5, 0.4, 0.86, 0.75), pb=(250, 170, 40), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(200, 200, 230), fin=MINT, seed=2006)
 
@@ -4616,15 +4616,15 @@ std('arthur-and-the-invisibles-2006', ('grad', [(0, (40, 120, 40)), (.6, (10, 40
     photo=ph(0.5, 0.45, 0.7, 0.85), pb=(170, 230, 60), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (170, 230, 60), (10, 30, 10)),
     ft='b', fcol=(200, 230, 200), fin=MINT, seed=2006)
 
-# Black Snake Moan (2006): Paramount Vantage, the poster's yellow fire, BLACK SNAKE in red over MOAN in heavy yellow capitals (parked for Ian's logo, see data/logos-wanted.md: the yellow MOAN sits on the yellow fire and broke up), Christina Ricci and Samuel L. Jackson
-std('black-snake-moan-2006', ('grad', [(0, (240, 170, 30)), (.5, (200, 100, 20)), (1, (40, 14, 4))]), (250, 200, 40),
-    TT([('BLACK SNAKE', (200, 30, 30)), ('MOAN', (250, 210, 50))], 'intbk', 100, sp=.25, outline=((30, 10, 4), 1.8)),
-    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 30, 30), lg=(30, 14, 6), lw=.55, order='LPTCF', credit=['CHRISTINA RICCI', 'SAMUEL L. JACKSON'], ccol=(30, 14, 6),
-    ft='a', fcol=(40, 20, 6), fin=MINT, seed=2006)
+# Black Snake Moan (2006): Paramount Vantage, the poster's fire burnt down dark so the yellow MOAN shows, the film's own title logo (Ian's image, logos/black-snake-moan-2006-title.png), Christina Ricci and Samuel L. Jackson
+std('black-snake-moan-2006', ('grad', [(0, (150, 70, 14)), (.45, (60, 22, 6)), (1, (12, 4, 2))]), (250, 200, 40),
+    Pic('logos/black-snake-moan-2006-title.png', 170),
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(200, 30, 30), lg=WHT, lw=.55, order='LPTCF', credit=['CHRISTINA RICCI', 'SAMUEL L. JACKSON'], ccol=(250, 210, 120),
+    ft='a', fcol=(240, 210, 160), fin=MINT, seed=2006)
 
-# Borat (2006): 20th Century Fox, a slipcase; the poster's parchment, BORAT typeset in heavy outlined capitals in black (parked for Ian's logo, see data/logos-wanted.md: the faux-Cyrillic letters are drawn in double lines and the cut kept only their outlines), Borat waving the flag with his suitcase
+# Borat (2006): 20th Century Fox, a slipcase; the poster's parchment, the film's own title logo (Ian's image, logos/borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006-title.png), Borat waving the flag with his suitcase
 std('borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006', ('grad', [(0, (240, 230, 206)), (.6, (220, 206, 176)), (1, (110, 96, 70))]), (20, 16, 10),
-    T('BORAT', 'intbk', 120, (20, 16, 10)),
+    Pic('logos/borat-cultural-learnings-of-america-for-make-benefit-glorious-nation-of-kazakhstan-2006-title.png', 170),
     photo=ph(0.5, 0.35, 0.86, 0.85), pb=(20, 16, 10), lg=(20, 16, 10), lw=.55, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
     ft='d', fcol=(20, 16, 10), fin=MINT, seed=2006)
 
@@ -4634,9 +4634,9 @@ std('brick-2006', ('grad', [(0, (40, 120, 130)), (.6, (14, 50, 56)), (1, (2, 10,
     photo=ph(0.6, 0.35, 0.8, 0.85), pb=(80, 150, 220), studio=['FOCUS FEATURES'], scol=WHT, order='lPTF',
     ft='e', fcol=(200, 226, 226), fin=MINT, seed=2006)
 
-# Cars (2006): Pixar clamshell; the desert's orange, CARS typeset in a heavy italic script in the badge's red with a chrome keyline (parked for Ian's logo, see data/logos-wanted.md: the chrome-edged badge sits on the road among the cars and the cut kept one stripe), Lightning McQueen's face in the diamond
+# Cars (2006): Pixar clamshell; the desert's orange, the film's own title logo (Ian's image, logos/cars-2006-title.png), which carries the Disney mark, so no separate studio logo, Lightning McQueen's face in the diamond
 disney('cars-2006', ('grad', [(0, (230, 140, 50)), (.5, (200, 90, 40)), (1, (80, 30, 14))]), fin=dict(CLAM, vivid=.2),
-       title=T('Cars', 'popbi', 130, (210, 30, 30), outline=((230, 230, 236), 2.4)),
+       title=Pic('logos/cars-2006-title.png', 170), studio=False,
        face=ph(.48, .665, .16, 1.4), lcol=WHT)
 
 # Casino Royale (2006): MGM, the poster's night blue, its white CASINO / ROYALE with the 007 lifted into one line, Daniel Craig at the table
@@ -4663,15 +4663,15 @@ std('crank-2006', ('grad', [(0, (230, 140, 50)), (.5, (150, 70, 20)), (1, (20, 8
     photo=ph(0.5, 0.3, 0.6, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=BAR('06 0901', top='ACTION', fill=(232, 226, 214)),
     ft='c', fcol=(250, 230, 210), fin=MINT, seed=2006)
 
-# Flushed Away (2006): Aardman (DreamWorks), a slipcase; the poster's white, Flushed Away typeset in a heavy rounded face in its blue (parked for Ian's logo, see data/logos-wanted.md: the water-splashed letters came out in drops), Roddy and Sid
+# Flushed Away (2006): Aardman (DreamWorks), a slipcase; the poster's white, Flushed Away typeset in a heavy rounded face in its blue (kept typeset: Ian is happy with it, 26 Nov 2026: the water-splashed letters came out in drops), Roddy and Sid
 std('flushed-away-2006', ('grad', [(0, (230, 240, 250)), (.6, (190, 214, 240)), (1, (60, 100, 150))]), (30, 110, 210),
     T('Flushed Away', 'popb', 110, (30, 110, 210), outline=((10, 40, 90), 1.6)),
     photo=ph(0.5, 0.25, 0.86, 0.6), pb=(30, 110, 210), lg=(20, 40, 80), lw=.55, order='LPTF',
     ft='e', fcol=(20, 40, 80), fin=MINT, seed=2006)
 
-# Happy Feet (2006): Warner Bros., a slipcase; the poster's sky blue, HAPPY FEET typeset in heavy capitals in the logo's red and orange (parked for Ian's logo, see data/logos-wanted.md: the letters are shaded red to yellow and the cut kept only the red half), Mumble and the penguins on the ice
+# Happy Feet (2006): Warner Bros., a slipcase; the poster's sky blue, the film's own title logo (Ian's image, logos/happy-feet-2006-title.png), Mumble and the penguins on the ice
 std('happy-feet-2006', ('grad', [(0, (60, 150, 220)), (.5, (130, 190, 240)), (1, (200, 220, 240))]), (230, 60, 40),
-    TT([('HAPPY', (220, 40, 40)), ('FEET', (240, 150, 30))], 'intbk', 110, sp=.3, outline=(WHT, 1.8)),
+    Pic('logos/happy-feet-2006-title.png', 170),
     photo=ph(0.5, 0.6, 0.86, 0.85), pb=(230, 60, 40), lg=(20, 40, 80), lw=.55, order='LPTSF', stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)),
     ft='a', fcol=(20, 40, 80), fin=MINT, seed=2006)
 
@@ -4705,7 +4705,7 @@ std('little-miss-sunshine-2006', ('grad', [(0, (252, 220, 30)), (.5, (246, 206, 
     photo=ph(0.5, 0.65, 0.9, 0.45), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LTPCF', credit=['A FILM BY', 'DAYTON & FARIS'], ccol=(20, 20, 20),
     ft='d', vbox=(20, 20, 20), vink=(252, 220, 30), fcol=(20, 20, 20), fin=MINT, seed=2006)
 
-# Lucky Number Slevin (2006): the poster's red, LUCKY NUMBER SLEVIN typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: LUCKY#SLEVIN runs on a slanted white-edged banner across the cast's faces and the cut took the faces), Josh Hartnett, Lucy Liu and the rest round the gun
+# Lucky Number Slevin (2006): the poster's red, LUCKY NUMBER SLEVIN typeset in heavy condensed capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: LUCKY#SLEVIN runs on a slanted white-edged banner across the cast's faces and the cut took the faces), Josh Hartnett, Lucy Liu and the rest round the gun
 std('lucky-number-slevin-2006', ('grad', [(0, (200, 40, 30)), (.6, (100, 16, 10)), (1, (14, 2, 2))]), WHT,
     TT([('LUCKY', WHT), ('#', (30, 20, 20)), ('SLEVIN', WHT)], 'intbk', 110, sp=.2),
     photo=ph(0.5, 0.7, 0.86, 0.7), pb=WHT, lg=WHT, lw=.5, order='LPTSF', dotst=('CRIME', (30, 20, 20), WHT),
@@ -4741,9 +4741,9 @@ std('pan-s-labyrinth-2006', ('grad', [(0, (50, 70, 60)), (.6, (14, 20, 16)), (1,
     photo=ph(0.5, 0.4, 0.86, 0.85), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTCF', credit=['UNA PELÍCULA DE', 'GUILLERMO DEL TORO'], ccol=WHT,
     ft='b', fcol=(200, 210, 200), fin=MINT, seed=2006)
 
-# Pirates of the Caribbean: Dead Man's Chest (2006): Disney, a live-action film, so a slipcase; the poster's dark, PIRATES OF THE CARIBBEAN typeset in a weathered serif in parchment with DEAD MAN'S CHEST (parked with the first for Ian's logo, see data/logos-wanted.md), Jack Sparrow and the crew
+# Pirates of the Caribbean: Dead Man's Chest (2006): Disney, a live-action film, so a slipcase; the poster's dark, the film's own title logo (Ian's image, logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png), Jack Sparrow and the crew
 std('pirates-of-the-caribbean-dead-man-s-chest-2006', ('grad', [(0, (60, 70, 40)), (.5, (20, 24, 14)), (1, (2, 4, 2))]), (226, 200, 150),
-    [T('PIRATES OF THE CARIBBEAN', 'pagb', 100, (226, 200, 150), outline=((30, 16, 6), 1.6)), T("DEAD MAN'S CHEST", 'pagb', 50, (226, 210, 170))], tgap=8,
+    Pic('logos/pirates-of-the-caribbean-dead-man-s-chest-2006-title.png', 170), tgap=8,
     photo=ph(0.5, 0.3, 0.9, 0.6), pb=(226, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(236, 122, 40), ink=(20, 16, 12)),
     ft='e', fcol=(220, 200, 170), fin=MINT, seed=2006)
 
@@ -4795,7 +4795,7 @@ std('the-good-german-2006', ('grad', [(0, (60, 60, 60)), (.6, (24, 24, 24)), (1,
     photo=ph(0.45, 0.45, 0.6, 1.2), pb=(230, 60, 40), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(200, 200, 200), fin=MINT, seed=2006)
 
-# The Lives of Others (2006): Wiedemann & Berg, the poster's teal dark, The Lives of Others typeset in typewriter type in white like the poster's (parked for Ian's logo, see data/logos-wanted.md: the T runs into the pale bedsheet beside it and a cut breaks it), Wiesler at the headphones
+# The Lives of Others (2006): Wiedemann & Berg, the poster's teal dark, The Lives of Others typeset in typewriter type in white like the poster's (kept typeset: Ian is happy with it, 26 Nov 2026: the T runs into the pale bedsheet beside it and a cut breaks it), Wiesler at the headphones
 std('the-lives-of-others-2006', ('grad', [(0, (40, 70, 70)), (.6, (12, 22, 22)), (1, (2, 4, 4))]), WHT,
     T('The Lives of Others', 'mono', 80, WHT),
     photo=ph(0.45, 0.15, 0.86, 0.6), pb=(190, 190, 170), lg=WHT, lw=.5, order='LPTCF', credit=['EIN FILM VON', 'F. H. VON DONNERSMARCK'], ccol=WHT,
@@ -4842,9 +4842,9 @@ std('eastern-promises-2007', ('grad', [(0, (30, 26, 26)), (.6, (8, 6, 6)), (1, (
     photo=ph(0.5, 0.35, 0.86, 1.3), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID CRONENBERG FILM'], ccol=WHT,
     ft='c', fcol=(200, 190, 190), fin=MINT, seed=2007)
 
-# Enchanted (2007): Disney, live action, so a slipcase; the poster's royal blue, Enchanted typeset in a gold script (parked for Ian's logo, see data/logos-wanted.md: the gold scroll sits on a gold-rimmed plaque and both cuts broke it up), Giselle, Robert and Edward
+# Enchanted (2007): Disney, live action, so a slipcase; the poster's royal blue, the film's own title logo (Ian's image, logos/enchanted-2007-title.png), Giselle, Robert and Edward
 std('enchanted-2007', ('grad', [(0, (40, 80, 190)), (.5, (20, 40, 120)), (1, (6, 10, 40))]), (240, 200, 90),
-    T('Enchanted', 'curbi', 120, (240, 200, 90), outline=((16, 30, 90), 2.4)),
+    Pic('logos/enchanted-2007-title.png', 170),
     photo=ph(0.5, 0.75, 0.86, 0.7), pb=(240, 200, 90), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 150, 200), ink=(40, 20, 40)),
     ft='e', fcol=(220, 220, 250), fin=MINT, seed=2007)
 
@@ -4860,9 +4860,9 @@ std('gone-baby-gone-2007', ('grad', [(0, (60, 40, 20)), (.5, (180, 110, 40)), (1
     photo=ph(0.5, 0.25, 0.9, 0.6), pb=(240, 170, 50), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'BEN AFFLECK'], ccol=WHT,
     ft='a', fcol=(240, 220, 190), fin=MINT, seed=2007)
 
-# Harry Potter and the Order of the Phoenix (2007): Warner Bros., a slipcase; the poster's teal night, HARRY POTTER typeset in a silver serif with AND THE ORDER OF THE PHOENIX (parked with the others for Ian's logo, see data/logos-wanted.md), Harry, Ron and Hermione with their wands
+# Harry Potter and the Order of the Phoenix (2007): Warner Bros., a slipcase; the poster's teal night, the film's own title logo (Ian's image, logos/harry-potter-and-the-order-of-the-phoenix-2007-title.png), Harry, Ron and Hermione with their wands
 std('harry-potter-and-the-order-of-the-phoenix-2007', ('grad', [(0, (30, 80, 90)), (.6, (8, 24, 30)), (1, (2, 4, 6))]), (220, 226, 230),
-    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE ORDER OF THE PHOENIX', 'pagb', 42, (200, 220, 224))], tgap=8,
+    Pic('logos/harry-potter-and-the-order-of-the-phoenix-2007-title.png', 170), tgap=8,
     photo=ph(0.5, 0.6, 0.9, 1.0), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(180, 210, 214), fin=MINT, seed=2007)
 
@@ -4919,11 +4919,11 @@ std('no-country-for-old-men-2007', ('grad', [(0, (60, 40, 24)), (.6, (14, 10, 6)
     photo=ph(0.5, 0.25, 0.86, 0.9), pb=(230, 190, 140), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(200, 180, 150), fin=MINT, seed=2007)
 
-# Ocean's Thirteen (2007): Warner Bros., the poster's white, OCEAN'S 13 typeset in heavy condensed capitals in its red (parked with Eleven and Twelve for Ian's logo, see data/logos-wanted.md: OCEAN'S runs diagonally inside the big red 13), the thirteen's silhouettes
-std('ocean-s-thirteen-2007', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (210, 30, 30),
-    TT([("OCEAN'S", (210, 30, 30)), ('13', (30, 30, 30))], 'intbk', 110, sp=.3),
-    photo=ph(0.55, 0.12, 0.8, 0.35), pb=(210, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF',
-    ft='e', fcol=(60, 60, 60), fin=MINT, seed=2007)
+# Ocean's Thirteen (2007): Warner Bros., charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-thirteen-2007-title.png), the thirteen's silhouettes
+std('ocean-s-thirteen-2007', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
+    Pic('logos/ocean-s-thirteen-2007-title.png', 170),
+    photo=ph(0.55, 0.12, 0.8, 0.35), pb=(210, 30, 30), lg=WHT, lw=.55, order='LPTF',
+    ft='e', fcol=(210, 210, 210), fin=MINT, seed=2007)
 
 # Persepolis (2007): Sony Pictures Classics, the poster's black, its white PERSEPOLIS lifted, Marjane smoking among the drawn figures
 std('persepolis-2007', ('grad', [(0, (30, 30, 30)), (.6, (8, 8, 8)), (1, (0, 0, 0))]), WHT,
@@ -4936,9 +4936,9 @@ disney('ratatouille-2007', ('grad', [(0, (230, 170, 90)), (.5, (130, 110, 150)),
        title=LC([(0.11, 0.44, 0.89, 0.5)], 130, outline=((20, 40, 120), 2.4), cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.03)]),
        face=ph(.48, .25, .2, 1.4), lcol=WHT)
 
-# Shrek the Third (2007): DreamWorks, a slipcase; the poster's sky, SHREK THE THIRD typeset in a heavy serif in the logo's green (parked with the other Shreks for Ian's logo, see data/logos-wanted.md), Shrek, Fiona, Puss and Donkey
+# Shrek the Third (2007): DreamWorks, a slipcase; the poster's sky, the film's own title logo (Ian's image, logos/shrek-the-third-2007-title.png), Shrek, Fiona, Puss and Donkey
 std('shrek-the-third-2007', ('grad', [(0, (90, 170, 230)), (.5, (60, 140, 210)), (1, (30, 70, 30))]), (120, 180, 50),
-    [T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)), T('THE THIRD', 'schb', 50, (230, 200, 80))], tgap=8,
+    Pic('logos/shrek-the-third-2007-title.png', 170), tgap=8,
     photo=ph(0.5, 0.65, 0.6, 1.4), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTF',
     ft='b', fcol=(220, 236, 250), fin=MINT, seed=2007)
 
@@ -4948,9 +4948,9 @@ std('spider-man-3-2007', ('grad', [(0, (70, 90, 110)), (.6, (20, 26, 34)), (1, (
     photo=ph(0.5, 0.4, 0.86, 1.3), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 210, 220), fin=MINT, seed=2007)
 
-# Sunshine (2007): Fox Searchlight, the poster's black, SUNSHINE typeset in heavy capitals in the poster's fire orange (parked for Ian's logo, see data/logos-wanted.md: the letters burn into flames and both cuts left them unreadable), the sun's rim and Capa's face
+# Sunshine (2007): Fox Searchlight, the poster's black, the film's own title logo (Ian's image, logos/sunshine-2007-title.png), the sun's rim and Capa's face
 std('sunshine-2007', ('grad', [(0, (60, 20, 6)), (.6, (14, 4, 2)), (1, (0, 0, 0))]), (250, 170, 60),
-    T('SUNSHINE', 'intbk', 110, (250, 170, 60), outline=((90, 20, 4), 2)),
+    Pic('logos/sunshine-2007-title.png', 170),
     photo=ph(0.4, 0.3, 0.7, 1.1), pb=(250, 170, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'SCI-FI']),
     ft='a', fcol=(240, 200, 160), fin=MINT, seed=2007)
 
@@ -4966,7 +4966,7 @@ std('surf-s-up-2007', ('grad', [(0, (40, 170, 230)), (.5, (90, 200, 230)), (1, (
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('FAMILY', (240, 110, 30), WHT),
     ft='c', fcol=(20, 40, 70), fin=MINT, seed=2007)
 
-# Sweeney Todd: The Demon Barber of Fleet Street (2007): DreamWorks, the poster's grey-blue gloom, SWEENEY TODD typeset in a pale serif with THE DEMON BARBER OF FLEET STREET in blood red under it (parked for Ian's logo, see data/logos-wanted.md: grey letters on a grey room, run through by blood; both cuts broke them), Johnny Depp in the barber's chair
+# Sweeney Todd: The Demon Barber of Fleet Street (2007): DreamWorks, the poster's grey-blue gloom, SWEENEY TODD typeset in a pale serif with THE DEMON BARBER OF FLEET STREET in blood red under it (kept typeset: Ian is happy with it, 26 Nov 2026: grey letters on a grey room, run through by blood; both cuts broke them), Johnny Depp in the barber's chair
 std('sweeney-todd-the-demon-barber-of-fleet-street-2007', ('grad', [(0, (60, 70, 80)), (.6, (16, 18, 22)), (1, (2, 2, 4))]), (220, 222, 226),
     [T('SWEENEY TODD', 'pagb', 100, (220, 222, 226)), T('THE DEMON BARBER OF FLEET STREET', 'pagb', 36, (190, 30, 30))], tgap=8,
     photo=ph(0.4, 0.3, 0.7, 1.2), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A TIM BURTON FILM'], ccol=WHT,
@@ -4990,9 +4990,9 @@ std('the-darjeeling-limited-2007', ('grad', [(0, (40, 120, 110)), (.5, (20, 80, 
     photo=ph(0.5, 0.82, 0.6, 1.3), pb=(250, 210, 60), lg=WHT, lw=.5, order='LTPCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(250, 220, 120),
     ft='d', vbox=(160, 40, 30), fcol=(230, 230, 200), fin=MINT, seed=2007)
 
-# The Simpsons Movie (2007): Fox (Gracie Films), a slipcase; the sky's blue, THE SIMPSONS MOVIE typeset in round yellow capitals with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the doughnut O and the small The Simpsons over the sky both broke up in the cut), the family on the roof
+# The Simpsons Movie (2007): Fox (Gracie Films), a slipcase; the sky's blue, the film's own title logo (Ian's image, logos/the-simpsons-movie-2007-title.png), the family on the roof
 std('the-simpsons-movie-2007', ('grad', [(0, (90, 170, 240)), (.5, (140, 200, 250)), (1, (230, 120, 30))]), (250, 220, 40),
-    T('THE SIMPSONS MOVIE', 'popb', 110, (250, 220, 40), outline=((20, 20, 20), 2.4)),
+    Pic('logos/the-simpsons-movie-2007-title.png', 170),
     photo=ph(0.6, 0.7, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('07 1218', top='COMEDY', fill=(250, 240, 200)),
     ft='b', fcol=(30, 40, 60), fin=MINT, seed=2007)
 
@@ -5002,9 +5002,9 @@ std('there-will-be-blood-2007', ('grad', [(0, (60, 24, 10)), (.6, (14, 6, 2)), (
     photo=ph(0.55, 0.5, 0.86, 1.3), pb=(230, 120, 40), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(220, 200, 180), fin=MINT, seed=2007)
 
-# Transformers (2007): DreamWorks (Paramount), the poster's dusk, TRANSFORMERS typeset in wide heavy capitals in chrome grey (parked for Ian's logo, see data/logos-wanted.md: the chrome letters shade into the sky and both cuts lost letters), Optimus Prime with Bumblebee and Megatron
+# Transformers (2007): DreamWorks (Paramount), the poster's dusk, the film's own title logo (Ian's image, logos/transformers-2007-title.png), Optimus Prime with Bumblebee and Megatron
 std('transformers-2007', ('grad', [(0, (40, 70, 120)), (.5, (20, 30, 50)), (1, (200, 110, 30))]), (220, 226, 232),
-    T('TRANSFORMERS', 'advb', 100, (220, 226, 232), outline=((10, 16, 30), 2)),
+    Pic('logos/transformers-2007-title.png', 170),
     photo=ph(0.5, 0.22, 0.9, 0.6), pb=(40, 110, 210), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 210, 230), fin=MINT, seed=2007)
 
@@ -5086,21 +5086,21 @@ std('iron-man-2008', ('grad', [(0, (30, 40, 70)), (.6, (8, 10, 20)), (1, (0, 0, 
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(190, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='e', vbox=(190, 30, 30), fcol=(200, 200, 210), fin=MINT, seed=2008)
 
-# Kung Fu Panda (2008): DreamWorks, a slipcase; the poster's sunset red, KUNG FU PANDA typeset in heavy yellow capitals with a red keyline (parked for Ian's logo, see data/logos-wanted.md: yellow brush letters on a sunset of the same yellows; both cuts lost most of PANDA), Po and the Furious Five
+# Kung Fu Panda (2008): DreamWorks, a slipcase; the poster's sunset red, the film's own title logo (Ian's image, logos/kung-fu-panda-2008-title.png), which carries the DreamWorks mark, so no separate studio logo, Po and the Furious Five
 std('kung-fu-panda-2008', ('grad', [(0, (240, 120, 40)), (.5, (220, 70, 30)), (1, (120, 30, 10))]), (250, 220, 40),
-    T('KUNG FU PANDA', 'intbk', 110, (250, 220, 40), outline=((150, 30, 10), 2.4)),
-    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 1109', top='FAMILY', fill=(250, 240, 210)),
+    Pic('logos/kung-fu-panda-2008-title.png', 170),
+    photo=ph(0.5, 0.6, 0.86, 0.85), pb=(250, 220, 40), lg=WHT, lw=.5, order='PTSF', stick=BAR('08 1109', top='FAMILY', fill=(250, 240, 210)),
     ft='d', fcol=(250, 220, 200), fin=MINT, seed=2008)
 
-# Let the Right One In (2008): Magnolia (Filmpool Nord), the poster's frost white, LET THE RIGHT ONE IN typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: silver letters on a frost-white ground, and the lift lost LET and smeared IN), Oskar's hand on the glass and Eli's shadow
+# Let the Right One In (2008): Magnolia (Filmpool Nord), the poster's frost white, LET THE RIGHT ONE IN typeset in heavy white capitals (kept typeset: Ian is happy with it, 26 Nov 2026: silver letters on a frost-white ground, and the lift lost LET and smeared IN), Oskar's hand on the glass and Eli's shadow
 std('let-the-right-one-in-2008', ('grad', [(0, (150, 170, 180)), (.6, (70, 84, 94)), (1, (14, 16, 20))]), WHT,
     T('LET THE RIGHT ONE IN', 'intbk', 100, WHT),
     photo=ph(0.65, 0.25, 0.5, 1.2), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['EN FILM AV', 'TOMAS ALFREDSON'], ccol=WHT,
     ft='b', fcol=(210, 220, 226), fin=MINT, seed=2008)
 
-# Madagascar: Escape 2 Africa (2008): DreamWorks, a slipcase; the savanna's green, MADAGASCAR typeset in heavy capitals in the logo's orange with ESCAPE 2 AFRICA (parked with Madagascar for Ian's logo, see data/logos-wanted.md), Alex, Marty, Gloria and Melman in the jeep
+# Madagascar: Escape 2 Africa (2008): DreamWorks, a slipcase; the savanna's green, the film's own title logo (Ian's image, logos/madagascar-escape-2-africa-2008-title.png), Alex, Marty, Gloria and Melman in the jeep
 std('madagascar-escape-2-africa-2008', ('grad', [(0, (60, 160, 60)), (.5, (140, 200, 60)), (1, (120, 80, 30))]), (240, 130, 30),
-    [T('MADAGASCAR', 'intbk', 110, (240, 130, 30), outline=((60, 30, 10), 2.2)), T('ESCAPE 2 AFRICA', 'intbk', 46, (250, 220, 60))], tgap=8,
+    Pic('logos/madagascar-escape-2-africa-2008-title.png', 170), tgap=8,
     photo=ph(0.5, 0.65, 0.86, 1.2), pb=(240, 130, 30), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(250, 240, 210), fin=MINT, seed=2008)
 
@@ -5164,9 +5164,9 @@ std('the-dark-knight-2008', ('grad', [(0, (40, 60, 90)), (.6, (10, 16, 26)), (1,
     photo=ph(0.5, 0.3, 0.86, 0.85), pb=(240, 140, 40), lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(180, 196, 210), fin=MINT, seed=2008)
 
-# The Fall (2008): Radical Media, the poster's night sky, The Fall typeset in a tall serif in its red (parked for Ian's logo, see data/logos-wanted.md: the thin red script with its long flourishes lost The in both cuts), the red cloth spilling down the white sheet
+# The Fall (2008): Radical Media, the poster's night sky, the film's own title logo (Ian's image, logos/the-fall-2008-title.png), the red cloth spilling down the white sheet
 std('the-fall-2008', ('grad', [(0, (10, 14, 40)), (.5, (40, 60, 110)), (1, (150, 130, 100))]), (200, 30, 40),
-    T('The Fall', 'pagb', 120, (200, 30, 40)),
+    Pic('logos/the-fall-2008-title.png', 170),
     photo=ph(0.4, 0.6, 0.5, 1.9), pb=(200, 20, 30), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'TARSEM SINGH'], ccol=WHT,
     ft='b', fcol=(40, 30, 30), fin=MINT, seed=2008)
 
@@ -5176,7 +5176,7 @@ std('the-hurt-locker-2008', ('grad', [(0, (70, 64, 52)), (.5, (30, 28, 22)), (1,
     photo=ph(0.5, 0.82, 0.86, 0.55), pb=(200, 170, 90), lg=WHT, lw=.5, order='LTPF',
     ft='d', vbox=(200, 170, 90), vink=(30, 26, 20), fcol=(220, 200, 160), fin=MINT, seed=2008)
 
-# The Incredible Hulk (2008): Marvel, a slipcase; the poster's night teal, THE INCREDIBLE HULK typeset in heavy steel-grey capitals (parked for Ian's logo, see data/logos-wanted.md: the chrome HULK darkens to black across its middle and both cuts split the letters), the Hulk's back over Bruce Banner
+# The Incredible Hulk (2008): Marvel, a slipcase; the poster's night teal, THE INCREDIBLE HULK typeset in heavy steel-grey capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the chrome HULK darkens to black across its middle and both cuts split the letters), the Hulk's back over Bruce Banner
 std('the-incredible-hulk-2008', ('grad', [(0, (40, 60, 60)), (.6, (10, 16, 18)), (1, (0, 2, 2))]), (220, 226, 230),
     [T('THE INCREDIBLE', 'intbk', 40, (200, 206, 210)), T('HULK', 'intbk', 130, (220, 226, 230), outline=((20, 30, 30), 2))], tgap=8,
     photo=ph(0.5, 0.35, 0.86, 1.3), pb=(90, 170, 70), lg=WHT, lw=.5, order='LPTF',
@@ -5194,9 +5194,9 @@ std('the-wrestler-2008', ('grad', [(0, (90, 60, 20)), (.6, (24, 16, 6)), (1, (2,
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 190, 110), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(220, 200, 170), fin=MINT, seed=2008)
 
-# Tropic Thunder (2008): DreamWorks, the poster's jungle fire, TROPIC THUNDER typeset in heavy capitals in its tan (parked for Ian's logo, see data/logos-wanted.md: the weathered letters sit on the explosion and the cut kept the fire), Ben Stiller, Jack Black and Robert Downey Jr. with the guns
+# Tropic Thunder (2008): DreamWorks, the poster's jungle fire, the film's own title logo (Ian's image, logos/tropic-thunder-2008-title.png), Ben Stiller, Jack Black and Robert Downey Jr. with the guns
 std('tropic-thunder-2008', ('grad', [(0, (120, 60, 20)), (.5, (50, 30, 10)), (1, (8, 6, 2))]), (240, 200, 120),
-    T('TROPIC THUNDER', 'intbk', 110, (240, 200, 120), outline=((90, 30, 10), 2)),
+    Pic('logos/tropic-thunder-2008-title.png', 170),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 0813', top='COMEDY', fill=(236, 240, 220)),
     ft='e', fcol=(230, 210, 180), fin=MINT, seed=2008)
 
@@ -5271,7 +5271,7 @@ std('fantastic-mr-fox-2009', ('grad', [(0, (170, 80, 30)), (.5, (110, 40, 14)), 
     photo=ph(0.48, 0.55, 0.6, 1.0), pb=(240, 190, 80), lg=WHT, lw=.5, order='LPTF',
     ft='b', fcol=(250, 220, 190), fin=MINT, seed=2009)
 
-# Fast & Furious (2009): Universal, the poster's black, FAST & FURIOUS typeset in heavy italic capitals in chrome grey (parked with 2 Fast 2 Furious for Ian's logo, see data/logos-wanted.md: the chrome logo slants across the car's bonnet), Vin Diesel, Paul Walker and the Charger
+# Fast & Furious (2009): Universal, the poster's black, FAST & FURIOUS typeset in heavy italic capitals in chrome grey (kept typeset: Ian is happy with it, 26 Nov 2026: the chrome logo slants across the car's bonnet), Vin Diesel, Paul Walker and the Charger
 std('fast-furious-2009', ('grad', [(0, (50, 60, 80)), (.6, (12, 14, 20)), (1, (0, 0, 2))]), (220, 226, 232),
     T('FAST & FURIOUS', 'intbki', 100, (220, 226, 232), outline=((20, 30, 60), 2)),
     photo=ph(0.5, 0.25, 0.86, 0.7), pb=(60, 110, 220), lg=WHT, lw=.5, order='LPTF',
@@ -5283,9 +5283,9 @@ std('fish-tank-2009', ('grad', [(0, (110, 180, 230)), (.5, (70, 140, 200)), (1, 
     photo=ph(0.55, 0.15, 0.6, 1.0), pb=(240, 100, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'ANDREA ARNOLD'], ccol=WHT,
     ft='c', fcol=(230, 240, 250), fin=MINT, seed=2009)
 
-# Harry Potter and the Half-Blood Prince (2009): Warner Bros., a slipcase; the poster's storm teal, HARRY POTTER typeset in a silver serif with AND THE HALF-BLOOD PRINCE (parked with the others for Ian's logo, see data/logos-wanted.md), Harry with his wand and Dumbledore behind
+# Harry Potter and the Half-Blood Prince (2009): Warner Bros., a slipcase; the poster's storm teal, the film's own title logo (Ian's image, logos/harry-potter-and-the-half-blood-prince-2009-title.png), Harry with his wand and Dumbledore behind
 std('harry-potter-and-the-half-blood-prince-2009', ('grad', [(0, (40, 80, 90)), (.6, (10, 24, 30)), (1, (2, 6, 8))]), (220, 226, 230),
-    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE HALF-BLOOD PRINCE', 'pagb', 44, (200, 220, 224))], tgap=8,
+    Pic('logos/harry-potter-and-the-half-blood-prince-2009-title.png', 170), tgap=8,
     photo=ph(0.3, 0.6, 0.5, 1.6), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(250, 220, 60), ink=(30, 20, 10)),
     ft='a', fcol=(180, 210, 214), fin=MINT, seed=2009)
 
@@ -5295,9 +5295,9 @@ std('ice-age-dawn-of-the-dinosaurs-2009', ('grad', [(0, (40, 110, 210)), (.5, (9
     photo=ph(0.5, 0.55, 0.86, 1.0), pb=(250, 220, 60), lg=WHT, lw=.5, order='LPTF',
     ft='d', fcol=(230, 240, 220), fin=MINT, seed=2009)
 
-# Inglourious Basterds (2009): Universal (The Weinstein Company), the poster's white and blood red, INGLOURIOUS BASTERDS typeset in a heavy slab serif in white with a black keyline like the poster's (parked for Ian's logo, see data/logos-wanted.md: white letters on the white poster, with the eagle in the line; both cuts lost them), the Basterds in a row
+# Inglourious Basterds (2009): Universal (The Weinstein Company), the poster's white and blood red, the film's own title logo (Ian's image, logos/inglourious-basterds-2009-title.png), the Basterds in a row
 std('inglourious-basterds-2009', ('grad', [(0, (200, 30, 30)), (.6, (130, 14, 14)), (1, (40, 4, 4))]), (20, 20, 20),
-    T('INGLOURIOUS BASTERDS', 'schb', 100, WHT, outline=((16, 16, 16), 2.6)),
+    Pic('logos/inglourious-basterds-2009-title.png', 170),
     photo=ph(0.5, 0.86, 0.86, 0.4), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPF',
     ft='b', fcol=(240, 220, 220), fin=MINT, seed=2009)
 
@@ -5337,9 +5337,9 @@ std('the-imaginarium-of-doctor-parnassus-2009', ('grad', [(0, (20, 80, 110)), (.
     photo=ph(0.5, 0.25, 0.86, 0.6), pb=(240, 220, 170), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'TERRY GILLIAM'], ccol=WHT,
     ft='e', fcol=(190, 220, 230), fin=MINT, seed=2009)
 
-# The Princess and the Frog (2009): Walt Disney Animation, so a clamshell; the bayou's teal night, THE PRINCESS AND THE typeset in a gold serif with FROG in green (parked for Ian's logo, see data/logos-wanted.md: the gilded letters on the night bayou lost AND THE and their highlights in both cuts), Tiana's face in the diamond
+# The Princess and the Frog (2009): Walt Disney Animation, so a clamshell; the bayou's teal night, the film's own title logo (Ian's image, logos/the-princess-and-the-frog-2009-title.png), which carries the Disney mark, so no separate studio logo, Tiana's face in the diamond
 disney('the-princess-and-the-frog-2009', ('grad', [(0, (20, 120, 150)), (.5, (10, 70, 100)), (1, (4, 24, 40))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('THE PRINCESS AND THE', (230, 190, 90)), ('FROG', (110, 200, 90))], 'pagb', 90, sp=.2),
+       title=Pic('logos/the-princess-and-the-frog-2009-title.png', 170), studio=False,
        face=ph(.48, .405, .12, 1.4), lcol=WHT)
 
 # The Secret in Their Eyes (2009): Tornasol (Canal+ España), the poster's gold and black, its white serif THE SECRET IN THEIR EYES lifted into one line, Espósito in shadow and Irene at the door
@@ -5391,9 +5391,9 @@ std('elite-squad-the-enemy-within-2010', ('grad', [(0, (60, 64, 70)), (.6, (16, 
     photo=ph(0.5, 0.15, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UM FILME DE', 'JOSÉ PADILHA'], ccol=WHT,
     ft='d', vbox=(200, 30, 30), fcol=(200, 200, 204), fin=MINT, seed=2010)
 
-# Harry Potter and the Deathly Hallows: Part 1 (2010): Warner Bros., a slipcase; the poster's forest night, HARRY POTTER typeset in a silver serif with AND THE DEATHLY HALLOWS (parked with the others for Ian's logo, see data/logos-wanted.md), Harry, Ron and Hermione running
+# Harry Potter and the Deathly Hallows: Part 1 (2010): Warner Bros., a slipcase; the poster's forest night, the film's own title logo (Ian's image, logos/harry-potter-and-the-deathly-hallows-part-1-2010-title.png), Harry, Ron and Hermione running
 std('harry-potter-and-the-deathly-hallows-part-1-2010', ('grad', [(0, (30, 60, 70)), (.6, (8, 16, 20)), (1, (0, 2, 4))]), (220, 226, 230),
-    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE DEATHLY HALLOWS · PART 1', 'pagb', 40, (200, 214, 220))], tgap=8,
+    Pic('logos/harry-potter-and-the-deathly-hallows-part-1-2010-title.png', 170), tgap=8,
     photo=ph(0.5, 0.55, 0.55, 1.4), pb=(220, 226, 230), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(180, 200, 210), fin=MINT, seed=2010)
 
@@ -5439,16 +5439,16 @@ std('salt-2010', ('grad', [(0, (40, 44, 50)), (.6, (10, 12, 14)), (1, (0, 0, 0))
     photo=ph(0.5, 0.2, 0.86, 0.4), pb=(190, 30, 30), lg=WHT, lw=.5, stick=RWD(fill=(236, 240, 244), ink=(20, 20, 20)), order='LPTSF',
     ft='a', fcol=(200, 200, 206), fin=MINT, seed=2010)
 
-# Scott Pilgrim vs. the World (2010): Universal (Marc Platt), the poster's red, SCOTT PILGRIM VS. THE WORLD typeset in white (parked for Ian's logo, see data/logos-wanted.md: the hand-drawn white scrawl wraps round Scott and the cut kept only scraps), Scott with the bass
+# Scott Pilgrim vs. the World (2010): Universal (Marc Platt), the poster's red, the film's own title logo (Ian's image, logos/scott-pilgrim-vs-the-world-2010-title.png, printed white as on the poster; his image was in dark red), Scott with the bass
 std('scott-pilgrim-vs-the-world-2010', ('grad', [(0, (190, 20, 20)), (.6, (110, 6, 6)), (1, (30, 0, 0))]), WHT,
-    [T('SCOTT PILGRIM', 'popbi', 100, WHT), T('VS. THE WORLD', 'popbi', 44, WHT)], tgap=8,
+    Pic('logos/scott-pilgrim-vs-the-world-2010-title.png', 170), tgap=8,
     photo=ph(0.5, 0.55, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTF',
     ft='c', fcol=(250, 210, 210), fin=MINT, seed=2010)
 
-# Shrek Forever After (2010): DreamWorks, a slipcase; the poster's sky, SHREK typeset in the green with FOREVER AFTER (parked with the other Shreks for Ian's logo, see data/logos-wanted.md), Shrek, Fiona and Rumpelstiltskin
+# Shrek Forever After (2010): DreamWorks, a slipcase; the poster's sky, the film's own title logo (Ian's image, logos/shrek-forever-after-2010-title.png), which carries the DreamWorks mark, so no separate studio logo, Shrek, Fiona and Rumpelstiltskin
 std('shrek-forever-after-2010', ('grad', [(0, (60, 140, 220)), (.5, (90, 160, 80)), (1, (30, 50, 20))]), (120, 180, 50),
-    [T('SHREK', 'schb', 120, (120, 180, 50), outline=((30, 50, 10), 2.2)), T('FOREVER AFTER', 'schb', 50, (230, 200, 80))], tgap=8,
-    photo=ph(0.5, 0.5, 0.55, 1.4), pb=(120, 180, 50), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'FAMILY']),
+    Pic('logos/shrek-forever-after-2010-title.png', 170), tgap=8,
+    photo=ph(0.5, 0.5, 0.55, 1.4), pb=(120, 180, 50), lg=WHT, lw=.5, order='PTSF', stick=PRC(['$3.49', 'FAMILY']),
     ft='a', fcol=(220, 236, 250), fin=MINT, seed=2010)
 
 # Tangled (2010): Walt Disney Animation, so a clamshell; the tower's green meadow, the poster's gold Tangled cut off it, Rapunzel's face in the diamond
@@ -5491,9 +5491,9 @@ disney('toy-story-3-2010', ('strip', dict(x0=.0, blur=14, wash=((36, 90, 200), .
        title=LC([(0.3, 0.08, 0.67, 0.195), (0.33, 0.19, 0.65, 0.25), (0.42, 0.25, 0.57, 0.365)], 170, gapf=.05, cuts=[ts_letters, ts_plate(.3, .75), ts_letters]),
        face=ph(.46, .5, .2, 1.4))
 
-# Cars 2 (2011): Pixar, so a clamshell; the poster's fireworks night, Cars 2 typeset in red italic with a chrome keyline like Cars (parked with Cars for Ian's logo, see data/logos-wanted.md: the chrome badge over fireworks broke up in both cuts), Lightning McQueen's face in the diamond
+# Cars 2 (2011): Pixar, so a clamshell; the poster's fireworks night, the film's own title logo (Ian's image, logos/cars-2-2011-title.png), Lightning McQueen's face in the diamond
 disney('cars-2-2011', ('grad', [(0, (20, 60, 150)), (.5, (30, 80, 170)), (1, (10, 20, 60))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('Cars', (210, 30, 30)), ('2', (230, 230, 236))], 'popbi', 130, outline=((230, 230, 236), 2.4)),
+       title=Pic('logos/cars-2-2011-title.png', 170),
        face=ph(.7, .62, .2, 1.4), lcol=WHT)
 
 # Contagion (2011): Warner Bros. (Participant), the poster's black, its black CONTAGION lifted off the yellow tape onto the same yellow, the faces in the panels
@@ -5508,9 +5508,9 @@ std('drive-2011', ('grad', [(0, (40, 70, 90)), (.6, (10, 18, 24)), (1, (0, 2, 4)
     photo=ph(0.6, 0.35, 0.8, 0.85), pb=(230, 60, 150), lg=WHT, lw=.5, dotst=('DRAMA', (200, 40, 50), WHT), order='LPTF',
     ft='b', fcol=(190, 210, 220), fin=MINT, seed=2011)
 
-# Harry Potter and the Deathly Hallows: Part 2 (2011): Warner Bros., a slipcase; the poster's burning Hogwarts, HARRY POTTER typeset in a silver serif with AND THE DEATHLY HALLOWS · PART 2 (parked with the others for Ian's logo, see data/logos-wanted.md), Harry before the ruins
+# Harry Potter and the Deathly Hallows: Part 2 (2011): Warner Bros., a slipcase; the poster's burning Hogwarts, the film's own title logo (Ian's image, logos/harry-potter-and-the-deathly-hallows-part-2-2011-title.png), Harry before the ruins
 std('harry-potter-and-the-deathly-hallows-part-2-2011', ('grad', [(0, (40, 70, 80)), (.6, (12, 20, 22)), (1, (60, 20, 6))]), (220, 226, 230),
-    [T('HARRY POTTER', 'pagb', 110, (220, 226, 230), outline=((10, 20, 24), 1.6)), T('AND THE DEATHLY HALLOWS · PART 2', 'pagb', 40, (200, 214, 220))], tgap=8,
+    Pic('logos/harry-potter-and-the-deathly-hallows-part-2-2011-title.png', 170), tgap=8,
     photo=ph(0.5, 0.58, 0.6, 1.5), pb=(230, 120, 40), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(180, 200, 210), fin=MINT, seed=2011)
 
@@ -5829,9 +5829,9 @@ std('the-iceman-2012', ('grad', [(0, (60, 30, 24)), (.6, (14, 8, 6)), (1, (0, 0,
     photo=ph(0.5, 0.35, 0.86, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(210, 200, 196), fin=MINT, seed=2012)
 
-# Wreck-It Ralph (2012): Walt Disney Animation, so a clamshell; the arcade blue, WRECK-IT RALPH typeset in heavy red capitals with the logo's purple keyline (parked for Ian's logo, see data/logos-wanted.md: Ralph and Calhoun stand in front of WRECK-IT and the cut came away in pieces), Ralph's face in the diamond
+# Wreck-It Ralph (2012): Walt Disney Animation, so a clamshell; the arcade blue, the film's own title logo (Ian's image, logos/wreck-it-ralph-2012-title.png), Ralph's face in the diamond
 disney('wreck-it-ralph-2012', ('grad', [(0, (30, 90, 170)), (.5, (20, 60, 130)), (1, (6, 20, 50))]), fin=dict(CLAM, vivid=.2),
-       title=T('WRECK-IT RALPH', 'intbk', 110, (230, 40, 40), outline=((80, 40, 140), 2.4)),
+       title=Pic('logos/wreck-it-ralph-2012-title.png', 170),
        face=ph(.55, .29, .18, 1.4), lcol=WHT)
 
 # 12 Years a Slave (2013): Fox Searchlight (New Regency), the poster's white, its orange 12 and white small capitals YEARS A SLAVE cut off it, with a dark keyline, Solomon running
@@ -5910,7 +5910,7 @@ std('nebraska-2013', ('grad', [(0, (60, 60, 60)), (.6, (14, 14, 14)), (1, (0, 0,
     photo=ph(0.6, 0.2, 0.7, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['AN ALEXANDER PAYNE FILM'], ccol=WHT,
     ft='b', fcol=(200, 200, 200), fin=MINT, seed=2013)
 
-# Now You See Me (2013): Summit, the poster's grey, NOW YOU SEE ME typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the title is the floor itself, in huge letters in steep perspective under the Horsemen), the four Horsemen walking
+# Now You See Me (2013): Summit, the poster's grey, NOW YOU SEE ME typeset in heavy white capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the title is the floor itself, in huge letters in steep perspective under the Horsemen), the four Horsemen walking
 std('now-you-see-me-2013', ('grad', [(0, (150, 150, 150)), (.6, (60, 60, 60)), (1, (10, 10, 10))]), WHT,
     T('NOW YOU SEE ME', 'intbk', 110, WHT, outline=((40, 40, 40), 2)),
     photo=ph(0.5, 0.5, 0.86, 1.3), pb=WHT, lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 40, 50), ink=WHT),
@@ -5976,7 +5976,7 @@ std('the-best-offer-2013', ('grad', [(0, (70, 54, 30)), (.6, (20, 16, 8)), (1, (
     photo=ph(0.5, 0.4, 0.86, 1.0), pb=(210, 170, 70), lg=WHT, lw=.5, order='LPTSF', dotst=('MYSTERY', (210, 170, 70), (20, 16, 8)),
     ft='b', fcol=(210, 200, 180), fin=MINT, seed=2013)
 
-# The Crash Reel (2013): HBO Documentary Films, the poster's sky blue, THE CRASH REEL typeset in heavy blue capitals with a white keyline (parked for Ian's logo, see data/logos-wanted.md: the letters are filled with the photo of the sky and Kevin's face, so neither cut could find their edges), Kevin Pearce in the halfpipe
+# The Crash Reel (2013): HBO Documentary Films, the poster's sky blue, THE CRASH REEL typeset in heavy blue capitals with a white keyline (kept typeset: Ian is happy with it, 26 Nov 2026: the letters are filled with the photo of the sky and Kevin's face, so neither cut could find their edges), Kevin Pearce in the halfpipe
 std('the-crash-reel-2013', ('grad', [(0, (20, 60, 150)), (.5, (60, 120, 200)), (1, (220, 230, 240))]), WHT,
     T('THE CRASH REEL', 'intbk', 110, (30, 80, 170), outline=(WHT, 2.4)),
     photo=ph(0.4, 0.08, 0.6, 0.4), pb=WHT, lg=WHT, lw=.5, order='LPTF',
@@ -6017,9 +6017,9 @@ disney('toy-story-of-terror-2013', ('grad', [(0, (20, 40, 100)), (.5, (10, 24, 6
        title=LC([(0.37, 0.14, 0.69, 0.245), (0.34, 0.235, 0.69, 0.295), (0.3, 0.3, 0.73, 0.39)], 150, gapf=.08, cuts=[ts_letters, ts_plate(.2, .8), comp_cut(lambda a: (a[..., 1] > .45) & (a[..., 1] > a[..., 2] + .1), minf=.02, close=2, fillh=True)]),
        face=ph(.3, .6, .12, 1.4), lcol=WHT)
 
-# 22 Jump Street (2014): Columbia, the spring-break crowd, 22 JUMP STREET typeset in heavy capitals, chrome, red and chrome like the poster's (parked for Ian's logo, see data/logos-wanted.md: the chrome letters melt into the bright crowd behind them and both cuts lost them), Jonah Hill and Channing Tatum in their shades
+# 22 Jump Street (2014): Columbia, the spring-break crowd, the film's own title logo (Ian's image, logos/22-jump-street-2014-title.png), Jonah Hill and Channing Tatum in their shades
 std('22-jump-street-2014', ('grad', [(0, (60, 160, 220)), (.5, (40, 100, 160)), (1, (10, 20, 40))]), WHT,
-    TT([('22', (210, 214, 220)), ('JUMP', (220, 30, 30)), ('STREET', (210, 214, 220))], 'intbk', 110, outline=((10, 10, 20), 2.2)),
+    Pic('logos/22-jump-street-2014-title.png', 101),
     photo=ph(0.5, 0.5, 0.86, 1.0), pb=(220, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.99', 'COMEDY']),
     ft='a', fcol=(220, 230, 240), fin=MINT, seed=2014)
 
@@ -6058,7 +6058,7 @@ std('birdman-or-the-unexpected-virtue-of-ignorance-2014', ('grad', [(0, (170, 19
     photo=ph(0.5, 0.35, 0.86, 1.3), pb=(60, 40, 30), lg=(40, 40, 30), lw=.55, order='LPTF',
     ft='c', fcol=(240, 240, 230), fin=MINT, seed=2014)
 
-# Blue Ruin (2014): RADiUS-TWC (Paradise City), the poster's dusk, BLUE RUIN typeset in heavy black capitals (parked for Ian's logo, see data/logos-wanted.md: the giant letters fill the poster with Dwight's face showing through them, so a cut keeps the face), the car on the road at sunset
+# Blue Ruin (2014): RADiUS-TWC (Paradise City), the poster's dusk, BLUE RUIN typeset in heavy black capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the giant letters fill the poster with Dwight's face showing through them, so a cut keeps the face), the car on the road at sunset
 std('blue-ruin-2014', ('grad', [(0, (80, 140, 170)), (.5, (110, 130, 150)), (1, (220, 120, 80))]), (16, 16, 16),
     T('BLUE RUIN', 'intbk', 120, (16, 16, 16)),
     photo=ph(0.5, 0.88, 0.86, 0.3), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LTPCF', credit=['WRITTEN & DIRECTED BY', 'JEREMY SAULNIER'], ccol=(16, 16, 16),
@@ -6124,9 +6124,9 @@ std('god-s-pocket-2014', ('grad', [(0, (40, 80, 90)), (.6, (10, 20, 24)), (1, (0
     photo=ph(0.5, 0.4, 0.86, 1.0), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(10, 20, 24)),
     ft='a', fcol=(190, 210, 214), fin=MINT, seed=2014)
 
-# Gone Girl (2014): 20th Century Fox, the poster's grey sky, GONE GIRL typeset in spaced slate capitals (parked for Ian's logo, see data/logos-wanted.md: the letters fade into the clouds by design, so both cuts lost half of them), Ben Affleck by the water
+# Gone Girl (2014): 20th Century Fox, the poster's grey sky, the film's own title logo (Ian's image, logos/gone-girl-2014-title.png), Ben Affleck by the water
 std('gone-girl-2014', ('grad', [(0, (200, 208, 212)), (.6, (160, 170, 176)), (1, (110, 120, 128))]), (30, 34, 40),
-    T('G O N E   G I R L', 'intxb', 80, (40, 46, 52)),
+    Pic('logos/gone-girl-2014-title.png', 170),
     photo=ph(0.5, 0.82, 0.86, 0.4), pb=(30, 34, 40), lg=(30, 34, 40), lw=.55, order='LTPF',
     ft='e', fcol=(20, 24, 28), fin=MINT, seed=2014)
 
@@ -6136,9 +6136,9 @@ std('guardians-of-the-galaxy-2014', ('grad', [(0, (40, 50, 110)), (.6, (10, 14, 
     photo=ph(0.5, 0.45, 0.86, 1.0), pb=(230, 180, 70), lg=WHT, lw=.5, order='LPTF',
     ft='d', vbox=(230, 180, 70), vink=(10, 14, 34), fcol=(200, 206, 230), fin=MINT, seed=2014)
 
-# Interstellar (2014): Paramount (Legendary), the water planet's grey sea, INTERSTELLAR typeset in spaced white serif capitals (parked for Ian's logo, see data/logos-wanted.md: the letters cross from the dark sea onto a white wake and change colour halfway, so a lift loses half of them), Cooper in the shallows by the lander
+# Interstellar (2014): Paramount (Legendary), the water planet's grey sea, the film's own title logo (Ian's image, logos/interstellar-2014-title.png), Cooper in the shallows by the lander
 std('interstellar-2014', ('grad', [(0, (150, 160, 170)), (.5, (60, 70, 80)), (1, (6, 8, 10))]), WHT,
-    T('I N T E R S T E L L A R', 'pagb', 80, WHT),
+    Pic('logos/interstellar-2014-title.png', 146),
     photo=ph(0.5, 0.55, 0.86, 1.0), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'CHRISTOPHER NOLAN'], ccol=WHT,
     ft='b', fcol=(210, 216, 222), fin=MINT, seed=2014)
 
@@ -6196,15 +6196,15 @@ std('tales-of-the-grim-sleeper-2014', ('grad', [(0, (50, 34, 14)), (.6, (12, 8, 
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(240, 150, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'NICK BROOMFIELD'], ccol=WHT,
     ft='b', fcol=(220, 200, 180), fin=MINT, seed=2014)
 
-# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city's dusk, NINJA TURTLES typeset in heavy chrome-grey capitals with TEENAGE MUTANT above it (parked for Ian's logo, see data/logos-wanted.md: the chrome letters reflect the sky behind them and both cuts left holes), the four turtles
+# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city's dusk, the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-2014-title.png), the four turtles
 std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (60, 110, 160)), (.5, (180, 120, 60)), (1, (20, 20, 20))]), (220, 226, 232),
-    [T('TEENAGE MUTANT', 'intbk', 40, (220, 226, 232)), T('NINJA TURTLES', 'intbk', 110, (220, 226, 232), outline=((30, 80, 30), 2.2))], tgap=6,
+    Pic('logos/teenage-mutant-ninja-turtles-2014-title.png', 170), tgap=6,
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(80, 160, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'ACTION']),
     ft='a', fcol=(220, 220, 200), fin=MINT, seed=2014)
 
-# The Amazing Spider-Man 2 (2014): Columbia, a slipcase; the city's blue, THE AMAZING SPIDER-MAN 2 typeset in wide heavy capitals (parked with the other Spider-Mans for Ian's logo, see data/logos-wanted.md: the thin chrome logo on the bright city lifted in fragments), Spider-Man swinging
+# The Amazing Spider-Man 2 (2014): Columbia, a slipcase; the city's blue, the film's own title logo (Ian's image, logos/the-amazing-spider-man-2-2014-title.png), Spider-Man swinging
 std('the-amazing-spider-man-2-2014', ('grad', [(0, (60, 110, 170)), (.6, (16, 30, 50)), (1, (0, 2, 6))]), (220, 226, 232),
-    [T('THE AMAZING', 'advb', 40, (220, 226, 232)), T('SPIDER-MAN 2', 'advb', 100, WHT, outline=((30, 50, 90), 2))], tgap=6,
+    Pic('logos/the-amazing-spider-man-2-2014-title.png', 96), tgap=6,
     photo=ph(0.6, 0.55, 0.8, 0.85), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='d', vbox=(200, 30, 30), fcol=(200, 214, 226), fin=MINT, seed=2014)
 
@@ -6220,9 +6220,9 @@ std('the-equalizer-2014', ('grad', [(0, (90, 90, 90)), (.6, (24, 24, 24)), (1, (
     photo=ph(0.6, 0.3, 0.8, 0.85), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(210, 210, 210), fin=MINT, seed=2014)
 
-# The Grand Budapest Hotel (2014): Fox Searchlight, the poster's lilac mountains, THE GRAND BUDAPEST HOTEL typeset in a gold serif (parked for Ian's logo, see data/logos-wanted.md: the gold letters sit on the sunlit mountains of the same tones and both cuts lost their middles), the pink hotel
+# The Grand Budapest Hotel (2014): Fox Searchlight, the poster's lilac mountains, the film's own title logo (Ian's image, logos/the-grand-budapest-hotel-2014-title.png), the pink hotel
 std('the-grand-budapest-hotel-2014', ('grad', [(0, (110, 60, 100)), (.5, (80, 36, 70)), (1, (30, 10, 24))]), (230, 200, 130),
-    [T('THE GRAND BUDAPEST', 'pagb', 90, (230, 200, 130)), T('HOTEL', 'pagb', 50, (230, 200, 130))], tgap=8,
+    Pic('logos/the-grand-budapest-hotel-2014-title.png', 170), tgap=8,
     photo=ph(0.5, 0.6, 0.86, 0.6), pb=(230, 200, 130), lg=WHT, lw=.5, order='LPTCF', credit=['A WES ANDERSON FILM'], ccol=WHT,
     ft='e', fcol=(240, 220, 230), fin=MINT, seed=2014)
 
@@ -6285,7 +6285,7 @@ std('ant-man-2015', ('grad', [(0, (50, 90, 130)), (.6, (14, 26, 40)), (1, (0, 2,
     photo=ph(0.5, 0.35, 0.86, 1.0), pb=(210, 30, 30), lg=WHT, lw=.5, order='LPTF',
     ft='e', fcol=(200, 214, 226), fin=MINT, seed=2015)
 
-# Aziz Ansari: Live at Madison Square Garden (2015): Netflix (no logo file), the poster's black, AZIZ ANSARI typeset in heavy capitals in the marquee's cream with LIVE AT MADISON SQUARE GARDEN (parked for Ian's logo, see data/logos-wanted.md: the bulb-lit letters run up the poster in steep perspective), Aziz on the stage
+# Aziz Ansari: Live at Madison Square Garden (2015): Netflix (no logo file), the poster's black, AZIZ ANSARI typeset in heavy capitals in the marquee's cream with LIVE AT MADISON SQUARE GARDEN (kept typeset: Ian is happy with it, 26 Nov 2026: the bulb-lit letters run up the poster in steep perspective), Aziz on the stage
 std('aziz-ansari-live-at-madison-square-garden-2015', ('grad', [(0, (40, 34, 30)), (.6, (10, 8, 8)), (1, (0, 0, 0))]), (240, 226, 200),
     [T('AZIZ ANSARI', 'intbk', 110, (240, 226, 200)), T('LIVE AT MADISON SQUARE GARDEN', 'intbk', 40, (220, 206, 180))], tgap=8,
     photo=ph(0.36, 0.86, 0.3, 0.9), pb=(240, 226, 200), lg=WHT, lw=.5, order='lTPCF', studio=['NETFLIX'], scol=(220, 40, 40), credit=['STAND-UP SPECIAL'], ccol=WHT,
@@ -6297,9 +6297,9 @@ std('crimson-peak-2015', ('grad', [(0, (30, 60, 100)), (.6, (8, 16, 30)), (1, (0
     photo=ph(0.5, 0.45, 0.86, 1.0), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A GUILLERMO DEL TORO FILM'], ccol=WHT,
     ft='c', fcol=(200, 210, 230), fin=MINT, seed=2015)
 
-# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, DOPE typeset in heavy white capitals (parked for Ian's logo, see data/logos-wanted.md: the distressed white letters run into the poster's white frame and both cuts broke the D and lost the E), Malcolm and friends on their bikes under the palms
+# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, the film's own title logo (Ian's image, logos/dope-2015-title.png), Malcolm and friends on their bikes under the palms
 std('dope-2015', ('grad', [(0, (60, 140, 220)), (.5, (110, 180, 230)), (1, (40, 60, 80))]), WHT,
-    T('DOPE', 'intbk', 140, WHT),
+    Pic('logos/dope-2015-title.png', 170),
     photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 60, 80), lg=WHT, lw=.5, order='lPTSF', studio=['i am OTHER', 'SIGNIFICANT PRODUCTIONS'], scol=WHT, stick=BAR('15 0619', top='COMEDY', fill=(240, 240, 236)),
     ft='b', fcol=(20, 30, 40), fin=MINT, seed=2015)
 
@@ -6344,7 +6344,7 @@ std('mad-max-fury-road-2015', ('grad', [(0, (60, 40, 20)), (.6, (14, 10, 4)), (1
     photo=ph(0.55, 0.75, 0.86, 0.6), pb=(250, 180, 30), lg=WHT, lw=.5, order='LTPF',
     ft='d', vbox=(250, 180, 30), vink=(10, 8, 4), fcol=(220, 200, 170), fin=MINT, seed=2015)
 
-# Mission: Impossible - Rogue Nation (2015): Paramount, the poster's white, MISSION: IMPOSSIBLE typeset in condensed red capitals with ROGUE NATION in black (parked for Ian's logo, see data/logos-wanted.md: the stunt figures behind the letters came away with them, and the tighter cut lost the I), Tom Cruise in shades and the cast
+# Mission: Impossible - Rogue Nation (2015): Paramount, the poster's white, MISSION: IMPOSSIBLE typeset in condensed red capitals with ROGUE NATION in black (kept typeset: Ian is happy with it, 26 Nov 2026: the stunt figures behind the letters came away with them, and the tighter cut lost the I), Tom Cruise in shades and the cast
 std('mission-impossible-rogue-nation-2015', ('grad', [(0, (250, 250, 250)), (.6, (226, 226, 226)), (1, (90, 90, 90))]), (200, 20, 20),
     [TT([('MISSION: ', (200, 20, 20)), ('IMPOSSIBLE', (200, 20, 20))], 'intbk', 100), T('ROGUE NATION', 'intbk', 50, (30, 30, 30))], tgap=8,
     photo=ph(0.55, 0.3, 0.86, 0.85), pb=(200, 20, 20), lg=(30, 30, 30), lw=.55, order='LPTF',
@@ -6361,7 +6361,7 @@ std('the-gift-2015', ('grad', [(0, (40, 36, 30)), (.6, (10, 10, 8)), (1, (0, 0, 
     photo=ph(0.5, 0.38, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['WRITTEN & DIRECTED BY', 'JOEL EDGERTON'], ccol=WHT,
     ft='c', fcol=(210, 200, 180), fin=MINT, seed=2015)
 
-# The Man from U.N.C.L.E. (2015): Warner Bros. (Davis Entertainment), the suits' charcoal, THE MAN FROM U.N.C.L.E. typeset in white capitals (parked for Ian's logo, see data/logos-wanted.md: the suits stand in front of the U and the E and both lifts broke them), Henry Cavill and Armie Hammer
+# The Man from U.N.C.L.E. (2015): Warner Bros. (Davis Entertainment), the suits' charcoal, THE MAN FROM U.N.C.L.E. typeset in white capitals (kept typeset: Ian is happy with it, 26 Nov 2026: the suits stand in front of the U and the E and both lifts broke them), Henry Cavill and Armie Hammer
 std('the-man-from-u-n-c-l-e-2015', ('grad', [(0, (50, 50, 50)), (.5, (24, 24, 24)), (1, (4, 4, 4))]), WHT,
     [T('THE MAN FROM', 'intxb', 40, WHT), T('U.N.C.L.E.', 'intbk', 120, WHT)], tgap=6,
     photo=ph(0.5, 0.18, 0.86, 0.5), pb=(240, 200, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SPY', (240, 200, 40), (20, 20, 20)),
@@ -6385,7 +6385,7 @@ std('the-wolfpack-2015', ('grad', [(0, (240, 70, 50)), (.5, (220, 50, 40)), (1, 
     photo=ph(0.5, 0.7, 0.86, 0.6), pb=(16, 16, 16), lg=(16, 16, 16), lw=.55, order='LTPSF', stick=RWD(fill=(250, 250, 250), ink=(16, 16, 16)),
     ft='e', fcol=(30, 10, 6), fin=MINT, seed=2015)
 
-# Victoria (2015): Adopt Films (RadicalMedia), the poster's neon blue and orange, VICTORIA typeset in heavy condensed capitals in white (parked for Ian's logo, see data/logos-wanted.md: the translucent white letters lie over Laia Costa's lit face and take its colours), her face
+# Victoria (2015): Adopt Films (RadicalMedia), the poster's neon blue and orange, VICTORIA typeset in heavy condensed capitals in white (kept typeset: Ian is happy with it, 26 Nov 2026: the translucent white letters lie over Laia Costa's lit face and take its colours), her face
 std('victoria-2015', ('grad', [(0, (30, 60, 200)), (.5, (110, 40, 120)), (1, (220, 110, 40))]), WHT,
     T('VICTORIA', 'intbk', 130, WHT),
     photo=ph(0.5, 0.75, 0.86, 0.6), pb=WHT, lg=WHT, lw=.5, order='LTPCF', credit=['EIN FILM VON', 'SEBASTIAN SCHIPPER'], ccol=WHT,
