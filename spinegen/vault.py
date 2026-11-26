@@ -438,7 +438,7 @@ std('his-girl-friday-1940', ('grad', [(0, (248, 248, 246)), (.6, (232, 232, 228)
     ft='a', vbox=(20, 20, 20), fcol=(20, 20, 20), fin=OLD, seed=1940)
 
 # Pinocchio (1940): Disney, the white clamshell; the poster's starry blue, its gold script Pinocchio cut off the red plaque in its own colours, Pinocchio's face in the red diamond
-disney('pinocchio-1940', ('grad', [(0, (20, 40, 120)), (.5, (40, 90, 180)), (1, (120, 170, 220))]), fin=dict(CLAM, vivid=.22),
+disney('pinocchio-1940', cover='../spinegen/covers/pinocchio-1940.jpg', bg=('grad', [(0, (20, 40, 120)), (.5, (40, 90, 180)), (1, (120, 170, 220))]), fin=dict(CLAM, vivid=.22),
        title=LC([(0.345, 0.435, 0.93, 0.53)], 120, outline=((150, 20, 30), 3), cuts=[key_cut(lambda a: (a[..., 0] > .8) & (a[..., 1] > .6) & (a[..., 2] < .45))]),
        face=ph(.25, .335, .22, 1.4), lcol=WHT)
 
@@ -898,7 +898,7 @@ std('monsieur-hulot-s-holiday-1953', ('grad', [(0, (236, 230, 216)), (.6, (220, 
     ft='c', fcol=(60, 60, 60), fin=OLD, seed=1953)
 
 # Peter Pan (1953): Disney, the white clamshell; the poster's night-sky blue, its white serif PETER PAN cut off the red plaque, Peter's face in the red diamond
-disney('peter-pan-1953', ('grad', [(0, (20, 40, 120)), (.5, (40, 100, 190)), (1, (20, 60, 70))]), fin=dict(CLAM, vivid=.2),
+disney('peter-pan-1953', cover='../spinegen/covers/peter-pan-1953.jpg', bg=('grad', [(0, (20, 40, 120)), (.5, (40, 100, 190)), (1, (20, 60, 70))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.09, 0.512, 0.87, 0.6)], 110, cuts=[key_cut(lambda a: _lum(a) > .8)]),
        face=ph(.6, .22, .22, 1.4), lcol=WHT)
 
@@ -1289,11 +1289,10 @@ std('il-posto-1961', ('grad', [(0, (238, 232, 216)), (.6, (220, 210, 190)), (1, 
     LC([(0.05, 0.415, 0.545, 0.49)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4))]),
     photo=ph(0.55, 0.72, 0.86, 0.55), pb=(230, 190, 40), lg=(40, 40, 40), lw=.55, order='LTPF', ft='d', fcol=(40, 40, 40), fin=OLD, seed=1961)
 
-# One Hundred and One Dalmatians (1961): Disney, the white clamshell; the poster's sky blue, its white-and-gold 101 DALMATIANS cut off the red banner and edged in its red, Pongo's face in the red diamond
-disney('one-hundred-and-one-dalmatians-1961', ('grad', [(0, (40, 90, 170)), (.5, (70, 130, 200)), (1, (30, 60, 110))]), fin=dict(CLAM, vivid=.2),
-       title=LC([(0.2, 0.44, 0.75, 0.572), (0.185, 0.566, 0.78, 0.608)], 150, gapf=.25, valign='base', margin=0, outline=((180, 20, 24), 3),
-                cuts=[comp_cut(lambda a: (_lum(a) > .55) & (a[..., 1] > a[..., 0] - .25), minf=.05), comp_cut(lambda a: (_lum(a) > .7) & (_sat(a) < .3), minf=.25)]),
-       face=ph(.63, .2, .3, 1.4), lcol=WHT)
+# One Hundred and One Dalmatians (1961): Disney, the white clamshell; the new poster's yellow (Ian, 26 Nov 2026), the title in the red One Hundred and One Dalmatians lettering from Ian's logo image (26 Nov 2026), Pongo's face in the red diamond
+disney('one-hundred-and-one-dalmatians-1961', cover='../spinegen/covers/one-hundred-and-one-dalmatians-1961.jpg', bg=('grad', [(0, (252, 222, 20)), (.5, (251, 216, 0)), (1, (236, 196, 0))]), fin=dict(CLAM, vivid=.1),
+       title=Pic('logos/one-hundred-and-one-dalmatians-1961-title.png', 170), side=4,
+       face=ph(.63, .2, .3, 1.4), lcol=(30, 30, 30), ink=(30, 30, 30))
 
 # The Human Condition III: A Soldier's Prayer (1961): the poster's pink-white, its black THE HUMAN CONDITION and Part III cut off it and run in one line, Nakadai in the snow (no logo file: Toho, from IMDb's company credits)
 std('the-human-condition-iii-a-soldier-s-prayer-1961', ('grad', [(0, (250, 236, 232)), (.6, (230, 216, 212)), (1, (60, 120, 150))]), (30, 26, 24),
@@ -1832,7 +1831,7 @@ std('papillon-1973', ('grad', [(0, (246, 248, 250)), (.6, (220, 230, 240)), (1, 
     photo=ph(0.6, 0.55, 0.8, 0.9), pb=(22, 112, 204), studio=['LES FILMS CORONA'], scol=(30, 40, 60), order='lTPF', ft='a', vbox=(22, 112, 204), fcol=(30, 40, 60), fin=OLD, seed=1973)
 
 # Robin Hood (1973): Disney, the white clamshell; the forest green, the poster's green ROBIN HOOD with its gold keyline cut off the banner in its own colours, Robin's face in the red diamond
-disney('robin-hood-1973', ('grad', [(0, (40, 110, 60)), (.5, (70, 150, 80)), (1, (20, 60, 30))]), fin=dict(CLAM, vivid=.2),
+disney('robin-hood-1973', cover='../spinegen/covers/robin-hood-1973.jpg', bg=('grad', [(0, (40, 110, 60)), (.5, (70, 150, 80)), (1, (20, 60, 30))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.115, 0.468, 0.875, 0.6)], 110, outline=((250, 220, 120), 2.4), cuts=[comp_cut(lambda a: a[..., 2] > a[..., 0] + .2, minf=.05)]),
        face=ph(.45, .18, .2, 1.4), lcol=WHT)
 
@@ -2616,7 +2615,7 @@ std('a-few-good-men-1992', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, 
     photo=ph(0.5, 0.3, 0.9, 0.7), pb=(230, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(210, 210, 220), fin=RENTAL, seed=1992)
 
 # Aladdin (1992): Disney clamshell; the Genie's blue night, the poster's gold script Aladdin cut off it, Aladdin's face in the diamond
-disney('aladdin-1992', ('grad', [(0, (40, 60, 160)), (.5, (60, 110, 210)), (1, (90, 40, 140))]), fin=dict(CLAM, vivid=.2),
+disney('aladdin-1992', cover='../spinegen/covers/aladdin-1992.jpg', bg=('grad', [(0, (40, 60, 160)), (.5, (60, 110, 210)), (1, (90, 40, 140))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.06, 0.055, 0.935, 0.21)], 130, outline=((60, 30, 10), 1.8), cuts=[comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 1] > .4) & (a[..., 2] < .45), minf=.01, close=2)]),
        face=ph(.66, .477, .1, 1.4), lcol=WHT)
 
@@ -3036,7 +3035,7 @@ std('the-cable-guy-1996', ('grad', [(0, (30, 60, 170)), (.6, (10, 20, 70)), (1, 
     ft='a', fcol=(200, 210, 246), fin=RENTAL, seed=1996)
 
 # The Hunchback of Notre Dame (1996): Disney clamshell; the cathedral's red glow, the poster's white THE HUNCHBACK OF NOTRE DAME cut off it, Quasimodo in the diamond
-disney('the-hunchback-of-notre-dame-1996', ('grad', [(0, (180, 60, 40)), (.5, (110, 30, 24)), (1, (30, 8, 8))]), fin=dict(CLAM, vivid=.2),
+disney('the-hunchback-of-notre-dame-1996', cover='../spinegen/covers/the-hunchback-of-notre-dame-1996.jpg', bg=('grad', [(0, (180, 60, 40)), (.5, (110, 30, 24)), (1, (30, 8, 8))]), fin=dict(CLAM, vivid=.2),
        title=LC([(0.2, 0.815, 0.83, 0.948)], 130, cuts=[comp_cut(lambda a: _lum(a) > .82, minf=.01)]),
        face=ph(.53, .62, .14, 1.4), lcol=WHT)
 
