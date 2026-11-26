@@ -2096,34 +2096,6 @@
       "imdbVotes": 52027
     },
     {
-      "title": "Christine",
-      "year": 2016,
-      "rating": 3.5,
-      "rating10": 6.5,
-      "watched": "2026-11-04",
-      "tmdb": 339405,
-      "tmdbKind": "movie",
-      "runtime": 123,
-      "director": "Antonio Campos",
-      "genres": [
-        "Drama"
-      ],
-      "imdb": "tt4666726",
-      "poster": "posters/christine-2016.jpg",
-      "titleBox": [
-        [
-          0.1239,
-          0.8662,
-          0.8984,
-          0.9941
-        ]
-      ],
-      "studio": "Great Point Media",
-      "logo": "logos/52352.png",
-      "imdbRating": 6.9,
-      "imdbVotes": 18228
-    },
-    {
       "title": "Your Mother Your Mother Your Mother",
       "year": 2026,
       "rating": 3.5,

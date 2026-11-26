@@ -469,7 +469,7 @@ std('i-love-boosters-2026', ('grad', [(0, (236, 60, 150)), (.6, (150, 40, 170)),
 
 # Project Hail Mary: deep-space teal, wide tracked capitals
 std('project-hail-mary-2026', ('grad', [(0, (8, 22, 32)), (.5, (14, 52, 66)), (1, (6, 14, 22))]), WHT,
-    [T('HAIL MARY', 'advb', 92, WHT, track=.3), T('PROJECT', 'advb', 22, (150, 214, 226), track=.9)],
+    Pic('logos/project-hail-mary-2026-title.png', 80),  # Ian's logo (26 Nov 2026), HAIL MARY on one line, PROJECT smaller over it, at his ask
     photo=ph(.6, .74, .74, 1.1), pb=(150, 214, 226), lg=(150, 214, 226), lw=.34, order='LTPF', tgap=16,
     ft='e', fcol=(190, 226, 234), fin=dict(MINT, gloss=.1))
 
@@ -505,8 +505,8 @@ std('pretty-maids-all-in-a-row-1971', ('solid', (14, 14, 15)), WHT,
 
 # Con Air (1997): fireball black, brushed-steel slab
 std('con-air-1997', ('grad', [(0, (60, 20, 6)), (.2, (16, 12, 10)), (1, (10, 10, 12))]), (200, 210, 224),
-    T('CON AIR', 'bonb', 124, (200, 210, 224), track=.06, grad=[(0, (236, 240, 248)), (.5, (140, 156, 180)), (.55, (90, 104, 130)), (1, (214, 222, 236))]),
-    photo=ph(.5, .46, 1.0, .9), pb=(240, 140, 30), lg=None, lw=.8, order='LPTCSF', credit=['NICOLAS CAGE', 'JOHN CUSACK', 'JOHN MALKOVICH'],
+    Pic('logos/con-air-1997-title.png', 200),  # Ian's logo (26 Nov 2026): the silver Con Air sign, cut from its orange sky, as wide as the spine allows
+    photo=ph(.5, .46, 1.0, .9), pb=(240, 140, 30), lg=None, lw=.8, order='LPTCSF', side=4, credit=['NICOLAS CAGE', 'JOHN CUSACK', 'JOHN MALKOVICH'],
     ccol=(240, 140, 30), stick=BAR('35 09711', top='ACTION'), ft='b', fcol=(170, 172, 180), fin=RENTAL, seed=1997)
 
 # The Crash: tail-light pink on wet teal
@@ -621,8 +621,8 @@ std('our-hero-balthazar-2025', ('solid', (15, 28, 24)), (242, 76, 44),
 
 # Spider-Man: Brand New Day: red and midnight blue
 std('spider-man-brand-new-day-2026', ('grad', [(0, (150, 14, 24)), (.3, (60, 10, 30)), (1, (8, 12, 44))]), (226, 34, 40),
-    [T('SPIDER-MAN', 'intbki', 96, (236, 40, 44), outline=((8, 10, 40), 2.5), track=-.01), T('BRAND NEW DAY', 'advb', 26, (240, 190, 70), track=.34)],
-    photo=ph(.5, .3, .9, 1.2), pb=(236, 40, 44), lg=None, lw=.8, order='LPTF', tgap=16, ft='a', vbox=(236, 40, 44), fcol=WHT,
+    Pic('logos/spider-man-brand-new-day-2026-title.png', 170),  # Ian's logo (26 Nov 2026); it carries MARVEL STUDIOS, so no separate studio logo
+    photo=ph(.5, .3, .9, 1.2), pb=(236, 40, 44), lg=None, lw=.8, order='PTF', tgap=16, ft='a', vbox=(236, 40, 44), fcol=WHT,
     fin=dict(SLIP, gloss=.09))
 
 # Coyote vs. Acme: desert sunset, mail-order red
