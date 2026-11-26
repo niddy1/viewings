@@ -3559,9 +3559,9 @@ std('meet-the-parents-2000', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222
     photo=ph(0.5, 0.62, 0.86, 0.85), pb=(180, 20, 40), lg=(30, 30, 30), lw=.55, order='LPTSF', stick=RWD(fill=(250, 226, 60)),
     ft='c', fcol=(30, 30, 30), fin=MINT, seed=2000)
 
-# Memento (2000): the polaroid's white, the film's own title logo (Ian's image, logos/memento-2000-title.png), Guy Pearce in the nested photographs
+# Memento (2000): the polaroid's white, the film's own title logo (Ian's image, logos/memento-2000-title.png, turned level so it runs straight down the spine and can be bigger, at Ian's ask), Guy Pearce in the nested photographs
 std('memento-2000', ('grad', [(0, (246, 244, 238)), (.6, (230, 226, 218)), (1, (120, 116, 108))]), (20, 20, 20),
-    Pic('logos/memento-2000-title.png', 170),
+    Pic('logos/memento-2000-title.png', 105),
     photo=ph(0.5, 0.3, 0.6, 1.3), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTCF', credit=['A CHRISTOPHER NOLAN', 'FILM'], ccol=(20, 20, 20),
     ft='b', fcol=(20, 20, 20), fin=MINT, seed=2000)
 
@@ -3736,9 +3736,9 @@ std('mulholland-drive-2001', ('grad', [(0, (30, 40, 80)), (.6, (8, 10, 24)), (1,
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(80, 130, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A DAVID LYNCH', 'FILM'], ccol=(170, 190, 240),
     ft='b', fcol=(180, 190, 220), fin=MINT, seed=2001)
 
-# Ocean's Eleven (2001): charcoal (the logo's white OCEAN'S needs a dark ground; the poster is white), the film's own title logo (Ian's image, logos/ocean-s-eleven-2001-title.png), the eleven's legs walking
+# Ocean's Eleven (2001): charcoal (the logo's white OCEAN'S needs a dark ground; the poster is white), the film's own title logo (Ian's image, logos/ocean-s-eleven-2001-title.png, its two stacked lines set side by side on one line, at Ian's ask), the eleven's legs walking
 std('ocean-s-eleven-2001', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
-    Pic('logos/ocean-s-eleven-2001-title.png', 170),
+    Pic('logos/ocean-s-eleven-2001-title.png', 105),
     photo=ph(0.6, 0.15, 0.6, 1.3), pb=(236, 236, 236), lg=WHT, lw=.55, order='LPTCF', credit=['GEORGE CLOONEY', 'BRAD PITT'], ccol=(230, 230, 230),
     ft='a', vbox=(210, 30, 30), fcol=(220, 220, 220), fin=MINT, seed=2001)
 
@@ -3881,9 +3881,9 @@ std('die-another-day-2002', ('grad', [(0, (60, 150, 190)), (.5, (20, 70, 110)), 
     photo=ph(0.6, 0.55, 0.86, 0.85), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF',
     ft='d', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 220, 236), fin=MINT, seed=2002)
 
-# Gangs of New York (2002): Miramax, the poster's dusk, the film's own title logo (Ian's image, logos/gangs-of-new-york-2002-title.png), DiCaprio, Diaz and Day-Lewis
+# Gangs of New York (2002): Miramax, the poster's dusk, the film's own title logo (Ian's image, logos/gangs-of-new-york-2002-title.png, on one line, at Ian's ask), DiCaprio, Diaz and Day-Lewis
 std('gangs-of-new-york-2002', ('grad', [(0, (80, 70, 40)), (.6, (24, 20, 10)), (1, (2, 2, 2))]), (230, 190, 100),
-    Pic('logos/gangs-of-new-york-2002-title.png', 170),
+    Pic('logos/gangs-of-new-york-2002-title.png', 99),
     photo=ph(0.5, 0.2, 0.9, 0.5), pb=(230, 190, 100), lg=WHT, lw=.5, order='LTPF',
     ft='b', fcol=(220, 206, 180), fin=MINT, seed=2002)
 
@@ -4334,9 +4334,9 @@ std('napoleon-dynamite-2004', ('grad', [(0, (250, 246, 236)), (.6, (240, 230, 20
     photo=ph(0.5, 0.5, 0.5, 1.6), pb=(20, 20, 20), studio=['FOX SEARCHLIGHT'], scol=(20, 20, 20), order='lPTSF', dotst=('COMEDY', (210, 50, 50), WHT),
     ft='a', fcol=(30, 30, 30), fin=MINT, seed=2004)
 
-# Ocean's Twelve (2004): charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-twelve-2004-title.png), the twelve's silhouettes tumbling
+# Ocean's Twelve (2004): charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-twelve-2004-title.png, on one line like Eleven's), the twelve's silhouettes tumbling
 std('ocean-s-twelve-2004', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
-    Pic('logos/ocean-s-twelve-2004-title.png', 170),
+    Pic('logos/ocean-s-twelve-2004-title.png', 100),
     photo=ph(0.5, 0.25, 0.8, 0.5), pb=(236, 236, 236), lg=WHT, lw=.55, order='LPTF',
     ft='e', vbox=(210, 30, 30), fcol=(220, 220, 220), fin=MINT, seed=2004)
 
@@ -4919,9 +4919,9 @@ std('no-country-for-old-men-2007', ('grad', [(0, (60, 40, 24)), (.6, (14, 10, 6)
     photo=ph(0.5, 0.25, 0.86, 0.9), pb=(230, 190, 140), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(200, 180, 150), fin=MINT, seed=2007)
 
-# Ocean's Thirteen (2007): Warner Bros., charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-thirteen-2007-title.png), the thirteen's silhouettes
+# Ocean's Thirteen (2007): Warner Bros., charcoal like Eleven's, the film's own title logo (Ian's image, logos/ocean-s-thirteen-2007-title.png, on one line like Eleven's), the thirteen's silhouettes
 std('ocean-s-thirteen-2007', ('grad', [(0, (46, 46, 50)), (.6, (24, 24, 26)), (1, (8, 8, 10))]), (210, 30, 30),
-    Pic('logos/ocean-s-thirteen-2007-title.png', 170),
+    Pic('logos/ocean-s-thirteen-2007-title.png', 93),
     photo=ph(0.55, 0.12, 0.8, 0.35), pb=(210, 30, 30), lg=WHT, lw=.55, order='LPTF',
     ft='e', fcol=(210, 210, 210), fin=MINT, seed=2007)
 
@@ -5194,9 +5194,9 @@ std('the-wrestler-2008', ('grad', [(0, (90, 60, 20)), (.6, (24, 16, 6)), (1, (2,
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(230, 190, 110), lg=WHT, lw=.5, order='LPTF',
     ft='a', fcol=(220, 200, 170), fin=MINT, seed=2008)
 
-# Tropic Thunder (2008): DreamWorks, the poster's jungle fire, the film's own title logo (Ian's image, logos/tropic-thunder-2008-title.png), Ben Stiller, Jack Black and Robert Downey Jr. with the guns
+# Tropic Thunder (2008): DreamWorks, the poster's jungle fire, the film's own title logo (Ian's image, logos/tropic-thunder-2008-title.png, on one line, at Ian's ask), Ben Stiller, Jack Black and Robert Downey Jr. with the guns
 std('tropic-thunder-2008', ('grad', [(0, (120, 60, 20)), (.5, (50, 30, 10)), (1, (8, 6, 2))]), (240, 200, 120),
-    Pic('logos/tropic-thunder-2008-title.png', 170),
+    Pic('logos/tropic-thunder-2008-title.png', 88),
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(240, 200, 120), lg=WHT, lw=.5, order='LPTSF', stick=BAR('08 0813', top='COMEDY', fill=(236, 240, 220)),
     ft='e', fcol=(230, 210, 180), fin=MINT, seed=2008)
 
@@ -6124,9 +6124,9 @@ std('god-s-pocket-2014', ('grad', [(0, (40, 80, 90)), (.6, (10, 20, 24)), (1, (0
     photo=ph(0.5, 0.4, 0.86, 1.0), pb=(220, 200, 150), lg=WHT, lw=.5, order='LPTSF', stick=RWD(fill=(230, 236, 240), ink=(10, 20, 24)),
     ft='a', fcol=(190, 210, 214), fin=MINT, seed=2014)
 
-# Gone Girl (2014): 20th Century Fox, the poster's grey sky, the film's own title logo (Ian's image, logos/gone-girl-2014-title.png), Ben Affleck by the water
+# Gone Girl (2014): 20th Century Fox, the poster's grey sky, the film's own title logo (Ian's image, logos/gone-girl-2014-title.png, GONE and GIRL set on one line, at Ian's ask), Ben Affleck by the water
 std('gone-girl-2014', ('grad', [(0, (200, 208, 212)), (.6, (160, 170, 176)), (1, (110, 120, 128))]), (30, 34, 40),
-    Pic('logos/gone-girl-2014-title.png', 170),
+    Pic('logos/gone-girl-2014-title.png', 95),
     photo=ph(0.5, 0.82, 0.86, 0.4), pb=(30, 34, 40), lg=(30, 34, 40), lw=.55, order='LTPF',
     ft='e', fcol=(20, 24, 28), fin=MINT, seed=2014)
 
@@ -6196,8 +6196,8 @@ std('tales-of-the-grim-sleeper-2014', ('grad', [(0, (50, 34, 14)), (.6, (12, 8, 
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(240, 150, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'NICK BROOMFIELD'], ccol=WHT,
     ft='b', fcol=(220, 200, 180), fin=MINT, seed=2014)
 
-# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city's dusk, the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-2014-title.png), the four turtles
-std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (60, 110, 160)), (.5, (180, 120, 60)), (1, (20, 20, 20))]), (220, 226, 232),
+# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city at night, the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-2014-title.png, tinted the turtles' green from the poster at Ian's ask), the four turtles
+std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (50, 80, 120)), (.5, (22, 30, 40)), (1, (8, 8, 10))]), (220, 226, 232),
     Pic('logos/teenage-mutant-ninja-turtles-2014-title.png', 170), tgap=6,
     photo=ph(0.5, 0.55, 0.86, 0.85), pb=(80, 160, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'ACTION']),
     ft='a', fcol=(220, 220, 200), fin=MINT, seed=2014)
@@ -6297,7 +6297,7 @@ std('crimson-peak-2015', ('grad', [(0, (30, 60, 100)), (.6, (8, 16, 30)), (1, (0
     photo=ph(0.5, 0.45, 0.86, 1.0), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A GUILLERMO DEL TORO FILM'], ccol=WHT,
     ft='c', fcol=(200, 210, 230), fin=MINT, seed=2015)
 
-# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, the film's own title logo (Ian's image, logos/dope-2015-title.png), Malcolm and friends on their bikes under the palms
+# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, the film's own title logo (Ian's image, logos/dope-2015-title.png, its white ground keyed out, at Ian's ask), Malcolm and friends on their bikes under the palms
 std('dope-2015', ('grad', [(0, (60, 140, 220)), (.5, (110, 180, 230)), (1, (40, 60, 80))]), WHT,
     Pic('logos/dope-2015-title.png', 170),
     photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 60, 80), lg=WHT, lw=.5, order='lPTSF', studio=['i am OTHER', 'SIGNIFICANT PRODUCTIONS'], scol=WHT, stick=BAR('15 0619', top='COMEDY', fill=(240, 240, 236)),
