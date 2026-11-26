@@ -1058,13 +1058,21 @@
   const norm = (s) => String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase()
     .replace(/&/g, ' and ').replace(/['’.]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
   let storeP = null, stock = null;
+  // The studio is searchable too, so "disney" finds every Disney film. Pixar counts as Disney, and so do
+  // Disney releases whose TMDB studio is someone else's (James and the Giant Peach: Allied Filmmakers).
+  const DISNEY_TOO = new Set(['tt0116683']);
+  const studioWords = (f) => {
+    const st = norm(f.studio);
+    if (/disney/.test(st)) return st;
+    return /pixar/.test(st) || DISNEY_TOO.has(f.imdb) ? `${st} disney` : st;
+  };
   function loadStore() {
     return storeP || (storeP = Promise.all(YEARS.map(async (k) => {
       try {
         const d = await (await fetch(SHELVES[k])).json();
         return (d.films || []).map((f) => {
-          const t = norm(f.title), dn = norm(f.director);
-          return { k, f, t, bare: t.replace(/^(the|a|an) /, ''), d: dn, hay: `${t} ${dn} ${f.year || ''}` };
+          const t = norm(f.title), dn = norm(f.director), st = studioWords(f);
+          return { k, f, t, bare: t.replace(/^(the|a|an) /, ''), d: dn, st, hay: `${t} ${dn} ${f.year || ''} ${st}` };
         });
       } catch { return []; }
     })).then((a) => { stock = a; return a; }));
@@ -1082,11 +1090,17 @@
         : (' ' + e.t).includes(' ' + nq) ? 60
         : e.t.includes(nq) ? 50
         : (' ' + e.d).includes(' ' + nq) ? 45
+        : (' ' + e.st).includes(' ' + nq) ? 40
         : 20;
       hits.push([s, e]);
     });
-    hits.sort((a, b) => b[0] - a[0] || a[1].bare.localeCompare(b[1].bare) || (a[1].f.year || 0) - (b[1].f.year || 0));
-    return { hits: hits.slice(0, 60).map((h) => h[1]), total: hits.length };
+    // Studio matches (a whole studio's tapes) come in release order and are all shown, however many.
+    hits.sort((a, b) => b[0] - a[0]
+      || (a[0] === 40 ? (a[1].f.year || 0) - (b[1].f.year || 0) || a[1].bare.localeCompare(b[1].bare)
+        : a[1].bare.localeCompare(b[1].bare) || (a[1].f.year || 0) - (b[1].f.year || 0)));
+    const nst = hits.filter((h) => h[0] === 40).length;
+    const cap = nst ? Math.min(60, hits.filter((h) => h[0] > 40).length) + nst : 60;
+    return { hits: hits.slice(0, cap).map((h) => h[1]), total: hits.length };
   }
 
   const store = $('store'), storeQ = $('store-q'), storeHits = $('store-results'), aisles = $('store-aisles');

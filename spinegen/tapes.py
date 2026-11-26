@@ -1731,12 +1731,28 @@ def vlogo(id, color, length, path=None):
     return Fn(fn, length)
 
 
+def face_crop(path, w, h, squash=1.2):
+    """Ian's own face picture, filled into a w x h frame: cropped about its centre to the frame's shape,
+    after letting a wide or tall picture squeeze by up to `squash` so less of it is cut away"""
+    img = Image.open(path).convert('RGB'); iw, ih = img.size
+    a, r = w / h, iw / ih
+    if r > a:   # wider than the frame: keep up to a*squash of the width, centred
+        cw = min(iw, ih * a * squash); box = ((iw - cw) / 2, 0, (iw + cw) / 2, ih)
+    else:       # taller than the frame
+        ch_ = min(ih, iw / a * squash); box = (0, (ih - ch_) / 2, iw, (ih + ch_) / 2)
+    return img.resize((int(w), int(h)), Image.LANCZOS, box=box)
+
+
 def portrait(box, h, border=(214, 30, 40), inner=(250, 214, 60)):
-    """a crop of the poster in a red diamond frame"""
+    """a crop of the poster in a red diamond frame; `box` may instead be the path of a face picture
+    (Ian's, in spinegen/faces/), which is used whole"""
     def fn(im, W, y0, rng):
-        cov = Image.open(CUR['cover']).convert('RGB'); cw, ch = cov.size
         w_ = W * 0.80  # a true diamond: clearly taller than it is wide, not a square on its corner
-        c = cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch))).resize((int(w_ * S), int(h * S)), Image.LANCZOS)
+        if isinstance(box, str):
+            c = face_crop(box, w_ * S, h * S)
+        else:
+            cov = Image.open(CUR['cover']).convert('RGB'); cw, ch = cov.size
+            c = cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch))).resize((int(w_ * S), int(h * S)), Image.LANCZOS)
         c = c.filter(ImageFilter.UnsharpMask(3, 60, 2)).convert('RGBA')
         m = Image.new('L', c.size, 0); d = ImageDraw.Draw(m)
         pts = [(c.width / 2, 0), (c.width, c.height / 2), (c.width / 2, c.height), (0, c.height / 2)]
@@ -1762,9 +1778,12 @@ def ccbox(col, w=30, h=20):
 
 
 EMBLEM = 'logos/classics-diamond.png'  # Ian's own photo of the clamshell head emblem; without the file a plain diamond is drawn
+FACES = 'spinegen/faces/'  # Ian's own face pictures for the red diamond, <id>.png; one there beats the spec's poster crop
 
 
 def disney(id, bg, title, face, lcol=(250, 214, 80), head=(('VHS', 30), ('2026', 21)), ink=WHT, cat=None, lpath=None, fin=None, studio=True, **kw):
+    if os.path.exists(REPO + FACES + id + '.png'):
+        face = REPO + FACES + id + '.png'
     W = int(round(w_for(FILMS[id].get('runtime')) * 1.15))  # a clamshell is a thicker box (1.26 was tried; Ian wanted it a tad slimmer)
     items = [Gap(4), Gap(10), (head_emblem(EMBLEM, int(W * .84)) if os.path.exists(REPO + EMBLEM) else head_diamond(head, int(W * .78))), Gap(22)] + ([vlogo(id, lcol, int(W * .62), lpath), Gap(22)] if studio else []) + [  # studio=False when the title logo already carries the studio's name
              Flex(.5), V(title if isinstance(title, list) else [title], gap=10), Flex(.7),
