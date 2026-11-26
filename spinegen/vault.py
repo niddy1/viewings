@@ -4501,11 +4501,11 @@ std('kiss-kiss-bang-bang-2005', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 
     photo=ph(0.5, 0.8, 0.86, 0.45), pb=(220, 60, 30), lg=(30, 40, 70), lw=.55, order='LPTCF', credit=['ROBERT DOWNEY JR.', 'VAL KILMER'], ccol=(30, 40, 70),
     ft='e', fcol=(30, 40, 70), fin=MINT, seed=2005)
 
-# Lord of War (2005): the poster's white, the film's own title logo (Ian's image, logos/lord-of-war-2005-title.png), Nicolas Cage's face made of bullets
-std('lord-of-war-2005', ('grad', [(0, (240, 240, 240)), (.6, (216, 216, 216)), (1, (100, 100, 100))]), (40, 40, 40),
+# Lord of War (2005): charcoal (the silver logo was lost on the poster's white, Ian asked for a darker spine), the film's own title logo (Ian's image, logos/lord-of-war-2005-title.png), Nicolas Cage's face made of bullets
+std('lord-of-war-2005', ('grad', [(0, (52, 52, 56)), (.6, (26, 26, 28)), (1, (8, 8, 10))]), (226, 226, 226),
     Pic('logos/lord-of-war-2005-title.png', 102),
-    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(40, 40, 40), lg=(40, 40, 40), lw=.55, order='LPTF',
-    ft='c', fcol=(40, 40, 40), fin=MINT, seed=2005)
+    photo=ph(0.5, 0.5, 0.86, 0.85), pb=(190, 30, 30), lg=WHT, lw=.55, order='LPTF',
+    ft='c', fcol=(210, 210, 210), fin=MINT, seed=2005)
 
 # Madagascar (2005): DreamWorks (PDI), a slipcase; the beach sky, the film's own title logo (Ian's image, logos/madagascar-2005-title.png), Alex, Marty, Gloria and Melman
 std('madagascar-2005', ('grad', [(0, (60, 170, 230)), (.5, (90, 190, 230)), (1, (230, 200, 130))]), (240, 130, 30),
@@ -6196,11 +6196,11 @@ std('tales-of-the-grim-sleeper-2014', ('grad', [(0, (50, 34, 14)), (.6, (12, 8, 
     photo=ph(0.5, 0.45, 0.86, 0.85), pb=(240, 150, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'NICK BROOMFIELD'], ccol=WHT,
     ft='b', fcol=(220, 200, 180), fin=MINT, seed=2014)
 
-# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), the city at night, the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-2014-title.png, tinted the turtles' green from the poster at Ian's ask), the four turtles
-std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (50, 80, 120)), (.5, (22, 30, 40)), (1, (8, 8, 10))]), (220, 226, 232),
+# Teenage Mutant Ninja Turtles (2014): Paramount (Platinum Dunes), white (Ian's pick), the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-2014-title.png, tinted the turtles' green from the poster at Ian's ask), the four turtles
+std('teenage-mutant-ninja-turtles-2014', ('grad', [(0, (248, 247, 244)), (.6, (236, 235, 230)), (1, (200, 198, 192))]), (30, 40, 26),
     Pic('logos/teenage-mutant-ninja-turtles-2014-title.png', 170), tgap=6,
-    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(80, 160, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$3.49', 'ACTION']),
-    ft='a', fcol=(220, 220, 200), fin=MINT, seed=2014)
+    photo=ph(0.5, 0.55, 0.86, 0.85), pb=(80, 160, 60), lg=(30, 40, 26), lw=.5, order='LPTSF', stick=PRC(['$3.49', 'ACTION']),
+    ft='a', fcol=(30, 40, 26), fin=MINT, seed=2014)
 
 # The Amazing Spider-Man 2 (2014): Columbia, a slipcase; the city's blue, the film's own title logo (Ian's image, logos/the-amazing-spider-man-2-2014-title.png), Spider-Man swinging
 std('the-amazing-spider-man-2-2014', ('grad', [(0, (60, 110, 170)), (.6, (16, 30, 50)), (1, (0, 2, 6))]), (220, 226, 232),
@@ -6297,10 +6297,10 @@ std('crimson-peak-2015', ('grad', [(0, (30, 60, 100)), (.6, (8, 16, 30)), (1, (0
     photo=ph(0.5, 0.45, 0.86, 1.0), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTCF', credit=['A GUILLERMO DEL TORO FILM'], ccol=WHT,
     ft='c', fcol=(200, 210, 230), fin=MINT, seed=2015)
 
-# Dope (2015): Open Road (no logo file; production companies from IMDb), the poster's sky blue, the film's own title logo (Ian's image, logos/dope-2015-title.png, its white ground keyed out, at Ian's ask), Malcolm and friends on their bikes under the palms
-std('dope-2015', ('grad', [(0, (60, 140, 220)), (.5, (110, 180, 230)), (1, (40, 60, 80))]), WHT,
+# Dope (2015): Open Road (no logo file; production companies from IMDb), white (Ian's pick over the poster's sky blue), the film's own title logo (Ian's image, logos/dope-2015-title.png, its white ground keyed out, at Ian's ask), Malcolm and friends on their bikes under the palms
+std('dope-2015', ('grad', [(0, (248, 247, 244)), (.6, (236, 235, 230)), (1, (200, 198, 192))]), (30, 30, 34),
     Pic('logos/dope-2015-title.png', 170),
-    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 60, 80), lg=WHT, lw=.5, order='lPTSF', studio=['i am OTHER', 'SIGNIFICANT PRODUCTIONS'], scol=WHT, stick=BAR('15 0619', top='COMEDY', fill=(240, 240, 236)),
+    photo=ph(0.5, 0.72, 0.86, 0.6), pb=(240, 60, 80), lg=(30, 30, 34), lw=.5, order='lPTSF', studio=['i am OTHER', 'SIGNIFICANT PRODUCTIONS'], scol=(30, 30, 34), stick=BAR('15 0619', top='COMEDY', fill=(240, 240, 236)),
     ft='b', fcol=(20, 30, 40), fin=MINT, seed=2015)
 
 # Ex Machina (2015): A24 (DNA Films), the poster's black, its white ex machina lifted off the red plate onto the same red, Ava in her mesh
