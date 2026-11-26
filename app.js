@@ -39,6 +39,10 @@
   const SHELF = (() => { const p = new URLSearchParams(location.search).get('shelf') || ''; if (p === ALL) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : NEWEST; })();
   const IN_VAULT = VAULT.includes(SHELF);
   const IN_ALL = SHELF === ALL;
+  // A search shelf (?shelf=all&q=disney): the Whole Store cut down to one search's results, titled with the search.
+  const SEARCH_Q = IN_ALL ? (new URLSearchParams(location.search).get('q') || '').trim() : '';
+  const IN_SEARCH = !!SEARCH_Q;
+  const searchLink = (q) => `${location.pathname}?shelf=${ALL}&q=${encodeURIComponent(q.trim())}`;
   const DATA_FILE = IN_ALL ? null : SHELVES[SHELF];
   const shelfName = (k) => (k === ALL ? 'All' : VAULT.includes(k) ? `Vault ${k}` : String(k));
   // The address of another shelf (keeping the sort where it means the same there), optionally with a tape pulled out.
@@ -46,6 +50,7 @@
     const q = new URLSearchParams(location.search);
     q.delete('genre'); // genres differ from shelf to shelf
     q.delete('tape');
+    q.delete('q'); // a search shelf's search stays behind
     // The Vault and the year shelves sort differently by default, so the sort is dropped crossing between them.
     // The Whole Store takes every sort; leaving it keeps the sort unless the Vault has no such sort.
     const sort = q.get('sort') || '';
@@ -58,10 +63,16 @@
   }
   (function shelfHeader() {
     const h1 = document.querySelector('h1.ticket'), img = h1 && h1.querySelector('img');
-    if (img && IN_ALL) { // the Whole Store: a plate like the Vault's, no footnote
+    if (img && IN_ALL) { // the Whole Store: a plate like the Vault's, no footnote; a search shelf's plate reads the search
       img.remove();
       const plate = document.createElement('span'); plate.className = 'vault-plate all-plate'; plate.setAttribute('aria-hidden', 'true');
-      plate.innerHTML = '<span class="v2">The Whole</span><span class="v1">Store</span>';
+      if (IN_SEARCH) {
+        plate.classList.add('search-plate');
+        const v2 = document.createElement('span'); v2.className = 'v2'; v2.textContent = 'Search';
+        const v1 = document.createElement('span'); v1.className = 'v1'; v1.textContent = SEARCH_Q;
+        if (SEARCH_Q.length > 9) v1.style.fontSize = `clamp(26px, ${Math.max(3, 72 / SEARCH_Q.length)}vw, ${Math.max(30, Math.round(640 / SEARCH_Q.length))}px)`;
+        plate.append(v2, v1);
+      } else plate.innerHTML = '<span class="v2">The Whole</span><span class="v1">Store</span>';
       h1.prepend(plate); h1.classList.add('vault');
     } else if (img && IN_VAULT) { // no ticket for the Vault: a plate in the shelf's lettering instead
       img.remove();
@@ -77,8 +88,8 @@
         + 'The dates are lost to time, so these tapes are shelved by the decade they came out.</span>';
       h1.closest('.ticket-row').after(note);
     } else if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
-    $('year').textContent = IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
-    if (SHELF !== NEWEST) document.title = IN_ALL ? 'Viewings: the whole store' : IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
+    $('year').textContent = IN_SEARCH ? `search: ${SEARCH_Q}` : IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
+    if (SHELF !== NEWEST) document.title = IN_SEARCH ? `Viewings: “${SEARCH_Q}”` : IN_ALL ? 'Viewings: the whole store' : IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
     // arrows either side of the ticket: older shelf on the left, newer on the right
     const link = shelfLink;
     const i = NAV.indexOf(SHELF);
@@ -1078,7 +1089,7 @@
     })).then((a) => { stock = a; return a; }));
   }
 
-  function search(q) {
+  function search(q, every) {
     const nq = norm(q);
     if (!nq || !stock) return { hits: [], total: 0 };
     const words = nq.split(' '), isYear = /^(19|20)\d\d$/.test(nq), hits = [];
@@ -1100,7 +1111,7 @@
         : a[1].bare.localeCompare(b[1].bare) || (a[1].f.year || 0) - (b[1].f.year || 0)));
     const nst = hits.filter((h) => h[0] === 40).length;
     const cap = nst ? Math.min(60, hits.filter((h) => h[0] > 40).length) + nst : 60;
-    return { hits: hits.slice(0, cap).map((h) => h[1]), total: hits.length };
+    return { hits: (every ? hits : hits.slice(0, cap)).map((h) => h[1]), total: hits.length };
   }
 
   const store = $('store'), storeQ = $('store-q'), storeHits = $('store-results'), aisles = $('store-aisles');
@@ -1108,9 +1119,10 @@
   const shortName = (k) => (VAULT.includes(k) ? `Vault ${k}` : String(k));
 
   // Go to a tape anywhere in the store: pull it out here, or load its shelf with it pulled out.
-  const isHere = (k) => IN_ALL || k === SHELF; // every tape is on the Whole Store
+  // every tape is on the Whole Store; a search shelf has only its results
+  const isHere = (k, f) => (IN_SEARCH ? films.some((x) => tapeId(x) === tapeId(f)) : IN_ALL || k === SHELF);
   function goTo(k, f) {
-    if (isHere(k)) { closeStore(); pullOut(tapeId(f)); }
+    if (isHere(k, f)) { closeStore(); pullOut(tapeId(f)); }
     else location.href = shelfLink(k, tapeId(f));
   }
 
@@ -1124,10 +1136,11 @@
         + (here ? '<span class="you">You are here</span>' : '') + '</a>';
     };
     const total = stock ? stock.flat().length : null;
-    $('aisle-all').innerHTML = `<a class="bay all${IN_ALL ? ' here' : ''}" href="${shelfLink(ALL)}"${IN_ALL ? ' aria-current="page"' : ''}>`
+    const allHere = IN_ALL && !IN_SEARCH;
+    $('aisle-all').innerHTML = `<a class="bay all${allHere ? ' here' : ''}" href="${shelfLink(ALL)}"${allHere ? ' aria-current="page"' : ''}>`
       + '<span class="nm">The Whole Store</span>'
       + `<span class="n">${total == null ? '&nbsp;' : `Every tape, ${total.toLocaleString('en-US')} of them, on one case`}</span>`
-      + (IN_ALL ? '<span class="you">You are here</span>' : '') + '</a>';
+      + (allHere ? '<span class="you">You are here</span>' : '') + '</a>';
     $('aisle-vault').innerHTML = VAULT.map(tile).join('');
     $('aisle-years').innerHTML = YEARS.filter((k) => !VAULT.includes(k)).slice().reverse().map(tile).join('');
     $('store-total').textContent = stock ? `${stock.flat().length.toLocaleString('en-US')} tapes on ${YEARS.length} shelves` : '';
@@ -1136,12 +1149,14 @@
   function renderHits() {
     const q = storeQ.value.trim();
     aisles.hidden = !!q; storeHits.hidden = !q; storeQ.setAttribute('aria-expanded', !!q);
-    sel = -1;
+    sel = -1; storeHits.classList.remove('picking');
     if (!q) return;
     if (!stock) { storeHits.innerHTML = '<p class="none">Checking the shelves...</p>'; return; }
     const { hits, total } = search(q);
     if (!hits.length) { storeHits.innerHTML = `<p class="none">Nothing on the shelves for “${q.replace(/[<&]/g, '')}”.</p>`; return; }
-    storeHits.innerHTML = hits.map((e, j) => {
+    const esc0 = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+    const shelfIt = `<a class="to-shelf" href="${esc0(searchLink(q))}"><span>Put all ${total.toLocaleString('en-US')} on a shelf</span><kbd>Enter</kbd></a>`;
+    storeHits.innerHTML = shelfIt + hits.map((e, j) => {
       const f = e.f, sp = f.poster ? f.poster.replace(/\.[a-z]+$/i, '-spine-b.jpg') : '';
       const r10 = f.rating10 != null ? f.rating10 : (f.rating || 0) * 2;
       const facts = [f.year, f.director ? `dir. ${f.director}` : null].filter(Boolean).join(' · ');
@@ -1150,18 +1165,20 @@
         + `<span class="sp">${sp ? `<img src="${esc(sp)}" alt="" loading="lazy" onerror="this.remove()">` : ''}</span>`
         + `<span class="tx"><b>${esc(f.title)}</b><small>${esc(facts)}</small></span>`
         + `<span class="mine" title="My rating">${r10 ? +r10.toFixed(1) : '—'}<small>/10</small></span>`
-        + `<span class="where${isHere(e.k) ? ' here' : ''}">${e.k === SHELF ? 'This shelf' : shortName(e.k)}</span></a>`;
+        + `<span class="where${isHere(e.k, e.f) ? ' here' : ''}">${IN_SEARCH && isHere(e.k, e.f) ? 'This shelf' : e.k === SHELF ? 'This shelf' : shortName(e.k)}</span></a>`;
     }).join('') + (total > hits.length ? `<p class="none">${total - hits.length} more: keep typing to narrow it down.</p>` : '');
     storeHits._hits = hits;
   }
 
+  // -1 is the "put them all on a shelf" button at the top (what Enter does when no tape is picked)
   function markSel(j) {
     const els = storeHits.querySelectorAll('.hit');
     if (!els.length) return;
-    sel = (j + els.length) % els.length;
+    sel = j < -1 ? els.length - 1 : j >= els.length ? -1 : j;
     els.forEach((el, n) => el.classList.toggle('sel', n === sel));
-    els[sel].scrollIntoView({ block: 'nearest' });
-    storeQ.setAttribute('aria-activedescendant', `hit-${sel}`);
+    storeHits.classList.toggle('picking', sel >= 0);
+    (sel >= 0 ? els[sel] : storeHits.querySelector('.to-shelf')).scrollIntoView({ block: 'nearest' });
+    if (sel >= 0) storeQ.setAttribute('aria-activedescendant', `hit-${sel}`); else storeQ.removeAttribute('aria-activedescendant');
   }
 
   function openStore(focusSearch) {
@@ -1180,7 +1197,7 @@
   }
 
   async function surprise() {
-    const all = (await loadStore()).flat().filter((e) => !(isHere(e.k) && current >= 0 && tapeId(e.f) === tapeId(films[current])));
+    const all = (await loadStore()).flat().filter((e) => !(isHere(e.k, e.f) && current >= 0 && tapeId(e.f) === tapeId(films[current])));
     const e = all[Math.floor(Math.random() * all.length)];
     if (e) goTo(e.k, e.f);
   }
@@ -1189,16 +1206,19 @@
   storeQ.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') { e.preventDefault(); markSel(sel + 1); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); markSel(sel - 1); }
-    else if (e.key === 'Enter') {
-      const hits = storeHits._hits || [], h = hits[sel >= 0 ? sel : 0];
-      if (h && !storeHits.hidden) { e.preventDefault(); goTo(h.k, h.f); }
+    else if (e.key === 'Enter') { // a result picked with the arrows pulls that tape out; otherwise every result goes on a shelf
+      const hits = storeHits._hits || [], q = storeQ.value.trim();
+      if (storeHits.hidden || !hits.length) return;
+      e.preventDefault();
+      if (sel >= 0) goTo(hits[sel].k, hits[sel].f);
+      else location.href = searchLink(q);
     }
   });
   storeHits.addEventListener('click', (e) => {
     const a = e.target.closest('.hit');
     if (!a || e.metaKey || e.ctrlKey || e.shiftKey || e.button) return; // let a new-tab click through
     const h = storeHits._hits[+a.dataset.j];
-    if (isHere(h.k)) { e.preventDefault(); goTo(h.k, h.f); }
+    if (isHere(h.k, h.f)) { e.preventDefault(); goTo(h.k, h.f); }
   });
   aisles.addEventListener('click', (e) => { // this shelf's tile just closes the directory
     const a = e.target.closest('.bay.here');
@@ -1255,6 +1275,11 @@
         fs.forEach((f) => { f._k = k; f._vault = VAULT.includes(k); });
         return VAULT.includes(k) ? fs.slice().sort((a, b) => (a.year || 0) - (b.year || 0)) : fs.slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
       });
+      if (IN_SEARCH) { // only this search's results (every one of them), in the same order as the Whole Store
+        const want = new Set(search(SEARCH_Q, true).hits.map((e) => e.f));
+        films = films.filter((f) => want.has(f));
+        if (!films.length) { shelves.innerHTML = `<p style="text-align:center;opacity:.7">Nothing on the shelves for “${SEARCH_Q.replace(/[<&]/g, '')}”.</p>`; return; }
+      }
       if (!films.length) { shelves.innerHTML = '<p style="text-align:center;opacity:.6">Couldn\'t load the shelves. Serve this folder over http (see README).</p>'; return; }
     } else {
       try { data = await (await fetch(DATA_FILE, { cache: 'no-cache' })).json(); }
