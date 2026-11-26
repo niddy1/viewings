@@ -24,7 +24,7 @@
   const $ = (id) => document.getElementById(id);
   const shelves = $('shelves');
 
-  /* ---------- which shelf: ?shelf=2025, or ?shelf=1990s for the Vault (no param = the newest year) ---------- */
+  /* ---------- which shelf: /viewings/2025/, or /viewings/1990s/ for the Vault (the bare /viewings/ = the newest year) ---------- */
   // One data file and one ticket image per year. Add a year here (and its watched-<year>.png) to add a shelf.
   const SHELVES = { 2016: 'films-2016.json', 2017: 'films-2017.json', 2018: 'films-2018.json', 2019: 'films-2019.json', 2020: 'films-2020.json', 2021: 'films-2021.json', 2022: 'films-2022.json', 2023: 'films-2023.json', 2024: 'films-2024.json', 2025: 'films-2025.json', 2026: 'films.json' };
   // The Vault: films from the years that were rated in bulk (2007-2015), one shelf per decade of release.
@@ -32,17 +32,38 @@
   VAULT.forEach((d) => { SHELVES[d] = `vault-${d}.json`; });
   const YEARS = [...VAULT, ...Object.keys(SHELVES).filter((k) => !VAULT.includes(k)).map(Number).sort((a, b) => a - b)];
   const NEWEST = YEARS[YEARS.length - 1];
-  // The Whole Store (?shelf=all): every tape from every shelf on one giant case, with divider cards between groups.
+  // The Whole Store (/viewings/all/): every tape from every shelf on one giant case, with divider cards between groups.
   // It has no data file of its own: it is built from all of them (so the VCR and Re-mark spine stay off there).
   const ALL = 'all';
   const NAV = [...YEARS, ALL]; // the arrows' order: 1930s ... 2010s, 2016 ... 2026, then the Whole Store
-  const SHELF = (() => { const p = new URLSearchParams(location.search).get('shelf') || ''; if (p === ALL) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : NEWEST; })();
+  // Each shelf has its own address, a folder with a copy of index.html carrying that shelf's link preview
+  // (made by make-pages.py): /viewings/2025/, /viewings/1990s/, /viewings/all/, /viewings/search/?q=disney.
+  // The newest year is the bare /viewings/. Old ?shelf= links still work and are rewritten to the folder form.
+  // The copies have <base href="../">, so every relative path (files, fetches) resolves from the site's root.
+  const ROOT = new URL('./', document.baseURI).pathname; // the site's root path, e.g. /viewings/
+  const SEARCH = 'search';
+  const PARAMS = new URLSearchParams(location.search);
+  const SEG = decodeURIComponent((location.pathname.startsWith(ROOT) ? location.pathname.slice(ROOT.length) : '').split('/')[0]);
+  const shelfKey = (p) => { if (p === ALL || p === SEARCH) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : null; };
+  const SHELF = shelfKey(SEG) ?? shelfKey(PARAMS.get('shelf') || '') ?? NEWEST;
   const IN_VAULT = VAULT.includes(SHELF);
   const IN_ALL = SHELF === ALL;
-  // A search shelf (?shelf=all&q=disney): the Whole Store cut down to one search's results, titled with the search.
-  const SEARCH_Q = IN_ALL ? (new URLSearchParams(location.search).get('q') || '').trim() : '';
+  // A search shelf (/search/?q=disney): the Whole Store cut down to one search's results, titled with the search.
+  const SEARCH_Q = IN_ALL ? (PARAMS.get('q') || '').trim() : '';
   const IN_SEARCH = !!SEARCH_Q;
-  const searchLink = (q) => `${location.pathname}?shelf=${ALL}&q=${encodeURIComponent(q.trim())}`;
+  const shelfPath = (k, search) => (search ? `${ROOT}${SEARCH}/` : k === NEWEST ? ROOT : `${ROOT}${k}/`);
+  const searchLink = (q) => `${shelfPath(ALL, true)}?q=${encodeURIComponent(q.trim())}`;
+  (function canonicalAddress() { // an old ?shelf= link (or a stray param) becomes the shelf's own address
+    const q = new URLSearchParams(location.search);
+    q.delete('shelf');
+    if (!IN_SEARCH) q.delete('q');
+    const want = shelfPath(SHELF, IN_SEARCH);
+    if (want === location.pathname && q.toString() === PARAMS.toString()) return;
+    // the page stays as loaded, so pin relative paths to the root before the address moves
+    if (!document.querySelector('base')) { const b = document.createElement('base'); b.href = ROOT; document.head.prepend(b); }
+    const qs = q.toString();
+    history.replaceState(null, '', want + (qs ? '?' + qs : '') + location.hash);
+  })();
   const DATA_FILE = IN_ALL ? null : SHELVES[SHELF];
   const shelfName = (k) => (k === ALL ? 'All' : VAULT.includes(k) ? `Vault ${k}` : String(k));
   // The address of another shelf (keeping the sort where it means the same there), optionally with a tape pulled out.
@@ -51,15 +72,15 @@
     q.delete('genre'); // genres differ from shelf to shelf
     q.delete('tape');
     q.delete('q'); // a search shelf's search stays behind
+    q.delete('shelf');
     // The Vault and the year shelves sort differently by default, so the sort is dropped crossing between them.
     // The Whole Store takes every sort; leaving it keeps the sort unless the Vault has no such sort.
     const sort = q.get('sort') || '';
     const keep = y === ALL || (IN_ALL ? !(VAULT.includes(y) && sort.startsWith('watched')) : VAULT.includes(y) === IN_VAULT);
     if (!keep) q.delete('sort');
-    if (y === NEWEST) q.delete('shelf'); else q.set('shelf', y);
     if (tape) q.set('tape', tape);
     const qs = q.toString();
-    return location.pathname + (qs ? '?' + qs : '');
+    return shelfPath(y) + (qs ? '?' + qs : '');
   }
   (function shelfHeader() {
     const h1 = document.querySelector('h1.ticket'), img = h1 && h1.querySelector('img');

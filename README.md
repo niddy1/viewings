@@ -71,7 +71,11 @@ The site uses only relative paths, so it works from any subfolder. Options:
 
 Click the ticket (or the Vault plate), **Find a tape**, or press `/` to open the **store directory**: every shelf as a tile with its tape count, and a search box that looks through all of them by title, director or year. Picking a result opens that shelf with the tape pulled out. **Surprise me** pulls out a random tape from any shelf.
 
-Every tape has its own link: the address bar shows `?tape=<IMDb id>` while a tape is out (e.g. `?shelf=2000s&tape=tt0181875`), so you can share one film.
+Every shelf has its own address: `/viewings/2025/`, `/viewings/1990s/`, `/viewings/all/`, and `/viewings/search/?q=disney` for a search shelf (the bare `/viewings/` is the newest year). Every tape has its own link too: the address bar shows `?tape=<IMDb id>` while a tape is out (e.g. `/viewings/2000s/?tape=tt0181875`), so you can share one film. Old `?shelf=` links still work and are rewritten.
+
+## Link previews
+
+Message apps don't run JavaScript, so each shelf folder holds a copy of `index.html` with that shelf's title, description and preview card (`share/<shelf>.jpg`). `make-pages.py` writes them; a GitHub Action (`.github/workflows/pages.yml`) runs it on every push to `main`, so edit `index.html` only. A new year gets its folder automatically and previews with its `watched-<year>.png` until you run `python3 make-pages.py --cards` (needs Pillow and Playwright) for a proper card. Search links preview as a generic "Search the store" card: per-search previews would need something like a Cloudflare Worker in front of the site.
 
 ## Keyboard
 

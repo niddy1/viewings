@@ -1,0 +1,25 @@
+# Keeps the shelf folders (2025/, 1990s/, all/, search/ ...) in step with index.html and the shelf files:
+# runs make-pages.py on every push to main and commits whatever it changes (usually nothing).
+name: Shelf pages
+on:
+  push:
+    branches: [main]
+    paths: ['index.html', 'app.js', '*.json', 'make-pages.py', 'share/**', 'watched-*.png']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: shelf-pages
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 make-pages.py
+      - run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "Shelf pages: regenerate from index.html"
+            git push
+          fi
