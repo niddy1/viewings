@@ -1892,10 +1892,9 @@ def fill_cut(ground=(0, 0, 0), tol=40, soft=1.2):
 _sat = lambda a: a.max(2) - a.min(2)
 _lum = lambda a: a @ np.array([.299, .587, .114], np.float32)
 
-# Elemental: Element City night blue, ELEMENTAL typeset letter by letter in the poster logo's colours (its translucent
-# letters over the busy art won't cut out cleanly; Ian can supply the logo), Ember in the diamond
+# Elemental: Element City night blue, the film's own title logo (Ian's image, logos/elemental-2023-title.png), Ember in the diamond
 disney('elemental-2023', ('grad', [(0, (40, 60, 140)), (.5, (24, 30, 90)), (1, (10, 12, 40))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('E', (150, 120, 230)), ('L', (196, 90, 226)), ('E', (244, 106, 30)), ('M', (246, 44, 100)), ('E', (200, 176, 60)), ('N', (90, 180, 96)), ('T', (30, 206, 186)), ('A', (60, 200, 250)), ('L', (80, 234, 214))], 'advb', 110, sp=-.02),
+       title=Pic('logos/elemental-2023-title.png', 170), studio=False,
        face=ph(.59, .385, .2, 1.4), lcol=WHT)
 
 # Inside Out 2: the emotions' blue-violet, the poster's white tilted logo, Joy in the diamond
@@ -2733,9 +2732,9 @@ std('three-daughters-1961', ('solid', (196, 30, 150)), WHT,
     photo=ph(0.78, 0.36, 0.51, 1.1), pb=WHT, studio=['SATYAJIT RAY', 'PRODUCTIONS'], scol=WHT, order='lPTCF',
     credit=['A SATYAJIT RAY', 'FILM'], ccol=WHT, ft='e', fcol=WHT, fin=OLD, seed=1961)
 
-# Soul: a Pixar clamshell.  Night-city blue, the poster's blue SOUL cut off it, Joe in his hat on the stair
-disney('soul-2020', ('grad', [(0, (40, 90, 190)), (.5, (24, 50, 120)), (1, (10, 20, 56))]), fin=dict(CLAM, vivid=.25),
-       title=TT([('S', (60, 150, 245)), ('O', (250, 206, 70)), ('UL', (60, 150, 245))], 'popb', 150, sp=0, shadow=((10, 20, 60), 3, 3)),  # typeset: the logo's blues run into the sky; Ian could supply it
+# Soul: a Pixar clamshell.  Night-city navy (darkened so the blue logo shows), the film's own title logo (Ian's image, logos/soul-2020-title.png), Joe in his hat on the stair
+disney('soul-2020', ('grad', [(0, (24, 30, 70)), (.5, (12, 14, 36)), (1, (4, 6, 16))]), fin=dict(CLAM, vivid=.25),
+       title=Pic('logos/soul-2020-title.png', 170), studio=False,
        face=ph(.37, .2, .2, 1.4), lcol=WHT)
 
 # Friends: The Reunion: Central Perk's dark brick, the poster's F.R.I.E.N.D.S with its coloured dots and the yellow-brush THE REUNION cut off it, the six on the stoop
@@ -4934,9 +4933,9 @@ std('the-great-beauty-2013', ('grad', [(0, (50, 46, 40)), (.6, (16, 14, 12)), (1
     photo=ph(0.5, 0.5, 1.0, 0.85), pb=(248, 232, 44), lg=WHT, lw=.6, order='LgPTF', ft='a', vbox=(248, 232, 44),
     vink=(16, 14, 12), fcol=(200, 196, 190), fin=SLIP, dotst=(['STAFF', 'PICK'], (200, 160, 40), (16, 14, 12)))
 
-# Zootopia (2016): a Disney clamshell.  The city's blue sky, the poster's green ZOOTOPIA street sign cut off it, Clawhauser in the diamond
+# Zootopia (2016): a Disney clamshell.  The city's blue sky, the film's own title logo (Ian's image, logos/zootopia-2016-title.png), Clawhauser in the diamond
 disney('zootopia-2016', ('grad', [(0, (90, 170, 230)), (.5, (40, 100, 170)), (1, (14, 40, 80))]), fin=dict(CLAM, vivid=.25),
-       title=LC([(0.13, 0.075, 0.69, 0.2)], 170),
+       title=Pic('logos/zootopia-2016-title.png', 170), studio=False,
        face=ph(.82, .77, .17, 1.4), lcol=WHT)
 
 # Spring Breakers: the poster's neon pink and violet, the scrawled neon lettering, the girls
@@ -5051,9 +5050,9 @@ std('clouds-of-sils-maria-2014', ('grad', [(0, (180, 214, 220)), (.6, (100, 140,
     photo=ph(0.6, 0.3, 0.7, 1.2), pb=WHT, lg=WHT, lw=.6, order='LgPTF', ft='a', vbox=WHT, vink=(100, 140, 150), fcol=WHT,
     fin=SLIP)
 
-# Bridesmaids (2011): the brick wall's red-brown, white heavy capitals, the bridal party in pink
+# Bridesmaids (2011): the brick wall's red-brown, white heavy capitals, the bridal party in pink; title: the film's own title logo (Ian's image, logos/bridesmaids-2011-title.png, on one line, at Ian's ask)
 std('bridesmaids-2011', ('grad', [(0, (140, 70, 60)), (.6, (70, 34, 30)), (1, (20, 10, 8))]), WHT,
-    [L((0.06, 0.09, 0.94, 0.222), 92, WHT, mode='light'), L((0.06, 0.222, 0.94, 0.35), 92, WHT, mode='light')],
+    Pic('logos/bridesmaids-2011-title.png', 86),
     photo=ph(0.5, 0.68, 1.0, 0.6), pb=(240, 80, 160), lg=WHT, lw=.6, order='LPTSF', ft='d', vbox=(240, 80, 160),
     vink=(70, 34, 30), fcol=(230, 210, 206), fin=SLIP, seed=2011, stick=RWD(fill=(250, 200, 220), ink=(110, 20, 60)))
 

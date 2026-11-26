@@ -799,9 +799,9 @@ std('stage-fright-1950', ('grad', [(0, (252, 206, 30)), (.6, (240, 180, 10)), (1
     photo=ph(0.56, 0.3, 0.6, 1.45), pb=(20, 16, 12), lg=(20, 16, 12), lw=.55, order='LPTSF', stick=RWD(fill=(250, 246, 230)),
     ft='e', vbox=(20, 16, 12), fcol=(30, 24, 16), fin=RENTAL, seed=1950)
 
-# Sunset Boulevard (1950): the poster's red, SUNSET BOULEVARD typeset in condensed capitals in the poster's yellow with its black keyline (typeset: on the poster each letter rides the curling film strip at its own angle, half-hidden by the sprocket holes; two cuts, by word and by letter, came out in pieces), Gloria Swanson's face
+# Sunset Boulevard (1950): the poster's red, the film's own title logo (Ian's image, logos/sunset-boulevard-1950-title.png), Gloria Swanson's face
 std('sunset-boulevard-1950', ('grad', [(0, (226, 50, 40)), (.6, (170, 30, 24)), (1, (60, 10, 8))]), (250, 226, 80),
-    T('SUNSET BOULEVARD', 'hcnb', 70, (250, 228, 84), track=.06, outline=((20, 16, 14), 2.6)),
+    Pic('logos/sunset-boulevard-1950-title.png', 170),
     photo=ph(0.58, 0.17, 0.72, 0.72), pb=(250, 226, 80), lg=WHT, lw=.55, order='LPTF', ft='a', vbox=(250, 226, 80), vink=(170, 30, 24),
     fcol=(250, 220, 210), fin=OLD, seed=1950)
 
@@ -1062,9 +1062,9 @@ std('the-swan-1956', ('grad', [(0, (236, 228, 200)), (.6, (220, 206, 170)), (1, 
     TT([('THE ', (100, 116, 100)), ('S', (170, 140, 90)), ('WAN', (100, 116, 100))], 'terb', 84),
     photo=ph(0.45, 0.42, 0.66, 1.05), pb=(200, 150, 60), lg=(110, 100, 80), lw=.55, order='LPTF', ft='e', fcol=(100, 90, 70), fin=OLD, seed=1956)
 
-# The Wrong Man (1956): the poster's white, The WRONG MAN typeset in heavy italic capitals in the poster's red (typeset: the poster's W is half-hidden by black smoke, so a cut reads RONG; two cuts tried), Henry Fonda under the hat (director from IMDb)
+# The Wrong Man (1956): the poster's white, the film's own title logo (Ian's image, logos/the-wrong-man-1956-title.png, the cropped HITCHCOCK'S line dropped), Henry Fonda under the hat (director from IMDb)
 std('the-wrong-man-1956', ('grad', [(0, (246, 242, 234)), (.6, (226, 218, 204)), (1, (110, 70, 50))]), (220, 60, 60),
-    TT([('The', (226, 70, 70)), ('WRONG MAN', (226, 70, 70))], 'intbki', 76, sp=.3, outline=((40, 20, 20), 1.6)),
+    Pic('logos/the-wrong-man-1956-title.png', 170),
     photo=ph(0.4, 0.25, 0.6, 1.1), pb=(220, 60, 60), lg=(40, 30, 26), lw=.55, order='LPTCF', credit=['DIRECTED BY', 'ALFRED HITCHCOCK'], ccol=(40, 30, 26),
     ft='b', fcol=(40, 30, 26), fin=OLD, seed=1956)
 
@@ -1493,14 +1493,14 @@ std('marnie-1964', ('grad', [(0, (246, 244, 246)), (.6, (226, 220, 228)), (1, (1
     L((0.045, 0.492, 0.955, 0.598), 90, (124, 42, 124), mode='key', key=(120, 40, 120), t=(70, 150)),
     photo=ph(0.5, 0.2, 0.9, 0.85), pb=(124, 42, 124), lg=(40, 30, 40), lw=.55, order='LPTF', ft='c', fcol=(40, 30, 40), fin=OLD, seed=1964)
 
-# Mary Poppins (1964): Disney, the white clamshell; the poster's sky blue, MARY POPPINS typeset in heavy capitals in the poster's white with a dotted look from its blue keyline (typeset: the poster's title is built of separate white dots among flowers, and every cut either breaks the letters into dots or swallows the flowers; three tried), Mary's face in the red diamond
+# Mary Poppins (1964): Disney, the white clamshell; the poster's sky blue, the film's own title logo (Ian's image, logos/mary-poppins-1964-title.png), Mary's face in the red diamond
 disney('mary-poppins-1964', ('grad', [(0, (20, 90, 180)), (.5, (30, 120, 210)), (1, (10, 50, 120))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('MARY', WHT), ('POPPINS', WHT)], 'intbk', 90, sp=.35, outline=((20, 60, 140), 2.4)),
+       title=Pic('logos/mary-poppins-1964-title.png', 170),
        face=ph(.605, .415, .085, 1.4), lcol=WHT)
 
-# The Killers (1964): the poster's red, The Killers typeset in heavy rounded capitals in its cream with a dark keyline (typeset: Angie Dickinson's head is printed over the poster's ll, so a lift leaves a hole; two tried), Angie Dickinson in the black dress (director from IMDb)
+# The Killers (1964): the poster's red, the film's own title logo (Ian's image, logos/the-killers-1964-title.png, the letters kept, the poster's red panel dropped), Angie Dickinson in the black dress (director from IMDb)
 std('the-killers-1964', ('grad', [(0, (240, 40, 30)), (.6, (190, 20, 16)), (1, (70, 6, 4))]), (246, 236, 210),
-    TT([('The', (248, 238, 212)), ('Killers', (248, 238, 212))], 'popb', 100, sp=.25, outline=((40, 16, 12), 2.4)),
+    Pic('logos/the-killers-1964-title.png', 170),
     photo=ph(0.48, 0.66, 0.6, 1.1), pb=(246, 236, 210), lg=(246, 236, 210), lw=.55, order='LPTCF', credit=['A DON SIEGEL', 'FILM'], ccol=(246, 236, 210),
     ft='a', vbox=(246, 236, 210), vink=(190, 20, 16), fcol=(250, 220, 210), fin=OLD, seed=1964)
 
@@ -1542,9 +1542,9 @@ std('juliet-of-the-spirits-1965', ('grad', [(0, (40, 40, 40)), (.6, (14, 14, 14)
     photo=ph(0.5, 0.42, 0.66, 1.15), pb=(130, 180, 80), studio=['RIZZOLI FILM'], scol=(130, 180, 80), order='lPTCF', credit=['UN FILM DI', 'FEDERICO FELLINI'],
     ccol=(130, 180, 80), ft='c', fcol=(200, 200, 196), fin=OLD, seed=1965)
 
-# Story of a Prostitute (1965): the poster's sepia, STORY OF A PROSTITUTE typeset in heavy condensed capitals in its rust (typeset: the poster's lettering is printed half-faded over the photograph and breaks into specks in every lift; two tried), the lovers (director from IMDb)
-std('story-of-a-prostitute-1965', ('grad', [(0, (190, 170, 150)), (.6, (110, 96, 80)), (1, (30, 24, 20))]), (160, 86, 54),
-    TT([('STORY OF A', (166, 90, 56)), ('PROSTITUTE', (166, 90, 56))], 'intbk', 70, sp=.3, outline=((40, 26, 20), 1.4)),
+# Story of a Prostitute (1965): the poster's sepia, the film's own title logo (Ian's image, logos/story-of-a-prostitute-1965-title.png), the lovers (director from IMDb)
+std('story-of-a-prostitute-1965', ('grad', [(0, (130, 110, 90)), (.5, (70, 58, 46)), (1, (20, 16, 12))]), (160, 86, 54),
+    Pic('logos/story-of-a-prostitute-1965-title.png', 170),
     photo=ph(0.6, 0.7, 0.8, 1.1), pb=(160, 86, 54), lg=(240, 230, 220), lw=.55, order='LPTF', ft='a', vbox=(160, 86, 54), fcol=(220, 210, 200), fin=OLD, seed=1965)
 
 # Death of a Salesman (1966): the poster's night blue, its pale DEATH OF A SALESMAN cut off it in its own shading, the salesman dissolving (made for CBS television: the network logo at the head)
@@ -1700,9 +1700,9 @@ std('double-suicide-1969', ('grad', [(0, (200, 200, 196)), (.6, (130, 130, 126))
         seq_cut(DSW, (0.64, 0.0, 0.81, 0.99), [(0.731, 0.078), (0.73, 0.223), (0.731, 0.358), (0.717, 0.499), (0.72, 0.63), (0.724, 0.781), (0.719, 0.921)], turn=[0] * 7, gapf=.08)]),
     photo=ph(0.48, 0.5, 0.3, 1.9), pb=(200, 30, 30), lg=(30, 30, 30), lw=.55, order='LPTF', ft='c', fcol=(30, 30, 30), fin=OLD, seed=1969)
 
-# Salesman (1969): the poster's teal, SALESMAN typeset in heavy stencil-like capitals in its white (typeset: the salesman's white silhouette is printed over the poster's MA and cuts it into the letters; two tried), Paul Brennan at the door (no logo file: Maysles Films, from IMDb's company credits; directors from IMDb)
+# Salesman (1969): the poster's teal, the film's own title logo (Ian's image, logos/salesman-1969-title.png, printed white as on the poster), Paul Brennan at the door (no logo file: Maysles Films, from IMDb's company credits; directors from IMDb)
 std('salesman-1969', ('grad', [(0, (40, 110, 100)), (.6, (16, 50, 44)), (1, (2, 10, 8))]), WHT,
-    T('SALESMAN', 'intbk', 84, WHT),
+    Pic('logos/salesman-1969-title.png', 129),
     photo=ph(0.6, 0.25, 0.8, 0.85), pb=WHT, studio=['MAYSLES FILMS'], scol=WHT, order='lPTCF', credit=['A DOCUMENTARY BY', 'ALBERT & DAVID MAYSLES'], ccol=WHT,
     ft='d', fcol=(200, 220, 216), fin=OLD, seed=1969)
 
@@ -1788,10 +1788,10 @@ std('the-godfather-1972', ('grad', [(0, (30, 26, 24)), (.6, (10, 8, 8)), (1, (2,
     photo=ph(0.5, 0.32, 0.86, 0.9), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((200, 30, 30), WHT),
     ft='b', fcol=(200, 196, 190), fin=OLD, seed=1972, **TWO)
 
-# The Harder They Come (1972): the poster's sunset colours, THE HARDER THEY COME typeset in heavy rounded capitals in its rainbow, line by line (typeset: the poster's title is a 3-D rainbow block whose letters run into each other and break into stripes in every cut; two tried), Jimmy Cliff with the guns (no logo file: International Films, from IMDb's company credits)
-std('the-harder-they-come-1972', ('grad', [(0, (250, 230, 60)), (.5, (240, 120, 40)), (1, (120, 30, 60))]), (40, 30, 90),
-    TT([('THE', (220, 40, 40)), ('HARDER', (240, 140, 20)), ('THEY', (60, 150, 60)), ('COME', (60, 60, 170))], 'popb', 80, sp=.3, outline=((30, 20, 40), 2)),
-    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(40, 30, 90), studio=['INTERNATIONAL FILMS'], scol=(40, 30, 90), order='lPTF', ft='e', fcol=(40, 30, 90), fin=OLD, seed=1972)
+# The Harder They Come (1972): a deep purple (the rainbow logo was lost on the poster's sunset colours), the film's own title logo (Ian's image, logos/the-harder-they-come-1972-title.png, its arch unbent into a straight line), Jimmy Cliff with the guns (no logo file: International Films, from IMDb's company credits)
+std('the-harder-they-come-1972', ('grad', [(0, (70, 36, 100)), (.5, (34, 16, 56)), (1, (8, 4, 16))]), (250, 220, 120),
+    Pic('logos/the-harder-they-come-1972-title.png', 113),
+    photo=ph(0.5, 0.55, 0.9, 0.95), pb=(250, 200, 60), studio=['INTERNATIONAL FILMS'], scol=(250, 220, 120), order='lPTF', ft='e', fcol=(240, 220, 180), fin=OLD, seed=1972)
 
 # The Ruling Class (1972): the poster's dark leaves, its white script The Ruling Class lifted, Peter O'Toole under the top hat (no logo file: Keep Films, from IMDb's company credits)
 std('the-ruling-class-1972', ('grad', [(0, (30, 50, 40)), (.6, (10, 18, 14)), (1, (2, 4, 2))]), WHT,
@@ -1998,9 +1998,9 @@ std('autumn-sonata-1978', ('grad', [(0, (220, 180, 120)), (.6, (190, 140, 80)), 
     photo=ph(0.55, 0.25, 0.86, 0.75), pb=(60, 40, 20), studio=['PERSONAFILM'], scol=(40, 30, 20), order='lPTCF', credit=['EN FILM AV', 'INGMAR', 'BERGMAN'], ccol=(40, 30, 20),
     ft='b', fcol=(40, 30, 20), fin=OLD, seed=1978)
 
-# The Brink's Job (1978): the bank-note green, THE BRINK'S JOB typeset in heavy capitals in steel grey (typeset: the poster's riveted chrome letters stand in a pile of silver bank notes of the same tone, so no colour or brightness test parts them), the gang under the falling money
+# The Brink's Job (1978): the bank-note green, the film's own title logo (Ian's image, logos/the-brink-s-job-1978-title.png, on one line, at Ian's ask), the gang under the falling money
 std('the-brink-s-job-1978', ('grad', [(0, (40, 70, 50)), (.6, (16, 30, 20)), (1, (4, 8, 6))]), (210, 214, 220),
-    T("THE BRINK'S JOB", 'intbk', 74, (214, 218, 224), outline=((40, 44, 50), 2)),
+    Pic('logos/the-brink-s-job-1978-title.png', 105),
     photo=ph(0.5, 0.25, 0.9, 0.62), pb=(200, 204, 210), lg=WHT, lw=.55, order='LPTF',
     ft='c', fcol=(200, 210, 200), fin=OLD, seed=1978)
 
@@ -2470,9 +2470,9 @@ std('how-to-get-ahead-in-advertising-1989', ('grad', [(0, (100, 200, 230)), (.5,
     photo=ph(0.5, 0.55, 0.8, 1.0), pb=(240, 120, 50), lg=WHT, lw=.5, order='LPTF', dotst=('COMEDY', (240, 120, 50), WHT),
     ft='b', fcol=(230, 240, 240), fin=OLD, seed=1989)
 
-# Indiana Jones and the Last Crusade (1989): the poster's sun-bleached parchment, INDIANA JONES / AND THE LAST CRUSADE typeset in heavy italic capitals in the logo's orange with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the lettering's oranges are the parchment's own, so two colour cuts left holes and a slab showed a seam), Indy and his father
+# Indiana Jones and the Last Crusade (1989): the poster's sun-bleached parchment, the film's own title logo (Ian's image, logos/indiana-jones-and-the-last-crusade-1989-title.png), Indy and his father
 std('indiana-jones-and-the-last-crusade-1989', ('grad', [(0, (230, 200, 150)), (.5, (200, 160, 110)), (1, (90, 60, 30))]), (40, 26, 16),
-    [T('INDIANA JONES', 'intbk', 84, (236, 120, 30), outline=((30, 16, 8), 2.2)), T('AND THE LAST CRUSADE', 'intbk', 40, (250, 200, 50), outline=((30, 16, 8), 1.6))], tgap=8,
+    Pic('logos/indiana-jones-and-the-last-crusade-1989-title.png', 170), tgap=8,
     photo=ph(0.55, 0.42, 0.7, 0.8), pb=(60, 40, 20), lg=(60, 40, 20), lw=.55, order='LPTF',
     ft='d', fcol=(50, 34, 20), fin=RENTAL, seed=1989)
 
@@ -2482,10 +2482,9 @@ std('the-killer-1989', ('grad', [(0, (246, 246, 244)), (.6, (228, 226, 222)), (1
     photo=ph(0.55, 0.45, 0.8, 1.2), pb=(220, 30, 30), studio=['FILM WORKSHOP'], scol=(30, 30, 30), order='lPTCF', credit=['A JOHN WOO', 'FILM'], ccol=(30, 30, 30),
     ft='a', vbox=(220, 30, 30), fcol=(30, 30, 30), fin=RENTAL, seed=1989)
 
-# The Little Mermaid (1989): Disney clamshell; the sea's blues, the poster's gold THE LITTLE / MERMAID cut off it, Ariel's face in the diamond
+# The Little Mermaid (1989): Disney clamshell; the sea's blues, the film's own title logo (Ian's image, logos/the-little-mermaid-1989-title.png), Ariel's face in the diamond
 disney('the-little-mermaid-1989', ('grad', [(0, (40, 160, 220)), (.5, (30, 110, 190)), (1, (10, 40, 100))]), fin=dict(CLAM, vivid=.2),
-       title=LC([(0.395, 0.757, 0.588, 0.791), (0.21, 0.79, 0.77, 0.86)], 110, valign='base', margin=0, gapf=.25, outline=((60, 40, 10), 1.6),
-                cuts=[key_cut(lambda a: (_lum(a) > .55) & (a[..., 0] > a[..., 2] + .06)), comp_cut(lambda a: (a[..., 0] > .6) & (a[..., 0] > a[..., 2] + .15) & (a[..., 1] > .4), minf=.02, close=2)]),
+       title=Pic('logos/the-little-mermaid-1989-title.png', 170), studio=False,
        face=ph(.47, .3, .13, 1.4), lcol=WHT)
 
 
@@ -2532,9 +2531,9 @@ std('miller-s-crossing-1990', ('grad', [(0, (90, 80, 50)), (.6, (34, 30, 18)), (
     photo=ph(0.45, 0.45, 0.8, 1.1), pb=(240, 180, 40), studio=['CIRCLE FILMS'], scol=(240, 200, 120), order='lPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(240, 200, 120),
     ft='b', fcol=(220, 200, 160), fin=OLD, seed=1990)
 
-# Teenage Mutant Ninja Turtles (1990): the city night's teal, TEENAGE MUTANT NINJA TURTLES typeset in heavy condensed capitals in the logo's green with a pale keyline (parked for Ian's logo, see data/logos-wanted.md: the green lettering sits on teal clouds of nearly its own colour, so two cuts lost NINJA and TURTLES), the four turtles peering out of the manhole
+# Teenage Mutant Ninja Turtles (1990): the city night's teal, the film's own title logo (Ian's image, logos/teenage-mutant-ninja-turtles-1990-title.png, its four stacked lines set on one line, at Ian's ask), the four turtles peering out of the manhole
 std('teenage-mutant-ninja-turtles-1990', ('grad', [(0, (20, 70, 80)), (.6, (6, 24, 30)), (1, (2, 6, 8))]), (80, 200, 80),
-    T('TEENAGE MUTANT NINJA TURTLES', 'intbk', 80, (40, 160, 70), outline=((200, 240, 150), 2.2)),
+    Pic('logos/teenage-mutant-ninja-turtles-1990-title.png', 76),
     photo=ph(0.5, 0.86, 0.9, 0.35), pb=(80, 200, 80), lg=WHT, lw=.5, order='LPTF', dotst=('ACTION', (250, 140, 30), (20, 20, 20)),
     ft='e', fcol=(170, 220, 210), fin=RENTAL, seed=1990)
 
@@ -2553,9 +2552,9 @@ std('barton-fink-1991', ('grad', [(0, (180, 130, 80)), (.6, (90, 60, 30)), (1, (
     L([(0.095, 0.762, 0.955, 0.826), (0.095, 0.822, 0.943, 0.94)], 96, WHT, mode='light', valign='base'),
     photo=ph(0.5, 0.33, 0.86, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(240, 220, 200), fin=OLD, seed=1991)
 
-# Beauty and the Beast (1991): Disney clamshell; the ballroom's blue, Beauty and the Beast typeset in a gold serif like the logo's with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: Lumiere overlaps the poster's oval title plate, so the plate cut lost Beast, and the gold letters' shading broke a colour cut), Belle's face in the diamond
+# Beauty and the Beast (1991): Disney clamshell; the ballroom's blue, the film's own title logo (Ian's image, logos/beauty-and-the-beast-1991-title.png), Belle's face in the diamond
 disney('beauty-and-the-beast-1991', ('grad', [(0, (30, 60, 150)), (.5, (50, 90, 190)), (1, (14, 30, 90))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('Beauty', (240, 200, 110)), ('and the', (240, 200, 110)), ('Beast', (240, 200, 110))], 'pagb', 96, sp=.3, outline=((40, 30, 80), 2)),
+       title=Pic('logos/beauty-and-the-beast-1991-title.png', 170), studio=False,
        face=ph(.255, .3, .12, 1.4), lcol=WHT)
 
 # Boyz n the Hood (1991): the poster's blue night, its white graffiti BOYZ N THE HOOD cut off it whole, Tre and Doughboy on the car
@@ -2605,11 +2604,11 @@ std('the-silence-of-the-lambs-1991', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 
     photo=ph(0.5, 0.45, 0.6, 1.1), pb=(226, 110, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['JODIE FOSTER', 'ANTHONY HOPKINS'], ccol=WHT, dotst=('THRILLER', (226, 110, 40), WHT),
     ft='e', fcol=(220, 210, 200), fin=RENTAL, seed=1991)
 
-# 3 Ninjas (1992): Touchstone, a slipcase; the poster's hot pink into orange, its purple 3 Ninjas cut off it whole and levelled, the three boys mid-kick
+# 3 Ninjas (1992): Touchstone, a slipcase; the poster's hot pink into orange, its purple 3 Ninjas cut off it whole and levelled, run as big as the spine allows (Ian), the three boys mid-kick
 std('3-ninjas-1992', ('grad', [(0, (250, 60, 170)), (.5, (240, 120, 120)), (1, (240, 150, 40))]), (80, 30, 120),
-    LC([(0.1, 0.735, 0.9, 0.9)], 120, cuts=[comp_cut(lambda a: (a[..., 2] > a[..., 1] + .08) & (_lum(a) < .45), minf=.02, rot=12)]),
+    LC([(0.1, 0.735, 0.9, 0.9)], 260, cuts=[comp_cut(lambda a: (a[..., 2] > a[..., 1] + .08) & (_lum(a) < .45), minf=.02, rot=12)]),
     photo=ph(0.5, 0.3, 0.9, 0.8), pb=(80, 30, 120), lg=(60, 20, 90), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
-    ft='a', vbox=(80, 30, 120), fcol=(60, 20, 90), fin=RENTAL, seed=1992)
+    ft='a', vbox=(80, 30, 120), fcol=(60, 20, 90), fin=RENTAL, seed=1992, side=4)
 
 # A Few Good Men (1992): the dark of the poster, its gold A FEW GOOD MEN keyed off it, Cruise, Nicholson and Moore in uniform
 std('a-few-good-men-1992', ('grad', [(0, (40, 50, 80)), (.6, (12, 14, 26)), (1, (2, 2, 6))]), (230, 190, 90),
@@ -2658,9 +2657,9 @@ std('the-mighty-ducks-1992', ('grad', [(0, (30, 90, 60)), (.6, (12, 40, 26)), (1
     photo=ph(0.5, 0.3, 0.9, 0.75), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SPORTS', (250, 220, 40), (20, 30, 20)),
     ft='b', fcol=(200, 220, 206), fin=RENTAL, seed=1992)
 
-# The Player (1992): the sunset sky, the poster's white serif The / Player lifted into one line, Tim Robbins hanging in the noose of film
+# The Player (1992): the sunset sky, the film's own title logo (Ian's image, logos/the-player-1992-title.png), Tim Robbins hanging in the noose of film
 std('the-player-1992', ('grad', [(0, (20, 40, 120)), (.5, (220, 120, 60)), (1, (20, 10, 10))]), WHT,
-    LC([(0.555, 0.12, 0.71, 0.25), (0.575, 0.245, 0.89, 0.51)], 110, valign='base', margin=0, gapf=.2, cuts=[comp_cut(lambda a: _lum(a) > .94, minf=.05)] * 2),
+    Pic('logos/the-player-1992-title.png', 170),
     photo=ph(0.35, 0.62, 0.6, 1.1), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A ROBERT ALTMAN', 'FILM'], ccol=WHT,
     ft='d', fcol=(230, 210, 200), fin=RENTAL, seed=1992)
 
@@ -2676,13 +2675,13 @@ std('dazed-and-confused-1993', ('grad', [(0, (40, 170, 230)), (.5, (30, 130, 200
     photo=ph(0.5, 0.82, 0.9, 0.5), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'RICHARD LINKLATER'], ccol=WHT,
     ft='a', vbox=(220, 40, 50), fcol=(220, 236, 250), fin=RENTAL, seed=1993)
 
-# Fearless (1993): the poster's sky, FEARLESS typeset in heavy capitals in its blue (parked for Ian's logo, see data/logos-wanted.md: the poster's letters are see-through, with sky and cloud showing in them, so both cuts came out holed), Jeff Bridges with his arms out on the building's edge
+# Fearless (1993): the poster's sky, FEARLESS typeset in heavy capitals in its blue (kept as is: Ian is happy with it, 26 Nov 2026: the poster's letters are see-through, with sky and cloud showing in them, so both cuts came out holed), Jeff Bridges with his arms out on the building's edge
 std('fearless-1993', ('grad', [(0, (200, 226, 240)), (.5, (120, 180, 220)), (1, (20, 60, 100))]), (20, 90, 150),
     T('FEARLESS', 'intbk', 110, (24, 100, 170)),
     photo=ph(0.4, 0.3, 0.6, 1.0), pb=(20, 90, 150), lg=(20, 50, 90), lw=.55, order='LTPF',
     ft='c', fcol=(20, 40, 70), fin=RENTAL, seed=1993)
 
-# Groundhog Day (1993): the dawn sky, GROUNDHOG DAY typeset in heavy capitals in white with the logo's red keyline (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on a pale sky, so a cut lost their insides twice), Bill Murray in the alarm clock
+# Groundhog Day (1993): the dawn sky, GROUNDHOG DAY typeset in heavy capitals in white with the logo's red keyline (kept as is: Ian is happy with it, 26 Nov 2026: the white letters sit on a pale sky, so a cut lost their insides twice), Bill Murray in the alarm clock
 std('groundhog-day-1993', ('grad', [(0, (90, 160, 220)), (.5, (240, 190, 140)), (1, (90, 70, 50))]), WHT,
     T('GROUNDHOG DAY', 'intbk', 90, WHT, outline=((200, 30, 40), 2.6)),
     photo=ph(0.45, 0.52, 0.7, 0.8), pb=(200, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=BAR('93 0212', top='COMEDY', fill=(236, 230, 214)),
@@ -2710,9 +2709,9 @@ std('schindler-s-list-1993', ('grad', [(0, (40, 40, 40)), (.6, (12, 12, 12)), (1
     photo=ph(0.48, 0.5, 0.7, 1.1), pb=(180, 30, 30), lg=WHT, lw=.5, order='LPTSF', stick=TWOST((180, 30, 30), WHT),
     ft='b', fcol=(200, 200, 200), fin=RENTAL, seed=1993, **TWO)
 
-# Short Cuts (1993): a 2-tape box; the poster's orange ground, SHORT CUTS typeset in heavy capitals in the shadows' near-black (parked for Ian's logo, see data/logos-wanted.md: the title is spelled by the long shadows of the people, slanting and joined to them, and a cut came out as a tangle), the walkers casting them
+# Short Cuts (1993): a 2-tape box; the poster's orange ground, the film's own title logo (Ian's image, logos/short-cuts-1993-title.png, on one line, at Ian's ask), the walkers casting them
 std('short-cuts-1993', ('grad', [(0, (230, 130, 70)), (.5, (200, 100, 50)), (1, (90, 40, 16))]), (40, 20, 10),
-    T('SHORT CUTS', 'intbk', 110, (40, 20, 10)),
+    Pic('logos/short-cuts-1993-title.png', 170),
     photo=ph(0.5, 0.13, 0.9, 0.35), pb=(40, 20, 10), lg=(40, 20, 10), lw=.55, order='LPTSF', stick=TWOST((40, 20, 10), (240, 160, 100)),
     ft='a', vbox=(40, 20, 10), vink=(240, 160, 100), fcol=(40, 20, 10), fin=RENTAL, seed=1993, **TWO)
 
@@ -2770,9 +2769,9 @@ std('dumb-and-dumber-1994', ('grad', [(0, (246, 246, 246)), (.6, (226, 230, 236)
     LC([(0.06, 0.045, 0.942, 0.158)], 120, cuts=[comp_cut(lambda a: ((a[..., 2] > .4) & (a[..., 0] < .35)) | ((a[..., 0] > .6) & (a[..., 1] < .35)) | ((_lum(a) > .85) & (_lum(a) < .97)), minf=.01, fillh=True)]),
     photo=ph(0.5, 0.55, 0.86, 0.9), pb=(20, 70, 160), lg=(20, 70, 160), lw=.55, order='LPTF', ft='d', fcol=(20, 40, 90), fin=RENTAL, seed=1994)
 
-# Ed Wood (1994): Touchstone, a slipcase; black, ED WOOD typeset in heavy capitals in white with a grey keyline (parked for Ian's logo, see data/logos-wanted.md: the poster's chrome letters are tipped back in perspective and their shading broke both cuts), Ed in the director's chair
+# Ed Wood (1994): Touchstone, a slipcase; black, the film's own title logo (Ian's image, logos/ed-wood-1994-title.png), Ed in the director's chair
 std('ed-wood-1994', ('grad', [(0, (40, 40, 44)), (.6, (12, 12, 14)), (1, (2, 2, 2))]), WHT,
-    T('ED WOOD', 'intbk', 120, WHT, outline=((110, 110, 120), 2)),
+    Pic('logos/ed-wood-1994-title.png', 170),
     photo=ph(0.5, 0.33, 0.8, 1.1), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(200, 200, 206), fin=RENTAL, seed=1994)
 
 # Forrest Gump (1994): the poster's sky blue, its navy serif Forrest / Gump cut off it into one line, Forrest on the bench
@@ -2810,9 +2809,9 @@ std('quiz-show-1994', ('grad', [(0, (30, 34, 50)), (.6, (8, 10, 16)), (1, (2, 2,
     L((0.16, 0.744, 0.84, 0.812), 84, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160)),
     photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1994)
 
-# The Hudsucker Proxy (1994): the boardroom's red glow, the poster's chrome HUDSUCKER and its spaced gold P R O X Y cut off it into one line, the man leaping from the window
+# The Hudsucker Proxy (1994): the boardroom's red glow, the film's own title logo (Ian's image, logos/the-hudsucker-proxy-1994-title.png), the man leaping from the window
 std('the-hudsucker-proxy-1994', ('grad', [(0, (120, 30, 20)), (.5, (60, 14, 8)), (1, (10, 2, 2))]), (220, 220, 230),
-    LC([(0.115, 0.752, 0.875, 0.872), (0.125, 0.885, 0.875, 0.902)], 110, valign='base', margin=0, gapf=.25, cuts=[comp_cut(lambda a: _lum(a) > .45, minf=.02)] * 2),
+    Pic('logos/the-hudsucker-proxy-1994-title.png', 170),
     photo=ph(0.5, 0.22, 0.86, 0.7), pb=(230, 200, 140), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 200, 190), fin=RENTAL, seed=1994)
 
 # The Lion King (1994): Disney clamshell; the Pride Lands' red-orange sunset, the poster's white THE LION KING cut off it (its Disney mark left out, it is on the spine already), Simba's face in the diamond
@@ -2877,9 +2876,9 @@ std('dead-man-1995', ('grad', [(0, (120, 120, 120)), (.6, (50, 50, 50)), (1, (10
     photo=ph(0.5, 0.82, 0.9, 0.45), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['A FILM BY', 'JIM JARMUSCH'], ccol=WHT,
     ft='a', fcol=(220, 220, 220), fin=OLD, seed=1995)
 
-# Die Hard with a Vengeance (1995): the fireball's orange, DIE HARD typeset in heavy capitals in the logo's red with a white keyline over WITH A VENGEANCE in white (parked for Ian's logo, see data/logos-wanted.md: the red letters sit in the fireball of nearly their own colour, so the cut broke up), McClane's bloodied face
-std('die-hard-with-a-vengeance-1995', ('grad', [(0, (200, 100, 40)), (.5, (110, 40, 14)), (1, (14, 4, 2))]), WHT,
-    [T('DIE HARD', 'intbk', 110, (210, 30, 30), outline=(WHT, 2.4)), T('WITH A VENGEANCE', 'intbk', 46, WHT)], tgap=8,
+# Die Hard with a Vengeance (1995): the fireball's orange, the film's own title logo (Ian's image, logos/die-hard-with-a-vengeance-1995-title.png), McClane's bloodied face
+std('die-hard-with-a-vengeance-1995', ('grad', [(0, (150, 66, 26)), (.45, (56, 18, 8)), (1, (10, 3, 2))]), WHT,
+    Pic('logos/die-hard-with-a-vengeance-1995-title.png', 143), tgap=8,
     photo=ph(0.5, 0.33, 0.86, 0.9), pb=WHT, lg=WHT, lw=.5, order='LPTF',
     ft='e', vbox=(200, 30, 30), fcol=(240, 210, 190), fin=RENTAL, seed=1995)
 
@@ -2888,9 +2887,9 @@ std('friday-1995', ('grad', [(0, (30, 70, 160)), (.6, (10, 26, 70)), (1, (2, 6, 
     LC([(0.14, 0.05, 0.86, 0.235)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .78) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)]),
     photo=ph(0.5, 0.55, 0.9, 0.8), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(200, 210, 240), fin=RENTAL, seed=1995)
 
-# GoldenEye (1995): the poster's midnight blue, its silver GOLDENEYE cut off it (parked for Ian's logo, see data/logos-wanted.md: the gold 007 and gun barrel sit on Bond's sleeve and wouldn't cut, and the silver E's shine breaks up), Bond's kiss
+# GoldenEye (1995): the poster's midnight blue, the film's own title logo (Ian's image, logos/goldeneye-1995-title.png), Bond's kiss
 std('goldeneye-1995', ('grad', [(0, (30, 50, 90)), (.6, (8, 14, 30)), (1, (2, 2, 6))]), (220, 220, 230),
-    LC([(0.045, 0.495, 0.955, 0.59)], 110, cuts=[comp_cut(lambda a: (_lum(a) > .8) & (_sat(a) < .15), minf=.05)]),
+    Pic('logos/goldeneye-1995-title.png', 168),
     photo=ph(0.5, 0.2, 0.86, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1995)
 
 # Heat (1995): the night's blue, the poster's spaced blue chrome H E A T cut off it, Pacino and De Niro
@@ -2899,9 +2898,9 @@ std('heat-1995', ('grad', [(0, (20, 40, 80)), (.6, (6, 12, 26)), (1, (0, 2, 6))]
     photo=ph(0.5, 0.3, 0.86, 0.8), pb=(120, 180, 240), lg=WHT, lw=.5, order='LPTCF', credit=['A MICHAEL MANN', 'FILM'], ccol=(170, 206, 246),
     ft='d', fcol=(170, 190, 220), fin=RENTAL, seed=1995)
 
-# Jumanji (1995): the jungle's green, JUMANJI typeset in heavy capitals in the logo's gold with a dark keyline (parked for Ian's logo, see data/logos-wanted.md: the carved gold letters stand in leaves and vines of the same colours, so the cut came out in pieces), the stampede under the title
+# Jumanji (1995): the jungle's green, the film's own title logo (Ian's image, logos/jumanji-1995-title.png), the stampede under the title
 std('jumanji-1995', ('grad', [(0, (40, 120, 40)), (.5, (20, 70, 24)), (1, (6, 24, 8))]), (250, 200, 40),
-    T('JUMANJI', 'intbk', 120, (250, 200, 40), outline=((60, 30, 10), 2.4)),
+    Pic('logos/jumanji-1995-title.png', 170),
     photo=ph(0.5, 0.68, 0.86, 0.75), pb=(250, 200, 40), lg=WHT, lw=.5, order='LTPSF', stick=BAR('95 1215', top='FAMILY', fill=(240, 232, 210)),
     ft='b', fcol=(220, 236, 200), fin=RENTAL, seed=1995)
 
@@ -2916,9 +2915,9 @@ std('la-haine-1995', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 16)), (1, (2, 2,
     photo=ph(0.5, 0.36, 0.9, 0.55), pb=WHT, lg=WHT, lw=.5, order='LPTCF', credit=['UN FILM DE', 'MATHIEU KASSOVITZ'], ccol=WHT,
     ft='e', fcol=(210, 210, 210), fin=OLD, seed=1995)
 
-# Mallrats (1995): the poster's sky blue, its green spiky Mallrats cut off it whole and levelled, T.S. and Brodie
+# Mallrats (1995): the poster's sky blue, the film's own title logo (Ian's image, logos/mallrats-1995-title.png), T.S. and Brodie
 std('mallrats-1995', ('grad', [(0, (60, 170, 230)), (.5, (30, 120, 200)), (1, (8, 40, 90))]), (140, 210, 70),
-    LC([(0.02, 0.06, 0.94, 0.33)], 140, cuts=[comp_cut(lambda a: ((a[..., 1] > .5) & (a[..., 1] > a[..., 2] + .1) & (a[..., 0] < .85)) | (_lum(a) < .2), top=1, close=3, rot=14)]),
+    Pic('logos/mallrats-1995-title.png', 170),
     photo=ph(0.55, 0.5, 0.86, 0.8), pb=(140, 210, 70), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$1.99', 'COMEDY']),
     ft='d', fcol=(220, 236, 250), fin=RENTAL, seed=1995)
 
@@ -2933,9 +2932,9 @@ disney('pocahontas-1995', ('grad', [(0, (200, 60, 30)), (.5, (230, 130, 40)), (1
        title=LC([(0.085, 0.81, 0.925, 0.928)], 130, outline=((40, 30, 90), 2), cuts=[comp_cut(lambda a: _lum(a) > .78, minf=.02)]),
        face=ph(.39, .49, .12, 1.4), lcol=WHT)
 
-# Se7en (1995): the dark, the poster's scratched grey SE7EN with its red 7 cut off it in its own colours, Pitt and Freeman
+# Se7en (1995): the dark, the film's own title logo (Ian's image, logos/se7en-1995-title.png), Pitt and Freeman
 std('se7en-1995', ('grad', [(0, (60, 56, 46)), (.6, (16, 14, 12)), (1, (2, 2, 2))]), (200, 200, 200),
-    LC([(0.1, 0.81, 0.9, 0.935)], 110, cuts=[comp_cut(lambda a: ((_lum(a) > .3) & (_sat(a) < .25)) | ((a[..., 0] > .5) & (a[..., 1] < .25)), minf=.05, close=4, fillh=True)]),
+    Pic('logos/se7en-1995-title.png', 170),
     photo=ph(0.5, 0.35, 0.9, 0.7), pb=(200, 30, 30), lg=WHT, lw=.5, order='LTPF',
     ft='c', fcol=(190, 186, 176), fin=RENTAL, seed=1995)
 
@@ -2968,7 +2967,7 @@ std('bottle-rocket-1996', ('grad', [(0, (250, 210, 220)), (.5, (240, 190, 200)),
     photo=ph(0.5, 0.36, 0.9, 0.3), pb=(210, 30, 30), lg=(60, 20, 30), lw=.55, order='LTPCF', credit=['A FILM BY', 'WES ANDERSON'], ccol=(60, 20, 30),
     ft='c', fcol=(60, 20, 30), fin=RENTAL, seed=1996)
 
-# Box of Moonlight (1996): the poster's white, BOX OF MOONLIGHT typeset in condensed capitals in its red (parked for Ian's logo, see data/logos-wanted.md: the small OF sits on a tilted black tag that wouldn't cut with the red words), the man with the clock (Lakeshore logo; director from IMDb)
+# Box of Moonlight (1996): the poster's white, BOX OF MOONLIGHT typeset in condensed capitals in its red (kept as is: Ian is happy with it, 26 Nov 2026: the small OF sits on a tilted black tag that wouldn't cut with the red words), the man with the clock (Lakeshore logo; director from IMDb)
 std('box-of-moonlight-1996', ('grad', [(0, (246, 248, 250)), (.6, (226, 232, 240)), (1, (120, 130, 150))]), (190, 40, 40),
     TT([('BOX', (196, 50, 44)), ('OF', (30, 30, 40)), ('MOONLIGHT', (196, 50, 44))], 'hcnb', 100, sp=.3),
     photo=ph(0.7, 0.38, 0.6, 1.3), pb=(190, 40, 40), lg=(40, 40, 60), lw=.55, order='LPTCF', credit=['A FILM BY', 'TOM DiCILLO'], ccol=(40, 40, 60),
@@ -2985,9 +2984,9 @@ std('fargo-1996', ('grad', [(0, (244, 240, 236)), (.6, (226, 220, 214)), (1, (13
     photo=ph(0.5, 0.55, 0.86, 0.6), pb=(190, 30, 30), lg=(60, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(60, 30, 30),
     ft='b', fcol=(60, 30, 30), fin=RENTAL, seed=1996)
 
-# James and the Giant Peach (1996): Walt Disney Pictures, so the clamshell; the sky over the peach, James and the Giant Peach typeset in white with an orange keyline (parked for Ian's logo, see data/logos-wanted.md: the white letters sit on the peach's pale highlight, and the cut lost James), James's face in the diamond
+# James and the Giant Peach (1996): Walt Disney Pictures, so the clamshell; the sky over the peach, the film's own title logo (Ian's image, logos/james-and-the-giant-peach-1996-title.png), James's face in the diamond
 disney('james-and-the-giant-peach-1996', ('grad', [(0, (90, 170, 230)), (.5, (240, 140, 50)), (1, (60, 120, 40))]), fin=dict(CLAM, vivid=.2),
-       title=TT([('James', WHT), ('and the', (40, 30, 20)), ('Giant Peach', WHT)], 'popb', 90, sp=.3, outline=((170, 70, 10), 2.2)),
+       title=Pic('logos/james-and-the-giant-peach-1996-title.png', 170),
        face=ph(.48, .735, .09, 1.4), lcol=WHT, studio=False)
 
 # Jingle All the Way (1996): the poster's white, its red Jingle All The Way cut off it whole, Arnold diving for the Turbo-Man box
@@ -3007,9 +3006,9 @@ std('mars-attacks-1996', ('grad', [(0, (60, 70, 140)), (.5, (140, 40, 30)), (1, 
     LC([(0.06, 0.785, 0.95, 0.915)], 130, outline=((250, 240, 200), 2.2), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.02, rot=-8)]),
     photo=ph(0.55, 0.35, 0.86, 0.9), pb=(140, 230, 90), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(220, 200, 200), fin=RENTAL, seed=1996)
 
-# Matilda (1996): the night's starry blue, Matilda typeset letter by letter in the logo's rainbow colours (parked for Ian's logo, see data/logos-wanted.md: each letter is shaded from light to dark, so two colour cuts lost the t, i and l), Matilda with the floating orb under the title
+# Matilda (1996): the night's starry blue, the film's own title logo (Ian's image, logos/matilda-1996-title.png), Matilda with the floating orb under the title
 std('matilda-1996', ('grad', [(0, (30, 60, 140)), (.6, (10, 20, 60)), (1, (2, 4, 16))]), (250, 220, 60),
-    TT([('M', (220, 40, 50)), ('a', (250, 140, 30)), ('t', (250, 220, 50)), ('i', (90, 190, 70)), ('l', (60, 160, 230)), ('d', (240, 200, 40)), ('a', (180, 80, 200))], 'pagb', 120, sp=0, outline=(WHT, 1.6)),
+    Pic('logos/matilda-1996-title.png', 170),
     photo=ph(0.45, 0.5, 0.86, 0.9), pb=(250, 220, 60), lg=WHT, lw=.5, order='LTPSF', stick=PRC(['$1.99', 'FAMILY']),
     ft='b', fcol=(200, 210, 240), fin=RENTAL, seed=1996)
 
@@ -3052,9 +3051,9 @@ std('as-good-as-it-gets-1997', ('grad', [(0, (200, 226, 246)), (.5, (150, 200, 2
     L((0.05, 0.158, 0.95, 0.224), 76, (190, 30, 40), mode='key', key=(190, 40, 50), t=(70, 160)),
     photo=ph(0.5, 0.45, 0.86, 0.75), pb=(190, 30, 40), lg=(30, 40, 70), lw=.55, order='LPTF', ft='a', vbox=(190, 30, 40), fcol=(30, 40, 70), fin=RENTAL, seed=1997)
 
-# Austin Powers: International Man of Mystery (1997): the Union Jack pink, AUSTIN POWERS and INTERNATIONAL MAN OF MYSTERY typeset in heavy capitals in the logo's yellow with a black keyline (parked for Ian's logo, see data/logos-wanted.md: the outlined letters sit on the flag's pinks and whites, and the cut came out a jumble), Austin and Vanessa
+# Austin Powers: International Man of Mystery (1997): the Union Jack pink, the film's own title logo (Ian's image, logos/austin-powers-international-man-of-mystery-1997-title.png), Austin and Vanessa
 std('austin-powers-international-man-of-mystery-1997', ('grad', [(0, (240, 60, 160)), (.5, (160, 40, 140)), (1, (30, 20, 80))]), (250, 230, 60),
-    [T('AUSTIN POWERS', 'intbk', 90, WHT, outline=((20, 20, 20), 2.2)), T('INTERNATIONAL MAN OF MYSTERY', 'intbk', 50, (250, 230, 60), outline=((20, 20, 20), 1.8))], tgap=8,
+    Pic('logos/austin-powers-international-man-of-mystery-1997-title.png', 108), tgap=8,
     photo=ph(0.5, 0.18, 0.7, 0.75), pb=(250, 230, 60), lg=WHT, lw=.5, order='LPTSF', stick=PRC(['$2.99', 'COMEDY']),
     ft='e', fcol=(250, 220, 240), fin=RENTAL, seed=1997)
 
@@ -3121,7 +3120,7 @@ std('l-a-confidential-1997', ('grad', [(0, (50, 40, 40)), (.6, (14, 10, 10)), (1
     LC([(0.34, 0.6, 0.96, 0.86)], 140, cuts=[comp_cut(lambda a: (a[..., 0] > .45) & (a[..., 1] < .3), minf=.02, rot=-20)]),
     photo=ph(0.4, 0.2, 0.7, 0.85), pb=WHT, lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(210, 30, 30), fcol=(210, 206, 206), fin=RENTAL, seed=1997)
 
-# Liar Liar (1997): the poster's white, LIAR LIAR typeset in heavy capitals, the first in the poster's dark red and the second in black (parked for Ian's logo, see data/logos-wanted.md: Jim Carrey's hair cuts through the second LIAR), Jim Carrey's grin
+# Liar Liar (1997): the poster's white, LIAR LIAR typeset in heavy capitals, the first in the poster's dark red and the second in black (kept as is: Ian is happy with it, 26 Nov 2026: Jim Carrey's hair cuts through the second LIAR), Jim Carrey's grin
 std('liar-liar-1997', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (1, (120, 120, 120))]), (20, 20, 20),
     TT([('LIAR', (150, 24, 30)), ('LIAR', (20, 20, 20))], 'intbk', 110, sp=.3),
     photo=ph(0.5, 0.45, 0.6, 0.85), pb=(160, 30, 30), lg=(20, 20, 20), lw=.55, order='LPTSF', stick=PRC(['$2.49', 'COMEDY']),
@@ -3145,7 +3144,7 @@ std('schizopolis-1997', ('grad', [(0, (246, 246, 246)), (.6, (228, 228, 228)), (
     photo=ph(0.5, 0.33, 0.9, 0.75), pb=(200, 30, 30), studio=['.406 PRODUCTION'], scol=(20, 20, 20), order='lPTCF', credit=['A FILM BY', 'STEVEN SODERBERGH'], ccol=(20, 20, 20),
     ft='a', fcol=(20, 20, 20), fin=OLD, seed=1997)
 
-# Taste of Cherry (1997): the poster's ochre, TASTE OF CHERRY typeset in spaced capitals in cream (parked for Ian's logo, see data/logos-wanted.md: the poster's pale title is barely lighter than the ochre and the lift came out in pieces), Mr. Badii's shadow (Kanoon logo; director from IMDb)
+# Taste of Cherry (1997): the poster's ochre, TASTE OF CHERRY typeset in spaced capitals in cream (kept as is: Ian is happy with it, 26 Nov 2026: the poster's pale title is barely lighter than the ochre and the lift came out in pieces), Mr. Badii's shadow (Kanoon logo; director from IMDb)
 std('taste-of-cherry-1997', ('grad', [(0, (220, 160, 50)), (.6, (170, 110, 30)), (1, (60, 36, 8))]), (250, 236, 200),
     TT([('TASTE', (250, 236, 200)), ('OF', (250, 236, 200)), ('CHERRY', (250, 236, 200))], 'intxb', 84, sp=.4),
     photo=ph(0.4, 0.35, 0.7, 1.2), pb=(250, 236, 200), lg=(250, 236, 200), lw=.5, order='LPTCF', credit=['A FILM BY', 'ABBAS KIAROSTAMI'], ccol=(250, 236, 200),
@@ -3345,10 +3344,10 @@ std('dogma-1999', ('grad', [(0, (200, 80, 30)), (.4, (60, 20, 10)), (1, (2, 2, 2
     LC([(0.105, 0.655, 0.89, 0.765)], 120, outline=(WHT, 1.4), cuts=[comp_cut(lambda a: (a[..., 0] > .5) & (a[..., 1] < .25), minf=.03, fillh=True)]),
     photo=ph(0.5, 0.25, 0.9, 0.6), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTF', ft='d', fcol=(220, 200, 190), fin=RENTAL, seed=1999)
 
-# Fight Club (1999): the poster's sickly green, FIGHT CLUB typeset in heavy capitals in the soap's pink (parked for Ian's logo, see data/logos-wanted.md: the title is pressed into a tilted pink soap bar held in a hand, and the bar wouldn't cut cleanly), Brad Pitt and Edward Norton
+# Fight Club (1999): the poster's sickly green, the film's own title logo (Ian's image, logos/fight-club-1999-title.png, the soap bar turned level so it runs straight down the spine as big as it fits, at Ian's ask), Brad Pitt and Edward Norton
 std('fight-club-1999', ('grad', [(0, (120, 160, 80)), (.5, (60, 90, 40)), (1, (10, 20, 8))]), (240, 110, 180),
-    T('FIGHT CLUB', 'intbk', 110, (240, 120, 190), outline=((90, 20, 60), 2)),
-    photo=ph(0.6, 0.62, 0.8, 0.85), pb=(240, 110, 180), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 230, 210), fin=RENTAL, seed=1999)
+    Pic('logos/fight-club-1999-title.png', 220),
+    photo=ph(0.6, 0.62, 0.8, 0.85), pb=(240, 110, 180), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 230, 210), fin=RENTAL, seed=1999, side=4)
 
 # Ghost Dog: The Way of the Samurai (1999): the poster's blue-grey, its white chalked GHOST DOG and THE WAY OF THE SAMURAI cut off it into one line, Forest Whitaker in the hood (JVC logo)
 std('ghost-dog-the-way-of-the-samurai-1999', ('grad', [(0, (60, 80, 110)), (.6, (20, 28, 40)), (1, (2, 4, 8))]), WHT,
@@ -3447,7 +3446,7 @@ std('the-world-is-not-enough-1999', ('grad', [(0, (30, 50, 80)), (.5, (12, 18, 3
     L((0.015, 0.423, 0.945, 0.47), 90, WHT, mode='light'),
     photo=ph(0.5, 0.25, 0.8, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='e', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1999)
 
-# Three Kings (1999): the desert's white, THREE KINGS typeset in wide spaced capitals in the poster's blue (parked for Ian's logo, see data/logos-wanted.md: the letters fade from blue into the white sky, so both cuts lost their middles), the three soldiers walking with their gold
+# Three Kings (1999): the desert's white, THREE KINGS typeset in wide spaced capitals in the poster's blue (kept as is: Ian is happy with it, 26 Nov 2026: the letters fade from blue into the white sky, so both cuts lost their middles), the three soldiers walking with their gold
 std('three-kings-1999', ('grad', [(0, (230, 236, 246)), (.6, (200, 210, 226)), (1, (90, 100, 120))]), (40, 90, 160),
     TT([('THREE', (40, 90, 170)), ('KINGS', (40, 90, 170))], 'advb', 96, sp=.4),
     photo=ph(0.5, 0.52, 0.86, 0.8), pb=(40, 90, 160), lg=(30, 50, 90), lw=.55, order='LPTF', ft='a', fcol=(30, 50, 90), fin=RENTAL, seed=1999)
