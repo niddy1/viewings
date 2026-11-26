@@ -1735,7 +1735,9 @@ def vlogo(id, color, length, path=None):
 # id -> (fx, fy, zoom): the point of the picture (fractions) put at the diamond's centre, and the scale
 # relative to filling the frame (under 1 shows more of the picture; any gap is filled with a blurred copy).
 FACE_FIT = {
-    'ratatouille-2007': (.42, .50, .72),
+    'ratatouille-2007': (.52, .44, .54),
+    'lilo-stitch-2002': (.46, .50, .54),
+    'the-jungle-book-1967': (.50, .52, .54),
     'chicken-little-2005': (.56, .58, .66),
     'lady-and-the-tramp-1955': (.62, .46, .70),
     'the-lion-king-1994': (.56, .42, .80),
