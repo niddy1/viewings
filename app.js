@@ -1120,9 +1120,15 @@
     })).then((a) => { stock = a; return a; }));
   }
 
+  // Easter eggs: an exact query (after norm) that returns a hand-picked set, all of it, in release order.
+  const EGGS = { 'daughter fucker': (e) => /\bwoody allen\b/.test(e.d) };
   function search(q, every) {
     const nq = norm(q);
     if (!nq || !stock) return { hits: [], total: 0 };
+    if (EGGS[nq]) {
+      const hits = stock.flat().filter(EGGS[nq]).sort((a, b) => (a.f.year || 0) - (b.f.year || 0) || a.bare.localeCompare(b.bare));
+      return { hits, total: hits.length };
+    }
     const words = nq.split(' '), isYear = /^(19|20)\d\d$/.test(nq), hits = [];
     stock.flat().forEach((e) => {
       // numbers match from the start of a word, so "007" doesn't find every 2007 film
