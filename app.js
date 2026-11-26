@@ -1093,11 +1093,14 @@
   // The studio is searchable too, so "disney" finds every Disney film. Pixar counts as Disney, and so do
   // Disney releases whose TMDB studio is someone else's (James and the Giant Peach: Allied Filmmakers).
   const DISNEY_TOO = new Set(['tt0116683']);
-  // Series words, searched like a studio (every match shown, in release order): "bond", "james bond", "007".
+  // Series words, searched like a studio (every match shown, in release order): "bond", "james bond", "007",
+  // "indiana jones" / "indy" (Raiders has neither in its title), "mission impossible".
   // Keyed by IMDb id, since the studio can't tell (EON also made Film Stars Don't Die in Liverpool).
-  // Add a new Bond film's id here when it reaches a shelf.
+  // Add a new film's id to its series when it reaches a shelf.
   const SERIES = [
     ['james bond 007', ['tt0113189', 'tt0143145', 'tt0246460', 'tt0381061', 'tt1074638', 'tt2382320']],
+    ['indiana jones indy', ['tt0082971', 'tt0097576']],
+    ['mission impossible', ['tt1229238', 'tt2381249']],
   ].flatMap(([w, ids]) => ids.map((id) => [id, w]));
   const SERIES_OF = new Map(SERIES);
   const studioWords = (f) => {
