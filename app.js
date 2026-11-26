@@ -1093,10 +1093,17 @@
   // The studio is searchable too, so "disney" finds every Disney film. Pixar counts as Disney, and so do
   // Disney releases whose TMDB studio is someone else's (James and the Giant Peach: Allied Filmmakers).
   const DISNEY_TOO = new Set(['tt0116683']);
+  // Series words, searched like a studio (every match shown, in release order): "bond", "james bond", "007".
+  // Keyed by IMDb id, since the studio can't tell (EON also made Film Stars Don't Die in Liverpool).
+  // Add a new Bond film's id here when it reaches a shelf.
+  const SERIES = [
+    ['james bond 007', ['tt0113189', 'tt0143145', 'tt0246460', 'tt0381061', 'tt1074638', 'tt2382320']],
+  ].flatMap(([w, ids]) => ids.map((id) => [id, w]));
+  const SERIES_OF = new Map(SERIES);
   const studioWords = (f) => {
-    const st = norm(f.studio);
-    if (/disney/.test(st)) return st;
-    return /pixar/.test(st) || DISNEY_TOO.has(f.imdb) ? `${st} disney` : st;
+    let st = norm(f.studio);
+    if (!/disney/.test(st) && (/pixar/.test(st) || DISNEY_TOO.has(f.imdb))) st += ' disney';
+    return SERIES_OF.has(f.imdb) ? `${st} ${SERIES_OF.get(f.imdb)}` : st;
   };
   function loadStore() {
     return storeP || (storeP = Promise.all(YEARS.map(async (k) => {
@@ -1115,7 +1122,8 @@
     if (!nq || !stock) return { hits: [], total: 0 };
     const words = nq.split(' '), isYear = /^(19|20)\d\d$/.test(nq), hits = [];
     stock.flat().forEach((e) => {
-      if (!words.every((w) => e.hay.includes(w))) return;
+      // numbers match from the start of a word, so "007" doesn't find every 2007 film
+      if (!words.every((w) => (/^\d+$/.test(w) ? (' ' + e.hay).includes(' ' + w) : e.hay.includes(w)))) return;
       const s = e.t === nq || e.bare === nq ? 100
         : e.t.startsWith(nq) || e.bare.startsWith(nq) ? 80
         : isYear && String(e.f.year) === nq ? 70
