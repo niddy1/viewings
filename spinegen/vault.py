@@ -2604,10 +2604,10 @@ std('the-silence-of-the-lambs-1991', ('grad', [(0, (60, 60, 60)), (.6, (16, 16, 
     photo=ph(0.5, 0.45, 0.6, 1.1), pb=(226, 110, 40), lg=WHT, lw=.5, order='LPTCSF', credit=['JODIE FOSTER', 'ANTHONY HOPKINS'], ccol=WHT, dotst=('THRILLER', (226, 110, 40), WHT),
     ft='e', fcol=(220, 210, 200), fin=RENTAL, seed=1991)
 
-# 3 Ninjas (1992): Touchstone, a slipcase; the poster's hot pink into orange, its purple 3 Ninjas cut off it whole and levelled, run as big as the spine allows (Ian), the three boys mid-kick
+# 3 Ninjas (1992): Touchstone, a slipcase; the poster's hot pink into orange, its purple 3 Ninjas cut off it whole, levelled and saved tight as logos/3-ninjas-1992-title.png so it can run big; as big as the spine allows (Ian: the sticker dropped and the picture made shorter to give it room), the three boys mid-kick
 std('3-ninjas-1992', ('grad', [(0, (250, 60, 170)), (.5, (240, 120, 120)), (1, (240, 150, 40))]), (80, 30, 120),
-    LC([(0.1, 0.735, 0.9, 0.9)], 260, cuts=[comp_cut(lambda a: (a[..., 2] > a[..., 1] + .08) & (_lum(a) < .45), minf=.02, rot=12)]),
-    photo=ph(0.5, 0.3, 0.9, 0.8), pb=(80, 30, 120), lg=(60, 20, 90), lw=.55, order='LPTSF', stick=PRC(['$1.99', 'FAMILY']),
+    Pic('logos/3-ninjas-1992-title.png', 200),
+    photo=ph(0.5, 0.3, 0.9, 0.5), pb=(80, 30, 120), lg=(60, 20, 90), lw=.55, order='LPTF',
     ft='a', vbox=(80, 30, 120), fcol=(60, 20, 90), fin=RENTAL, seed=1992, side=4)
 
 # A Few Good Men (1992): the dark of the poster, its gold A FEW GOOD MEN keyed off it, Cruise, Nicholson and Moore in uniform
@@ -2657,7 +2657,7 @@ std('the-mighty-ducks-1992', ('grad', [(0, (30, 90, 60)), (.6, (12, 40, 26)), (1
     photo=ph(0.5, 0.3, 0.9, 0.75), pb=(250, 220, 40), lg=WHT, lw=.5, order='LPTSF', dotst=('SPORTS', (250, 220, 40), (20, 30, 20)),
     ft='b', fcol=(200, 220, 206), fin=RENTAL, seed=1992)
 
-# The Player (1992): the sunset sky, the film's own title logo (Ian's image, logos/the-player-1992-title.png), Tim Robbins hanging in the noose of film
+# The Player (1992): the sunset sky, the film's own title logo (Ian's image, logos/the-player-1992-title.png, The set beside Player on one line, at Ian's ask), Tim Robbins hanging in the noose of film
 std('the-player-1992', ('grad', [(0, (20, 40, 120)), (.5, (220, 120, 60)), (1, (20, 10, 10))]), WHT,
     Pic('logos/the-player-1992-title.png', 170),
     photo=ph(0.35, 0.62, 0.6, 1.1), pb=(250, 200, 120), lg=WHT, lw=.5, order='LPTCF', credit=['A ROBERT ALTMAN', 'FILM'], ccol=WHT,
@@ -2809,10 +2809,10 @@ std('quiz-show-1994', ('grad', [(0, (30, 34, 50)), (.6, (8, 10, 16)), (1, (2, 2,
     L((0.16, 0.744, 0.84, 0.812), 84, (200, 30, 40), mode='key', key=(200, 30, 40), t=(70, 160)),
     photo=ph(0.5, 0.4, 0.86, 0.85), pb=(200, 30, 40), lg=WHT, lw=.5, order='LPTF', ft='e', fcol=(200, 200, 210), fin=RENTAL, seed=1994)
 
-# The Hudsucker Proxy (1994): the boardroom's red glow, the film's own title logo (Ian's image, logos/the-hudsucker-proxy-1994-title.png), the man leaping from the window
-std('the-hudsucker-proxy-1994', ('grad', [(0, (120, 30, 20)), (.5, (60, 14, 8)), (1, (10, 2, 2))]), (220, 220, 230),
+# The Hudsucker Proxy (1994): white (Ian's pick), the film's own title logo (Ian's image, logos/the-hudsucker-proxy-1994-title.png), the man leaping from the window
+std('the-hudsucker-proxy-1994', ('grad', [(0, (248, 247, 244)), (.6, (236, 235, 230)), (1, (200, 198, 192))]), (24, 24, 28),
     Pic('logos/the-hudsucker-proxy-1994-title.png', 170),
-    photo=ph(0.5, 0.22, 0.86, 0.7), pb=(230, 200, 140), lg=WHT, lw=.5, order='LPTF', ft='b', fcol=(220, 200, 190), fin=RENTAL, seed=1994)
+    photo=ph(0.5, 0.22, 0.86, 0.7), pb=(150, 30, 24), lg=(24, 24, 28), lw=.5, order='LPTF', ft='b', fcol=(24, 24, 28), fin=RENTAL, seed=1994)
 
 # The Lion King (1994): Disney clamshell; the Pride Lands' red-orange sunset, the poster's white THE LION KING cut off it (its Disney mark left out, it is on the spine already), Simba's face in the diamond
 disney('the-lion-king-1994', ('grad', [(0, (150, 40, 20)), (.5, (190, 80, 30)), (1, (90, 20, 14))]), fin=dict(CLAM, vivid=.2),
@@ -2887,8 +2887,8 @@ std('friday-1995', ('grad', [(0, (30, 70, 160)), (.6, (10, 26, 70)), (1, (2, 6, 
     LC([(0.14, 0.05, 0.86, 0.235)], 120, cuts=[comp_cut(lambda a: (_lum(a) > .78) | ((a[..., 0] > .55) & (a[..., 1] < .3)), minf=.01)]),
     photo=ph(0.5, 0.55, 0.9, 0.8), pb=(220, 40, 40), lg=WHT, lw=.5, order='LPTF', ft='c', fcol=(200, 210, 240), fin=RENTAL, seed=1995)
 
-# GoldenEye (1995): the poster's midnight blue, the film's own title logo (Ian's image, logos/goldeneye-1995-title.png), Bond's kiss
-std('goldeneye-1995', ('grad', [(0, (30, 50, 90)), (.6, (8, 14, 30)), (1, (2, 2, 6))]), (220, 220, 230),
+# GoldenEye (1995): black (Ian's pick), the film's own title logo (Ian's image, logos/goldeneye-1995-title.png), Bond's kiss
+std('goldeneye-1995', ('grad', [(0, (26, 26, 28)), (.6, (10, 10, 11)), (1, (2, 2, 2))]), (220, 220, 230),
     Pic('logos/goldeneye-1995-title.png', 168),
     photo=ph(0.5, 0.2, 0.86, 0.6), pb=(220, 190, 90), lg=WHT, lw=.5, order='LPTF', ft='a', vbox=(200, 170, 70), vink=(10, 10, 20), fcol=(200, 206, 226), fin=RENTAL, seed=1995)
 
@@ -2984,7 +2984,7 @@ std('fargo-1996', ('grad', [(0, (244, 240, 236)), (.6, (226, 220, 214)), (1, (13
     photo=ph(0.5, 0.55, 0.86, 0.6), pb=(190, 30, 30), lg=(60, 30, 30), lw=.55, order='LPTCF', credit=['A FILM BY', 'JOEL & ETHAN COEN'], ccol=(60, 30, 30),
     ft='b', fcol=(60, 30, 30), fin=RENTAL, seed=1996)
 
-# James and the Giant Peach (1996): Walt Disney Pictures, so the clamshell; the sky over the peach, the film's own title logo (Ian's image, logos/james-and-the-giant-peach-1996-title.png), James's face in the diamond
+# James and the Giant Peach (1996): Walt Disney Pictures, so the clamshell; the sky over the peach, the film's own title logo (Ian's image, logos/james-and-the-giant-peach-1996-title.png, James on its own, then and the Giant Peach stacked after it, at Ian's ask), James's face in the diamond
 disney('james-and-the-giant-peach-1996', ('grad', [(0, (90, 170, 230)), (.5, (240, 140, 50)), (1, (60, 120, 40))]), fin=dict(CLAM, vivid=.2),
        title=Pic('logos/james-and-the-giant-peach-1996-title.png', 170),
        face=ph(.48, .735, .09, 1.4), lcol=WHT, studio=False)
