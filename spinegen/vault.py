@@ -1284,6 +1284,15 @@ std('breakfast-at-tiffany-s-1961', ('grad', [(0, (246, 244, 242)), (.6, (226, 22
     LC([(0.395, 0.625, 0.91, 0.704), (0.395, 0.703, 0.9, 0.782)], 80, gapf=.2, valign='base', cuts=[key_cut(lambda a: (a[..., 0] > .55) & (a[..., 1] < .4) & (a[..., 2] > .3))] * 2),
     photo=ph(0.24, 0.42, 0.34, 1.9), pb=(20, 20, 20), lg=(20, 20, 20), lw=.55, order='LPTF', ft='b', fcol=(20, 20, 20), fin=OLD, seed=1961)
 
+# Divorce Italian Style (1961; moved to the Vault from 2026 at Ian's request, 26 Nov 2026): the poster's white,
+# its DIVORCE cut off it whole with the green panels and the face in the O, the ruled ITALIAN STYLE beside it,
+# one of the comic panels for the picture.  Label from IMDb's company credits (Lux Film).
+std('divorce-italian-style-1961', ('grad', [(0, (250, 250, 246)), (.7, (238, 238, 230)), (1, (196, 206, 120))]), (24, 24, 24),
+    LC([(0.06, 0.293, 0.93, 0.48), (0.08, 0.488, 0.92, 0.522)], 150, gapf=.12, valign='base',
+       cuts=[key_cut(lambda a: (_lum3(a) < .86) | (a.max(2) - a.min(2) > .14)), key_cut(lambda a: _lum3(a) < .4)]),
+    photo=ph(0.5, 0.645, 0.27, 1.0), pb=(24, 24, 24), studio=['LUX FILM'], scol=(24, 24, 24), order='lPTF',
+    ft='b', fcol=(24, 24, 24), fin=OLD, seed=1961)
+
 # Il Posto (1961): the poster's cream, its white ERMANNO OLMI'S and yellow IL POSTO cut off it in their own colours, Domenico at the desk
 std('il-posto-1961', ('grad', [(0, (238, 232, 216)), (.6, (220, 210, 190)), (1, (130, 120, 100))]), (40, 40, 40),
     LC([(0.05, 0.415, 0.545, 0.49)], 90, cuts=[key_cut(lambda a: (a[..., 0] > .7) & (a[..., 1] > .55) & (a[..., 2] < .4))]),

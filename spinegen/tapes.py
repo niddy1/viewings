@@ -1896,6 +1896,9 @@ disney('zootopia-2-2025', ('grad', [(0, (8, 8, 34)), (.5, (12, 12, 50)), (1, (10
        Pic('logos/zootopia-2-title.png', 226), ph(.47, .705, .2, 1.4), lcol=WHT, side=4, studio=False)
 
 # ----- 2024 Pixar clamshells -----
+_lum3 = lambda a: a[..., 0] * .299 + a[..., 1] * .587 + a[..., 2] * .114
+
+
 def key_cut(test, soft=1.4):
     """an LC cut: keep the pixels where test(rgb float 0..1 array) is true, in their own colours"""
     def fn(rgb):
@@ -4285,19 +4288,6 @@ std('shithouse-2020', ('grad', [(0, (230, 100, 50)), (.6, (190, 60, 40)), (1, (8
     credit=['A COOPER RAIFF', 'FILM'], ccol=(252, 234, 204), ft='b', vbox=(252, 234, 204), vink=(190, 60, 40),
     fcol=(252, 234, 204), fin=MINT)
 
-# Dangerous Days: Making Blade Runner (2007): a 2-tape box, black, the white serif DANGEROUS DAYS and its subtitle lifted off the poster, the crew on set
-std('dangerous-days-making-blade-runner-2007', ('grad', [(0, (40, 34, 30)), (.6, (14, 12, 10)), (1, (4, 4, 4))]), WHT,
-    [L((0.118, 0.41, 0.879, 0.458), 110, WHT, mode='light'), L((0.189, 0.465, 0.81, 0.488), 40, (230, 160, 70), mode='light', speck=0)],
-    photo=ph(0.5, 0.16, 0.9, 0.6), pb=(230, 160, 70), lg=WHT, lw=.5, order='LPTCSF', tgap=10, credit=['A DOCUMENTARY'], ccol=WHT,
-    stick=TWOST((230, 160, 70), (14, 12, 10)), ft='a', vbox=WHT, vink=(14, 12, 10), fcol=(200, 196, 190), fin=SLIP, seed=2007,
-    **TWO)
-
-# The Mole: Undercover in North Korea: the flag's red and blue, the poster's yellow THE MOLE and its subtitle lifted, Ulrich's face
-std('the-mole-undercover-in-north-korea-2020', ('grad', [(0, (200, 40, 50)), (.5, (60, 90, 150)), (1, (16, 24, 50))]), (250, 220, 40),
-    [L((0.091, 0.735, 0.909, 0.826), 92, (250, 222, 44), mode='key', key=(245, 215, 50), t=(70, 150)), L((0.092, 0.827, 0.904, 0.863), 22, (250, 222, 44), mode='key', key=(245, 215, 50), t=(70, 150), speck=0)],
-    tgap=8, photo=ph(0.5, 0.18, 0.75, 0.5), pb=(250, 222, 44), lg=WHT, lw=.6, order='LPTCF', credit=['A MADS BRÜGGER', 'FILM'],
-    ccol=WHT, ft='d', vbox=(250, 222, 44), vink=(60, 90, 150), fcol=WHT, fin=MINT)
-
 # Kajillionaire: the poster's pale pink, its black spaced KAJILLIONAIRE lifted, Old Dolio in the collage
 std('kajillionaire-2020', ('grad', [(0, (246, 220, 214)), (.6, (236, 200, 196)), (1, (190, 150, 146))]), (30, 28, 28),
     L((0.104, 0.06, 0.902, 0.121), 70, (30, 28, 28), mode='dark'),
@@ -4725,12 +4715,6 @@ std('the-purge-2013', ('grad', [(0, (60, 40, 80)), (.6, (20, 12, 28)), (1, (4, 2
     [L((0.13, 0.035, 0.87, 0.09), 40, WHT, mode='light'), L((0.14, 0.095, 0.9, 0.215), 110, WHT, mode='light')],
     tgap=6, photo=ph(0.6, 0.6, 0.75, 1.2), pb=WHT, lg=WHT, lw=.6, order='LPTF', ft='a', vbox=WHT, vink=(20, 12, 28),
     fcol=(200, 196, 210), fin=SLIP)
-
-# Bloodsport (1988): a real rental, the Kumite's black, the red brush script, Frank in his fighting stance
-std('bloodsport-1988', ('grad', [(0, (50, 30, 26)), (.6, (18, 10, 8)), (1, (4, 2, 2))]), (220, 50, 40),
-    L((0.04, 0.1, 0.96, 0.245), 110, (224, 54, 42), mode='key', key=(210, 50, 40), t=(70, 150)),
-    photo=ph(0.45, 0.55, 0.5, 1.7), pb=(224, 54, 42), lg=WHT, lw=.6, order='LPTCF', credit=['JEAN-CLAUDE VAN DAMME'], ccol=WHT,
-    ft='b', vbox=(224, 54, 42), fcol=(200, 190, 186), fin=RENTAL, seed=1988)
 
 # Good Time: Queens night, the poster's scan-lined neon GOOD TIME cut off it in its own red and white, Connie in the jar
 std('good-time-2017', ('grad', [(0, (60, 20, 50)), (.6, (20, 8, 20)), (1, (4, 2, 4))]), (120, 240, 90),
@@ -5222,6 +5206,50 @@ std('salaam-bombay-1988', ('grad', [(0, (50, 40, 30)), (.6, (16, 12, 10)), (1, (
     L([(0.08, 0.1, 0.59, 0.17), (0.365, 0.168, 0.91, 0.235)], 76, [WHT, (190, 190, 190)], mode='light', gapf=.35),
     photo=ph(0.5, 0.52, 1.0, 0.85), pb=WHT, lg=WHT, lw=.6, order='LPTCSF', credit=['A FILM BY', 'MIRA NAIR'], ccol=WHT,
     stick=PRC(['$1.99', 'FOREIGN']), ft='b', fcol=(210, 200, 190), fin=OLD, seed=1988)
+
+
+# =====================================================================================
+# 2026 arrivals of 26 Nov 2026 (after key_cut, which two of them use)
+# =====================================================================================
+
+# Akira (1988): the poster's pale sky, AKIRA cut off it in its own black and red, Kaneda's bike up top.
+# Credit from IMDb (director Katsuhiro Otomo); no logo file, so no studio line.
+std('akira-1988', ('grad', [(0, (232, 238, 242)), (.6, (214, 224, 232)), (1, (176, 196, 214))]), (20, 20, 24),
+    LC([(0.17, 0.675, 0.86, 0.92)], 150, cuts=[key_cut(lambda a: (_lum3(a) < .45) | ((a[..., 0] > .35) & (a[..., 1] < .3) & (a[..., 2] < .3)))]),
+    photo=ph(0.5, 0.42, 0.44, 1.5), pb=(200, 30, 36), order='PTCSF', credit=['A FILM BY', 'KATSUHIRO ŌTOMO'], ccol=(150, 24, 30),
+    stick=RWD(), ft='c', fcol=(20, 20, 24), fin=RENTAL, seed=1988)
+
+# In the Line of Fire (1993): night-dark, the red stepped title cut off the poster and run on one line,
+# Eastwood up top.  Label and cast from IMDb (Columbia Pictures; Clint Eastwood, John Malkovich).
+# PARKED: the red title has dark scan lines through every letter on the poster, so key lifts (with gap
+# closing) and a colour cut all came out broken; typeset in a heavy grotesque until Ian supplies the logo.
+std('in-the-line-of-fire-1993', ('grad', [(0, (30, 32, 38)), (.6, (14, 14, 18)), (1, (6, 6, 8))]), (220, 30, 30),
+    T('IN THE LINE OF FIRE', 'intbk', 86, (226, 30, 30), squeeze=.9, track=-.01),
+    photo=ph(0.4, 0.27, 0.62, 1.25), pb=(220, 30, 30), studio=['COLUMBIA', 'PICTURES'], scol=(206, 206, 210), order='lPTCF',
+    credit=['EASTWOOD', 'MALKOVICH'], ccol=(206, 206, 210), ft='b', fcol=(180, 180, 186), fin=RENTAL, seed=1993)
+
+# Sundays (Los domingos, 2025): the poster's warm brown, its cream SUNDAYS lifted, her face below the title.
+# Credit from IMDb (writer-director Alauda Ruiz de Azúa), in the film's own Spanish.
+std('sundays-2025', ('grad', [(0, (92, 56, 44)), (.6, (62, 36, 28)), (1, (30, 16, 12))]), (240, 220, 170),
+    L((0.255, 0.772, 0.755, 0.838), 92, (242, 224, 176), mode='key', key=(236, 214, 160), t=(55, 120), speck=.01),
+    photo=ph(0.5, 0.36, 0.86, 1.15), pb=(236, 214, 160), order='TPCF', credit=['UNA PELÍCULA DE', 'ALAUDA RUIZ DE AZÚA'], ccol=(236, 214, 160),
+    ft='d', fcol=(236, 214, 160), fin=MINT)
+
+# Mystery Train (1989): the poster's midnight navy, the white condensed title lifted, the couple under the
+# Memphis neon.  Label from IMDb's company credits (JVC Entertainment).
+std('mystery-train-1989', ('solid', (14, 34, 64)), WHT,
+    L((0.035, 0.065, 0.965, 0.215), 120, WHT, mode='light', speck=.01),
+    photo=ph(0.55, 0.6, 1.0, 0.9), pb=(226, 60, 60), studio=['JVC'], scol=(206, 214, 230), order='lPTSF',
+    stick=PRC(['$1.99', '2 NIGHTS']), ft='a', fcol=(206, 214, 230), fin=RENTAL, seed=1989)
+
+# You Can See Everything (2026): skin-and-shadow warm dark, the two white lines lifted and joined, the blue eye.
+# Label from IMDb (A24); a new-release dot over the picture.
+# PARKED: the white lettering sits on near-white skin, so a white key lift and a white-and-unsaturated cut
+# both lost letters (the T of EVERYTHING, the feet of the rest); typeset until Ian supplies the logo.
+std('you-can-see-everything-2026', ('grad', [(0, (196, 160, 136)), (.35, (120, 90, 76)), (1, (26, 20, 18))]), WHT,
+    T('YOU CAN SEE EVERYTHING', 'intsb', 84, WHT, track=-.01),
+    photo=ph(0.6, 0.2, 0.9, 0.55), pb=WHT, studio=['A24'], scol=WHT, order='lPTF',
+    dotst=(['NEW', 'RELEASE'], (250, 206, 40), (30, 30, 34)), ft='e', fcol=(236, 226, 216), fin=MINT)
 
 
 # the Vault (vault-<decade>.json): its specs live in vault.py, in this same namespace

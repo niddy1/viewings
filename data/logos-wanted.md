@@ -6,7 +6,8 @@ Any image works: a transparent PNG is best; a logo on black is fine too (it gets
 
 | Film | Shelf | Save as | Stand-in now, and why |
 |---|---|---|---|
-| _none right now_ | | | |
+| In the Line of Fire (1993) | 2026 | `logos/in-the-line-of-fire-1993-title.png` | Typeset in red heavy capitals: the poster's red title has dark scan lines through every letter, so lifts came out in strips. |
+| You Can See Everything (2026) | 2026 | `logos/you-can-see-everything-2026-title.png` | Typeset in white: the white lettering sits on near-white skin, so lifts lost letters (the T of EVERYTHING). |
 
 The full reason for each is in the comment above its spec in `spinegen/vault.py` or `spinegen/tapes.py`.
 

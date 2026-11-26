@@ -240,6 +240,25 @@
       "logo": "logos/4.png"
     },
     {
+      "title": "Divorce Italian Style",
+      "year": 1961,
+      "rating": 4.5,
+      "rating10": 9,
+      "watched": "2008-07-18",
+      "tmdb": 20271,
+      "tmdbKind": "movie",
+      "runtime": 104,
+      "director": "Pietro Germi",
+      "genres": [
+        "Comedy",
+        "Crime"
+      ],
+      "imdb": "tt0055913",
+      "poster": "posters/divorce-italian-style-1961.jpg",
+      "imdbRating": 7.9,
+      "imdbVotes": 16107
+    },
+    {
       "title": "Il Posto",
       "rating": 4,
       "rating10": 8,
