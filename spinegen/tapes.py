@@ -1731,10 +1731,44 @@ def vlogo(id, color, length, path=None):
     return Fn(fn, length)
 
 
-def face_crop(path, w, h, squash=1.2):
+# Framing for face pictures whose face is off-centre or too big for the diamond (Ian, 26 Nov 2026):
+# id -> (fx, fy, zoom): the point of the picture (fractions) put at the diamond's centre, and the scale
+# relative to filling the frame (under 1 shows more of the picture; any gap is filled with a blurred copy).
+FACE_FIT = {
+    'ratatouille-2007': (.42, .50, .72),
+    'chicken-little-2005': (.56, .58, .66),
+    'lady-and-the-tramp-1955': (.62, .46, .70),
+    'the-lion-king-1994': (.56, .42, .80),
+    'toy-story-2-1999': (.50, .58, .74),
+    'the-rescuers-1977': (.40, .52, .74),
+    'the-wild-2006': (.52, .50, .70),
+    'sleeping-beauty-1959': (.50, .56, .80),
+}
+
+
+def face_crop(path, w, h, squash=1.2, fit=None):
     """Ian's own face picture, filled into a w x h frame: cropped about its centre to the frame's shape,
-    after letting a wide or tall picture squeeze by up to `squash` so less of it is cut away"""
+    after letting a wide or tall picture squeeze by up to `squash` so less of it is cut away.
+    With fit=(fx, fy, zoom) the picture is scaled to zoom x a full fill and centred on (fx, fy) instead."""
     img = Image.open(path).convert('RGB'); iw, ih = img.size
+    if fit:
+        fx, fy, zoom = fit; w, h = int(w), int(h)
+        sc = max(w / iw, h / ih) * zoom; nw, nh = int(iw * sc), int(ih * sc)
+        x, y = w / 2 - fx * nw, h / 2 - fy * nh
+        x = int(min(0, max(w - nw, x)) if nw >= w else x)   # no gap where the picture is big enough
+        y = int(min(0, max(h - nh, y)) if nh >= h else y)
+        a = np.asarray(img.resize((nw, nh), Image.LANCZOS))
+        # any gap is filled by carrying the picture's own edge outwards, softened so it reads as background
+        pad = [max(0, y), max(0, h - y - nh), max(0, x), max(0, w - x - nw)]   # top, bottom, left, right
+        if any(pad):
+            big = cv2.copyMakeBorder(a, *pad, cv2.BORDER_REPLICATE)
+            soft = cv2.GaussianBlur(big, (0, 0), w / 18)
+            m = np.zeros(big.shape[:2], np.float32); m[pad[0]:pad[0] + nh, pad[2]:pad[2] + nw] = 1
+            m = cv2.GaussianBlur(m, (0, 0), w / 40)[..., None]
+            m = np.maximum(m, cv2.erode(np.pad(np.ones((nh, nw), np.float32), ((pad[0], pad[1]), (pad[2], pad[3]))), np.ones((3, 3)))[..., None])
+            a = (big * m + soft * (1 - m)).astype(np.uint8)
+            x, y = x - pad[2], y - pad[0]   # where the padded picture's corner sits in the frame
+        return Image.fromarray(a).crop((-x, -y, -x + w, -y + h))
     a, r = w / h, iw / ih
     if r > a:   # wider than the frame: keep up to a*squash of the width, centred
         cw = min(iw, ih * a * squash); box = ((iw - cw) / 2, 0, (iw + cw) / 2, ih)
@@ -1749,7 +1783,7 @@ def portrait(box, h, border=(214, 30, 40), inner=(250, 214, 60)):
     def fn(im, W, y0, rng):
         w_ = W * 0.80  # a true diamond: clearly taller than it is wide, not a square on its corner
         if isinstance(box, str):
-            c = face_crop(box, w_ * S, h * S)
+            c = face_crop(box, w_ * S, h * S, fit=FACE_FIT.get(os.path.basename(box)[:-4]))
         else:
             cov = Image.open(CUR['cover']).convert('RGB'); cw, ch = cov.size
             c = cov.crop((int(box[0] * cw), int(box[1] * ch), int(box[2] * cw), int(box[3] * ch))).resize((int(w_ * S), int(h * S)), Image.LANCZOS)
