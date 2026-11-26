@@ -761,27 +761,6 @@
       "logo": "logos/33.png"
     },
     {
-      "title": "Bloodsport",
-      "rating": 0,
-      "rating10": 0,
-      "watched": "2018-05-17",
-      "imdb": "tt0092675",
-      "poster": "posters/bloodsport-1988.jpg",
-      "imdbRating": 6.8,
-      "imdbVotes": 105398,
-      "year": 1988,
-      "tmdb": 11690,
-      "tmdbKind": "movie",
-      "runtime": 92,
-      "director": "Newt Arnold",
-      "genres": [
-        "Action",
-        "Drama"
-      ],
-      "studio": "The Cannon Group",
-      "logo": "logos/1444.png"
-    },
-    {
       "title": "Good Time",
       "rating": 4,
       "rating10": 8,

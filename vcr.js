@@ -36,7 +36,7 @@
     if (typed === 'vcr') { typed = ''; open(); }
   });
   window.addEventListener('hashchange', () => { if (location.hash === '#vcr') open(); });
-  if (location.hash === '#vcr') open();
+  // opened at the end of the file, once everything below is defined
 
   /* ---------- small helpers ---------- */
   const h = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
@@ -93,13 +93,14 @@
     return res.json();
   }
 
-  // Latest films.json straight from GitHub (so a stale Pages deploy can't undo an earlier update).
-  async function loadShelf() {
+  // A shelf file straight from GitHub (so a stale Pages deploy can't undo an earlier update).
+  async function loadShelf(path = DATA()) {
     if (store.get(KEYS.gh)) {
-      return (await gh(`/contents/${DATA()}?ref=${BRANCH}`, { headers: { Accept: 'application/vnd.github.raw+json' }, cache: 'no-store' })).json();
+      return (await gh(`/contents/${path}?ref=${BRANCH}`, { headers: { Accept: 'application/vnd.github.raw+json' }, cache: 'no-store' })).json();
     }
-    return (await fetch(DATA(), { cache: 'no-cache' })).json();
+    return (await fetch(path, { cache: 'no-cache' })).json();
   }
+  const shelfName = (d) => (d.vault ? `Vault ${d.vault}` : String(d.year));
 
   // One commit on BRANCH. files: [{ path, content }] for text, [{ path, blob }] for binary.
   async function commitFiles(message, files, progress = () => {}) {
@@ -220,38 +221,49 @@
           ? 'That looks like a Letterboxd export. This wants the PassThePopcorn ratings CSV (Title, Rating10, WatchedDate, ImdbID).'
           : 'Missing columns. Expected Title, Rating10, WatchedDate, ImdbID.');
       }
-      const loading = status('Reading the shelf…');
-      const data = await loadShelf();
+      // Every shelf is read: a re-rating can be for a film on any of them (the Vault included).
+      // New films are only added to the year shelf that's open.
+      const V = window.viewings || {};
+      const openFile = V.all ? null : DATA();
+      const paths = [...new Set([...(V.shelfFiles || []), ...(openFile ? [openFile] : [])])];
+      const loading = status('Reading every shelf…');
+      const shelves = new Map(await Promise.all(paths.map(async (p) => [p, await loadShelf(p)])));
       loading.remove();
-      if (data.vault) { status('The Vault holds the bulk-rated years (2007-2015) and takes no new ratings. Open a year shelf to record new ones.', 'ok'); return; }
-      const year = String(data.year || new Date().getFullYear());
+      const data = openFile ? shelves.get(openFile) : null;
+      const year = data && !data.vault ? String(data.year || new Date().getFullYear()) : null;
 
-      // one entry per film for this year: the latest rating wins
-      const byId = new Map();
+      // Per film, its latest row in the CSV (the rating to show), and this year's rows (new tapes for this shelf).
+      // A re-rating never moves a tape: the watched date it was shelved under stays, whatever date PTP now gives it.
+      const latest = new Map(), byId = new Map();
       const excluded = await fetch('data/excluded.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})); // kept off every shelf
       for (const r of rows) {
         const id = (r[iI] || '').trim(), watched = (r[iW] || '').slice(0, 10);
-        if (!/^tt\d+$/.test(id) || !watched.startsWith(year) || excluded[id]) continue;
-        const prev = byId.get(id);
-        if (!prev || watched > prev.watched) byId.set(id, { imdb: id, csvTitle: r[iT], r10: Number(r[iR]) || 0, watched });
+        if (!/^tt\d+$/.test(id) || excluded[id]) continue;
+        const e = { imdb: id, csvTitle: r[iT], r10: Number(r[iR]) || 0, watched };
+        const prev = latest.get(id);
+        if (!prev || watched > prev.watched) latest.set(id, e);
+        if (year && watched.startsWith(year) && (!byId.has(id) || watched > byId.get(id).watched)) byId.set(id, e);
       }
 
-      const shelf = data.films || [];
-      const onShelf = new Map(shelf.filter((f) => f.imdb).map((f) => [f.imdb, f]));
-      const adds = [], updates = [];
-      for (const e of byId.values()) {
-        const f = onShelf.get(e.imdb);
-        if (!f) adds.push(e);
-        else if (r10Of(f) !== e.r10 || f.watched !== e.watched || f.rating10 == null) updates.push({ f, ...e });
+      // a film already on any shelf is never new, even if PTP now dates it this year
+      const everywhere = new Set();
+      for (const d of shelves.values()) for (const f of d.films || []) if (f.imdb) everywhere.add(f.imdb);
+      const adds = [...byId.values()].filter((e) => !everywhere.has(e.imdb));
+      const updates = [], missing = [];
+      for (const [path, d] of shelves) {
+        for (const f of d.films || []) {
+          const e = f.imdb && latest.get(f.imdb);
+          if (!e) missing.push({ path, f, shelf: shelfName(d) });
+          else if (r10Of(f) !== e.r10 || f.rating10 == null) updates.push({ path, f, shelf: shelfName(d), r10: e.r10 });
+        }
       }
-      const missing = shelf.filter((f) => !f.imdb || !byId.has(f.imdb));
       adds.sort((a, b) => a.watched.localeCompare(b.watched));
 
-      state = { data, year, adds, updates, missing, remove: new Set() };
+      state = { shelves, openFile, data, year, adds, updates, missing, remove: new Set() };
       renderPlan();
       if (adds.length) await lookUpNew();
       goBtn.disabled = !(adds.length || updates.length);
-      if (!adds.length && !updates.length) status(`Nothing to record. The shelf already matches your ${year} ratings.`, 'ok');
+      if (!adds.length && !updates.length) status(`Nothing to record. Every shelf already matches your ratings${year ? `, and every ${year} film is on this one` : ''}.`, 'ok');
     } catch (e) {
       status(e.message, 'err');
     }
@@ -260,32 +272,29 @@
   function renderPlan() {
     const { year, adds, updates, missing } = state;
     out.textContent = '';
-    const changed = updates.filter((u) => r10Of(u.f) !== u.r10 || u.f.watched !== u.watched);
-    status(`Films rated in ${year}: ${adds.length} new, ${changed.length} with a changed rating or date.`);
+    status(year
+      ? `Films rated in ${year}: ${adds.length} new. On every shelf: ${updates.length} with a changed rating.`
+      : `On every shelf: ${updates.length} with a changed rating. (New films are added from a year shelf.)`);
 
     if (updates.length) {
       const d = h('details', 'vcr-list');
-      d.append(h('summary', null, `${updates.length} already on the shelf${changed.length ? `, ${changed.length} with a new rating or date` : ''}`));
+      d.open = true;
+      d.append(h('summary', null, `${updates.length} new rating${updates.length > 1 ? 's' : ''} (watch dates and shelves stay as they are)`));
       const ul = h('ul');
-      updates.forEach((u) => {
-        const bits = [];
-        if (r10Of(u.f) !== u.r10) bits.push(`${r10Of(u.f)} → ${u.r10}`); else bits.push(`${u.r10}`);
-        if (u.f.watched !== u.watched) bits.push(`${fmt(u.f.watched)} → ${fmt(u.watched)}`);
-        ul.append(h('li', null, `${u.f.title}  ·  ${bits.join('  ·  ')}`));
-      });
+      updates.forEach((u) => ul.append(h('li', null, `${u.f.title}  ·  ${u.f.rating10 == null ? '' : `${r10Of(u.f)} → `}${u.r10}  ·  ${u.shelf}`)));
       d.append(ul);
       out.append(d);
     }
 
     if (missing.length) {
       const d = h('details', 'vcr-list');
-      d.append(h('summary', null, `${missing.length} on the shelf but not in this CSV (kept unless you tick them)`));
+      d.append(h('summary', null, `${missing.length} on a shelf but not in this CSV (kept unless you tick them)`));
       const ul = h('ul');
-      missing.forEach((f) => {
+      missing.forEach((m) => {
         const li = h('li'); const l = h('label');
         const c = h('input'); c.type = 'checkbox';
-        c.addEventListener('change', () => { c.checked ? state.remove.add(f) : state.remove.delete(f); goBtn.disabled = !(state.adds.length || state.updates.length || state.remove.size); });
-        l.append(c, document.createTextNode(` remove ${f.title} (${fmt(f.watched)})`));
+        c.addEventListener('change', () => { c.checked ? state.remove.add(m.f) : state.remove.delete(m.f); goBtn.disabled = !(state.adds.length || state.updates.length || state.remove.size); });
+        l.append(c, document.createTextNode(` remove ${m.f.title} (${m.shelf})`));
         li.append(l); ul.append(li);
       });
       d.append(ul);
@@ -421,27 +430,33 @@
     goBtn.disabled = true;
     const busy = status('Recording…');
     try {
-      const { data, adds, updates, remove } = state;
+      const { shelves, openFile, adds, updates, remove } = state;
       const upd = new Map(updates.map((u) => [u.f, u]));
-      const films = (data.films || [])
-        .filter((f) => !remove.has(f))
-        .map((f) => {
-          const u = upd.get(f);
-          return u ? { ...f, rating: starsOf(u.r10), rating10: u.r10, watched: u.watched } : f;
-        });
       const added = adds.filter((e) => e.film).map((e) => {
         const f = { ...e.film };
         if (!f.titleBox || !f.titleBox.length) delete f.titleBox;
         return f;
       });
-      const taken = new Set(films.map((f) => f.poster));
-      for (const f of added) {
-        if (f.poster && taken.has(f.poster)) f.poster = f.poster.replace(/\.jpg$/, `-${f.imdb}.jpg`);
-        taken.add(f.poster);
+      const files = [];
+      for (const [path, data] of shelves) {
+        const old = data.films || [];
+        // rating only: the watched date (so the tape's shelf and its place on it) never changes here
+        let films = old.filter((f) => !remove.has(f)).map((f) => {
+          const u = upd.get(f);
+          return u ? { ...f, rating: starsOf(u.r10), rating10: u.r10 } : f;
+        });
+        const adding = path === openFile && added.length;
+        if (!adding && films.length === old.length && films.every((f, i) => f === old[i])) continue;
+        if (adding) {
+          const taken = new Set(films.map((f) => f.poster));
+          for (const f of added) {
+            if (f.poster && taken.has(f.poster)) f.poster = f.poster.replace(/\.jpg$/, `-${f.imdb}.jpg`);
+            taken.add(f.poster);
+          }
+          films = [...films, ...added].sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
+        }
+        files.push({ path, content: JSON.stringify({ ...data, films }, null, 2) + '\n' });
       }
-      const next = { ...data, films: [...films, ...added].sort((a, b) => (a.watched || '').localeCompare(b.watched || '')) };
-
-      const files = [{ path: DATA(), content: JSON.stringify(next, null, 2) + '\n' }];
       for (const e of adds) {
         const f = added.find((a) => a.imdb === e.imdb);
         if (e.posterBlob && f && f.poster) files.push({ path: f.poster, blob: e.posterBlob });
@@ -693,4 +708,5 @@
     }
   }
   window.addEventListener('beforeunload', (e) => { if (pending.size) { e.preventDefault(); e.returnValue = ''; } });
+  if (location.hash === '#vcr') open();
 })();

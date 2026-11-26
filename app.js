@@ -1289,6 +1289,7 @@
     shelf: SHELF,        // the year on show, or the Vault's decade ('1990s')
     vault: IN_VAULT,
     all: IN_ALL,         // the Whole Store: built from every shelf file, so vcr.js changes nothing here
+    shelfFiles: YEARS.map((k) => SHELVES[k]), // every shelf's data file (vcr.js syncs ratings across all of them)
     dataFile: DATA_FILE, // films.json for the newest year, films-<year>.json for older ones (vcr.js reads and commits this)
     get films() { return films; },
     get current() { return current >= 0 ? films[current] : null; },

@@ -3005,26 +3005,6 @@
       "logo": "logos/14.png"
     },
     {
-      "title": "Sleepless in America",
-      "rating": 3.5,
-      "rating10": 7,
-      "watched": "2015-04-16",
-      "imdb": "tt4244650",
-      "poster": "",
-      "imdbRating": 7.3,
-      "imdbVotes": 40,
-      "year": 2014,
-      "tmdb": 306408,
-      "tmdbKind": "movie",
-      "runtime": 45,
-      "director": "John Hoffman",
-      "genres": [
-        "Documentary"
-      ],
-      "studio": "",
-      "logo": ""
-    },
-    {
       "title": "Tales of the Grim Sleeper",
       "rating": 4.5,
       "rating10": 8.5,
