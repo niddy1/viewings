@@ -847,3 +847,46 @@ body.store-open { overflow: hidden; }
 .bay.all .nm { font-size: 2rem; }
 .bay.all .n { text-align: left; }
 @media (max-width: 640px) { .bay.all { flex-direction: column; align-items: flex-start; gap: 4px; } }
+
+/* ---------- the receipt: a year shelf's rentals on thermal paper (app.js, "the receipt") ---------- */
+.receipt-wrap { position: fixed; inset: 0; z-index: 22; }
+.receipt-wrap[hidden] { display: none; }
+.receipt-backdrop { position: absolute; inset: 0; background: rgba(6,9,20,.78); backdrop-filter: blur(3px); }
+.receipt-slot { position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; padding: 4vh 16px 6vh; display: flex; flex-direction: column; align-items: center; pointer-events: none; }
+.receipt-slot > * { pointer-events: auto; }
+.receipt-x { position: fixed; top: 14px; right: 18px; appearance: none; background: none; border: 0; color: #f2bd0a; font-size: 38px; line-height: .7; cursor: pointer; z-index: 1; }
+.receipt-x:hover, .receipt-x:focus-visible { color: #fff2b8; outline: none; }
+.receipt-paper {
+  --ink: #2c2a28;
+  width: min(380px, 100%); box-sizing: border-box; padding: 30px 26px 34px; color: var(--ink);
+  font: 400 14px/1.45 'Courier Prime', 'Courier New', monospace; letter-spacing: .02em; text-transform: uppercase;
+  background: linear-gradient(90deg, rgba(0,0,0,.035), transparent 6%, transparent 94%, rgba(0,0,0,.035)), #f6f3ea;
+  box-shadow: 0 18px 40px rgba(0,0,0,.45);
+  /* torn top and bottom edges */
+  --tooth: 9px;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / var(--tooth) 51% repeat-x,
+                conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / var(--tooth) 51% repeat-x;
+          mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) bottom / var(--tooth) 51% repeat-x,
+                conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / var(--tooth) 51% repeat-x;
+  animation: receipt-print 1.6s steps(30) both;
+}
+@keyframes receipt-print { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+@media (prefers-reduced-motion: reduce) { .receipt-paper { animation: none; } }
+.receipt-paper .r-head { text-align: center; }
+.receipt-paper .r-store { font: 400 30px/1 'Blockletter', 'Bebas Neue', sans-serif; letter-spacing: .04em; margin-bottom: 6px; }
+.receipt-paper .r-c { text-align: center; }
+.receipt-paper .r-period { margin-top: 8px; font-weight: 700; }
+.receipt-paper .r-rule { border-top: 2px dashed var(--ink); margin: 12px 0; opacity: .75; }
+.receipt-paper .r-rule.dash { border-top-style: dotted; }
+.receipt-paper .r-row { display: flex; gap: 10px; align-items: baseline; }
+.receipt-paper .r-l { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.receipt-paper .r-r { flex: none; text-align: right; white-space: nowrap; }
+.receipt-paper .r-d { display: inline-block; width: 6ch; }
+.receipt-paper .r-colhead { font-weight: 700; margin-bottom: 4px; }
+.receipt-paper .r-item { font-size: 13px; }
+.receipt-paper .r-big { font-weight: 700; font-size: 16px; }
+.receipt-paper .r-pick { margin: 0 0 8px; }
+.receipt-paper .r-k { font-size: 11px; letter-spacing: .12em; opacity: .7; }
+.receipt-paper .r-bars { display: block; width: 70%; height: 46px; margin: 16px auto 4px; fill: var(--ink); }
+.receipt-paper .r-small { font-size: 11px; letter-spacing: .3em; }
+.receipt-paper .r-thanks { margin-top: 14px; font-weight: 700; }

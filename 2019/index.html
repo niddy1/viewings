@@ -21,7 +21,7 @@
   <!-- /preview -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:wght@500;600&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:wght@500;600&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,6 +49,7 @@
     <div class="finder" id="finder" role="group" aria-label="The whole store" hidden>
       <button type="button" id="find-btn" title="Search every shelf (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>Find a tape</button>
       <button type="button" id="lucky-btn" title="A random tape from any shelf">Surprise me</button>
+      <button type="button" id="receipt-btn" title="This year's rentals, itemised" hidden>Receipt</button>
     </div>
     <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
   </header>
@@ -119,6 +120,15 @@
         <button type="button" id="store-lucky">Surprise me</button>
         <span class="keys"><kbd>/</kbd> find <kbd>[</kbd><kbd>]</kbd> next shelf <kbd>Esc</kbd> close</span>
       </div>
+    </div>
+  </div>
+
+  <!-- the year-in-review receipt: every tape rented on this year shelf, itemised, with totals (app.js, "the receipt") -->
+  <div class="receipt-wrap" id="receipt" hidden>
+    <div class="receipt-backdrop" data-close></div>
+    <div class="receipt-slot" role="dialog" aria-modal="true" aria-label="Year in review receipt">
+      <button type="button" class="receipt-x" data-close aria-label="Close">&times;</button>
+      <div class="receipt-paper" id="receipt-paper"></div>
     </div>
   </div>
 

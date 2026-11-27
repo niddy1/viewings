@@ -1282,13 +1282,113 @@
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target;
     if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-    if (document.querySelector('.vcr.open')) return;
+    if (document.querySelector('.vcr.open') || !$('receipt').hidden) return;
     if (e.key === '/') { e.preventDefault(); openStore(true); }
     else if ((e.key === '[' || e.key === ']') && store.hidden) {
       const a = $(e.key === '[' ? 'shelf-prev' : 'shelf-next');
       if (a && !a.hidden && a.href) location.href = a.href;
     }
   }, true);
+
+  /* ---------- the receipt: a year shelf's rentals itemised on thermal paper, with the year's totals ---------- */
+  // Year shelves only (the Vault has no viewing dates). Opened by the Receipt button; ?receipt in the address opens it
+  // on load, so the link can be shared. Built from `films` (the whole year, whatever the sort or genre filter).
+  const receipt = $('receipt'), paper = $('receipt-paper');
+  const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+  const MONTH_NAMES = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
+  const escR = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+  const fmtR = (v) => (Number.isInteger(v) ? `${v}.0` : String(v));
+  const mmdd = (iso) => (iso ? `${iso.slice(5, 7)}/${iso.slice(8, 10)}` : '--/--');
+
+  function receiptHTML() {
+    const year = Number(SHELF), list = films.slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
+    const n = list.length;
+    const mins = list.reduce((s, f) => s + (f.runtime || 0), 0);
+    const avg = n ? list.reduce((s, f) => s + r10(f), 0) / n : 0;
+    const best = list.slice().sort((a, b) => r10(b) - r10(a) || (b.imdbVotes || 0) - (a.imdbVotes || 0))[0];
+    const worst = list.slice().sort((a, b) => r10(a) - r10(b) || (b.imdbVotes || 0) - (a.imdbVotes || 0))[0];
+    const tally = (key) => { const m = new Map(); list.forEach((f) => key(f).forEach((k) => k && m.set(k, (m.get(k) || 0) + 1))); return [...m].sort((a, b) => b[1] - a[1]); };
+    const dirs = tally((f) => String(f.director || '').split(',').map((d) => d.trim()));
+    const genres = tally((f) => f.genres || []);
+    const months = tally((f) => [f.watched ? Number(f.watched.slice(5, 7)) - 1 : null].filter((m) => m != null));
+    const oldest = list.filter((f) => f.year).sort((a, b) => a.year - b.year)[0];
+    const longest = list.filter((f) => f.runtime).sort((a, b) => b.runtime - a.runtime)[0];
+    const gap = (f) => r10(f) - f.imdbRating;
+    const scored = list.filter((f) => f.imdbRating);
+    // the you-vs-IMDb picks skip a tape already named above (the staff pick, the one not to rent)
+    const loved = scored.filter((f) => f !== best).sort((a, b) => gap(b) - gap(a))[0];
+    const cold = scored.filter((f) => f !== worst).sort((a, b) => gap(a) - gap(b))[0];
+    const last = list.length ? list[list.length - 1].watched : null;
+    const thisYear = year === new Date().getFullYear();
+    const now = new Date(), today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`; // local date, not UTC
+    const printed = thisYear ? today : `${year}-12-31`;
+    const period = thisYear && last ? `JAN 01 - ${MONTHS[Number(last.slice(5, 7)) - 1]} ${last.slice(8, 10)} ${year}` : `JAN 01 - DEC 31 ${year}`;
+    const hm = `${Math.floor(mins / 60)}H ${String(mins % 60).padStart(2, '0')}M`;
+    const row = (l, r, cls = '') => `<div class="r-row ${cls}"><span class="r-l">${l}</span><span class="r-r">${r}</span></div>`;
+    const pick = (label, f, right) => (f ? `<div class="r-pick"><div class="r-k">${label}</div>${row(escR(f.title), right)}</div>` : '');
+    const signed = (v) => `${v > 0 ? '+' : ''}${v.toFixed(1)}`;
+    // a barcode from the year and the count: bars of 1-3 units, seeded so a year always prints the same
+    let seed = year * 131 + n * 7, bars = '', x = 0;
+    for (let i = 0; i < 46; i++) { seed = (seed * 1103515245 + 12345) & 0x7fffffff; const w = 1 + (seed >> 8) % 3; if (i % 2 === 0) bars += `<rect x="${x}" width="${w}" height="40"/>`; x += w; }
+    return `
+      <div class="r-head">
+        <div class="r-store">VIEWINGS VIDEO</div>
+        <div>RENTALS &middot; RETURNS &middot; REWINDS</div>
+        <div>IANANDREU.COM/VIEWINGS</div>
+      </div>
+      <div class="r-rule"></div>
+      ${row('MEMBER', 'IAN A.')}${row('ACCT', '#00087')}${row('DATE', `${mmdd(printed)}/${printed.slice(0, 4)}`)}
+      <div class="r-c r-period">YEAR IN REVIEW<br>${period}</div>
+      <div class="r-rule"></div>
+      ${row('DATE&nbsp; TITLE', 'RATING', 'r-colhead')}
+      ${list.map((f) => row(`<span class="r-d">${mmdd(f.watched)}</span>${escR(f.title.toUpperCase())}`, fmtR(r10(f)), 'r-item')).join('')}
+      <div class="r-rule"></div>
+      ${row('TAPES RENTED', n, 'r-big')}
+      ${mins ? row('TIME IN FRONT OF THE TV', hm) : ''}
+      ${row('AVERAGE RATING', avg.toFixed(1))}
+      ${dirs.length && dirs[0][1] > 1 ? row('TOP DIRECTOR', `${escR(dirs[0][0].toUpperCase())} x${dirs[0][1]}`) : ''}
+      ${genres.length ? row('FAVOURITE AISLE', `${escR(genres[0][0].toUpperCase())} x${genres[0][1]}`) : ''}
+      ${months.length ? row('BUSIEST MONTH', `${MONTH_NAMES[months[0][0]]} x${months[0][1]}`) : ''}
+      <div class="r-rule dash"></div>
+      ${pick('STAFF PICK', best, fmtR(r10(best || {})))}
+      ${pick('PLEASE DO NOT RENT', worst !== best ? worst : null, fmtR(r10(worst || {})))}
+      ${pick('OLDEST TAPE', oldest, oldest && oldest.year)}
+      ${pick('LONGEST TAPE', longest, longest && `${longest.runtime} MIN`)}
+      ${loved && gap(loved) > 0 ? pick('YOU LIKED MORE THAN IMDB DID', loved, signed(gap(loved))) : ''}
+      ${cold && gap(cold) < 0 ? pick('IMDB LIKED MORE THAN YOU DID', cold, signed(gap(cold))) : ''}
+      <div class="r-rule"></div>
+      ${row('LATE FEES', '$0.00', 'r-big')}
+      <div class="r-c">*** EVERY TAPE REWOUND ***</div>
+      <svg class="r-bars" viewBox="0 0 ${x} 40" preserveAspectRatio="none" aria-hidden="true">${bars}</svg>
+      <div class="r-c r-small">${year}${String(n).padStart(4, '0')}${String(mins % 10000).padStart(4, '0')}</div>
+      <div class="r-c r-thanks">THANK YOU FOR RENTING<br>BE KIND, PLEASE REWIND</div>`;
+  }
+
+  function setReceiptParam(on) {
+    const q = new URLSearchParams(location.search);
+    if (on) q.set('receipt', ''); else q.delete('receipt');
+    const qs = q.toString().replace(/receipt=(&|$)/, 'receipt$1');
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+  let receiptFocus = null;
+  function openReceipt() {
+    if (!receipt.hidden) return;
+    receiptFocus = document.activeElement;
+    paper.innerHTML = receiptHTML();
+    receipt.hidden = false; document.body.classList.add('store-open');
+    paper.scrollTop = 0; receipt.querySelector('.receipt-slot').scrollTop = 0;
+    receipt.querySelector('.receipt-x').focus({ preventScroll: true });
+    setReceiptParam(true);
+  }
+  function closeReceipt() {
+    if (receipt.hidden) return;
+    receipt.hidden = true; document.body.classList.remove('store-open');
+    setReceiptParam(false);
+    if (receiptFocus && receiptFocus.focus) receiptFocus.focus({ preventScroll: true });
+  }
+  receipt.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', closeReceipt));
+  $('receipt-btn').addEventListener('click', openReceipt);
+  document.addEventListener('keydown', (e) => { if (!receipt.hidden && e.key === 'Escape') { e.stopPropagation(); closeReceipt(); } }, true);
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
@@ -1335,6 +1435,10 @@
     layout();
     controls.hidden = false;
     $('finder').hidden = false;
+    if (!IN_VAULT && !IN_ALL) {
+      $('receipt-btn').hidden = false;
+      if (new URLSearchParams(location.search).has('receipt')) openReceipt();
+    }
     const want = new URLSearchParams(location.search).get('tape');
     if (want && !pullOut(want, true)) setTapeParam(null); // ?tape= from a shared link or a search result on another shelf
     let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(layout, 150); });
