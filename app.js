@@ -1028,10 +1028,7 @@
     $('v-play').hidden = !f.trailer;
   }
 
-  /* ---------- sound: synthesised with Web Audio (no sound files); off until the speaker button turns it on ---------- */
-  const SOUND_KEY = 'viewings.sound';
-  let soundOn = false;
-  try { soundOn = localStorage.getItem(SOUND_KEY) === 'on'; } catch { /* storage off: stays off */ }
+  /* ---------- sound: the trailer deck's clunks and clicks, synthesised with Web Audio (no sound files) ---------- */
   let actx = null, noise = null;
   function audio() {
     if (!actx) {
@@ -1055,14 +1052,8 @@
     o.connect(g).connect(c.destination); o.start(at); o.stop(at + dur + .02);
   }
   const SFX = {
-    // a tape slides out of the shelf and knocks: sleeve scrape, then the case
-    out(c, t) { burst(c, t, .16, 'bandpass', 2400, .9, .09); thump(c, t + .13, 190, 80, .2, .32); burst(c, t + .13, .035, 'highpass', 3200, .7, .12); },
-    // pushed back in: shorter, softer
-    back(c, t) { burst(c, t, .11, 'bandpass', 2000, .9, .06); thump(c, t + .09, 150, 70, .16, .2); },
     // a deck key: a short plastic click
     key(c, t) { thump(c, t, 1400, 700, .03, .12); burst(c, t, .02, 'highpass', 4000, .7, .05); },
-    // the next tape off the shelf (prev/next in the viewer)
-    swap(c, t) { burst(c, t, .09, 'bandpass', 2600, 1, .05); thump(c, t + .07, 210, 110, .12, .14); },
     // the VCR takes the tape: clunk, the motor spins up and runs, then a click as the heads engage
     load(c, t) {
       burst(c, t, .12, 'bandpass', 1800, 1, .07); thump(c, t + .1, 120, 60, .25, .4);
@@ -1083,15 +1074,7 @@
       thump(c, t + .48, 160, 70, .18, .3);
     },
   };
-  function sfx(name) { if (!soundOn) return; try { const c = audio(); SFX[name](c, c.currentTime + .01); } catch { /* no audio: carry on silently */ } }
-  const soundBtn = $('sound-btn');
-  function renderSound() { soundBtn.setAttribute('aria-pressed', soundOn); soundBtn.classList.toggle('on', soundOn); soundBtn.title = soundOn ? 'Sound on (click to mute)' : 'Sound off (click for sound effects)'; }
-  soundBtn.addEventListener('click', () => {
-    soundOn = !soundOn;
-    try { localStorage.setItem(SOUND_KEY, soundOn ? 'on' : 'off'); } catch { /* not remembered */ }
-    renderSound(); sfx('swap');
-  });
-  renderSound();
+  function sfx(name) { try { const c = audio(); SFX[name](c, c.currentTime + .01); } catch { /* no audio: carry on silently */ } }
 
   /* ---------- the trailer: into the VCR, onto the CRT ---------- */
   // `trailer` on a film is a YouTube id (from TMDB's trailer list, 26 Nov 2026). The Play button shows only when there is one.
@@ -1181,7 +1164,6 @@
   document.addEventListener('keydown', (e) => { if (!tv.hidden && e.key === 'Escape') { e.stopPropagation(); closeTrailer(); } }, true);
 
   function openViewer(i) {
-    sfx('out');
     const el = spineEls[i];
     el.classList.add('pulling');
     setTimeout(() => {
@@ -1194,7 +1176,6 @@
 
   function closeViewer() {
     if (current < 0) return;
-    sfx('back');
     const el = spineEls[current];
     el.classList.remove('out'); el.classList.add('back');
     setTimeout(() => el.classList.remove('back'), 520);
@@ -1210,7 +1191,6 @@
     if (p < 0 || order.length < 2) return;
     const n = order[(p + d + order.length) % order.length];
     spineEls[current].classList.remove('out');
-    sfx('swap');
     current = n; spineEls[n].classList.add('out'); fill(n); setTapeParam(films[n]);
   }
 
@@ -1563,7 +1543,6 @@
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
-    sfx,                 // sound effects (no-ops while the sound is off); vcr.js whirs when its panel opens
     shelf: SHELF,        // the year on show, or the Vault's decade ('1990s')
     vault: IN_VAULT,
     all: IN_ALL,         // the Whole Store: built from every shelf file, so vcr.js changes nothing here

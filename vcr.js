@@ -141,7 +141,6 @@
 
   function open() {
     if (!root) build();
-    if (!root.classList.contains('open') && window.viewings && window.viewings.sfx) window.viewings.sfx('load');
     root.classList.add('open');
     root.setAttribute('aria-hidden', 'false');
     renderKeys();
