@@ -20,7 +20,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 97044
     },
     {
       "title": "La Dolce Vita",
@@ -39,7 +41,9 @@
         "Drama"
       ],
       "studio": "Cinecittà Studios",
-      "logo": "logos/1042.png"
+      "logo": "logos/1042.png",
+      "imdbRating": 8,
+      "imdbVotes": 87051
     },
     {
       "title": "Le Trou",
@@ -59,7 +63,9 @@
         "Crime"
       ],
       "studio": "Titanus",
-      "logo": "logos/641.png"
+      "logo": "logos/641.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 24542
     },
     {
       "title": "Our Man in Havana",
@@ -78,7 +84,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 6978
     },
     {
       "title": "Peeping Tom",
@@ -119,7 +127,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.5,
+      "imdbVotes": 800874
     },
     {
       "title": "Shoot the Piano Player",
@@ -139,7 +149,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 22185
     },
     {
       "title": "Spartacus",
@@ -159,7 +171,9 @@
         "Adventure"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 153194
     },
     {
       "title": "The Apartment",
@@ -179,7 +193,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 224723
     },
     {
       "title": "The Bad Sleep Well",
@@ -199,7 +215,9 @@
         "Thriller"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 15851
     },
     {
       "title": "Tunes of Glory",
@@ -217,7 +235,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 5272
     },
     {
       "title": "Breakfast at Tiffany's",
@@ -237,7 +257,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 207396
     },
     {
       "title": "Divorce Italian Style",
@@ -274,7 +296,9 @@
         "Drama"
       ],
       "studio": "Titanus",
-      "logo": "logos/641.png"
+      "logo": "logos/641.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 7948
     },
     {
       "title": "One Hundred and One Dalmatians",
@@ -295,7 +319,9 @@
         "Family"
       ],
       "studio": "Walt Disney Productions",
-      "logo": "logos/3166.png"
+      "logo": "logos/3166.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 200136
     },
     {
       "title": "The Human Condition III: A Soldier's Prayer",
@@ -315,7 +341,9 @@
         "History"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.8,
+      "imdbVotes": 9305
     },
     {
       "title": "The Hustler",
@@ -334,7 +362,9 @@
         "Romance"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 90903
     },
     {
       "title": "The Shadow of the Cat",
@@ -373,7 +403,9 @@
         "Drama"
       ],
       "studio": "Films 59",
-      "logo": "logos/37802.png"
+      "logo": "logos/37802.png",
+      "imdbRating": 8,
+      "imdbVotes": 28747
     },
     {
       "title": "West Side Story",
@@ -414,7 +446,9 @@
         "Thriller"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 145639
     },
     {
       "title": "Carnival of Souls",
@@ -434,7 +468,9 @@
         "Fantasy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7,
+      "imdbVotes": 32188
     },
     {
       "title": "Harakiri",
@@ -454,7 +490,9 @@
         "History"
       ],
       "studio": "Shochiku",
-      "logo": "logos/192.png"
+      "logo": "logos/192.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 95892
     },
     {
       "title": "Jules and Jim",
@@ -473,7 +511,9 @@
         "Romance"
       ],
       "studio": "Les Films du Carrosse",
-      "logo": "logos/53.png"
+      "logo": "logos/53.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 47483
     },
     {
       "title": "Knife in the Water",
@@ -492,7 +532,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 25577
     },
     {
       "title": "Lawrence of Arabia",
@@ -512,7 +554,9 @@
         "War"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 348779
     },
     {
       "title": "Lolita",
@@ -554,7 +598,9 @@
         "Comedy"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8,
+      "imdbVotes": 44106
     },
     {
       "title": "The Trial",
@@ -594,7 +640,9 @@
         "Drama"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 354783
     },
     {
       "title": "Billy Liar",
@@ -614,7 +662,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 7830
     },
     {
       "title": "Charade",
@@ -634,7 +684,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 95424
     },
     {
       "title": "Contempt",
@@ -653,7 +705,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 40028
     },
     {
       "title": "High and Low",
@@ -718,7 +772,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.8,
+      "imdbVotes": 22400
     },
     {
       "title": "Shock Corridor",
@@ -738,7 +794,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 14268
     },
     {
       "title": "The Birds",
@@ -757,7 +815,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 223673
     },
     {
       "title": "The Fiancés",
@@ -775,7 +835,9 @@
         "Drama"
       ],
       "studio": "Titanus",
-      "logo": "logos/641.png"
+      "logo": "logos/641.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 2692
     },
     {
       "title": "The Great Escape",
@@ -795,7 +857,9 @@
         "War"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 281832
     },
     {
       "title": "The Pink Panther",
@@ -814,7 +878,9 @@
         "Crime"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 7,
+      "imdbVotes": 62812
     },
     {
       "title": "The Sword in the Stone",
@@ -857,7 +923,9 @@
         "Mystery"
       ],
       "studio": "Nikkatsu Corporation",
-      "logo": "logos/955.png"
+      "logo": "logos/955.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 4330
     },
     {
       "title": "A Fistful of Dollars",
@@ -897,7 +965,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 29412
     },
     {
       "title": "Diary of a Chambermaid",
@@ -916,7 +986,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 10728
     },
     {
       "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
@@ -935,7 +1007,9 @@
         "War"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 557543
     },
     {
       "title": "Marnie",
@@ -955,7 +1029,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 58423
     },
     {
       "title": "Mary Poppins",
@@ -996,7 +1072,9 @@
         "Mystery"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7,
+      "imdbVotes": 10750
     },
     {
       "title": "The Naked Kiss",
@@ -1015,7 +1093,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 9955
     },
     {
       "title": "The Tomb of Ligeia",
@@ -1056,7 +1136,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 30568
     },
     {
       "title": "Doctor Zhivago",
@@ -1076,7 +1158,9 @@
         "War"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 88496
     },
     {
       "title": "For a Few Dollars More",
@@ -1094,7 +1178,9 @@
         "Western"
       ],
       "studio": "PEA",
-      "logo": "logos/7508.png"
+      "logo": "logos/7508.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 305859
     },
     {
       "title": "Juliet of the Spirits",
@@ -1114,7 +1200,9 @@
         "Fantasy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 15997
     },
     {
       "title": "Story of a Prostitute",
@@ -1134,7 +1222,9 @@
         "War"
       ],
       "studio": "Nikkatsu Corporation",
-      "logo": "logos/955.png"
+      "logo": "logos/955.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 1819
     },
     {
       "title": "Death of a Salesman",
@@ -1153,7 +1243,9 @@
         "TV Movie"
       ],
       "studio": "CBS",
-      "logo": "logos/4898.png"
+      "logo": "logos/4898.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 787
     },
     {
       "title": "Hotel Paradiso",
@@ -1171,7 +1263,9 @@
         "Comedy"
       ],
       "studio": "Metro-Goldwyn-Mayer British Studios",
-      "logo": "logos/5579.png"
+      "logo": "logos/5579.png",
+      "imdbRating": 6.1,
+      "imdbVotes": 1002
     },
     {
       "title": "Masculin Féminin",
@@ -1190,7 +1284,9 @@
         "Romance"
       ],
       "studio": "SF Studios",
-      "logo": "logos/6181.png"
+      "logo": "logos/6181.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 19401
     },
     {
       "title": "Persona",
@@ -1270,7 +1366,9 @@
         "Western"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 8.8,
+      "imdbVotes": 907661
     },
     {
       "title": "The Pornographers",
@@ -1290,7 +1388,9 @@
         "Romance"
       ],
       "studio": "Nikkatsu Corporation",
-      "logo": "logos/955.png"
+      "logo": "logos/955.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 2829
     },
     {
       "title": "The Sword of Doom",
@@ -1310,7 +1410,9 @@
         "Action"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 13525
     },
     {
       "title": "Tokyo Drifter",
@@ -1330,7 +1432,9 @@
         "Action"
       ],
       "studio": "Nikkatsu Corporation",
-      "logo": "logos/955.png"
+      "logo": "logos/955.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 10810
     },
     {
       "title": "Torn Curtain",
@@ -1348,7 +1452,9 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 32139
     },
     {
       "title": "Bonnie and Clyde",
@@ -1367,7 +1473,9 @@
         "Drama"
       ],
       "studio": "Warner Bros.-Seven Arts",
-      "logo": "logos/4051.png"
+      "logo": "logos/4051.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 128432
     },
     {
       "title": "Cool Hand Luke",
@@ -1386,7 +1494,9 @@
         "Crime"
       ],
       "studio": "Warner Bros.-Seven Arts",
-      "logo": "logos/4051.png"
+      "logo": "logos/4051.png",
+      "imdbRating": 8,
+      "imdbVotes": 198052
     },
     {
       "title": "Le Samouraï",
@@ -1406,7 +1516,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 68002
     },
     {
       "title": "Samurai Rebellion",
@@ -1424,7 +1536,9 @@
         "Drama"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 16030
     },
     {
       "title": "The Firemen's Ball",
@@ -1442,7 +1556,9 @@
         "Comedy"
       ],
       "studio": "Filmové studio Barrandov",
-      "logo": "logos/1931.png"
+      "logo": "logos/1931.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 13611
     },
     {
       "title": "The Graduate",
@@ -1462,7 +1578,9 @@
         "Comedy"
       ],
       "studio": "AVCO Embassy Pictures",
-      "logo": "logos/494.png"
+      "logo": "logos/494.png",
+      "imdbRating": 8,
+      "imdbVotes": 305571
     },
     {
       "title": "The Jungle Book",
@@ -1504,7 +1622,9 @@
         "Adventure"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 798234
     },
     {
       "title": "Rosemary's Baby",
@@ -1524,7 +1644,9 @@
         "Thriller"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8,
+      "imdbVotes": 263556
     },
     {
       "title": "Stolen Kisses",
@@ -1544,7 +1666,9 @@
         "Romance"
       ],
       "studio": "Les Films du Carrosse",
-      "logo": "logos/53.png"
+      "logo": "logos/53.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 16885
     },
     {
       "title": "The Party",
@@ -1583,7 +1707,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 30002
     },
     {
       "title": "Butch Cassidy and the Sundance Kid",
@@ -1603,7 +1729,9 @@
         "Drama"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 8,
+      "imdbVotes": 240675
     },
     {
       "title": "Double Suicide",
@@ -1622,7 +1750,9 @@
         "Romance"
       ],
       "studio": "hyogensha",
-      "logo": "logos/21728.png"
+      "logo": "logos/21728.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 2906
     },
     {
       "title": "Salesman",
@@ -1640,7 +1770,9 @@
         "Documentary"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 6298
     }
   ]
 }

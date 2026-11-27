@@ -20,7 +20,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 32560
     },
     {
       "title": "The Aristocats",
@@ -64,7 +66,9 @@
         "Thriller"
       ],
       "studio": "American International Pictures",
-      "logo": "logos/9266.png"
+      "logo": "logos/9266.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 6607
     },
     {
       "title": "A Clockwork Orange",
@@ -83,7 +87,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 950673
     },
     {
       "title": "Straw Dogs",
@@ -103,7 +109,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 69172
     },
     {
       "title": "The Cat o' Nine Tails",
@@ -185,7 +193,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 30332
     },
     {
       "title": "Willy Wonka & the Chocolate Factory",
@@ -205,7 +215,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 248673
     },
     {
       "title": "The Crimes of the Black Cat",
@@ -248,7 +260,9 @@
         "Thriller"
       ],
       "studio": "First Artists",
-      "logo": "logos/4376.png"
+      "logo": "logos/4376.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 38159
     },
     {
       "title": "The Godfather",
@@ -289,7 +303,9 @@
         "Music"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 7791
     },
     {
       "title": "The Ruling Class",
@@ -308,7 +324,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 7441
     },
     {
       "title": "Amarcord",
@@ -327,7 +345,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 52167
     },
     {
       "title": "F for Fake",
@@ -365,7 +385,9 @@
         "Horror"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 5.8,
+      "imdbVotes": 8043
     },
     {
       "title": "Mean Streets",
@@ -384,7 +406,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 130613
     },
     {
       "title": "Paper Moon",
@@ -425,7 +449,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 147633
     },
     {
       "title": "Robin Hood",
@@ -488,7 +514,9 @@
         "Drama"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 308514
     },
     {
       "title": "Blood for Dracula",
@@ -506,7 +534,9 @@
         "Horror"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.1,
+      "imdbVotes": 7812
     },
     {
       "title": "Bring Me the Head of Alfredo Garcia",
@@ -526,7 +556,9 @@
         "Drama"
       ],
       "studio": "Estudios Churubusco Azteca",
-      "logo": "logos/5153.png"
+      "logo": "logos/5153.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 23756
     },
     {
       "title": "Chinatown",
@@ -546,7 +578,9 @@
         "Thriller"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 382576
     },
     {
       "title": "Murder on the Orient Express",
@@ -566,7 +600,9 @@
         "Mystery"
       ],
       "studio": "EMI Films",
-      "logo": "logos/538.png"
+      "logo": "logos/538.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 75946
     },
     {
       "title": "The Conversation",
@@ -586,7 +622,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 138738
     },
     {
       "title": "The Godfather Part II",
@@ -627,7 +665,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 296390
     },
     {
       "title": "Jaws",
@@ -647,7 +687,9 @@
         "Adventure"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 755238
     },
     {
       "title": "Monty Python and the Holy Grail",
@@ -667,7 +709,9 @@
         "Fantasy"
       ],
       "studio": "Python (Monty) Pictures",
-      "logo": "logos/416.png"
+      "logo": "logos/416.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 610731
     },
     {
       "title": "One Flew Over the Cuckoo's Nest",
@@ -685,7 +729,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.6,
+      "imdbVotes": 1174980
     },
     {
       "title": "Marathon Man",
@@ -705,7 +751,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 77065
     },
     {
       "title": "Murder by Death",
@@ -725,7 +773,9 @@
         "Mystery"
       ],
       "studio": "Rastar Productions",
-      "logo": "logos/1177.png"
+      "logo": "logos/1177.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 46546
     },
     {
       "title": "Network",
@@ -743,7 +793,9 @@
         "Drama"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 8,
+      "imdbVotes": 189076
     },
     {
       "title": "Rocky",
@@ -782,7 +834,9 @@
         "Drama"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1049964
     },
     {
       "title": "The Man Who Fell to Earth",
@@ -802,7 +856,9 @@
         "Fantasy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.5,
+      "imdbVotes": 31846
     },
     {
       "title": "The Tenant",
@@ -822,7 +878,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 52395
     },
     {
       "title": "Annie Hall",
@@ -842,7 +900,9 @@
         "Romance"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 293754
     },
     {
       "title": "Close Encounters of the Third Kind",
@@ -905,7 +965,9 @@
         "Science Fiction"
       ],
       "studio": "Lucasfilm Ltd.",
-      "logo": "logos/1.png"
+      "logo": "logos/1.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 1599491
     },
     {
       "title": "Suspiria",
@@ -946,7 +1008,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 27401
     },
     {
       "title": "The Many Adventures of Winnie the Pooh",
@@ -966,7 +1030,9 @@
         "Adventure"
       ],
       "studio": "Walt Disney Productions",
-      "logo": "logos/3166.png"
+      "logo": "logos/3166.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 43763
     },
     {
       "title": "The Rescuers",
@@ -1007,7 +1073,9 @@
         "Comedy"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 137402
     },
     {
       "title": "Autumn Sonata",
@@ -1025,7 +1093,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 44114
     },
     {
       "title": "The Brink's Job",
@@ -1131,7 +1201,9 @@
         "Science Fiction"
       ],
       "studio": "Brandywine Productions",
-      "logo": "logos/401.png"
+      "logo": "logos/401.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 1084558
     },
     {
       "title": "Apocalypse Now",
@@ -1150,7 +1222,9 @@
         "War"
       ],
       "studio": "American Zoetrope",
-      "logo": "logos/70.png"
+      "logo": "logos/70.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 782840
     },
     {
       "title": "Kramer vs. Kramer",
@@ -1168,7 +1242,9 @@
         "Drama"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 169400
     },
     {
       "title": "The Warriors",
@@ -1208,7 +1284,9 @@
         "Drama"
       ],
       "studio": "Shochiku",
-      "logo": "logos/192.png"
+      "logo": "logos/192.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 8303
     }
   ]
 }

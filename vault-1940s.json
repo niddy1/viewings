@@ -42,7 +42,9 @@
         "Action"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 26669
     },
     {
       "title": "His Girl Friday",
@@ -62,7 +64,9 @@
         "Crime"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 69057
     },
     {
       "title": "Pinocchio",
@@ -82,7 +86,9 @@
         "Fantasy"
       ],
       "studio": "Walt Disney Productions",
-      "logo": "logos/3166.png"
+      "logo": "logos/3166.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 175708
     },
     {
       "title": "Rebecca",
@@ -102,7 +108,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 163113
     },
     {
       "title": "The Bank Dick",
@@ -120,7 +128,9 @@
         "Comedy"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 8351
     },
     {
       "title": "The Philadelphia Story",
@@ -139,7 +149,9 @@
         "Romance"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 79718
     },
     {
       "title": "The Thief of Bagdad",
@@ -159,7 +171,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 16212
     },
     {
       "title": "Citizen Kane",
@@ -178,7 +192,9 @@
         "Drama"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 499021
     },
     {
       "title": "Dumbo",
@@ -218,7 +234,9 @@
         "Romance"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 12393
     },
     {
       "title": "Sullivan's Travels",
@@ -238,7 +256,9 @@
         "Adventure"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 31443
     },
     {
       "title": "Suspicion",
@@ -258,7 +278,9 @@
         "Thriller"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 46014
     },
     {
       "title": "The Lady Eve",
@@ -277,7 +299,9 @@
         "Romance"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 25918
     },
     {
       "title": "The Maltese Falcon",
@@ -297,7 +321,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 176453
     },
     {
       "title": "Bambi",
@@ -317,7 +343,9 @@
         "Family"
       ],
       "studio": "Walt Disney Productions",
-      "logo": "logos/3166.png"
+      "logo": "logos/3166.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 167980
     },
     {
       "title": "Cat People",
@@ -358,7 +386,9 @@
         "Mystery"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 30115
     },
     {
       "title": "Casablanca",
@@ -377,7 +407,9 @@
         "Romance"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 664907
     },
     {
       "title": "Le Corbeau",
@@ -397,7 +429,9 @@
         "Thriller"
       ],
       "studio": "Continental Films",
-      "logo": "logos/13705.png"
+      "logo": "logos/13705.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 12099
     },
     {
       "title": "Shadow of a Doubt",
@@ -417,7 +451,9 @@
         "Crime"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 76524
     },
     {
       "title": "Double Indemnity",
@@ -436,7 +472,9 @@
         "Thriller"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 184383
     },
     {
       "title": "Gaslight",
@@ -478,7 +516,9 @@
         "History"
       ],
       "studio": "Mosfilm",
-      "logo": "logos/344.png"
+      "logo": "logos/344.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 12004
     },
     {
       "title": "Laura",
@@ -497,7 +537,9 @@
         "Mystery"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 57336
     },
     {
       "title": "And Then There Were None",
@@ -517,7 +559,9 @@
         "Mystery"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 19094
     },
     {
       "title": "Brief Encounter",
@@ -536,7 +580,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 49578
     },
     {
       "title": "Spellbound",
@@ -556,7 +602,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 56419
     },
     {
       "title": "The Lost Weekend",
@@ -574,7 +622,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 43951
     },
     {
       "title": "To Have and Have Not",
@@ -594,7 +644,9 @@
         "War"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 41835
     },
     {
       "title": "Beauty and the Beast",
@@ -614,7 +666,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 30243
     },
     {
       "title": "Gilda",
@@ -634,7 +688,9 @@
         "Thriller"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 38077
     },
     {
       "title": "Green for Danger",
@@ -676,7 +732,9 @@
         "Fantasy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.6,
+      "imdbVotes": 564108
     },
     {
       "title": "Notorious",
@@ -696,7 +754,9 @@
         "Thriller"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 114113
     },
     {
       "title": "The Big Sleep",
@@ -716,7 +776,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 95531
     },
     {
       "title": "The Killers",
@@ -736,7 +798,9 @@
         "Thriller"
       ],
       "studio": "Universal International Pictures",
-      "logo": "logos/10330.png"
+      "logo": "logos/10330.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 26717
     },
     {
       "title": "Brute Force",
@@ -756,7 +820,9 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 13038
     },
     {
       "title": "Dark Passage",
@@ -775,7 +841,9 @@
         "Mystery"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 24626
     },
     {
       "title": "Jenny Lamour",
@@ -795,7 +863,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 7027
     },
     {
       "title": "The Lady from Shanghai",
@@ -836,7 +906,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.2,
+      "imdbVotes": 194468
     },
     {
       "title": "Key Largo",
@@ -855,7 +927,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 47955
     },
     {
       "title": "Oliver Twist",
@@ -873,7 +947,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 15280
     },
     {
       "title": "Rope",
@@ -893,7 +969,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 167561
     },
     {
       "title": "The Naked City",
@@ -914,7 +992,9 @@
         "Thriller"
       ],
       "studio": "Universal International Pictures",
-      "logo": "logos/10330.png"
+      "logo": "logos/10330.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 17441
     },
     {
       "title": "The Treasure of the Sierra Madre",
@@ -934,7 +1014,9 @@
         "Western"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 143505
     },
     {
       "title": "Kind Hearts and Coronets",
@@ -953,7 +1035,9 @@
         "Crime"
       ],
       "studio": "Ealing Studios",
-      "logo": "logos/2650.png"
+      "logo": "logos/2650.png",
+      "imdbRating": 8,
+      "imdbVotes": 42758
     },
     {
       "title": "Stray Dog",
@@ -974,7 +1058,9 @@
         "Mystery"
       ],
       "studio": "Shintoho Company",
-      "logo": "logos/3094.png"
+      "logo": "logos/3094.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 21424
     },
     {
       "title": "The Third Man",
@@ -993,7 +1079,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 198488
     },
     {
       "title": "Thieves' Highway",
@@ -1013,7 +1101,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 7704
     }
   ]
 }

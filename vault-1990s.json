@@ -20,7 +20,9 @@
         "Crime"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 71159
     },
     {
       "title": "Die Hard 2",
@@ -82,7 +84,9 @@
         "Crime"
       ],
       "studio": "Winkler Films",
-      "logo": "logos/8880.png"
+      "logo": "logos/8880.png",
+      "imdbRating": 8.7,
+      "imdbVotes": 1425340
     },
     {
       "title": "Home Alone",
@@ -143,7 +147,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 149939
     },
     {
       "title": "Teenage Mutant Ninja Turtles",
@@ -211,7 +217,9 @@
         "Horror"
       ],
       "studio": "Jim Henson Productions",
-      "logo": "logos/2504.png"
+      "logo": "logos/2504.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 60868
     },
     {
       "title": "Barton Fink",
@@ -231,7 +239,9 @@
         "Thriller"
       ],
       "studio": "Working Title",
-      "logo": "logos/10163.png"
+      "logo": "logos/10163.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 137107
     },
     {
       "title": "Beauty and the Beast",
@@ -252,7 +262,9 @@
         "Fantasy"
       ],
       "studio": "Walt Disney Pictures",
-      "logo": "logos/2.png"
+      "logo": "logos/2.png",
+      "imdbRating": 8,
+      "imdbVotes": 511903
     },
     {
       "title": "Boyz n the Hood",
@@ -338,7 +350,9 @@
         "Family"
       ],
       "studio": "Amblin Entertainment",
-      "logo": "logos/56.png"
+      "logo": "logos/56.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 296498
     },
     {
       "title": "Night on Earth",
@@ -357,7 +371,9 @@
         "Drama"
       ],
       "studio": "JVC",
-      "logo": "logos/182.png"
+      "logo": "logos/182.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 72106
     },
     {
       "title": "Terminator 2: Judgment Day",
@@ -377,7 +393,9 @@
         "Science Fiction"
       ],
       "studio": "Carolco Pictures",
-      "logo": "logos/275.png"
+      "logo": "logos/275.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 1312178
     },
     {
       "title": "The Fisher King",
@@ -396,7 +414,9 @@
         "Drama"
       ],
       "studio": "TriStar Pictures",
-      "logo": "logos/559.png"
+      "logo": "logos/559.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 98110
     },
     {
       "title": "The Silence of the Lambs",
@@ -416,7 +436,9 @@
         "Drama"
       ],
       "studio": "Orion Pictures",
-      "logo": "logos/41.png"
+      "logo": "logos/41.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 1768789
     },
     {
       "title": "3 Ninjas",
@@ -481,7 +503,9 @@
         "Romance"
       ],
       "studio": "Walt Disney Feature Animation",
-      "logo": "logos/171656.png"
+      "logo": "logos/171656.png",
+      "imdbRating": 8,
+      "imdbVotes": 508322
     },
     {
       "title": "Batman Returns",
@@ -522,7 +546,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 61298
     },
     {
       "title": "Home Alone 2: Lost in New York",
@@ -584,7 +610,9 @@
         "Thriller"
       ],
       "studio": "Live Entertainment",
-      "logo": "logos/285.png"
+      "logo": "logos/285.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1188564
     },
     {
       "title": "The Mighty Ducks",
@@ -626,7 +654,9 @@
         "Thriller"
       ],
       "studio": "Spelling Entertainment",
-      "logo": "logos/272.png"
+      "logo": "logos/272.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 73570
     },
     {
       "title": "Unforgiven",
@@ -644,7 +674,9 @@
         "Western"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 475502
     },
     {
       "title": "Dazed and Confused",
@@ -683,7 +715,9 @@
         "Drama"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7,
+      "imdbVotes": 26549
     },
     {
       "title": "Groundhog Day",
@@ -808,7 +842,9 @@
         "Comedy"
       ],
       "studio": "Spelling Films International",
-      "logo": "logos/18189.png"
+      "logo": "logos/18189.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 50600
     },
     {
       "title": "The Nightmare Before Christmas",
@@ -828,7 +864,9 @@
         "Family"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 421562
     },
     {
       "title": "The Sandlot",
@@ -848,7 +886,9 @@
         "Drama"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 118466
     },
     {
       "title": "True Romance",
@@ -953,7 +993,9 @@
         "Comedy"
       ],
       "studio": "View Askew Productions",
-      "logo": "logos/16934.png"
+      "logo": "logos/16934.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 242444
     },
     {
       "title": "D2: The Mighty Ducks",
@@ -1016,7 +1058,9 @@
         "History"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 191719
     },
     {
       "title": "Forrest Gump",
@@ -1078,7 +1122,9 @@
         "Action"
       ],
       "studio": "Gaumont",
-      "logo": "logos/9.png"
+      "logo": "logos/9.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1374749
     },
     {
       "title": "Natural Born Killers",
@@ -1120,7 +1166,9 @@
         "Comedy"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 8.8,
+      "imdbVotes": 2485854
     },
     {
       "title": "Quiz Show",
@@ -1139,7 +1187,9 @@
         "Drama"
       ],
       "studio": "Baltimore Pictures",
-      "logo": "logos/11407.png"
+      "logo": "logos/11407.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 78785
     },
     {
       "title": "The Hudsucker Proxy",
@@ -1159,7 +1209,9 @@
         "Fantasy"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 91300
     },
     {
       "title": "The Lion King",
@@ -1179,7 +1231,9 @@
         "Drama"
       ],
       "studio": "Walt Disney Pictures",
-      "logo": "logos/2.png"
+      "logo": "logos/2.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1287011
     },
     {
       "title": "The Mask",
@@ -1398,7 +1452,9 @@
         "Western"
       ],
       "studio": "Pandora Film",
-      "logo": "logos/140.png"
+      "logo": "logos/140.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 110357
     },
     {
       "title": "Die Hard: With a Vengeance",
@@ -1482,7 +1538,9 @@
         "Action"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 825926
     },
     {
       "title": "Jumanji",
@@ -1543,7 +1601,9 @@
         "Drama"
       ],
       "studio": "La Sept Cinéma",
-      "logo": "logos/16366.png"
+      "logo": "logos/16366.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 234471
     },
     {
       "title": "Mallrats",
@@ -1562,7 +1622,9 @@
         "Comedy"
       ],
       "studio": "Gramercy Pictures",
-      "logo": "logos/37.png"
+      "logo": "logos/37.png",
+      "imdbRating": 7,
+      "imdbVotes": 135652
     },
     {
       "title": "Mortal Kombat",
@@ -1626,7 +1688,9 @@
         "Thriller"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 2080585
     },
     {
       "title": "The Usual Suspects",
@@ -1669,7 +1733,9 @@
         "Adventure"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 1208458
     },
     {
       "title": "Twelve Monkeys",
@@ -1689,7 +1755,9 @@
         "Mystery"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8,
+      "imdbVotes": 687633
     },
     {
       "title": "Beavis and Butt-Head Do America",
@@ -1733,7 +1801,9 @@
         "Drama"
       ],
       "studio": "Gracie Films",
-      "logo": "logos/18.png"
+      "logo": "logos/18.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 89489
     },
     {
       "title": "Box of Moonlight",
@@ -1752,7 +1822,9 @@
         "Drama"
       ],
       "studio": "Lakeshore Entertainment",
-      "logo": "logos/126.png"
+      "logo": "logos/126.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 6501
     },
     {
       "title": "Eraser",
@@ -1794,7 +1866,9 @@
         "Thriller"
       ],
       "studio": "PolyGram Filmed Entertainment",
-      "logo": "logos/1382.png"
+      "logo": "logos/1382.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 803825
     },
     {
       "title": "James and the Giant Peach",
@@ -2097,7 +2171,9 @@
         "Adventure"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 3.8,
+      "imdbVotes": 286481
     },
     {
       "title": "Boogie Nights",
@@ -2138,7 +2214,9 @@
         "Romance"
       ],
       "studio": "View Askew Productions",
-      "logo": "logos/16934.png"
+      "logo": "logos/16934.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 149568
     },
     {
       "title": "Donnie Brasco",
@@ -2246,7 +2324,9 @@
         "Family"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 4.7,
+      "imdbVotes": 140567
     },
     {
       "title": "Jackie Brown",
@@ -2288,7 +2368,9 @@
         "Mystery"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 102230
     },
     {
       "title": "L.A. Confidential",
@@ -2308,7 +2390,9 @@
         "Thriller"
       ],
       "studio": "Regency Enterprises",
-      "logo": "logos/508.png"
+      "logo": "logos/508.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 667405
     },
     {
       "title": "Liar Liar",
@@ -2370,7 +2454,9 @@
         "Animation"
       ],
       "studio": "Studio Ghibli",
-      "logo": "logos/10342.png"
+      "logo": "logos/10342.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 495184
     },
     {
       "title": "Schizopolis",
@@ -2388,7 +2474,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.7,
+      "imdbVotes": 6440
     },
     {
       "title": "Taste of Cherry",
@@ -2406,7 +2494,9 @@
         "Drama"
       ],
       "studio": "Kanoon",
-      "logo": "logos/11459.png"
+      "logo": "logos/11459.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 45775
     },
     {
       "title": "The Game",
@@ -2446,7 +2536,9 @@
         "Drama"
       ],
       "studio": "Fox Searchlight Pictures",
-      "logo": "logos/43.png"
+      "logo": "logos/43.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 64444
     },
     {
       "title": "The Rainmaker",
@@ -2485,7 +2577,9 @@
         "Drama"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 94836
     },
     {
       "title": "A Bug's Life",
@@ -2526,7 +2620,9 @@
         "Drama"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1294234
     },
     {
       "title": "Antz",
@@ -2610,7 +2706,9 @@
         "Comedy"
       ],
       "studio": "Rhino Films",
-      "logo": "logos/1591.png"
+      "logo": "logos/1591.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 323124
     },
     {
       "title": "Half Baked",
@@ -2670,7 +2768,9 @@
         "Drama"
       ],
       "studio": "40 Acres and a Mule Filmworks",
-      "logo": "logos/4319.png"
+      "logo": "logos/4319.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 55587
     },
     {
       "title": "Lock, Stock and Two Smoking Barrels",
@@ -2689,7 +2789,9 @@
         "Crime"
       ],
       "studio": "Handmade Films",
-      "logo": "logos/20076.png"
+      "logo": "logos/20076.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 657516
     },
     {
       "title": "Mulan",
@@ -2731,7 +2833,9 @@
         "Crime"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7,
+      "imdbVotes": 107023
     },
     {
       "title": "Ronin",
@@ -2751,7 +2855,9 @@
         "Crime"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 211287
     },
     {
       "title": "Rounders",
@@ -2770,7 +2876,9 @@
         "Crime"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 174685
     },
     {
       "title": "Rush Hour",
@@ -2833,7 +2941,9 @@
         "History"
       ],
       "studio": "DreamWorks Pictures",
-      "logo": "logos/7.png"
+      "logo": "logos/7.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 1674708
     },
     {
       "title": "The Big Lebowski",
@@ -2852,7 +2962,9 @@
         "Crime"
       ],
       "studio": "PolyGram Filmed Entertainment",
-      "logo": "logos/1382.png"
+      "logo": "logos/1382.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 928872
     },
     {
       "title": "The Cruise",
@@ -2979,7 +3091,9 @@
         "Drama"
       ],
       "studio": "Mad Chance",
-      "logo": "logos/1757.png"
+      "logo": "logos/1757.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 468368
     },
     {
       "title": "American Beauty",
@@ -2997,7 +3111,9 @@
         "Drama"
       ],
       "studio": "DreamWorks Pictures",
-      "logo": "logos/7.png"
+      "logo": "logos/7.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 1293640
     },
     {
       "title": "American Pie",
@@ -3060,7 +3176,9 @@
         "Fantasy"
       ],
       "studio": "Propaganda Films",
-      "logo": "logos/278.png"
+      "logo": "logos/278.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 372923
     },
     {
       "title": "Big Daddy",
@@ -3101,7 +3219,9 @@
         "Adventure"
       ],
       "studio": "View Askew Productions",
-      "logo": "logos/16934.png"
+      "logo": "logos/16934.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 244449
     },
     {
       "title": "Fight Club",
@@ -3120,7 +3240,9 @@
         "Thriller"
       ],
       "studio": "Fox 2000 Pictures",
-      "logo": "logos/711.png"
+      "logo": "logos/711.png",
+      "imdbRating": 8.8,
+      "imdbVotes": 2687318
     },
     {
       "title": "Ghost Dog: The Way of the Samurai",
@@ -3139,7 +3261,9 @@
         "Drama"
       ],
       "studio": "JVC",
-      "logo": "logos/182.png"
+      "logo": "logos/182.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 104362
     },
     {
       "title": "Magnolia",
@@ -3157,7 +3281,9 @@
         "Drama"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 8,
+      "imdbVotes": 356196
     },
     {
       "title": "Man on the Moon",
@@ -3262,7 +3388,9 @@
         "Science Fiction"
       ],
       "studio": "Lucasfilm Ltd.",
-      "logo": "logos/1.png"
+      "logo": "logos/1.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 944321
     },
     {
       "title": "Stuart Little",
@@ -3371,7 +3499,9 @@
         "Crime"
       ],
       "studio": "Castle Rock Entertainment",
-      "logo": "logos/97.png"
+      "logo": "logos/97.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 1599283
     },
     {
       "title": "The Iron Giant",
@@ -3414,7 +3544,9 @@
         "Science Fiction"
       ],
       "studio": "Village Roadshow Pictures",
-      "logo": "logos/79.png"
+      "logo": "logos/79.png",
+      "imdbRating": 8.7,
+      "imdbVotes": 2296593
     },
     {
       "title": "The Sixth Sense",
@@ -3434,7 +3566,9 @@
         "Drama"
       ],
       "studio": "Spyglass Entertainment",
-      "logo": "logos/158.png"
+      "logo": "logos/158.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1179989
     },
     {
       "title": "The Talented Mr. Ripley",
@@ -3454,7 +3588,9 @@
         "Drama"
       ],
       "studio": "Mirage Enterprises",
-      "logo": "logos/932.png"
+      "logo": "logos/932.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 277846
     },
     {
       "title": "The World Is Not Enough",
@@ -3496,7 +3632,9 @@
         "War"
       ],
       "studio": "Village Roadshow Pictures",
-      "logo": "logos/79.png"
+      "logo": "logos/79.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 187969
     },
     {
       "title": "Toy Story 2",
@@ -3516,7 +3654,9 @@
         "Family"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 689255
     }
   ]
 }

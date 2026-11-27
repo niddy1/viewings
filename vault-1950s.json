@@ -18,7 +18,9 @@
         "Drama"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 151348
     },
     {
       "title": "Cinderella",
@@ -61,7 +63,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 17048
     },
     {
       "title": "Rashomon",
@@ -81,7 +85,9 @@
         "Mystery"
       ],
       "studio": "Daiei Film",
-      "logo": "logos/880.png"
+      "logo": "logos/880.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 199939
     },
     {
       "title": "Stage Fright",
@@ -99,7 +105,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7,
+      "imdbVotes": 18109
     },
     {
       "title": "Sunset Boulevard",
@@ -117,7 +125,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 265373
     },
     {
       "title": "A Streetcar Named Desire",
@@ -136,7 +146,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 120315
     },
     {
       "title": "Ace in the Hole",
@@ -154,7 +166,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8,
+      "imdbVotes": 43522
     },
     {
       "title": "Alice in Wonderland",
@@ -197,7 +211,9 @@
         "Drama"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 150008
     },
     {
       "title": "The Day the Earth Stood Still",
@@ -217,7 +233,9 @@
         "Drama"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 89767
     },
     {
       "title": "The Lavender Hill Mob",
@@ -236,7 +254,9 @@
         "Crime"
       ],
       "studio": "Ealing Studios",
-      "logo": "logos/2650.png"
+      "logo": "logos/2650.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 17233
     },
     {
       "title": "The Man in the White Suit",
@@ -255,7 +275,9 @@
         "Science Fiction"
       ],
       "studio": "Ealing Studios",
-      "logo": "logos/2650.png"
+      "logo": "logos/2650.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 11903
     },
     {
       "title": "Ikiru",
@@ -273,7 +295,9 @@
         "Drama"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 104889
     },
     {
       "title": "Singin' in the Rain",
@@ -292,7 +316,9 @@
         "Romance"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 287626
     },
     {
       "title": "The African Queen",
@@ -313,7 +339,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 88551
     },
     {
       "title": "Umberto D.",
@@ -331,7 +359,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 31235
     },
     {
       "title": "I Confess",
@@ -351,7 +381,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 25772
     },
     {
       "title": "I Vitelloni",
@@ -370,7 +402,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 23653
     },
     {
       "title": "Monsieur Hulot's Holiday",
@@ -388,7 +422,9 @@
         "Comedy"
       ],
       "studio": "Specta Films",
-      "logo": "logos/30847.png"
+      "logo": "logos/30847.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 22383
     },
     {
       "title": "Peter Pan",
@@ -430,7 +466,9 @@
         "Crime"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 18337
     },
     {
       "title": "The Wages of Fear",
@@ -450,7 +488,9 @@
         "Adventure"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 74897
     },
     {
       "title": "Ugetsu",
@@ -492,7 +532,9 @@
         "Drama"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 208459
     },
     {
       "title": "La Strada",
@@ -510,7 +552,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 70828
     },
     {
       "title": "On the Waterfront",
@@ -530,7 +574,9 @@
         "Romance"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 183191
     },
     {
       "title": "Rear Window",
@@ -550,7 +596,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.4,
+      "imdbVotes": 577430
     },
     {
       "title": "Samurai I: Musashi Miyamoto",
@@ -570,7 +618,9 @@
         "Adventure"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 10553
     },
     {
       "title": "Sansho the Bailiff",
@@ -609,7 +659,9 @@
         "Drama"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 408316
     },
     {
       "title": "Touchez Pas au Grisbi",
@@ -628,7 +680,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 9856
     },
     {
       "title": "Diabolique",
@@ -647,7 +701,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 74379
     },
     {
       "title": "Lady and the Tramp",
@@ -691,7 +747,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 39971
     },
     {
       "title": "Samurai II: Duel at Ichijoji Temple",
@@ -711,7 +769,9 @@
         "Adventure"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 7683
     },
     {
       "title": "The Ladykillers",
@@ -730,7 +790,9 @@
         "Crime"
       ],
       "studio": "Ealing Studios",
-      "logo": "logos/2650.png"
+      "logo": "logos/2650.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 34759
     },
     {
       "title": "The Night of the Hunter",
@@ -771,7 +833,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7,
+      "imdbVotes": 43794
     },
     {
       "title": "...And God Created Woman",
@@ -790,7 +854,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.3,
+      "imdbVotes": 10970
     },
     {
       "title": "Bob le Flambeur",
@@ -810,7 +876,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 14492
     },
     {
       "title": "Night and Fog",
@@ -829,7 +897,9 @@
         "History"
       ],
       "studio": "Argos films",
-      "logo": "logos/6116.png"
+      "logo": "logos/6116.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 23887
     },
     {
       "title": "Samurai III: Duel at Ganryu Island",
@@ -851,7 +921,9 @@
         "History"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 7383
     },
     {
       "title": "The Harder They Fall",
@@ -891,7 +963,9 @@
         "Drama"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 108319
     },
     {
       "title": "The Man Who Knew Too Much",
@@ -911,7 +985,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 77397
     },
     {
       "title": "The Searchers",
@@ -929,7 +1005,9 @@
         "Western"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 104553
     },
     {
       "title": "The Swan",
@@ -949,7 +1027,9 @@
         "Comedy"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 3201
     },
     {
       "title": "The Wrong Man",
@@ -968,7 +1048,9 @@
         "Drama"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 35543
     },
     {
       "title": "Written on the Wind",
@@ -987,7 +1069,9 @@
         "Romance"
       ],
       "studio": "Universal International Pictures",
-      "logo": "logos/10330.png"
+      "logo": "logos/10330.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 15472
     },
     {
       "title": "12 Angry Men",
@@ -1005,7 +1089,9 @@
         "Drama"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 9,
+      "imdbVotes": 1013521
     },
     {
       "title": "Nights of Cabiria",
@@ -1024,7 +1110,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.1,
+      "imdbVotes": 57997
     },
     {
       "title": "Paths of Glory",
@@ -1043,7 +1131,9 @@
         "Drama"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 244384
     },
     {
       "title": "The Lower Depths",
@@ -1061,7 +1151,9 @@
         "Drama"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 6567
     },
     {
       "title": "The Seventh Seal",
@@ -1080,7 +1172,9 @@
         "Drama"
       ],
       "studio": "SF Studios",
-      "logo": "logos/6181.png"
+      "logo": "logos/6181.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 219437
     },
     {
       "title": "Throne of Blood",
@@ -1099,7 +1193,9 @@
         "History"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8,
+      "imdbVotes": 61377
     },
     {
       "title": "Wild Strawberries",
@@ -1139,7 +1235,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.4,
+      "imdbVotes": 166257
     },
     {
       "title": "Big Deal on Madonna Street",
@@ -1158,7 +1256,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 13192
     },
     {
       "title": "Elevator to the Gallows",
@@ -1199,7 +1299,9 @@
         "Drama"
       ],
       "studio": "Mosfilm",
-      "logo": "logos/344.png"
+      "logo": "logos/344.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 8941
     },
     {
       "title": "Mon Oncle",
@@ -1217,7 +1319,9 @@
         "Comedy"
       ],
       "studio": "Specta Films",
-      "logo": "logos/30847.png"
+      "logo": "logos/30847.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 25339
     },
     {
       "title": "The Blob",
@@ -1236,7 +1340,9 @@
         "Science Fiction"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.3,
+      "imdbVotes": 33314
     },
     {
       "title": "The Hidden Fortress",
@@ -1256,7 +1362,9 @@
         "Adventure"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 8,
+      "imdbVotes": 46725
     },
     {
       "title": "The Horse's Mouth",
@@ -1274,7 +1382,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.9,
+      "imdbVotes": 4214
     },
     {
       "title": "Touch of Evil",
@@ -1294,7 +1404,9 @@
         "Drama"
       ],
       "studio": "Universal International Pictures",
-      "logo": "logos/10330.png"
+      "logo": "logos/10330.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 116300
     },
     {
       "title": "Vertigo",
@@ -1314,7 +1426,9 @@
         "Thriller"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 465504
     },
     {
       "title": "Anatomy of a Murder",
@@ -1334,7 +1448,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 79555
     },
     {
       "title": "North by Northwest",
@@ -1353,7 +1469,9 @@
         "Adventure"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 373705
     },
     {
       "title": "Sleeping Beauty",
@@ -1396,7 +1514,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.2,
+      "imdbVotes": 309178
     },
     {
       "title": "The 400 Blows",
@@ -1414,7 +1534,9 @@
         "Drama"
       ],
       "studio": "Les Films du Carrosse",
-      "logo": "logos/53.png"
+      "logo": "logos/53.png",
+      "imdbRating": 8,
+      "imdbVotes": 136115
     },
     {
       "title": "The Human Condition I: No Greater Love",
@@ -1434,7 +1556,9 @@
         "History"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.5,
+      "imdbVotes": 11967
     },
     {
       "title": "The Human Condition II: Road to Eternity",
@@ -1454,7 +1578,9 @@
         "History"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.5,
+      "imdbVotes": 9537
     }
   ]
 }

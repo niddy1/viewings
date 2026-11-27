@@ -84,7 +84,9 @@
         "Thriller"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 7,
+      "imdbVotes": 61304
     },
     {
       "title": "Chicken Run",
@@ -126,7 +128,9 @@
         "Action"
       ],
       "studio": "Edko Films",
-      "logo": "logos/10284.png"
+      "logo": "logos/10284.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 298902
     },
     {
       "title": "Dave Chappelle: Killin' Them Softly",
@@ -211,7 +215,9 @@
         "History"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 96781
     },
     {
       "title": "Gladiator",
@@ -231,7 +237,9 @@
         "Adventure"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1896802
     },
     {
       "title": "Gone in Sixty Seconds",
@@ -274,7 +282,9 @@
         "Music"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 201960
     },
     {
       "title": "How the Grinch Stole Christmas",
@@ -377,7 +387,9 @@
         "Thriller"
       ],
       "studio": "Newmarket Films",
-      "logo": "logos/28.png"
+      "logo": "logos/28.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 1468759
     },
     {
       "title": "Nurse Betty",
@@ -398,7 +410,9 @@
         "Drama"
       ],
       "studio": "Gramercy Pictures",
-      "logo": "logos/37.png"
+      "logo": "logos/37.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 36057
     },
     {
       "title": "O Brother, Where Art Thou?",
@@ -418,7 +432,9 @@
         "Crime"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 357559
     },
     {
       "title": "Paradise Lost 2: Revelations",
@@ -459,7 +475,9 @@
         "Crime"
       ],
       "studio": "Dimension Films",
-      "logo": "logos/7405.png"
+      "logo": "logos/7405.png",
+      "imdbRating": 5.8,
+      "imdbVotes": 45236
     },
     {
       "title": "Remember the Titans",
@@ -477,7 +495,9 @@
         "Drama"
       ],
       "studio": "Jerry Bruckheimer Films",
-      "logo": "logos/130.png"
+      "logo": "logos/130.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 255501
     },
     {
       "title": "Scary Movie",
@@ -516,7 +536,9 @@
         "Comedy"
       ],
       "studio": "Marv",
-      "logo": "logos/5374.png"
+      "logo": "logos/5374.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 991541
     },
     {
       "title": "The Emperor's New Groove",
@@ -629,7 +651,9 @@
         "Crime"
       ],
       "studio": "USA Films",
-      "logo": "logos/987.png"
+      "logo": "logos/987.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 232886
     },
     {
       "title": "Wonder Boys",
@@ -648,7 +672,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 69652
     },
     {
       "title": "A Beautiful Mind",
@@ -690,7 +716,9 @@
         "Action"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 105836
     },
     {
       "title": "Amélie",
@@ -709,7 +737,9 @@
         "Romance"
       ],
       "studio": "France 3 Cinéma",
-      "logo": "logos/591.png"
+      "logo": "logos/591.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 850929
     },
     {
       "title": "Atlantis: The Lost Empire",
@@ -796,7 +826,9 @@
         "Mystery"
       ],
       "studio": "Flower Films",
-      "logo": "logos/19813.png"
+      "logo": "logos/19813.png",
+      "imdbRating": 8,
+      "imdbVotes": 926381
     },
     {
       "title": "From Hell",
@@ -881,7 +913,9 @@
         "Action"
       ],
       "studio": "Dimension Films",
-      "logo": "logos/7405.png"
+      "logo": "logos/7405.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 167937
     },
     {
       "title": "Kiss of the Dragon",
@@ -967,7 +1001,9 @@
         "Fantasy"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 1099235
     },
     {
       "title": "Mulholland Drive",
@@ -1008,7 +1044,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 689314
     },
     {
       "title": "Osmosis Jones",
@@ -1096,7 +1134,9 @@
         "Family"
       ],
       "studio": "Pacific Data Images",
-      "logo": "logos/520.png"
+      "logo": "logos/520.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 827384
     },
     {
       "title": "Spirited Away",
@@ -1116,7 +1156,9 @@
         "Fantasy"
       ],
       "studio": "Studio Ghibli",
-      "logo": "logos/10342.png"
+      "logo": "logos/10342.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 994999
     },
     {
       "title": "Super Troopers",
@@ -1201,7 +1243,9 @@
         "Drama"
       ],
       "studio": "USA Films",
-      "logo": "logos/987.png"
+      "logo": "logos/987.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 121711
     },
     {
       "title": "The Royal Tenenbaums",
@@ -1220,7 +1264,9 @@
         "Drama"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 340475
     },
     {
       "title": "Training Day",
@@ -1367,7 +1413,9 @@
         "Romance"
       ],
       "studio": "Bend It Films",
-      "logo": "logos/7620.png"
+      "logo": "logos/7620.png",
+      "imdbRating": 6.7,
+      "imdbVotes": 124839
     },
     {
       "title": "Bowling for Columbine",
@@ -1428,7 +1476,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 77907
     },
     {
       "title": "City of God",
@@ -1447,7 +1497,9 @@
         "Crime"
       ],
       "studio": "O2 Filmes",
-      "logo": "logos/345.png"
+      "logo": "logos/345.png",
+      "imdbRating": 8.6,
+      "imdbVotes": 888331
     },
     {
       "title": "Collateral Damage",
@@ -1467,7 +1519,9 @@
         "Drama"
       ],
       "studio": "Bel Air Entertainment",
-      "logo": "logos/788.png"
+      "logo": "logos/788.png",
+      "imdbRating": 5.5,
+      "imdbVotes": 81981
     },
     {
       "title": "Die Another Day",
@@ -1553,7 +1607,9 @@
         "History"
       ],
       "studio": "Edko Films",
-      "logo": "logos/10284.png"
+      "logo": "logos/10284.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 196054
     },
     {
       "title": "Ice Age",
@@ -1640,7 +1696,9 @@
         "Romance"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 5.8,
+      "imdbVotes": 166412
     },
     {
       "title": "Paid in Full",
@@ -1749,7 +1807,9 @@
         "Thriller"
       ],
       "studio": "DreamWorks Pictures",
-      "logo": "logos/7.png"
+      "logo": "logos/7.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 304288
     },
     {
       "title": "September 11",
@@ -1767,7 +1827,9 @@
         "Drama"
       ],
       "studio": "Galatée Films",
-      "logo": "logos/793.png"
+      "logo": "logos/793.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 6215
     },
     {
       "title": "Spider-Man",
@@ -1786,7 +1848,9 @@
         "Science Fiction"
       ],
       "studio": "Marvel Enterprises",
-      "logo": "logos/19551.png"
+      "logo": "logos/19551.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 1005410
     },
     {
       "title": "Spirit: Stallion of the Cimarron",
@@ -1808,7 +1872,9 @@
         "Western"
       ],
       "studio": "DreamWorks Animation",
-      "logo": "logos/521.png"
+      "logo": "logos/521.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 96341
     },
     {
       "title": "Star Wars: Episode II - Attack of the Clones",
@@ -1850,7 +1916,9 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 625123
     },
     {
       "title": "The Lord of the Rings: The Two Towers",
@@ -1913,7 +1981,9 @@
         "Drama"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 136105
     },
     {
       "title": "The Transporter",
@@ -2090,7 +2160,9 @@
         "Drama"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 481871
     },
     {
       "title": "Brother Bear",
@@ -2131,7 +2203,9 @@
         "Comedy"
       ],
       "studio": "Spyglass Entertainment",
-      "logo": "logos/158.png"
+      "logo": "logos/158.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 478619
     },
     {
       "title": "Capturing the Friedmans",
@@ -2171,7 +2245,9 @@
         "Action"
       ],
       "studio": "Marvel Enterprises",
-      "logo": "logos/19551.png"
+      "logo": "logos/19551.png",
+      "imdbRating": 5.3,
+      "imdbVotes": 243885
     },
     {
       "title": "Dogville",
@@ -2213,7 +2289,9 @@
         "Adventure"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1232894
     },
     {
       "title": "Holes",
@@ -2255,7 +2333,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 106787
     },
     {
       "title": "Kill Bill: Vol. 1",
@@ -2274,7 +2354,9 @@
         "Crime"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1333984
     },
     {
       "title": "Lost in Translation",
@@ -2294,7 +2376,9 @@
         "Romance"
       ],
       "studio": "American Zoetrope",
-      "logo": "logos/70.png"
+      "logo": "logos/70.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 537481
     },
     {
       "title": "Memories of Murder",
@@ -2378,7 +2462,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8.3,
+      "imdbVotes": 739799
     },
     {
       "title": "Owning Mahowny",
@@ -2420,7 +2506,9 @@
         "Thriller"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.3,
+      "imdbVotes": 119786
     },
     {
       "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
@@ -2440,7 +2528,9 @@
         "Action"
       ],
       "studio": "Walt Disney Pictures",
-      "logo": "logos/2.png"
+      "logo": "logos/2.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 1355096
     },
     {
       "title": "Rugrats Go Wild",
@@ -2618,7 +2708,9 @@
         "Adventure"
       ],
       "studio": "Les Armateurs",
-      "logo": "logos/6973.png"
+      "logo": "logos/6973.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 58957
     },
     {
       "title": "50 First Dates",
@@ -2678,7 +2770,9 @@
         "Drama"
       ],
       "studio": "Asmik Ace Entertainment",
-      "logo": "logos/194517.png"
+      "logo": "logos/194517.png",
+      "imdbRating": 7,
+      "imdbVotes": 71606
     },
     {
       "title": "Collateral",
@@ -2761,7 +2855,9 @@
         "Fantasy"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 218732
     },
     {
       "title": "Friday Night Lights",
@@ -2779,7 +2875,9 @@
         "Drama"
       ],
       "studio": "Imagine Entertainment",
-      "logo": "logos/23.png"
+      "logo": "logos/23.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 71899
     },
     {
       "title": "Hamburger America",
@@ -2880,7 +2978,9 @@
         "Romance"
       ],
       "studio": "Fox Searchlight Pictures",
-      "logo": "logos/43.png"
+      "logo": "logos/43.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 67963
     },
     {
       "title": "In Good Company",
@@ -2900,7 +3000,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 6.4,
+      "imdbVotes": 58281
     },
     {
       "title": "Jersey Girl",
@@ -2920,7 +3022,9 @@
         "Drama"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 75379
     },
     {
       "title": "Kill Bill: Vol. 2",
@@ -2940,7 +3044,9 @@
         "Thriller"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 8,
+      "imdbVotes": 885677
     },
     {
       "title": "Kung Fu Hustle",
@@ -3005,7 +3111,9 @@
         "Family"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 233956
     },
     {
       "title": "Mean Girls",
@@ -3045,7 +3153,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 306119
     },
     {
       "title": "Million Dollar Baby",
@@ -3063,7 +3173,9 @@
         "Drama"
       ],
       "studio": "Lakeshore Entertainment",
-      "logo": "logos/126.png"
+      "logo": "logos/126.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 777753
     },
     {
       "title": "Napoleon Dynamite",
@@ -3102,7 +3214,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 444646
     },
     {
       "title": "Secret Window",
@@ -3121,7 +3235,9 @@
         "Thriller"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 225004
     },
     {
       "title": "Shark Tale",
@@ -3188,7 +3304,9 @@
         "Science Fiction"
       ],
       "studio": "Marvel Enterprises",
-      "logo": "logos/19551.png"
+      "logo": "logos/19551.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 815368
     },
     {
       "title": "The Bourne Supremacy",
@@ -3208,7 +3326,9 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 521253
     },
     {
       "title": "The Incredibles",
@@ -3229,7 +3349,9 @@
         "Family"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8,
+      "imdbVotes": 924241
     },
     {
       "title": "The Ladykillers",
@@ -3249,7 +3371,9 @@
         "Thriller"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 6.2,
+      "imdbVotes": 113503
     },
     {
       "title": "The Life Aquatic with Steve Zissou",
@@ -3355,7 +3479,9 @@
         "Crime"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 279096
     },
     {
       "title": "Are We There Yet?",
@@ -3376,7 +3502,9 @@
         "Romance"
       ],
       "studio": "Revolution Studios",
-      "logo": "logos/497.png"
+      "logo": "logos/497.png",
+      "imdbRating": 4.8,
+      "imdbVotes": 37760
     },
     {
       "title": "Batman Begins",
@@ -3396,7 +3524,9 @@
         "Action"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1756373
     },
     {
       "title": "Capote",
@@ -3481,7 +3611,9 @@
         "History"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 197162
     },
     {
       "title": "Corpse Bride",
@@ -3501,7 +3633,9 @@
         "Animation"
       ],
       "studio": "Tim Burton Productions",
-      "logo": "logos/8601.png"
+      "logo": "logos/8601.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 336811
     },
     {
       "title": "Crash",
@@ -3519,7 +3653,9 @@
         "Drama"
       ],
       "studio": "Yari Film Group",
-      "logo": "logos/2448.png"
+      "logo": "logos/2448.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 465786
     },
     {
       "title": "Fantastic Four",
@@ -3738,7 +3874,9 @@
         "Thriller"
       ],
       "studio": "BBC Film",
-      "logo": "logos/288.png"
+      "logo": "logos/288.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 241575
     },
     {
       "title": "Mr. & Mrs. Smith",
@@ -3780,7 +3918,9 @@
         "Family"
       ],
       "studio": "Alcon Entertainment",
-      "logo": "logos/1088.png"
+      "logo": "logos/1088.png",
+      "imdbRating": 5.3,
+      "imdbVotes": 19666
     },
     {
       "title": "Robots",
@@ -3822,7 +3962,9 @@
         "Thriller"
       ],
       "studio": "Dimension Films",
-      "logo": "logos/7405.png"
+      "logo": "logos/7405.png",
+      "imdbRating": 8,
+      "imdbVotes": 826064
     },
     {
       "title": "Syriana",
@@ -3841,7 +3983,9 @@
         "Thriller"
       ],
       "studio": "Participant",
-      "logo": "logos/6735.png"
+      "logo": "logos/6735.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 139593
     },
     {
       "title": "Thank You for Smoking",
@@ -3881,7 +4025,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 511360
     },
     {
       "title": "The Brothers Grimm",
@@ -3903,7 +4049,9 @@
         "Thriller"
       ],
       "studio": "Summit Entertainment",
-      "logo": "logos/491.png"
+      "logo": "logos/491.png",
+      "imdbRating": 5.9,
+      "imdbVotes": 133825
     },
     {
       "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
@@ -3990,7 +4138,9 @@
         "Family"
       ],
       "studio": "Aardman",
-      "logo": "logos/297.png"
+      "logo": "logos/297.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 159748
     },
     {
       "title": "War of the Worlds",
@@ -4010,7 +4160,9 @@
         "Science Fiction"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 517772
     },
     {
       "title": "Wedding Crashers",
@@ -4159,7 +4311,9 @@
         "Family"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 555204
     },
     {
       "title": "Casino Royale",
@@ -4201,7 +4355,9 @@
         "Action"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 575733
     },
     {
       "title": "Clerks II",
@@ -4219,7 +4375,9 @@
         "Comedy"
       ],
       "studio": "The Weinstein Company",
-      "logo": "logos/308.png"
+      "logo": "logos/308.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 145529
     },
     {
       "title": "Crank",
@@ -4327,7 +4485,9 @@
         "Mystery"
       ],
       "studio": "Focus Features",
-      "logo": "logos/10146.png"
+      "logo": "logos/10146.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 37386
     },
     {
       "title": "Ice Age: The Meltdown",
@@ -4391,7 +4551,9 @@
         "Drama"
       ],
       "studio": "Big Beach",
-      "logo": "logos/188.png"
+      "logo": "logos/188.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 569513
     },
     {
       "title": "Lucky Number Slevin",
@@ -4412,7 +4574,9 @@
         "Mystery"
       ],
       "studio": "FilmEngine",
-      "logo": "logos/816.png"
+      "logo": "logos/816.png",
+      "imdbRating": 7.7,
+      "imdbVotes": 343102
     },
     {
       "title": "Monster House",
@@ -4546,7 +4710,9 @@
         "Action"
       ],
       "studio": "Walt Disney Pictures",
-      "logo": "logos/2.png"
+      "logo": "logos/2.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 842020
     },
     {
       "title": "Scoop",
@@ -4565,7 +4731,9 @@
         "Mystery"
       ],
       "studio": "BBC Film",
-      "logo": "logos/288.png"
+      "logo": "logos/288.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 91324
     },
     {
       "title": "Stranger Than Fiction",
@@ -4586,7 +4754,9 @@
         "Fantasy"
       ],
       "studio": "Mandate Pictures",
-      "logo": "logos/771.png"
+      "logo": "logos/771.png",
+      "imdbRating": 7.5,
+      "imdbVotes": 247674
     },
     {
       "title": "Tenacious D in The Pick of Destiny",
@@ -4607,7 +4777,9 @@
         "Adventure"
       ],
       "studio": "New Line Cinema",
-      "logo": "logos/12.png"
+      "logo": "logos/12.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 120921
     },
     {
       "title": "The Ant Bully",
@@ -4652,7 +4824,9 @@
         "Mystery"
       ],
       "studio": "Linson Entertainment",
-      "logo": "logos/4700.png"
+      "logo": "logos/4700.png",
+      "imdbRating": 5.6,
+      "imdbVotes": 80762
     },
     {
       "title": "The Departed",
@@ -4672,7 +4846,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1592265
     },
     {
       "title": "The Devil Wears Prada",
@@ -4713,7 +4889,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 6,
+      "imdbVotes": 27171
     },
     {
       "title": "The Lives of Others",
@@ -4754,7 +4932,9 @@
         "Science Fiction"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1643950
     },
     {
       "title": "The Wild",
@@ -4798,7 +4978,9 @@
         "Science Fiction"
       ],
       "studio": "Virtual Studios",
-      "logo": "logos/449.png"
+      "logo": "logos/449.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 1262985
     },
     {
       "title": "Alvin and the Chipmunks",
@@ -4840,7 +5022,9 @@
         "Crime"
       ],
       "studio": "Imagine Entertainment",
-      "logo": "logos/23.png"
+      "logo": "logos/23.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 497139
     },
     {
       "title": "Atonement",
@@ -4859,7 +5043,9 @@
         "Romance"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 336066
     },
     {
       "title": "Eastern Promises",
@@ -4879,7 +5065,9 @@
         "Mystery"
       ],
       "studio": "Focus Features",
-      "logo": "logos/10146.png"
+      "logo": "logos/10146.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 281741
     },
     {
       "title": "Enchanted",
@@ -4984,7 +5172,9 @@
         "Romance"
       ],
       "studio": "Fox Searchlight Pictures",
-      "logo": "logos/43.png"
+      "logo": "logos/43.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 37999
     },
     {
       "title": "Into the Wild",
@@ -5025,7 +5215,9 @@
         "Romance"
       ],
       "studio": "Mandate Pictures",
-      "logo": "logos/771.png"
+      "logo": "logos/771.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 577136
     },
     {
       "title": "Knocked Up",
@@ -5045,7 +5237,9 @@
         "Drama"
       ],
       "studio": "Apatow Productions",
-      "logo": "logos/10105.png"
+      "logo": "logos/10105.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 404509
     },
     {
       "title": "Like Stars on Earth",
@@ -5152,7 +5346,9 @@
         "Western"
       ],
       "studio": "Miramax",
-      "logo": "logos/14.png"
+      "logo": "logos/14.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1224259
     },
     {
       "title": "Ocean's Thirteen",
@@ -5171,7 +5367,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 392840
     },
     {
       "title": "Persepolis",
@@ -5213,7 +5411,9 @@
         "Fantasy"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 975263
     },
     {
       "title": "Shrek the Third",
@@ -5235,7 +5435,9 @@
         "Family"
       ],
       "studio": "DreamWorks Animation",
-      "logo": "logos/521.png"
+      "logo": "logos/521.png",
+      "imdbRating": 6.1,
+      "imdbVotes": 367859
     },
     {
       "title": "Spider-Man 3",
@@ -5383,7 +5585,9 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8,
+      "imdbVotes": 691660
     },
     {
       "title": "The Darjeeling Limited",
@@ -5403,7 +5607,9 @@
         "Comedy"
       ],
       "studio": "Fox Searchlight Pictures",
-      "logo": "logos/43.png"
+      "logo": "logos/43.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 239806
     },
     {
       "title": "The Simpsons Movie",
@@ -5423,7 +5629,9 @@
         "Family"
       ],
       "studio": "Gracie Films",
-      "logo": "logos/18.png"
+      "logo": "logos/18.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 366649
     },
     {
       "title": "There Will Be Blood",
@@ -5441,7 +5649,9 @@
         "Drama"
       ],
       "studio": "Paramount Vantage",
-      "logo": "logos/838.png"
+      "logo": "logos/838.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 724866
     },
     {
       "title": "Transformers",
@@ -5461,7 +5671,9 @@
         "Action"
       ],
       "studio": "DreamWorks Pictures",
-      "logo": "logos/7.png"
+      "logo": "logos/7.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 730962
     },
     {
       "title": "Zodiac",
@@ -5609,7 +5821,9 @@
         "Thriller"
       ],
       "studio": "Mad Chance",
-      "logo": "logos/1757.png"
+      "logo": "logos/1757.png",
+      "imdbRating": 6.5,
+      "imdbVotes": 241989
     },
     {
       "title": "Gran Torino",
@@ -5668,7 +5882,9 @@
         "Action"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 6.4,
+      "imdbVotes": 546302
     },
     {
       "title": "In Bruges",
@@ -5732,7 +5948,9 @@
         "Adventure"
       ],
       "studio": "Marvel Studios",
-      "logo": "logos/420.png"
+      "logo": "logos/420.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 1260545
     },
     {
       "title": "Kung Fu Panda",
@@ -5753,7 +5971,9 @@
         "Family"
       ],
       "studio": "DreamWorks Animation",
-      "logo": "logos/521.png"
+      "logo": "logos/521.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 594445
     },
     {
       "title": "Let the Right One In",
@@ -6004,7 +6224,9 @@
         "Crime"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 9.1,
+      "imdbVotes": 3254325
     },
     {
       "title": "The Fall",
@@ -6068,7 +6290,9 @@
         "Adventure"
       ],
       "studio": "Marvel Studios",
-      "logo": "logos/420.png"
+      "logo": "logos/420.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 582766
     },
     {
       "title": "The Visitor",
@@ -6196,7 +6420,9 @@
         "Science Fiction"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 1351420
     },
     {
       "title": "Zack and Miri Make a Porno",

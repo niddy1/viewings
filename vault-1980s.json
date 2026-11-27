@@ -41,7 +41,9 @@
         "War"
       ],
       "studio": "TOHO",
-      "logo": "logos/882.png"
+      "logo": "logos/882.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 41628
     },
     {
       "title": "Raging Bull",
@@ -60,7 +62,9 @@
         "History"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 416787
     },
     {
       "title": "The Blues Brothers",
@@ -81,7 +85,9 @@
         "Adventure"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 233212
     },
     {
       "title": "The Empire Strikes Back",
@@ -101,7 +107,9 @@
         "Science Fiction"
       ],
       "studio": "Lucasfilm Ltd.",
-      "logo": "logos/1.png"
+      "logo": "logos/1.png",
+      "imdbRating": 8.7,
+      "imdbVotes": 1534770
     },
     {
       "title": "The Shining",
@@ -120,7 +128,9 @@
         "Thriller"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 1255693
     },
     {
       "title": "Raiders of the Lost Ark",
@@ -139,7 +149,9 @@
         "Action"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 1126675
     },
     {
       "title": "The Fox and the Hound",
@@ -206,7 +218,9 @@
         "Comedy"
       ],
       "studio": "Handmade Films",
-      "logo": "logos/20076.png"
+      "logo": "logos/20076.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 75406
     },
     {
       "title": "E.T. the Extra-Terrestrial",
@@ -316,7 +330,9 @@
         "Romance"
       ],
       "studio": "Mirage Enterprises",
-      "logo": "logos/932.png"
+      "logo": "logos/932.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 124582
     },
     {
       "title": "A Christmas Story",
@@ -335,7 +351,9 @@
         "Family"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 180986
     },
     {
       "title": "Return of the Jedi",
@@ -355,7 +373,9 @@
         "Science Fiction"
       ],
       "studio": "Lucasfilm Ltd.",
-      "logo": "logos/1.png"
+      "logo": "logos/1.png",
+      "imdbRating": 8.3,
+      "imdbVotes": 1230775
     },
     {
       "title": "Videodrome",
@@ -375,7 +395,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.1,
+      "imdbVotes": 116948
     },
     {
       "title": "Beverly Hills Cop",
@@ -437,7 +459,9 @@
         "Drama"
       ],
       "studio": "ZDF",
-      "logo": "logos/4606.png"
+      "logo": "logos/4606.png",
+      "imdbRating": 7.4,
+      "imdbVotes": 43886
     },
     {
       "title": "Streets of Fire",
@@ -477,7 +501,9 @@
         "Science Fiction"
       ],
       "studio": "Hemdale",
-      "logo": "logos/3952.png"
+      "logo": "logos/3952.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 1026150
     },
     {
       "title": "This Is Spinal Tap",
@@ -496,7 +522,9 @@
         "Music"
       ],
       "studio": "Embassy Pictures",
-      "logo": "logos/112748.png"
+      "logo": "logos/112748.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 162366
     },
     {
       "title": "After Hours",
@@ -516,7 +544,9 @@
         "Drama"
       ],
       "studio": "Geffen Pictures",
-      "logo": "logos/360.png"
+      "logo": "logos/360.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 102471
     },
     {
       "title": "Back to the Future",
@@ -536,7 +566,9 @@
         "Science Fiction"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 1489443
     },
     {
       "title": "Blood Simple",
@@ -577,7 +609,9 @@
         "Science Fiction"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.8,
+      "imdbVotes": 224332
     },
     {
       "title": "Clue",
@@ -641,7 +675,9 @@
         "History"
       ],
       "studio": "Nippon Herald Films",
-      "logo": "logos/1598.png"
+      "logo": "logos/1598.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 156302
     },
     {
       "title": "Tampopo",
@@ -704,7 +740,9 @@
         "Science Fiction"
       ],
       "studio": "SLM Production Group",
-      "logo": "logos/396.png"
+      "logo": "logos/396.png",
+      "imdbRating": 8.4,
+      "imdbVotes": 853439
     },
     {
       "title": "An American Tail",
@@ -770,7 +808,9 @@
         "Comedy"
       ],
       "studio": "Island Pictures",
-      "logo": "logos/3492.png"
+      "logo": "logos/3492.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 59485
     },
     {
       "title": "Ferris Bueller's Day Off",
@@ -809,7 +849,9 @@
         "Family"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.4,
+      "imdbVotes": 58099
     },
     {
       "title": "Mona Lisa",
@@ -830,7 +872,9 @@
         "Thriller"
       ],
       "studio": "Handmade Films",
-      "logo": "logos/20076.png"
+      "logo": "logos/20076.png",
+      "imdbRating": 7.3,
+      "imdbVotes": 19838
     },
     {
       "title": "Platoon",
@@ -871,7 +915,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7,
+      "imdbVotes": 37497
     },
     {
       "title": "Stand by Me",
@@ -910,7 +956,9 @@
         "Drama"
       ],
       "studio": "Touchstone Pictures",
-      "logo": "logos/9195.png"
+      "logo": "logos/9195.png",
+      "imdbRating": 7,
+      "imdbVotes": 103563
     },
     {
       "title": "The Great Mouse Detective",
@@ -996,7 +1044,9 @@
         "War"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 865359
     },
     {
       "title": "Raising Arizona",
@@ -1015,7 +1065,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 163120
     },
     {
       "title": "RoboCop",
@@ -1035,7 +1087,9 @@
         "Science Fiction"
       ],
       "studio": "Orion Pictures",
-      "logo": "logos/41.png"
+      "logo": "logos/41.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 314722
     },
     {
       "title": "The Princess Bride",
@@ -1056,7 +1110,9 @@
         "Adventure"
       ],
       "studio": "Act III Productions",
-      "logo": "logos/56485.png"
+      "logo": "logos/56485.png",
+      "imdbRating": 8,
+      "imdbVotes": 494078
     },
     {
       "title": "The Untouchables",
@@ -1118,7 +1174,9 @@
         "Romance"
       ],
       "studio": "Orion Pictures",
-      "logo": "logos/41.png"
+      "logo": "logos/41.png",
+      "imdbRating": 7,
+      "imdbVotes": 63959
     },
     {
       "title": "Dead Ringers",
@@ -1137,7 +1195,9 @@
         "Horror"
       ],
       "studio": "Téléfilm Canada",
-      "logo": "logos/806.png"
+      "logo": "logos/806.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 60176
     },
     {
       "title": "Die Hard",
@@ -1156,7 +1216,9 @@
         "Thriller"
       ],
       "studio": "Silver Pictures",
-      "logo": "logos/1885.png"
+      "logo": "logos/1885.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 1045901
     },
     {
       "title": "Grave of the Fireflies",
@@ -1176,7 +1238,9 @@
         "War"
       ],
       "studio": "Studio Ghibli",
-      "logo": "logos/10342.png"
+      "logo": "logos/10342.png",
+      "imdbRating": 8.5,
+      "imdbVotes": 402247
     },
     {
       "title": "Oliver & Company",
@@ -1216,7 +1280,9 @@
         "Drama"
       ],
       "studio": "United Artists",
-      "logo": "logos/60.png"
+      "logo": "logos/60.png",
+      "imdbRating": 8,
+      "imdbVotes": 593708
     },
     {
       "title": "The Land Before Time",
@@ -1279,7 +1345,9 @@
         "Romance"
       ],
       "studio": "The Saul Zaentz Company",
-      "logo": "logos/5237.png"
+      "logo": "logos/5237.png",
+      "imdbRating": 7.2,
+      "imdbVotes": 41264
     },
     {
       "title": "The Vanishing",
@@ -1298,7 +1366,9 @@
         "Mystery"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 57593
     },
     {
       "title": "Who Framed Roger Rabbit",
@@ -1381,7 +1451,9 @@
         "Drama"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 127194
     },
     {
       "title": "For All Mankind",
@@ -1400,7 +1472,9 @@
         "History"
       ],
       "studio": "National Geographic",
-      "logo": "logos/7521.png"
+      "logo": "logos/7521.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 7434
     },
     {
       "title": "Glory",
@@ -1420,7 +1494,9 @@
         "War"
       ],
       "studio": "TriStar Pictures",
-      "logo": "logos/559.png"
+      "logo": "logos/559.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 155053
     },
     {
       "title": "How to Get Ahead in Advertising",
@@ -1440,7 +1516,9 @@
         "Drama"
       ],
       "studio": "Virgin Films",
-      "logo": "logos/3150.png"
+      "logo": "logos/3150.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 7233
     },
     {
       "title": "Indiana Jones and the Last Crusade",
@@ -1459,7 +1537,9 @@
         "Action"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "imdbRating": 8.2,
+      "imdbVotes": 876053
     },
     {
       "title": "The Killer",
@@ -1480,7 +1560,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 56632
     },
     {
       "title": "The Little Mermaid",

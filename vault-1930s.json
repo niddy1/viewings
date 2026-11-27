@@ -19,7 +19,9 @@
         "Music"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.3,
+      "imdbVotes": 4140
     },
     {
       "title": "Boudu Saved from Drowning",
@@ -37,7 +39,9 @@
         "Comedy"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.2,
+      "imdbVotes": 6755
     },
     {
       "title": "The Most Dangerous Game",
@@ -58,7 +62,9 @@
         "Action"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 7,
+      "imdbVotes": 15894
     },
     {
       "title": "Babes in Toyland",
@@ -99,7 +105,9 @@
         "Mystery"
       ],
       "studio": "Fox Film Corporation",
-      "logo": "logos/5488.png"
+      "logo": "logos/5488.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 2356
     },
     {
       "title": "It Happened One Night",
@@ -118,7 +126,9 @@
         "Romance"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 121156
     },
     {
       "title": "The Black Cat",
@@ -157,7 +167,9 @@
         "Mystery"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 6.6,
+      "imdbVotes": 2325
     },
     {
       "title": "Charlie Chan in Paris",
@@ -177,7 +189,9 @@
         "Thriller"
       ],
       "studio": "Fox Film Corporation",
-      "logo": "logos/5488.png"
+      "logo": "logos/5488.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 1924
     },
     {
       "title": "Charlie Chan in Shanghai",
@@ -197,7 +211,9 @@
         "Thriller"
       ],
       "studio": "Fox Film Corporation",
-      "logo": "logos/5488.png"
+      "logo": "logos/5488.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 1761
     },
     {
       "title": "The 39 Steps",
@@ -216,7 +232,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 67404
     },
     {
       "title": "Charlie Chan at the Circus",
@@ -237,7 +255,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 6.8,
+      "imdbVotes": 1944
     },
     {
       "title": "Charlie Chan at the Opera",
@@ -257,7 +277,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 2500
     },
     {
       "title": "Charlie Chan at the Race Track",
@@ -278,7 +300,9 @@
         "Crime"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 1755
     },
     {
       "title": "Charlie Chan's Secret",
@@ -298,7 +322,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 6.9,
+      "imdbVotes": 1985
     },
     {
       "title": "Sabotage",
@@ -318,7 +344,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7,
+      "imdbVotes": 21228
     },
     {
       "title": "The Case of the Black Cat",
@@ -359,7 +387,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 4006
     },
     {
       "title": "Charlie Chan at Monte Carlo",
@@ -378,7 +408,9 @@
         "Comedy"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 6.7,
+      "imdbVotes": 1839
     },
     {
       "title": "Charlie Chan at the Olympics",
@@ -398,7 +430,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7,
+      "imdbVotes": 2000
     },
     {
       "title": "Charlie Chan on Broadway",
@@ -418,7 +452,9 @@
         "Thriller"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "imdbRating": 7.1,
+      "imdbVotes": 1781
     },
     {
       "title": "Grand Illusion",
@@ -438,7 +474,9 @@
         "War"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 8,
+      "imdbVotes": 41586
     },
     {
       "title": "Pépé le Moko",
@@ -458,7 +496,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.6,
+      "imdbVotes": 8893
     },
     {
       "title": "Bringing Up Baby",
@@ -477,7 +517,9 @@
         "Romance"
       ],
       "studio": "RKO Radio Pictures",
-      "logo": "logos/6.png"
+      "logo": "logos/6.png",
+      "imdbRating": 7.8,
+      "imdbVotes": 70261
     },
     {
       "title": "La Bête Humaine",
@@ -497,7 +539,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.5,
+      "imdbVotes": 9191
     },
     {
       "title": "Port of Shadows",
@@ -517,7 +561,9 @@
         "Crime"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 11169
     },
     {
       "title": "Snow White and the Seven Dwarfs",
@@ -537,7 +583,9 @@
         "Family"
       ],
       "studio": "Walt Disney Productions",
-      "logo": "logos/3166.png"
+      "logo": "logos/3166.png",
+      "imdbRating": 7.6,
+      "imdbVotes": 241803
     },
     {
       "title": "The Adventures of Robin Hood",
@@ -557,7 +605,9 @@
         "Action"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "imdbRating": 7.9,
+      "imdbVotes": 58488
     },
     {
       "title": "The Lady Vanishes",
@@ -576,7 +626,9 @@
         "Thriller"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.7,
+      "imdbVotes": 62521
     },
     {
       "title": "Charlie Chan at Treasure Island",
@@ -616,7 +668,9 @@
         "Drama"
       ],
       "studio": "Columbia Pictures",
-      "logo": "logos/5.png"
+      "logo": "logos/5.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 131140
     },
     {
       "title": "The Rules of the Game",
@@ -636,7 +690,9 @@
         "Romance"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "imdbRating": 7.9,
+      "imdbVotes": 33871
     },
     {
       "title": "The Wizard of Oz",
@@ -656,7 +712,9 @@
         "Family"
       ],
       "studio": "Metro-Goldwyn-Mayer",
-      "logo": "logos/21.png"
+      "logo": "logos/21.png",
+      "imdbRating": 8.1,
+      "imdbVotes": 475528
     }
   ]
 }
