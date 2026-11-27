@@ -1,0 +1,527 @@
+{
+  "_about": "Ian's lists. staff: his staff picks, each with the line on its card (note; empty shows a blank card). top: his Top 100, best first. Both by IMDb id. First filled in provisionally on 27 Nov 2026 from the ratings (staff = every 10/10, top = rating, then IMDb score, then votes) for Ian to replace.",
+  "staff": [
+    {
+      "imdb": "tt0032138",
+      "title": "The Wizard of Oz",
+      "note": ""
+    },
+    {
+      "imdb": "tt0044741",
+      "title": "Ikiru",
+      "note": ""
+    },
+    {
+      "imdb": "tt0046183",
+      "title": "Peter Pan",
+      "note": ""
+    },
+    {
+      "imdb": "tt0046912",
+      "title": "Dial M for Murder",
+      "note": ""
+    },
+    {
+      "imdb": "tt0047396",
+      "title": "Rear Window",
+      "note": ""
+    },
+    {
+      "imdb": "tt0047478",
+      "title": "Seven Samurai",
+      "note": ""
+    },
+    {
+      "imdb": "tt0050083",
+      "title": "12 Angry Men",
+      "note": ""
+    },
+    {
+      "imdb": "tt0053198",
+      "title": "The 400 Blows",
+      "note": ""
+    },
+    {
+      "imdb": "tt0054215",
+      "title": "Psycho",
+      "note": ""
+    },
+    {
+      "imdb": "tt0055254",
+      "title": "One Hundred and One Dalmatians",
+      "note": ""
+    },
+    {
+      "imdb": "tt0056923",
+      "title": "Charade",
+      "note": ""
+    },
+    {
+      "imdb": "tt0060196",
+      "title": "The Good, the Bad and the Ugly",
+      "note": ""
+    },
+    {
+      "imdb": "tt0062622",
+      "title": "2001: A Space Odyssey",
+      "note": ""
+    },
+    {
+      "imdb": "tt0070735",
+      "title": "The Sting",
+      "note": ""
+    },
+    {
+      "imdb": "tt0076759",
+      "title": "Star Wars",
+      "note": ""
+    },
+    {
+      "imdb": "tt0085334",
+      "title": "A Christmas Story",
+      "note": ""
+    },
+    {
+      "imdb": "tt0088846",
+      "title": "Brazil",
+      "note": ""
+    },
+    {
+      "imdb": "tt0106677",
+      "title": "Dazed and Confused",
+      "note": ""
+    },
+    {
+      "imdb": "tt0110912",
+      "title": "Pulp Fiction",
+      "note": ""
+    },
+    {
+      "imdb": "tt0251654",
+      "title": "Dave Chappelle: Killin' Them Softly",
+      "note": ""
+    },
+    {
+      "imdb": "tt0118694",
+      "title": "In the Mood for Love",
+      "note": ""
+    },
+    {
+      "imdb": "tt0357413",
+      "title": "Anchorman: The Legend of Ron Burgundy",
+      "note": ""
+    },
+    {
+      "imdb": "tt0469494",
+      "title": "There Will Be Blood",
+      "note": ""
+    },
+    {
+      "imdb": "tt0361748",
+      "title": "Inglourious Basterds",
+      "note": ""
+    }
+  ],
+  "top": [
+    {
+      "imdb": "tt0050083",
+      "title": "12 Angry Men"
+    },
+    {
+      "imdb": "tt0110912",
+      "title": "Pulp Fiction"
+    },
+    {
+      "imdb": "tt0060196",
+      "title": "The Good, the Bad and the Ugly"
+    },
+    {
+      "imdb": "tt0251654",
+      "title": "Dave Chappelle: Killin' Them Softly"
+    },
+    {
+      "imdb": "tt0076759",
+      "title": "Star Wars"
+    },
+    {
+      "imdb": "tt0047478",
+      "title": "Seven Samurai"
+    },
+    {
+      "imdb": "tt0054215",
+      "title": "Psycho"
+    },
+    {
+      "imdb": "tt0361748",
+      "title": "Inglourious Basterds"
+    },
+    {
+      "imdb": "tt0047396",
+      "title": "Rear Window"
+    },
+    {
+      "imdb": "tt0062622",
+      "title": "2001: A Space Odyssey"
+    },
+    {
+      "imdb": "tt0044741",
+      "title": "Ikiru"
+    },
+    {
+      "imdb": "tt0469494",
+      "title": "There Will Be Blood"
+    },
+    {
+      "imdb": "tt0070735",
+      "title": "The Sting"
+    },
+    {
+      "imdb": "tt0032138",
+      "title": "The Wizard of Oz"
+    },
+    {
+      "imdb": "tt0046912",
+      "title": "Dial M for Murder"
+    },
+    {
+      "imdb": "tt0118694",
+      "title": "In the Mood for Love"
+    },
+    {
+      "imdb": "tt0053198",
+      "title": "The 400 Blows"
+    },
+    {
+      "imdb": "tt0085334",
+      "title": "A Christmas Story"
+    },
+    {
+      "imdb": "tt0088846",
+      "title": "Brazil"
+    },
+    {
+      "imdb": "tt0056923",
+      "title": "Charade"
+    },
+    {
+      "imdb": "tt0106677",
+      "title": "Dazed and Confused"
+    },
+    {
+      "imdb": "tt0055254",
+      "title": "One Hundred and One Dalmatians"
+    },
+    {
+      "imdb": "tt0046183",
+      "title": "Peter Pan"
+    },
+    {
+      "imdb": "tt0357413",
+      "title": "Anchorman: The Legend of Ron Burgundy"
+    },
+    {
+      "imdb": "tt0468569",
+      "title": "The Dark Knight"
+    },
+    {
+      "imdb": "tt5275892",
+      "title": "O.J.: Made in America"
+    },
+    {
+      "imdb": "tt0080684",
+      "title": "The Empire Strikes Back"
+    },
+    {
+      "imdb": "tt6751668",
+      "title": "Parasite"
+    },
+    {
+      "imdb": "tt2401256",
+      "title": "The Night Of"
+    },
+    {
+      "imdb": "tt2106476",
+      "title": "The Hunt"
+    },
+    {
+      "imdb": "tt0116282",
+      "title": "Fargo"
+    },
+    {
+      "imdb": "tt0041546",
+      "title": "Kind Hearts and Coronets"
+    },
+    {
+      "imdb": "tt0060277",
+      "title": "The Sword of Doom"
+    },
+    {
+      "imdb": "tt0383028",
+      "title": "Synecdoche, New York"
+    },
+    {
+      "imdb": "tt1527186",
+      "title": "Melancholia"
+    },
+    {
+      "imdb": "tt0111161",
+      "title": "The Shawshank Redemption"
+    },
+    {
+      "imdb": "tt0167260",
+      "title": "The Lord of the Rings: The Return of the King"
+    },
+    {
+      "imdb": "tt0071562",
+      "title": "The Godfather Part II"
+    },
+    {
+      "imdb": "tt0120737",
+      "title": "The Lord of the Rings: The Fellowship of the Ring"
+    },
+    {
+      "imdb": "tt0167261",
+      "title": "The Lord of the Rings: The Two Towers"
+    },
+    {
+      "imdb": "tt0055233",
+      "title": "The Human Condition III: A Soldier's Prayer"
+    },
+    {
+      "imdb": "tt0099685",
+      "title": "GoodFellas"
+    },
+    {
+      "imdb": "tt0102926",
+      "title": "The Silence of the Lambs"
+    },
+    {
+      "imdb": "tt0103064",
+      "title": "Terminator 2: Judgment Day"
+    },
+    {
+      "imdb": "tt0073486",
+      "title": "One Flew Over the Cuckoo's Nest"
+    },
+    {
+      "imdb": "tt0118799",
+      "title": "Life Is Beautiful"
+    },
+    {
+      "imdb": "tt0056058",
+      "title": "Harakiri"
+    },
+    {
+      "imdb": "tt0437806",
+      "title": "Alone in the Wilderness"
+    },
+    {
+      "imdb": "tt0407887",
+      "title": "The Departed"
+    },
+    {
+      "imdb": "tt0110357",
+      "title": "The Lion King"
+    },
+    {
+      "imdb": "tt0114814",
+      "title": "The Usual Suspects"
+    },
+    {
+      "imdb": "tt0054407",
+      "title": "Le Trou"
+    },
+    {
+      "imdb": "tt0053114",
+      "title": "The Human Condition I: No Greater Love"
+    },
+    {
+      "imdb": "tt0053115",
+      "title": "The Human Condition II: Road to Eternity"
+    },
+    {
+      "imdb": "tt0081505",
+      "title": "The Shining"
+    },
+    {
+      "imdb": "tt0119217",
+      "title": "Good Will Hunting"
+    },
+    {
+      "imdb": "tt0078748",
+      "title": "Alien"
+    },
+    {
+      "imdb": "tt0090605",
+      "title": "Aliens"
+    },
+    {
+      "imdb": "tt0043014",
+      "title": "Sunset Boulevard"
+    },
+    {
+      "imdb": "tt0051201",
+      "title": "Witness for the Prosecution"
+    },
+    {
+      "imdb": "tt0086190",
+      "title": "Return of the Jedi"
+    },
+    {
+      "imdb": "tt0114709",
+      "title": "Toy Story"
+    },
+    {
+      "imdb": "tt0113277",
+      "title": "Heat"
+    },
+    {
+      "imdb": "tt0057012",
+      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+    },
+    {
+      "imdb": "tt0056172",
+      "title": "Lawrence of Arabia"
+    },
+    {
+      "imdb": "tt1255953",
+      "title": "Incendies"
+    },
+    {
+      "imdb": "tt0036775",
+      "title": "Double Indemnity"
+    },
+    {
+      "imdb": "tt7909970",
+      "title": "Unbelievable"
+    },
+    {
+      "imdb": "tt0061847",
+      "title": "Samurai Rebellion"
+    },
+    {
+      "imdb": "tt0266697",
+      "title": "Kill Bill: Vol. 1"
+    },
+    {
+      "imdb": "tt0477348",
+      "title": "No Country for Old Men"
+    },
+    {
+      "imdb": "tt0211915",
+      "title": "Amélie"
+    },
+    {
+      "imdb": "tt0457430",
+      "title": "Pan's Labyrinth"
+    },
+    {
+      "imdb": "tt0053125",
+      "title": "North by Northwest"
+    },
+    {
+      "imdb": "tt0056592",
+      "title": "To Kill a Mockingbird"
+    },
+    {
+      "imdb": "tt0053291",
+      "title": "Some Like It Hot"
+    },
+    {
+      "imdb": "tt0059578",
+      "title": "For a Few Dollars More"
+    },
+    {
+      "imdb": "tt0057115",
+      "title": "The Great Escape"
+    },
+    {
+      "imdb": "tt0040522",
+      "title": "Bicycle Thieves"
+    },
+    {
+      "imdb": "tt0089881",
+      "title": "Ran"
+    },
+    {
+      "imdb": "tt0042192",
+      "title": "All About Eve"
+    },
+    {
+      "imdb": "tt0055630",
+      "title": "Yojimbo"
+    },
+    {
+      "imdb": "tt0040897",
+      "title": "The Treasure of the Sierra Madre"
+    },
+    {
+      "imdb": "tt2499076",
+      "title": "The Crash Reel"
+    },
+    {
+      "imdb": "tt0118715",
+      "title": "The Big Lebowski"
+    },
+    {
+      "imdb": "tt0073195",
+      "title": "Jaws"
+    },
+    {
+      "imdb": "tt0112471",
+      "title": "Before Sunrise"
+    },
+    {
+      "imdb": "tt0071315",
+      "title": "Chinatown"
+    },
+    {
+      "imdb": "tt0353969",
+      "title": "Memories of Murder"
+    },
+    {
+      "imdb": "tt3011894",
+      "title": "Wild Tales"
+    },
+    {
+      "imdb": "tt0042876",
+      "title": "Rashomon"
+    },
+    {
+      "imdb": "tt0041959",
+      "title": "The Third Man"
+    },
+    {
+      "imdb": "tt0047296",
+      "title": "On the Waterfront"
+    },
+    {
+      "imdb": "tt0031679",
+      "title": "Mr. Smith Goes to Washington"
+    },
+    {
+      "imdb": "tt0046268",
+      "title": "The Wages of Fear"
+    },
+    {
+      "imdb": "tt2991224",
+      "title": "Tangerines"
+    },
+    {
+      "imdb": "tt0048021",
+      "title": "Rififi"
+    },
+    {
+      "imdb": "tt0064040",
+      "title": "Army of Shadows"
+    },
+    {
+      "imdb": "tt0758758",
+      "title": "Into the Wild"
+    },
+    {
+      "imdb": "tt0103639",
+      "title": "Aladdin"
+    }
+  ]
+}

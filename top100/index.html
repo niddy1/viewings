@@ -1,0 +1,186 @@
+<!doctype html>
+<!-- made by make-pages.py from index.html; edit index.html, not this -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="../">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- preview: make-pages.py writes this block -->
+  <title>Viewings: Top 100</title>
+  <meta name="description" content="My 100 best, ranked and numbered on one shelf of VHS tapes.">
+  <meta property="og:site_name" content="Viewings">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Viewings: Top 100">
+  <meta property="og:description" content="My 100 best, ranked and numbered on one shelf of VHS tapes.">
+  <meta property="og:url" content="https://ianandreu.com/viewings/top100/">
+  <meta property="og:image" content="https://ianandreu.com/viewings/share/all.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://ianandreu.com/viewings/top100/">
+  <!-- /preview -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Barlow+Condensed:wght@500;600&family=Anton&family=Bebas+Neue&family=Bungee&family=Cinzel:wght@700&family=Creepster&family=Monoton&family=Orbitron:wght@900&family=Oswald:wght@700&family=Permanent+Marker&family=Pirata+One&family=Playfair+Display:wght@900&family=Righteous&family=Rubik+Mono+One&family=Rye&family=Special+Elite&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="ticket-row">
+      <!-- step to the year before / after; app.js fills these in and hides the one with nowhere to go -->
+      <a class="shelf-arrow prev" id="shelf-prev" hidden><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M30 4 8 24l22 20"/></svg><span class="yr"></span></a>
+      <h1 class="ticket"><img src="watched-2026.png" alt="Watched 2026" width="900" height="561"><span class="vh">Viewings <span id="year">2026</span></span></h1>
+      <a class="shelf-arrow next" id="shelf-next" hidden><span class="yr"></span><svg viewBox="0 0 40 48" aria-hidden="true"><path d="M10 4l22 20-22 20"/></svg></a>
+    </div>
+    <div class="controls" id="controls" hidden>
+      <div class="sort" role="group" aria-label="Sort the shelf">
+        <span class="label">Sort</span>
+        <button type="button" data-sort="watched">Date watched</button>
+        <button type="button" data-sort="rating">My rating</button>
+        <button type="button" data-sort="imdb">IMDb</button>
+        <button type="button" data-sort="year">Year</button>
+        <button type="button" data-sort="rank">Ranked</button>
+        <button type="button" data-sort="gap" title="Me vs IMDb: furthest above IMDb first">vs IMDb</button>
+      </div>
+      <div class="genre-pick">
+        <button type="button" id="genre-btn" aria-expanded="false" aria-controls="genre-list"><span class="label">Genre</span> <span id="genre-sel">All</span> <span class="caret">&#9662;</span></button>
+        <div class="genre-list" id="genre-list" hidden></div>
+      </div>
+    </div>
+    <!-- the whole store: search every shelf, or a random tape (app.js, "the whole store") -->
+    <div class="finder" id="finder" role="group" aria-label="The whole store" hidden>
+      <button type="button" id="find-btn" title="Search every shelf (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>Find a tape</button>
+      <button type="button" id="lucky-btn" title="A random tape from any shelf">Surprise me</button>
+      <button type="button" id="receipt-btn" title="This year's rentals, itemised" hidden>Receipt</button>
+    </div>
+    <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
+  </header>
+
+  <div class="room">
+    <!-- framed posters on the wall either side of the case; desktop only -->
+    <figure class="wall-poster left" aria-hidden="true">
+      <img src="wall/anatomy-of-a-murder-1959.jpg" alt="" width="448" height="674" loading="lazy">
+    </figure>
+    <main id="shelves" aria-label="Shelf of watched films">
+      <!-- shown until app.js stocks the shelf (layout() clears it) -->
+      <div class="loading"><img src="loading.webp" alt="" width="500" height="270" fetchpriority="high"><p>Stocking the shelf...</p></div>
+    </main>
+    <figure class="wall-poster right" aria-hidden="true">
+      <img src="wall/bande-a-part-1964.jpg" alt="" width="620" height="888" loading="lazy">
+    </figure>
+  </div>
+
+  <footer class="credit">
+    <p>Film data and posters from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+  </footer>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <div class="backdrop" id="backdrop"></div>
+    <div class="panel" role="dialog" aria-modal="true" aria-labelledby="v-title">
+      <button class="nav prev" id="prev" aria-label="Previous tape">&#8249;</button>
+      <div class="stage">
+        <a class="cover" id="cover" target="_blank" rel="noopener">
+          <span class="hint">Open on IMDb &#8599;</span>
+        </a>
+      </div>
+      <button class="nav next" id="next" aria-label="Next tape">&#8250;</button>
+
+      <section class="info">
+        <h2 id="v-title"></h2>
+        <p class="facts" id="v-facts"></p>
+        <div class="rating" id="v-rating"></div>
+        <p class="imdb-score" id="v-imdb"></p>
+        <p class="watched" id="v-watched"></p>
+        <div class="genres" id="v-genres"></div>
+        <p class="note" id="v-note"></p>
+        <button class="play" id="v-play" hidden><span aria-hidden="true">&#9654;</span> Play trailer</button>
+        <button class="close" id="close">Put it back</button>
+      </section>
+    </div>
+  </div>
+
+  <!-- the store directory: every shelf, and a search across all of them (app.js; click the ticket, "Find a tape" or press /) -->
+  <div class="store" id="store" hidden>
+    <div class="store-backdrop" data-close></div>
+    <div class="store-box" role="dialog" aria-modal="true" aria-labelledby="store-h">
+      <div class="store-head">
+        <h2 id="store-h"><span>Store</span> <span>Directory</span></h2>
+        <p id="store-total"></p>
+        <button type="button" class="store-x" data-close aria-label="Close">&times;</button>
+      </div>
+      <label class="store-search">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>
+        <span class="vh">Find a tape</span>
+        <input id="store-q" type="search" placeholder="Title, director or year" autocomplete="off" autocapitalize="off" spellcheck="false" role="combobox" aria-controls="store-results" aria-expanded="false">
+      </label>
+      <div class="store-results" id="store-results" role="listbox" aria-label="Tapes found" hidden></div>
+      <div class="store-aisles" id="store-aisles">
+        <section class="aisle-all" id="aisle-all"></section>
+        <section><h3>The Vault <small>by decade of release</small></h3><div class="aisle" id="aisle-vault"></div></section>
+        <section><h3>Year shelves <small>by year watched</small></h3><div class="aisle" id="aisle-years"></div></section>
+      </div>
+      <div class="store-foot">
+        <button type="button" id="store-lucky">Surprise me</button>
+        <span class="keys"><kbd>/</kbd> find <kbd>[</kbd><kbd>]</kbd> next shelf <kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- the trailer: the tape goes into a VCR under a CRT set and the trailer plays on its screen (app.js, "the trailer") -->
+  <div class="tv-wrap" id="tv" hidden>
+    <div class="tv-backdrop" data-close></div>
+    <div class="tv-set" role="dialog" aria-modal="true" aria-label="Trailer">
+      <button type="button" class="tv-x" data-close aria-label="Stop and eject">&times;</button>
+      <div class="tv">
+        <div class="tv-face">
+          <div class="tv-bezel">
+            <div class="tv-screen" id="tv-screen"><div class="tv-static"></div><div class="tv-glass"></div></div>
+          </div>
+          <div class="tv-panel" aria-hidden="true">
+            <div class="tv-plate"><span class="tv-badge">&#9670;</span><span class="tv-brand">VIEWINGS<br>VIDEO</span><span class="tv-led"></span><span class="tv-pull">PULL.ON VOL</span><span class="tv-btn"></span></div>
+            <div class="tv-dials">
+              <div class="tv-well"><b>VHF</b><div class="tv-dial vhf"><i style="--i:0">0</i><i style="--i:1">2</i><i style="--i:2">3</i><i style="--i:3">4</i><i style="--i:4">5</i><i style="--i:5">6</i><i style="--i:6">7</i><i style="--i:7">8</i><i style="--i:8">9</i><i style="--i:9">10</i><i style="--i:10">11</i><i style="--i:11">12</i><i style="--i:12">13</i><span class="tv-knob"></span></div></div>
+              <div class="tv-well"><b>UHF</b><div class="tv-dial uhf"><span class="tv-knob bar"></span></div></div>
+            </div>
+            <div class="tv-grille"></div>
+          </div>
+        </div>
+        <div class="tv-feet" aria-hidden="true"><i></i><i></i></div>
+      </div>
+      <svg class="tv-cable" viewBox="0 0 110 80" aria-hidden="true"><path d="M95 45 C 104 46, 107 51, 105 57 S 99 64, 92 64.5"/><path class="hi" d="M95 45 C 104 46, 107 51, 105 57 S 99 64, 92 64.5"/></svg>
+      <div class="deck">
+        <div class="deck-top"></div>
+        <div class="deck-face">
+          <div class="deck-left" aria-hidden="true">
+            <span class="deck-power"></span>
+            <span class="deck-name">VIEWINGS</span>
+            <span class="deck-sub">VIDEO CASSETTE RECORDER</span>
+          </div>
+          <div class="deck-door" aria-hidden="true">
+            <div class="deck-mouth"><div class="deck-cass" id="vcr-tape"><span class="deck-label"><b>VHS&ensp;T-120&ensp;<i>HIGH GRADE</i></b><span class="deck-title" id="vcr-title"></span></span></div></div>
+            <div class="deck-flap"><span>VHS</span></div>
+          </div>
+          <div class="deck-right">
+            <div class="deck-display" aria-live="polite"><span class="deck-ico" id="vcr-ico">&#9654;</span><span id="vcr-display" class="blink">12:00</span></div>
+            <div class="deck-keys" role="group" aria-label="VCR controls"><button type="button" data-k="rew" aria-label="Rewind 10 seconds">&#9664;&#9664;</button><button type="button" data-k="play" aria-label="Play">&#9654;</button><button type="button" data-k="ff" aria-label="Fast forward 10 seconds">&#9654;&#9654;</button><button type="button" data-k="stop" aria-label="Stop">&#9632;</button><button type="button" data-k="eject" aria-label="Eject">&#9167;</button><button type="button" data-k="rec" class="rec" aria-label="Record">&#9679;</button></div>
+            <span class="deck-spec" aria-hidden="true">HQ &middot; 4 HEAD HI-FI STEREO</span>
+          </div>
+        </div>
+        <div class="deck-feet"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- the year-in-review receipt: every tape rented on this year shelf, itemised, with totals (app.js, "the receipt") -->
+  <div class="receipt-wrap" id="receipt" hidden>
+    <div class="receipt-backdrop" data-close></div>
+    <div class="receipt-slot" role="dialog" aria-modal="true" aria-label="Year in review receipt">
+      <button type="button" class="receipt-x" data-close aria-label="Close">&times;</button>
+      <div class="receipt-paper" id="receipt-paper"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="vcr.js"></script>
+</body>
+</html>

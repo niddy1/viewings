@@ -99,6 +99,9 @@ def pages():
             pages[k] = (f'Viewings {k}', f'The {plural(counts[k])} I watched in {k}, shelved as VHS tapes.')
     pages['all'] = ('Viewings: the whole store', f'Every tape on every shelf: {plural(total)}, shelved as VHS tapes.')
     pages['search'] = ('Viewings: search the store', f'A shelf of search results from {plural(total)}, shelved as VHS tapes.')
+    picks = read_json('data/picks.json')
+    pages['picks'] = ('Viewings: Staff Picks', f'My {plural(len(picks["staff"]), "favourite")}, face out, each with a card on why.')
+    pages['top100'] = ('Viewings: Top 100', f'My {len(picks["top"])} best, ranked and numbered on one shelf of VHS tapes.')
 
     index = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
     index = re.sub(r'\s*<base href="[^"]*">', '', index)  # the root page has none
@@ -124,7 +127,7 @@ def cards():
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path='/usr/bin/google-chrome')
         pg = b.new_page(viewport={'width': 1400, 'height': 900}, device_scale_factor=2)
-        for k, _ in shelves() + [('all', None), ('search', None)]:
+        for k, _ in shelves() + [('all', None), ('search', None), ('picks', None), ('top100', None)]:
             url = f'http://127.0.0.1:8765/{k}/' + ('?q=the%20store' if k == 'search' else '')
             pg.goto(url)
             pg.wait_for_selector('h1.ticket img, h1.ticket .vault-plate')

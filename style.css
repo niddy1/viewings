@@ -1107,3 +1107,65 @@ body.store-open { overflow: hidden; }
   .tv-wrap.on .tv-static { opacity: 0; }
   #vcr-display.blink { animation: none; }
 }
+
+/* ---------- the lists: Staff Picks and the Top 100 (app.js, "the lists") ---------- */
+.list-plate .v1 { font-size: clamp(40px, 8vw, 72px); }
+.list-plate .v2 { font-size: clamp(22px, 4.2vw, 38px); }
+
+/* Staff Picks stand face-out, like a store's picks wall, each with an index card clipped to the box */
+.shelf.picks { justify-content: center; gap: 34px; align-items: flex-end; }
+.faceout {
+  position: relative; flex: none; width: 150px; height: 225px; padding: 0; border: 0; background: none; cursor: pointer;
+  transform: rotate(var(--tilt, 0deg)); transform-origin: 50% 100%; transition: transform .18s ease;
+}
+.faceout .box {
+  display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.12), 4px 6px 12px rgba(40,22,6,.55);
+}
+.faceout::after { /* the sleeve's fold and a little shelf wear on the box */
+  content: ""; position: absolute; inset: 0; border-radius: 2px; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,.18), transparent 6%, transparent 94%, rgba(0,0,0,.25)), linear-gradient(180deg, rgba(255,255,255,.08), transparent 30%);
+}
+.faceout:hover, .faceout:focus-visible { transform: rotate(0deg) translateY(-6px); }
+.faceout:focus-visible { outline: 2px solid #f2bd0a; outline-offset: 4px; }
+.faceout.pulling { transform: translateY(-14px) scale(1.05); z-index: 3; }
+.faceout.out { visibility: hidden; }
+/* the card: lined index card, a black binder clip at the top, the line in Ian's hand */
+.pick-card {
+  position: absolute; left: 50%; bottom: -14px; z-index: 2; width: 132px; min-height: 74px; box-sizing: border-box;
+  transform: translateX(-50%) rotate(calc(var(--tilt, 0deg) * -3 - 1.5deg));
+  padding: 9px 9px 7px; text-align: left; color: #1f2b8c;
+  background:
+    linear-gradient(180deg, transparent 0 19px, #e25b5b 19px 20px, transparent 20px),
+    repeating-linear-gradient(180deg, transparent 0 13px, rgba(80,120,200,.35) 13px 14px) 0 20px / 100% calc(100% - 20px) no-repeat,
+    #fbf8ef;
+  box-shadow: 0 1px 0 rgba(0,0,0,.08), 2px 4px 8px rgba(40,22,6,.45);
+  font: 500 15px/14px 'Caveat', 'Bradley Hand', cursive;
+}
+.pick-card .clip {
+  position: absolute; top: -9px; left: 50%; width: 30px; height: 12px; transform: translateX(-50%); border-radius: 2px 2px 3px 3px;
+  background: linear-gradient(180deg, #2b2b2e, #111); box-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.pick-card .clip::before, .pick-card .clip::after { /* the wire handles, folded back */
+  content: ""; position: absolute; top: -8px; width: 10px; height: 10px; border: 1.5px solid #b9b6b0; border-bottom: 0; border-radius: 6px 6px 0 0;
+}
+.pick-card .clip::before { left: 2px; } .pick-card .clip::after { right: 2px; }
+.pick-card b { display: block; font: 700 9px/1 'Blockletter', 'Impact', sans-serif; letter-spacing: .14em; color: #c0392b; text-transform: uppercase; margin-bottom: 4px; }
+.pick-card .who { display: block; font-weight: 700; font-size: 14px; line-height: 15px; }
+.pick-card .line { display: block; font-size: 15px; line-height: 14px; }
+.pick-card.blank .line { min-height: 28px; } /* no line yet: the ruled card waits for Ian's */
+
+/* Top 100: a numbered tab standing up off each spine, like the divider cards' tabs */
+.spine .rank {
+  position: absolute; top: -17px; left: 50%; transform: translateX(-50%); z-index: 4;
+  min-width: 26px; height: 18px; padding: 2px 4px 0; box-sizing: border-box; border-radius: 4px 4px 0 0;
+  background: #f2bd0a; color: #233bac; box-shadow: 0 -1px 0 rgba(255,255,255,.3) inset, 0 1px 3px rgba(0,0,0,.35);
+  font: 13px/16px 'Blockletter', 'Impact', sans-serif; text-align: center; letter-spacing: .02em; pointer-events: none;
+}
+.spine.designed.clam .rank { top: -12px; }
+
+/* the store directory: a tile for each list */
+.aisle-all .lists { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.bay.all.list { margin: 0; }
+.bay.all.list .nm { font-size: 1.6rem; }
+@media (max-width: 640px) { .aisle-all .lists { grid-template-columns: 1fr; } }

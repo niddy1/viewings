@@ -42,22 +42,27 @@
   // The copies have <base href="../">, so every relative path (files, fetches) resolves from the site's root.
   const ROOT = new URL('./', document.baseURI).pathname; // the site's root path, e.g. /viewings/
   const SEARCH = 'search';
+  // Ian's lists (data/picks.json), each a shelf cut from the Whole Store: /viewings/picks/ and /viewings/top100/.
+  const LISTS = { picks: 'Staff Picks', top100: 'Top 100' };
   const PARAMS = new URLSearchParams(location.search);
   const SEG = decodeURIComponent((location.pathname.startsWith(ROOT) ? location.pathname.slice(ROOT.length) : '').split('/')[0]);
-  const shelfKey = (p) => { if (p === ALL || p === SEARCH) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : null; };
+  const shelfKey = (p) => { if (p === ALL || p === SEARCH || LISTS[p]) return ALL; const k = VAULT.includes(p) ? p : Number(p); return SHELVES[k] ? k : null; };
   const SHELF = shelfKey(SEG) ?? shelfKey(PARAMS.get('shelf') || '') ?? NEWEST;
   const IN_VAULT = VAULT.includes(SHELF);
   const IN_ALL = SHELF === ALL;
+  const LIST = IN_ALL && LISTS[SEG] ? SEG : IN_ALL && LISTS[PARAMS.get('shelf')] ? PARAMS.get('shelf') : '';
+  const IN_PICKS = LIST === 'picks', IN_TOP = LIST === 'top100';
   // A search shelf (/search/?q=disney): the Whole Store cut down to one search's results, titled with the search.
-  const SEARCH_Q = IN_ALL ? (PARAMS.get('q') || '').trim() : '';
+  const SEARCH_Q = IN_ALL && !LIST ? (PARAMS.get('q') || '').trim() : '';
   const IN_SEARCH = !!SEARCH_Q;
-  const shelfPath = (k, search) => (search ? `${ROOT}${SEARCH}/` : k === NEWEST ? ROOT : `${ROOT}${k}/`);
-  const searchLink = (q) => `${shelfPath(ALL, true)}?q=${encodeURIComponent(q.trim())}`;
+  // sub: 'search' or a list's folder (picks, top100), both cut from the Whole Store
+  const shelfPath = (k, sub) => (sub ? `${ROOT}${sub}/` : k === NEWEST ? ROOT : `${ROOT}${k}/`);
+  const searchLink = (q) => `${shelfPath(ALL, SEARCH)}?q=${encodeURIComponent(q.trim())}`;
   (function canonicalAddress() { // an old ?shelf= link (or a stray param) becomes the shelf's own address
     const q = new URLSearchParams(location.search);
     q.delete('shelf');
     if (!IN_SEARCH) q.delete('q');
-    const want = shelfPath(SHELF, IN_SEARCH);
+    const want = shelfPath(SHELF, IN_SEARCH ? SEARCH : LIST);
     if (want === location.pathname && q.toString() === PARAMS.toString()) return;
     // the page stays as loaded, so pin relative paths to the root before the address moves
     if (!document.querySelector('base')) { const b = document.createElement('base'); b.href = ROOT; document.head.prepend(b); }
@@ -87,7 +92,10 @@
     if (img && IN_ALL) { // the Whole Store: a plate like the Vault's, no footnote; a search shelf's plate reads the search
       img.remove();
       const plate = document.createElement('span'); plate.className = 'vault-plate all-plate'; plate.setAttribute('aria-hidden', 'true');
-      if (IN_SEARCH) {
+      if (LIST) {
+        plate.classList.add('list-plate', LIST);
+        plate.innerHTML = IN_PICKS ? '<span class="v2">Staff</span><span class="v1">Picks</span>' : '<span class="v2">Top</span><span class="v1">100</span>';
+      } else if (IN_SEARCH) {
         plate.classList.add('search-plate');
         const v2 = document.createElement('span'); v2.className = 'v2'; v2.textContent = 'Search';
         const v1 = document.createElement('span'); v1.className = 'v1'; v1.textContent = SEARCH_Q;
@@ -109,11 +117,11 @@
         + 'The dates are lost to time, so these tapes are shelved by the decade they came out.</span>';
       h1.closest('.ticket-row').after(note);
     } else if (img && SHELF !== NEWEST) { img.src = `watched-${SHELF}.png`; img.alt = `Watched ${SHELF}`; }
-    $('year').textContent = IN_SEARCH ? `search: ${SEARCH_Q}` : IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
-    if (SHELF !== NEWEST) document.title = IN_SEARCH ? `Viewings: “${SEARCH_Q}”` : IN_ALL ? 'Viewings: the whole store' : IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
+    $('year').textContent = LIST ? LISTS[LIST].toLowerCase() : IN_SEARCH ? `search: ${SEARCH_Q}` : IN_ALL ? 'the whole store' : IN_VAULT ? `the Vault, ${SHELF}` : SHELF;
+    if (SHELF !== NEWEST) document.title = LIST ? `Viewings: ${LISTS[LIST]}` : IN_SEARCH ? `Viewings: “${SEARCH_Q}”` : IN_ALL ? 'Viewings: the whole store' : IN_VAULT ? `Viewings: the Vault, ${SHELF}` : `Viewings ${SHELF}`;
     // arrows either side of the ticket: older shelf on the left, newer on the right
     const link = shelfLink;
-    const i = NAV.indexOf(SHELF);
+    const i = LIST ? -99 : NAV.indexOf(SHELF); // the lists stand apart: no arrows
     [['shelf-prev', NAV[i - 1]], ['shelf-next', NAV[i + 1]]].forEach(([id, y]) => {
       const a = $(id);
       if (!a) return;
@@ -129,7 +137,7 @@
   let current = -1;
   let order = [];      // indices into films, in shelf order, after sorting and the genre filter
   // The Vault and the Whole Store open by release year, oldest first (a walk from the 1930s to now).
-  const VIEW_DEFAULT = IN_VAULT || IN_ALL ? { sort: 'year', dir: 1 } : { sort: 'watched', dir: 1 };
+  const VIEW_DEFAULT = LIST ? { sort: 'rank', dir: 1 } : IN_VAULT || IN_ALL ? { sort: 'year', dir: 1 } : { sort: 'watched', dir: 1 };
   const view = { ...VIEW_DEFAULT, genres: new Set() };
 
   const hash = (s) => { let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
@@ -706,6 +714,11 @@
   const STICKER_WORDS = { Horror: 'HORROR', 'Science Fiction': 'SCI-FI', Comedy: 'COMEDY', Action: 'ACTION', Thriller: 'THRILLER', Drama: 'DRAMA', Crime: 'CRIME', Romance: 'ROMANCE', Animation: 'FAMILY', Documentary: 'DOC' };
 
   function spineEl(f, i) {
+    const b = spineBody(f, i);
+    if (IN_TOP && i >= 0) { const t = document.createElement('span'); t.className = 'rank'; t.textContent = f._rank; t.setAttribute('aria-hidden', 'true'); b.append(t); b.setAttribute('aria-label', `No. ${f._rank}: ${b.getAttribute('aria-label')}`); }
+    return b;
+  }
+  function spineBody(f, i) {
     const b = document.createElement('button');
     b.className = 'spine ' + f._dmg.map((d) => 'dmg-' + d).join(' ');
     b.type = 'button';
@@ -805,7 +818,8 @@
     const avail = shelves.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 2 * gap;
     // On the Whole Store a divider card goes in front of each group (decade, star rating, year watched...).
     // Items are film indices, or divider objects. A card never ends a row on its own: it moves down with its first tape.
-    const items = [], groups = IN_ALL ? groupsOf(order) : null;
+    if (IN_PICKS) return layoutPicks();
+    const items = [], groups = IN_ALL && view.sort !== 'rank' ? groupsOf(order) : null; // in a list's own order, its numbers are enough
     order.forEach((i, n) => { if (groups && groups.starts.has(n)) items.push(groups.starts.get(n)); items.push(i); });
     const wOf = (it) => (typeof it === 'number' ? films[it]._w : DIVIDER_W);
     let row = [], used = 0, rows = [];
@@ -823,6 +837,39 @@
       wrap.append(shelf, board);
       shelves.appendChild(wrap);
     });
+    if (current >= 0) spineEls[current].classList.add('out');
+  }
+
+  /* ---------- the lists: Staff Picks (face-out, each with Ian's card clipped on) and the Top 100 (numbered) ---------- */
+  // Which films, the lines on the cards and the ranking live in data/picks.json (by IMDb id), Ian's to edit.
+  const PICK_W = 150, PICK_GAP = 34;
+  function pickEl(f, i) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'faceout';
+    b.style.setProperty('--tilt', `${(((f._r >>> 3) % 7) - 3) * .5}deg`);
+    b.setAttribute('aria-label', `${f.title} (${f.year}), staff pick${f._pick ? ': ' + f._pick : ''}`);
+    const img = document.createElement('img'); img.className = 'box'; img.alt = ''; img.loading = 'lazy'; img.src = f.poster;
+    const card = document.createElement('span'); card.className = 'pick-card' + (f._pick ? '' : ' blank');
+    card.innerHTML = '<i class="clip" aria-hidden="true"></i><b>Staff pick</b><span class="who">Ian says:</span>';
+    const line = document.createElement('span'); line.className = 'line'; line.textContent = f._pick || '';
+    card.append(line);
+    b.append(img, card);
+    b.addEventListener('click', () => openViewer(i));
+    return b;
+  }
+  function layoutPicks() {
+    spineEls = films.map(pickEl);
+    const cs = getComputedStyle(shelves), gap = parseFloat(cs.getPropertyValue('--end-gap')) || 16;
+    const avail = shelves.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - 2 * gap;
+    const per = Math.max(1, Math.floor((avail + PICK_GAP) / (PICK_W + PICK_GAP)));
+    for (let n = 0; n < order.length; n += per) {
+      const wrap = document.createElement('div'); wrap.className = 'shelf-row';
+      const shelf = document.createElement('div'); shelf.className = 'shelf picks';
+      order.slice(n, n + per).forEach((i) => shelf.appendChild(spineEls[i]));
+      const board = document.createElement('div'); board.className = 'board';
+      wrap.append(shelf, board);
+      shelves.appendChild(wrap);
+    }
     if (current >= 0) spineEls[current].classList.add('out');
   }
 
@@ -872,7 +919,7 @@
   }
 
   /* ---------- sorting and the genre filter ---------- */
-  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1, gap: -1 }; // oldest viewing first; best and newest first
+  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1, gap: -1, rank: 1 }; // oldest viewing first; best and newest first
   const r10 = (f) => (f.rating10 != null ? f.rating10 : (f.rating || 0) * 2);
   const gapOf = (f) => r10(f) - f.imdbRating; // you vs IMDb: above 0, you liked it more than IMDb's voters did
   // On the Whole Store, Vault tapes (no real viewing date) come before everything watched since 2016.
@@ -886,6 +933,7 @@
     year: (a, b) => (a.year || 0) - (b.year || 0) || byWatched(a, b),
     // you vs IMDb (Ian, 26 Nov 2026): first the films you liked most over IMDb, last the ones IMDb liked most over you
     gap: (a, b) => (a.imdbRating == null) - (b.imdbRating == null) || view.dir * (gapOf(a) - gapOf(b)),
+    rank: (a, b) => a._rank - b._rank, // a list's own order (Staff Picks, Top 100)
   };
 
   function computeOrder() {
@@ -913,8 +961,8 @@
 
   function loadView() {
     const q = new URLSearchParams(location.search);
-    const m = /^(watched|rating|imdb|year|gap)(-rev)?$/.exec(q.get('sort') || '');
-    if (m && !(IN_VAULT && m[1] === 'watched')) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
+    const m = /^(watched|rating|imdb|year|gap|rank)(-rev)?$/.exec(q.get('sort') || '');
+    if (m && !(IN_VAULT && m[1] === 'watched') && !(m[1] === 'rank' && !LIST)) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
     (q.get('genre') || '').split(',').filter(Boolean).forEach((g) => view.genres.add(g));
   }
 
@@ -930,6 +978,9 @@
   const controls = $('controls'), genreBtn = $('genre-btn'), genreList = $('genre-list');
   // Vault tapes have no viewing date (their dates are when they were rated in bulk), so no "Date watched" sort there
   if (IN_VAULT) controls.querySelector('[data-sort="watched"]').remove();
+  // the lists open in their own order ("Ranked" on the Top 100, "Staff order" on the picks); other shelves have no such sort
+  if (LIST) controls.querySelector('[data-sort="rank"]').textContent = IN_TOP ? 'Ranked' : 'Picked';
+  else controls.querySelector('[data-sort="rank"]').remove();
 
   function renderControls() {
     controls.querySelectorAll('[data-sort]').forEach((b) => {
@@ -1024,7 +1075,8 @@
     // Vault dates are when the film was rated in bulk, not watched (see the Vault note in the header)
     $('v-watched').textContent = IN_VAULT || f._vault ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
-    $('v-note').textContent = f.note || '';
+    // on the lists, the cover says where the tape stands: its place in the Top 100, or the line on its staff-pick card
+    $('v-note').textContent = [IN_TOP ? `No. ${f._rank} of my Top 100` : '', IN_PICKS ? (f._pick ? `Staff pick: \u201c${f._pick}\u201d` : 'Staff pick') : '', f.note || ''].filter(Boolean).join(' \u00b7 ');
     $('v-play').hidden = !f.trailer;
   }
 
@@ -1304,7 +1356,7 @@
 
   // Go to a tape anywhere in the store: pull it out here, or load its shelf with it pulled out.
   // every tape is on the Whole Store; a search shelf has only its results
-  const isHere = (k, f) => (IN_SEARCH ? films.some((x) => tapeId(x) === tapeId(f)) : IN_ALL || k === SHELF);
+  const isHere = (k, f) => (IN_SEARCH || LIST ? films.some((x) => tapeId(x) === tapeId(f)) : IN_ALL || k === SHELF);
   function goTo(k, f) {
     if (isHere(k, f)) { closeStore(); pullOut(tapeId(f)); }
     else location.href = shelfLink(k, tapeId(f));
@@ -1320,16 +1372,19 @@
         + (here ? '<span class="you">You are here</span>' : '') + '</a>';
     };
     const total = stock ? stock.flat().length : null;
-    const allHere = IN_ALL && !IN_SEARCH && view.sort !== 'gap';
+    const allHere = IN_ALL && !IN_SEARCH && !LIST && view.sort !== 'gap';
     $('aisle-all').innerHTML = `<a class="bay all${allHere ? ' here' : ''}" href="${shelfLink(ALL)}"${allHere ? ' aria-current="page"' : ''}>`
       + '<span class="nm">The Whole Store</span>'
       + `<span class="n">${total == null ? '&nbsp;' : `Every tape, ${total.toLocaleString('en-US')} of them, on one case`}</span>`
       + (allHere ? '<span class="you">You are here</span>' : '') + '</a>';
-    const vsHere = IN_ALL && !IN_SEARCH && view.sort === 'gap';
+    const vsHere = IN_ALL && !IN_SEARCH && !LIST && view.sort === 'gap';
     $('aisle-all').innerHTML += `<a class="bay all vs${vsHere ? ' here' : ''}" href="${shelfPath(ALL)}?sort=gap">`
       + '<span class="nm">You vs IMDb</span>'
       + '<span class="n">Every tape by how far my rating is from IMDb\u2019s: my soft spots first</span>'
       + (vsHere ? '<span class="you">You are here</span>' : '') + '</a>';
+    const listTile = (k, blurb) => `<a class="bay all list ${k}${LIST === k ? ' here' : ''}" href="${shelfPath(ALL, k)}"${LIST === k ? ' aria-current="page"' : ''}>`
+      + `<span class="nm">${LISTS[k]}</span><span class="n">${blurb}</span>` + (LIST === k ? '<span class="you">You are here</span>' : '') + '</a>';
+    $('aisle-all').innerHTML += '<div class="lists">' + listTile('picks', 'My favourites, face out, each with a card on why') + listTile('top100', 'My hundred best, numbered') + '</div>';
     $('aisle-vault').innerHTML = VAULT.map(tile).join('');
     $('aisle-years').innerHTML = YEARS.filter((k) => !VAULT.includes(k)).slice().reverse().map(tile).join('');
     $('store-total').textContent = stock ? `${stock.flat().length.toLocaleString('en-US')} tapes on ${YEARS.length} shelves` : '';
@@ -1565,6 +1620,14 @@
         fs.forEach((f) => { f._k = k; f._vault = VAULT.includes(k); });
         return VAULT.includes(k) ? fs.slice().sort((a, b) => (a.year || 0) - (b.year || 0)) : fs.slice().sort((a, b) => (a.watched || '').localeCompare(b.watched || ''));
       });
+      if (LIST) { // Ian's list: its films, in its order, each marked with its place (and, for the picks, its card's line)
+        let lists = null;
+        try { lists = await (await fetch('data/picks.json', { cache: 'no-cache' })).json(); } catch { /* shown as empty below */ }
+        const entries = (lists && lists[IN_PICKS ? 'staff' : 'top']) || [];
+        const byId = new Map(films.map((f) => [f.imdb, f]));
+        films = entries.map((e, n) => { const f = byId.get(e.imdb); if (f) { f._rank = n + 1; f._pick = e.note || ''; } return f; }).filter(Boolean);
+        if (!films.length) { shelves.innerHTML = '<p style="text-align:center;opacity:.7">Nothing on this shelf yet.</p>'; return; }
+      }
       if (IN_SEARCH) { // only this search's results (every one of them), in the same order as the Whole Store
         const want = new Set(search(SEARCH_Q, true).hits.map((e) => e.f));
         films = films.filter((f) => want.has(f));
