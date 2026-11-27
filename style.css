@@ -913,34 +913,53 @@ body.store-open { overflow: hidden; }
 
 .tv-wrap { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; padding: 16px; }
 .tv-wrap[hidden] { display: none; }
-.tv-backdrop { position: absolute; inset: 0; background: rgba(6,5,4,.88); animation: tv-fade .3s ease; }
+.tv-backdrop { position: absolute; inset: 0; background: rgba(6,5,4,.97); animation: tv-fade .3s ease; }
 @keyframes tv-fade { from { opacity: 0; } }
 .tv-set { position: relative; width: min(880px, 94vw, calc((100vh - 170px) * 1.27)); display: flex; flex-direction: column; align-items: center; animation: tv-rise .35s cubic-bezier(.2,.8,.3,1); }
 @keyframes tv-rise { from { transform: translateY(24px); opacity: 0; } }
 .tv-x { position: fixed; top: 14px; right: 18px; appearance: none; background: none; border: 0; color: #f2bd0a; font-size: 38px; line-height: .7; cursor: pointer; z-index: 2; }
 
-/* the set: woodgrain-brown plastic cabinet, deep bezel, a curved glass screen */
-.tv {
-  width: 100%; padding: 4.5% 4.5% 0; border-radius: 22px 22px 16px 16px;
-  background: linear-gradient(180deg, #3a3330, #221d1b 60%, #1a1614);
-  box-shadow: inset 0 2px 0 rgba(255,255,255,.08), inset 0 -3px 6px rgba(0,0,0,.6), 0 30px 60px rgba(0,0,0,.6);
+/* the set: a 1970s portable (Ian's reference, 26 Nov 2026): gunmetal cabinet with chrome trim, a chrome-rimmed tube,
+   a control panel (brushed name plate, VHF/UHF dials, PULL ON VOL) over a wood-slat speaker grille, a loop antenna on top.
+   Sized in cqw off .tv-set, so it scales as one piece. */
+.tv-set { container-type: inline-size; }
+.tv { position: relative; width: 100%; padding-top: 9cqw; }
+.tv-antenna { position: absolute; left: 30cqw; top: 0; width: 17cqw; height: 15cqw; border: .45cqw solid #b9b6b0; border-radius: 50%; z-index: 0;
+  box-shadow: inset 0 0 .3cqw rgba(0,0,0,.6), 0 0 .3cqw rgba(0,0,0,.5); }
+.tv-face {
+  position: relative; z-index: 1; display: flex; gap: 2.6cqw; padding: 3cqw 3cqw 3.4cqw; border-radius: 3.2cqw / 3.6cqw;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .9 0 0 0 0 .88 0 0 0 0 .84 0 0 0 .9 -.45'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E"),
+    linear-gradient(180deg, #4a4846 0%, #2f2e2d 18%, #262524 70%, #1c1b1a 100%);
+  box-shadow:
+    inset 0 0 0 .35cqw #2a2928, inset 0 0 0 .7cqw #8d8a85, inset 0 .9cqw 0 -.2cqw rgba(255,255,255,.25), inset 0 -.8cqw 1.4cqw rgba(0,0,0,.6),
+    0 3cqw 6cqw rgba(0,0,0,.65);
+}
+/* chrome rim round the tube, then a dark gasket */
+.tv-bezel {
+  flex: 0 0 66cqw; padding: 2.1cqw; border-radius: 5cqw / 6cqw;
+  background: linear-gradient(160deg, #e9e7e2 0%, #8c8984 22%, #d6d3cd 46%, #6f6c68 70%, #b7b4ae 100%);
+  box-shadow: inset 0 0 0 .25cqw rgba(0,0,0,.35), 0 .4cqw .8cqw rgba(0,0,0,.6), 0 0 0 .5cqw #1b1a19;
 }
 .tv-screen {
-  position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #050605;
-  border-radius: 9% / 11%; /* the bulge of the tube */
-  box-shadow: 0 0 0 10px #0d0b0a, 0 0 0 12px #2c2624, inset 0 0 40px rgba(0,0,0,.9);
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #0b0d0c;
+  border-radius: 9% / 12%; /* the bulge of the tube */
+  box-shadow: 0 0 0 .9cqw #121212, 0 0 0 1.1cqw #55524e, inset 0 0 4cqw rgba(0,0,0,.9);
 }
 .tv-screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; z-index: 1; filter: saturate(1.15) contrast(1.05); }
-/* scanlines, vignette and the glass highlight, over the picture but letting clicks through to the player */
+/* scanlines, vignette, a dusty glass sheen; clicks go through to the player */
 .tv-glass {
   position: absolute; inset: 0; z-index: 3; pointer-events: none; border-radius: inherit;
   background:
-    radial-gradient(120% 90% at 30% 15%, rgba(255,255,255,.10), transparent 40%),
-    radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.55) 100%),
+    radial-gradient(80% 45% at 40% 18%, rgba(255,255,255,.13), transparent 60%),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.6) 100%),
     repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px);
   box-shadow: inset 0 0 60px rgba(0,0,0,.7), inset 0 0 8px rgba(160,255,200,.08);
 }
-/* before the picture: dark, then a flash of snow as the set warms up */
+/* switched off: the grey-green of a dead tube */
+.tv-screen::before { content: ""; position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse at 45% 40%, #4b4f52, #2a2d30 70%, #1a1c1d); }
+.tv-wrap.on .tv-screen::before { background: #050605; }
+/* before the picture: a flash of snow as the set warms up */
 .tv-static { position: absolute; inset: -50%; z-index: 2; opacity: 0; pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .8 0 0 0 0 .8 0 0 0 0 .8 0 0 0 1.4 -.2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -949,10 +968,46 @@ body.store-open { overflow: hidden; }
 @keyframes tv-snow { 0% { transform: translate(0,0); } 25% { transform: translate(-7%,4%); } 50% { transform: translate(5%,-6%); } 75% { transform: translate(-3%,-2%); } }
 .tv-wrap.on .tv-screen::after { content: ""; position: absolute; inset: 0; z-index: 4; pointer-events: none; background: #dff; animation: tv-on .5s ease-out forwards; }
 @keyframes tv-on { 0% { opacity: .9; transform: scaleY(.01); } 40% { opacity: .8; transform: scaleY(1); } 100% { opacity: 0; transform: scaleY(1); } }
-.tv-chin { display: flex; align-items: center; justify-content: space-between; padding: 2.2% 2% 2.4%; }
-.tv-brand { font-family: 'Blockletter', sans-serif; letter-spacing: .25em; font-size: clamp(11px, 1.6vw, 15px); color: #b8aa98; opacity: .7; }
-.tv-led { width: 8px; height: 8px; border-radius: 50%; background: #3a1210; box-shadow: inset 0 1px 1px rgba(0,0,0,.6); }
-.tv-wrap.on .tv-led { background: #ff3b2e; box-shadow: 0 0 6px #ff3b2e; }
+
+/* the control panel */
+.tv-panel {
+  flex: 1; display: grid; grid-template-columns: 34% 1fr; grid-template-rows: 1fr auto; gap: 1cqw; padding: .9cqw; border-radius: .8cqw;
+  background: linear-gradient(180deg, #a19d96, #6d6a65); box-shadow: inset 0 0 0 .2cqw rgba(0,0,0,.4), 0 0 0 .3cqw #1c1b1a;
+}
+.tv-plate, .tv-dials {
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 3px), linear-gradient(180deg, #d9d6cf, #a9a59e 60%, #c3bfb8);
+  box-shadow: inset 0 0 0 .15cqw rgba(0,0,0,.35); border-radius: .3cqw;
+}
+.tv-plate { position: relative; display: flex; flex-direction: column; align-items: center; padding: 1.6cqw .5cqw 1.2cqw; }
+.tv-badge { color: #c5281f; font-size: 2.4cqw; line-height: 1; }
+.tv-brand { margin-top: .5cqw; font-family: Arial, sans-serif; font-weight: 700; font-size: .95cqw; letter-spacing: .08em; line-height: 1.15; color: #6d6963; text-align: center; }
+.tv-led { margin-top: 2.2cqw; width: .9cqw; height: .9cqw; border-radius: 50%; background: #3a1210; box-shadow: inset 0 .1cqw .2cqw rgba(0,0,0,.7); }
+.tv-wrap.on .tv-led { background: #ff3b2e; box-shadow: 0 0 .8cqw #ff3b2e; }
+.tv-pull { margin-top: auto; font-family: Arial, sans-serif; font-size: 1cqw; letter-spacing: .04em; color: #4a4742; white-space: nowrap; }
+.tv-btn { margin-top: .5cqw; width: 70%; height: 2.6cqw; border-radius: .2cqw; background: linear-gradient(180deg, #c9c5be, #8f8b85); box-shadow: inset 0 0 0 .15cqw rgba(0,0,0,.4); }
+.tv-dials { display: flex; flex-direction: column; gap: 1cqw; padding: 1cqw; }
+.tv-well { position: relative; flex: 1; display: grid; place-items: center; border-radius: 1cqw; background: #2a2b2d; box-shadow: inset 0 .3cqw .6cqw rgba(0,0,0,.8), 0 0 0 .2cqw #77736d; }
+.tv-well b { position: absolute; top: .5cqw; right: .9cqw; font: 700 1.05cqw Arial, sans-serif; color: #d8d2c4; }
+.tv-dial { position: relative; width: 11cqw; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #3a3b3e, #232427 70%); box-shadow: inset 0 0 0 .15cqw #111, 0 .2cqw .3cqw rgba(0,0,0,.6); }
+.tv-dial i { position: absolute; left: 50%; top: 50%; font: normal 1.15cqw/1 Arial, sans-serif; color: #e2dccd; transform: translate(-50%, -50%) rotate(calc(var(--i) * 27.69deg)) translateY(-4.3cqw) rotate(calc(var(--i) * -27.69deg)); }
+.tv-dial.uhf { background:
+    repeating-conic-gradient(from 0deg, #e2dccd 0 .8deg, transparent .8deg 8deg) center / 100% 100% no-repeat,
+    radial-gradient(circle, #232427 0 62%, transparent 63%), #2c2d30;
+  -webkit-mask: radial-gradient(circle, #000 0 69%, transparent 70%); mask: radial-gradient(circle, #000 0 69%, transparent 70%); }
+.tv-knob { position: absolute; left: 50%; top: 50%; width: 4.6cqw; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #444, #151515 70%); box-shadow: 0 .25cqw .4cqw rgba(0,0,0,.7), inset 0 0 0 .2cqw #2e2e2e; }
+.tv-knob::after { content: ""; position: absolute; left: 50%; top: 18%; width: 1.1cqw; height: 2.6cqw; transform: translateX(-50%) rotate(-12deg); border-radius: .3cqw; background: linear-gradient(90deg, #8a8781, #e9e6df, #8a8781); }
+.tv-knob.bar { width: 6cqw; background: radial-gradient(circle at 40% 35%, #d9d6cf, #8b8781 70%); }
+.tv-knob.bar::after { top: 50%; width: 6.6cqw; height: 1.3cqw; transform: translate(-50%, -50%) rotate(-8deg); background: linear-gradient(180deg, #e9e6df, #8a8781); box-shadow: 0 .15cqw .3cqw rgba(0,0,0,.6); }
+.tv-grille {
+  grid-column: 1 / -1; height: 13cqw; border-radius: .3cqw; box-shadow: inset 0 0 0 .25cqw #1e1d1c, inset 0 0 1cqw rgba(0,0,0,.7);
+  background:
+    repeating-linear-gradient(180deg, transparent 0 .75cqw, #1a1410 .75cqw 1.05cqw),
+    repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 2px, transparent 2px 7px),
+    linear-gradient(180deg, #8a5a32, #6b4224 50%, #7c5130);
+}
+.tv-feet { height: 1.4cqw; margin: 0 4cqw; background: linear-gradient(90deg, #111 0 8%, transparent 8% 92%, #111 92%); border-radius: 0 0 .4cqw .4cqw; }
+.tv-set { width: min(1000px, 96vw, calc((100vh - 70px) / .86)); }
 
 /* the deck the tape goes into */
 .vcr-deck {

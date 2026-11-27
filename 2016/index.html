@@ -132,8 +132,21 @@
     <div class="tv-set" role="dialog" aria-modal="true" aria-label="Trailer">
       <button type="button" class="tv-x" data-close aria-label="Stop and eject">&times;</button>
       <div class="tv">
-        <div class="tv-screen" id="tv-screen"><div class="tv-static"></div><div class="tv-glass"></div></div>
-        <div class="tv-chin"><span class="tv-brand">VIEWINGS</span><span class="tv-led"></span></div>
+        <div class="tv-antenna" aria-hidden="true"></div>
+        <div class="tv-face">
+          <div class="tv-bezel">
+            <div class="tv-screen" id="tv-screen"><div class="tv-static"></div><div class="tv-glass"></div></div>
+          </div>
+          <div class="tv-panel" aria-hidden="true">
+            <div class="tv-plate"><span class="tv-badge">&#9670;</span><span class="tv-brand">VIEWINGS<br>VIDEO</span><span class="tv-led"></span><span class="tv-pull">PULL.ON VOL</span><span class="tv-btn"></span></div>
+            <div class="tv-dials">
+              <div class="tv-well"><b>VHF</b><div class="tv-dial vhf"><i style="--i:0">0</i><i style="--i:1">2</i><i style="--i:2">3</i><i style="--i:3">4</i><i style="--i:4">5</i><i style="--i:5">6</i><i style="--i:6">7</i><i style="--i:7">8</i><i style="--i:8">9</i><i style="--i:9">10</i><i style="--i:10">11</i><i style="--i:11">12</i><i style="--i:12">13</i><span class="tv-knob"></span></div></div>
+              <div class="tv-well"><b>UHF</b><div class="tv-dial uhf"><span class="tv-knob bar"></span></div></div>
+            </div>
+            <div class="tv-grille"></div>
+          </div>
+        </div>
+        <div class="tv-feet" aria-hidden="true"></div>
       </div>
       <div class="vcr-deck">
         <div class="vcr-slot"><div class="vcr-tape" id="vcr-tape"></div></div>
