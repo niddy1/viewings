@@ -1006,13 +1006,29 @@ body.store-open { overflow: hidden; }
     repeating-linear-gradient(90deg, rgba(0,0,0,.08) 0 2px, transparent 2px 7px),
     linear-gradient(180deg, #8a5a32, #6b4224 50%, #7c5130);
 }
-.tv-feet { height: 1.4cqw; margin: 0 4cqw; background: linear-gradient(90deg, #111 0 8%, transparent 8% 92%, #111 92%); border-radius: 0 0 .4cqw .4cqw; }
+.tv { z-index: 2; }
+/* the set stands on the deck: two rubber feet on its lid */
+.tv-feet { position: relative; height: 1.3cqw; margin: 0 9cqw; display: flex; justify-content: space-between; }
+.tv-feet i { width: 7cqw; height: 100%; border-radius: 0 0 .5cqw .5cqw; background: linear-gradient(180deg, #161616, #050505); box-shadow: 0 .3cqw .5cqw rgba(0,0,0,.8); }
+/* the aerial lead: out of the back of the set, round the side, into the back of the deck */
+.tv-set { position: relative; }
+.tv-cable { position: absolute; left: 0; top: 0; width: 110cqw; height: 80cqw; z-index: 0; overflow: visible; pointer-events: none; }
+.tv-cable path { fill: none; stroke: #1d1d1f; stroke-width: .9; stroke-linecap: round; }
+.tv-cable path.hi { stroke: rgba(255,255,255,.22); stroke-width: .25; transform: translate(-.15px, -.2px); }
 .tv-set { width: min(1000px, 96vw, calc((100vh - 70px) / .86)); }
 
 /* the deck the set stands on: a charcoal front-loader. The cassette is seen spine-on, pushed in through the hinged flap. */
-.deck { width: 90cqw; margin: 0 auto; }
+.deck { position: relative; z-index: 1; width: 90cqw; margin: -1.5cqw auto 0; }
+/* the deck's lid, seen a little from above: vents, and the set's shadow pooled on it */
+.deck-top {
+  height: 2.6cqw; clip-path: polygon(1.4cqw 0, calc(100% - 1.4cqw) 0, 100% 100%, 0 100%);
+  background:
+    radial-gradient(60% 140% at 50% 0%, rgba(0,0,0,.75), transparent 70%),
+    repeating-linear-gradient(90deg, transparent 0 .9cqw, rgba(0,0,0,.35) .9cqw 1.25cqw) 62% 55% / 22cqw .9cqw no-repeat,
+    linear-gradient(180deg, #2a2a2c, #3d3d40 70%, #55555a);
+}
 .deck-face {
-  position: relative; display: flex; align-items: center; gap: 2.4cqw; height: 10.5cqw; padding: 0 2.6cqw; border-radius: .6cqw .6cqw .4cqw .4cqw;
+  position: relative; display: flex; align-items: center; gap: 2.4cqw; height: 10.5cqw; padding: 0 2.6cqw; border-radius: 0 0 .4cqw .4cqw;
   background:
     linear-gradient(180deg, #8f8c87 0, #cfccc6 .35cqw, #77746f .7cqw, transparent .75cqw),
     repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
