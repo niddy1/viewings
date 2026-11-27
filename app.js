@@ -1093,14 +1093,14 @@
 
   /* ---------- the trailer: into the VCR, onto the CRT ---------- */
   // `trailer` on a film is a YouTube id (from TMDB's trailer list, 26 Nov 2026). The Play button shows only when there is one.
-  const tv = $('tv'), tvScreen = $('tv-screen'), vcrTape = $('vcr-tape'), vcrDisplay = $('vcr-display');
+  const tv = $('tv'), tvScreen = $('tv-screen'), vcrTitle = $('vcr-title'), vcrDisplay = $('vcr-display');
   let tvTimer = null, tvFocus = null;
   function openTrailer(f) {
     if (!f || !f.trailer || !tv.hidden) return;
     tvFocus = document.activeElement;
     tv.hidden = false; tv.classList.remove('playing', 'on'); document.body.classList.add('store-open');
-    vcrTape.style.backgroundImage = f.poster ? `url("${f.poster}")` : 'none';
-    vcrDisplay.textContent = 'LOAD';
+    vcrTitle.textContent = f.title; // handwritten on the cassette's label
+    vcrDisplay.textContent = 'LOAD'; vcrDisplay.classList.remove('blink');
     tvScreen.querySelector('iframe')?.remove();
     void tv.offsetWidth; tv.classList.add('loading'); // the tape slides into the slot
     sfx('load');
@@ -1124,6 +1124,7 @@
     clearTimeout(tvTimer);
     tvScreen.querySelector('iframe')?.remove();
     tv.classList.remove('loading', 'on', 'playing');
+    vcrDisplay.textContent = '12:00'; vcrDisplay.classList.add('blink'); // nobody ever set the clock
     tv.hidden = true;
     if (current < 0 && receipt.hidden && store.hidden) document.body.classList.remove('store-open');
     sfx('eject');
