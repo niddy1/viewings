@@ -20,7 +20,8 @@
         "Documentary"
       ],
       "studio": "EyeSteelFilm",
-      "logo": "logos/38993.png"
+      "logo": "logos/38993.png",
+      "trailer": "hM4uDZiiowU"
     },
     {
       "title": "The Florida Project",
@@ -40,7 +41,8 @@
         "Drama"
       ],
       "studio": "Cre Film",
-      "logo": "logos/88152.png"
+      "logo": "logos/88152.png",
+      "trailer": "WwQ-NH1rRT4"
     },
     {
       "title": "Coco",
@@ -63,7 +65,8 @@
         "Adventure"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "trailer": "zNCz4mQzfEI"
     },
     {
       "title": "Darkest Hour",
@@ -84,7 +87,8 @@
         "History"
       ],
       "studio": "Working Title",
-      "logo": "logos/10163.png"
+      "logo": "logos/10163.png",
+      "trailer": "eFFj2gS9UWs"
     },
     {
       "title": "My Friend Dahmer",
@@ -106,7 +110,8 @@
         "Crime"
       ],
       "studio": "Ibid Filmworks",
-      "logo": "logos/54369.png"
+      "logo": "logos/54369.png",
+      "trailer": "SpMhnqnbh0g"
     },
     {
       "title": "Murder on the Orient Express",
@@ -128,7 +133,8 @@
         "Crime"
       ],
       "studio": "The Mark Gordon Company",
-      "logo": "logos/1557.png"
+      "logo": "logos/1557.png",
+      "trailer": "Mq4m3yAoW8E"
     },
     {
       "title": "Three Billboards Outside Ebbing, Missouri",
@@ -149,7 +155,8 @@
         "Drama"
       ],
       "studio": "Blueprint Pictures",
-      "logo": "logos/2376.png"
+      "logo": "logos/2376.png",
+      "trailer": "Jit3YhGx5pU"
     },
     {
       "title": "Call Me by Your Name",
@@ -170,7 +177,8 @@
         "Drama"
       ],
       "studio": "Frenesy Film",
-      "logo": "logos/46344.png"
+      "logo": "logos/46344.png",
+      "trailer": "Z9AYPxH5NTM"
     },
     {
       "title": "Lady Bird",
@@ -191,7 +199,8 @@
         "Comedy"
       ],
       "studio": "IAC Films",
-      "logo": "logos/93105.png"
+      "logo": "logos/93105.png",
+      "trailer": "cNi_HC839Wo"
     },
     {
       "title": "Spider-Man: Homecoming",
@@ -213,7 +222,8 @@
         "Science Fiction"
       ],
       "studio": "Marvel Studios",
-      "logo": "logos/420.png"
+      "logo": "logos/420.png",
+      "trailer": "rk-dF1lIbIg"
     },
     {
       "title": "I, Tonya",
@@ -256,7 +266,8 @@
         "Romance"
       ],
       "studio": "Double Dare You",
-      "logo": "logos/101082.png"
+      "logo": "logos/101082.png",
+      "trailer": "XFYWazblaUA"
     },
     {
       "title": "Get Out",
@@ -278,7 +289,8 @@
         "Horror"
       ],
       "studio": "Monkeypaw Productions",
-      "logo": "logos/88934.png"
+      "logo": "logos/88934.png",
+      "trailer": "sRfnevzM9kQ"
     },
     {
       "title": "Christine",
@@ -306,7 +318,8 @@
       "studio": "Great Point Media",
       "logo": "logos/52352.png",
       "imdbRating": 6.9,
-      "imdbVotes": 18228
+      "imdbVotes": 18228,
+      "trailer": "grpEVD0TU8U"
     },
     {
       "title": "The Keepers",
@@ -327,7 +340,8 @@
         "Crime"
       ],
       "studio": "Film 45",
-      "logo": "logos/90560.png"
+      "logo": "logos/90560.png",
+      "trailer": "Khr7dbuBjuE"
     },
     {
       "title": "The Imposter",
@@ -349,7 +363,8 @@
         "Crime"
       ],
       "studio": "RAW",
-      "logo": "logos/23949.png"
+      "logo": "logos/23949.png",
+      "trailer": "yDjpnpzw4GY"
     },
     {
       "title": "A Murder in the Park",
@@ -369,7 +384,8 @@
         "Documentary"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "trailer": "jMa6cxG2yDk"
     },
     {
       "title": "Amanda Knox",
@@ -390,7 +406,8 @@
         "Crime"
       ],
       "studio": "Plus Pictures",
-      "logo": "logos/107390.png"
+      "logo": "logos/107390.png",
+      "trailer": "mRLt2xBpQbQ"
     },
     {
       "title": "The Witness",
@@ -410,7 +427,8 @@
         "Documentary"
       ],
       "studio": "",
-      "logo": ""
+      "logo": "",
+      "trailer": "KIDL_tY84IY"
     },
     {
       "title": "Annihilation",
@@ -431,7 +449,8 @@
         "Horror"
       ],
       "studio": "Paramount Pictures",
-      "logo": "logos/4.png"
+      "logo": "logos/4.png",
+      "trailer": "ufaDurSCKOk"
     },
     {
       "title": "Film Stars Don't Die in Liverpool",
@@ -452,7 +471,8 @@
         "Drama"
       ],
       "studio": "EON Productions",
-      "logo": "logos/7576.png"
+      "logo": "logos/7576.png",
+      "trailer": "43_KLNaEc6M"
     },
     {
       "title": "Phantom Thread",
@@ -473,7 +493,8 @@
         "Romance"
       ],
       "studio": "Focus Features",
-      "logo": "logos/10146.png"
+      "logo": "logos/10146.png",
+      "trailer": "xNsiQMeSvMk"
     },
     {
       "title": "The Post",
@@ -494,7 +515,8 @@
         "History"
       ],
       "studio": "20th Century Fox",
-      "logo": "logos/25.png"
+      "logo": "logos/25.png",
+      "trailer": "nrXlY6gzTTM"
     },
     {
       "title": "The Commuter",
@@ -516,7 +538,8 @@
         "Mystery"
       ],
       "studio": "StudioCanal",
-      "logo": "logos/694.png"
+      "logo": "logos/694.png",
+      "trailer": "aDshY43Ol2U"
     },
     {
       "title": "We Need to Talk About Kevin",
@@ -537,7 +560,8 @@
         "Thriller"
       ],
       "studio": "BBC Film",
-      "logo": "logos/288.png"
+      "logo": "logos/288.png",
+      "trailer": "M7UD_WThLME"
     },
     {
       "title": "Andre the Giant",
@@ -558,7 +582,8 @@
         "TV Movie"
       ],
       "studio": "HBO Sports",
-      "logo": "logos/6751.png"
+      "logo": "logos/6751.png",
+      "trailer": "f_jTeuajas0"
     },
     {
       "title": "The Cheshire Murders",
@@ -578,7 +603,8 @@
         "Documentary"
       ],
       "studio": "HBO Documentary Films",
-      "logo": "logos/14914.png"
+      "logo": "logos/14914.png",
+      "trailer": "dzBzcjW1j6c"
     },
     {
       "title": "Mercury 13",
@@ -598,7 +624,8 @@
         "Documentary"
       ],
       "studio": "Fine Point Films",
-      "logo": "logos/80995.png"
+      "logo": "logos/80995.png",
+      "trailer": "jpiVx2mQhKI"
     },
     {
       "title": "Before Sunrise",
@@ -619,7 +646,8 @@
         "Romance"
       ],
       "studio": "Castle Rock Entertainment",
-      "logo": "logos/97.png"
+      "logo": "logos/97.png",
+      "trailer": "jGvcbSabADM"
     },
     {
       "title": "Before Midnight",
@@ -640,7 +668,8 @@
         "Drama"
       ],
       "studio": "Castle Rock Entertainment",
-      "logo": "logos/97.png"
+      "logo": "logos/97.png",
+      "trailer": "NRVLVPWzeek"
     },
     {
       "title": "Before Sunset",
@@ -661,7 +690,8 @@
         "Romance"
       ],
       "studio": "Warner Independent Pictures",
-      "logo": "logos/11509.png"
+      "logo": "logos/11509.png",
+      "trailer": "jx0UWbMMZOQ"
     },
     {
       "title": "The Rachel Divide",
@@ -702,7 +732,8 @@
         "History"
       ],
       "studio": "Warner Bros. Pictures",
-      "logo": "logos/174.png"
+      "logo": "logos/174.png",
+      "trailer": "jNMWdwvZjsw"
     },
     {
       "title": "Star Wars: The Last Jedi",
@@ -724,7 +755,8 @@
         "Science Fiction"
       ],
       "studio": "Lucasfilm Ltd.",
-      "logo": "logos/1.png"
+      "logo": "logos/1.png",
+      "trailer": "Q0CbN8sfihY"
     },
     {
       "title": "A Fantastic Woman",
@@ -744,7 +776,8 @@
         "Drama"
       ],
       "studio": "Komplizen Film",
-      "logo": "logos/1618.png"
+      "logo": "logos/1618.png",
+      "trailer": "PJHex4ZitgA"
     },
     {
       "title": "Everybody Wants Some!!",
@@ -764,7 +797,8 @@
         "Comedy"
       ],
       "studio": "Annapurna Pictures",
-      "logo": "logos/13184.png"
+      "logo": "logos/13184.png",
+      "trailer": "q58EeFx1R3c"
     },
     {
       "title": "The Purge",
@@ -786,7 +820,8 @@
         "Thriller"
       ],
       "studio": "Universal Pictures",
-      "logo": "logos/33.png"
+      "logo": "logos/33.png",
+      "trailer": "A2bVeqhzuSs"
     },
     {
       "title": "Good Time",
@@ -808,7 +843,8 @@
         "Drama"
       ],
       "studio": "Elara Pictures",
-      "logo": "logos/94312.png"
+      "logo": "logos/94312.png",
+      "trailer": "AVyGCxHZ_Ko"
     },
     {
       "title": "PlayTime",
@@ -828,7 +864,8 @@
         "Comedy"
       ],
       "studio": "Specta Films",
-      "logo": "logos/30847.png"
+      "logo": "logos/30847.png",
+      "trailer": "zrYB8hgyq4s"
     },
     {
       "title": "Red Sparrow",
@@ -849,7 +886,8 @@
         "Mystery"
       ],
       "studio": "Chernin Entertainment",
-      "logo": "logos/7076.png"
+      "logo": "logos/7076.png",
+      "trailer": "ZQUBjoGm1ls"
     },
     {
       "title": "Thoroughbreds",
@@ -870,7 +908,8 @@
         "Thriller"
       ],
       "studio": "June Pictures",
-      "logo": "logos/76901.png"
+      "logo": "logos/76901.png",
+      "trailer": "XnJswAFjvJo"
     },
     {
       "title": "Ready Player One",
@@ -892,7 +931,8 @@
         "Science Fiction"
       ],
       "studio": "Amblin Entertainment",
-      "logo": "logos/56.png"
+      "logo": "logos/56.png",
+      "trailer": "cSp1dM2Vj48"
     },
     {
       "title": "Isle of Dogs",
@@ -914,7 +954,8 @@
         "Animation"
       ],
       "studio": "Studio Babelsberg",
-      "logo": "logos/264.png"
+      "logo": "logos/264.png",
+      "trailer": "dt__kig8PVU"
     },
     {
       "title": "Super Troopers 2",
@@ -936,7 +977,8 @@
         "Mystery"
       ],
       "studio": "Broken Lizard Industries",
-      "logo": "logos/2773.png"
+      "logo": "logos/2773.png",
+      "trailer": "eEed-o8fVpM"
     },
     {
       "title": "The Tale",
@@ -957,7 +999,8 @@
         "Mystery"
       ],
       "studio": "One Two Films",
-      "logo": "logos/39720.png"
+      "logo": "logos/39720.png",
+      "trailer": "tXpYsr3AL4U"
     },
     {
       "title": "Tully",
@@ -978,7 +1021,8 @@
         "Drama"
       ],
       "studio": "Bron Studios",
-      "logo": "logos/13240.png"
+      "logo": "logos/13240.png",
+      "trailer": "e5D3O4yCmCg"
     },
     {
       "title": "Black Panther",
@@ -1000,7 +1044,8 @@
         "Science Fiction"
       ],
       "studio": "Marvel Studios",
-      "logo": "logos/420.png"
+      "logo": "logos/420.png",
+      "trailer": "dxWvtMOGAhw"
     },
     {
       "title": "Blade Runner 2049",
@@ -1021,7 +1066,8 @@
         "Drama"
       ],
       "studio": "Alcon Entertainment",
-      "logo": "logos/1088.png"
+      "logo": "logos/1088.png",
+      "trailer": "gCcx85zbxz4"
     },
     {
       "title": "American Animals",
@@ -1043,7 +1089,8 @@
         "Documentary"
       ],
       "studio": "Film4 Productions",
-      "logo": "logos/6705.png"
+      "logo": "logos/6705.png",
+      "trailer": "SKvPVvy2Kn8"
     },
     {
       "title": "Eighth Grade",
@@ -1064,7 +1111,8 @@
         "Drama"
       ],
       "studio": "A24",
-      "logo": "logos/41077.png"
+      "logo": "logos/41077.png",
+      "trailer": "y8lFgF_IjPw"
     },
     {
       "title": "BlacKkKlansman",
@@ -1086,7 +1134,8 @@
         "History"
       ],
       "studio": "Legendary Pictures",
-      "logo": "logos/923.png"
+      "logo": "logos/923.png",
+      "trailer": "pFc6I0rgmgY"
     },
     {
       "title": "Incredibles 2",
@@ -1109,7 +1158,8 @@
         "Family"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "trailer": "YBpdL9hSac4"
     },
     {
       "title": "Bao",
@@ -1133,7 +1183,8 @@
         "Comedy"
       ],
       "studio": "Pixar",
-      "logo": "logos/3.png"
+      "logo": "logos/3.png",
+      "trailer": "vnaLgPW9LbM"
     }
   ]
 }

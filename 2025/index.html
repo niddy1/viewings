@@ -51,6 +51,7 @@
       <button type="button" id="find-btn" title="Search every shelf (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4.5 4.5"/></svg>Find a tape</button>
       <button type="button" id="lucky-btn" title="A random tape from any shelf">Surprise me</button>
       <button type="button" id="receipt-btn" title="This year's rentals, itemised" hidden>Receipt</button>
+      <button type="button" id="sound-btn" class="sound-btn" aria-pressed="false" title="Sound effects"><svg viewBox="0 0 20 20" aria-hidden="true"><path class="spk" d="M3 7.5h3l4-3.5v12l-4-3.5H3z"/><path class="on" d="M13 7a4 4 0 0 1 0 6M15.5 4.5a7.5 7.5 0 0 1 0 11"/><path class="off" d="M13 8l5 5M18 8l-5 5"/></svg><span>Sound</span></button>
     </div>
     <p class="tally" hidden><span id="count">0</span> <span id="tapes">Tapes</span></p>
   </header>
@@ -92,6 +93,7 @@
         <p class="watched" id="v-watched"></p>
         <div class="genres" id="v-genres"></div>
         <p class="note" id="v-note"></p>
+        <button class="play" id="v-play" hidden><span aria-hidden="true">&#9654;</span> Play trailer</button>
         <button class="close" id="close">Put it back</button>
       </section>
     </div>
@@ -120,6 +122,23 @@
       <div class="store-foot">
         <button type="button" id="store-lucky">Surprise me</button>
         <span class="keys"><kbd>/</kbd> find <kbd>[</kbd><kbd>]</kbd> next shelf <kbd>Esc</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- the trailer: the tape goes into a VCR under a CRT set and the trailer plays on its screen (app.js, "the trailer") -->
+  <div class="tv-wrap" id="tv" hidden>
+    <div class="tv-backdrop" data-close></div>
+    <div class="tv-set" role="dialog" aria-modal="true" aria-label="Trailer">
+      <button type="button" class="tv-x" data-close aria-label="Stop and eject">&times;</button>
+      <div class="tv">
+        <div class="tv-screen" id="tv-screen"><div class="tv-static"></div><div class="tv-glass"></div></div>
+        <div class="tv-chin"><span class="tv-brand">VIEWINGS</span><span class="tv-led"></span></div>
+      </div>
+      <div class="vcr-deck">
+        <div class="vcr-slot"><div class="vcr-tape" id="vcr-tape"></div></div>
+        <div class="vcr-display" id="vcr-display">--:--</div>
+        <span class="vcr-label">VHS &middot; HQ &middot; 4 HEAD</span>
       </div>
     </div>
   </div>

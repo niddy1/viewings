@@ -1025,9 +1025,116 @@
     $('v-watched').textContent = IN_VAULT || f._vault ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
     $('v-note').textContent = f.note || '';
+    $('v-play').hidden = !f.trailer;
   }
 
+  /* ---------- sound: synthesised with Web Audio (no sound files); off until the speaker button turns it on ---------- */
+  const SOUND_KEY = 'viewings.sound';
+  let soundOn = false;
+  try { soundOn = localStorage.getItem(SOUND_KEY) === 'on'; } catch { /* storage off: stays off */ }
+  let actx = null, noise = null;
+  function audio() {
+    if (!actx) {
+      actx = new (window.AudioContext || window.webkitAudioContext)();
+      noise = actx.createBuffer(1, actx.sampleRate * 2, actx.sampleRate); // 2s of white noise, reused for every scrape and hiss
+      const d = noise.getChannelData(0); for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    }
+    if (actx.state === 'suspended') actx.resume();
+    return actx;
+  }
+  function burst(c, at, dur, type, freq, q, peak, out = c.destination) { // a shaped slice of filtered noise
+    const n = c.createBufferSource(); n.buffer = noise;
+    const f = c.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
+    const g = c.createGain(); g.gain.setValueAtTime(0.0001, at); g.gain.exponentialRampToValueAtTime(peak, at + Math.min(.015, dur / 4)); g.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+    n.connect(f).connect(g).connect(out); n.start(at, Math.random() * 1.5, dur + .05);
+  }
+  function thump(c, at, f0, f1, dur, peak) { // a damped knock of hollow plastic
+    const o = c.createOscillator(); o.type = 'triangle';
+    o.frequency.setValueAtTime(f0, at); o.frequency.exponentialRampToValueAtTime(f1, at + dur);
+    const g = c.createGain(); g.gain.setValueAtTime(0.0001, at); g.gain.exponentialRampToValueAtTime(peak, at + .006); g.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+    o.connect(g).connect(c.destination); o.start(at); o.stop(at + dur + .02);
+  }
+  const SFX = {
+    // a tape slides out of the shelf and knocks: sleeve scrape, then the case
+    out(c, t) { burst(c, t, .16, 'bandpass', 2400, .9, .09); thump(c, t + .13, 190, 80, .2, .32); burst(c, t + .13, .035, 'highpass', 3200, .7, .12); },
+    // pushed back in: shorter, softer
+    back(c, t) { burst(c, t, .11, 'bandpass', 2000, .9, .06); thump(c, t + .09, 150, 70, .16, .2); },
+    // the next tape off the shelf (prev/next in the viewer)
+    swap(c, t) { burst(c, t, .09, 'bandpass', 2600, 1, .05); thump(c, t + .07, 210, 110, .12, .14); },
+    // the VCR takes the tape: clunk, the motor spins up and runs, then a click as the heads engage
+    load(c, t) {
+      burst(c, t, .12, 'bandpass', 1800, 1, .07); thump(c, t + .1, 120, 60, .25, .4);
+      const o = c.createOscillator(); o.type = 'sawtooth';
+      o.frequency.setValueAtTime(35, t + .3); o.frequency.exponentialRampToValueAtTime(95, t + 1.1);
+      const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 500;
+      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t + .3); g.gain.exponentialRampToValueAtTime(.05, t + .7); g.gain.setValueAtTime(.05, t + 1.5); g.gain.exponentialRampToValueAtTime(0.0001, t + 2);
+      o.connect(lp).connect(g).connect(c.destination); o.start(t + .3); o.stop(t + 2.05);
+      burst(c, t + .3, 1.7, 'bandpass', 950, 2.5, .025);
+      thump(c, t + 1.85, 900, 500, .05, .18);
+    },
+    // eject: a motor whine and the tape popping back up
+    eject(c, t) {
+      const o = c.createOscillator(); o.type = 'square'; o.frequency.setValueAtTime(70, t); o.frequency.linearRampToValueAtTime(140, t + .45);
+      const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 400;
+      const g = c.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(.03, t + .1); g.gain.exponentialRampToValueAtTime(0.0001, t + .5);
+      o.connect(lp).connect(g).connect(c.destination); o.start(t); o.stop(t + .55);
+      thump(c, t + .48, 160, 70, .18, .3);
+    },
+  };
+  function sfx(name) { if (!soundOn) return; try { const c = audio(); SFX[name](c, c.currentTime + .01); } catch { /* no audio: carry on silently */ } }
+  const soundBtn = $('sound-btn');
+  function renderSound() { soundBtn.setAttribute('aria-pressed', soundOn); soundBtn.classList.toggle('on', soundOn); soundBtn.title = soundOn ? 'Sound on (click to mute)' : 'Sound off (click for sound effects)'; }
+  soundBtn.addEventListener('click', () => {
+    soundOn = !soundOn;
+    try { localStorage.setItem(SOUND_KEY, soundOn ? 'on' : 'off'); } catch { /* not remembered */ }
+    renderSound(); sfx('swap');
+  });
+  renderSound();
+
+  /* ---------- the trailer: into the VCR, onto the CRT ---------- */
+  // `trailer` on a film is a YouTube id (from TMDB's trailer list, 26 Nov 2026). The Play button shows only when there is one.
+  const tv = $('tv'), tvScreen = $('tv-screen'), vcrTape = $('vcr-tape'), vcrDisplay = $('vcr-display');
+  let tvTimer = null, tvFocus = null;
+  function openTrailer(f) {
+    if (!f || !f.trailer || !tv.hidden) return;
+    tvFocus = document.activeElement;
+    tv.hidden = false; tv.classList.remove('playing', 'on'); document.body.classList.add('store-open');
+    vcrTape.style.backgroundImage = f.poster ? `url("${f.poster}")` : 'none';
+    vcrDisplay.textContent = 'LOAD';
+    tvScreen.querySelector('iframe')?.remove();
+    void tv.offsetWidth; tv.classList.add('loading'); // the tape slides into the slot
+    sfx('load');
+    tv.querySelector('.tv-x').focus({ preventScroll: true });
+    clearTimeout(tvTimer);
+    tvTimer = setTimeout(() => {
+      tv.classList.add('on'); vcrDisplay.textContent = 'PLAY'; // static, then the picture
+      tvTimer = setTimeout(() => {
+        const fr = document.createElement('iframe');
+        fr.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(f.trailer)}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        fr.title = `${f.title}: trailer`;
+        fr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        fr.allowFullscreen = true;
+        tvScreen.prepend(fr);
+        tv.classList.add('playing');
+      }, 700);
+    }, 1500);
+  }
+  function closeTrailer() {
+    if (tv.hidden) return;
+    clearTimeout(tvTimer);
+    tvScreen.querySelector('iframe')?.remove();
+    tv.classList.remove('loading', 'on', 'playing');
+    tv.hidden = true;
+    if (current < 0 && receipt.hidden && store.hidden) document.body.classList.remove('store-open');
+    sfx('eject');
+    if (tvFocus && tvFocus.focus) tvFocus.focus({ preventScroll: true });
+  }
+  tv.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', closeTrailer));
+  $('v-play').addEventListener('click', () => openTrailer(films[current]));
+  document.addEventListener('keydown', (e) => { if (!tv.hidden && e.key === 'Escape') { e.stopPropagation(); closeTrailer(); } }, true);
+
   function openViewer(i) {
+    sfx('out');
     const el = spineEls[i];
     el.classList.add('pulling');
     setTimeout(() => {
@@ -1040,6 +1147,7 @@
 
   function closeViewer() {
     if (current < 0) return;
+    sfx('back');
     const el = spineEls[current];
     el.classList.remove('out'); el.classList.add('back');
     setTimeout(() => el.classList.remove('back'), 520);
@@ -1055,6 +1163,7 @@
     if (p < 0 || order.length < 2) return;
     const n = order[(p + d + order.length) % order.length];
     spineEls[current].classList.remove('out');
+    sfx('swap');
     current = n; spineEls[n].classList.add('out'); fill(n); setTapeParam(films[n]);
   }
 
@@ -1063,7 +1172,7 @@
   $('prev').addEventListener('click', () => step(-1));
   $('next').addEventListener('click', () => step(1));
   document.addEventListener('keydown', (e) => {
-    if (current < 0 || !store.hidden) return; // the store directory, when open, sits over the viewer and has the keys
+    if (current < 0 || !store.hidden || !tv.hidden) return; // the store directory, when open, sits over the viewer and has the keys
     if (e.key === 'Escape') closeViewer();
     else if (e.key === 'ArrowLeft') step(-1);
     else if (e.key === 'ArrowRight') step(1);
@@ -1297,7 +1406,7 @@
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     const t = e.target;
     if (t && (t.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName))) return;
-    if (document.querySelector('.vcr.open') || !$('receipt').hidden) return;
+    if (document.querySelector('.vcr.open') || !$('receipt').hidden || !$('tv').hidden) return;
     if (e.key === '/') { e.preventDefault(); openStore(true); }
     else if ((e.key === '[' || e.key === ']') && store.hidden) {
       const a = $(e.key === '[' ? 'shelf-prev' : 'shelf-next');
@@ -1407,6 +1516,7 @@
 
   // Hooks for vcr.js: preview a spine for a film (with edited fields) and redraw the shelf.
   window.viewings = {
+    sfx,                 // sound effects (no-ops while the sound is off); vcr.js whirs when its panel opens
     shelf: SHELF,        // the year on show, or the Vault's decade ('1990s')
     vault: IN_VAULT,
     all: IN_ALL,         // the Whole Store: built from every shelf file, so vcr.js changes nothing here
