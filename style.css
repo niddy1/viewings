@@ -920,12 +920,10 @@ body.store-open { overflow: hidden; }
 .tv-x { position: fixed; top: 14px; right: 18px; appearance: none; background: none; border: 0; color: #f2bd0a; font-size: 38px; line-height: .7; cursor: pointer; z-index: 2; }
 
 /* the set: a 1970s portable (Ian's reference, 26 Nov 2026): gunmetal cabinet with chrome trim, a chrome-rimmed tube,
-   a control panel (brushed name plate, VHF/UHF dials, PULL ON VOL) over a wood-slat speaker grille, a loop antenna on top.
+   a control panel (brushed name plate, VHF/UHF dials, PULL ON VOL) over a wood-slat speaker grille, 
    Sized in cqw off .tv-set, so it scales as one piece. */
 .tv-set { container-type: inline-size; }
-.tv { position: relative; width: 100%; padding-top: 9cqw; }
-.tv-antenna { position: absolute; left: 30cqw; top: 0; width: 17cqw; height: 15cqw; border: .45cqw solid #b9b6b0; border-radius: 50%; z-index: 0;
-  box-shadow: inset 0 0 .3cqw rgba(0,0,0,.6), 0 0 .3cqw rgba(0,0,0,.5); }
+.tv { position: relative; width: 100%; }
 .tv-face {
   position: relative; z-index: 1; display: flex; gap: 2.6cqw; padding: 3cqw 3cqw 3.4cqw; border-radius: 3.2cqw / 3.6cqw;
   background:
