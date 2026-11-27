@@ -890,3 +890,4 @@ body.store-open { overflow: hidden; }
 .receipt-paper .r-bars { display: block; width: 70%; height: 46px; margin: 16px auto 4px; fill: var(--ink); }
 .receipt-paper .r-small { font-size: 11px; letter-spacing: .3em; }
 .receipt-paper .r-thanks { margin-top: 14px; font-weight: 700; }
+.bay.all.vs { margin-top: 10px; }

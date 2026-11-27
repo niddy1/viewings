@@ -842,6 +842,12 @@
         const r = Math.floor(f.imdbRating);
         return r < 5 ? { k: 4, big: 'Under 5', small: 'IMDb' } : { k: r, big: `${r}`, small: 'IMDb' };
       }
+      case 'gap': { // you vs IMDb, in whole points: +3 and up, +2, +1, even, -1, -2, -3 and down
+        if (f.imdbRating == null) return { k: -99, big: 'No score', small: 'IMDb' };
+        const d = Math.max(-3, Math.min(3, Math.round(gapOf(f))));
+        return d === 0 ? { k: 0, big: 'Even', small: 'You and IMDb' }
+          : { k: d, big: (d > 0 ? '+' : '') + d + (Math.abs(d) === 3 ? (d > 0 ? ' up' : '') : ''), small: d > 0 ? 'You liked it more' : 'IMDb liked it more' };
+      }
       default: return f._vault ? { k: 0, big: 'Vault', small: 'Watched before 2016' } : { k: +String(f.watched).slice(0, 4), big: String(f.watched).slice(0, 4), small: 'Watched in' };
     }
   }
@@ -866,8 +872,9 @@
   }
 
   /* ---------- sorting and the genre filter ---------- */
-  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1 }; // oldest viewing first; best and newest first
+  const SORT_DEFAULT_DIR = { watched: 1, rating: -1, imdb: -1, year: -1, gap: -1 }; // oldest viewing first; best and newest first
   const r10 = (f) => (f.rating10 != null ? f.rating10 : (f.rating || 0) * 2);
+  const gapOf = (f) => r10(f) - f.imdbRating; // you vs IMDb: above 0, you liked it more than IMDb's voters did
   // On the Whole Store, Vault tapes (no real viewing date) come before everything watched since 2016.
   const wkey = (f) => (f._vault ? '0' : f.watched || '');
   const byWatched = (a, b) => wkey(a).localeCompare(wkey(b));
@@ -877,6 +884,8 @@
     // films without an IMDb score (new arrivals until it's filled in) go to the end either way
     imdb: (a, b) => (a.imdbRating == null) - (b.imdbRating == null) || view.dir * ((a.imdbRating || 0) - (b.imdbRating || 0)),
     year: (a, b) => (a.year || 0) - (b.year || 0) || byWatched(a, b),
+    // you vs IMDb (Ian, 26 Nov 2026): first the films you liked most over IMDb, last the ones IMDb liked most over you
+    gap: (a, b) => (a.imdbRating == null) - (b.imdbRating == null) || view.dir * (gapOf(a) - gapOf(b)),
   };
 
   function computeOrder() {
@@ -884,7 +893,7 @@
     order = films.map((f, i) => i)
       .filter((i) => !view.genres.size || (films[i].genres || []).some((g) => view.genres.has(g)))
       // ties (same rating, same year) keep the order they were watched in
-      .sort((a, b) => (view.sort === 'imdb' ? cmp(films[a], films[b]) : view.dir * cmp(films[a], films[b])) || byWatched(films[a], films[b]));
+      .sort((a, b) => (view.sort === 'imdb' || view.sort === 'gap' ? cmp(films[a], films[b]) : view.dir * cmp(films[a], films[b])) || byWatched(films[a], films[b]));
   }
 
   function updateTally() {
@@ -904,7 +913,7 @@
 
   function loadView() {
     const q = new URLSearchParams(location.search);
-    const m = /^(watched|rating|imdb|year)(-rev)?$/.exec(q.get('sort') || '');
+    const m = /^(watched|rating|imdb|year|gap)(-rev)?$/.exec(q.get('sort') || '');
     if (m && !(IN_VAULT && m[1] === 'watched')) { view.sort = m[1]; view.dir = SORT_DEFAULT_DIR[m[1]] * (m[2] ? -1 : 1); }
     (q.get('genre') || '').split(',').filter(Boolean).forEach((g) => view.genres.add(g));
   }
@@ -1010,7 +1019,8 @@
     const facts = [f.year, f.runtime ? `${f.runtime} min` : null, f.director ? `dir. ${f.director}` : null].filter(Boolean);
     $('v-facts').textContent = facts.join(' · ');
     $('v-rating').innerHTML = stars(f);
-    $('v-imdb').textContent = f.imdbRating != null ? `IMDb ${f.imdbRating.toFixed(1)}` : '';
+    const g = f.imdbRating != null ? Math.round(gapOf(f) * 10) / 10 : null;
+    $('v-imdb').textContent = f.imdbRating != null ? `IMDb ${f.imdbRating.toFixed(1)}${g ? ` \u00b7 you ${g > 0 ? '+' : ''}${g.toFixed(1)}` : ' \u00b7 you agree'}` : '';
     // Vault dates are when the film was rated in bulk, not watched (see the Vault note in the header)
     $('v-watched').textContent = IN_VAULT || f._vault ? 'Watched before 2016' : `Watched ${fmtDate(f.watched)}${f.rewatch ? ' (rewatch)' : ''}`;
     $('v-genres').innerHTML = (f.genres || []).map((g) => `<span>${g}</span>`).join('');
@@ -1174,11 +1184,16 @@
         + (here ? '<span class="you">You are here</span>' : '') + '</a>';
     };
     const total = stock ? stock.flat().length : null;
-    const allHere = IN_ALL && !IN_SEARCH;
+    const allHere = IN_ALL && !IN_SEARCH && view.sort !== 'gap';
     $('aisle-all').innerHTML = `<a class="bay all${allHere ? ' here' : ''}" href="${shelfLink(ALL)}"${allHere ? ' aria-current="page"' : ''}>`
       + '<span class="nm">The Whole Store</span>'
       + `<span class="n">${total == null ? '&nbsp;' : `Every tape, ${total.toLocaleString('en-US')} of them, on one case`}</span>`
       + (allHere ? '<span class="you">You are here</span>' : '') + '</a>';
+    const vsHere = IN_ALL && !IN_SEARCH && view.sort === 'gap';
+    $('aisle-all').innerHTML += `<a class="bay all vs${vsHere ? ' here' : ''}" href="${shelfPath(ALL)}?sort=gap">`
+      + '<span class="nm">You vs IMDb</span>'
+      + '<span class="n">Every tape by how far my rating is from IMDb\u2019s: my soft spots first</span>'
+      + (vsHere ? '<span class="you">You are here</span>' : '') + '</a>';
     $('aisle-vault').innerHTML = VAULT.map(tile).join('');
     $('aisle-years').innerHTML = YEARS.filter((k) => !VAULT.includes(k)).slice().reverse().map(tile).join('');
     $('store-total').textContent = stock ? `${stock.flat().length.toLocaleString('en-US')} tapes on ${YEARS.length} shelves` : '';
