@@ -148,22 +148,22 @@
         <div class="tv-feet" aria-hidden="true"><i></i><i></i></div>
       </div>
       <svg class="tv-cable" viewBox="0 0 110 80" aria-hidden="true"><path d="M95 45 C 104 46, 107 51, 105 57 S 99 64, 92 64.5"/><path class="hi" d="M95 45 C 104 46, 107 51, 105 57 S 99 64, 92 64.5"/></svg>
-      <div class="deck" aria-hidden="true">
+      <div class="deck">
         <div class="deck-top"></div>
         <div class="deck-face">
-          <div class="deck-left">
+          <div class="deck-left" aria-hidden="true">
             <span class="deck-power"></span>
             <span class="deck-name">VIEWINGS</span>
             <span class="deck-sub">VIDEO CASSETTE RECORDER</span>
           </div>
-          <div class="deck-door">
+          <div class="deck-door" aria-hidden="true">
             <div class="deck-mouth"><div class="deck-cass" id="vcr-tape"><span class="deck-label"><b>VHS&ensp;T-120&ensp;<i>HIGH GRADE</i></b><span class="deck-title" id="vcr-title"></span></span></div></div>
             <div class="deck-flap"><span>VHS</span></div>
           </div>
           <div class="deck-right">
-            <div class="deck-display"><span class="deck-ico">&#9654;</span><span id="vcr-display" class="blink">12:00</span></div>
-            <div class="deck-keys"><i>&#9664;&#9664;</i><i>&#9654;</i><i>&#9654;&#9654;</i><i>&#9632;</i><i>&#9167;</i><i class="rec">&#9679;</i></div>
-            <span class="deck-spec">HQ &middot; 4 HEAD HI-FI STEREO</span>
+            <div class="deck-display" aria-live="polite"><span class="deck-ico" id="vcr-ico">&#9654;</span><span id="vcr-display" class="blink">12:00</span></div>
+            <div class="deck-keys" role="group" aria-label="VCR controls"><button type="button" data-k="rew" aria-label="Rewind 10 seconds">&#9664;&#9664;</button><button type="button" data-k="play" aria-label="Play">&#9654;</button><button type="button" data-k="ff" aria-label="Fast forward 10 seconds">&#9654;&#9654;</button><button type="button" data-k="stop" aria-label="Stop">&#9632;</button><button type="button" data-k="eject" aria-label="Eject">&#9167;</button><button type="button" data-k="rec" class="rec" aria-label="Record">&#9679;</button></div>
+            <span class="deck-spec" aria-hidden="true">HQ &middot; 4 HEAD HI-FI STEREO</span>
           </div>
         </div>
         <div class="deck-feet"></div>

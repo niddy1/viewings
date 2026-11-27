@@ -1059,6 +1059,8 @@
     out(c, t) { burst(c, t, .16, 'bandpass', 2400, .9, .09); thump(c, t + .13, 190, 80, .2, .32); burst(c, t + .13, .035, 'highpass', 3200, .7, .12); },
     // pushed back in: shorter, softer
     back(c, t) { burst(c, t, .11, 'bandpass', 2000, .9, .06); thump(c, t + .09, 150, 70, .16, .2); },
+    // a deck key: a short plastic click
+    key(c, t) { thump(c, t, 1400, 700, .03, .12); burst(c, t, .02, 'highpass', 4000, .7, .05); },
     // the next tape off the shelf (prev/next in the viewer)
     swap(c, t) { burst(c, t, .09, 'bandpass', 2600, 1, .05); thump(c, t + .07, 210, 110, .12, .14); },
     // the VCR takes the tape: clunk, the motor spins up and runs, then a click as the heads engage
@@ -1093,25 +1095,66 @@
 
   /* ---------- the trailer: into the VCR, onto the CRT ---------- */
   // `trailer` on a film is a YouTube id (from TMDB's trailer list, 26 Nov 2026). The Play button shows only when there is one.
-  const tv = $('tv'), tvScreen = $('tv-screen'), vcrTitle = $('vcr-title'), vcrDisplay = $('vcr-display');
-  let tvTimer = null, tvFocus = null;
+  const tv = $('tv'), tvScreen = $('tv-screen'), vcrTitle = $('vcr-title'), vcrDisplay = $('vcr-display'), vcrIco = $('vcr-ico');
+  let tvTimer = null, tvFocus = null, tvFlash = null;
+  // The deck's keys drive the YouTube player through its postMessage API (enablejsapi=1): the player reports
+  // its time and state back, which runs the counter on the display.
+  const yt = { t: 0, state: -1, frame: null };
+  const ICO = { play: '\u25B6', rew: '\u25C0\u25C0', ff: '\u25B6\u25B6', stop: '\u25A0' };
+  let mode = 'play';
+  const clock = (t) => { t = Math.max(0, Math.floor(t)); return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, '0')}`; };
+  function show(text, ms) { // the display: the counter, or a word for a moment
+    clearTimeout(tvFlash);
+    vcrDisplay.classList.remove('blink');
+    if (text != null) { vcrDisplay.textContent = text; if (ms) tvFlash = setTimeout(() => { tvFlash = null; show(); }, ms); return; }
+    if (!tvFlash && tv.classList.contains('playing')) vcrDisplay.textContent = clock(yt.t);
+  }
+  function setMode(m) {
+    mode = m; vcrIco.textContent = ICO[m] || ICO.play;
+    tv.querySelectorAll('.deck-keys [data-k]').forEach((b) => b.classList.toggle('on', b.dataset.k === m && tv.classList.contains('on')));
+  }
+  function ytCmd(func, args = []) { if (yt.frame) yt.frame.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args, id: 1, channel: 'widget' }), '*'); }
+  window.addEventListener('message', (e) => {
+    if (!yt.frame || e.source !== yt.frame.contentWindow) return;
+    let d; try { d = typeof e.data === 'string' ? JSON.parse(e.data) : e.data; } catch { return; }
+    const info = d && d.info;
+    if (!info || typeof info !== 'object') return;
+    if (typeof info.currentTime === 'number') yt.t = info.currentTime;
+    if (typeof info.playerState === 'number') {
+      yt.state = info.playerState;
+      if (yt.state === 1 && mode === 'stop') setMode('play'); // played from the picture itself
+      if (yt.state === 2 && mode === 'play') setMode('stop');
+      if (yt.state === 0) { setMode('stop'); show('END', 2500); } // the trailer ran out
+    }
+    show();
+  });
+  const KEYS = {
+    play() { if (!tv.classList.contains('playing')) return; ytCmd('playVideo'); setMode('play'); show('PLAY', 900); },
+    stop() { if (!tv.classList.contains('playing')) return; ytCmd('pauseVideo'); setMode('stop'); show('STOP', 900); },
+    rew() { if (!tv.classList.contains('playing')) return; ytCmd('seekTo', [Math.max(0, yt.t - 10), true]); yt.t = Math.max(0, yt.t - 10); setMode('rew'); show('REW', 700); setTimeout(() => mode === 'rew' && setMode(yt.state === 2 ? 'stop' : 'play'), 700); },
+    ff() { if (!tv.classList.contains('playing')) return; ytCmd('seekTo', [yt.t + 10, true]); yt.t += 10; setMode('ff'); show('FF', 700); setTimeout(() => mode === 'ff' && setMode(yt.state === 2 ? 'stop' : 'play'), 700); },
+    eject() { closeTrailer(); },
+    rec() { show('NO TAB', 1600); }, // a rental tape: the record tab is broken off
+  };
+  tv.querySelectorAll('.deck-keys [data-k]').forEach((b) => b.addEventListener('click', () => { if (b.dataset.k !== 'eject') sfx('key'); KEYS[b.dataset.k](); }));
   function openTrailer(f) {
     if (!f || !f.trailer || !tv.hidden) return;
     tvFocus = document.activeElement;
     tv.hidden = false; tv.classList.remove('playing', 'on'); document.body.classList.add('store-open');
     vcrTitle.textContent = f.title; // written on the cassette's label in marker
     vcrTitle.style.fontSize = Math.min(1.35, 21 / (0.7 * Math.max(f.title.length, 1))).toFixed(2) + 'cqw'; // long titles in a smaller hand
-    vcrDisplay.textContent = 'LOAD'; vcrDisplay.classList.remove('blink');
+    show('LOAD'); setMode('play'); yt.t = 0; yt.state = -1; yt.frame = null;
     tvScreen.querySelector('iframe')?.remove();
     void tv.offsetWidth; tv.classList.add('loading'); // the tape slides into the slot
     sfx('load');
     tv.querySelector('.tv-x').focus({ preventScroll: true });
     clearTimeout(tvTimer);
     tvTimer = setTimeout(() => {
-      tv.classList.add('on'); vcrDisplay.textContent = 'PLAY'; // static, then the picture
+      tv.classList.add('on'); show('PLAY'); setMode('play'); // static, then the picture
       tvTimer = setTimeout(() => {
         const fr = document.createElement('iframe');
-        fr.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(f.trailer)}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        fr.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(f.trailer)}?autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
+        fr.addEventListener('load', () => { yt.frame = fr; fr.contentWindow.postMessage(JSON.stringify({ event: 'listening', id: 1, channel: 'widget' }), '*'); });
         fr.title = `${f.title}: trailer`;
         fr.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
         fr.allowFullscreen = true;
@@ -1125,6 +1168,8 @@
     clearTimeout(tvTimer);
     tvScreen.querySelector('iframe')?.remove();
     tv.classList.remove('loading', 'on', 'playing');
+    yt.frame = null; setMode('play');
+    clearTimeout(tvFlash); tvFlash = null;
     vcrDisplay.textContent = '12:00'; vcrDisplay.classList.add('blink'); // nobody ever set the clock
     tv.hidden = true;
     if (current < 0 && receipt.hidden && store.hidden) document.body.classList.remove('store-open');

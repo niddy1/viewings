@@ -1091,14 +1091,23 @@ body.store-open { overflow: hidden; }
 .deck-ico { font-size: 1.1cqw; opacity: .15; }
 .tv-wrap.on .deck-ico { opacity: 1; }
 #vcr-display.blink { animation: clock-blink 1s steps(1) infinite; }
+#vcr-display { display: inline-block; min-width: 5.2ch; text-align: right; }
 @keyframes clock-blink { 50% { opacity: .1; } }
 .deck-keys { display: flex; gap: .45cqw; }
-.deck-keys i {
+.deck-keys button {
+  appearance: none; border: 0; padding: 0; margin: 0; cursor: pointer;
   display: grid; place-items: center; width: 3.1cqw; height: 1.6cqw; border-radius: .2cqw; font: normal .8cqw/1 Arial, sans-serif; color: #2b2b2d; letter-spacing: -.1em;
   background: linear-gradient(180deg, #d8d5cf, #9c9993); box-shadow: 0 .12cqw 0 #0c0c0c, inset 0 .08cqw 0 rgba(255,255,255,.6);
+  transition: background .08s ease, box-shadow .08s ease;
 }
-.deck-keys i.rec { color: #c0392b; }
-.tv-wrap.on .deck-keys i:nth-child(2) { transform: translateY(.1cqw); box-shadow: 0 .02cqw 0 #0c0c0c, inset 0 .08cqw 0 rgba(255,255,255,.4); }
+.deck-keys button.rec { color: #c0392b; }
+.deck-keys button:hover { background: linear-gradient(180deg, #e6e3dd, #aaa7a1); }
+/* a key held down (the mode the deck is in, or one being pressed) is lit and sunk in, but stays in line */
+.deck-keys button:active, .deck-keys button.on {
+  background: linear-gradient(180deg, #a7a49e, #c9c6c0); box-shadow: 0 .04cqw 0 #0c0c0c, inset 0 .12cqw .25cqw rgba(0,0,0,.45);
+}
+.deck-keys button.on { color: #0f6b55; }
+.deck-keys button:focus-visible { outline: .15cqw solid #5ff3d2; outline-offset: .15cqw; }
 .deck-spec { font: .72cqw/1 Arial, sans-serif; letter-spacing: .14em; color: #8a8780; }
 @media (max-width: 640px) { .deck-sub, .deck-spec { display: none; } }
 
