@@ -1099,7 +1099,8 @@
     if (!f || !f.trailer || !tv.hidden) return;
     tvFocus = document.activeElement;
     tv.hidden = false; tv.classList.remove('playing', 'on'); document.body.classList.add('store-open');
-    vcrTitle.textContent = f.title; // handwritten on the cassette's label
+    vcrTitle.textContent = f.title; // written on the cassette's label in marker
+    vcrTitle.style.fontSize = Math.min(1.35, 21 / (0.7 * Math.max(f.title.length, 1))).toFixed(2) + 'cqw'; // long titles in a smaller hand
     vcrDisplay.textContent = 'LOAD'; vcrDisplay.classList.remove('blink');
     tvScreen.querySelector('iframe')?.remove();
     void tv.offsetWidth; tv.classList.add('loading'); // the tape slides into the slot
